@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { products } from "@/lib/products";
 import { notFound } from "next/navigation";
+import BuyButton from "@/components/BuyButton";
 
 export async function generateStaticParams() {
   return products.map((p) => ({ id: p.id }));
@@ -75,9 +76,7 @@ export default async function ProductPage({ params }: { params: Promise<{ id: st
             <div className="h-px bg-[#E8B4A8]/40" />
 
             <div className="flex flex-col gap-3">
-              <button className="btn-primary-filled w-full text-center py-4">
-                Add to Cart
-              </button>
+              <BuyButton productId={product.id} />
               <div className="flex gap-3">
                 {product.etsy_url && (
                   <a href={product.etsy_url} target="_blank" rel="noopener noreferrer" className="btn-primary flex-1 text-center py-3 text-[0.6rem]">

@@ -1,15 +1,23 @@
 import Link from "next/link";
+import Image from "next/image";
 import type { Product } from "@/lib/products";
 
 export default function ProductCard({ product }: { product: Product }) {
   return (
     <Link href={`/shop/${product.id}`} className="group block">
       <div className="relative overflow-hidden bg-[#F2DDD7] aspect-[3/4]">
-        <div className="absolute inset-0 flex items-center justify-center">
-          <p className="text-[0.6rem] tracking-[0.2em] uppercase text-[#A0622A]/50">
-            Image coming soon
-          </p>
-        </div>
+        {product.images?.[0] ? (
+          <Image
+            src={product.images[0]}
+            alt={product.name}
+            fill
+            className="object-cover object-center group-hover:scale-105 transition-transform duration-700"
+          />
+        ) : (
+          <div className="absolute inset-0 flex items-center justify-center">
+            <p className="text-[0.6rem] tracking-[0.2em] uppercase text-[#A0622A]/50">Image coming soon</p>
+          </div>
+        )}
         <div className="absolute inset-0 bg-[#2C2220]/0 group-hover:bg-[#2C2220]/5 transition-colors duration-500" />
       </div>
       <div className="pt-4 pb-2">

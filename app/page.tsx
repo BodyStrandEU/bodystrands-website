@@ -9,14 +9,14 @@ export default function HomePage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative min-h-screen flex items-center bg-[#E8B4A8]/30">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#E8B4A8]/20 to-[#FDF9F7]" />
-        <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-10 w-full pt-32 pb-20">
-          <div className="max-w-2xl">
+      <section className="relative min-h-screen grid grid-cols-1 md:grid-cols-2">
+        {/* Left — text */}
+        <div className="flex items-center bg-[#FDF9F7] px-8 md:px-16 pt-32 pb-16 md:pt-0">
+          <div className="max-w-lg">
             <p className="text-[0.6rem] tracking-[0.35em] uppercase text-[#A0622A] mb-6">
               Handmade Body Jewellery
             </p>
-            <h1 className="font-heading text-6xl md:text-8xl font-light text-[#2C2220] leading-[1.05] mb-8">
+            <h1 className="font-heading text-6xl md:text-7xl font-light text-[#2C2220] leading-[1.05] mb-8">
               Wear it.<br />
               <em className="not-italic text-[#A0622A]">Feel it.</em>
             </h1>
@@ -34,9 +34,16 @@ export default function HomePage() {
           </div>
         </div>
 
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2">
-          <span className="text-[0.55rem] tracking-[0.25em] uppercase text-[#A0622A]/60">Scroll</span>
-          <div className="w-px h-8 bg-[#A0622A]/30" />
+        {/* Right — photo */}
+        <div className="relative min-h-[60vh] md:min-h-screen">
+          <Image
+            src="/images/hero.png"
+            alt="Body Strands jewellery"
+            fill
+            className="object-cover object-center"
+            priority
+          />
+          <div className="absolute inset-0 bg-[#2C2220]/10" />
         </div>
       </section>
 
@@ -76,20 +83,39 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Lifestyle photo strip */}
+      <section className="grid grid-cols-2 md:grid-cols-4 gap-1 px-1">
+        {[
+          { src: "/images/products/lifestyle-1.jpg", alt: "Body chain lifestyle" },
+          { src: "/images/products/lifestyle-2.jpg", alt: "Back chain detail" },
+          { src: "/images/products/lifestyle-3.jpg", alt: "Gold chain close-up" },
+          { src: "/images/products/lifestyle-4.jpg", alt: "Chain connector detail" },
+        ].map((img) => (
+          <div key={img.src} className="relative aspect-square overflow-hidden">
+            <Image
+              src={img.src}
+              alt={img.alt}
+              fill
+              className="object-cover object-center hover:scale-105 transition-transform duration-700"
+            />
+          </div>
+        ))}
+      </section>
+
       {/* Divider */}
-      <div className="max-w-7xl mx-auto px-6 md:px-10">
+      <div className="max-w-7xl mx-auto px-6 md:px-10 mt-24">
         <div className="h-px bg-[#E8B4A8]/30" />
       </div>
 
       {/* Brand Story Snippet */}
       <section className="max-w-7xl mx-auto px-6 md:px-10 py-24 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-        <div className="bg-[#F2DDD7] aspect-square flex items-center justify-center">
+        <div className="bg-[#E8B4A8] aspect-square flex items-center justify-center px-12">
           <Image
-            src="/images/logo-pink.png"
+            src="/images/logo.png"
             alt="Body Strands"
-            width={400}
-            height={400}
-            className="w-3/4 h-auto object-contain"
+            width={500}
+            height={100}
+            className="w-full h-auto object-contain"
           />
         </div>
 

@@ -1,26 +1,75 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-blush: #E8B4A8;
+  --color-blush-light: #FAF7F5;
+  --color-blush-mid: #F2DDD7;
+  --color-gold: #A0622A;
+  --color-gold-light: #C8885A;
+  --color-warm-dark: #2C2220;
+  --color-warm-gray: #8C7B6E;
+  --color-cream: #FDF9F7;
+  --font-heading: var(--font-cormorant);
+  --font-body: var(--font-josefin);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #FDF9F7;
+  color: #2C2220;
+  font-family: var(--font-josefin), sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-cormorant), serif;
+  font-weight: 300;
+  letter-spacing: 0.05em;
+}
+
+.tracking-widest-custom {
+  letter-spacing: 0.3em;
+}
+
+.btn-primary {
+  display: inline-block;
+  padding: 0.75rem 2.5rem;
+  border: 1px solid #A0622A;
+  color: #A0622A;
+  font-family: var(--font-josefin), sans-serif;
+  font-size: 0.7rem;
+  font-weight: 300;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #A0622A;
+  color: #FDF9F7;
+}
+
+.btn-primary-filled {
+  display: inline-block;
+  padding: 0.75rem 2.5rem;
+  background-color: #A0622A;
+  color: #FDF9F7;
+  font-family: var(--font-josefin), sans-serif;
+  font-size: 0.7rem;
+  font-weight: 300;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.btn-primary-filled:hover {
+  background-color: #8A5222;
 }

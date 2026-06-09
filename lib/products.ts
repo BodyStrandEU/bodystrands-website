@@ -1,0 +1,62 @@
+export type Product = {
+  id: string;
+  name: string;
+  price: number;
+  currency: string;
+  category: string;
+  description: string;
+  images: string[];
+  featured: boolean;
+  variants?: string[];
+  etsy_url?: string;
+  amazon_url?: string;
+};
+
+export const products: Product[] = [
+  {
+    id: "back-body-chain-wedding",
+    name: "Back Body Chain — Wedding",
+    price: 29.99,
+    currency: "EUR",
+    category: "Body Chains",
+    description: "A delicate, dainty back body chain handcrafted for weddings and special occasions. Adjustable fit, tarnish-resistant stainless steel.",
+    images: ["/images/products/back-body-chain-wedding.jpg"],
+    featured: true,
+    variants: ["Gold Tone", "Silver Tone"],
+  },
+  {
+    id: "waist-chain",
+    name: "Dainty Waist Chain",
+    price: 24.99,
+    currency: "EUR",
+    category: "Waist Chains",
+    description: "Ultra-thin waist chain with adjustable extender. Water-resistant and made to be worn every day.",
+    images: ["/images/products/waist-chain.jpg"],
+    featured: true,
+    variants: ["Gold Tone", "Silver Tone"],
+  },
+  {
+    id: "pearl-anklet",
+    name: "Pearl Anklet",
+    price: 22.99,
+    currency: "EUR",
+    category: "Anklets",
+    description: "Dual-strand pearl and gold chain anklet. 21cm base with 5cm adjustable extender. Handmade in stainless steel.",
+    images: ["/images/products/pearl-anklet.jpg"],
+    featured: true,
+    variants: ["Gold Tone", "Silver Tone"],
+  },
+  {
+    id: "arm-chain",
+    name: "Arm Chain Bracelet",
+    price: 19.99,
+    currency: "EUR",
+    category: "Arm Chains",
+    description: "Minimalist arm chain that wraps gracefully around your upper arm. Adjustable, lightweight and comfortable.",
+    images: ["/images/products/arm-chain.jpg"],
+    featured: false,
+    variants: ["Gold Tone", "Silver Tone"],
+  },
+];
+
+export const categories = [...new Set(products.map((p) => p.category))];

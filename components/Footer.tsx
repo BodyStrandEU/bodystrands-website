@@ -14,7 +14,7 @@ export default function Footer() {
             className="h-7 w-auto object-contain brightness-0 invert opacity-70"
           />
           <p className="text-[0.7rem] font-light leading-relaxed tracking-wide text-[#E8B4A8]/70 max-w-xs">
-            Handmade body jewellery crafted with love. Dainty, minimal, and made to last.
+            Handmade body jewelry crafted with love. Dainty, minimal, and made to last.
           </p>
         </div>
 

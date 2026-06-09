@@ -18,9 +18,9 @@ const josefin = Josefin_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Body Strands — Handmade Body Jewellery",
+  title: "Body Strands — Handmade Body Jewelry",
   description: "Dainty handmade body chains, waist chains, and anklets. Crafted in stainless steel, tarnish-resistant and water-resistant.",
-  keywords: "body chain, waist chain, anklet, handmade jewellery, body jewellery, gold body chain",
+  keywords: "body chain, waist chain, anklet, handmade jewelry, body jewelry, gold body chain",
 };
 
 export default function RootLayout({

@@ -8,42 +8,59 @@ export default function HomePage() {
 
   return (
     <>
-      {/* Hero */}
-      <section className="relative min-h-screen grid grid-cols-1 md:grid-cols-2">
-        {/* Left — text */}
-        <div className="flex items-center bg-[#FDF9F7] px-8 md:px-16 pt-32 pb-16 md:pt-0">
-          <div className="max-w-lg">
-            <p className="text-[0.6rem] tracking-[0.35em] uppercase text-[#A0622A] mb-6">
-              Handmade Body Jewellery
-            </p>
-            <h1 className="font-heading text-6xl md:text-7xl font-light text-[#2C2220] leading-[1.05] mb-8">
-              Wear it.<br />
-              <em className="not-italic text-[#A0622A]">Feel it.</em>
-            </h1>
-            <p className="text-sm font-light leading-relaxed tracking-wide text-[#8C7B6E] mb-10 max-w-md">
-              Dainty, minimal body chains crafted by hand. Tarnish-resistant, water-resistant, and made to move with you.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="/shop" className="btn-primary-filled text-center">
-                Shop Now
-              </Link>
-              <Link href="/about" className="btn-primary text-center">
-                Our Story
-              </Link>
-            </div>
-          </div>
-        </div>
-
-        {/* Right — photo */}
-        <div className="relative min-h-[60vh] md:min-h-screen">
+      {/* Hero — full screen back chain lifestyle */}
+      <section className="relative min-h-screen flex flex-col">
+        {/* Background image */}
+        <div className="absolute inset-0">
           <Image
-            src="/images/hero.png"
-            alt="Body Strands jewellery"
+            src="/images/hero-back-chain.jpg"
+            alt="Body Strands back chain jewelry"
             fill
             className="object-cover object-center"
             priority
           />
-          <div className="absolute inset-0 bg-[#2C2220]/10" />
+          {/* Gradient overlay — lighter at top (for logo), darker at bottom (for text) */}
+          <div className="absolute inset-0 bg-gradient-to-b from-[#2C2220]/50 via-transparent to-[#2C2220]/60" />
+        </div>
+
+        {/* Logo — centered at top, visible immediately */}
+        <div className="relative z-10 flex justify-center pt-28 md:pt-32">
+          <Image
+            src="/images/logo.png"
+            alt="Body Strands"
+            width={220}
+            height={44}
+            className="h-10 md:h-14 w-auto object-contain brightness-0 invert drop-shadow-lg"
+            priority
+          />
+        </div>
+
+        {/* Spacer to push text to bottom */}
+        <div className="flex-1" />
+
+        {/* Hero text — bottom center */}
+        <div className="relative z-10 flex flex-col items-center text-center px-6 pb-20 md:pb-28">
+          <p className="text-[0.6rem] tracking-[0.4em] uppercase text-[#E8B4A8] mb-5">
+            Handmade Body Jewelry
+          </p>
+          <h1 className="font-heading text-5xl md:text-7xl font-light text-white leading-[1.05] mb-8 drop-shadow-md">
+            Wear it.<br />
+            <em className="not-italic text-[#E8B4A8]">Feel it.</em>
+          </h1>
+          <p className="text-sm font-light leading-relaxed tracking-wide text-white/80 mb-10 max-w-sm">
+            Dainty, minimal body chains crafted by hand. Made to move with you.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4">
+            <Link href="/shop" className="btn-primary-filled text-center">
+              Shop Now
+            </Link>
+            <Link
+              href="/about"
+              className="text-[0.65rem] tracking-[0.22em] uppercase border border-white/50 text-white hover:bg-white/10 transition-colors px-8 py-3 text-center"
+            >
+              Our Story
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -86,10 +103,10 @@ export default function HomePage() {
       {/* Lifestyle photo strip */}
       <section className="grid grid-cols-2 md:grid-cols-4 gap-1 px-1">
         {[
-          { src: "/images/products/lifestyle-1.jpg", alt: "Body chain lifestyle" },
-          { src: "/images/products/lifestyle-2.jpg", alt: "Back chain detail" },
-          { src: "/images/products/lifestyle-3.jpg", alt: "Gold chain close-up" },
-          { src: "/images/products/lifestyle-4.jpg", alt: "Chain connector detail" },
+          { src: "/images/lifestyle-butterfly.jpg", alt: "Butterfly body chain at beach cafe" },
+          { src: "/images/lifestyle-anklet.jpg", alt: "Gold gemstone anklet on beach" },
+          { src: "/images/lifestyle-headchain.jpg", alt: "Gold head chain bridal look" },
+          { src: "/images/lifestyle-pearl-back.jpg", alt: "Pearl back chain silver dress" },
         ].map((img) => (
           <div key={img.src} className="relative aspect-square overflow-hidden">
             <Image
@@ -122,11 +139,11 @@ export default function HomePage() {
         <div className="flex flex-col gap-6">
           <p className="text-[0.6rem] tracking-[0.3em] uppercase text-[#A0622A]">Our Philosophy</p>
           <h2 className="font-heading text-4xl md:text-5xl font-light text-[#2C2220] leading-snug">
-            Jewellery that moves<br />
+            Jewelry that moves<br />
             <em className="not-italic text-[#A0622A]">with you</em>
           </h2>
           <p className="text-sm font-light leading-relaxed tracking-wide text-[#8C7B6E]">
-            Every piece in our collection is crafted by hand using premium stainless steel. We believe jewellery should be effortless — something you put on and forget about, because it works with your life, not against it.
+            Every piece in our collection is crafted by hand using premium stainless steel. We believe jewelry should be effortless — something you put on and forget about, because it works with your life, not against it.
           </p>
           <p className="text-sm font-light leading-relaxed tracking-wide text-[#8C7B6E]">
             Water-resistant. Tarnish-resistant. Made for real moments.

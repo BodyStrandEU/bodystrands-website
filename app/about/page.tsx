@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export const metadata = {
   title: "About — Body Strands",
-  description: "The story behind Body Strands — handmade body jewellery crafted with love.",
+  description: "The story behind Body Strands — handmade body jewelry crafted with love.",
 };
 
 export default function AboutPage() {
@@ -35,7 +35,7 @@ export default function AboutPage() {
             <em className="not-italic text-[#A0622A]">Made with intention.</em>
           </h2>
           <p className="text-sm font-light leading-loose tracking-wide text-[#8C7B6E]">
-            Body Strands was born from a love of minimal, wearable art. We believe that jewellery should feel like a second skin — effortless, beautiful, and always with you.
+            Body Strands was born from a love of minimal, wearable art. We believe that jewelry should feel like a second skin — effortless, beautiful, and always with you.
           </p>
           <p className="text-sm font-light leading-loose tracking-wide text-[#8C7B6E]">
             Every piece in our collection is carefully handcrafted using premium stainless steel. We chose this material deliberately — it resists tarnish, withstands water, and lasts a lifetime without losing its beauty.
@@ -58,7 +58,7 @@ export default function AboutPage() {
               },
               {
                 title: "Quality Materials",
-                body: "Premium stainless steel means your jewellery stays beautiful. Tarnish-resistant and water-resistant for real life.",
+                body: "Premium stainless steel means your jewelry stays beautiful. Tarnish-resistant and water-resistant for real life.",
               },
               {
                 title: "Minimal Design",

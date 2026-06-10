@@ -1,19 +1,13 @@
 export const CATEGORIES = [
-  "Body Chains",
   "Back Chains",
-  "Belly Chains",
-  "Anklets",
-  "Arm Chains",
+  "Body Chains",
   "Shoulder Chains",
-  "Head Chains",
-  "Hand Chains",
-  "Foot Chains",
-  "Leg Chains",
-  "Necklaces",
+  "Anklets",
+  "Eyeglasses Chains",
   "Bracelets",
-  "Glasses Chains",
-  "Face Chains",
-  "Bundles & Sets",
+  "Bikini Clip Chains",
+  "Belly Chains",
+  "Necklaces",
 ] as const;
 
 export type Category = (typeof CATEGORIES)[number];
@@ -26,6 +20,7 @@ export type Product = {
   category: Category;
   description: string;
   images: string[];
+  video?: string;        // path to .mp4 — plays on hover like Etsy
   featured: boolean;
   variants?: string[];
   etsy_url?: string;
@@ -71,7 +66,7 @@ export const products: Product[] = [
     name: "Arm Chain Bracelet",
     price: 19.99,
     currency: "EUR",
-    category: "Arm Chains",
+    category: "Body Chains",
     description: "Minimalist arm chain that wraps gracefully around your upper arm. Adjustable, lightweight and comfortable.",
     images: ["/images/products/lifestyle-4.jpg"],
     featured: false,

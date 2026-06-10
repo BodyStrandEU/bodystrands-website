@@ -6,27 +6,20 @@ import ScrollReveal from "@/components/ScrollReveal";
 import ReviewsMarquee from "@/components/ReviewsMarquee";
 import LifestyleSlider from "@/components/LifestyleSlider";
 
-// All 15 product categories with their tile images
+// 9 active product categories
 const allTiles = [
   // Row 1 — editorial tall (col-span-2 + 1 + 1)
-  { label: "Body Chains",    sub: "Full body coverage",       href: "/shop?category=Body+Chains",    image: "/images/hero-back-chain.jpg",     wide: true  },
-  { label: "Back Chains",    sub: "Elegant back detail",      href: "/shop?category=Back+Chains",    image: "/images/elvan-back-full.jpg",     wide: false },
-  { label: "Belly Chains",   sub: "Dainty waist adornment",   href: "/shop?category=Belly+Chains",   image: "/images/category-belly.png",      wide: false },
+  { label: "Back Chains",       sub: "Elegant back detail",      href: "/shop?category=Back+Chains",        image: "/images/elvan-back-full.jpg",    wide: true  },
+  { label: "Body Chains",       sub: "Full body coverage",       href: "/shop?category=Body+Chains",        image: "/images/hero-back-chain.jpg",    wide: false },
+  { label: "Belly Chains",      sub: "Dainty waist adornment",   href: "/shop?category=Belly+Chains",       image: "/images/category-belly.png",     wide: false },
   // Row 2
-  { label: "Anklets",        sub: "Foot & ankle jewelry",     href: "/shop?category=Anklets",        image: "/images/lifestyle-anklet.jpg",    wide: false },
-  { label: "Shoulder Chains",sub: "Goddess shoulder drape",   href: "/shop?category=Shoulder+Chains",image: "/images/category-shoulder.jpg",  wide: false },
-  { label: "Head Chains",    sub: "Hair & head adornment",    href: "/shop?category=Head+Chains",    image: "/images/category-head.jpg",       wide: false },
-  { label: "Arm Chains",     sub: "Upper arm elegance",       href: "/shop?category=Arm+Chains",     image: "/images/category-arm.jpg",        wide: false },
+  { label: "Shoulder Chains",   sub: "Goddess shoulder drape",   href: "/shop?category=Shoulder+Chains",   image: "/images/category-shoulder.jpg",  wide: false },
+  { label: "Anklets",           sub: "Foot & ankle jewelry",     href: "/shop?category=Anklets",            image: "/images/lifestyle-anklet.jpg",   wide: false },
+  { label: "Necklaces",         sub: "Delicate neck pieces",     href: "/shop?category=Necklaces",          image: "/images/category-necklace.jpg",  wide: false },
   // Row 3
-  { label: "Hand Chains",    sub: "Rings to wrist",           href: "/shop?category=Hand+Chains",    image: "/images/category-hand.jpg",       wide: false },
-  { label: "Foot Chains",    sub: "Barefoot luxe",            href: "/shop?category=Foot+Chains",    image: "/images/category-foot.jpg",       wide: false },
-  { label: "Leg Chains",     sub: "Thigh adornment",          href: "/shop?category=Leg+Chains",     image: "/images/category-leg.jpg",        wide: false },
-  { label: "Necklaces",      sub: "Delicate neck pieces",     href: "/shop?category=Necklaces",      image: "/images/category-necklace.jpg",   wide: false },
-  // Row 4
-  { label: "Bracelets",      sub: "Wrist elegance",           href: "/shop?category=Bracelets",      image: "/images/category-bracelet.jpg",   wide: false },
-  { label: "Glasses Chains", sub: "Functional chic",          href: "/shop?category=Glasses+Chains", image: "/images/category-glasses.jpg",    wide: false },
-  { label: "Face Chains",    sub: "Bold face accent",         href: "/shop?category=Face+Chains",    image: "/images/category-face.jpg",       wide: false },
-  { label: "Bundles & Sets", sub: "Curated combinations",     href: "/shop?category=Bundles+%26+Sets",image: "/images/category-bundles.jpg",   wide: false },
+  { label: "Bracelets",         sub: "Wrist elegance",           href: "/shop?category=Bracelets",          image: "/images/category-bracelet.jpg",  wide: false },
+  { label: "Eyeglasses Chains", sub: "Functional chic",          href: "/shop?category=Eyeglasses+Chains", image: "/images/category-glasses.jpg",   wide: false },
+  { label: "Bikini Clip Chains",sub: "Beachwear jewellery",      href: "/shop?category=Bikini+Clip+Chains", image: "/images/category-bikini.jpg",    wide: false },
 ];
 
 type Tile = typeof allTiles[number];
@@ -67,10 +60,9 @@ export default function HomePage() {
         .map((f) => `/images/lifestyle/${f}`)
     : [];
 
-  const row1 = allTiles.slice(0, 3);  // Body Chains (wide) + Back + Belly
-  const row2 = allTiles.slice(3, 7);  // Anklets, Shoulder, Head, Arm
-  const row3 = allTiles.slice(7, 11); // Hand, Foot, Leg, Necklaces
-  const row4 = allTiles.slice(11);    // Bracelets, Glasses, Face, Bundles
+  const row1 = allTiles.slice(0, 3);  // Back Chains (wide) + Body + Belly
+  const row2 = allTiles.slice(3, 6);  // Shoulder, Anklets, Necklaces
+  const row3 = allTiles.slice(6);     // Bracelets, Eyeglasses, Bikini Clip
 
   return (
     <>
@@ -147,7 +139,7 @@ export default function HomePage() {
         </div>
 
         {/* Row 2 */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-1 mb-1">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-1 mb-1">
           {row2.map((tile, i) => (
             <ScrollReveal key={tile.label} delay={i * 60}>
               <CategoryTile tile={tile} />
@@ -156,17 +148,8 @@ export default function HomePage() {
         </div>
 
         {/* Row 3 */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-1 mb-1">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-1">
           {row3.map((tile, i) => (
-            <ScrollReveal key={tile.label} delay={i * 60}>
-              <CategoryTile tile={tile} />
-            </ScrollReveal>
-          ))}
-        </div>
-
-        {/* Row 4 */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-1">
-          {row4.map((tile, i) => (
             <ScrollReveal key={tile.label} delay={i * 60}>
               <CategoryTile tile={tile} />
             </ScrollReveal>

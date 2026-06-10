@@ -61,9 +61,20 @@ export default function Footer() {
         <p className="text-[0.6rem] tracking-[0.18em] uppercase text-[#E8B4A8]/40">
           © {new Date().getFullYear()} Body Strands. All rights reserved.
         </p>
-        <p className="text-[0.6rem] tracking-[0.18em] uppercase text-[#E8B4A8]/40">
-          Handmade with love
-        </p>
+        <div className="flex gap-6">
+          <Link
+            href="/privacy-policy"
+            className="text-[0.6rem] tracking-[0.18em] uppercase text-[#E8B4A8]/40 hover:text-[#E8B4A8]/70 transition-colors"
+          >
+            Privacy Policy
+          </Link>
+          <Link
+            href="/terms"
+            className="text-[0.6rem] tracking-[0.18em] uppercase text-[#E8B4A8]/40 hover:text-[#E8B4A8]/70 transition-colors"
+          >
+            Terms & Conditions
+          </Link>
+        </div>
       </div>
     </footer>
   );

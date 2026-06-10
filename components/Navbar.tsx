@@ -22,11 +22,23 @@ export default function Navbar() {
   ];
 
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? "bg-[#FDF9F7]/95 backdrop-blur-sm shadow-sm" : "bg-transparent"
-      }`}
-    >
+    <header className="fixed top-0 left-0 right-0 z-50">
+      {/* Announcement bar — fades out on scroll */}
+      <div
+        className={`bg-[#2C2220] overflow-hidden transition-all duration-300 ${
+          scrolled ? "max-h-0 opacity-0" : "max-h-12 opacity-100"
+        }`}
+      >
+        <p className="text-[0.52rem] tracking-[0.22em] uppercase text-[#E8B4A8]/70 text-center py-2.5 px-4">
+          Handmade&nbsp;&nbsp;·&nbsp;&nbsp;Ships in 1–2 Days&nbsp;&nbsp;·&nbsp;&nbsp;<span className="hidden sm:inline">Free Shipping in Europe Over €50</span><span className="sm:hidden">Free EU Shipping Over €50</span>
+        </p>
+      </div>
+
+      <div
+        className={`transition-all duration-300 ${
+          scrolled ? "bg-[#FDF9F7]/95 backdrop-blur-sm shadow-sm" : "bg-transparent"
+        }`}
+      >
       <div className="max-w-7xl mx-auto px-6 md:px-10 h-20 flex items-center justify-between">
         <Link href="/" className="flex-shrink-0">
           <Image
@@ -76,6 +88,7 @@ export default function Navbar() {
           ))}
         </div>
       )}
+      </div>
     </header>
   );
 }

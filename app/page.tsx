@@ -3,6 +3,7 @@ import Link from "next/link";
 import ProductCard from "@/components/ProductCard";
 import { products } from "@/lib/products";
 import ScrollReveal from "@/components/ScrollReveal";
+import ReviewsMarquee from "@/components/ReviewsMarquee";
 
 export default function HomePage() {
   const featured = products.filter((p) => p.featured).slice(0, 3);
@@ -112,9 +113,11 @@ export default function HomePage() {
         ))}
       </section>
 
-      {/* Divider */}
-      <div className="max-w-7xl mx-auto px-6 md:px-10 mt-24">
-        <div className="h-px bg-[#E8B4A8]/30" />
+      {/* Diamond divider */}
+      <div className="max-w-7xl mx-auto px-6 md:px-10 mt-24 flex items-center gap-6">
+        <div className="flex-1 h-px bg-[#E8B4A8]/30" />
+        <span className="text-[#E8B4A8]/50 text-[0.6rem]">◆</span>
+        <div className="flex-1 h-px bg-[#E8B4A8]/30" />
       </div>
 
       {/* Brand Story Snippet */}
@@ -149,6 +152,18 @@ export default function HomePage() {
           </div>
         </ScrollReveal>
       </section>
+
+      {/* Reviews marquee */}
+      <div className="bg-[#FAF7F5]">
+        <ReviewsMarquee />
+      </div>
+
+      {/* Diamond divider */}
+      <div className="max-w-7xl mx-auto px-6 md:px-10 flex items-center gap-6">
+        <div className="flex-1 h-px bg-[#E8B4A8]/30" />
+        <span className="text-[#E8B4A8]/50 text-[0.6rem]">◆</span>
+        <div className="flex-1 h-px bg-[#E8B4A8]/30" />
+      </div>
 
       {/* Newsletter */}
       <section className="bg-[#E8B4A8]/20 py-20">

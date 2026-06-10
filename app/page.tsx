@@ -24,18 +24,6 @@ export default function HomePage() {
           <div className="absolute inset-0 bg-gradient-to-b from-[#2C2220]/50 via-transparent to-[#2C2220]/60" />
         </div>
 
-        {/* Logo — centered at top, visible immediately */}
-        <div className="relative z-10 flex justify-center pt-28 md:pt-32">
-          <Image
-            src="/images/logo.png"
-            alt="Body Strands"
-            width={220}
-            height={44}
-            className="h-10 md:h-14 w-auto object-contain brightness-0 invert drop-shadow-lg"
-            priority
-          />
-        </div>
-
         {/* Spacer to push text to bottom */}
         <div className="flex-1" />
 

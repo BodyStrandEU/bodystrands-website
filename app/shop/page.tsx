@@ -5,7 +5,7 @@ import { products, CATEGORIES } from "@/lib/products";
 import type { Category } from "@/lib/products";
 
 export const metadata = {
-  title: "Shop — Body Strands",
+  title: "Shop — Bodystrands",
   description: "Shop handmade body chains, belly chains, anklets, and more. All pieces crafted in tarnish-resistant stainless steel.",
 };
 
@@ -32,7 +32,7 @@ export default async function ShopPage({
 
         {/* Page header */}
         <div className="mb-12 md:mb-16">
-          <p className="text-[0.52rem] tracking-[0.35em] uppercase text-[#A0622A] mb-3">Body Strands</p>
+          <p className="text-[0.52rem] tracking-[0.35em] uppercase text-[#A0622A] mb-3">Bodystrands</p>
           <h1 className="font-heading text-5xl md:text-6xl font-light text-[#2C2220] leading-none">
             {activeLabel}
           </h1>

@@ -1,6 +1,6 @@
 export const metadata = {
-  title: "Contact — Body Strands",
-  description: "Get in touch with Body Strands. We'd love to hear from you.",
+  title: "Contact — Bodystrands",
+  description: "Get in touch with Bodystrands. We'd love to hear from you.",
 };
 
 export default function ContactPage() {

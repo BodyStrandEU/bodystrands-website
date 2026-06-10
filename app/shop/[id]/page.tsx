@@ -12,7 +12,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
   const product = products.find((p) => p.id === id);
   if (!product) return {};
   return {
-    title: `${product.name} — Body Strands`,
+    title: `${product.name} — Bodystrands`,
     description: product.description,
   };
 }

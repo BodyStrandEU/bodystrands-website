@@ -59,7 +59,7 @@ export default function Footer() {
 
       <div className="border-t border-[#E8B4A8]/10 max-w-7xl mx-auto px-6 md:px-10 py-6 flex flex-col md:flex-row justify-between items-center gap-3">
         <p className="text-[0.6rem] tracking-[0.18em] uppercase text-[#E8B4A8]/40">
-          © {new Date().getFullYear()} Body Strands. All rights reserved.
+          © {new Date().getFullYear()} Bodystrands. All rights reserved.
         </p>
         <div className="flex gap-6">
           <Link

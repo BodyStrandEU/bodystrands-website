@@ -19,22 +19,24 @@ const josefin = Josefin_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Body Strands — Handmade Body Jewelry",
+  title: "Bodystrands — Handmade Body Jewelry",
   description: "Dainty handmade body chains, waist chains, and anklets. Crafted in 316L surgical-grade stainless steel. Tarnish-resistant, waterproof, and adjustable.",
   keywords: "body chain, waist chain, anklet, handmade jewelry, body jewelry, gold body chain, stainless steel body chain, dainty body jewelry",
   metadataBase: new URL("https://www.bodystrands.com"),
   openGraph: {
-    title: "Body Strands — Handmade Body Jewelry",
+    title: "Bodystrands — Handmade Body Jewelry",
     description: "Dainty handmade body chains, waist chains, and anklets. Crafted in 316L surgical-grade stainless steel.",
     url: "https://www.bodystrands.com",
     siteName: "Bodystrands",
     locale: "en_US",
     type: "website",
+    images: [{ url: "/images/og-image.jpg", width: 1200, height: 630, alt: "Bodystrands — Handmade Body Jewelry" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Body Strands — Handmade Body Jewelry",
+    title: "Bodystrands — Handmade Body Jewelry",
     description: "Dainty handmade body chains, waist chains, and anklets.",
+    images: ["/images/og-image.jpg"],
   },
   robots: {
     index: true,

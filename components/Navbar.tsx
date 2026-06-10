@@ -60,10 +60,12 @@ export default function Navbar() {
           <Link href="/" className="flex-shrink-0">
             <Image
               src="/images/logo.png"
-              alt="Body Strands"
+              alt="Bodystrands"
               width={200}
-              height={40}
-              className="h-8 w-auto object-contain"
+              height={44}
+              className={`h-9 md:h-11 w-auto object-contain transition-all duration-300 ${
+                scrolled ? "" : "brightness-0 invert"
+              }`}
               priority
             />
           </Link>

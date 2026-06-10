@@ -73,3 +73,15 @@ h1, h2, h3, h4 {
 .btn-primary-filled:hover {
   background-color: #8A5222;
 }
+
+/* Scroll reveal animations */
+.reveal-hidden {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.75s ease, transform 0.75s ease;
+}
+
+.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}

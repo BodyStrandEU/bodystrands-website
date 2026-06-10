@@ -19,8 +19,10 @@ export type Product = {
   currency: string;
   category: Category;
   description: string;
-  images: string[];
-  video?: string;        // path to .mp4 — plays on hover like Etsy
+  images: string[];                          // default (gold or first) images
+  variantImages?: Record<string, string[]>;  // { "Gold Tone": [img1, img2], "Silver Tone": [img1, img2] }
+  video?: string;                            // plays on hover (muted, looped)
+  variantVideos?: Record<string, string>;    // { "Gold Tone": "/video.mp4", "Silver Tone": "/video.mp4" }
   featured: boolean;
   variants?: string[];
   etsy_url?: string;

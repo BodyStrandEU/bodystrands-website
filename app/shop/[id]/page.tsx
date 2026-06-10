@@ -2,6 +2,7 @@ import Link from "next/link";
 import { products } from "@/lib/products";
 import { notFound } from "next/navigation";
 import BuyButton from "@/components/BuyButton";
+import ProductGallery from "@/components/ProductGallery";
 
 export async function generateStaticParams() {
   return products.map((p) => ({ id: p.id }));
@@ -37,11 +38,9 @@ export default async function ProductPage({ params }: { params: Promise<{ id: st
           <span className="text-[#2C2220]">{product.name}</span>
         </nav>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
-          {/* Image */}
-          <div className="bg-[#F2DDD7] aspect-square flex items-center justify-center">
-            <p className="text-[0.6rem] tracking-[0.2em] uppercase text-[#A0622A]/50">Image coming soon</p>
-          </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-start">
+          {/* Gallery + variant selector — client component */}
+          <ProductGallery product={product} />
 
           {/* Details */}
           <div className="flex flex-col gap-6 md:sticky md:top-32">
@@ -56,22 +55,6 @@ export default async function ProductPage({ params }: { params: Promise<{ id: st
             <p className="text-sm font-light leading-relaxed tracking-wide text-[#8C7B6E]">
               {product.description}
             </p>
-
-            {product.variants && (
-              <div>
-                <p className="text-[0.55rem] tracking-[0.25em] uppercase text-[#8C7B6E] mb-3">Finish</p>
-                <div className="flex gap-3 flex-wrap">
-                  {product.variants.map((v) => (
-                    <button
-                      key={v}
-                      className="text-[0.6rem] tracking-[0.18em] uppercase px-4 py-2 border border-[#A0622A]/30 text-[#8C7B6E] hover:border-[#A0622A] hover:text-[#A0622A] transition-colors"
-                    >
-                      {v}
-                    </button>
-                  ))}
-                </div>
-              </div>
-            )}
 
             <div className="h-px bg-[#E8B4A8]/40" />
 

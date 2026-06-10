@@ -1,9 +1,29 @@
+export const CATEGORIES = [
+  "Body Chains",
+  "Back Chains",
+  "Belly Chains",
+  "Anklets",
+  "Arm Chains",
+  "Shoulder Chains",
+  "Head Chains",
+  "Hand Chains",
+  "Foot Chains",
+  "Leg Chains",
+  "Necklaces",
+  "Bracelets",
+  "Glasses Chains",
+  "Face Chains",
+  "Bundles & Sets",
+] as const;
+
+export type Category = (typeof CATEGORIES)[number];
+
 export type Product = {
   id: string;
   name: string;
   price: number;
   currency: string;
-  category: string;
+  category: Category;
   description: string;
   images: string[];
   featured: boolean;
@@ -18,7 +38,7 @@ export const products: Product[] = [
     name: "Back Body Chain — Wedding",
     price: 29.99,
     currency: "EUR",
-    category: "Body Chains",
+    category: "Back Chains",
     description: "A delicate, dainty back body chain handcrafted for weddings and special occasions. Adjustable fit, tarnish-resistant stainless steel.",
     images: ["/images/products/lifestyle-2.jpg"],
     featured: true,
@@ -29,7 +49,7 @@ export const products: Product[] = [
     name: "Dainty Waist Chain",
     price: 24.99,
     currency: "EUR",
-    category: "Waist Chains",
+    category: "Belly Chains",
     description: "Ultra-thin waist chain with adjustable extender. Water-resistant and made to be worn every day.",
     images: ["/images/products/lifestyle-1.jpg"],
     featured: true,
@@ -58,5 +78,3 @@ export const products: Product[] = [
     variants: ["Gold Tone", "Silver Tone"],
   },
 ];
-
-export const categories = [...new Set(products.map((p) => p.category))];

@@ -1,51 +1,74 @@
+import { Suspense } from "react";
 import ProductCard from "@/components/ProductCard";
-import { products, categories } from "@/lib/products";
+import CategoryFilter from "@/components/CategoryFilter";
+import { products, CATEGORIES } from "@/lib/products";
+import type { Category } from "@/lib/products";
 
 export const metadata = {
   title: "Shop — Body Strands",
-  description: "Shop handmade body chains, waist chains, and anklets. All pieces crafted in tarnish-resistant stainless steel.",
+  description: "Shop handmade body chains, belly chains, anklets, and more. All pieces crafted in tarnish-resistant stainless steel.",
 };
 
-export default function ShopPage() {
+export default async function ShopPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ category?: string }>;
+}) {
+  const { category } = await searchParams;
+
+  const isValidCategory = (c: string): c is Category =>
+    (CATEGORIES as readonly string[]).includes(c);
+
+  const filtered =
+    category && isValidCategory(category)
+      ? products.filter((p) => p.category === category)
+      : products;
+
+  const activeLabel = category && isValidCategory(category) ? category : "All Pieces";
+
   return (
-    <div className="pt-32 pb-24">
+    <div className="min-h-screen pt-28 md:pt-32 pb-24">
       <div className="max-w-7xl mx-auto px-6 md:px-10">
 
-        {/* Header */}
-        <div className="mb-16 text-center">
-          <p className="text-[0.6rem] tracking-[0.35em] uppercase text-[#A0622A] mb-4">Our Collection</p>
-          <h1 className="font-heading text-5xl md:text-6xl font-light text-[#2C2220]">Shop</h1>
-          <div className="mt-6 w-px h-12 bg-[#A0622A]/30 mx-auto" />
+        {/* Page header */}
+        <div className="mb-12 md:mb-16">
+          <p className="text-[0.52rem] tracking-[0.35em] uppercase text-[#A0622A] mb-3">Body Strands</p>
+          <h1 className="font-heading text-5xl md:text-6xl font-light text-[#2C2220] leading-none">
+            {activeLabel}
+          </h1>
+          <p className="mt-3 text-[0.6rem] tracking-[0.15em] uppercase text-[#8C7B6E]">
+            {filtered.length} {filtered.length === 1 ? "piece" : "pieces"}
+          </p>
         </div>
 
-        {/* Category filter */}
-        <div className="flex flex-wrap justify-center gap-4 mb-16">
-          <span className="text-[0.6rem] tracking-[0.22em] uppercase px-5 py-2 border border-[#A0622A] text-[#A0622A] cursor-pointer hover:bg-[#A0622A] hover:text-[#FDF9F7] transition-colors">
-            All
-          </span>
-          {categories.map((cat) => (
-            <span
-              key={cat}
-              className="text-[0.6rem] tracking-[0.22em] uppercase px-5 py-2 border border-[#A0622A]/30 text-[#8C7B6E] cursor-pointer hover:border-[#A0622A] hover:text-[#A0622A] transition-colors"
-            >
-              {cat}
-            </span>
-          ))}
-        </div>
+        {/* Layout: sidebar + grid */}
+        <div className="flex gap-16">
+          <Suspense fallback={null}>
+            <CategoryFilter />
+          </Suspense>
 
-        {/* Product Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-          {products.map((product) => (
-            <ProductCard key={product.id} product={product} />
-          ))}
-        </div>
-
-        {/* Empty state if no products */}
-        {products.length === 0 && (
-          <div className="text-center py-24">
-            <p className="text-sm font-light tracking-wide text-[#8C7B6E]">New collection coming soon.</p>
+          <div className="flex-1 min-w-0">
+            {filtered.length > 0 ? (
+              <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-x-6 gap-y-12">
+                {filtered.map((product) => (
+                  <ProductCard key={product.id} product={product} />
+                ))}
+              </div>
+            ) : (
+              <div className="py-24 text-center">
+                <div className="flex items-center justify-center gap-6 mb-8">
+                  <div className="flex-1 h-px bg-[#E8B4A8]/30 max-w-24" />
+                  <span className="text-[#E8B4A8]/50 text-[0.6rem]">◆</span>
+                  <div className="flex-1 h-px bg-[#E8B4A8]/30 max-w-24" />
+                </div>
+                <p className="text-sm font-light tracking-wide text-[#8C7B6E]">
+                  New pieces coming soon.
+                </p>
+              </div>
+            )}
           </div>
-        )}
+        </div>
+
       </div>
     </div>
   );

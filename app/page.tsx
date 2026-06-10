@@ -1,13 +1,52 @@
 import Image from "next/image";
 import Link from "next/link";
-import ProductCard from "@/components/ProductCard";
-import { products } from "@/lib/products";
 import ScrollReveal from "@/components/ScrollReveal";
 import ReviewsMarquee from "@/components/ReviewsMarquee";
 
-export default function HomePage() {
-  const featured = products.filter((p) => p.featured).slice(0, 3);
+const categoryTiles = [
+  {
+    label: "Body Chains",
+    sub: "Full body coverage",
+    href: "/shop?category=Body+Chains",
+    image: "/images/hero-back-chain.jpg",
+    span: "lg:col-span-2",
+    aspect: "aspect-[4/5]",
+  },
+  {
+    label: "Back Chains",
+    sub: "Elegant back detail",
+    href: "/shop?category=Back+Chains",
+    image: "/images/elvan-back-full.jpg",
+    span: "lg:col-span-1",
+    aspect: "aspect-[4/5]",
+  },
+  {
+    label: "Belly Chains",
+    sub: "Dainty waist adornment",
+    href: "/shop?category=Belly+Chains",
+    image: "/images/category-belly.png",
+    span: "lg:col-span-1",
+    aspect: "aspect-square",
+  },
+  {
+    label: "Anklets",
+    sub: "Foot & ankle jewelry",
+    href: "/shop?category=Anklets",
+    image: "/images/lifestyle-anklet.jpg",
+    span: "lg:col-span-1",
+    aspect: "aspect-square",
+  },
+  {
+    label: "Shoulder & More",
+    sub: "Head, shoulder & arm",
+    href: "/shop",
+    image: "/images/category-shoulder.jpg",
+    span: "lg:col-span-1",
+    aspect: "aspect-square",
+  },
+];
 
+export default function HomePage() {
   return (
     <>
       {/* Hero — full screen back chain lifestyle */}
@@ -65,14 +104,14 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Featured Products */}
+      {/* Shop by Category — editorial tiles */}
       <section className="max-w-7xl mx-auto px-6 md:px-10 py-24">
         <ScrollReveal>
-          <div className="flex items-end justify-between mb-12">
+          <div className="flex items-end justify-between mb-10">
             <div>
-              <p className="text-[0.6rem] tracking-[0.3em] uppercase text-[#A0622A] mb-3">Collection</p>
+              <p className="text-[0.6rem] tracking-[0.3em] uppercase text-[#A0622A] mb-3">Explore</p>
               <h2 className="font-heading text-4xl md:text-5xl font-light text-[#2C2220]">
-                Featured Pieces
+                Shop by Category
               </h2>
             </div>
             <Link href="/shop" className="hidden md:block text-[0.6rem] tracking-[0.22em] uppercase text-[#A0622A] hover:underline underline-offset-4">
@@ -81,16 +120,60 @@ export default function HomePage() {
           </div>
         </ScrollReveal>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 md:gap-10">
-          {featured.map((product, i) => (
-            <ScrollReveal key={product.id} delay={i * 100}>
-              <ProductCard product={product} />
+        {/* Row 1: 2 + 1 */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 mb-2">
+          {categoryTiles.slice(0, 2).map((tile, i) => (
+            <ScrollReveal key={tile.label} delay={i * 80} className={tile.span}>
+              <Link href={tile.href} className="group block relative overflow-hidden">
+                <div className={`relative ${tile.aspect} overflow-hidden`}>
+                  <Image
+                    src={tile.image}
+                    alt={tile.label}
+                    fill
+                    className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-[1.04]"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#2C2220]/70 via-transparent to-transparent" />
+                  <div className="absolute bottom-0 left-0 p-6 md:p-8">
+                    <p className="text-[0.5rem] tracking-[0.3em] uppercase text-[#E8B4A8]/80 mb-2">{tile.sub}</p>
+                    <h3 className="font-heading text-2xl md:text-3xl font-light text-white leading-tight">{tile.label}</h3>
+                    <p className="mt-3 text-[0.55rem] tracking-[0.22em] uppercase text-white/60 group-hover:text-[#E8B4A8] transition-colors duration-300">
+                      Explore →
+                    </p>
+                  </div>
+                </div>
+              </Link>
             </ScrollReveal>
           ))}
         </div>
 
-        <div className="mt-12 text-center md:hidden">
-          <Link href="/shop" className="btn-primary">View All Pieces</Link>
+        {/* Row 2: 1 + 1 + 1 */}
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
+          {categoryTiles.slice(2).map((tile, i) => (
+            <ScrollReveal key={tile.label} delay={i * 80}>
+              <Link href={tile.href} className="group block">
+                <div className={`relative ${tile.aspect} overflow-hidden`}>
+                  <Image
+                    src={tile.image}
+                    alt={tile.label}
+                    fill
+                    className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-[1.04]"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#2C2220]/65 via-transparent to-transparent" />
+                  <div className="absolute bottom-0 left-0 p-5 md:p-6">
+                    <p className="text-[0.5rem] tracking-[0.3em] uppercase text-[#E8B4A8]/80 mb-1.5">{tile.sub}</p>
+                    <h3 className="font-heading text-xl md:text-2xl font-light text-white">{tile.label}</h3>
+                    <p className="mt-2 text-[0.52rem] tracking-[0.22em] uppercase text-white/60 group-hover:text-[#E8B4A8] transition-colors duration-300">
+                      Explore →
+                    </p>
+                  </div>
+                </div>
+              </Link>
+            </ScrollReveal>
+          ))}
+        </div>
+
+        <div className="mt-8 text-center">
+          <Link href="/shop" className="btn-primary">View All 15 Categories</Link>
         </div>
       </section>
 

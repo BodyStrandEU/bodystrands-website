@@ -56,14 +56,14 @@ export default function Navbar() {
           scrolled ? "bg-[#FDF9F7]/95 backdrop-blur-sm shadow-sm" : "bg-transparent"
         }`}
       >
-        <div className="max-w-7xl mx-auto px-6 md:px-10 h-20 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-6 md:px-10 h-20 md:h-24 flex items-center justify-between">
           <Link href="/" className="flex-shrink-0">
             <Image
               src="/images/logo.png"
               alt="Bodystrands"
-              width={200}
-              height={44}
-              className={`h-9 md:h-11 w-auto object-contain transition-all duration-300 ${
+              width={2000}
+              height={2000}
+              className={`h-14 md:h-16 w-auto object-contain transition-all duration-300 ${
                 scrolled ? "" : "brightness-0 invert"
               }`}
               priority

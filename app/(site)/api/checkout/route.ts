@@ -5,7 +5,8 @@ import { products } from "@/lib/products";
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!);
 
 export async function POST(req: NextRequest) {
-  const { productId, variant } = await req.json();
+  try {
+  const { productId, variant } = await req.json() as { productId: string; variant?: string };
 
   const product = products.find((p) => p.id === productId);
   if (!product) {
@@ -16,7 +17,7 @@ export async function POST(req: NextRequest) {
   const origin = req.headers.get("origin") ?? "https://bodystrands.com";
 
   const session = await stripe.checkout.sessions.create({
-    automatic_payment_methods: { enabled: true },
+    payment_method_types: ["card"],
     line_items: [
       {
         price_data: {
@@ -44,4 +45,9 @@ export async function POST(req: NextRequest) {
   });
 
   return NextResponse.json({ url: session.url });
+  } catch (err) {
+    const message = err instanceof Error ? err.message : "Checkout error";
+    console.error("Stripe checkout error:", message);
+    return NextResponse.json({ error: message }, { status: 500 });
+  }
 }

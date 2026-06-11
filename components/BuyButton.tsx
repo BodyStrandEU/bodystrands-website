@@ -13,17 +13,22 @@ export default function BuyButton({
 
   async function handleBuy() {
     setLoading(true);
-    const res = await fetch("/api/checkout", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ productId, variant }),
-    });
-    const data = await res.json();
-    if (data.url) {
-      window.location.href = data.url;
-    } else {
+    try {
+      const res = await fetch("/api/checkout", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ productId, variant }),
+      });
+      const data = await res.json() as { url?: string; error?: string };
+      if (data.url) {
+        window.location.href = data.url;
+      } else {
+        setLoading(false);
+        alert(data.error ?? "Something went wrong. Please try again.");
+      }
+    } catch {
       setLoading(false);
-      alert("Something went wrong. Please try again.");
+      alert("Connection error. Please try again.");
     }
   }
 

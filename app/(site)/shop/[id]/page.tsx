@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { products } from "@/lib/products";
 import { notFound } from "next/navigation";
-import BuyButton from "@/components/BuyButton";
 import ProductGallery from "@/components/ProductGallery";
 import ProductDetails from "@/components/ProductDetails";
 
@@ -60,10 +59,6 @@ export default async function ProductPage({ params }: { params: Promise<{ id: st
             </p>
 
             <div className="h-px bg-[#E8B4A8]/40" />
-
-            <div className="flex flex-col gap-3">
-              <BuyButton productId={product.id} />
-            </div>
 
             <div className="flex flex-col gap-2 mt-2">
               {["Handmade", "Tarnish-resistant stainless steel", "Water-resistant", "Adjustable fit"].map((feat) => (

@@ -5,9 +5,13 @@ import { useState } from "react";
 export default function BuyButton({
   productId,
   variant,
+  disabled: externalDisabled,
+  disabledMessage,
 }: {
   productId: string;
   variant?: string;
+  disabled?: boolean;
+  disabledMessage?: string;
 }) {
   const [loading, setLoading] = useState(false);
 
@@ -32,13 +36,16 @@ export default function BuyButton({
     }
   }
 
+  const isDisabled = loading || externalDisabled;
+
   return (
     <button
       onClick={handleBuy}
-      disabled={loading}
+      disabled={isDisabled}
+      title={externalDisabled && disabledMessage ? disabledMessage : undefined}
       className="btn-primary-filled w-full text-center py-4 disabled:opacity-60 disabled:cursor-not-allowed"
     >
-      {loading ? "Redirecting to checkout…" : "Buy Now"}
+      {loading ? "Redirecting to checkout…" : externalDisabled && disabledMessage ? disabledMessage : "Buy Now"}
     </button>
   );
 }

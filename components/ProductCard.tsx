@@ -69,7 +69,10 @@ export default function ProductCard({ product }: { product: Product }) {
       onMouseLeave={handleCardLeave}
     >
       {/* Media container */}
-      <div className="relative overflow-hidden bg-[#FDF9F7] aspect-square">
+      <div
+        className="relative overflow-hidden bg-[#FDF9F7] aspect-square"
+        onTouchStart={handleCardEnter}
+      >
 
         {/* Static image */}
         {currentImage ? (

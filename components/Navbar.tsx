@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { CATEGORIES } from "@/lib/products";
+import { activeCategories } from "@/lib/products";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -32,9 +32,9 @@ export default function Navbar() {
     { href: "/contact", label: "Contact" },
   ];
 
-  // Split categories into two columns
-  const col1 = CATEGORIES.slice(0, Math.ceil(CATEGORIES.length / 2));
-  const col2 = CATEGORIES.slice(Math.ceil(CATEGORIES.length / 2));
+  // Split active categories into two columns
+  const col1 = activeCategories.slice(0, Math.ceil(activeCategories.length / 2));
+  const col2 = activeCategories.slice(Math.ceil(activeCategories.length / 2));
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50">
@@ -160,7 +160,7 @@ export default function Navbar() {
             >
               All Pieces
             </Link>
-            {CATEGORIES.map((cat) => (
+            {activeCategories.map((cat) => (
               <Link
                 key={cat}
                 href={`/shop?category=${encodeURIComponent(cat)}`}

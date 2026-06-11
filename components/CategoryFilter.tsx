@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
-import { CATEGORIES } from "@/lib/products";
+import { activeCategories } from "@/lib/products";
 
 export default function CategoryFilter() {
   const searchParams = useSearchParams();
@@ -29,7 +29,7 @@ export default function CategoryFilter() {
             {isActive("all") && <span className="mr-2 text-[#A0622A]">—</span>}
             All Pieces
           </Link>
-          {CATEGORIES.map((cat) => (
+          {activeCategories.map((cat) => (
             <Link
               key={cat}
               href={href(cat)}
@@ -59,7 +59,7 @@ export default function CategoryFilter() {
           >
             All
           </Link>
-          {CATEGORIES.map((cat) => (
+          {activeCategories.map((cat) => (
             <Link
               key={cat}
               href={href(cat)}

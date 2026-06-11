@@ -3,6 +3,7 @@ import { products } from "@/lib/products";
 import { notFound } from "next/navigation";
 import BuyButton from "@/components/BuyButton";
 import ProductGallery from "@/components/ProductGallery";
+import ProductDetails from "@/components/ProductDetails";
 
 export async function generateStaticParams() {
   return products.map((p) => ({ id: p.id }));
@@ -70,6 +71,11 @@ export default async function ProductPage({ params }: { params: Promise<{ id: st
                 </p>
               ))}
             </div>
+
+            <ProductDetails
+              fullDescription={product.fullDescription}
+              specs={product.specs}
+            />
           </div>
         </div>
       </div>

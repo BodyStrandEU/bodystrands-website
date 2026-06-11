@@ -5,8 +5,9 @@ import Link from "next/link";
 import ScrollReveal from "@/components/ScrollReveal";
 import ReviewsMarquee from "@/components/ReviewsMarquee";
 import LifestyleSlider from "@/components/LifestyleSlider";
+import { activeCategories } from "@/lib/products";
 
-// 9 active product categories
+// All possible category tiles — filtered at render time to only show populated categories
 const allTiles = [
   // Row 1 — editorial tall (col-span-2 + 1 + 1)
   { label: "Back Chains",       sub: "Elegant back detail",      href: "/shop?category=Back+Chains",        image: "/images/elvan-back-full.jpg",    wide: true  },
@@ -60,9 +61,14 @@ export default function HomePage() {
         .map((f) => `/images/lifestyle/${f}`)
     : [];
 
-  const row1 = allTiles.slice(0, 3);  // Back Chains (wide) + Body + Belly
-  const row2 = allTiles.slice(3, 6);  // Shoulder, Anklets, Necklaces
-  const row3 = allTiles.slice(6);     // Bracelets, Eyeglasses, Bikini Clip
+  // Only show tiles for categories that have real products
+  const visibleTiles = allTiles.filter((t) =>
+    (activeCategories as string[]).includes(t.label)
+  );
+
+  const row1 = visibleTiles.filter((t) => ["Back Chains", "Body Chains", "Belly Chains"].includes(t.label));
+  const row2 = visibleTiles.filter((t) => ["Shoulder Chains", "Anklets", "Necklaces"].includes(t.label));
+  const row3 = visibleTiles.filter((t) => ["Bracelets", "Eyeglasses Chains", "Bikini Clip Chains"].includes(t.label));
 
   return (
     <>
@@ -126,35 +132,41 @@ export default function HomePage() {
           </div>
         </ScrollReveal>
 
-        {/* Row 1: Body Chains wide (2 cols) + Back + Belly */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-1 mb-1">
-          <ScrollReveal className="col-span-2">
-            <CategoryTile tile={row1[0]} large />
-          </ScrollReveal>
-          {row1.slice(1).map((tile, i) => (
-            <ScrollReveal key={tile.label} delay={i * 60}>
-              <CategoryTile tile={tile} large />
+        {/* Row 1: Back Chains wide + Body Chains + Belly Chains */}
+        {row1.length > 0 && (
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-1 mb-1">
+            <ScrollReveal className="col-span-2">
+              <CategoryTile tile={row1[0]} large />
             </ScrollReveal>
-          ))}
-        </div>
+            {row1.slice(1).map((tile, i) => (
+              <ScrollReveal key={tile.label} delay={i * 60}>
+                <CategoryTile tile={tile} large />
+              </ScrollReveal>
+            ))}
+          </div>
+        )}
 
-        {/* Row 2 */}
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-1 mb-1">
-          {row2.map((tile, i) => (
-            <ScrollReveal key={tile.label} delay={i * 60}>
-              <CategoryTile tile={tile} />
-            </ScrollReveal>
-          ))}
-        </div>
+        {/* Row 2: Shoulder Chains, Anklets, Necklaces */}
+        {row2.length > 0 && (
+          <div className={`grid gap-1 mb-1 ${row2.length === 1 ? "grid-cols-1 max-w-xl" : "grid-cols-2 md:grid-cols-3"}`}>
+            {row2.map((tile, i) => (
+              <ScrollReveal key={tile.label} delay={i * 60}>
+                <CategoryTile tile={tile} large={row2.length === 1} />
+              </ScrollReveal>
+            ))}
+          </div>
+        )}
 
-        {/* Row 3 */}
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-1">
-          {row3.map((tile, i) => (
-            <ScrollReveal key={tile.label} delay={i * 60}>
-              <CategoryTile tile={tile} />
-            </ScrollReveal>
-          ))}
-        </div>
+        {/* Row 3: Bracelets, Eyeglasses Chains, Bikini Clip Chains */}
+        {row3.length > 0 && (
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-1">
+            {row3.map((tile, i) => (
+              <ScrollReveal key={tile.label} delay={i * 60}>
+                <CategoryTile tile={tile} />
+              </ScrollReveal>
+            ))}
+          </div>
+        )}
       </section>
 
       {/* Lifestyle slider */}

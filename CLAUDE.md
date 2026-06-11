@@ -14,7 +14,15 @@
 - No `etsy_url` or `amazon_url` fields on Product type.
 
 ## Product Folder Structure
-Products are organized on the drive at:
+
+### ALWAYS CHECK THIS SHARED FOLDER FIRST for new listings:
+`/Volumes/jordan 2tb/Vscode  bodystrandseu/bodystrandseu/Media Files shared with Claude/Listed products on website/[Product Name]/`
+- Giordano prepares each listing here with: photos, SEO copy (text file or screenshot), price, and variant notes
+- Read ALL files in the folder before listing — especially any .txt or screenshot showing the Etsy copy
+- The SEO copy contains: product title, description, specs/measurements, variant options, price
+- Extract variant groups (Size, Attachment, etc.) from the copy and add as `variantGroups`
+
+Raw asset library (not for direct listing — use the shared folder above):
 `/Volumes/jordan 2tb/Bodystrands/Bodystrands/Elvan Baby/[Category]/[Product Name]/`
 
 Each product folder contains:
@@ -58,9 +66,10 @@ Product Name/
 - Test mobile layout before shipping any product page changes
 
 ## Product Readiness Signal
-- A product folder is **READY TO LOAD** when it contains a screenshot of the Etsy listing (PNG/JPG showing the listing title and price)
-- Read the screenshot to extract: product name + EUR price
-- Generate description from Etsy title keywords (2–3 sentences, human tone, mention 316L stainless steel + adjustability)
+- A product is **READY TO LIST** when its folder exists in the shared Claude folder (see above)
+- Always read the SEO copy file/screenshot to extract: title, price, description, measurements, variant options
+- Use the copy's description verbatim (lightly adapted for tone) — do NOT invent specs or measurements
+- If a Size variant group is listed in the copy, add it as a `variantGroup` (mandatory selector, same as Attachment)
 
 ## Master Listing Procedure (apply to every new product)
 1. Read product folder structure (Gold/, Silver/, Apply to Both Variations/, hero folders)

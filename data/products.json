@@ -172,37 +172,21 @@
     "price": 55,
     "currency": "EUR",
     "category": "Shoulder Chains",
-    "description": "Two shoulders. One statement. This delicate chest chain drapes symmetrically across both shoulders and layers down the front, adding effortless shimmer to any off-the-shoulder or strapless look. Handmade from tarnish-resistant stainless steel in gold or silver.",
-    "fullDescription": "Where most shoulder chains cover one side, this one goes further — draping softly over both shoulders with layered chains that fall across the chest in perfect symmetry. The result is balanced, elegant, and completely unforgettable on a strapless gown, a white linen dress, or a simple black top.\n\nHandmade from high-quality stainless steel in gold or silver tone, so it holds its colour and resists tarnishing through every wear.",
+    "description": "Make a beautiful statement with this delicate shoulder chain, designed to drape perfectly across your collarbone and upper arms. Crafted by hand from highly durable stainless steel — a stunning complement to bridal wear, prom gowns, or any strapless dress. Available in gold or silver.",
+    "fullDescription": "Where most shoulder chains cover one side, this one goes further — draping softly over both shoulders with layered chains that fall across the chest in perfect symmetry. The result is balanced, elegant, and completely unforgettable on a strapless gown, a white linen dress, or a simple black top.\n\nHandmade from high-quality stainless steel in gold or silver tone, so it holds its colour and resists tarnishing through every wear. Size is fully customisable — message us your exact dimensions after checkout and we can craft the perfect custom fit at no extra cost.",
     "specs": [
-      {
-        "label": "Material",
-        "value": "High-quality stainless steel"
-      },
-      {
-        "label": "Colours",
-        "value": "Gold or Silver finish"
-      },
-      {
-        "label": "Style",
-        "value": "Double shoulder with layered chest drape"
-      },
-      {
-        "label": "Custom fit",
-        "value": "Message us after ordering — we resize to your exact measurements at no extra cost"
-      },
-      {
-        "label": "Care",
-        "value": "Wipe gently with a soft cloth after wear. Store in an airtight container."
-      },
-      {
-        "label": "Shipping",
-        "value": "Dispatches within 1–2 business days"
-      }
+      { "label": "Material",         "value": "High-quality stainless steel" },
+      { "label": "Colours",          "value": "Gold or Silver finish" },
+      { "label": "Top arm drape",    "value": "28.0 cm" },
+      { "label": "Middle arm drape", "value": "31.8 cm" },
+      { "label": "Bottom arm drape", "value": "35.6 cm" },
+      { "label": "Horizontal strand","value": "30.0 cm" },
+      { "label": "Size extensions",  "value": "Small +5 cm · Medium +10 cm · Large +15 cm" },
+      { "label": "Custom fit",       "value": "Message us after ordering — we resize to your exact measurements at no extra cost" },
+      { "label": "Care",             "value": "Wipe gently with a soft cloth after each wear. Store in an airtight container." },
+      { "label": "Shipping",         "value": "Dispatches within 1–2 business days" }
     ],
-    "images": [
-      "/images/products/732156d3-7dbf-404d-bff2-7f1f2afef0e5.png"
-    ],
+    "images": ["/images/products/732156d3-7dbf-404d-bff2-7f1f2afef0e5.png"],
     "variantImages": {
       "Gold Tone": [
         "/images/products/double-shoulder-chest-chain-gold-7.png",
@@ -223,9 +207,9 @@
       ]
     },
     "featured": true,
-    "variants": [
-      "Gold Tone",
-      "Silver Tone"
+    "variants": ["Gold Tone", "Silver Tone"],
+    "variantGroups": [
+      { "label": "Size", "options": ["Small (+5 cm)", "Medium (+10 cm)", "Large (+15 cm)"] }
     ],
     "active": true
   }

@@ -1,8 +1,7 @@
 import Link from "next/link";
 import { products } from "@/lib/products";
 import { notFound } from "next/navigation";
-import ProductGallery from "@/components/ProductGallery";
-import ProductDetails from "@/components/ProductDetails";
+import ProductPageClient from "@/components/ProductPageClient";
 
 export async function generateStaticParams() {
   return products.map((p) => ({ id: p.id }));
@@ -23,8 +22,6 @@ export default async function ProductPage({ params }: { params: Promise<{ id: st
   const product = products.find((p) => p.id === id);
   if (!product) notFound();
 
-  const symbol = product.currency === "EUR" ? "€" : product.currency === "GBP" ? "£" : "$";
-
   return (
     <div className="pt-20 md:pt-32 pb-24">
       <div className="max-w-7xl mx-auto px-6 md:px-10">
@@ -38,43 +35,7 @@ export default async function ProductPage({ params }: { params: Promise<{ id: st
           <span className="text-[#2C2220]">{product.name}</span>
         </nav>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-start">
-          {/* Gallery — full bleed on mobile */}
-          <div className="-mx-6 md:mx-0">
-            <ProductGallery product={product} />
-          </div>
-
-          {/* Details */}
-          <div className="flex flex-col gap-5 md:gap-6 px-0 md:sticky md:top-32">
-            <p className="text-[0.55rem] tracking-[0.25em] uppercase text-[#A0622A]">{product.category}</p>
-            <h1 className="font-heading text-4xl md:text-5xl font-light text-[#2C2220]">{product.name}</h1>
-            <p className="text-2xl font-light text-[#A0622A] tracking-wide">
-              {symbol}{product.price.toFixed(2)}
-            </p>
-
-            <div className="h-px bg-[#E8B4A8]/40" />
-
-            <p className="text-sm font-light leading-relaxed tracking-wide text-[#8C7B6E]">
-              {product.description}
-            </p>
-
-            <div className="h-px bg-[#E8B4A8]/40" />
-
-            <div className="flex flex-col gap-2 mt-2">
-              {["Handmade", "Tarnish-resistant stainless steel", "Water-resistant", "Adjustable fit"].map((feat) => (
-                <p key={feat} className="text-[0.6rem] tracking-[0.15em] uppercase text-[#8C7B6E] flex items-center gap-2">
-                  <span className="w-1 h-1 bg-[#A0622A] inline-block rounded-full" />
-                  {feat}
-                </p>
-              ))}
-            </div>
-
-            <ProductDetails
-              fullDescription={product.fullDescription}
-              specs={product.specs}
-            />
-          </div>
-        </div>
+        <ProductPageClient product={product} />
       </div>
     </div>
   );

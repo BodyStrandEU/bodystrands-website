@@ -91,7 +91,22 @@ export default function AdminDashboard() {
 
       <div style={{ padding: "2rem", maxWidth: "1200px", margin: "0 auto" }}>
         {/* Actions bar */}
-        <div style={{ display: "flex", justifyContent: "flex-end", marginBottom: "1.5rem" }}>
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "1.5rem", flexWrap: "wrap", gap: "0.75rem" }}>
+          <button
+            onClick={() => router.push("/admin/site-images")}
+            style={{
+              padding: "0.6rem 1.5rem",
+              background: "#fff",
+              color: "#A0622A",
+              border: "1px solid #A0622A",
+              borderRadius: "4px",
+              fontSize: "0.85rem",
+              cursor: "pointer",
+              fontWeight: 500,
+            }}
+          >
+            🖼 Manage Site Images
+          </button>
           <button
             onClick={() => router.push("/admin/product/new")}
             style={{

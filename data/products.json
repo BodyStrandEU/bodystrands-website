@@ -147,16 +147,53 @@
         "/images/products/bridal-shoulder-chain-both-3.png",
         "/images/products/bridal-shoulder-chain-both-4.png",
         "/images/products/bridal-shoulder-chain-both-1.jpg"
-      ],
-      "Attachment Type": []
+      ]
     },
     "video": "/images/products/bridal-shoulder-chain.mp4",
     "featured": true,
-    "variants": [
-      "Gold Tone",
-      "Silver Tone",
-      "Attachment Type"
+    "variants": ["Gold Tone", "Silver Tone"],
+    "variantGroups": [
+      { "label": "Attachment", "options": ["Lobster Clasp", "Pearl Safety Pin"] }
     ],
+    "active": true
+  },
+  {
+    "id": "double-shoulder-chest-chain",
+    "name": "Double Shoulder Chest Chain",
+    "price": 55,
+    "currency": "EUR",
+    "category": "Shoulder Chains",
+    "description": "Two shoulders. One statement. This delicate chest chain drapes symmetrically across both shoulders and layers down the front, adding effortless shimmer to any off-the-shoulder or strapless look. Handmade from tarnish-resistant stainless steel in gold or silver.",
+    "fullDescription": "Where most shoulder chains cover one side, this one goes further — draping softly over both shoulders with layered chains that fall across the chest in perfect symmetry. The result is balanced, elegant, and completely unforgettable on a strapless gown, a white linen dress, or a simple black top.\n\nHandmade from high-quality stainless steel in gold or silver tone, so it holds its colour and resists tarnishing through every wear.",
+    "specs": [
+      { "label": "Material",    "value": "High-quality stainless steel" },
+      { "label": "Colours",     "value": "Gold or Silver finish" },
+      { "label": "Style",       "value": "Double shoulder with layered chest drape" },
+      { "label": "Custom fit",  "value": "Message us after ordering — we resize to your exact measurements at no extra cost" },
+      { "label": "Care",        "value": "Wipe gently with a soft cloth after wear. Store in an airtight container." },
+      { "label": "Shipping",    "value": "Dispatches within 1–2 business days" }
+    ],
+    "images": ["/images/products/double-shoulder-chest-chain-main.png"],
+    "variantImages": {
+      "Gold Tone": [
+        "/images/products/double-shoulder-chest-chain-gold-1.png",
+        "/images/products/double-shoulder-chest-chain-gold-2.jpg",
+        "/images/products/double-shoulder-chest-chain-gold-3.jpg",
+        "/images/products/double-shoulder-chest-chain-gold-4.jpg",
+        "/images/products/double-shoulder-chest-chain-gold-5.jpg",
+        "/images/products/double-shoulder-chest-chain-gold-6.jpg",
+        "/images/products/double-shoulder-chest-chain-gold-7.png",
+        "/images/products/double-shoulder-chest-chain-gold-8.png",
+        "/images/products/double-shoulder-chest-chain-gold-9.jpg",
+        "/images/products/double-shoulder-chest-chain-gold-10.png",
+        "/images/products/double-shoulder-chest-chain-gold-11.png"
+      ],
+      "Silver Tone": [
+        "/images/products/double-shoulder-chest-chain-silver-1.png"
+      ]
+    },
+    "featured": true,
+    "variants": ["Gold Tone", "Silver Tone"],
     "active": true
   }
 ]

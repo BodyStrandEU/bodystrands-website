@@ -15,6 +15,7 @@ export const CATEGORIES = [
 export type Category = (typeof CATEGORIES)[number];
 
 export type Spec = { label: string; value: string };
+export type VariantGroup = { label: string; options: string[] };
 
 export type Product = {
   id: string;
@@ -31,6 +32,7 @@ export type Product = {
   variantVideos?: Record<string, string>;
   featured: boolean;
   variants?: string[];
+  variantGroups?: VariantGroup[];
   active?: boolean;
 };
 

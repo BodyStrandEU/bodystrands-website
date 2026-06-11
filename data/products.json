@@ -8,42 +8,16 @@
     "description": "Your dress is already the one. This is the detail that makes the whole look completely, unforgettably yours. Draped softly from the neck across both shoulders, handcrafted in tarnish-resistant stainless steel — available in gold or silver.",
     "fullDescription": "This dainty shoulder chain drapes softly from the neck across both shoulders and down the upper arms, adding a delicate layered shimmer to strapless gowns, off-the-shoulder dresses, and sweetheart necklines. It sits so lightly you forget you are wearing it — until you catch it in a photo and realize it made the whole look.\n\nHandmade from durable stainless steel in gold or silver, so it holds its colour and resists tarnishing through the ceremony, the dancing, and every moment in between.",
     "specs": [
-      {
-        "label": "Material",
-        "value": "High-quality stainless steel"
-      },
-      {
-        "label": "Colours",
-        "value": "Gold or Silver"
-      },
-      {
-        "label": "Neck chain",
-        "value": "38.5 cm with 6 cm extension"
-      },
-      {
-        "label": "Shoulder chain",
-        "value": "46 cm × 2"
-      },
-      {
-        "label": "Arm chain",
-        "value": "55 cm × 2"
-      },
-      {
-        "label": "Custom fit",
-        "value": "Message us after checkout — we adjust every chain length at no extra cost"
-      },
-      {
-        "label": "Care",
-        "value": "Wipe gently with a soft cloth after wear. Store in an airtight container."
-      },
-      {
-        "label": "Shipping",
-        "value": "Dispatches within 1–2 business days"
-      }
+      { "label": "Material",       "value": "High-quality stainless steel" },
+      { "label": "Colours",        "value": "Gold or Silver" },
+      { "label": "Neck chain",     "value": "38.5 cm with 6 cm extension" },
+      { "label": "Shoulder chain", "value": "46 cm × 2" },
+      { "label": "Arm chain",      "value": "55 cm × 2" },
+      { "label": "Custom fit",     "value": "Message us after checkout — we adjust every chain length at no extra cost" },
+      { "label": "Care",           "value": "Wipe gently with a soft cloth after wear. Store in an airtight container." },
+      { "label": "Shipping",       "value": "Dispatches within 1–2 business days" }
     ],
-    "images": [
-      "/images/products/goddess-shoulder-chain-main.png"
-    ],
+    "images": ["/images/products/goddess-shoulder-chain-main.png"],
     "variantImages": {
       "Gold Tone": [
         "/images/products/goddess-shoulder-chain-gold-3.png",
@@ -71,10 +45,57 @@
       "Silver Tone": "/images/products/goddess-shoulder-chain-silver.mp4"
     },
     "featured": true,
-    "variants": [
-      "Gold Tone",
-      "Silver Tone"
+    "variants": ["Gold Tone", "Silver Tone"],
+    "active": true
+  },
+  {
+    "id": "bridal-shoulder-chain",
+    "name": "Bridal Shoulder Chain",
+    "price": 35,
+    "currency": "EUR",
+    "category": "Shoulder Chains",
+    "description": "The one detail your wedding look is missing. This minimalist shoulder chain sweeps delicately across your upper arm, attaching directly to your dress or bra so it stays perfectly in place all day. Handmade from tarnish-resistant stainless steel — available in gold or silver.",
+    "fullDescription": "A dainty, sweeping arm chain designed for brides who want that extra shimmer without the fuss. It clips directly to your dress strap or bra with a choice of lobster clasp or pearl safety pin, so there's no trip to the tailor and no pinning involved.\n\nLightweight and virtually weightless, it moves with you through the ceremony, the first dance, and everything in between. Handmade from high-quality stainless steel in gold or silver — tarnish-resistant and built to last well beyond your big day.",
+    "specs": [
+      { "label": "Material",    "value": "High-quality stainless steel" },
+      { "label": "Colours",     "value": "Gold or Silver finish" },
+      { "label": "Attachment",  "value": "Choice of lobster clasp or pearl safety pin" },
+      { "label": "Top drape",   "value": "28.0 cm" },
+      { "label": "Mid drape",   "value": "31.8 cm" },
+      { "label": "Bottom drape","value": "35.6 cm" },
+      { "label": "Custom fit",  "value": "Message us after ordering — we resize to your exact measurements at no extra cost" },
+      { "label": "Care",        "value": "Wipe gently with a soft cloth after each wear. Store in an airtight container." },
+      { "label": "Shipping",    "value": "Dispatches within 1–2 business days" }
     ],
+    "images": ["/images/products/bridal-shoulder-chain-main.png"],
+    "variantImages": {
+      "Gold Tone": [
+        "/images/products/bridal-shoulder-chain-main.png",
+        "/images/products/bridal-shoulder-chain-gold-1.png",
+        "/images/products/bridal-shoulder-chain-gold-2.png",
+        "/images/products/bridal-shoulder-chain-gold-3.png",
+        "/images/products/bridal-shoulder-chain-gold-4.png",
+        "/images/products/bridal-shoulder-chain-both-1.jpg",
+        "/images/products/bridal-shoulder-chain-both-2.jpg",
+        "/images/products/bridal-shoulder-chain-both-3.png",
+        "/images/products/bridal-shoulder-chain-both-4.png"
+      ],
+      "Silver Tone": [
+        "/images/products/bridal-shoulder-chain-main.png",
+        "/images/products/bridal-shoulder-chain-silver-1.jpg",
+        "/images/products/bridal-shoulder-chain-silver-2.png",
+        "/images/products/bridal-shoulder-chain-silver-3.png",
+        "/images/products/bridal-shoulder-chain-silver-4.png",
+        "/images/products/bridal-shoulder-chain-silver-5.jpg",
+        "/images/products/bridal-shoulder-chain-both-1.jpg",
+        "/images/products/bridal-shoulder-chain-both-2.jpg",
+        "/images/products/bridal-shoulder-chain-both-3.png",
+        "/images/products/bridal-shoulder-chain-both-4.png"
+      ]
+    },
+    "video": "/images/products/bridal-shoulder-chain.mp4",
+    "featured": true,
+    "variants": ["Gold Tone", "Silver Tone"],
     "active": true
   }
 ]

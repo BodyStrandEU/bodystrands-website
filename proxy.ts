@@ -6,8 +6,8 @@ const COOKIE_NAME = "admin_token";
 export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
-  // Allow login page through
-  if (pathname === "/admin/login") {
+  // Allow login page and login API through (no cookie yet)
+  if (pathname === "/admin/login" || pathname === "/api/admin/login") {
     return NextResponse.next();
   }
 

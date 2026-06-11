@@ -32,6 +32,46 @@ export function isValidCategory(value: string): value is Category {
 }
 
 export const products: Product[] = [
+  // ── SHOULDER CHAINS ──────────────────────────────────────────────────────────
+  {
+    id: "goddess-shoulder-chain",
+    name: "Goddess Shoulder Chain",
+    price: 45.00,
+    currency: "EUR",
+    category: "Shoulder Chains",
+    description: "Your dress is already the one. This is the detail that makes the whole look completely, unforgettably yours. Draped softly from the neck across both shoulders, handcrafted in tarnish-resistant stainless steel — available in gold or silver.",
+    images: ["/images/products/goddess-shoulder-chain-main.png"],
+    variantImages: {
+      "Gold Tone": [
+        "/images/products/goddess-shoulder-chain-gold-1.jpg",
+        "/images/products/goddess-shoulder-chain-gold-2.jpg",
+        "/images/products/goddess-shoulder-chain-gold-3.png",
+        "/images/products/goddess-shoulder-chain-both-1.jpg",
+        "/images/products/goddess-shoulder-chain-both-2.jpg",
+        "/images/products/goddess-shoulder-chain-both-3.jpg",
+        "/images/products/goddess-shoulder-chain-both-4.png",
+        "/images/products/goddess-shoulder-chain-both-5.png",
+      ],
+      "Silver Tone": [
+        "/images/products/goddess-shoulder-chain-silver-1.png",
+        "/images/products/goddess-shoulder-chain-silver-2.jpg",
+        "/images/products/goddess-shoulder-chain-silver-3.jpg",
+        "/images/products/goddess-shoulder-chain-both-1.jpg",
+        "/images/products/goddess-shoulder-chain-both-2.jpg",
+        "/images/products/goddess-shoulder-chain-both-3.jpg",
+        "/images/products/goddess-shoulder-chain-both-4.png",
+        "/images/products/goddess-shoulder-chain-both-5.png",
+      ],
+    },
+    variantVideos: {
+      "Gold Tone": "/images/products/goddess-shoulder-chain-gold.mov",
+      "Silver Tone": "/images/products/goddess-shoulder-chain-silver.mov",
+    },
+    featured: true,
+    variants: ["Gold Tone", "Silver Tone"],
+  },
+
+  // ── PLACEHOLDERS (replace as real products are added) ─────────────────────
   {
     id: "back-body-chain-wedding",
     name: "Back Body Chain — Wedding",

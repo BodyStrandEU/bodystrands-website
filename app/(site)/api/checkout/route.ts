@@ -16,7 +16,7 @@ export async function POST(req: NextRequest) {
   const origin = req.headers.get("origin") ?? "https://bodystrands.com";
 
   const session = await stripe.checkout.sessions.create({
-    payment_method_types: ["card"],
+    payment_method_types: ["card", "paypal"],
     line_items: [
       {
         price_data: {

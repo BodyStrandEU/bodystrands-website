@@ -41,8 +41,8 @@ export default async function ShopPage({
           </p>
         </div>
 
-        {/* Layout: sidebar + grid */}
-        <div className="flex gap-16">
+        {/* Layout: filter on top (mobile) / sidebar (desktop) */}
+        <div className="flex flex-col lg:flex-row gap-6 lg:gap-16">
           <Suspense fallback={null}>
             <CategoryFilter />
           </Suspense>

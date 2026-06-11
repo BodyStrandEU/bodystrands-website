@@ -69,7 +69,7 @@ export default function ProductCard({ product }: { product: Product }) {
       onMouseLeave={handleCardLeave}
     >
       {/* Media container */}
-      <div className="relative overflow-hidden bg-[#F2DDD7] aspect-[3/4]">
+      <div className="relative overflow-hidden bg-[#FDF9F7] aspect-square">
 
         {/* Static image */}
         {currentImage ? (
@@ -77,10 +77,11 @@ export default function ProductCard({ product }: { product: Product }) {
             src={currentImage}
             alt={product.name}
             fill
-            className={`object-cover object-center transition-all duration-500 ${
+            sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+            className={`object-contain transition-all duration-500 ${
               displayVideo
                 ? hovering ? "opacity-0" : "opacity-100"
-                : "group-hover:scale-[1.04]"
+                : "group-hover:scale-[1.03]"
             }`}
           />
         ) : (
@@ -100,7 +101,7 @@ export default function ProductCard({ product }: { product: Product }) {
             loop
             playsInline
             preload="metadata"
-            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ${
+            className={`absolute inset-0 w-full h-full object-contain transition-opacity duration-300 ${
               hovering ? "opacity-100" : "opacity-0"
             }`}
           />

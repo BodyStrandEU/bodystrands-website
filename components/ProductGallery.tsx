@@ -65,7 +65,7 @@ export default function ProductGallery({ product }: { product: Product }) {
     <div className="flex flex-col gap-3">
       {/* Main media viewer */}
       <div
-        className="relative aspect-[3/4] overflow-hidden bg-[#F2DDD7] select-none"
+        className="relative aspect-square overflow-hidden bg-[#FDF9F7] select-none"
         onTouchStart={handleTouchStart}
         onTouchEnd={handleTouchEnd}
       >
@@ -75,7 +75,7 @@ export default function ProductGallery({ product }: { product: Product }) {
             alt={`${product.name}${activeVariant ? ` — ${activeVariant}` : ""}`}
             fill
             sizes="(max-width: 768px) 100vw, 50vw"
-            className="object-cover object-center"
+            className="object-contain"
             priority={activeIndex === 0}
           />
         )}
@@ -88,7 +88,7 @@ export default function ProductGallery({ product }: { product: Product }) {
             muted
             loop
             playsInline
-            className="absolute inset-0 w-full h-full object-cover"
+            className="absolute inset-0 w-full h-full object-contain"
           />
         )}
 
@@ -154,7 +154,7 @@ export default function ProductGallery({ product }: { product: Product }) {
               }`}
             >
               {item.type === "image" ? (
-                <Image src={item.src} alt={`View ${i + 1}`} fill className="object-cover" />
+                <Image src={item.src} alt={`View ${i + 1}`} fill className="object-contain bg-[#FDF9F7]" />
               ) : (
                 <div className="absolute inset-0 bg-[#2C2220] flex items-center justify-center">
                   <span className="text-white text-lg leading-none">▶</span>

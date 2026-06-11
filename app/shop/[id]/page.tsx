@@ -60,18 +60,6 @@ export default async function ProductPage({ params }: { params: Promise<{ id: st
 
             <div className="flex flex-col gap-3">
               <BuyButton productId={product.id} />
-              <div className="flex gap-3">
-                {product.etsy_url && (
-                  <a href={product.etsy_url} target="_blank" rel="noopener noreferrer" className="btn-primary flex-1 text-center py-3 text-[0.6rem]">
-                    Buy on Etsy
-                  </a>
-                )}
-                {product.amazon_url && (
-                  <a href={product.amazon_url} target="_blank" rel="noopener noreferrer" className="btn-primary flex-1 text-center py-3 text-[0.6rem]">
-                    Buy on Amazon
-                  </a>
-                )}
-              </div>
             </div>
 
             <div className="flex flex-col gap-2 mt-2">

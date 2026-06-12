@@ -880,27 +880,24 @@
     "variantImages": {
       "Gold Tone": [
         "https://i.etsystatic.com/55122258/r/il/1d08fb/7739339773/il_fullxfull.7739339773_3tb8.jpg",
-        "https://i.etsystatic.com/55122258/r/il/429752/7801900331/il_fullxfull.7801900331_nv8p.jpg",
-        "https://i.etsystatic.com/55122258/r/il/a482f7/7728131156/il_fullxfull.7728131156_1mcc.jpg",
-        "https://i.etsystatic.com/55122258/r/il/59f267/7812489122/il_fullxfull.7812489122_b6cm.jpg",
-        "https://i.etsystatic.com/55122258/r/il/0bb593/7769085078/il_fullxfull.7769085078_i3gt.jpg",
         "https://i.etsystatic.com/55122258/r/il/01cb28/7801900345/il_fullxfull.7801900345_7n0g.jpg",
-        "https://i.etsystatic.com/55122258/r/il/272f8c/7731893723/il_fullxfull.7731893723_luyg.jpg",
-        "https://i.etsystatic.com/55122258/r/il/c395ab/7739339595/il_fullxfull.7739339595_9rsz.jpg",
-        "https://i.etsystatic.com/55122258/r/il/93bcdf/7691395648/il_fullxfull.7691395648_8rh3.jpg",
-        "https://i.etsystatic.com/55122258/r/il/5aed4c/7691395674/il_fullxfull.7691395674_31gb.jpg"
+        "/images/products/85c77225-f32d-4de3-b3f3-91732290d8d5.png",
+        "/images/products/Untitled-design--1--copy-2.png",
+        "/images/products/Untitled-design--1-.png",
+        "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg",
+        "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.jpg",
+        "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
+        "/images/products/Listings-for-Bodystrands.jpeg",
+        "/images/products/124ba28f-2fa0-4150-a3ed-25d6d7f90841-md.jpg"
       ],
       "Silver Tone": [
-        "https://i.etsystatic.com/55122258/r/il/1d08fb/7739339773/il_fullxfull.7739339773_3tb8.jpg",
         "https://i.etsystatic.com/55122258/r/il/429752/7801900331/il_fullxfull.7801900331_nv8p.jpg",
-        "https://i.etsystatic.com/55122258/r/il/a482f7/7728131156/il_fullxfull.7728131156_1mcc.jpg",
-        "https://i.etsystatic.com/55122258/r/il/59f267/7812489122/il_fullxfull.7812489122_b6cm.jpg",
-        "https://i.etsystatic.com/55122258/r/il/0bb593/7769085078/il_fullxfull.7769085078_i3gt.jpg",
         "https://i.etsystatic.com/55122258/r/il/01cb28/7801900345/il_fullxfull.7801900345_7n0g.jpg",
-        "https://i.etsystatic.com/55122258/r/il/272f8c/7731893723/il_fullxfull.7731893723_luyg.jpg",
-        "https://i.etsystatic.com/55122258/r/il/c395ab/7739339595/il_fullxfull.7739339595_9rsz.jpg",
-        "https://i.etsystatic.com/55122258/r/il/93bcdf/7691395648/il_fullxfull.7691395648_8rh3.jpg",
-        "https://i.etsystatic.com/55122258/r/il/5aed4c/7691395674/il_fullxfull.7691395674_31gb.jpg"
+        "https://i.etsystatic.com/55122258/r/il/5aed4c/7691395674/il_fullxfull.7691395674_31gb.jpg",
+        "/images/products/AW6C0518-2.jpg",
+        "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg",
+        "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.jpg",
+        "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png"
       ]
     },
     "variantGroups": [
@@ -910,6 +907,13 @@
           "Small (+7cm ext)",
           "Medium (+14cm ext)",
           "Large (+23cm ext)"
+        ]
+      },
+      {
+        "label": "Metal Color",
+        "options": [
+          "Gold Stainless",
+          "Silver Stainless"
         ]
       }
     ]

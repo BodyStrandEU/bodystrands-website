@@ -266,12 +266,28 @@ export default function ProductEditor({ params }: { params: Promise<{ id: string
   }, [id, isNew, router]);
 
   const uploadFile = useCallback(async (file: File): Promise<string> => {
+    const isVideo = file.type.startsWith("video/") || file.name.endsWith(".mp4") || file.name.endsWith(".mov");
+    if (isVideo) {
+      throw new Error(
+        "Videos are too large to upload via the dashboard (Vercel 4.5 MB limit).\n\n" +
+        "Add videos via git instead:\n" +
+        "1. Compress: avconvert -s input.mov -o output.mp4 -p PresetLowQuality --replace\n" +
+        "2. Copy the .mp4 into public/images/products/\n" +
+        "3. Commit & push\n" +
+        "4. Type the path in the video field below (e.g. /images/products/my-video.mp4)"
+      );
+    }
+    if (file.size > 4 * 1024 * 1024) {
+      throw new Error(`File too large (${(file.size / 1024 / 1024).toFixed(1)} MB). Maximum is 4 MB.`);
+    }
     const fd = new FormData();
     fd.append("file", file);
     const res = await fetch("/api/admin/images", { method: "POST", body: fd });
     if (!res.ok) {
-      const data = await res.json() as { error?: string };
-      throw new Error(data.error ?? "Upload failed");
+      const text = await res.text();
+      let message = "Upload failed";
+      try { message = (JSON.parse(text) as { error?: string }).error ?? message; } catch { message = text.slice(0, 120) || message; }
+      throw new Error(message);
     }
     const data = await res.json() as { url: string };
     return data.url;

@@ -8,38 +8,14 @@
     "description": "Your dress is already the one. This is the detail that makes the whole look completely, unforgettably yours. Draped softly from the neck across both shoulders, handcrafted in tarnish-resistant stainless steel — available in gold or silver.",
     "fullDescription": "This dainty shoulder chain drapes softly from the neck across both shoulders and down the upper arms, adding a delicate layered shimmer to strapless gowns, off-the-shoulder dresses, and sweetheart necklines. It sits so lightly you forget you are wearing it — until you catch it in a photo and realize it made the whole look.\n\nHandmade from durable stainless steel in gold or silver, so it holds its colour and resists tarnishing through the ceremony, the dancing, and every moment in between.",
     "specs": [
-      {
-        "label": "Material",
-        "value": "High-quality stainless steel"
-      },
-      {
-        "label": "Colours",
-        "value": "Gold or Silver"
-      },
-      {
-        "label": "Neck chain",
-        "value": "38.5 cm with 6 cm extension"
-      },
-      {
-        "label": "Shoulder chain",
-        "value": "46 cm × 2"
-      },
-      {
-        "label": "Arm chain",
-        "value": "55 cm × 2"
-      },
-      {
-        "label": "Custom fit",
-        "value": "Message us after checkout — we adjust every chain length at no extra cost"
-      },
-      {
-        "label": "Care",
-        "value": "Wipe gently with a soft cloth after wear. Store in an airtight container."
-      },
-      {
-        "label": "Shipping",
-        "value": "Dispatches within 1–2 business days"
-      }
+      { "label": "Material", "value": "High-quality stainless steel" },
+      { "label": "Colours", "value": "Gold or Silver" },
+      { "label": "Neck chain", "value": "38.5 cm with 6 cm extension" },
+      { "label": "Shoulder chain", "value": "46 cm × 2" },
+      { "label": "Arm chain", "value": "55 cm × 2" },
+      { "label": "Custom fit", "value": "Message us after checkout — we adjust every chain length at no extra cost" },
+      { "label": "Care", "value": "Wipe gently with a soft cloth after wear. Store in an airtight container." },
+      { "label": "Shipping", "value": "Dispatches within 1–2 business days" }
     ],
     "images": [
       "/images/products/goddess-shoulder-chain-main.png"
@@ -71,10 +47,7 @@
       "Silver Tone": "/images/products/goddess-shoulder-chain-silver.mp4"
     },
     "featured": true,
-    "variants": [
-      "Gold Tone",
-      "Silver Tone"
-    ],
+    "variants": ["Gold Tone", "Silver Tone"],
     "active": true
   },
   {
@@ -86,42 +59,15 @@
     "description": "The one detail your wedding look is missing. This minimalist shoulder chain sweeps delicately across your upper arm, attaching directly to your dress or bra so it stays perfectly in place all day. Handmade from tarnish-resistant stainless steel — available in gold or silver.",
     "fullDescription": "A dainty, sweeping arm chain designed for brides who want that extra shimmer without the fuss. It clips directly to your dress strap or bra with a choice of lobster clasp or pearl safety pin, so there's no trip to the tailor and no pinning involved.\n\nLightweight and virtually weightless, it moves with you through the ceremony, the first dance, and everything in between. Handmade from high-quality stainless steel in gold or silver — tarnish-resistant and built to last well beyond your big day.",
     "specs": [
-      {
-        "label": "Material",
-        "value": "High-quality stainless steel"
-      },
-      {
-        "label": "Colours",
-        "value": "Gold or Silver finish"
-      },
-      {
-        "label": "Attachment",
-        "value": "Choice of lobster clasp or pearl safety pin"
-      },
-      {
-        "label": "Top drape",
-        "value": "28.0 cm"
-      },
-      {
-        "label": "Mid drape",
-        "value": "31.8 cm"
-      },
-      {
-        "label": "Bottom drape",
-        "value": "35.6 cm"
-      },
-      {
-        "label": "Custom fit",
-        "value": "Message us after ordering — we resize to your exact measurements at no extra cost"
-      },
-      {
-        "label": "Care",
-        "value": "Wipe gently with a soft cloth after each wear. Store in an airtight container."
-      },
-      {
-        "label": "Shipping",
-        "value": "Dispatches within 1–2 business days"
-      }
+      { "label": "Material", "value": "High-quality stainless steel" },
+      { "label": "Colours", "value": "Gold or Silver finish" },
+      { "label": "Attachment", "value": "Choice of lobster clasp or pearl safety pin" },
+      { "label": "Top drape", "value": "28.0 cm" },
+      { "label": "Mid drape", "value": "31.8 cm" },
+      { "label": "Bottom drape", "value": "35.6 cm" },
+      { "label": "Custom fit", "value": "Message us after ordering — we resize to your exact measurements at no extra cost" },
+      { "label": "Care", "value": "Wipe gently with a soft cloth after each wear. Store in an airtight container." },
+      { "label": "Shipping", "value": "Dispatches within 1–2 business days" }
     ],
     "images": [
       "/images/products/bridal-shoulder-chain-main.png"
@@ -151,17 +97,11 @@
     },
     "video": "/images/products/bridal-shoulder-chain.mp4",
     "featured": true,
-    "variants": [
-      "Gold Tone",
-      "Silver Tone"
-    ],
+    "variants": ["Gold Tone", "Silver Tone"],
     "variantGroups": [
       {
         "label": "Attachment",
-        "options": [
-          "Lobster Clasp",
-          "Pearl Safety Pin"
-        ]
+        "options": ["Lobster Clasp", "Pearl Safety Pin"]
       }
     ],
     "active": true
@@ -212,5 +152,202 @@
       { "label": "Size", "options": ["Small (+5 cm)", "Medium (+10 cm)", "Large (+15 cm)"] }
     ],
     "active": true
+  },
+  {
+    "id": "dainty-eyeglasses-chain",
+    "name": "Dainty Eyeglasses Chain",
+    "price": 20,
+    "currency": "EUR",
+    "category": "Eyeglasses Chains",
+    "description": "The glasses chain you will actually want to wear. Handcrafted from tarnish-resistant stainless steel with adjustable rubber grips that slip onto any frame — keeping your favourite pair close without pulling the look apart. Available in gold or silver.",
+    "fullDescription": "A 74 cm dainty chain that turns a practical problem into a style detail. The rubber loops slide snug onto your glasses frames and lock in place with a small metal coil, so your shades stay exactly where you want them — around your neck and always within reach.\n\nHandmade from stainless steel in gold or silver, designed to look as good as it functions. Whether you wear it at the beach, poolside, or tucked into an everyday outfit, this is the kind of piece that earns compliments.",
+    "specs": [
+      { "label": "Material", "value": "High-quality stainless steel" },
+      { "label": "Colours", "value": "Gold or Silver" },
+      { "label": "Chain width", "value": "1.5 mm" },
+      { "label": "Total length", "value": "74 cm" },
+      { "label": "Attachment", "value": "Adjustable rubber grips with metal sliders" },
+      { "label": "Care", "value": "Wipe gently with a soft cloth after wear. Store in an airtight container." },
+      { "label": "Shipping", "value": "Dispatches within 1–2 business days" }
+    ],
+    "images": ["https://i.etsystatic.com/55122258/r/il/f6d416/7889660857/il_fullxfull.7889660857_fijc.jpg"],
+    "variantImages": {
+      "Gold Tone": [
+        "https://i.etsystatic.com/55122258/r/il/f6d416/7889660857/il_fullxfull.7889660857_fijc.jpg",
+        "https://i.etsystatic.com/55122258/r/il/b8d2ef/7889670701/il_fullxfull.7889670701_38e2.jpg",
+        "https://i.etsystatic.com/55122258/r/il/08da3d/7841726450/il_fullxfull.7841726450_cqxo.jpg",
+        "https://i.etsystatic.com/55122258/r/il/34bd09/7889662753/il_fullxfull.7889662753_9r33.jpg",
+        "https://i.etsystatic.com/55122258/r/il/b88a3b/7871497991/il_fullxfull.7871497991_bj5o.jpg",
+        "https://i.etsystatic.com/55122258/r/il/755e27/7889666285/il_fullxfull.7889666285_lsla.jpg",
+        "https://i.etsystatic.com/55122258/r/il/4c9988/7813683031/il_fullxfull.7813683031_p8f7.jpg",
+        "https://i.etsystatic.com/55122258/r/il/26282e/7734979557/il_fullxfull.7734979557_95jd.jpg",
+        "https://i.etsystatic.com/55122258/r/il/857d95/7811531149/il_fullxfull.7811531149_g087.jpg",
+        "https://i.etsystatic.com/55122258/r/il/c4f9ae/7763585068/il_fullxfull.7763585068_7ep3.jpg"
+      ],
+      "Silver Tone": [
+        "https://i.etsystatic.com/55122258/r/il/f6d416/7889660857/il_fullxfull.7889660857_fijc.jpg",
+        "https://i.etsystatic.com/55122258/r/il/b8d2ef/7889670701/il_fullxfull.7889670701_38e2.jpg",
+        "https://i.etsystatic.com/55122258/r/il/08da3d/7841726450/il_fullxfull.7841726450_cqxo.jpg",
+        "https://i.etsystatic.com/55122258/r/il/34bd09/7889662753/il_fullxfull.7889662753_9r33.jpg",
+        "https://i.etsystatic.com/55122258/r/il/b88a3b/7871497991/il_fullxfull.7871497991_bj5o.jpg",
+        "https://i.etsystatic.com/55122258/r/il/755e27/7889666285/il_fullxfull.7889666285_lsla.jpg",
+        "https://i.etsystatic.com/55122258/r/il/4c9988/7813683031/il_fullxfull.7813683031_p8f7.jpg",
+        "https://i.etsystatic.com/55122258/r/il/26282e/7734979557/il_fullxfull.7734979557_95jd.jpg",
+        "https://i.etsystatic.com/55122258/r/il/857d95/7811531149/il_fullxfull.7811531149_g087.jpg",
+        "https://i.etsystatic.com/55122258/r/il/c4f9ae/7763585068/il_fullxfull.7763585068_7ep3.jpg"
+      ]
+    },
+    "featured": false,
+    "variants": ["Gold Tone", "Silver Tone"],
+    "active": false
+  },
+  {
+    "id": "zodiac-anklet",
+    "name": "Zodiac Anklet",
+    "price": 27.50,
+    "currency": "EUR",
+    "category": "Anklets",
+    "description": "Your star sign, around your ankle. This dainty handmade anklet features a dangling zodiac charm paired with your birth year on a hypoallergenic stainless steel chain — waterproof, tarnish-resistant, and made to live in.",
+    "fullDescription": "A 21 cm base chain with a 5 cm extension, sized to sit comfortably on most ankles with room to adjust. Choose your zodiac sign and birth year at checkout — each piece is handmade to order, so yours arrives as something personal rather than off-the-shelf.\n\nCrafted from premium stainless steel that won't tarnish, turn your skin, or rust at the beach. A thoughtful gift for someone who lives by their chart, or a daily reminder to wear yours.",
+    "specs": [
+      { "label": "Material", "value": "Premium stainless steel (hypoallergenic & tarnish-resistant)" },
+      { "label": "Length", "value": "21 cm base + 5 cm adjustable extension" },
+      { "label": "Charms", "value": "Choice of 1 or 2 zodiac star sign charms + birth year" },
+      { "label": "Custom sizing", "value": "Message us after purchase — we adjust length at no extra cost" },
+      { "label": "Care", "value": "Avoid water, perfumes, and lotions. Wipe with a soft cloth and store in an airtight container." },
+      { "label": "Shipping", "value": "Dispatches within 1–2 business days" }
+    ],
+    "images": [
+      "https://i.etsystatic.com/55122258/r/il/d712b9/7824263931/il_fullxfull.7824263931_2tba.jpg",
+      "https://i.etsystatic.com/55122258/r/il/82e431/7824253621/il_fullxfull.7824253621_acsc.jpg",
+      "https://i.etsystatic.com/55122258/r/il/88c617/7776334434/il_fullxfull.7776334434_9rer.jpg",
+      "https://i.etsystatic.com/55122258/r/il/78c9af/7774302186/il_fullxfull.7774302186_rbp8.jpg",
+      "https://i.etsystatic.com/55122258/r/il/5f97f0/7824264089/il_fullxfull.7824264089_cy8j.jpg",
+      "https://i.etsystatic.com/55122258/r/il/c6ea6a/7765663308/il_fullxfull.7765663308_3a19.jpg",
+      "https://i.etsystatic.com/55122258/r/il/4f89b1/7763623772/il_fullxfull.7763623772_eskh.jpg",
+      "https://i.etsystatic.com/55122258/r/il/4c9988/7813683031/il_fullxfull.7813683031_p8f7.jpg",
+      "https://i.etsystatic.com/55122258/r/il/c073cd/7776334440/il_fullxfull.7776334440_jbeo.jpg",
+      "https://i.etsystatic.com/55122258/r/il/2f6fcb/7812398930/il_fullxfull.7812398930_kic8.jpg"
+    ],
+    "featured": false,
+    "variantGroups": [
+      {
+        "label": "Number of Charms",
+        "options": ["1 Zodiac Sign", "2 Zodiac Signs"]
+      }
+    ],
+    "active": false
+  },
+  {
+    "id": "snake-belly-chain",
+    "name": "Snake Belly Chain",
+    "price": 20,
+    "currency": "EUR",
+    "category": "Belly Chains",
+    "description": "Your go-to summer staple. This minimalist gold snake chain drapes beautifully across your waist — waterproof, tarnish-resistant stainless steel that keeps its glow through the beach, the pool, and everything in between. Choose your fit from three extender sizes.",
+    "fullDescription": "A 71 cm solid snake chain in gold-tone stainless steel, smooth against the skin and designed to be worn alone or layered. Choose your extender size at checkout for a dialled-in fit: Small (71–81 cm), Medium (71–91 cm), or Large (71–100 cm). The open-link extender lets you clasp at any point for a millimetre-perfect result.\n\nCompletely waterproof and anti-tarnish — it never comes off unless you want it to. These chains layer beautifully together: two or three creates a look that photographs as well as it feels.",
+    "specs": [
+      { "label": "Material", "value": "Gold-tone stainless steel (waterproof & anti-tarnish)" },
+      { "label": "Base length", "value": "71 cm solid snake chain" },
+      { "label": "Small extender", "value": "+10 cm — fits 71–81 cm" },
+      { "label": "Medium extender", "value": "+20 cm — fits 71–91 cm" },
+      { "label": "Large extender", "value": "+29 cm — fits 71–100 cm" },
+      { "label": "Custom fit", "value": "Message us after checkout — we adjust extender length at no extra cost" },
+      { "label": "Care", "value": "Wipe gently with a soft cloth after wear. Store in an airtight container." },
+      { "label": "Shipping", "value": "Dispatches within 1–2 business days" }
+    ],
+    "images": [
+      "https://i.etsystatic.com/55122258/r/il/214012/7696123770/il_fullxfull.7696123770_7r5h.jpg",
+      "https://i.etsystatic.com/55122258/r/il/c54d54/7807712879/il_fullxfull.7807712879_fg0v.jpg",
+      "https://i.etsystatic.com/55122258/r/il/a37305/8138540167/il_fullxfull.8138540167_cp1u.jpg",
+      "https://i.etsystatic.com/55122258/r/il/3044d6/7744102609/il_fullxfull.7744102609_yof6.jpg",
+      "https://i.etsystatic.com/55122258/r/il/0006d2/7807717149/il_fullxfull.7807717149_o5xw.jpg",
+      "https://i.etsystatic.com/55122258/r/il/0c5517/7744131025/il_fullxfull.7744131025_svxq.jpg",
+      "https://i.etsystatic.com/55122258/r/il/3817ea/7812484438/il_fullxfull.7812484438_g6ab.jpg",
+      "https://i.etsystatic.com/55122258/r/il/cd29ee/7744092657/il_fullxfull.7744092657_m90g.jpg",
+      "https://i.etsystatic.com/55122258/r/il/19ec2b/7759756284/il_fullxfull.7759756284_19i0.jpg",
+      "https://i.etsystatic.com/55122258/r/il/bf8477/7759760622/il_fullxfull.7759760622_7bz7.jpg"
+    ],
+    "featured": false,
+    "variantGroups": [
+      {
+        "label": "Size",
+        "options": ["Small (71–81 cm)", "Medium (71–91 cm)", "Large (71–100 cm)"]
+      }
+    ],
+    "active": false
+  },
+  {
+    "id": "bridal-backdrop-necklace",
+    "name": "Bridal Backdrop Necklace",
+    "price": 40,
+    "currency": "EUR",
+    "category": "Back Chains",
+    "description": "Make every exit as stunning as your entrance. This minimalist back chain drapes elegantly down the spine — weightless against the skin, designed for open-back gowns, evening dresses, and any look that deserves a beautiful back. Available in gold or silver.",
+    "fullDescription": "A 1.5 mm chain that rests at the neck (41 cm, adjustable) and drops approximately 26 cm down the back, finishing just below the shoulder blades. Total length laid flat is 46 cm — designed to complement rather than compete with the dress.\n\nHandcrafted in gold or silver plated finish, lightweight enough to wear from the ceremony through to the last dance. Just as beautiful on a bridal gown as it is on an open-back top on a summer evening.",
+    "specs": [
+      { "label": "Material", "value": "Gold or Silver plated finish" },
+      { "label": "Chain width", "value": "1.5 mm" },
+      { "label": "Neck circumference", "value": "41 cm (adjustable)" },
+      { "label": "Back drop length", "value": "Approx. 26 cm down the spine" },
+      { "label": "Total length", "value": "46 cm end to end" },
+      { "label": "Care", "value": "Avoid water, perfumes, and lotions. Wipe with a soft cloth and store in an airtight container." },
+      { "label": "Shipping", "value": "Dispatches within 1–2 business days" }
+    ],
+    "images": ["https://i.etsystatic.com/55122258/r/il/d4b172/7743907741/il_fullxfull.7743907741_71za.jpg"],
+    "variantImages": {
+      "Gold Tone": [
+        "https://i.etsystatic.com/55122258/r/il/d4b172/7743907741/il_fullxfull.7743907741_71za.jpg",
+        "https://i.etsystatic.com/55122258/r/il/a7a08b/8029404952/il_fullxfull.8029404952_8ojs.jpg",
+        "https://i.etsystatic.com/55122258/r/il/1508b2/8029420662/il_fullxfull.8029420662_gzo9.jpg",
+        "https://i.etsystatic.com/55122258/r/il/30a007/7696000206/il_fullxfull.7696000206_4dxe.jpg",
+        "https://i.etsystatic.com/55122258/r/il/50194d/8029362846/il_fullxfull.8029362846_c2gl.jpg",
+        "https://i.etsystatic.com/55122258/r/il/53717b/7743956329/il_fullxfull.7743956329_lb1d.jpg",
+        "https://i.etsystatic.com/55122258/r/il/377462/7860430355/il_fullxfull.7860430355_kv7o.jpg",
+        "https://i.etsystatic.com/55122258/r/il/090380/7743953291/il_fullxfull.7743953291_piy1.jpg"
+      ],
+      "Silver Tone": [
+        "https://i.etsystatic.com/55122258/r/il/d4b172/7743907741/il_fullxfull.7743907741_71za.jpg",
+        "https://i.etsystatic.com/55122258/r/il/a7a08b/8029404952/il_fullxfull.8029404952_8ojs.jpg",
+        "https://i.etsystatic.com/55122258/r/il/1508b2/8029420662/il_fullxfull.8029420662_gzo9.jpg",
+        "https://i.etsystatic.com/55122258/r/il/30a007/7696000206/il_fullxfull.7696000206_4dxe.jpg",
+        "https://i.etsystatic.com/55122258/r/il/50194d/8029362846/il_fullxfull.8029362846_c2gl.jpg",
+        "https://i.etsystatic.com/55122258/r/il/53717b/7743956329/il_fullxfull.7743956329_lb1d.jpg",
+        "https://i.etsystatic.com/55122258/r/il/377462/7860430355/il_fullxfull.7860430355_kv7o.jpg",
+        "https://i.etsystatic.com/55122258/r/il/090380/7743953291/il_fullxfull.7743953291_piy1.jpg"
+      ]
+    },
+    "featured": false,
+    "variants": ["Gold Tone", "Silver Tone"],
+    "active": false
+  },
+  {
+    "id": "beaded-bikini-clip-chain",
+    "name": "Beaded Bikini Clip Chain",
+    "price": 30,
+    "currency": "EUR",
+    "category": "Bikini Clip Chains",
+    "description": "Three chains. One clip. Wear it anywhere. This handmade triple-strand chain clips onto any bikini strap, hip tie, waistband, or bra in seconds — no tying, no fussing. Fine gold cable chains with scattered earthy beads that move with you all day.",
+    "fullDescription": "Clip it to the back of your bikini top for a spine chain effect. Hook it onto your hip strap for a side drape. Attach it to a waistband for a festival look. One piece, endless ways to wear it — the kind of detail that turns a simple swimsuit into something people remember.\n\nMade from water-resistant, tarnish-resistant stainless steel with a simple clip-on closure that fits any strap. One size. Handcrafted with slight natural variations that make each piece uniquely yours.",
+    "specs": [
+      { "label": "Material", "value": "Stainless steel (water-resistant & tarnish-resistant)" },
+      { "label": "Style", "value": "Triple strand clip-on chain with mixed decorative beads" },
+      { "label": "Closure", "value": "Clip-on — attaches to any strap, waistband, or bra" },
+      { "label": "Sizing", "value": "One size — fits any strap" },
+      { "label": "Care", "value": "Wipe gently with a soft cloth after wear. Store in an airtight container." },
+      { "label": "Shipping", "value": "Ships within 1–2 business days from Europe" }
+    ],
+    "images": [
+      "https://i.etsystatic.com/55122258/r/il/a02fcb/8119769500/il_fullxfull.8119769500_5znu.jpg",
+      "https://i.etsystatic.com/55122258/r/il/fd463b/8167643347/il_fullxfull.8167643347_scen.jpg",
+      "https://i.etsystatic.com/55122258/r/il/b653d3/8109645168/il_fullxfull.8109645168_j847.jpg",
+      "https://i.etsystatic.com/55122258/r/il/adde77/8167655021/il_fullxfull.8167655021_vcf8.jpg",
+      "https://i.etsystatic.com/55122258/r/il/b79332/8167659991/il_fullxfull.8167659991_8bd9.jpg",
+      "https://i.etsystatic.com/55122258/r/il/455a48/8167683917/il_fullxfull.8167683917_5m6h.jpg",
+      "https://i.etsystatic.com/55122258/r/il/b3a795/7943677304/il_fullxfull.7943677304_jmkv.jpg",
+      "https://i.etsystatic.com/55122258/r/il/65f829/8157553313/il_fullxfull.8157553313_m13i.jpg"
+    ],
+    "featured": false,
+    "active": false
   }
 ]

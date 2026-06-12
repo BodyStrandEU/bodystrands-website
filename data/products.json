@@ -672,7 +672,7 @@
   {
     "id": "butterfly-charm-belly-chain",
     "name": "Butterfly Charm Belly Chain",
-    "price": 25,
+    "price": 27.5,
     "currency": "EUR",
     "category": "Belly Chains",
     "description": "Your summer staple with a playful twist. This dainty waist chain features a delicate butterfly charm in your choice of colour — waterproof and anti-tarnish stainless steel made to be worn every day.",
@@ -744,6 +744,20 @@
           "Large 71 cm - 100 cm"
         ]
       }
+    ],
+    "variantImages": {
+      "Pink Butterfly": [],
+      "Yellow Butterfly": [],
+      "Blue Butterfly": [],
+      "Purple Butterfly": [],
+      "White Butterfly": []
+    },
+    "variants": [
+      "Pink Butterfly",
+      "Yellow Butterfly",
+      "Blue Butterfly",
+      "Purple Butterfly",
+      "White Butterfly"
     ]
   },
   {

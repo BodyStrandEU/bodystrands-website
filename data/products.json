@@ -343,7 +343,7 @@
       },
       {
         "label": "Charms",
-        "value": "Choice of 1 or 2 zodiac star sign charms + birth year"
+        "value": "Choice of 12 zodiac signs"
       },
       {
         "label": "Custom sizing",
@@ -351,7 +351,7 @@
       },
       {
         "label": "Care",
-        "value": "Avoid water, perfumes, and lotions. Wipe with a soft cloth and store in an airtight container."
+        "value": "Avoid perfumes, and lotions. Wipe with a soft cloth and store in an airtight container."
       },
       {
         "label": "Shipping",
@@ -366,9 +366,10 @@
       "https://i.etsystatic.com/55122258/r/il/5f97f0/7824264089/il_fullxfull.7824264089_cy8j.jpg",
       "https://i.etsystatic.com/55122258/r/il/c6ea6a/7765663308/il_fullxfull.7765663308_3a19.jpg",
       "https://i.etsystatic.com/55122258/r/il/4f89b1/7763623772/il_fullxfull.7763623772_eskh.jpg",
-      "https://i.etsystatic.com/55122258/r/il/4c9988/7813683031/il_fullxfull.7813683031_p8f7.jpg",
       "https://i.etsystatic.com/55122258/r/il/c073cd/7776334440/il_fullxfull.7776334440_jbeo.jpg",
-      "https://i.etsystatic.com/55122258/r/il/2f6fcb/7812398930/il_fullxfull.7812398930_kic8.jpg"
+      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg",
+      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.jpg",
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png"
     ],
     "featured": false,
     "variantGroups": [
@@ -380,7 +381,7 @@
         ]
       }
     ],
-    "active": false
+    "active": true
   },
   {
     "id": "snake-belly-chain",

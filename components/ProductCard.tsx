@@ -1,5 +1,5 @@
 "use client";
-import { useRef, useState, useEffect, useCallback } from "react";
+import { useRef, useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import type { Product } from "@/lib/products";
@@ -14,13 +14,16 @@ export default function ProductCard({ product }: { product: Product }) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [activeVariant, setActiveVariant] = useState<string | null>(null);
   const [hovering, setHovering] = useState(false);
-  // Mobile: first tap plays video, second tap navigates
-  const [mobileTapped, setMobileTapped] = useState(false);
+  const [popped, setPopped] = useState(false);
+  const touchStartTime = useRef(0);
+  const touchMoved = useRef(false);
+  // Always-fresh deactivate callable from global event listener
+  const deactivateRef = useRef<() => void>(() => {});
 
   const symbol = product.currency === "EUR" ? "€" : product.currency === "GBP" ? "£" : "$";
 
   const displayImages =
-    activeVariant && product.variantImages?.[activeVariant]
+    activeVariant && product.variantImages?.[activeVariant]?.length
       ? product.variantImages[activeVariant]
       : product.images;
 
@@ -35,72 +38,89 @@ export default function ProductCard({ product }: { product: Product }) {
 
   const currentImage = displayImages?.[0];
 
-  // When video source changes while playing, reload
+  deactivateRef.current = () => {
+    setHovering(false);
+    setPopped(false);
+    if (videoRef.current) {
+      videoRef.current.pause();
+      videoRef.current.currentTime = 0;
+    }
+  };
+
+  // Stop when another card starts
+  useEffect(() => {
+    function onOtherPlay(e: Event) {
+      if ((e as CustomEvent<{ id: string }>).detail.id !== product.id) {
+        deactivateRef.current();
+      }
+    }
+    window.addEventListener("card-play", onOtherPlay);
+    return () => window.removeEventListener("card-play", onOtherPlay);
+  }, [product.id]);
+
+  // Reload video when source changes while playing
   useEffect(() => {
     if (!videoRef.current || !hovering || !displayVideo) return;
     videoRef.current.load();
     videoRef.current.play().catch(() => {});
   }, [displayVideo, hovering]);
 
-  const playVideo = useCallback(() => {
+  function startPlay() {
+    window.dispatchEvent(new CustomEvent("card-play", { detail: { id: product.id } }));
     setHovering(true);
     if (videoRef.current && displayVideo) {
       videoRef.current.currentTime = 0;
       videoRef.current.play().catch(() => {});
     }
-  }, [displayVideo]);
+  }
 
-  const stopVideo = useCallback(() => {
-    setHovering(false);
-    setActiveVariant(null);
-    setMobileTapped(false);
-    if (videoRef.current) {
-      videoRef.current.pause();
-      videoRef.current.currentTime = 0;
-    }
-  }, []);
+  // ── Desktop ──────────────────────────────────────────────────────────────
+  function handleMouseEnter() { startPlay(); }
+  function handleMouseLeave() { deactivateRef.current(); setActiveVariant(null); }
 
-  // Desktop hover handlers
-  const handleMouseEnter = () => {
-    setMobileTapped(false);
-    playVideo();
-  };
-  const handleMouseLeave = stopVideo;
+  // ── Mobile ───────────────────────────────────────────────────────────────
+  function handleTouchStart() {
+    touchStartTime.current = Date.now();
+    touchMoved.current = false;
+    setPopped(true);
+    startPlay();
+  }
 
-  // Mobile: first tap plays video, second tap navigates
-  const handleMediaTouch = (e: React.TouchEvent) => {
-    if (!displayVideo) return; // no video — let the link navigate normally
-    if (!mobileTapped) {
-      e.preventDefault(); // block navigation on first tap
-      setMobileTapped(true);
-      playVideo();
-    }
-    // second tap: don't preventDefault → Link navigates
-  };
+  function handleTouchMove() {
+    touchMoved.current = true;
+  }
 
-  // Tap on the card text area always navigates (user taps name/price)
-  const handleInfoTouch = () => {
-    if (mobileTapped) {
+  function handleTouchEnd(e: React.TouchEvent) {
+    const duration = Date.now() - touchStartTime.current;
+    deactivateRef.current();
+    // Short tap (< 350 ms, no scroll) → navigate
+    if (!touchMoved.current && duration < 350) {
+      e.preventDefault();
       router.push(`/shop/${product.id}`);
     }
-  };
+  }
 
   return (
-    <div className="group block cursor-pointer" onClick={() => { if (!mobileTapped) router.push(`/shop/${product.id}`); }}>
-      {/* Media container */}
-      <div
-        className="relative overflow-hidden bg-[#FDF9F7] aspect-square"
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
-        onTouchStart={handleMediaTouch}
-        onClick={(e) => {
-          if (mobileTapped) {
-            e.stopPropagation();
-            router.push(`/shop/${product.id}`);
-          }
-        }}
-      >
-        {/* Static image */}
+    <div
+      className="group block cursor-pointer relative"
+      style={{
+        transform: popped ? "scale(1.07)" : "scale(1)",
+        boxShadow: popped ? "0 20px 48px rgba(0,0,0,0.22)" : "none",
+        transition: popped
+          ? "transform 0.14s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.14s ease-out"
+          : "transform 0.28s ease-in-out, box-shadow 0.28s ease-in-out",
+        zIndex: popped ? 10 : 0,
+        borderRadius: "4px",
+      }}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+      onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
+      onTouchEnd={handleTouchEnd}
+      onClick={() => router.push(`/shop/${product.id}`)}
+    >
+      {/* Media */}
+      <div className="relative overflow-hidden bg-[#FDF9F7] aspect-square">
         {currentImage ? (
           <Image
             src={currentImage}
@@ -121,7 +141,6 @@ export default function ProductCard({ product }: { product: Product }) {
           </div>
         )}
 
-        {/* Video */}
         {displayVideo && (
           <video
             ref={videoRef}
@@ -136,16 +155,7 @@ export default function ProductCard({ product }: { product: Product }) {
           />
         )}
 
-        {/* Mobile: "Tap again to view" hint when video is playing */}
-        {mobileTapped && hovering && (
-          <div className="absolute bottom-3 left-0 right-0 flex justify-center z-10">
-            <span className="text-[0.5rem] tracking-[0.15em] uppercase text-white bg-black/40 px-3 py-1">
-              Tap again to view
-            </span>
-          </div>
-        )}
-
-        {/* Variant swatches — appear on hover */}
+        {/* Variant swatches */}
         {product.variants && product.variants.length > 1 && (
           <div className="absolute bottom-3 left-3 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
             {product.variants.map((v) => (
@@ -153,6 +163,7 @@ export default function ProductCard({ product }: { product: Product }) {
                 key={v}
                 aria-label={v}
                 onMouseEnter={() => setActiveVariant(v)}
+                onClick={(e) => e.stopPropagation()}
                 className={`w-5 h-5 rounded-full border-2 transition-all duration-200 ${
                   activeVariant === v ? "border-white scale-110" : "border-white/50"
                 }`}
@@ -164,7 +175,7 @@ export default function ProductCard({ product }: { product: Product }) {
       </div>
 
       {/* Info */}
-      <div className="pt-3" onTouchStart={handleInfoTouch}>
+      <div className="pt-3">
         <p className="text-[0.52rem] tracking-[0.2em] uppercase text-[#8C7B6E] mb-1">
           {product.category}
         </p>

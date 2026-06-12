@@ -895,9 +895,9 @@
         "https://i.etsystatic.com/55122258/r/il/01cb28/7801900345/il_fullxfull.7801900345_7n0g.jpg",
         "https://i.etsystatic.com/55122258/r/il/5aed4c/7691395674/il_fullxfull.7691395674_31gb.jpg",
         "/images/products/AW6C0518-2.jpg",
-        "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg",
         "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.jpg",
-        "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png"
+        "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
+        "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg"
       ]
     },
     "variantGroups": [
@@ -916,7 +916,11 @@
           "Silver Stainless"
         ]
       }
-    ]
+    ],
+    "variantVideos": {
+      "Silver Tone": "/images/products/kendal-silver-chain.mp4",
+      "Gold Tone": "/images/products/kendal-silver-chain.mp4"
+    }
   },
   {
     "id": "layered-pearl-bracelet",

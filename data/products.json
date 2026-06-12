@@ -389,12 +389,16 @@
     "price": 20,
     "currency": "EUR",
     "category": "Belly Chains",
-    "description": "Your go-to summer staple. This minimalist gold snake chain drapes beautifully across your waist — waterproof, tarnish-resistant stainless steel that keeps its glow through the beach, the pool, and everything in between. Choose your fit from three extender sizes.",
-    "fullDescription": "A 71 cm solid snake chain in gold-tone stainless steel, smooth against the skin and designed to be worn alone or layered. Choose your extender size at checkout for a dialled-in fit: Small (71–81 cm), Medium (71–91 cm), or Large (71–100 cm). The open-link extender lets you clasp at any point for a millimetre-perfect result.\n\nCompletely waterproof and anti-tarnish — it never comes off unless you want it to. These chains layer beautifully together: two or three creates a look that photographs as well as it feels.",
+    "description": "Your go-to summer staple. This minimalist snake chain drapes beautifully across your waist — waterproof, tarnish-resistant stainless steel that keeps its glow through the beach, the pool, and everything in between. Available in gold or silver.",
+    "fullDescription": "A 71 cm solid snake chain in stainless steel, smooth against the skin and designed to be worn alone or layered. Choose your extender size at checkout for a dialled-in fit: Small (71–81 cm), Medium (71–91 cm), or Large (71–100 cm). The open-link extender lets you clasp at any point for a millimetre-perfect result.\n\nCompletely waterproof and anti-tarnish — it never comes off unless you want it to. These chains layer beautifully together: two or three creates a look that photographs as well as it feels.",
     "specs": [
       {
         "label": "Material",
-        "value": "Gold-tone stainless steel (waterproof & anti-tarnish)"
+        "value": "Stainless steel (waterproof & anti-tarnish)"
+      },
+      {
+        "label": "Colours",
+        "value": "Gold or Silver"
       },
       {
         "label": "Base length",
@@ -426,18 +430,38 @@
       }
     ],
     "images": [
-      "https://i.etsystatic.com/55122258/r/il/214012/7696123770/il_fullxfull.7696123770_7r5h.jpg",
-      "https://i.etsystatic.com/55122258/r/il/c54d54/7807712879/il_fullxfull.7807712879_fg0v.jpg",
-      "https://i.etsystatic.com/55122258/r/il/a37305/8138540167/il_fullxfull.8138540167_cp1u.jpg",
-      "https://i.etsystatic.com/55122258/r/il/3044d6/7744102609/il_fullxfull.7744102609_yof6.jpg",
-      "https://i.etsystatic.com/55122258/r/il/0006d2/7807717149/il_fullxfull.7807717149_o5xw.jpg",
-      "https://i.etsystatic.com/55122258/r/il/0c5517/7744131025/il_fullxfull.7744131025_svxq.jpg",
-      "https://i.etsystatic.com/55122258/r/il/3817ea/7812484438/il_fullxfull.7812484438_g6ab.jpg",
-      "https://i.etsystatic.com/55122258/r/il/cd29ee/7744092657/il_fullxfull.7744092657_m90g.jpg",
-      "https://i.etsystatic.com/55122258/r/il/19ec2b/7759756284/il_fullxfull.7759756284_19i0.jpg",
-      "https://i.etsystatic.com/55122258/r/il/bf8477/7759760622/il_fullxfull.7759760622_7bz7.jpg"
+      "https://i.etsystatic.com/55122258/r/il/214012/7696123770/il_fullxfull.7696123770_7r5h.jpg"
     ],
-    "featured": false,
+    "variants": [
+      "Gold Tone",
+      "Silver Tone"
+    ],
+    "variantImages": {
+      "Gold Tone": [
+        "https://i.etsystatic.com/55122258/r/il/214012/7696123770/il_fullxfull.7696123770_7r5h.jpg",
+        "https://i.etsystatic.com/55122258/r/il/c54d54/7807712879/il_fullxfull.7807712879_fg0v.jpg",
+        "https://i.etsystatic.com/55122258/r/il/a37305/8138540167/il_fullxfull.8138540167_cp1u.jpg",
+        "https://i.etsystatic.com/55122258/r/il/3044d6/7744102609/il_fullxfull.7744102609_yof6.jpg",
+        "https://i.etsystatic.com/55122258/r/il/0006d2/7807717149/il_fullxfull.7807717149_o5xw.jpg",
+        "https://i.etsystatic.com/55122258/r/il/0c5517/7744131025/il_fullxfull.7744131025_svxq.jpg",
+        "https://i.etsystatic.com/55122258/r/il/3817ea/7812484438/il_fullxfull.7812484438_g6ab.jpg",
+        "https://i.etsystatic.com/55122258/r/il/cd29ee/7744092657/il_fullxfull.7744092657_m90g.jpg",
+        "https://i.etsystatic.com/55122258/r/il/19ec2b/7759756284/il_fullxfull.7759756284_19i0.jpg",
+        "https://i.etsystatic.com/55122258/r/il/bf8477/7759760622/il_fullxfull.7759760622_7bz7.jpg"
+      ],
+      "Silver Tone": [
+        "https://i.etsystatic.com/55122258/r/il/c3ba21/7690292422/il_fullxfull.7690292422_4vju.jpg",
+        "https://i.etsystatic.com/55122258/r/il/bd436c/7831325315/il_fullxfull.7831325315_bq5k.jpg",
+        "https://i.etsystatic.com/55122258/r/il/db27f4/8090630842/il_fullxfull.8090630842_9i25.jpg",
+        "https://i.etsystatic.com/55122258/r/il/b82931/7738234793/il_fullxfull.7738234793_7xap.jpg",
+        "https://i.etsystatic.com/55122258/r/il/1b324a/7690292406/il_fullxfull.7690292406_an4c.jpg",
+        "https://i.etsystatic.com/55122258/r/il/d16b9b/7738234703/il_fullxfull.7738234703_1bb9.jpg",
+        "https://i.etsystatic.com/55122258/r/il/6609aa/7822193575/il_fullxfull.7822193575_m777.jpg",
+        "https://i.etsystatic.com/55122258/r/il/3ca3d7/7783400862/il_fullxfull.7783400862_3lw5.jpg",
+        "https://i.etsystatic.com/55122258/r/il/bb7581/7812410186/il_fullxfull.7812410186_qegh.jpg",
+        "https://i.etsystatic.com/55122258/r/il/b5b8ef/7822195477/il_fullxfull.7822195477_pnhb.jpg"
+      ]
+    },
     "variantGroups": [
       {
         "label": "Size",
@@ -448,6 +472,7 @@
         ]
       }
     ],
+    "featured": false,
     "active": false
   },
   {
@@ -1088,69 +1113,6 @@
         "https://i.etsystatic.com/55122258/r/il/a4f149/8161535103/il_fullxfull.8161535103_opib.jpg"
       ]
     }
-  },
-  {
-    "id": "silver-dainty-belly-chain",
-    "name": "Silver Dainty Belly Chain",
-    "price": 20,
-    "currency": "EUR",
-    "category": "Belly Chains",
-    "description": "Your minimalist waist chain, in silver. This simple, sleek stainless steel belly chain sits beautifully at the waist — waterproof, anti-tarnish, and sized to fit you perfectly with three extender options.",
-    "fullDescription": "A 71 cm base chain with open-link extender in three sizes: Small (71–81 cm), Medium (71–91 cm), or Large (71–100 cm). Clean lines, no embellishment — just pure minimalist elegance at the waist.\n\nMade from silver-tone stainless steel that's completely waterproof and anti-tarnish. Wear it alone for a subtle accent or stack two for a bolder layered look.",
-    "specs": [
-      {
-        "label": "Material",
-        "value": "Silver-tone stainless steel (waterproof & anti-tarnish)"
-      },
-      {
-        "label": "Base chain",
-        "value": "71 cm"
-      },
-      {
-        "label": "Small",
-        "value": "71–81 cm"
-      },
-      {
-        "label": "Medium",
-        "value": "71–91 cm"
-      },
-      {
-        "label": "Large",
-        "value": "71–100 cm"
-      },
-      {
-        "label": "Care",
-        "value": "Wipe gently with a soft cloth. Store in an airtight container."
-      },
-      {
-        "label": "Shipping",
-        "value": "Dispatches within 1–2 business days"
-      }
-    ],
-    "featured": false,
-    "active": false,
-    "images": [
-      "https://i.etsystatic.com/55122258/r/il/c3ba21/7690292422/il_fullxfull.7690292422_4vju.jpg",
-      "https://i.etsystatic.com/55122258/r/il/bd436c/7831325315/il_fullxfull.7831325315_bq5k.jpg",
-      "https://i.etsystatic.com/55122258/r/il/db27f4/8090630842/il_fullxfull.8090630842_9i25.jpg",
-      "https://i.etsystatic.com/55122258/r/il/b82931/7738234793/il_fullxfull.7738234793_7xap.jpg",
-      "https://i.etsystatic.com/55122258/r/il/1b324a/7690292406/il_fullxfull.7690292406_an4c.jpg",
-      "https://i.etsystatic.com/55122258/r/il/d16b9b/7738234703/il_fullxfull.7738234703_1bb9.jpg",
-      "https://i.etsystatic.com/55122258/r/il/6609aa/7822193575/il_fullxfull.7822193575_m777.jpg",
-      "https://i.etsystatic.com/55122258/r/il/3ca3d7/7783400862/il_fullxfull.7783400862_3lw5.jpg",
-      "https://i.etsystatic.com/55122258/r/il/bb7581/7812410186/il_fullxfull.7812410186_qegh.jpg",
-      "https://i.etsystatic.com/55122258/r/il/b5b8ef/7822195477/il_fullxfull.7822195477_pnhb.jpg"
-    ],
-    "variantGroups": [
-      {
-        "label": "Size",
-        "options": [
-          "Small 71 cm - 81 cm",
-          "Medium 71 cm - 91 cm",
-          "Large 71 cm - 100 cm"
-        ]
-      }
-    ]
   },
   {
     "id": "waterproof-belly-chain",

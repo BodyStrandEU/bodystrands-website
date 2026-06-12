@@ -19,10 +19,12 @@ export default async function ShopPage({
   const isValidCategory = (c: string): c is Category =>
     (CATEGORIES as readonly string[]).includes(c);
 
+  const activeProducts = products.filter((p) => p.active !== false);
+
   const filtered =
     category && isValidCategory(category)
-      ? products.filter((p) => p.category === category)
-      : products;
+      ? activeProducts.filter((p) => p.category === category)
+      : activeProducts;
 
   const activeLabel = category && isValidCategory(category) ? category : "All Pieces";
 

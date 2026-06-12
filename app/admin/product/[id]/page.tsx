@@ -199,6 +199,99 @@ function ImageSection({ title, images, onChange, onUpload }: ImageSectionProps) 
   );
 }
 
+// ─── Video drop zone ─────────────────────────────────────────────────────────
+
+interface VideoDropZoneProps {
+  value: string;
+  onChange: (path: string) => void;
+  onUpload: (file: File) => Promise<string>;
+}
+
+function VideoDropZone({ value, onChange, onUpload }: VideoDropZoneProps) {
+  const [uploading, setUploading] = useState(false);
+  const [dragOver, setDragOver] = useState(false);
+  const [uploadError, setUploadError] = useState("");
+
+  async function handleFile(file: File) {
+    setUploadError("");
+    setUploading(true);
+    try {
+      const url = await onUpload(file);
+      onChange(url);
+    } catch (err) {
+      setUploadError(err instanceof Error ? err.message : "Upload failed");
+    } finally {
+      setUploading(false);
+    }
+  }
+
+  const inputSt: React.CSSProperties = {
+    width: "100%", padding: "0.5rem 0.75rem", border: "1px solid #d1d5db",
+    borderRadius: "4px", fontSize: "0.85rem", color: "#111", background: "#fff", boxSizing: "border-box",
+  };
+
+  return (
+    <div>
+      <label
+        onDragOver={(e) => { e.preventDefault(); setDragOver(true); }}
+        onDragLeave={() => setDragOver(false)}
+        onDrop={(e) => {
+          e.preventDefault();
+          setDragOver(false);
+          const file = e.dataTransfer.files[0];
+          if (file) void handleFile(file);
+        }}
+        style={{
+          display: "block", padding: "1.25rem",
+          border: `2px dashed ${dragOver ? "#A0622A" : "#d1d5db"}`,
+          borderRadius: "4px", textAlign: "center",
+          cursor: uploading ? "wait" : "pointer",
+          background: dragOver ? "#fdf6f0" : "#f9fafb",
+          transition: "all 0.15s", marginBottom: "0.5rem",
+        }}
+      >
+        <input
+          type="file"
+          accept="video/mp4,video/quicktime,.mp4,.mov"
+          style={{ display: "none" }}
+          onChange={(e) => { const f = e.target.files?.[0]; if (f) void handleFile(f); }}
+          disabled={uploading}
+        />
+        <div style={{ fontSize: "1.4rem", marginBottom: "0.25rem" }}>🎬</div>
+        <span style={{ fontSize: "0.78rem", color: "#6b7280" }}>
+          {uploading ? "Uploading..." : "Drop .mp4 here or click to upload"}
+        </span>
+        <br />
+        <span style={{ fontSize: "0.7rem", color: "#9ca3af" }}>
+          Max 4 MB · Compress first: avconvert -s in.mp4 -o out.mp4 -p PresetMediumQuality --replace
+        </span>
+      </label>
+
+      {uploadError && (
+        <p style={{ fontSize: "0.75rem", color: "#991b1b", margin: "0 0 0.5rem", background: "#fee2e2", padding: "0.5rem 0.75rem", borderRadius: "4px" }}>
+          {uploadError}
+        </p>
+      )}
+
+      <input
+        style={inputSt}
+        value={value}
+        onChange={(e) => { setUploadError(""); onChange(e.target.value); }}
+        placeholder="/images/products/my-video.mp4"
+      />
+
+      {value && (
+        <video
+          src={value}
+          style={{ marginTop: "0.5rem", width: "100%", maxWidth: "200px", height: "auto", borderRadius: "4px", border: "1px solid #e5e7eb" }}
+          muted
+          controls
+        />
+      )}
+    </div>
+  );
+}
+
 // ─── Main page ───────────────────────────────────────────────────────────────
 
 type ProductForm = Omit<Product, "price"> & { price: string };
@@ -269,17 +362,13 @@ export default function ProductEditor({ params }: { params: Promise<{ id: string
 
   const uploadFile = useCallback(async (file: File): Promise<string> => {
     const isVideo = file.type.startsWith("video/") || file.name.endsWith(".mp4") || file.name.endsWith(".mov");
-    if (isVideo) {
-      throw new Error(
-        "Videos are too large to upload via the dashboard (Vercel 4.5 MB limit).\n\n" +
-        "Add videos via git instead:\n" +
-        "1. Compress: avconvert -s input.mov -o output.mp4 -p PresetLowQuality --replace\n" +
-        "2. Copy the .mp4 into public/images/products/\n" +
-        "3. Commit & push\n" +
-        "4. Type the path in the video field below (e.g. /images/products/my-video.mp4)"
-      );
-    }
     if (file.size > 4 * 1024 * 1024) {
+      if (isVideo) {
+        throw new Error(
+          `Video too large (${(file.size / 1024 / 1024).toFixed(1)} MB). Max is 4 MB.\n\n` +
+          "Compress it first:\navconvert -s input.mp4 -o output.mp4 -p PresetMediumQuality --replace"
+        );
+      }
       throw new Error(`File too large (${(file.size / 1024 / 1024).toFixed(1)} MB). Maximum is 4 MB.`);
     }
     const fd = new FormData();
@@ -795,12 +884,11 @@ export default function ProductEditor({ params }: { params: Promise<{ id: string
               />
 
               <div>
-                <label style={labelStyle}>Video URL (optional)</label>
-                <input
-                  style={inputStyle}
+                <label style={labelStyle}>Video (optional)</label>
+                <VideoDropZone
                   value={(form.variantVideos ?? {})[variant] ?? ""}
-                  onChange={(e) => updateVariantVideo(variant, e.target.value)}
-                  placeholder="/images/products/my-video.mp4"
+                  onChange={(v) => updateVariantVideo(variant, v)}
+                  onUpload={uploadFile}
                 />
               </div>
             </div>
@@ -813,11 +901,10 @@ export default function ProductEditor({ params }: { params: Promise<{ id: string
             <h2 style={{ margin: "0 0 0.75rem", fontSize: "0.9rem", fontWeight: 700, color: "#111", textTransform: "uppercase", letterSpacing: "0.08em" }}>
               Video (optional)
             </h2>
-            <input
-              style={inputStyle}
+            <VideoDropZone
               value={form.video ?? ""}
-              onChange={(e) => setForm((f) => ({ ...f, video: e.target.value }))}
-              placeholder="/images/products/my-video.mp4"
+              onChange={(v) => setForm((f) => ({ ...f, video: v }))}
+              onUpload={uploadFile}
             />
           </div>
         )}

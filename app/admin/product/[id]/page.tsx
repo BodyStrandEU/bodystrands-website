@@ -63,6 +63,7 @@ function SortableImage({ id, url, onDelete }: SortableImageProps) {
           <img
             src={url}
             alt=""
+            referrerPolicy="no-referrer"
             style={{ width: "100%", height: "100%", objectFit: "cover" }}
             draggable={false}
           />
@@ -201,25 +202,73 @@ function ImageSection({ title, images, onChange, onUpload }: ImageSectionProps) 
 
 // ─── Video drop zone ─────────────────────────────────────────────────────────
 
+async function fileToBase64(file: File): Promise<string> {
+  const buffer = await file.arrayBuffer();
+  const bytes = new Uint8Array(buffer);
+  let binary = "";
+  const chunkSize = 8192;
+  for (let i = 0; i < bytes.length; i += chunkSize) {
+    binary += String.fromCharCode(...bytes.subarray(i, i + chunkSize));
+  }
+  return btoa(binary);
+}
+
+async function uploadVideoDirect(file: File): Promise<string> {
+  const configRes = await fetch("/api/admin/upload-config");
+  if (!configRes.ok) throw new Error("Not authorised");
+  const { token, repo, branch } = await configRes.json() as { token: string; repo: string; branch: string };
+
+  const filename = file.name.replace(/[^a-zA-Z0-9._-]/g, "-");
+  const path = `public/images/products/${filename}`;
+
+  let sha: string | undefined;
+  try {
+    const check = await fetch(`https://api.github.com/repos/${repo}/contents/${path}?ref=${branch}`, {
+      headers: { Authorization: `Bearer ${token}`, Accept: "application/vnd.github+json" },
+    });
+    if (check.ok) sha = ((await check.json()) as { sha: string }).sha;
+  } catch { /* new file */ }
+
+  const base64 = await fileToBase64(file);
+  const body: Record<string, string> = { message: `Upload product video: ${filename}`, content: base64, branch };
+  if (sha) body.sha = sha;
+
+  const res = await fetch(`https://api.github.com/repos/${repo}/contents/${path}`, {
+    method: "PUT",
+    headers: { Authorization: `Bearer ${token}`, Accept: "application/vnd.github+json", "Content-Type": "application/json" },
+    body: JSON.stringify(body),
+  });
+  if (!res.ok) {
+    const text = await res.text();
+    throw new Error(`Upload failed: ${text.slice(0, 200)}`);
+  }
+  return `/images/products/${filename}`;
+}
+
 interface VideoDropZoneProps {
   value: string;
   onChange: (path: string) => void;
-  onUpload: (file: File) => Promise<string>;
 }
 
-function VideoDropZone({ value, onChange, onUpload }: VideoDropZoneProps) {
+function VideoDropZone({ value, onChange }: VideoDropZoneProps) {
   const [uploading, setUploading] = useState(false);
   const [dragOver, setDragOver] = useState(false);
   const [uploadError, setUploadError] = useState("");
+  const [progress, setProgress] = useState("");
 
   async function handleFile(file: File) {
     setUploadError("");
+    setProgress("");
     setUploading(true);
     try {
-      const url = await onUpload(file);
+      const mb = (file.size / 1024 / 1024).toFixed(1);
+      setProgress(`Uploading ${mb} MB…`);
+      const url = await uploadVideoDirect(file);
       onChange(url);
+      setProgress("");
     } catch (err) {
       setUploadError(err instanceof Error ? err.message : "Upload failed");
+      setProgress("");
     } finally {
       setUploading(false);
     }
@@ -258,12 +307,12 @@ function VideoDropZone({ value, onChange, onUpload }: VideoDropZoneProps) {
           disabled={uploading}
         />
         <div style={{ fontSize: "1.4rem", marginBottom: "0.25rem" }}>🎬</div>
-        <span style={{ fontSize: "0.78rem", color: "#6b7280" }}>
-          {uploading ? "Uploading..." : "Drop .mp4 here or click to upload"}
+        <span style={{ fontSize: "0.78rem", color: uploading ? "#A0622A" : "#6b7280" }}>
+          {progress || (uploading ? "Uploading…" : "Drop .mp4 here or click to upload")}
         </span>
         <br />
         <span style={{ fontSize: "0.7rem", color: "#9ca3af" }}>
-          Max 4 MB · Compress first: avconvert -s in.mp4 -o out.mp4 -p PresetMediumQuality --replace
+          Any size · H.264 mp4 recommended
         </span>
       </label>
 
@@ -888,7 +937,6 @@ export default function ProductEditor({ params }: { params: Promise<{ id: string
                 <VideoDropZone
                   value={(form.variantVideos ?? {})[variant] ?? ""}
                   onChange={(v) => updateVariantVideo(variant, v)}
-                  onUpload={uploadFile}
                 />
               </div>
             </div>
@@ -904,7 +952,6 @@ export default function ProductEditor({ params }: { params: Promise<{ id: string
             <VideoDropZone
               value={form.video ?? ""}
               onChange={(v) => setForm((f) => ({ ...f, video: v }))}
-              onUpload={uploadFile}
             />
           </div>
         )}

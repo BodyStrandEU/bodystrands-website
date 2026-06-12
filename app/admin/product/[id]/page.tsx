@@ -222,6 +222,7 @@ export default function ProductEditor({ params }: { params: Promise<{ id: string
     description: "",
     fullDescription: "",
     specs: [],
+    variantGroups: [],
     images: [],
     variantImages: {},
     video: "",
@@ -255,6 +256,7 @@ export default function ProductEditor({ params }: { params: Promise<{ id: string
               variantVideos: found.variantVideos ?? {},
               variants: found.variants ?? [],
               specs: found.specs ?? [],
+              variantGroups: found.variantGroups ?? [],
             });
           } else {
             setError("Product not found");
@@ -313,6 +315,7 @@ export default function ProductEditor({ params }: { params: Promise<{ id: string
         variantVideos: Object.keys(form.variantVideos ?? {}).length > 0 ? form.variantVideos : undefined,
         variants: (form.variants ?? []).length > 0 ? form.variants : undefined,
         specs: (form.specs ?? []).length > 0 ? form.specs : undefined,
+        variantGroups: (form.variantGroups ?? []).length > 0 ? form.variantGroups : undefined,
       };
 
       let updated: Product[];
@@ -404,6 +407,32 @@ export default function ProductEditor({ params }: { params: Promise<{ id: string
 
   function removeSpec(index: number) {
     setForm((f) => ({ ...f, specs: (f.specs ?? []).filter((_, i) => i !== index) }));
+  }
+
+  function addVariantGroup() {
+    const label = prompt("Selector label (e.g. Size, Butterfly Color, Birthstone):");
+    if (!label?.trim()) return;
+    const raw = prompt(`Options for "${label.trim()}" — enter comma-separated (e.g. Small,Medium,Large):`);
+    if (!raw?.trim()) return;
+    const options = raw.split(",").map((o) => o.trim()).filter(Boolean);
+    if (options.length === 0) return;
+    setForm((f) => ({
+      ...f,
+      variantGroups: [...(f.variantGroups ?? []), { label: label.trim(), options }],
+    }));
+  }
+
+  function removeVariantGroup(index: number) {
+    setForm((f) => ({ ...f, variantGroups: (f.variantGroups ?? []).filter((_, i) => i !== index) }));
+  }
+
+  function updateVariantGroupOptions(index: number, raw: string) {
+    const options = raw.split(",").map((o) => o.trim()).filter(Boolean);
+    setForm((f) => {
+      const vg = [...(f.variantGroups ?? [])];
+      vg[index] = { ...vg[index], options };
+      return { ...f, variantGroups: vg };
+    });
   }
 
   const inputStyle: React.CSSProperties = {
@@ -645,6 +674,44 @@ export default function ProductEditor({ params }: { params: Promise<{ id: string
           ))}
           {(form.specs ?? []).length === 0 && (
             <p style={{ fontSize: "0.78rem", color: "#9ca3af" }}>No specs yet.</p>
+          )}
+        </div>
+
+        {/* Variant Groups (mandatory customer selectors) */}
+        <div style={sectionStyle}>
+          <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: "0.5rem" }}>
+            <h2 style={{ margin: 0, fontSize: "0.9rem", fontWeight: 700, color: "#111", textTransform: "uppercase", letterSpacing: "0.08em" }}>
+              Customer Selectors
+            </h2>
+            <button
+              onClick={addVariantGroup}
+              style={{ padding: "0.3rem 0.75rem", background: "transparent", border: "1px solid #d1d5db", borderRadius: "4px", fontSize: "0.75rem", cursor: "pointer", color: "#374151" }}
+            >
+              + Add Selector
+            </button>
+          </div>
+          <p style={{ margin: "0 0 1rem", fontSize: "0.78rem", color: "#6b7280" }}>
+            Mandatory options the buyer must choose before adding to cart (e.g. Size, Butterfly Color, Birthstone).
+          </p>
+          {(form.variantGroups ?? []).map((group, i) => (
+            <div key={i} style={{ background: "#f9fafb", border: "1px solid #e5e7eb", borderRadius: "6px", padding: "0.75rem 1rem", marginBottom: "0.75rem" }}>
+              <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: "0.5rem" }}>
+                <span style={{ fontSize: "0.82rem", fontWeight: 600, color: "#111" }}>{group.label}</span>
+                <button onClick={() => removeVariantGroup(i)} style={{ background: "none", border: "none", cursor: "pointer", color: "#9ca3af", fontSize: "1.1rem", lineHeight: 1 }}>×</button>
+              </div>
+              <input
+                style={{ ...inputStyle, fontSize: "0.78rem" }}
+                value={group.options.join(", ")}
+                onChange={(e) => updateVariantGroupOptions(i, e.target.value)}
+                placeholder="Option 1, Option 2, Option 3"
+              />
+              <p style={{ margin: "0.3rem 0 0", fontSize: "0.72rem", color: "#9ca3af" }}>
+                Edit options as comma-separated values
+              </p>
+            </div>
+          ))}
+          {(form.variantGroups ?? []).length === 0 && (
+            <p style={{ fontSize: "0.78rem", color: "#9ca3af" }}>No customer selectors yet.</p>
           )}
         </div>
 

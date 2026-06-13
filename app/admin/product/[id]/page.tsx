@@ -245,7 +245,7 @@ async function fileToBase64(file: File): Promise<string> {
   return btoa(binary);
 }
 
-async function uploadVideoDirect(file: File): Promise<string> {
+async function uploadFileDirect(file: File): Promise<string> {
   const configRes = await fetch("/api/admin/upload-config");
   if (!configRes.ok) throw new Error("Not authorised");
   const { token, repo, branch } = await configRes.json() as { token: string; repo: string; branch: string };
@@ -262,7 +262,7 @@ async function uploadVideoDirect(file: File): Promise<string> {
   } catch { /* new file */ }
 
   const base64 = await fileToBase64(file);
-  const body: Record<string, string> = { message: `Upload product video: ${filename}`, content: base64, branch };
+  const body: Record<string, string> = { message: `Upload product file: ${filename}`, content: base64, branch };
   if (sha) body.sha = sha;
 
   const res = await fetch(`https://api.github.com/repos/${repo}/contents/${path}`, {
@@ -295,7 +295,7 @@ function VideoDropZone({ value, onChange }: VideoDropZoneProps) {
     try {
       const mb = (file.size / 1024 / 1024).toFixed(1);
       setProgress(`Uploading ${mb} MB…`);
-      const url = await uploadVideoDirect(file);
+      const url = await uploadFileDirect(file);
       onChange(url);
       setProgress("");
     } catch (err) {
@@ -442,27 +442,7 @@ export default function ProductEditor({ params }: { params: Promise<{ id: string
   }, [id, isNew, router]);
 
   const uploadFile = useCallback(async (file: File): Promise<string> => {
-    const isVideo = file.type.startsWith("video/") || file.name.endsWith(".mp4") || file.name.endsWith(".mov");
-    if (file.size > 4 * 1024 * 1024) {
-      if (isVideo) {
-        throw new Error(
-          `Video too large (${(file.size / 1024 / 1024).toFixed(1)} MB). Max is 4 MB.\n\n` +
-          "Compress it first:\navconvert -s input.mp4 -o output.mp4 -p PresetMediumQuality --replace"
-        );
-      }
-      throw new Error(`File too large (${(file.size / 1024 / 1024).toFixed(1)} MB). Maximum is 4 MB.`);
-    }
-    const fd = new FormData();
-    fd.append("file", file);
-    const res = await fetch("/api/admin/images", { method: "POST", body: fd });
-    if (!res.ok) {
-      const text = await res.text();
-      let message = "Upload failed";
-      try { message = (JSON.parse(text) as { error?: string }).error ?? message; } catch { message = text.slice(0, 120) || message; }
-      throw new Error(message);
-    }
-    const data = await res.json() as { url: string };
-    return data.url;
+    return uploadFileDirect(file);
   }, []);
 
   async function handleSave() {

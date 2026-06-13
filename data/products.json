@@ -2090,16 +2090,16 @@
   },
   {
     "id": "gold-body-necklace",
-    "name": "Gold Body Necklace",
+    "name": "Bikini Body Necklace",
     "price": 45,
     "currency": "EUR",
     "category": "Body Chains",
-    "description": "Your bikini's best accessory. This dainty gold body necklace drapes across the décolletage and torso — minimalist beach jewelry that transforms any swimsuit into a styled summer look.",
+    "description": "Your bikini's best accessory. This dainty body necklace drapes across the décolletage and torso — minimalist beach jewelry that transforms any swimsuit into a styled summer look.",
     "fullDescription": "Fine gold chains trace the neckline and chest in a delicate body necklace silhouette — feminine, lightweight, and the kind of piece that makes a simple black bikini look like an intentional outfit.\n\nHandcrafted in gold stainless steel. Adjustable fit to suit different body types. Waterproof and anti-tarnish so it lives at the beach all season long.",
     "specs": [
       {
         "label": "Material",
-        "value": "Gold-tone stainless steel (waterproof & anti-tarnish)"
+        "value": "Gold or silver stainless steel (waterproof & anti-tarnish)"
       },
       {
         "label": "Style",

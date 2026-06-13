@@ -2388,20 +2388,20 @@
   },
   {
     "id": "silver-waist-chain",
-    "name": "Silver Waist Chain",
+    "name": "Layered Belly Chain",
     "price": 30,
     "currency": "EUR",
     "category": "Belly Chains",
-    "description": "Your clean, minimalist waist detail in silver. This dainty stainless steel belly chain sits perfectly at the waist — waterproof, tarnish-resistant, and sized exactly to you with three extender options.",
+    "description": "Your clean, minimalist waist detail in silver. This dainty stainless steel belly chain sits perfectly at the waist — waterproof, tarnish-resistant, and sized exactly to you with three extender options. It incudes two separate gold or silver waist chains for layering over your outfit.",
     "fullDescription": "No embellishment, just a beautifully proportioned silver chain at the waist. The 71 cm base comes with a choice of extender size: Small (71–81 cm), Medium (71–91 cm), or Large (71–100 cm).\n\nMade from silver-tone stainless steel that's completely waterproof and anti-tarnish. Wear it to the beach, the pool, and everywhere in between — it keeps its shine indefinitely.",
     "specs": [
       {
         "label": "Material",
-        "value": "Silver-tone stainless steel (waterproof & anti-tarnish)"
+        "value": "Gold or silver-tone stainless steel (waterproof & anti-tarnish)"
       },
       {
         "label": "Base chain",
-        "value": "71 cm"
+        "value": "2x 71 cm snake chains"
       },
       {
         "label": "Small",
@@ -2428,15 +2428,15 @@
     "active": false,
     "images": [
       "https://i.etsystatic.com/55122258/r/il/00c68e/7783598352/il_fullxfull.7783598352_ord3.jpg",
-      "https://i.etsystatic.com/55122258/r/il/17f798/7787214796/il_fullxfull.7787214796_ampn.jpg",
+      "/images/products/f985b2bb-689d-4d24-90e2-7d6f06d84ae9.png",
       "https://i.etsystatic.com/55122258/r/il/36e8b2/8138539081/il_fullxfull.8138539081_gral.jpg",
-      "https://i.etsystatic.com/55122258/r/il/741708/7835145337/il_fullxfull.7835145337_908u.jpg",
-      "https://i.etsystatic.com/55122258/r/il/6609aa/7822193575/il_fullxfull.7822193575_m777.jpg",
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
+      "/images/products/6ff3c5b2-4fa2-4c93-8458-e83dc479cbd8.png",
+      "https://i.etsystatic.com/55122258/r/il/17f798/7787214796/il_fullxfull.7787214796_ampn.jpg",
       "https://i.etsystatic.com/55122258/r/il/3ca3d7/7783400862/il_fullxfull.7783400862_3lw5.jpg",
-      "https://i.etsystatic.com/55122258/r/il/61c9bd/7835146415/il_fullxfull.7835146415_363z.jpg",
-      "https://i.etsystatic.com/55122258/r/il/3ee5bf/7860352883/il_fullxfull.7860352883_bsgi.jpg",
       "https://i.etsystatic.com/55122258/r/il/d7b84c/7783600598/il_fullxfull.7783600598_op0k.jpg",
-      "https://i.etsystatic.com/55122258/r/il/da142d/7783600828/il_fullxfull.7783600828_l2oi.jpg"
+      "https://i.etsystatic.com/55122258/r/il/da142d/7783600828/il_fullxfull.7783600828_l2oi.jpg",
+      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg"
     ],
     "variantGroups": [
       {
@@ -2446,8 +2446,16 @@
           "Medium 71 cm - 91 cm",
           "Large 71 cm - 100 cm"
         ]
+      },
+      {
+        "label": "Finish",
+        "options": [
+          "Gold Stainless",
+          "Silver Stainless"
+        ]
       }
-    ]
+    ],
+    "video": "/images/products/0613--2-.mp4"
   },
   {
     "id": "off-shoulder-chain-necklace",

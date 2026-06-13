@@ -5,11 +5,13 @@ import { useState } from "react";
 export default function BuyButton({
   productId,
   variant,
+  priceAdd,
   disabled: externalDisabled,
   disabledMessage,
 }: {
   productId: string;
   variant?: string;
+  priceAdd?: number;
   disabled?: boolean;
   disabledMessage?: string;
 }) {
@@ -21,7 +23,7 @@ export default function BuyButton({
       const res = await fetch("/api/checkout", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ productId, variant }),
+        body: JSON.stringify({ productId, variant, priceAdd: priceAdd ?? 0 }),
       });
       const data = await res.json() as { url?: string; error?: string };
       if (data.url) {

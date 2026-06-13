@@ -15,7 +15,13 @@ export const CATEGORIES = [
 export type Category = (typeof CATEGORIES)[number];
 
 export type Spec = { label: string; value: string };
-export type VariantGroup = { label: string; options: string[] };
+export type VariantGroup = {
+  label: string;
+  type?: "options" | "text";           // default "options"
+  options?: string[];                   // for "options" type
+  optionPrices?: Record<string, number>; // optional price add per option
+  placeholder?: string;                 // for "text" type
+};
 
 export type Product = {
   id: string;

@@ -6,7 +6,7 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!);
 
 export async function POST(req: NextRequest) {
   try {
-  const { productId, variant } = await req.json() as { productId: string; variant?: string };
+  const { productId, variant, priceAdd } = await req.json() as { productId: string; variant?: string; priceAdd?: number };
 
   const product = products.find((p) => p.id === productId);
   if (!product) {
@@ -29,7 +29,7 @@ export async function POST(req: NextRequest) {
               ? [`${origin}${product.images[0]}`]
               : [],
           },
-          unit_amount: Math.round(product.price * 100),
+          unit_amount: Math.round((product.price + (priceAdd ?? 0)) * 100),
         },
         quantity: 1,
       },

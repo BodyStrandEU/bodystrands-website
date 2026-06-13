@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import ProductGallery from "@/components/ProductGallery";
 import BuyButton from "@/components/BuyButton";
@@ -20,15 +20,33 @@ export default function ProductPageClient({ product }: { product: Product }) {
   const symbol =
     product.currency === "EUR" ? "€" : product.currency === "GBP" ? "£" : "$";
 
+  // Sum price add-ons from selected options
+  const priceAdd = (product.variantGroups ?? []).reduce((sum, group) => {
+    if (group.type === "text") return sum;
+    const selected = groupSelections[group.label];
+    if (!selected || !group.optionPrices) return sum;
+    return sum + (group.optionPrices[selected] ?? 0);
+  }, 0);
+
+  const totalPrice = product.price + priceAdd;
+
   const allGroupsSelected =
     !product.variantGroups ||
-    product.variantGroups.every((g) => groupSelections[g.label]);
+    product.variantGroups.every((g) => {
+      const val = groupSelections[g.label];
+      if (g.type === "text") return val && val.trim().length > 0;
+      return !!val;
+    });
 
   const combinedVariant =
     [
       activeVariant,
       ...(product.variantGroups
-        ?.map((g) => groupSelections[g.label])
+        ?.map((g) => {
+          const val = groupSelections[g.label];
+          if (!val) return null;
+          return `${g.label}: ${val}`;
+        })
         .filter(Boolean) ?? []),
     ]
       .filter(Boolean)
@@ -37,7 +55,7 @@ export default function ProductPageClient({ product }: { product: Product }) {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-start">
 
-      {/* Gallery — full bleed on mobile, media only */}
+      {/* Gallery — full bleed on mobile */}
       <div className="-mx-6 md:mx-0">
         <ProductGallery product={product} activeVariant={activeVariant} />
       </div>
@@ -54,7 +72,12 @@ export default function ProductPageClient({ product }: { product: Product }) {
         </h1>
 
         <p className="text-2xl font-light text-[#A0622A] tracking-wide">
-          {symbol}{product.price.toFixed(2)}
+          {symbol}{totalPrice.toFixed(2)}
+          {priceAdd > 0 && (
+            <span className="text-sm text-[#8C7B6E] ml-2 font-light">
+              (+{symbol}{priceAdd.toFixed(2)})
+            </span>
+          )}
         </p>
 
         <div className="h-px bg-[#E8B4A8]/40" />
@@ -95,34 +118,53 @@ export default function ProductPageClient({ product }: { product: Product }) {
           </div>
         )}
 
-        {/* Additional variant groups (e.g. Attachment type) */}
+        {/* Customer selectors */}
         {product.variantGroups?.map((group) => (
           <div key={group.label}>
             <p className="text-[0.55rem] tracking-[0.25em] uppercase text-[#8C7B6E] mb-3">
               {group.label}
-              {!groupSelections[group.label] ? (
-                <span className="ml-2 text-[#A0622A]">— please select</span>
-              ) : (
-                <span className="ml-2 text-[#2C2220]">— {groupSelections[group.label]}</span>
+              {group.type !== "text" && (
+                !groupSelections[group.label] ? (
+                  <span className="ml-2 text-[#A0622A]">— please select</span>
+                ) : (
+                  <span className="ml-2 text-[#2C2220]">— {groupSelections[group.label]}</span>
+                )
               )}
             </p>
-            <div className="flex gap-3 flex-wrap">
-              {group.options.map((opt) => (
-                <button
-                  key={opt}
-                  onClick={() =>
-                    setGroupSelections((prev) => ({ ...prev, [group.label]: opt }))
-                  }
-                  className={`px-4 py-3 border text-[0.58rem] tracking-[0.15em] uppercase transition-all duration-200 ${
-                    groupSelections[group.label] === opt
-                      ? "border-[#2C2220] text-[#2C2220]"
-                      : "border-[#E8B4A8]/50 text-[#8C7B6E] hover:border-[#2C2220]"
-                  }`}
-                >
-                  {opt}
-                </button>
-              ))}
-            </div>
+
+            {group.type === "text" ? (
+              <input
+                type="text"
+                value={groupSelections[group.label] ?? ""}
+                onChange={(e) =>
+                  setGroupSelections((prev) => ({ ...prev, [group.label]: e.target.value }))
+                }
+                placeholder={group.placeholder ?? `Enter ${group.label.toLowerCase()}`}
+                className="w-full border border-[#E8B4A8]/50 px-4 py-3 text-sm font-light text-[#2C2220] tracking-wide placeholder:text-[#8C7B6E]/60 focus:outline-none focus:border-[#2C2220] transition-colors bg-transparent"
+              />
+            ) : (
+              <div className="flex gap-3 flex-wrap">
+                {(group.options ?? []).map((opt) => {
+                  const add = group.optionPrices?.[opt];
+                  return (
+                    <button
+                      key={opt}
+                      onClick={() =>
+                        setGroupSelections((prev) => ({ ...prev, [group.label]: opt }))
+                      }
+                      className={`px-4 py-3 border text-[0.58rem] tracking-[0.15em] uppercase transition-all duration-200 ${
+                        groupSelections[group.label] === opt
+                          ? "border-[#2C2220] text-[#2C2220]"
+                          : "border-[#E8B4A8]/50 text-[#8C7B6E] hover:border-[#2C2220]"
+                      }`}
+                    >
+                      {opt}
+                      {add ? <span className="ml-1 normal-case">+{symbol}{add}</span> : null}
+                    </button>
+                  );
+                })}
+              </div>
+            )}
           </div>
         ))}
 
@@ -130,8 +172,9 @@ export default function ProductPageClient({ product }: { product: Product }) {
         <BuyButton
           productId={product.id}
           variant={combinedVariant}
+          priceAdd={priceAdd}
           disabled={!allGroupsSelected}
-          disabledMessage="Please select all options above"
+          disabledMessage="Please complete all options above"
         />
 
         {/* Feature bullets */}

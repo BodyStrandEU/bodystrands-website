@@ -560,16 +560,26 @@ export default function ProductEditor({ params }: { params: Promise<{ id: string
   }
 
   function addVariantGroup() {
-    const label = prompt("Selector label (e.g. Size, Butterfly Color, Birthstone):");
+    const typeChoice = prompt("Selector type:\n\n1 = Options (buttons customer clicks)\n2 = Text Box (customer types something)\n\nEnter 1 or 2:");
+    const type: "options" | "text" = typeChoice === "2" ? "text" : "options";
+    const label = prompt("Selector label (e.g. Size, Engraving Text, Butterfly Color):");
     if (!label?.trim()) return;
-    const raw = prompt(`Options for "${label.trim()}" — enter comma-separated (e.g. Small,Medium,Large):`);
-    if (!raw?.trim()) return;
-    const options = raw.split(",").map((o) => o.trim()).filter(Boolean);
-    if (options.length === 0) return;
-    setForm((f) => ({
-      ...f,
-      variantGroups: [...(f.variantGroups ?? []), { label: label.trim(), options }],
-    }));
+    if (type === "text") {
+      const placeholder = prompt("Placeholder text shown inside the box (e.g. 'Enter your name'):") ?? "";
+      setForm((f) => ({
+        ...f,
+        variantGroups: [...(f.variantGroups ?? []), { label: label.trim(), type: "text", placeholder }],
+      }));
+    } else {
+      const raw = prompt(`Options for "${label.trim()}" — comma-separated (e.g. Small,Medium,Large):`);
+      if (!raw?.trim()) return;
+      const options = raw.split(",").map((o) => o.trim()).filter(Boolean);
+      if (options.length === 0) return;
+      setForm((f) => ({
+        ...f,
+        variantGroups: [...(f.variantGroups ?? []), { label: label.trim(), type: "options", options }],
+      }));
+    }
   }
 
   function removeVariantGroup(index: number) {
@@ -581,6 +591,38 @@ export default function ProductEditor({ params }: { params: Promise<{ id: string
     setForm((f) => {
       const vg = [...(f.variantGroups ?? [])];
       vg[index] = { ...vg[index], options };
+      return { ...f, variantGroups: vg };
+    });
+  }
+
+  function updateVariantGroupPlaceholder(index: number, value: string) {
+    setForm((f) => {
+      const vg = [...(f.variantGroups ?? [])];
+      vg[index] = { ...vg[index], placeholder: value };
+      return { ...f, variantGroups: vg };
+    });
+  }
+
+  // optionPrices stored as "OptionName:price" comma-separated string for easy editing
+  function parseOptionPrices(raw: string): Record<string, number> {
+    const result: Record<string, number> = {};
+    raw.split(",").forEach((pair) => {
+      const [name, val] = pair.split(":").map((s) => s.trim());
+      const num = parseFloat(val);
+      if (name && !isNaN(num) && num > 0) result[name] = num;
+    });
+    return result;
+  }
+
+  function formatOptionPrices(prices?: Record<string, number>): string {
+    if (!prices) return "";
+    return Object.entries(prices).map(([k, v]) => `${k}:${v}`).join(", ");
+  }
+
+  function updateVariantGroupPrices(index: number, raw: string) {
+    setForm((f) => {
+      const vg = [...(f.variantGroups ?? [])];
+      vg[index] = { ...vg[index], optionPrices: raw.trim() ? parseOptionPrices(raw) : undefined };
       return { ...f, variantGroups: vg };
     });
   }
@@ -846,18 +888,49 @@ export default function ProductEditor({ params }: { params: Promise<{ id: string
           {(form.variantGroups ?? []).map((group, i) => (
             <div key={i} style={{ background: "#f9fafb", border: "1px solid #e5e7eb", borderRadius: "6px", padding: "0.75rem 1rem", marginBottom: "0.75rem" }}>
               <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: "0.5rem" }}>
-                <span style={{ fontSize: "0.82rem", fontWeight: 600, color: "#111" }}>{group.label}</span>
+                <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
+                  <span style={{ fontSize: "0.82rem", fontWeight: 600, color: "#111" }}>{group.label}</span>
+                  <span style={{ fontSize: "0.65rem", background: group.type === "text" ? "#ede9fe" : "#e0f2fe", color: group.type === "text" ? "#6d28d9" : "#0369a1", padding: "0.1rem 0.4rem", borderRadius: "3px", textTransform: "uppercase", letterSpacing: "0.05em" }}>
+                    {group.type === "text" ? "Text Box" : "Options"}
+                  </span>
+                </div>
                 <button onClick={() => removeVariantGroup(i)} style={{ background: "none", border: "none", cursor: "pointer", color: "#9ca3af", fontSize: "1.1rem", lineHeight: 1 }}>×</button>
               </div>
-              <input
-                style={{ ...inputStyle, fontSize: "0.78rem" }}
-                value={group.options.join(", ")}
-                onChange={(e) => updateVariantGroupOptions(i, e.target.value)}
-                placeholder="Option 1, Option 2, Option 3"
-              />
-              <p style={{ margin: "0.3rem 0 0", fontSize: "0.72rem", color: "#9ca3af" }}>
-                Edit options as comma-separated values
-              </p>
+
+              {group.type === "text" ? (
+                <>
+                  <input
+                    style={{ ...inputStyle, fontSize: "0.78rem" }}
+                    value={group.placeholder ?? ""}
+                    onChange={(e) => updateVariantGroupPlaceholder(i, e.target.value)}
+                    placeholder="Placeholder text shown to customer (e.g. Enter your name)"
+                  />
+                  <p style={{ margin: "0.3rem 0 0", fontSize: "0.72rem", color: "#9ca3af" }}>
+                    Customer must fill this in before they can buy
+                  </p>
+                </>
+              ) : (
+                <>
+                  <input
+                    style={{ ...inputStyle, fontSize: "0.78rem", marginBottom: "0.5rem" }}
+                    value={(group.options ?? []).join(", ")}
+                    onChange={(e) => updateVariantGroupOptions(i, e.target.value)}
+                    placeholder="Option 1, Option 2, Option 3"
+                  />
+                  <p style={{ margin: "0 0 0.5rem", fontSize: "0.72rem", color: "#9ca3af" }}>
+                    Edit options as comma-separated values
+                  </p>
+                  <input
+                    style={{ ...inputStyle, fontSize: "0.78rem" }}
+                    value={formatOptionPrices(group.optionPrices)}
+                    onChange={(e) => updateVariantGroupPrices(i, e.target.value)}
+                    placeholder="Price add-ons (optional) — e.g. Large:5, XL:10"
+                  />
+                  <p style={{ margin: "0.3rem 0 0", fontSize: "0.72rem", color: "#9ca3af" }}>
+                    Format: OptionName:amount — leave blank for no price add
+                  </p>
+                </>
+              )}
             </div>
           ))}
           {(form.variantGroups ?? []).length === 0 && (

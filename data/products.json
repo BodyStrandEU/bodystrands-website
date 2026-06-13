@@ -1945,16 +1945,16 @@
   },
   {
     "id": "gold-hand-chain",
-    "name": "Gold Hand Chain",
+    "name": "Multi-Strand Hand Chain",
     "price": 40,
     "currency": "EUR",
     "category": "Hand Chains",
-    "description": "Your editorial hand detail. This dainty gold hand chain drapes from wrist to fingers — a slave bracelet-style piece that adds a bohemian, sculptural dimension to any look, festival, or photoshoot.",
-    "fullDescription": "A delicate chain connects a bracelet cuff to a finger ring, creating a draped hand harness effect that's become a favourite in fashion and editorial photography. Layer it over other bracelets or wear it alone for maximum impact.\n\nHandcrafted in gold-tone stainless steel. One size, adjustable ring and bracelet sections. A striking piece for festivals, shoots, and anyone who treats jewellery as art.",
+    "description": "Your editorial hand detail. This dainty gold or silver hand chain drapes from wrist to fingers — a slave bracelet-style piece that adds a bohemian, sculptural dimension to any look, festival, or photoshoot.",
+    "fullDescription": "A delicate chain connects a bracelet cuff to a finger ring, creating a draped hand harness effect that's become a favourite in fashion and editorial photography. Layer it over other bracelets or wear it alone for maximum impact.\n\nHandcrafted in gold or silver-tone stainless steel. One size, adjustable ring and bracelet sections. A striking piece for festivals, shoots, and anyone who treats jewellery as art.",
     "specs": [
       {
         "label": "Material",
-        "value": "Gold-tone stainless steel"
+        "value": "Gold or silver stainless steel"
       },
       {
         "label": "Style",
@@ -1990,25 +1990,25 @@
       "Gold Tone": [
         "https://i.etsystatic.com/55122258/r/il/72495f/8120735435/il_fullxfull.8120735435_ggod.jpg",
         "https://i.etsystatic.com/55122258/r/il/7cf2f2/8072785328/il_fullxfull.8072785328_ef5p.jpg",
-        "https://i.etsystatic.com/55122258/r/il/dfa9a0/8072832158/il_fullxfull.8072832158_qclw.jpg",
-        "https://i.etsystatic.com/55122258/r/il/4c9988/7813683031/il_fullxfull.7813683031_p8f7.jpg",
         "https://i.etsystatic.com/55122258/r/il/76bf07/8120688367/il_fullxfull.8120688367_kg15.jpg",
-        "https://i.etsystatic.com/55122258/r/il/08a555/8120702523/il_fullxfull.8120702523_kvao.jpg",
-        "https://i.etsystatic.com/55122258/r/il/7cc80d/7812628962/il_fullxfull.7812628962_j62w.jpg",
         "https://i.etsystatic.com/55122258/r/il/26282e/7734979557/il_fullxfull.7734979557_95jd.jpg",
-        "https://i.etsystatic.com/55122258/r/il/c4f9ae/7763585068/il_fullxfull.7763585068_7ep3.jpg"
+        "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.jpg",
+        "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
+        "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg"
       ],
       "Silver Tone": [
-        "https://i.etsystatic.com/55122258/r/il/72495f/8120735435/il_fullxfull.8120735435_ggod.jpg",
-        "https://i.etsystatic.com/55122258/r/il/7cf2f2/8072785328/il_fullxfull.8072785328_ef5p.jpg",
         "https://i.etsystatic.com/55122258/r/il/dfa9a0/8072832158/il_fullxfull.8072832158_qclw.jpg",
-        "https://i.etsystatic.com/55122258/r/il/4c9988/7813683031/il_fullxfull.7813683031_p8f7.jpg",
-        "https://i.etsystatic.com/55122258/r/il/76bf07/8120688367/il_fullxfull.8120688367_kg15.jpg",
         "https://i.etsystatic.com/55122258/r/il/08a555/8120702523/il_fullxfull.8120702523_kvao.jpg",
-        "https://i.etsystatic.com/55122258/r/il/7cc80d/7812628962/il_fullxfull.7812628962_j62w.jpg",
+        "/images/products/145fccad-9bc0-4086-a094-a0a8444c88d1.png",
         "https://i.etsystatic.com/55122258/r/il/26282e/7734979557/il_fullxfull.7734979557_95jd.jpg",
-        "https://i.etsystatic.com/55122258/r/il/c4f9ae/7763585068/il_fullxfull.7763585068_7ep3.jpg"
+        "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.jpg",
+        "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
+        "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg"
       ]
+    },
+    "variantVideos": {
+      "Silver Tone": "/images/products/triplestrand-hand-chain.mov",
+      "Gold Tone": "/images/products/triplestrand-hand-chain.mov"
     }
   },
   {

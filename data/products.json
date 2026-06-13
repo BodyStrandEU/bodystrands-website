@@ -2700,7 +2700,7 @@
       },
       {
         "label": "Care",
-        "value": "Avoid water, perfumes, lotions. Wipe with soft cloth."
+        "value": "Avoid perfumes, lotions. Wipe with soft cloth."
       },
       {
         "label": "Shipping",
@@ -2716,8 +2716,43 @@
       "https://i.etsystatic.com/55122258/r/il/08b032/8040985024/il_fullxfull.8040985024_q40e.jpg",
       "https://i.etsystatic.com/55122258/r/il/5734ae/8092750057/il_fullxfull.8092750057_kycr.jpg",
       "https://i.etsystatic.com/55122258/r/il/0cfcf9/8032913296/il_fullxfull.8032913296_1lye.jpg",
-      "https://i.etsystatic.com/55122258/r/il/885dbc/7860391007/il_fullxfull.7860391007_aw4s.jpg",
-      "https://i.etsystatic.com/55122258/r/il/b3a795/7943677304/il_fullxfull.7943677304_jmkv.jpg"
+      "https://i.etsystatic.com/55122258/r/il/b3a795/7943677304/il_fullxfull.7943677304_jmkv.jpg",
+      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.jpg",
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
+      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg"
+    ],
+    "variantGroups": [
+      {
+        "label": "Choose your Letter",
+        "options": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F",
+          "G",
+          "H",
+          "I",
+          "J",
+          "K",
+          "L",
+          "M",
+          "N",
+          "O",
+          "P",
+          "Q",
+          "R",
+          "S",
+          "T",
+          "U",
+          "V",
+          "W",
+          "X",
+          "Y",
+          "Z"
+        ]
+      }
     ]
   },
   {

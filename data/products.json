@@ -2498,30 +2498,27 @@
       "Silver Tone"
     ],
     "images": [
-      "https://i.etsystatic.com/55122258/r/il/ee7e54/8099217069/il_fullxfull.8099217069_obyr.jpg"
+      "/images/products/eb429f4e-eb5f-44ab-a4ae-76319d10c39c.png"
     ],
     "variantImages": {
       "Gold Tone": [
-        "https://i.etsystatic.com/55122258/r/il/ee7e54/8099217069/il_fullxfull.8099217069_obyr.jpg",
-        "https://i.etsystatic.com/55122258/r/il/ce2dfd/8099217081/il_fullxfull.8099217081_8naa.jpg",
+        "/images/products/0940847a-f4bf-412c-82ab-c0ca80d3de00.png",
         "https://i.etsystatic.com/55122258/r/il/bc4bc3/8099217083/il_fullxfull.8099217083_e5km.jpg",
         "https://i.etsystatic.com/55122258/r/il/cd07a5/8099217085/il_fullxfull.8099217085_eti5.jpg",
-        "https://i.etsystatic.com/55122258/r/il/92005f/7819806106/il_fullxfull.7819806106_nfek.jpg",
-        "https://i.etsystatic.com/55122258/r/il/9b2511/8103697781/il_fullxfull.8103697781_evgk.jpg",
-        "https://i.etsystatic.com/55122258/r/il/d7cb64/7819806224/il_fullxfull.7819806224_ggv9.jpg",
+        "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
+        "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.jpg",
         "https://i.etsystatic.com/55122258/r/il/cbd1a6/7803902507/il_fullxfull.7803902507_7i39.jpg",
-        "https://i.etsystatic.com/55122258/r/il/93c5e3/7755954274/il_fullxfull.7755954274_ircb.jpg"
+        "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg"
       ],
       "Silver Tone": [
         "https://i.etsystatic.com/55122258/r/il/ee7e54/8099217069/il_fullxfull.8099217069_obyr.jpg",
-        "https://i.etsystatic.com/55122258/r/il/ce2dfd/8099217081/il_fullxfull.8099217081_8naa.jpg",
-        "https://i.etsystatic.com/55122258/r/il/bc4bc3/8099217083/il_fullxfull.8099217083_e5km.jpg",
-        "https://i.etsystatic.com/55122258/r/il/cd07a5/8099217085/il_fullxfull.8099217085_eti5.jpg",
-        "https://i.etsystatic.com/55122258/r/il/92005f/7819806106/il_fullxfull.7819806106_nfek.jpg",
         "https://i.etsystatic.com/55122258/r/il/9b2511/8103697781/il_fullxfull.8103697781_evgk.jpg",
-        "https://i.etsystatic.com/55122258/r/il/d7cb64/7819806224/il_fullxfull.7819806224_ggv9.jpg",
+        "https://i.etsystatic.com/55122258/r/il/bc4bc3/8099217083/il_fullxfull.8099217083_e5km.jpg",
+        "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
+        "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.jpg",
+        "https://i.etsystatic.com/55122258/r/il/cd07a5/8099217085/il_fullxfull.8099217085_eti5.jpg",
         "https://i.etsystatic.com/55122258/r/il/cbd1a6/7803902507/il_fullxfull.7803902507_7i39.jpg",
-        "https://i.etsystatic.com/55122258/r/il/93c5e3/7755954274/il_fullxfull.7755954274_ircb.jpg"
+        "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg"
       ]
     },
     "variantGroups": [
@@ -2533,7 +2530,11 @@
           "Large"
         ]
       }
-    ]
+    ],
+    "variantVideos": {
+      "Silver Tone": "/images/products/shoulderchestchain.mov",
+      "Gold Tone": "/images/products/shoulderchestchain.mov"
+    }
   },
   {
     "id": "monogram-letter-necklace",

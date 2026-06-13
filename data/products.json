@@ -1115,23 +1115,24 @@
       "Gold Tone": [
         "https://i.etsystatic.com/55122258/r/il/3fa024/8161513325/il_fullxfull.8161513325_ixgw.jpg",
         "https://i.etsystatic.com/55122258/r/il/f45154/8161534047/il_fullxfull.8161534047_b57r.jpg",
-        "https://i.etsystatic.com/55122258/r/il/a0474c/8161517169/il_fullxfull.8161517169_689g.jpg",
-        "https://i.etsystatic.com/55122258/r/il/2ab48f/8161513129/il_fullxfull.8161513129_o57e.jpg",
+        "/images/products/39351d60-5629-47c0-a990-833843da2665.png",
         "https://i.etsystatic.com/55122258/r/il/b1dd84/8113629418/il_fullxfull.8113629418_wlk3.jpg",
-        "https://i.etsystatic.com/55122258/r/il/888ac0/8161516445/il_fullxfull.8161516445_50gp.jpg",
-        "https://i.etsystatic.com/55122258/r/il/cebc61/7811531289/il_fullxfull.7811531289_2g5p.jpg",
-        "https://i.etsystatic.com/55122258/r/il/a4f149/8161535103/il_fullxfull.8161535103_opib.jpg"
+        "https://i.etsystatic.com/55122258/r/il/a4f149/8161535103/il_fullxfull.8161535103_opib.jpg",
+        "https://i.etsystatic.com/55122258/r/il/cebc61/7811531289/il_fullxfull.7811531289_2g5p.jpg"
       ],
       "Silver Tone": [
-        "https://i.etsystatic.com/55122258/r/il/3fa024/8161513325/il_fullxfull.8161513325_ixgw.jpg",
+        "/images/products/68bcfa0e-bff6-47d8-a4c7-b75923d83f9c.png",
         "https://i.etsystatic.com/55122258/r/il/f45154/8161534047/il_fullxfull.8161534047_b57r.jpg",
-        "https://i.etsystatic.com/55122258/r/il/a0474c/8161517169/il_fullxfull.8161517169_689g.jpg",
-        "https://i.etsystatic.com/55122258/r/il/2ab48f/8161513129/il_fullxfull.8161513129_o57e.jpg",
+        "/images/products/956fdbc9-7d34-4299-a7e5-a33f145f85e5.png",
         "https://i.etsystatic.com/55122258/r/il/b1dd84/8113629418/il_fullxfull.8113629418_wlk3.jpg",
-        "https://i.etsystatic.com/55122258/r/il/888ac0/8161516445/il_fullxfull.8161516445_50gp.jpg",
         "https://i.etsystatic.com/55122258/r/il/cebc61/7811531289/il_fullxfull.7811531289_2g5p.jpg",
-        "https://i.etsystatic.com/55122258/r/il/a4f149/8161535103/il_fullxfull.8161535103_opib.jpg"
+        "https://i.etsystatic.com/55122258/r/il/a4f149/8161535103/il_fullxfull.8161535103_opib.jpg",
+        "/images/products/46a68692-2213-49df-87b0-c39e9bea93fa.png"
       ]
+    },
+    "variantVideos": {
+      "Silver Tone": "/images/products/pearl-scrack-anklet.mov",
+      "Gold Tone": "/images/products/pearl-scrack-anklet.mov"
     }
   },
   {

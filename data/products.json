@@ -3305,12 +3305,12 @@
     "price": 40,
     "currency": "EUR",
     "category": "Body Chains",
-    "description": "Your most versatile summer piece. This dainty gold waist chain works over a bikini, sundress, or bare skin — minimalist body jewelry handcrafted from waterproof, anti-tarnish stainless steel.",
-    "fullDescription": "A simple, elegant chain at the waist that elevates any summer look without overpowering it. Designed to be adjusted to your exact measurement for a perfect drape.\n\nHandcrafted in gold stainless steel. Adjustable extender sizing available at checkout. Completely waterproof and anti-tarnish — the chain you never need to take off.",
+    "description": "Your most versatile summer piece. This dainty waist chain works over a bikini, sundress, or bare skin — minimalist body jewelry handcrafted from waterproof, anti-tarnish stainless steel.",
+    "fullDescription": "A simple, elegant chain at the waist that elevates any summer look without overpowering it. Designed to be adjusted to your exact measurement for a perfect drape.\n\nHandcrafted in stainless steel. Adjustable extender sizing available at checkout. Completely waterproof and anti-tarnish — the chain you never need to take off.",
     "specs": [
       {
         "label": "Material",
-        "value": "Gold stainless steel (waterproof & anti-tarnish)"
+        "value": "Stainless steel (waterproof & anti-tarnish)"
       },
       {
         "label": "Style",
@@ -3373,7 +3373,11 @@
           "Large (+23cm ext)"
         ]
       }
-    ]
+    ],
+    "variantVideos": {
+      "Gold Tone": "/images/products/fiji-vid.mp4",
+      "Silver Tone": "/images/products/fiji-vid.mp4"
+    }
   },
   {
     "id": "boho-back-chain",

@@ -108,8 +108,9 @@ interface ImageSectionProps {
 }
 
 function ImageSection({ title, images, onChange, onUpload }: ImageSectionProps) {
-  const [uploading, setUploading] = useState(false);
   const [dragOver, setDragOver] = useState(false);
+  // pending: blob preview URLs shown while GitHub upload is in flight
+  const [pending, setPending] = useState<{ id: string; previewUrl: string }[]>([]);
 
   const sensors = useSensors(
     useSensor(PointerSensor),
@@ -132,20 +133,32 @@ function ImageSection({ title, images, onChange, onUpload }: ImageSectionProps) 
 
   async function handleFiles(files: FileList | null) {
     if (!files || files.length === 0) return;
-    setUploading(true);
+    const items = Array.from(files).map((file) => ({
+      id: Math.random().toString(36).slice(2),
+      file,
+      previewUrl: URL.createObjectURL(file),
+    }));
+    // Show blob previews immediately — no waiting for deploy
+    setPending((p) => [...p, ...items.map(({ id, previewUrl }) => ({ id, previewUrl }))]);
+    const realUrls: string[] = [];
     try {
-      const urls: string[] = [];
-      for (const file of Array.from(files)) {
-        const url = await onUpload(file);
-        urls.push(url);
+      for (const item of items) {
+        const url = await onUpload(item.file);
+        realUrls.push(url);
+        setPending((p) => p.filter((x) => x.id !== item.id));
+        URL.revokeObjectURL(item.previewUrl);
       }
-      onChange([...images, ...urls]);
+      onChange([...images, ...realUrls]);
     } catch (err) {
+      items.forEach((item) => {
+        setPending((p) => p.filter((x) => x.id !== item.id));
+        URL.revokeObjectURL(item.previewUrl);
+      });
       alert(`Upload failed: ${err instanceof Error ? err.message : String(err)}`);
-    } finally {
-      setUploading(false);
     }
   }
+
+  const isUploading = pending.length > 0;
 
   return (
     <div style={{ marginBottom: "1.5rem" }}>
@@ -158,6 +171,16 @@ function ImageSection({ title, images, onChange, onUpload }: ImageSectionProps) 
           <div style={{ display: "flex", flexWrap: "wrap", gap: "0.5rem", marginBottom: "0.75rem" }}>
             {images.map((url) => (
               <SortableImage key={url} id={url} url={url} onDelete={confirmDelete} />
+            ))}
+            {/* Uploading previews */}
+            {pending.map((p) => (
+              <div key={p.id} style={{ width: "100px", height: "100px", border: "1px solid #e5e7eb", borderRadius: "4px", overflow: "hidden", position: "relative", background: "#f3f4f6" }}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={p.previewUrl} alt="" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+                <div style={{ position: "absolute", inset: 0, background: "rgba(0,0,0,0.35)", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                  <span style={{ color: "#fff", fontSize: "0.55rem", letterSpacing: "0.08em", textTransform: "uppercase" }}>Uploading…</span>
+                </div>
+              </div>
             ))}
           </div>
         </SortableContext>
@@ -178,7 +201,7 @@ function ImageSection({ title, images, onChange, onUpload }: ImageSectionProps) 
           border: `2px dashed ${dragOver ? "#A0622A" : "#d1d5db"}`,
           borderRadius: "4px",
           textAlign: "center",
-          cursor: uploading ? "wait" : "pointer",
+          cursor: isUploading ? "wait" : "pointer",
           background: dragOver ? "#fdf6f0" : "#f9fafb",
           transition: "all 0.15s",
         }}
@@ -189,10 +212,10 @@ function ImageSection({ title, images, onChange, onUpload }: ImageSectionProps) 
           multiple
           style={{ display: "none" }}
           onChange={(e) => { void handleFiles(e.target.files); }}
-          disabled={uploading}
+          disabled={isUploading}
         />
         <span style={{ fontSize: "0.78rem", color: "#6b7280" }}>
-          {uploading ? "Uploading..." : "Drop files here or click to upload (jpg, png, webp, mp4, mov)"}
+          {isUploading ? "Uploading..." : "Drop files here or click to upload (jpg, png, webp, mp4, mov)"}
         </span>
       </label>
     </div>

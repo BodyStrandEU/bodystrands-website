@@ -3611,7 +3611,11 @@
           "Large/Plus size"
         ]
       }
-    ]
+    ],
+    "variantVideos": {
+      "Gold Tone": "/images/products/kling_20260514_--_Create_a_p_270_0.mp4",
+      "Silver Tone": "/images/products/kling_20260514_--_Create_a_p_270_0.mp4"
+    }
   },
   {
     "id": "boho-forehead-chain",

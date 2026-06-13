@@ -2328,11 +2328,11 @@
     "currency": "EUR",
     "category": "Anklets",
     "description": "Your bridal ankle detail. This elegant pearl pendant anklet adds a refined finishing touch to bare feet for beach weddings, garden ceremonies, and any occasion where your feet deserve to look beautiful.",
-    "fullDescription": "A dainty chain sits at the ankle with a single freshwater-style pearl pendant that catches the light beautifully in photos. Simple, timeless, and designed to complement rather than compete with your look.\n\nHandcrafted in gold-tone stainless steel. Adjustable fit for most ankle sizes. A beautiful bridal gift or a meaningful personal treat.",
+    "fullDescription": "A dainty chain sits at the ankle with a single freshwater-style pearl pendant that catches the light beautifully in photos. Simple, timeless, and designed to complement rather than compete with your look.\n\nHandcrafted in gold or silver stainless steel. Adjustable fit for most ankle sizes. A beautiful bridal gift or a meaningful personal treat.",
     "specs": [
       {
         "label": "Material",
-        "value": "Gold-tone stainless steel with pearl pendant"
+        "value": "Gold or silver stainless steel with pearl pendant"
       },
       {
         "label": "Style",
@@ -2367,25 +2367,22 @@
     "variantImages": {
       "Gold Tone": [
         "https://i.etsystatic.com/55122258/r/il/63b8c7/8047132396/il_fullxfull.8047132396_narf.jpg",
-        "https://i.etsystatic.com/55122258/r/il/a5f651/8095194599/il_fullxfull.8095194599_jblz.jpg",
         "https://i.etsystatic.com/55122258/r/il/caeb80/8047101488/il_fullxfull.8047101488_og24.jpg",
         "https://i.etsystatic.com/55122258/r/il/4f89b1/7763623772/il_fullxfull.7763623772_eskh.jpg",
-        "https://i.etsystatic.com/55122258/r/il/89457a/7812429584/il_fullxfull.7812429584_e1td.jpg",
         "https://i.etsystatic.com/55122258/r/il/9c14c2/8047144328/il_fullxfull.8047144328_f0ox.jpg",
-        "https://i.etsystatic.com/55122258/r/il/af5258/7811534845/il_fullxfull.7811534845_pfsd.jpg",
         "https://i.etsystatic.com/55122258/r/il/cebc61/7811531289/il_fullxfull.7811531289_2g5p.jpg",
-        "https://i.etsystatic.com/55122258/r/il/c4f9ae/7763585068/il_fullxfull.7763585068_7ep3.jpg"
+        "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.jpg",
+        "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg",
+        "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png"
       ],
       "Silver Tone": [
-        "https://i.etsystatic.com/55122258/r/il/63b8c7/8047132396/il_fullxfull.8047132396_narf.jpg",
         "https://i.etsystatic.com/55122258/r/il/a5f651/8095194599/il_fullxfull.8095194599_jblz.jpg",
-        "https://i.etsystatic.com/55122258/r/il/caeb80/8047101488/il_fullxfull.8047101488_og24.jpg",
         "https://i.etsystatic.com/55122258/r/il/4f89b1/7763623772/il_fullxfull.7763623772_eskh.jpg",
-        "https://i.etsystatic.com/55122258/r/il/89457a/7812429584/il_fullxfull.7812429584_e1td.jpg",
         "https://i.etsystatic.com/55122258/r/il/9c14c2/8047144328/il_fullxfull.8047144328_f0ox.jpg",
-        "https://i.etsystatic.com/55122258/r/il/af5258/7811534845/il_fullxfull.7811534845_pfsd.jpg",
         "https://i.etsystatic.com/55122258/r/il/cebc61/7811531289/il_fullxfull.7811531289_2g5p.jpg",
-        "https://i.etsystatic.com/55122258/r/il/c4f9ae/7763585068/il_fullxfull.7763585068_7ep3.jpg"
+        "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.jpg",
+        "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg",
+        "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png"
       ]
     }
   },

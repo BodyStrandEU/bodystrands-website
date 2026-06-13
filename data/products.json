@@ -2576,7 +2576,6 @@
       "https://i.etsystatic.com/55122258/r/il/142cd6/8091069901/il_fullxfull.8091069901_jd3w.jpg",
       "https://i.etsystatic.com/55122258/r/il/0cfcf9/8032913296/il_fullxfull.8032913296_1lye.jpg",
       "https://i.etsystatic.com/55122258/r/il/61fd8d/8091045239/il_fullxfull.8091045239_kz15.jpg",
-      "https://i.etsystatic.com/55122258/r/il/885dbc/7860391007/il_fullxfull.7860391007_aw4s.jpg",
       "https://i.etsystatic.com/55122258/r/il/b3a795/7943677304/il_fullxfull.7943677304_jmkv.jpg",
       "https://i.etsystatic.com/55122258/r/il/39aa2c/8043150124/il_fullxfull.8043150124_3ixz.jpg"
     ],
@@ -2598,11 +2597,11 @@
         "label": "Number of Initials",
         "options": [
           "1 Initial",
-          "2 Initials",
-          "3 Initials"
+          "2 Initials"
         ]
       }
-    ]
+    ],
+    "video": "/images/products/HeartNecklace.mov"
   },
   {
     "id": "goddess-shoulder-body-chain",

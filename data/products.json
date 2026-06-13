@@ -1727,8 +1727,8 @@
     "price": 40,
     "currency": "EUR",
     "category": "Belly Chains",
-    "description": "Your festival or beach statement piece. This silver layered hip and waist chain drapes across the hips in multiple strands — bold, minimalist, and designed to stand out in any summer outfit.",
-    "fullDescription": "Multiple delicate strands layer across the waist and hip, creating a fluid, stacked effect that moves beautifully as you do. Equally stunning at a festival, the beach, or layered over a swimsuit.\n\nMade from silver-tone stainless steel — waterproof, anti-tarnish, and designed to be worn all season long. Adjustable sizing available at checkout.",
+    "description": "Your festival or beach statement piece. This silver or gold layered hip and waist chain drapes across the hips in multiple strands — bold, minimalist, and designed to stand out in any summer outfit.",
+    "fullDescription": "Multiple delicate strands layer across the waist and hip, creating a fluid, stacked effect that moves beautifully as you do. Equally stunning at a festival, the beach, or layered over a swimsuit.\n\nMade from silver or gold tone stainless steel — waterproof, anti-tarnish, and designed to be worn all season long. Adjustable sizing available at checkout.",
     "specs": [
       {
         "label": "Material",
@@ -1766,28 +1766,26 @@
     ],
     "variantImages": {
       "Gold Tone": [
-        "https://i.etsystatic.com/55122258/r/il/923445/8142290565/il_fullxfull.8142290565_sk1z.jpg",
         "https://i.etsystatic.com/55122258/r/il/d5f862/8142296869/il_fullxfull.8142296869_rlhx.jpg",
         "https://i.etsystatic.com/55122258/r/il/15b394/8094555118/il_fullxfull.8094555118_bwn7.jpg",
         "https://i.etsystatic.com/55122258/r/il/bbf883/7750208394/il_fullxfull.7750208394_5km6.jpg",
-        "https://i.etsystatic.com/55122258/r/il/92f7ea/8142285949/il_fullxfull.8142285949_fm0e.jpg",
         "https://i.etsystatic.com/55122258/r/il/8fcda0/7899344300/il_fullxfull.7899344300_g71z.jpg",
-        "https://i.etsystatic.com/55122258/r/il/fbed20/7798245021/il_fullxfull.7798245021_s27u.jpg",
         "https://i.etsystatic.com/55122258/r/il/06c46e/8094386568/il_fullxfull.8094386568_883n.jpg",
-        "https://i.etsystatic.com/55122258/r/il/6215a1/7812426718/il_fullxfull.7812426718_m79y.jpg",
-        "https://i.etsystatic.com/55122258/r/il/99edab/7794757877/il_fullxfull.7794757877_qxts.jpg"
+        "https://i.etsystatic.com/55122258/r/il/99edab/7794757877/il_fullxfull.7794757877_qxts.jpg",
+        "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.jpg",
+        "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg",
+        "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png"
       ],
       "Silver Tone": [
         "https://i.etsystatic.com/55122258/r/il/923445/8142290565/il_fullxfull.8142290565_sk1z.jpg",
-        "https://i.etsystatic.com/55122258/r/il/d5f862/8142296869/il_fullxfull.8142296869_rlhx.jpg",
-        "https://i.etsystatic.com/55122258/r/il/15b394/8094555118/il_fullxfull.8094555118_bwn7.jpg",
+        "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.jpg",
         "https://i.etsystatic.com/55122258/r/il/bbf883/7750208394/il_fullxfull.7750208394_5km6.jpg",
         "https://i.etsystatic.com/55122258/r/il/92f7ea/8142285949/il_fullxfull.8142285949_fm0e.jpg",
+        "https://i.etsystatic.com/55122258/r/il/15b394/8094555118/il_fullxfull.8094555118_bwn7.jpg",
+        "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
         "https://i.etsystatic.com/55122258/r/il/8fcda0/7899344300/il_fullxfull.7899344300_g71z.jpg",
-        "https://i.etsystatic.com/55122258/r/il/fbed20/7798245021/il_fullxfull.7798245021_s27u.jpg",
-        "https://i.etsystatic.com/55122258/r/il/06c46e/8094386568/il_fullxfull.8094386568_883n.jpg",
-        "https://i.etsystatic.com/55122258/r/il/6215a1/7812426718/il_fullxfull.7812426718_m79y.jpg",
-        "https://i.etsystatic.com/55122258/r/il/99edab/7794757877/il_fullxfull.7794757877_qxts.jpg"
+        "https://i.etsystatic.com/55122258/r/il/99edab/7794757877/il_fullxfull.7794757877_qxts.jpg",
+        "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg"
       ]
     },
     "variantGroups": [
@@ -1799,7 +1797,11 @@
           "Large 71 cm - 100 cm"
         ]
       }
-    ]
+    ],
+    "variantVideos": {
+      "Silver Tone": "/images/products/kling_20260613_--_Slow_cinem_5564_0.mp4",
+      "Gold Tone": "/images/products/kling_20260613_--_Slow_cinem_5564_0.mp4"
+    }
   },
   {
     "id": "pearl-cross-faith-bracelet",

@@ -1840,8 +1840,10 @@
       "https://i.etsystatic.com/55122258/r/il/a5dfa5/8130485887/il_fullxfull.8130485887_d545.jpg",
       "https://i.etsystatic.com/55122258/r/il/606456/8130466079/il_fullxfull.8130466079_pi9i.jpg",
       "https://i.etsystatic.com/55122258/r/il/3a1fba/8082552384/il_fullxfull.8082552384_tr23.jpg",
-      "https://i.etsystatic.com/55122258/r/il/885dbc/7860391007/il_fullxfull.7860391007_aw4s.jpg",
-      "https://i.etsystatic.com/55122258/r/il/b3a795/7943677304/il_fullxfull.7943677304_jmkv.jpg"
+      "https://i.etsystatic.com/55122258/r/il/b3a795/7943677304/il_fullxfull.7943677304_jmkv.jpg",
+      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.jpg",
+      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg",
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png"
     ],
     "variantGroups": [
       {
@@ -1866,7 +1868,8 @@
           "Silver Stainless"
         ]
       }
-    ]
+    ],
+    "video": "/images/products/cross-bracelet.mov"
   },
   {
     "id": "multi-strand-shoulder-chain",

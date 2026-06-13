@@ -2281,7 +2281,7 @@
       }
     ],
     "featured": false,
-    "active": false,
+    "active": true,
     "images": [
       "/images/products/f1a95b9b-e3ca-4323-bd17-525d5ddcd0a6.png",
       "https://i.etsystatic.com/55122258/r/il/6ee4aa/8065073742/il_fullxfull.8065073742_9b79.jpg",

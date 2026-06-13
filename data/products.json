@@ -2056,28 +2056,12 @@
     ],
     "variantImages": {
       "Gold Tone": [
-        "https://i.etsystatic.com/55122258/r/il/4d9618/8033657234/il_fullxfull.8033657234_2q7e.jpg",
-        "https://i.etsystatic.com/55122258/r/il/b7c0ce/8033454572/il_fullxfull.8033454572_ibun.jpg",
-        "https://i.etsystatic.com/55122258/r/il/a100d0/8033596580/il_fullxfull.8033596580_jyof.jpg",
-        "https://i.etsystatic.com/55122258/r/il/6a9999/8033632128/il_fullxfull.8033632128_qp71.jpg",
-        "https://i.etsystatic.com/55122258/r/il/76a735/8081517437/il_fullxfull.8081517437_cxkf.jpg",
-        "https://i.etsystatic.com/55122258/r/il/d42aba/8081512365/il_fullxfull.8081512365_iz62.jpg",
-        "https://i.etsystatic.com/55122258/r/il/59f267/7812489122/il_fullxfull.7812489122_b6cm.jpg",
-        "https://i.etsystatic.com/55122258/r/il/0bb593/7769085078/il_fullxfull.7769085078_i3gt.jpg",
-        "https://i.etsystatic.com/55122258/r/il/226c13/7817073607/il_fullxfull.7817073607_qwhl.jpg",
-        "https://i.etsystatic.com/55122258/r/il/7f1ff2/7769084404/il_fullxfull.7769084404_nek8.jpg"
+        "/images/products/396178f7-0588-4892-8644-1903a7476417.png",
+        "/images/products/5b0f6af8-b435-4c23-8aeb-ce94beb916f5.png"
       ],
       "Silver Tone": [
-        "https://i.etsystatic.com/55122258/r/il/4d9618/8033657234/il_fullxfull.8033657234_2q7e.jpg",
-        "https://i.etsystatic.com/55122258/r/il/b7c0ce/8033454572/il_fullxfull.8033454572_ibun.jpg",
-        "https://i.etsystatic.com/55122258/r/il/a100d0/8033596580/il_fullxfull.8033596580_jyof.jpg",
-        "https://i.etsystatic.com/55122258/r/il/6a9999/8033632128/il_fullxfull.8033632128_qp71.jpg",
-        "https://i.etsystatic.com/55122258/r/il/76a735/8081517437/il_fullxfull.8081517437_cxkf.jpg",
-        "https://i.etsystatic.com/55122258/r/il/d42aba/8081512365/il_fullxfull.8081512365_iz62.jpg",
-        "https://i.etsystatic.com/55122258/r/il/59f267/7812489122/il_fullxfull.7812489122_b6cm.jpg",
-        "https://i.etsystatic.com/55122258/r/il/0bb593/7769085078/il_fullxfull.7769085078_i3gt.jpg",
-        "https://i.etsystatic.com/55122258/r/il/226c13/7817073607/il_fullxfull.7817073607_qwhl.jpg",
-        "https://i.etsystatic.com/55122258/r/il/7f1ff2/7769084404/il_fullxfull.7769084404_nek8.jpg"
+        "/images/products/b6afbc6f-4d0b-40be-9da3-a3ac389540ae.png",
+        "/images/products/05e945bf-3596-4f59-a13a-a56602881897.png"
       ]
     },
     "variantGroups": [
@@ -2089,7 +2073,11 @@
           "Large (+23cm ext)"
         ]
       }
-    ]
+    ],
+    "variantVideos": {
+      "Gold Tone": "/images/products/Front-Kendal-layered.mov",
+      "Silver Tone": "/images/products/Front-Kendal-layered.mov"
+    }
   },
   {
     "id": "gold-body-necklace",

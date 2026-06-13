@@ -1,0 +1,51 @@
+name: Nightly Backup
+
+on:
+  schedule:
+    - cron: '0 2 * * *'   # 2 AM UTC = 3 AM Portugal time, every night
+  workflow_dispatch:        # also triggerable manually from GitHub Actions tab
+
+permissions:
+  contents: write
+
+jobs:
+  backup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Configure git
+        run: |
+          git config user.email "noreply@bodystrands.com"
+          git config user.name "Bodystrands Backup"
+
+      - name: Switch to backups branch (create if missing)
+        run: |
+          if git show-ref --quiet refs/remotes/origin/backups; then
+            git checkout backups
+            git pull origin backups
+          else
+            git checkout --orphan backups
+            git rm -rf . --quiet
+          fi
+
+      - name: Copy today's products.json snapshot
+        run: |
+          mkdir -p snapshots
+          git show main:data/products.json > "snapshots/products-$(date +%Y-%m-%d).json"
+          # Keep only the last 60 daily snapshots
+          ls -t snapshots/products-*.json 2>/dev/null | tail -n +61 | xargs -r rm
+
+      - name: Commit and push backup
+        run: |
+          git add snapshots/
+          if ! git diff --staged --quiet; then
+            git commit -m "Backup $(date +%Y-%m-%d)"
+            git push origin backups
+          else
+            echo "No changes since last backup"
+          fi

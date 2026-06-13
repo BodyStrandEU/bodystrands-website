@@ -27,9 +27,10 @@ interface SortableImageProps {
   id: string;
   url: string;
   onDelete: (url: string) => void;
+  localPreview?: string;
 }
 
-function SortableImage({ id, url, onDelete }: SortableImageProps) {
+function SortableImage({ id, url, onDelete, localPreview }: SortableImageProps) {
   const { attributes, listeners, setNodeRef, transform, transition, isDragging } =
     useSortable({ id });
 
@@ -40,6 +41,12 @@ function SortableImage({ id, url, onDelete }: SortableImageProps) {
     position: "relative",
     cursor: "grab",
   };
+
+  // localPreview = blob URL kept alive for just-uploaded files (real URL 404s until Vercel deploys)
+  // Etsy CDN images use /_next/image proxy (domain is in remotePatterns)
+  // Local paths served directly
+  const displaySrc = localPreview
+    ?? (url.startsWith("http") ? `/_next/image?url=${encodeURIComponent(url)}&w=256&q=75` : url);
 
   return (
     <div ref={setNodeRef} style={style} {...attributes} {...listeners}>
@@ -61,7 +68,7 @@ function SortableImage({ id, url, onDelete }: SortableImageProps) {
         ) : (
           // eslint-disable-next-line @next/next/no-img-element
           <img
-            src={url.startsWith("http") ? `/_next/image?url=${encodeURIComponent(url)}&w=256&q=75` : url}
+            src={displaySrc}
             alt=""
             style={{ width: "100%", height: "100%", objectFit: "cover" }}
             draggable={false}
@@ -111,6 +118,8 @@ function ImageSection({ title, images, onChange, onUpload }: ImageSectionProps) 
   const [dragOver, setDragOver] = useState(false);
   // pending: blob preview URLs shown while GitHub upload is in flight
   const [pending, setPending] = useState<{ id: string; previewUrl: string }[]>([]);
+  // localPreviews: blob URLs kept alive after upload — real path 404s until Vercel deploys
+  const [localPreviews, setLocalPreviews] = useState<Record<string, string>>({});
 
   const sensors = useSensors(
     useSensor(PointerSensor),
@@ -145,8 +154,9 @@ function ImageSection({ title, images, onChange, onUpload }: ImageSectionProps) 
       for (const item of items) {
         const url = await onUpload(item.file);
         realUrls.push(url);
+        // Keep blob alive — real path 404s until Vercel deploys (~1 min)
+        setLocalPreviews((prev) => ({ ...prev, [url]: item.previewUrl }));
         setPending((p) => p.filter((x) => x.id !== item.id));
-        URL.revokeObjectURL(item.previewUrl);
       }
       onChange([...images, ...realUrls]);
     } catch (err) {
@@ -170,7 +180,7 @@ function ImageSection({ title, images, onChange, onUpload }: ImageSectionProps) 
         <SortableContext items={images} strategy={rectSortingStrategy}>
           <div style={{ display: "flex", flexWrap: "wrap", gap: "0.5rem", marginBottom: "0.75rem" }}>
             {images.map((url) => (
-              <SortableImage key={url} id={url} url={url} onDelete={confirmDelete} />
+              <SortableImage key={url} id={url} url={url} onDelete={confirmDelete} localPreview={localPreviews[url]} />
             ))}
             {/* Uploading previews */}
             {pending.map((p) => (

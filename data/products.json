@@ -443,23 +443,21 @@
         "https://i.etsystatic.com/55122258/r/il/3044d6/7744102609/il_fullxfull.7744102609_yof6.jpg",
         "https://i.etsystatic.com/55122258/r/il/bf8477/7759760622/il_fullxfull.7759760622_7bz7.jpg",
         "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.jpg",
-        "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg",
         "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
         "/images/products/764ad5f6-99b4-4dd2-b02d-ea7be9c4618c.png",
         "/images/products/b737f6ce-566c-4f01-aa20-ef40d07d82ce.png",
-        "/images/products/etsy-thumbnails--1--copy-7.png"
+        "/images/products/etsy-thumbnails--1--copy-7.png",
+        "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg"
       ],
       "Silver Tone": [
         "https://i.etsystatic.com/55122258/r/il/c3ba21/7690292422/il_fullxfull.7690292422_4vju.jpg",
         "https://i.etsystatic.com/55122258/r/il/bd436c/7831325315/il_fullxfull.7831325315_bq5k.jpg",
         "https://i.etsystatic.com/55122258/r/il/db27f4/8090630842/il_fullxfull.8090630842_9i25.jpg",
-        "https://i.etsystatic.com/55122258/r/il/b82931/7738234793/il_fullxfull.7738234793_7xap.jpg",
-        "https://i.etsystatic.com/55122258/r/il/1b324a/7690292406/il_fullxfull.7690292406_an4c.jpg",
-        "https://i.etsystatic.com/55122258/r/il/d16b9b/7738234703/il_fullxfull.7738234703_1bb9.jpg",
-        "https://i.etsystatic.com/55122258/r/il/6609aa/7822193575/il_fullxfull.7822193575_m777.jpg",
         "https://i.etsystatic.com/55122258/r/il/3ca3d7/7783400862/il_fullxfull.7783400862_3lw5.jpg",
-        "https://i.etsystatic.com/55122258/r/il/bb7581/7812410186/il_fullxfull.7812410186_qegh.jpg",
-        "https://i.etsystatic.com/55122258/r/il/b5b8ef/7822195477/il_fullxfull.7822195477_pnhb.jpg"
+        "https://i.etsystatic.com/55122258/r/il/b5b8ef/7822195477/il_fullxfull.7822195477_pnhb.jpg",
+        "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.jpg",
+        "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg",
+        "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png"
       ]
     },
     "variantGroups": [
@@ -469,6 +467,13 @@
           "Small (71–81 cm)",
           "Medium (71–91 cm)",
           "Large (71–100 cm)"
+        ]
+      },
+      {
+        "label": "Finish",
+        "options": [
+          "Gold Stainless",
+          "Silver Stainless"
         ]
       }
     ],

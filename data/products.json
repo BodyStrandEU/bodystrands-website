@@ -1199,10 +1199,9 @@
         "https://i.etsystatic.com/55122258/r/il/e043cb/8157790661/il_fullxfull.8157790661_a0bz.jpg"
       ],
       "Silver Tone": [
-        "https://i.etsystatic.com/55122258/r/il/fb4070/7947288775/il_fullxfull.7947288775_nvy5.jpg",
+        "https://i.etsystatic.com/55122258/r/il/fbe2fe/7947313965/il_fullxfull.7947313965_7y6z.jpg",
         "https://i.etsystatic.com/55122258/r/il/9cad0f/7947179569/il_fullxfull.7947179569_kcfi.jpg",
         "https://i.etsystatic.com/55122258/r/il/42c951/8157790725/il_fullxfull.8157790725_9diy.jpg",
-        "https://i.etsystatic.com/55122258/r/il/fbe2fe/7947313965/il_fullxfull.7947313965_7y6z.jpg",
         "https://i.etsystatic.com/55122258/r/il/bbf883/7750208394/il_fullxfull.7750208394_5km6.jpg",
         "https://i.etsystatic.com/55122258/r/il/b1d40c/7947282767/il_fullxfull.7947282767_5y3o.jpg",
         "https://i.etsystatic.com/55122258/r/il/eb340d/8109884568/il_fullxfull.8109884568_a0hu.jpg",
@@ -1219,7 +1218,11 @@
           "Large 71 cm - 100 cm"
         ]
       }
-    ]
+    ],
+    "variantVideos": {
+      "Gold Tone": "/images/products/double-1.5mm-stainless.mov",
+      "Silver Tone": "/images/products/double-1.5mm-stainless.mov"
+    }
   },
   {
     "id": "birthstone-bikini-clip-chain",

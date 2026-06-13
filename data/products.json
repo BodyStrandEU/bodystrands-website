@@ -1333,29 +1333,30 @@
     ],
     "variantImages": {
       "Gold Tone": [
-        "https://i.etsystatic.com/55122258/r/il/3e1b20/7904377486/il_fullxfull.7904377486_3jjc.jpg",
-        "https://i.etsystatic.com/55122258/r/il/7a42a6/7904385148/il_fullxfull.7904385148_2lja.jpg",
-        "https://i.etsystatic.com/55122258/r/il/53ebab/7952364943/il_fullxfull.7952364943_90f5.jpg",
-        "https://i.etsystatic.com/55122258/r/il/db3374/7871487971/il_fullxfull.7871487971_5hjv.jpg",
+        "/images/products/8f4f0279-4cb9-4be4-8a2b-eb00007c22fd.png",
         "https://i.etsystatic.com/55122258/r/il/5f745b/7871482945/il_fullxfull.7871482945_9qw5.jpg",
         "https://i.etsystatic.com/55122258/r/il/fd4744/7807979968/il_fullxfull.7807979968_qa8r.jpg",
-        "https://i.etsystatic.com/55122258/r/il/c55298/7952368249/il_fullxfull.7952368249_ppy2.jpg",
-        "https://i.etsystatic.com/55122258/r/il/dd47cb/7952333017/il_fullxfull.7952333017_82j3.jpg",
-        "https://i.etsystatic.com/55122258/r/il/b88a3b/7871497991/il_fullxfull.7871497991_bj5o.jpg",
-        "https://i.etsystatic.com/55122258/r/il/4c9988/7813683031/il_fullxfull.7813683031_p8f7.jpg"
+        "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
+        "/images/products/49cfbed0-3ca2-49b7-85b5-938b180c8b79.png",
+        "/images/products/f2f23b06-f910-420f-97d5-b3bfb939c09f.png",
+        "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.jpg",
+        "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg"
       ],
       "Silver Tone": [
         "https://i.etsystatic.com/55122258/r/il/3e1b20/7904377486/il_fullxfull.7904377486_3jjc.jpg",
         "https://i.etsystatic.com/55122258/r/il/7a42a6/7904385148/il_fullxfull.7904385148_2lja.jpg",
-        "https://i.etsystatic.com/55122258/r/il/53ebab/7952364943/il_fullxfull.7952364943_90f5.jpg",
-        "https://i.etsystatic.com/55122258/r/il/db3374/7871487971/il_fullxfull.7871487971_5hjv.jpg",
+        "https://i.etsystatic.com/55122258/r/il/dd47cb/7952333017/il_fullxfull.7952333017_82j3.jpg",
         "https://i.etsystatic.com/55122258/r/il/5f745b/7871482945/il_fullxfull.7871482945_9qw5.jpg",
         "https://i.etsystatic.com/55122258/r/il/fd4744/7807979968/il_fullxfull.7807979968_qa8r.jpg",
+        "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
         "https://i.etsystatic.com/55122258/r/il/c55298/7952368249/il_fullxfull.7952368249_ppy2.jpg",
-        "https://i.etsystatic.com/55122258/r/il/dd47cb/7952333017/il_fullxfull.7952333017_82j3.jpg",
-        "https://i.etsystatic.com/55122258/r/il/b88a3b/7871497991/il_fullxfull.7871497991_bj5o.jpg",
-        "https://i.etsystatic.com/55122258/r/il/4c9988/7813683031/il_fullxfull.7813683031_p8f7.jpg"
+        "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.jpg",
+        "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg"
       ]
+    },
+    "variantVideos": {
+      "Silver Tone": "/images/products/headchainwith-thong.mov",
+      "Gold Tone": "/images/products/headchainwith-thong.mov"
     }
   },
   {

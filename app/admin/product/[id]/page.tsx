@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState, useCallback, use } from "react";
+import { useEffect, useState, useCallback, use, useRef } from "react";
 import { useRouter } from "next/navigation";
 import {
   DndContext,
@@ -408,6 +408,7 @@ export default function ProductEditor({ params }: { params: Promise<{ id: string
 
   const [form, setForm] = useState<ProductForm>(emptyForm());
   const [allProducts, setAllProducts] = useState<Product[]>([]);
+  const [rawPrices, setRawPrices] = useState<Record<number, string>>({});
 
   useEffect(() => {
     fetch("/api/admin/products")
@@ -922,8 +923,12 @@ export default function ProductEditor({ params }: { params: Promise<{ id: string
                   </p>
                   <input
                     style={{ ...inputStyle, fontSize: "0.78rem" }}
-                    value={formatOptionPrices(group.optionPrices)}
-                    onChange={(e) => updateVariantGroupPrices(i, e.target.value)}
+                    value={i in rawPrices ? rawPrices[i] : formatOptionPrices(group.optionPrices)}
+                    onChange={(e) => setRawPrices((prev) => ({ ...prev, [i]: e.target.value }))}
+                    onBlur={(e) => {
+                      updateVariantGroupPrices(i, e.target.value);
+                      setRawPrices((prev) => { const n = { ...prev }; delete n[i]; return n; });
+                    }}
                     placeholder="Price add-ons (optional) — e.g. Large:5, XL:10"
                   />
                   <p style={{ margin: "0.3rem 0 0", fontSize: "0.72rem", color: "#9ca3af" }}>

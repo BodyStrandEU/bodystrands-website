@@ -2876,12 +2876,12 @@
     "price": 45,
     "currency": "EUR",
     "category": "Body Chains",
-    "description": "Your festival body accessory. This boho-inspired gold body chain drapes across the torso in a minimalist bikini harness silhouette — waterproof, anti-tarnish stainless steel for the beach and beyond.",
-    "fullDescription": "Fine gold chains trace the body in a delicate harness silhouette — worn over a bikini, a white linen dress, or bare skin. The understated design means it works at the beach, a festival, or a poolside party without looking overdressed.\n\nHandcrafted in gold stainless steel. Adjustable fit to suit different body types. Waterproof and completely anti-tarnish.",
+    "description": "Your festival body accessory. This boho-inspired silver or gold body chain drapes across the torso in a minimalist bikini harness silhouette — waterproof, anti-tarnish stainless steel for the beach and beyond.",
+    "fullDescription": "Fine gold chains trace the body in a delicate harness silhouette — worn over a bikini, a white linen dress, or bare skin. The understated design means it works at the beach, a festival, or a poolside party without looking overdressed.\n\nHandcrafted in gold or silver stainless steel. Adjustable fit to suit different body types. Waterproof and completely anti-tarnish.",
     "specs": [
       {
         "label": "Material",
-        "value": "Gold-tone stainless steel (waterproof & anti-tarnish)"
+        "value": "Gold or silver stainless steel (waterproof & anti-tarnish)"
       },
       {
         "label": "Style",
@@ -2911,32 +2911,31 @@
       "Silver Tone"
     ],
     "images": [
-      "https://i.etsystatic.com/55122258/r/il/449e86/8082042627/il_fullxfull.8082042627_ttnm.jpg"
+      "/images/products/2f3a243d-8450-4063-a69f-012cc928a242.png"
     ],
     "variantImages": {
       "Gold Tone": [
         "https://i.etsystatic.com/55122258/r/il/449e86/8082042627/il_fullxfull.8082042627_ttnm.jpg",
-        "https://i.etsystatic.com/55122258/r/il/6a9999/8033632128/il_fullxfull.8033632128_qp71.jpg",
+        "/images/products/5b0f6af8-b435-4c23-8aeb-ce94beb916f5.png",
         "https://i.etsystatic.com/55122258/r/il/d42aba/8081512365/il_fullxfull.8081512365_iz62.jpg",
-        "https://i.etsystatic.com/55122258/r/il/a100d0/8033596580/il_fullxfull.8033596580_jyof.jpg",
         "https://i.etsystatic.com/55122258/r/il/4d9618/8033657234/il_fullxfull.8033657234_2q7e.jpg",
         "https://i.etsystatic.com/55122258/r/il/b7c0ce/8033454572/il_fullxfull.8033454572_ibun.jpg",
         "https://i.etsystatic.com/55122258/r/il/436e73/8081527437/il_fullxfull.8081527437_gmwu.jpg",
-        "https://i.etsystatic.com/55122258/r/il/59f267/7812489122/il_fullxfull.7812489122_b6cm.jpg",
-        "https://i.etsystatic.com/55122258/r/il/0bb593/7769085078/il_fullxfull.7769085078_i3gt.jpg",
-        "https://i.etsystatic.com/55122258/r/il/226c13/7817073607/il_fullxfull.7817073607_qwhl.jpg"
+        "https://i.etsystatic.com/55122258/r/il/226c13/7817073607/il_fullxfull.7817073607_qwhl.jpg",
+        "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.jpg",
+        "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg",
+        "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png"
       ],
       "Silver Tone": [
-        "https://i.etsystatic.com/55122258/r/il/449e86/8082042627/il_fullxfull.8082042627_ttnm.jpg",
-        "https://i.etsystatic.com/55122258/r/il/6a9999/8033632128/il_fullxfull.8033632128_qp71.jpg",
-        "https://i.etsystatic.com/55122258/r/il/d42aba/8081512365/il_fullxfull.8081512365_iz62.jpg",
+        "/images/products/b6afbc6f-4d0b-40be-9da3-a3ac389540ae.png",
         "https://i.etsystatic.com/55122258/r/il/a100d0/8033596580/il_fullxfull.8033596580_jyof.jpg",
-        "https://i.etsystatic.com/55122258/r/il/4d9618/8033657234/il_fullxfull.8033657234_2q7e.jpg",
-        "https://i.etsystatic.com/55122258/r/il/b7c0ce/8033454572/il_fullxfull.8033454572_ibun.jpg",
+        "https://i.etsystatic.com/55122258/r/il/d42aba/8081512365/il_fullxfull.8081512365_iz62.jpg",
         "https://i.etsystatic.com/55122258/r/il/436e73/8081527437/il_fullxfull.8081527437_gmwu.jpg",
-        "https://i.etsystatic.com/55122258/r/il/59f267/7812489122/il_fullxfull.7812489122_b6cm.jpg",
-        "https://i.etsystatic.com/55122258/r/il/0bb593/7769085078/il_fullxfull.7769085078_i3gt.jpg",
-        "https://i.etsystatic.com/55122258/r/il/226c13/7817073607/il_fullxfull.7817073607_qwhl.jpg"
+        "https://i.etsystatic.com/55122258/r/il/226c13/7817073607/il_fullxfull.7817073607_qwhl.jpg",
+        "/images/products/6e602dba-7e1a-4452-8993-835b607084cd.png",
+        "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.jpg",
+        "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
+        "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg"
       ]
     },
     "variantGroups": [
@@ -2948,7 +2947,11 @@
           "Large (+23cm ext)"
         ]
       }
-    ]
+    ],
+    "variantVideos": {
+      "Gold Tone": "/images/products/Double-layer-body-chain.mp4",
+      "Silver Tone": "/images/products/Double-layer-body-chain.mp4"
+    }
   },
   {
     "id": "thigh-chain",

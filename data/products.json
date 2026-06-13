@@ -1653,11 +1653,11 @@
     "currency": "EUR",
     "category": "Necklaces",
     "description": "Your star sign, around your neck. This dainty gold zodiac necklace features a personalised star sign charm on a clasp-free slip-on chain — no fiddly clasps, just slide it on and wear it every day.",
-    "fullDescription": "A 30 cm slip-on design that goes over the head without a clasp, sitting right at the collarbone. The zodiac charm is delicate and dainty — enough to catch the eye up close without being overwhelming.\n\nAvailable in gold stainless steel. Choose your star sign at checkout. A meaningful gift for a birthday, graduation, or anyone who lives by their chart.",
+    "fullDescription": "A 30 cm slip-on design that goes over the head without a clasp, sitting right at the collarbone. The zodiac charm is delicate and dainty — enough to catch the eye up close without being overwhelming.\n\nAvailable in gold or silver stainless steel. Choose your star sign at checkout. A meaningful gift for a birthday, graduation, or anyone who lives by their chart.",
     "specs": [
       {
         "label": "Material",
-        "value": "Gold stainless steel (tarnish-resistant)"
+        "value": "Gold or Silver stainless steel (tarnish-resistant)"
       },
       {
         "label": "Style",
@@ -1688,8 +1688,10 @@
       "https://i.etsystatic.com/55122258/r/il/9c67db/8143046201/il_fullxfull.8143046201_cm3q.jpg",
       "https://i.etsystatic.com/55122258/r/il/7d203e/7759169030/il_fullxfull.7759169030_aizv.jpg",
       "https://i.etsystatic.com/55122258/r/il/42a411/8095057756/il_fullxfull.8095057756_knht.jpg",
-      "https://i.etsystatic.com/55122258/r/il/f6b198/7812421304/il_fullxfull.7812421304_4sgu.jpg",
-      "https://i.etsystatic.com/55122258/r/il/255c79/7805113761/il_fullxfull.7805113761_ko80.jpg"
+      "https://i.etsystatic.com/55122258/r/il/255c79/7805113761/il_fullxfull.7805113761_ko80.jpg",
+      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.jpg",
+      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg",
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png"
     ],
     "variantGroups": [
       {
@@ -1716,7 +1718,8 @@
           "Silver"
         ]
       }
-    ]
+    ],
+    "video": "/images/products/zodiac-necklace.mov"
   },
   {
     "id": "layered-hip-chain",

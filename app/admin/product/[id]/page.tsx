@@ -61,7 +61,7 @@ function SortableImage({ id, url, onDelete }: SortableImageProps) {
         ) : (
           // eslint-disable-next-line @next/next/no-img-element
           <img
-            src={url.startsWith("http") ? `/_next/image?url=${encodeURIComponent(url)}&w=200&q=75` : url}
+            src={url.startsWith("http") ? `/_next/image?url=${encodeURIComponent(url)}&w=256&q=75` : url}
             alt=""
             style={{ width: "100%", height: "100%", objectFit: "cover" }}
             draggable={false}

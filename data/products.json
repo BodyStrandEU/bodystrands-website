@@ -481,7 +481,7 @@
       }
     ],
     "featured": false,
-    "active": false,
+    "active": true,
     "variantVideos": {
       "Gold Tone": "/images/products/gold-belly-snake-video.mp4",
       "Silver Tone": "/images/products/0613.mp4"

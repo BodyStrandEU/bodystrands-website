@@ -13,12 +13,14 @@ export default function ProductCard({ product }: { product: Product }) {
   const router = useRouter();
   const videoRef = useRef<HTMLVideoElement>(null);
   const [activeVariant, setActiveVariant] = useState<string | null>(null);
-  const [hovering, setHovering] = useState(false);
-  const [popped, setPopped] = useState(false);
-  const touchStartTime = useRef(0);
-  const touchMoved = useRef(false);
-  // Always-fresh deactivate callable from global event listener
-  const deactivateRef = useRef<() => void>(() => {});
+  const [active, setActive]   = useState(false); // video playing
+  const [popped, setPopped]   = useState(false); // mobile spring-out
+
+  // Touch tracking
+  const pressStart   = useRef(0);
+  const pressOrigin  = useRef({ x: 0, y: 0 });
+  const didMove      = useRef(false);
+  const isTouchEvent = useRef(false); // prevent onClick firing after touch
 
   const symbol = product.currency === "EUR" ? "€" : product.currency === "GBP" ? "£" : "$";
 
@@ -38,8 +40,10 @@ export default function ProductCard({ product }: { product: Product }) {
 
   const currentImage = displayImages?.[0];
 
-  deactivateRef.current = () => {
-    setHovering(false);
+  // Always-fresh stop function accessible from event listener
+  const stopRef = useRef<() => void>(() => {});
+  stopRef.current = () => {
+    setActive(false);
     setPopped(false);
     if (videoRef.current) {
       videoRef.current.pause();
@@ -47,77 +51,106 @@ export default function ProductCard({ product }: { product: Product }) {
     }
   };
 
-  // Stop when another card starts
+  // Stop when another card starts playing
   useEffect(() => {
     function onOtherPlay(e: Event) {
-      if ((e as CustomEvent<{ id: string }>).detail.id !== product.id) {
-        deactivateRef.current();
-      }
+      if ((e as CustomEvent<{ id: string }>).detail.id !== product.id) stopRef.current();
     }
     window.addEventListener("card-play", onOtherPlay);
     return () => window.removeEventListener("card-play", onOtherPlay);
   }, [product.id]);
 
-  // Reload video when source changes while playing
+  // Reload when variant video source changes while playing
   useEffect(() => {
-    if (!videoRef.current || !hovering || !displayVideo) return;
+    if (!videoRef.current || !active || !displayVideo) return;
     videoRef.current.load();
     videoRef.current.play().catch(() => {});
-  }, [displayVideo, hovering]);
+  }, [displayVideo]); // eslint-disable-line react-hooks/exhaustive-deps
 
   function startPlay() {
     window.dispatchEvent(new CustomEvent("card-play", { detail: { id: product.id } }));
-    setHovering(true);
+    setActive(true);
     if (videoRef.current && displayVideo) {
       videoRef.current.currentTime = 0;
       videoRef.current.play().catch(() => {});
     }
   }
 
-  // ── Desktop ──────────────────────────────────────────────────────────────
-  function handleMouseEnter() { startPlay(); }
-  function handleMouseLeave() { deactivateRef.current(); setActiveVariant(null); }
+  // ── Pointer handlers ─────────────────────────────────────────────────────
 
-  // ── Mobile ───────────────────────────────────────────────────────────────
-  function handleTouchStart() {
-    touchStartTime.current = Date.now();
-    touchMoved.current = false;
-    setPopped(true);
-    startPlay();
-  }
-
-  function handleTouchMove() {
-    touchMoved.current = true;
-  }
-
-  function handleTouchEnd(e: React.TouchEvent) {
-    const duration = Date.now() - touchStartTime.current;
-    deactivateRef.current();
-    // Short tap (< 350 ms, no scroll) → navigate
-    if (!touchMoved.current && duration < 350) {
-      e.preventDefault();
-      router.push(`/shop/${product.id}`);
+  function handlePointerDown(e: React.PointerEvent) {
+    if (e.pointerType === "touch") {
+      isTouchEvent.current = true;
+      pressStart.current  = Date.now();
+      pressOrigin.current = { x: e.clientX, y: e.clientY };
+      didMove.current     = false;
+      setPopped(true);
+      startPlay();
     }
+  }
+
+  function handlePointerMove(e: React.PointerEvent) {
+    if (e.pointerType === "touch") {
+      const dx = Math.abs(e.clientX - pressOrigin.current.x);
+      const dy = Math.abs(e.clientY - pressOrigin.current.y);
+      if (dx > 8 || dy > 8) didMove.current = true;
+    }
+  }
+
+  function handlePointerUp(e: React.PointerEvent) {
+    if (e.pointerType === "touch") {
+      stopRef.current();
+      const duration = Date.now() - pressStart.current;
+      if (!didMove.current && duration < 400) {
+        router.push(`/shop/${product.id}`);
+      }
+      // Reset isTouchEvent after click window passes
+      setTimeout(() => { isTouchEvent.current = false; }, 500);
+    }
+  }
+
+  function handlePointerCancel() {
+    stopRef.current();
+    setTimeout(() => { isTouchEvent.current = false; }, 500);
+  }
+
+  // Desktop mouse hover
+  function handlePointerEnter(e: React.PointerEvent) {
+    if (e.pointerType === "mouse") startPlay();
+  }
+
+  function handlePointerLeave(e: React.PointerEvent) {
+    if (e.pointerType === "mouse") {
+      stopRef.current();
+      setActiveVariant(null);
+    }
+  }
+
+  // Desktop click — skip if triggered by touch (already handled above)
+  function handleClick() {
+    if (!isTouchEvent.current) router.push(`/shop/${product.id}`);
   }
 
   return (
     <div
       className="group block cursor-pointer relative"
       style={{
-        transform: popped ? "scale(1.07)" : "scale(1)",
-        boxShadow: popped ? "0 20px 48px rgba(0,0,0,0.22)" : "none",
+        transform:  popped ? "scale(1.07)" : "scale(1)",
+        boxShadow:  popped ? "0 20px 48px rgba(0,0,0,0.22)" : "none",
         transition: popped
           ? "transform 0.14s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.14s ease-out"
           : "transform 0.28s ease-in-out, box-shadow 0.28s ease-in-out",
-        zIndex: popped ? 10 : 0,
+        zIndex:       popped ? 10 : 0,
         borderRadius: "4px",
+        touchAction:  "pan-y", // allow vertical scroll, intercept tap/hold
       }}
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-      onTouchStart={handleTouchStart}
-      onTouchMove={handleTouchMove}
-      onTouchEnd={handleTouchEnd}
-      onClick={() => router.push(`/shop/${product.id}`)}
+      onPointerDown={handlePointerDown}
+      onPointerMove={handlePointerMove}
+      onPointerUp={handlePointerUp}
+      onPointerCancel={handlePointerCancel}
+      onPointerEnter={handlePointerEnter}
+      onPointerLeave={handlePointerLeave}
+      onClick={handleClick}
     >
       {/* Media */}
       <div className="relative overflow-hidden bg-[#FDF9F7] aspect-square">
@@ -129,7 +162,7 @@ export default function ProductCard({ product }: { product: Product }) {
             sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
             className={`object-contain transition-all duration-500 ${
               displayVideo
-                ? hovering ? "opacity-0" : "opacity-100"
+                ? active ? "opacity-0" : "opacity-100"
                 : "group-hover:scale-[1.03]"
             }`}
           />
@@ -150,7 +183,7 @@ export default function ProductCard({ product }: { product: Product }) {
             playsInline
             preload="metadata"
             className={`absolute inset-0 w-full h-full object-contain transition-opacity duration-300 ${
-              hovering ? "opacity-100" : "opacity-0"
+              active ? "opacity-100" : "opacity-0"
             }`}
           />
         )}
@@ -162,8 +195,8 @@ export default function ProductCard({ product }: { product: Product }) {
               <button
                 key={v}
                 aria-label={v}
-                onMouseEnter={() => setActiveVariant(v)}
-                onClick={(e) => e.stopPropagation()}
+                onPointerEnter={() => setActiveVariant(v)}
+                onPointerDown={(e) => e.stopPropagation()}
                 className={`w-5 h-5 rounded-full border-2 transition-all duration-200 ${
                   activeVariant === v ? "border-white scale-110" : "border-white/50"
                 }`}

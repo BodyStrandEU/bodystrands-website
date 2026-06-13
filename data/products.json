@@ -1480,27 +1480,29 @@
       "Gold Tone": [
         "https://i.etsystatic.com/55122258/r/il/8d2af9/8020112711/il_fullxfull.8020112711_jbay.jpg",
         "https://i.etsystatic.com/55122258/r/il/022eb3/8020124799/il_fullxfull.8020124799_aweh.jpg",
-        "https://i.etsystatic.com/55122258/r/il/4e63f4/8020150831/il_fullxfull.8020150831_ckfl.jpg",
-        "https://i.etsystatic.com/55122258/r/il/dd47cb/7952333017/il_fullxfull.7952333017_82j3.jpg",
-        "https://i.etsystatic.com/55122258/r/il/fd4744/7807979968/il_fullxfull.7807979968_qa8r.jpg",
-        "https://i.etsystatic.com/55122258/r/il/c55298/7952368249/il_fullxfull.7952368249_ppy2.jpg",
-        "https://i.etsystatic.com/55122258/r/il/b88a3b/7871497991/il_fullxfull.7871497991_bj5o.jpg",
-        "https://i.etsystatic.com/55122258/r/il/4c9988/7813683031/il_fullxfull.7813683031_p8f7.jpg",
         "https://i.etsystatic.com/55122258/r/il/5f261a/8020152167/il_fullxfull.8020152167_qwjl.jpg",
-        "https://i.etsystatic.com/55122258/r/il/26282e/7734979557/il_fullxfull.7734979557_95jd.jpg"
+        "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.jpg",
+        "https://i.etsystatic.com/55122258/r/il/fd4744/7807979968/il_fullxfull.7807979968_qa8r.jpg",
+        "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
+        "/images/products/49cfbed0-3ca2-49b7-85b5-938b180c8b79.png",
+        "/images/products/f2f23b06-f910-420f-97d5-b3bfb939c09f.png",
+        "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg"
       ],
       "Silver Tone": [
-        "https://i.etsystatic.com/55122258/r/il/8d2af9/8020112711/il_fullxfull.8020112711_jbay.jpg",
-        "https://i.etsystatic.com/55122258/r/il/022eb3/8020124799/il_fullxfull.8020124799_aweh.jpg",
+        "/images/products/22079b65-5549-4e99-82a5-03370c656882.png",
         "https://i.etsystatic.com/55122258/r/il/4e63f4/8020150831/il_fullxfull.8020150831_ckfl.jpg",
+        "/images/products/a84ced35-90fb-4281-8607-cdd6a4c7e087.png",
         "https://i.etsystatic.com/55122258/r/il/dd47cb/7952333017/il_fullxfull.7952333017_82j3.jpg",
         "https://i.etsystatic.com/55122258/r/il/fd4744/7807979968/il_fullxfull.7807979968_qa8r.jpg",
         "https://i.etsystatic.com/55122258/r/il/c55298/7952368249/il_fullxfull.7952368249_ppy2.jpg",
-        "https://i.etsystatic.com/55122258/r/il/b88a3b/7871497991/il_fullxfull.7871497991_bj5o.jpg",
-        "https://i.etsystatic.com/55122258/r/il/4c9988/7813683031/il_fullxfull.7813683031_p8f7.jpg",
-        "https://i.etsystatic.com/55122258/r/il/5f261a/8020152167/il_fullxfull.8020152167_qwjl.jpg",
-        "https://i.etsystatic.com/55122258/r/il/26282e/7734979557/il_fullxfull.7734979557_95jd.jpg"
+        "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.jpg",
+        "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg",
+        "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png"
       ]
+    },
+    "variantVideos": {
+      "Silver Tone": "/images/products/head-chain-with-pearl-2.mov",
+      "Gold Tone": "/images/products/Head-chain-with-pearl.mov"
     }
   },
   {

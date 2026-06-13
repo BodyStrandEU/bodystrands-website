@@ -3453,7 +3453,11 @@
           "Large (+23cm ext)"
         ]
       }
-    ]
+    ],
+    "variantVideos": {
+      "Gold Tone": "/images/products/backwards-kendal-with-strand.mov",
+      "Silver Tone": "/images/products/backwards-kendal-with-strand.mov"
+    }
   },
   {
     "id": "boho-hair-chain",

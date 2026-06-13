@@ -3085,7 +3085,7 @@
       },
       {
         "label": "Care",
-        "value": "Avoid water, perfumes, lotions. Wipe with soft cloth."
+        "value": "Avoid perfumes, lotions. Wipe with soft cloth."
       },
       {
         "label": "Shipping",
@@ -3121,7 +3121,8 @@
           "23 CM"
         ]
       }
-    ]
+    ],
+    "video": "/images/products/bracelet-with-letter-charm.mov"
   },
   {
     "id": "evil-eye-charm-anklet",

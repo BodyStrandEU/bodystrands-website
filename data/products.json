@@ -2095,7 +2095,7 @@
     "currency": "EUR",
     "category": "Body Chains",
     "description": "Your bikini's best accessory. This dainty body necklace drapes across the décolletage and torso — minimalist beach jewelry that transforms any swimsuit into a styled summer look.",
-    "fullDescription": "Fine gold chains trace the neckline and chest in a delicate body necklace silhouette — feminine, lightweight, and the kind of piece that makes a simple black bikini look like an intentional outfit.\n\nHandcrafted in gold stainless steel. Adjustable fit to suit different body types. Waterproof and anti-tarnish so it lives at the beach all season long.",
+    "fullDescription": "Fine chains trace the neckline and chest in a delicate body necklace silhouette — feminine, lightweight, and the kind of piece that makes a simple black bikini look like an intentional outfit.\n\nHandcrafted in gold or silver stainless steel. Adjustable fit to suit different body types. Waterproof and anti-tarnish so it lives at the beach all season long.",
     "specs": [
       {
         "label": "Material",
@@ -2129,32 +2129,30 @@
       "Silver Tone"
     ],
     "images": [
-      "https://i.etsystatic.com/55122258/r/il/c98367/7864103019/il_fullxfull.7864103019_khwe.jpg"
+      "/images/products/unnamed-2-2.jpg"
     ],
     "variantImages": {
       "Gold Tone": [
         "https://i.etsystatic.com/55122258/r/il/c98367/7864103019/il_fullxfull.7864103019_khwe.jpg",
-        "https://i.etsystatic.com/55122258/r/il/de57cf/7899890738/il_fullxfull.7899890738_5nvr.jpg",
+        "/images/products/IMG_0366.jpg",
+        "/images/products/f6693a6a-3f4b-407d-869f-3f894b84dd5c.jpeg",
+        "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
         "https://i.etsystatic.com/55122258/r/il/fb7ce7/7947817319/il_fullxfull.7947817319_s1sx.jpg",
-        "https://i.etsystatic.com/55122258/r/il/4e5f30/7816138402/il_fullxfull.7816138402_cf5o.jpg",
-        "https://i.etsystatic.com/55122258/r/il/f5a389/7816165946/il_fullxfull.7816165946_1cmf.jpg",
         "https://i.etsystatic.com/55122258/r/il/f5136d/7816140198/il_fullxfull.7816140198_mqjm.jpg",
         "https://i.etsystatic.com/55122258/r/il/16e637/7817071145/il_fullxfull.7817071145_cog1.jpg",
-        "https://i.etsystatic.com/55122258/r/il/fd0fda/7864079833/il_fullxfull.7864079833_l6u9.jpg",
-        "https://i.etsystatic.com/55122258/r/il/8dab33/7860394501/il_fullxfull.7860394501_gh6w.jpg",
-        "https://i.etsystatic.com/55122258/r/il/5b109b/7864116113/il_fullxfull.7864116113_5fei.jpg"
+        "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.jpg",
+        "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg",
+        "/images/products/unnamed.jpg"
       ],
       "Silver Tone": [
-        "https://i.etsystatic.com/55122258/r/il/c98367/7864103019/il_fullxfull.7864103019_khwe.jpg",
-        "https://i.etsystatic.com/55122258/r/il/de57cf/7899890738/il_fullxfull.7899890738_5nvr.jpg",
-        "https://i.etsystatic.com/55122258/r/il/fb7ce7/7947817319/il_fullxfull.7947817319_s1sx.jpg",
         "https://i.etsystatic.com/55122258/r/il/4e5f30/7816138402/il_fullxfull.7816138402_cf5o.jpg",
-        "https://i.etsystatic.com/55122258/r/il/f5a389/7816165946/il_fullxfull.7816165946_1cmf.jpg",
+        "/images/products/a7008a93-ea13-4dc1-87e8-7b2db04957e5.png",
+        "/images/products/f6693a6a-3f4b-407d-869f-3f894b84dd5c.jpeg",
+        "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
+        "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.jpg",
         "https://i.etsystatic.com/55122258/r/il/f5136d/7816140198/il_fullxfull.7816140198_mqjm.jpg",
         "https://i.etsystatic.com/55122258/r/il/16e637/7817071145/il_fullxfull.7817071145_cog1.jpg",
-        "https://i.etsystatic.com/55122258/r/il/fd0fda/7864079833/il_fullxfull.7864079833_l6u9.jpg",
-        "https://i.etsystatic.com/55122258/r/il/8dab33/7860394501/il_fullxfull.7860394501_gh6w.jpg",
-        "https://i.etsystatic.com/55122258/r/il/5b109b/7864116113/il_fullxfull.7864116113_5fei.jpg"
+        "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg"
       ]
     },
     "variantGroups": [
@@ -2166,7 +2164,11 @@
           "Large (+23cm ext)"
         ]
       }
-    ]
+    ],
+    "variantVideos": {
+      "Gold Tone": "/images/products/Double-layer-body-chain.mp4",
+      "Silver Tone": "/images/products/Double-layer-body-chain.mp4"
+    }
   },
   {
     "id": "layered-shoulder-body-chain",

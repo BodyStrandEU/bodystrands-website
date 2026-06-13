@@ -1361,7 +1361,7 @@
   },
   {
     "id": "silver-eyeglasses-chain",
-    "name": "Silver Eyeglasses Chain",
+    "name": "Eyeglasses Chain",
     "price": 20,
     "currency": "EUR",
     "category": "Eyeglasses Chains",
@@ -1408,29 +1408,29 @@
     ],
     "variantImages": {
       "Gold Tone": [
-        "https://i.etsystatic.com/55122258/r/il/2a9ec4/7847370486/il_fullxfull.7847370486_zn3k.jpg",
         "https://i.etsystatic.com/55122258/r/il/d5e410/7895318147/il_fullxfull.7895318147_47mv.jpg",
-        "https://i.etsystatic.com/55122258/r/il/41722b/7847365118/il_fullxfull.7847365118_5omu.jpg",
         "https://i.etsystatic.com/55122258/r/il/5fd435/7847349256/il_fullxfull.7847349256_3xii.jpg",
-        "https://i.etsystatic.com/55122258/r/il/08979d/7895309513/il_fullxfull.7895309513_psao.jpg",
-        "https://i.etsystatic.com/55122258/r/il/b88a3b/7871497991/il_fullxfull.7871497991_bj5o.jpg",
-        "https://i.etsystatic.com/55122258/r/il/4c9988/7813683031/il_fullxfull.7813683031_p8f7.jpg",
+        "https://i.etsystatic.com/55122258/r/il/41722b/7847365118/il_fullxfull.7847365118_5omu.jpg",
         "https://i.etsystatic.com/55122258/r/il/e75240/7847360300/il_fullxfull.7847360300_8hfg.jpg",
         "https://i.etsystatic.com/55122258/r/il/a78dca/7847363182/il_fullxfull.7847363182_6v8v.jpg",
-        "https://i.etsystatic.com/55122258/r/il/857d95/7811531149/il_fullxfull.7811531149_g087.jpg"
+        "https://i.etsystatic.com/55122258/r/il/857d95/7811531149/il_fullxfull.7811531149_g087.jpg",
+        "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.jpg",
+        "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg",
+        "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png"
       ],
       "Silver Tone": [
+        "/images/products/c5c213f0-4a18-4128-80db-53dc2923fe0d.jpeg",
         "https://i.etsystatic.com/55122258/r/il/2a9ec4/7847370486/il_fullxfull.7847370486_zn3k.jpg",
-        "https://i.etsystatic.com/55122258/r/il/d5e410/7895318147/il_fullxfull.7895318147_47mv.jpg",
-        "https://i.etsystatic.com/55122258/r/il/41722b/7847365118/il_fullxfull.7847365118_5omu.jpg",
-        "https://i.etsystatic.com/55122258/r/il/5fd435/7847349256/il_fullxfull.7847349256_3xii.jpg",
         "https://i.etsystatic.com/55122258/r/il/08979d/7895309513/il_fullxfull.7895309513_psao.jpg",
-        "https://i.etsystatic.com/55122258/r/il/b88a3b/7871497991/il_fullxfull.7871497991_bj5o.jpg",
-        "https://i.etsystatic.com/55122258/r/il/4c9988/7813683031/il_fullxfull.7813683031_p8f7.jpg",
-        "https://i.etsystatic.com/55122258/r/il/e75240/7847360300/il_fullxfull.7847360300_8hfg.jpg",
-        "https://i.etsystatic.com/55122258/r/il/a78dca/7847363182/il_fullxfull.7847363182_6v8v.jpg",
-        "https://i.etsystatic.com/55122258/r/il/857d95/7811531149/il_fullxfull.7811531149_g087.jpg"
+        "https://i.etsystatic.com/55122258/r/il/857d95/7811531149/il_fullxfull.7811531149_g087.jpg",
+        "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.jpg",
+        "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
+        "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg"
       ]
+    },
+    "variantVideos": {
+      "Gold Tone": "/images/products/4mmglasseschain.mov",
+      "Silver Tone": "/images/products/4mmglasseschain.mov"
     }
   },
   {

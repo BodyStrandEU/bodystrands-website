@@ -7264,6 +7264,10 @@
       {
         "label": "Shipping",
         "value": "Dispatches within 1–2 business days"
+      },
+      {
+        "label": "Size",
+        "value": "90 cm (35 inches) Adjustable: Includes a 12.7 cm (5 inch) extender"
       }
     ],
     "featured": false,
@@ -7273,26 +7277,31 @@
       "Silver Tone"
     ],
     "images": [
-      "https://i.etsystatic.com/55122258/r/il/927a91/7746778448/il_fullxfull.7746778448_39i8.jpg"
+      "/images/products/113.png"
     ],
     "variantImages": {
       "Gold Tone": [
+        "/images/products/esty-thumnails-new.png",
         "https://i.etsystatic.com/55122258/r/il/24618d/7794670199/il_fullxfull.7794670199_76fp.jpg",
-        "https://i.etsystatic.com/55122258/r/il/d00793/7746874302/il_fullxfull.7746874302_831y.jpg",
         "https://i.etsystatic.com/55122258/r/il/def7cf/7746794110/il_fullxfull.7746794110_4x89.jpg",
-        "https://i.etsystatic.com/55122258/r/il/792db8/7746873162/il_fullxfull.7746873162_ouuu.jpg",
-        "https://i.etsystatic.com/55122258/r/il/73369a/7812427790/il_fullxfull.7812427790_mjrv.jpg",
-        "https://i.etsystatic.com/55122258/r/il/e55b57/7794753467/il_fullxfull.7794753467_mt3a.jpg"
+        "https://i.etsystatic.com/55122258/r/il/e55b57/7794753467/il_fullxfull.7794753467_mt3a.jpg",
+        "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
+        "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg",
+        "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.jpg"
       ],
       "Silver Tone": [
         "https://i.etsystatic.com/55122258/r/il/927a91/7746778448/il_fullxfull.7746778448_39i8.jpg",
-        "https://i.etsystatic.com/55122258/r/il/d00793/7746874302/il_fullxfull.7746874302_831y.jpg",
         "https://i.etsystatic.com/55122258/r/il/596cbb/7794750177/il_fullxfull.7794750177_4qyy.jpg",
-        "https://i.etsystatic.com/55122258/r/il/792db8/7746873162/il_fullxfull.7746873162_ouuu.jpg",
         "https://i.etsystatic.com/55122258/r/il/7ed45b/7794750243/il_fullxfull.7794750243_2i26.jpg",
-        "https://i.etsystatic.com/55122258/r/il/73369a/7812427790/il_fullxfull.7812427790_mjrv.jpg",
-        "https://i.etsystatic.com/55122258/r/il/66c0ca/7746796996/il_fullxfull.7746796996_inug.jpg"
+        "https://i.etsystatic.com/55122258/r/il/66c0ca/7746796996/il_fullxfull.7746796996_inug.jpg",
+        "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
+        "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.jpg",
+        "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg"
       ]
+    },
+    "variantVideos": {
+      "Gold Tone": "/images/products/wave-vid.mp4",
+      "Silver Tone": "/images/products/wave-vid.mp4"
     }
   },
   {

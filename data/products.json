@@ -4331,7 +4331,11 @@
           "Large/Plus size"
         ]
       }
-    ]
+    ],
+    "variantVideos": {
+      "Gold Tone": "/images/products/shoulder-chain-vid.mov",
+      "Silver Tone": "/images/products/shoulder-chain-vid.mov"
+    }
   },
   {
     "id": "pearl-wedding-back-necklace",

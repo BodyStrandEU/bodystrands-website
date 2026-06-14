@@ -5315,7 +5315,7 @@
   {
     "id": "boho-beaded-eyeglasses-chain",
     "name": "Boho Beaded Eyeglasses Chain",
-    "price": 42.5,
+    "price": 40,
     "currency": "EUR",
     "category": "Eyeglasses Chains",
     "description": "Your everyday boho eyewear detail. This gold beaded eyeglasses retainer features eclectic mixed beads on a fine chain — practical, beautiful, and handcrafted to be worn as jewellery as much as a glasses holder.",
@@ -5355,10 +5355,10 @@
       "https://i.etsystatic.com/55122258/r/il/00d279/7957236771/il_fullxfull.7957236771_mnjk.jpg",
       "https://i.etsystatic.com/55122258/r/il/c194c8/7957241163/il_fullxfull.7957241163_jpka.jpg",
       "https://i.etsystatic.com/55122258/r/il/eab473/7957001171/il_fullxfull.7957001171_rnhg.jpg",
-      "https://i.etsystatic.com/55122258/r/il/b88a3b/7871497991/il_fullxfull.7871497991_bj5o.jpg",
       "https://i.etsystatic.com/55122258/r/il/26282e/7734979557/il_fullxfull.7734979557_95jd.jpg",
       "https://i.etsystatic.com/55122258/r/il/c4f9ae/7763585068/il_fullxfull.7763585068_7ep3.jpg"
-    ]
+    ],
+    "video": "/images/products/IMG_0597-copy.mov"
   },
   {
     "id": "minimalist-glasses-chain",

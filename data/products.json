@@ -6794,7 +6794,7 @@
       },
       {
         "label": "Fit",
-        "value": "Adjustable"
+        "value": "Adjustable "
       },
       {
         "label": "Care",
@@ -6803,6 +6803,10 @@
       {
         "label": "Shipping",
         "value": "Dispatches within 1–2 business days"
+      },
+      {
+        "label": "Size",
+        "value": "21 cm base chain with a 5 cm adjustable extension (26 cm total length)"
       }
     ],
     "featured": false,
@@ -6817,21 +6821,25 @@
     "variantImages": {
       "Gold Tone": [
         "https://i.etsystatic.com/55122258/r/il/f9dcc6/7770664374/il_fullxfull.7770664374_53b2.jpg",
+        "https://i.etsystatic.com/55122258/r/il/c6ea6a/7765663308/il_fullxfull.7765663308_3a19.jpg",
+        "https://i.etsystatic.com/55122258/r/il/4f89b1/7763623772/il_fullxfull.7763623772_eskh.jpg",
+        "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
         "https://i.etsystatic.com/55122258/r/il/41846b/7817292051/il_fullxfull.7817292051_96c0.jpg",
         "https://i.etsystatic.com/55122258/r/il/2470ac/7769333790/il_fullxfull.7769333790_h6ag.jpg",
-        "https://i.etsystatic.com/55122258/r/il/4f89b1/7763623772/il_fullxfull.7763623772_eskh.jpg",
-        "https://i.etsystatic.com/55122258/r/il/c6ea6a/7765663308/il_fullxfull.7765663308_3a19.jpg",
+        "https://i.etsystatic.com/55122258/r/il/f6d650/7770664458/il_fullxfull.7770664458_81hp.jpg",
         "https://i.etsystatic.com/55122258/r/il/9844dc/7818603383/il_fullxfull.7818603383_golu.jpg",
-        "https://i.etsystatic.com/55122258/r/il/b27177/7860360785/il_fullxfull.7860360785_8u7l.jpg",
-        "https://i.etsystatic.com/55122258/r/il/f6d650/7770664458/il_fullxfull.7770664458_81hp.jpg"
+        "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.jpg",
+        "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg"
       ],
       "Silver Tone": [
+        "https://i.etsystatic.com/55122258/r/il/9453e0/7770664378/il_fullxfull.7770664378_b1fy.jpg",
+        "https://i.etsystatic.com/55122258/r/il/b7061a/7770664392/il_fullxfull.7770664392_a3l9.jpg",
+        "https://i.etsystatic.com/55122258/r/il/4f89b1/7763623772/il_fullxfull.7763623772_eskh.jpg",
+        "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
         "https://i.etsystatic.com/55122258/r/il/41846b/7817292051/il_fullxfull.7817292051_96c0.jpg",
         "https://i.etsystatic.com/55122258/r/il/2470ac/7769333790/il_fullxfull.7769333790_h6ag.jpg",
-        "https://i.etsystatic.com/55122258/r/il/4f89b1/7763623772/il_fullxfull.7763623772_eskh.jpg",
-        "https://i.etsystatic.com/55122258/r/il/b27177/7860360785/il_fullxfull.7860360785_8u7l.jpg",
-        "https://i.etsystatic.com/55122258/r/il/b7061a/7770664392/il_fullxfull.7770664392_a3l9.jpg",
-        "https://i.etsystatic.com/55122258/r/il/9453e0/7770664378/il_fullxfull.7770664378_b1fy.jpg"
+        "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.jpg",
+        "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg"
       ]
     },
     "variantGroups": [
@@ -6852,7 +6860,11 @@
           "December"
         ]
       }
-    ]
+    ],
+    "variantVideos": {
+      "Silver Tone": "/images/products/0614--17-.mp4",
+      "Gold Tone": "/images/products/0614--17-.mp4"
+    }
   },
   {
     "id": "butterfly-anklet",

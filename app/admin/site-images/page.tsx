@@ -5,7 +5,7 @@ import Link from "next/link";
 
 type ImageSlot = {
   label: string;
-  path: string; // relative to public/, e.g. "images/hero-back-chain.jpg"
+  path: string;
 };
 
 type Section = {
@@ -66,10 +66,13 @@ function ImageSlotCard({ slot }: { slot: ImageSlot }) {
   const [status, setStatus] = useState<"idle" | "uploading" | "done" | "error">("idle");
   const [errMsg, setErrMsg] = useState("");
   const [cacheBust, setCacheBust] = useState(Date.now());
+  const [cleared, setCleared] = useState(false);
+  const [dragging, setDragging] = useState(false);
 
   async function handleFile(file: File) {
     setStatus("uploading");
     setErrMsg("");
+    setCleared(false);
     try {
       const form = new FormData();
       form.append("file", file);
@@ -86,32 +89,109 @@ function ImageSlotCard({ slot }: { slot: ImageSlot }) {
     }
   }
 
+  function onDragOver(e: React.DragEvent) {
+    e.preventDefault();
+    setDragging(true);
+  }
+
+  function onDragLeave() {
+    setDragging(false);
+  }
+
+  function onDrop(e: React.DragEvent) {
+    e.preventDefault();
+    setDragging(false);
+    const file = e.dataTransfer.files?.[0];
+    if (file && file.type.startsWith("image/")) handleFile(file);
+  }
+
   return (
-    <div style={{
-      border: "1px solid #E8B4A8",
-      padding: "1rem",
-      display: "flex",
-      flexDirection: "column",
-      gap: "0.75rem",
-      background: "#fff",
-    }}>
-      {/* Preview */}
+    <div
+      onDragOver={onDragOver}
+      onDragLeave={onDragLeave}
+      onDrop={onDrop}
+      style={{
+        border: dragging ? "2px dashed #A0622A" : "1px solid var(--admin-border)",
+        borderRadius: "8px",
+        padding: "1rem",
+        display: "flex",
+        flexDirection: "column",
+        gap: "0.75rem",
+        background: dragging ? "rgba(160,98,42,0.05)" : "var(--admin-surface)",
+        transition: "border 0.15s, background 0.15s",
+        position: "relative",
+      }}
+    >
+      {/* Preview area */}
       <div style={{
         width: "100%",
         aspectRatio: "1",
-        background: "#F2DDD7",
+        background: "var(--admin-surface2)",
+        borderRadius: "4px",
         overflow: "hidden",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
+        position: "relative",
       }}>
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src={`/${slot.path}?v=${cacheBust}`}
-          alt={slot.label}
-          style={{ width: "100%", height: "100%", objectFit: "contain" }}
-          onError={(e) => { (e.target as HTMLImageElement).style.opacity = "0.3"; }}
-        />
+        {cleared ? (
+          <span style={{ fontSize: "0.65rem", color: "var(--admin-muted)", textAlign: "center", padding: "1rem" }}>
+            Drop new image here
+          </span>
+        ) : (
+          <>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={`/${slot.path}?v=${cacheBust}`}
+              alt={slot.label}
+              style={{ width: "100%", height: "100%", objectFit: "contain" }}
+              onError={(e) => { (e.target as HTMLImageElement).style.opacity = "0.2"; }}
+            />
+            {/* X button */}
+            <button
+              onClick={() => setCleared(true)}
+              title="Clear preview"
+              style={{
+                position: "absolute",
+                top: "0.4rem",
+                right: "0.4rem",
+                width: "22px",
+                height: "22px",
+                borderRadius: "50%",
+                border: "none",
+                background: "#fee2e2",
+                color: "#991b1b",
+                fontSize: "0.7rem",
+                cursor: "pointer",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                lineHeight: 1,
+                fontWeight: 700,
+              }}
+            >
+              ✕
+            </button>
+          </>
+        )}
+
+        {/* Drag overlay label */}
+        {dragging && (
+          <div style={{
+            position: "absolute",
+            inset: 0,
+            background: "rgba(160,98,42,0.12)",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            fontSize: "0.7rem",
+            color: "#A0622A",
+            fontWeight: 600,
+            letterSpacing: "0.1em",
+          }}>
+            Drop to upload
+          </div>
+        )}
       </div>
 
       {/* Label */}
@@ -119,28 +199,28 @@ function ImageSlotCard({ slot }: { slot: ImageSlot }) {
         fontSize: "0.6rem",
         letterSpacing: "0.15em",
         textTransform: "uppercase",
-        color: "#2C2220",
-        fontFamily: "var(--font-josefin), 'Josefin Sans', sans-serif",
+        color: "var(--admin-text)",
+        margin: 0,
       }}>
         {slot.label}
       </p>
 
-      <p style={{ fontSize: "0.55rem", color: "#8C7B6E", wordBreak: "break-all" }}>
+      <p style={{ fontSize: "0.55rem", color: "var(--admin-muted)", wordBreak: "break-all", margin: 0 }}>
         {slot.path}
       </p>
 
       {/* Status */}
       {status === "uploading" && (
-        <p style={{ fontSize: "0.6rem", color: "#A0622A" }}>Uploading…</p>
+        <p style={{ fontSize: "0.6rem", color: "#A0622A", margin: 0 }}>Uploading…</p>
       )}
       {status === "done" && (
-        <p style={{ fontSize: "0.6rem", color: "#2a7a2a" }}>✓ Updated — deploys in ~1 min</p>
+        <p style={{ fontSize: "0.6rem", color: "#2a7a2a", margin: 0 }}>✓ Updated — live in ~1 min</p>
       )}
       {status === "error" && (
-        <p style={{ fontSize: "0.6rem", color: "#c0392b" }}>{errMsg}</p>
+        <p style={{ fontSize: "0.6rem", color: "#c0392b", margin: 0 }}>{errMsg}</p>
       )}
 
-      {/* Upload button */}
+      {/* Hidden file input + click-to-upload button */}
       <input
         ref={inputRef}
         type="file"
@@ -156,18 +236,18 @@ function ImageSlotCard({ slot }: { slot: ImageSlot }) {
         onClick={() => inputRef.current?.click()}
         disabled={status === "uploading"}
         style={{
-          background: status === "uploading" ? "#ccc" : "#A0622A",
-          color: "#FDF9F7",
+          background: status === "uploading" ? "var(--admin-surface2)" : "#A0622A",
+          color: status === "uploading" ? "var(--admin-muted)" : "#FDF9F7",
           border: "none",
-          padding: "0.6rem",
+          borderRadius: "4px",
+          padding: "0.5rem",
           fontSize: "0.6rem",
-          letterSpacing: "0.2em",
+          letterSpacing: "0.15em",
           textTransform: "uppercase",
           cursor: status === "uploading" ? "not-allowed" : "pointer",
-          fontFamily: "var(--font-josefin), 'Josefin Sans', sans-serif",
         }}
       >
-        Replace Image
+        {status === "uploading" ? "Uploading…" : "Browse file"}
       </button>
     </div>
   );
@@ -175,18 +255,25 @@ function ImageSlotCard({ slot }: { slot: ImageSlot }) {
 
 export default function SiteImagesPage() {
   return (
-    <div style={{ minHeight: "100vh", background: "#F8F5F3", fontFamily: "var(--font-josefin), 'Josefin Sans', sans-serif" }}>
+    <div style={{ minHeight: "100vh", background: "var(--admin-bg)" }}>
       {/* Header */}
-      <div style={{ background: "#fff", borderBottom: "1px solid #E8B4A8", padding: "1.25rem 2rem", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+      <div style={{
+        background: "var(--admin-surface)",
+        borderBottom: "1px solid var(--admin-border)",
+        padding: "1.25rem 2rem",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "space-between",
+      }}>
         <div>
-          <h1 style={{ fontSize: "1.1rem", fontWeight: 400, color: "#2C2220", margin: 0, letterSpacing: "0.05em" }}>
+          <h1 style={{ fontSize: "1.1rem", fontWeight: 600, color: "var(--admin-text)", margin: 0 }}>
             Site Images
           </h1>
-          <p style={{ fontSize: "0.6rem", color: "#8C7B6E", margin: "0.25rem 0 0", letterSpacing: "0.15em", textTransform: "uppercase" }}>
-            Replace any image — changes go live in ~1 minute
+          <p style={{ fontSize: "0.65rem", color: "var(--admin-muted)", margin: "0.25rem 0 0", letterSpacing: "0.1em", textTransform: "uppercase" }}>
+            Drag & drop or browse — live in ~1 minute
           </p>
         </div>
-        <Link href="/admin/dashboard" style={{ fontSize: "0.6rem", letterSpacing: "0.15em", textTransform: "uppercase", color: "#8C7B6E", textDecoration: "none" }}>
+        <Link href="/admin/dashboard" style={{ fontSize: "0.75rem", color: "var(--admin-muted)", textDecoration: "none" }}>
           ← Back to Dashboard
         </Link>
       </div>
@@ -195,9 +282,21 @@ export default function SiteImagesPage() {
       <div style={{ maxWidth: 1200, margin: "0 auto", padding: "2rem" }}>
         {SECTIONS.map((section) => (
           <div key={section.title} style={{ marginBottom: "3rem" }}>
-            <h2 style={{ fontSize: "0.65rem", letterSpacing: "0.3em", textTransform: "uppercase", color: "#A0622A", marginBottom: "1.25rem", fontWeight: 400 }}>
-              {section.title}
-            </h2>
+            {/* Section header */}
+            <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", marginBottom: "1.25rem" }}>
+              <h2 style={{
+                fontSize: "0.7rem",
+                fontWeight: 700,
+                letterSpacing: "0.12em",
+                textTransform: "uppercase",
+                color: "var(--admin-muted)",
+                margin: 0,
+              }}>
+                {section.title}
+              </h2>
+              <div style={{ flex: 1, height: "1px", background: "var(--admin-border)" }} />
+            </div>
+
             <div style={{
               display: "grid",
               gridTemplateColumns: "repeat(auto-fill, minmax(180px, 1fr))",

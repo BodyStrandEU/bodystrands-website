@@ -4817,16 +4817,18 @@
     "featured": false,
     "active": true,
     "images": [
-      "https://i.etsystatic.com/55122258/r/il/32f1b2/7947544000/il_fullxfull.7947544000_6fva.jpg",
       "https://i.etsystatic.com/55122258/r/il/32bcb7/7995316377/il_fullxfull.7995316377_7kk0.jpg",
+      "https://i.etsystatic.com/55122258/r/il/32f1b2/7947544000/il_fullxfull.7947544000_6fva.jpg",
       "https://i.etsystatic.com/55122258/r/il/96692e/7883966909/il_fullxfull.7883966909_m1l9.jpg",
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
       "https://i.etsystatic.com/55122258/r/il/ebe5bc/7947619574/il_fullxfull.7947619574_olgy.jpg",
       "https://i.etsystatic.com/55122258/r/il/e998ff/7756532898/il_fullxfull.7756532898_248j.jpg",
       "https://i.etsystatic.com/55122258/r/il/671d65/7883984639/il_fullxfull.7883984639_iztj.jpg",
-      "https://i.etsystatic.com/55122258/r/il/885dbc/7860391007/il_fullxfull.7860391007_aw4s.jpg",
       "https://i.etsystatic.com/55122258/r/il/9e92eb/7947542360/il_fullxfull.7947542360_cajk.jpg",
       "https://i.etsystatic.com/55122258/r/il/26594f/7947542946/il_fullxfull.7947542946_byee.jpg",
-      "https://i.etsystatic.com/55122258/r/il/b78a5c/7947544278/il_fullxfull.7947544278_m5rk.jpg"
+      "https://i.etsystatic.com/55122258/r/il/b78a5c/7947544278/il_fullxfull.7947544278_m5rk.jpg",
+      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.jpg",
+      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg"
     ],
     "variantGroups": [
       {
@@ -4861,7 +4863,8 @@
           "23 CM"
         ]
       }
-    ]
+    ],
+    "video": "/images/products/gemstone-bracelet.mov"
   },
   {
     "id": "birthstone-choker-necklace",

@@ -6434,7 +6434,7 @@
     "price": 40,
     "currency": "EUR",
     "category": "Back Chains",
-    "description": "Your open-back wedding look, completed in gold or silver. This adjustable bridal backdrop necklace drapes elegantly down the spine — for backless dresses, open-back gowns, and every look that asks for something beautiful behind you.",
+    "description": "Your open-back wedding look, completed in gold or silver. This adjustable bridal backdrop necklace drapes elegantly down the spine — for backless dresses, open-back gowns, and every look that asks for something beautiful behind you.\n\nSize & Dimensions:\nNeck Measurement: 64 cm easy slip-on loop (no clasp required).\nWaist/Hip Fit: Adjustable from 79 cm to 102 cm\nSelect Small (+7 cm), Medium (+14 cm), or Large (+23 cm) extension.",
     "fullDescription": "A classic backdrop design in gold or silver stainless steel — clean, elegant, and versatile enough to work with any open-back garment. Three extender sizes let you set the exact drop length for your gown.\n\nHandcrafted in stainless steel. Adjustable with Small, Medium, or Large extender. Message us your measurements after ordering for a perfect custom fit.",
     "specs": [
       {
@@ -6485,22 +6485,22 @@
     ],
     "variantImages": {
       "Gold Tone": [
-        "https://i.etsystatic.com/55122258/r/il/e5ccb9/7769127622/il_fullxfull.7769127622_2q16.jpg",
-        "https://i.etsystatic.com/55122258/r/il/357473/7817068563/il_fullxfull.7817068563_ay2q.jpg",
+        "https://i.etsystatic.com/55122258/r/il/5625eb/7843108079/il_fullxfull.7843108079_e0mb.jpg",
         "https://i.etsystatic.com/55122258/r/il/88ca45/7769131538/il_fullxfull.7769131538_9erk.jpg",
-        "https://i.etsystatic.com/55122258/r/il/e9d7ea/7860340165/il_fullxfull.7860340165_h0a7.jpg",
-        "https://i.etsystatic.com/55122258/r/il/5625eb/7843108079/il_fullxfull.7843108079_e0mb.jpg"
+        "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.jpg",
+        "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
+        "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg"
       ],
       "Silver Tone": [
         "https://i.etsystatic.com/55122258/r/il/1b7cd6/7843214741/il_fullxfull.7843214741_8gxf.jpg",
         "https://i.etsystatic.com/55122258/r/il/2927fc/7795176254/il_fullxfull.7795176254_mpil.jpg",
-        "https://i.etsystatic.com/55122258/r/il/e5ccb9/7769127622/il_fullxfull.7769127622_2q16.jpg",
         "https://i.etsystatic.com/55122258/r/il/b95369/7843051781/il_fullxfull.7843051781_fmbm.jpg",
         "https://i.etsystatic.com/55122258/r/il/88c91d/7843109943/il_fullxfull.7843109943_46vh.jpg",
-        "https://i.etsystatic.com/55122258/r/il/357473/7817068563/il_fullxfull.7817068563_ay2q.jpg",
         "https://i.etsystatic.com/55122258/r/il/88ca45/7769131538/il_fullxfull.7769131538_9erk.jpg",
         "https://i.etsystatic.com/55122258/r/il/cf6b4a/7795119006/il_fullxfull.7795119006_pmwn.jpg",
-        "https://i.etsystatic.com/55122258/r/il/e9d7ea/7860340165/il_fullxfull.7860340165_h0a7.jpg"
+        "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
+        "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg",
+        "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.jpg"
       ]
     },
     "variantGroups": [
@@ -6512,7 +6512,11 @@
           "Large (+23cm ext)"
         ]
       }
-    ]
+    ],
+    "variantVideos": {
+      "Gold Tone": "/images/products/0614--15-.mp4",
+      "Silver Tone": "/images/products/0614--15-.mp4"
+    }
   },
   {
     "id": "bridal-pearl-back-necklace",

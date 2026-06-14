@@ -4873,11 +4873,11 @@
     "currency": "EUR",
     "category": "Necklaces",
     "description": "Your personalised gemstone necklace. This dainty gold choker features a custom birthstone pendant — an elegant, personal piece available in multiple lengths and all 12 birthstone months.",
-    "fullDescription": "Choose your birthstone and length at checkout — from 35 cm to 53 cm — and receive a necklace made specifically for you. The gemstone pendant sits delicately at the neckline in a fine gold chain setting.\n\nHandcrafted in 18k gold-plated stainless steel. Tarnish-resistant and hypoallergenic. A meaningful gift for birthdays, anniversaries, and milestones.",
+    "fullDescription": "Choose your birthstone and length at checkout — from 35 cm to 53 cm — and receive a necklace made specifically for you. The gemstone pendant sits delicately at the neckline in a fine gold chain setting.\n\nHandcrafted in gold-plated stainless steel. Tarnish-resistant and hypoallergenic. A meaningful gift for birthdays, anniversaries, and milestones.",
     "specs": [
       {
         "label": "Material",
-        "value": "18k gold stainless steel (tarnish-resistant)"
+        "value": "Gold stainless steel (tarnish-resistant)"
       },
       {
         "label": "Birthstone",
@@ -4893,7 +4893,7 @@
       },
       {
         "label": "Care",
-        "value": "Avoid water, perfumes, lotions. Wipe with soft cloth."
+        "value": "Avoid perfumes, lotions. Wipe with soft cloth."
       },
       {
         "label": "Shipping",
@@ -4909,10 +4909,12 @@
       "https://i.etsystatic.com/55122258/r/il/992c1b/7943593696/il_fullxfull.7943593696_c7v8.jpg",
       "https://i.etsystatic.com/55122258/r/il/e998ff/7756532898/il_fullxfull.7756532898_248j.jpg",
       "https://i.etsystatic.com/55122258/r/il/671d65/7883984639/il_fullxfull.7883984639_iztj.jpg",
-      "https://i.etsystatic.com/55122258/r/il/885dbc/7860391007/il_fullxfull.7860391007_aw4s.jpg",
       "https://i.etsystatic.com/55122258/r/il/233825/7991458613/il_fullxfull.7991458613_khzo.jpg",
       "https://i.etsystatic.com/55122258/r/il/de28b4/7991451543/il_fullxfull.7991451543_tjce.jpg",
-      "https://i.etsystatic.com/55122258/r/il/b0372f/7991451809/il_fullxfull.7991451809_2gd6.jpg"
+      "https://i.etsystatic.com/55122258/r/il/b0372f/7991451809/il_fullxfull.7991451809_2gd6.jpg",
+      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.jpg",
+      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg",
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png"
     ],
     "variantGroups": [
       {
@@ -4945,7 +4947,8 @@
           "56 CM"
         ]
       }
-    ]
+    ],
+    "video": "/images/products/gemstone-necklace.mov"
   },
   {
     "id": "pearl-lariat-back-necklace",

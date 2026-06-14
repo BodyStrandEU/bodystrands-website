@@ -326,7 +326,11 @@
       "Gold Tone",
       "Silver Tone"
     ],
-    "active": true
+    "active": true,
+    "variantVideos": {
+      "Gold Tone": "/images/products/0614--23-.mp4",
+      "Silver Tone": "/images/products/0614--23-.mp4"
+    }
   },
   {
     "id": "zodiac-anklet",

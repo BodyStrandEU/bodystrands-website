@@ -4588,11 +4588,11 @@
       },
       {
         "label": "Custom fit",
-        "value": "Message us after ordering — we resize at no extra cost"
+        "value": "For a perfect fit, Message us your dimensions after ordering — we resize at no extra cost"
       },
       {
         "label": "Care",
-        "value": "Avoid water, perfumes, lotions. Store in an airtight container."
+        "value": "Avoid perfumes, lotions. Store in an airtight container."
       },
       {
         "label": "Shipping",
@@ -4612,17 +4612,21 @@
       "Gold Tone": [
         "https://i.etsystatic.com/55122258/r/il/9f6ee4/7867616755/il_fullxfull.7867616755_78bt.jpg",
         "https://i.etsystatic.com/55122258/r/il/8cb85b/7867608707/il_fullxfull.7867608707_d0k5.jpg",
-        "https://i.etsystatic.com/55122258/r/il/92005f/7819806106/il_fullxfull.7819806106_nfek.jpg",
         "https://i.etsystatic.com/55122258/r/il/979cd6/7808760694/il_fullxfull.7808760694_936o.jpg",
         "https://i.etsystatic.com/55122258/r/il/698621/7867784241/il_fullxfull.7867784241_oh2z.jpg",
-        "https://i.etsystatic.com/55122258/r/il/d7cb64/7819806224/il_fullxfull.7819806224_ggv9.jpg",
-        "https://i.etsystatic.com/55122258/r/il/d99681/7819703812/il_fullxfull.7819703812_d194.jpg"
+        "/images/products/IMG_9749.jpeg",
+        "https://i.etsystatic.com/55122258/r/il/d99681/7819703812/il_fullxfull.7819703812_d194.jpg",
+        "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
+        "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.jpg",
+        "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg"
       ],
       "Silver Tone": [
-        "https://i.etsystatic.com/55122258/r/il/01c9f9/7774341189/il_fullxfull.7774341189_fuuz.jpg",
         "https://i.etsystatic.com/55122258/r/il/d204ac/7867554645/il_fullxfull.7867554645_gcbi.jpg",
+        "https://i.etsystatic.com/55122258/r/il/01c9f9/7774341189/il_fullxfull.7774341189_fuuz.jpg",
         "https://i.etsystatic.com/55122258/r/il/704e34/7867778489/il_fullxfull.7867778489_hpqz.jpg",
-        "https://i.etsystatic.com/55122258/r/il/d7cb64/7819806224/il_fullxfull.7819806224_ggv9.jpg"
+        "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
+        "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.jpg",
+        "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg"
       ]
     },
     "variantGroups": [
@@ -4634,7 +4638,11 @@
           "Large (+23cm ext)"
         ]
       }
-    ]
+    ],
+    "variantVideos": {
+      "Gold Tone": "/images/products/0614--3-.mp4",
+      "Silver Tone": "/images/products/0614--3-.mp4"
+    }
   },
   {
     "id": "gemstone-zodiac-anklet",

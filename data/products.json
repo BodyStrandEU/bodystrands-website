@@ -6927,11 +6927,11 @@
   },
   {
     "id": "zodiac-yoga-belly-chain",
-    "name": "Zodiac Yoga Belly Chain",
+    "name": "Zodiac Belly Chain",
     "price": 37,
     "currency": "EUR",
     "category": "Belly Chains",
-    "description": "Your workout-ready waist piece. This gold zodiac belly chain combines your star sign charm with a waterproof, adjustable stainless steel chain — designed for yoga, pilates, and every active life moment.",
+    "description": "This gold zodiac belly chain combines your star sign charm with a waterproof, adjustable stainless steel chain — designed for every active life moment.",
     "fullDescription": "Choose your zodiac sign and size at checkout for a belly chain that goes wherever you do — to the gym, the yoga studio, the beach, and beyond. The zodiac charm adds a personal touch to a practical, everyday piece.\n\nGold-tone stainless steel. Completely waterproof and anti-tarnish. Three extender sizes: Small (71–81 cm), Medium (71–91 cm), or Large (71–100 cm).",
     "specs": [
       {
@@ -6973,13 +6973,14 @@
       "https://i.etsystatic.com/55122258/r/il/eabb7d/8050343405/il_fullxfull.8050343405_lv0f.jpg",
       "https://i.etsystatic.com/55122258/r/il/b0b278/8002435152/il_fullxfull.8002435152_pewi.jpg",
       "https://i.etsystatic.com/55122258/r/il/90c06c/8138546519/il_fullxfull.8138546519_j89t.jpg",
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
       "https://i.etsystatic.com/55122258/r/il/0a48b1/8002436328/il_fullxfull.8002436328_jde7.jpg",
       "https://i.etsystatic.com/55122258/r/il/d849dd/7807040209/il_fullxfull.7807040209_88k9.jpg",
       "https://i.etsystatic.com/55122258/r/il/ca5f71/7759089584/il_fullxfull.7759089584_2j0k.jpg",
       "https://i.etsystatic.com/55122258/r/il/be4849/7757121780/il_fullxfull.7757121780_4iz9.jpg",
       "https://i.etsystatic.com/55122258/r/il/7d203e/7759169030/il_fullxfull.7759169030_aizv.jpg",
       "https://i.etsystatic.com/55122258/r/il/6f32de/7805260215/il_fullxfull.7805260215_hpf4.jpg",
-      "https://i.etsystatic.com/55122258/r/il/3c7a2a/7805135505/il_fullxfull.7805135505_sub4.jpg"
+      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg"
     ],
     "variantGroups": [
       {
@@ -7007,7 +7008,8 @@
           "Pisces (2.19-3.20)"
         ]
       }
-    ]
+    ],
+    "video": "/images/products/0614--19-.mp4"
   },
   {
     "id": "butterfly-layered-belly-chain",

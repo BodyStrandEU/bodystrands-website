@@ -6580,14 +6580,17 @@
         "https://i.etsystatic.com/55122258/r/il/972cce/7839233709/il_fullxfull.7839233709_t94x.jpg",
         "https://i.etsystatic.com/55122258/r/il/2c9056/7791119630/il_fullxfull.7791119630_8386.jpg",
         "https://i.etsystatic.com/55122258/r/il/6e2512/7839219749/il_fullxfull.7839219749_cci3.jpg",
-        "https://i.etsystatic.com/55122258/r/il/e0d0b6/7801769979/il_fullxfull.7801769979_dtlp.jpg",
-        "https://i.etsystatic.com/55122258/r/il/0c7365/7812397302/il_fullxfull.7812397302_7p35.jpg",
         "https://i.etsystatic.com/55122258/r/il/16f17f/7791291562/il_fullxfull.7791291562_3eij.jpg",
-        "https://i.etsystatic.com/55122258/r/il/8a33a9/7791300702/il_fullxfull.7791300702_j7sg.jpg"
+        "https://i.etsystatic.com/55122258/r/il/8a33a9/7791300702/il_fullxfull.7791300702_j7sg.jpg",
+        "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
+        "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg",
+        "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.jpg"
       ],
       "Silver Tone": [
         "https://i.etsystatic.com/55122258/r/il/06f8c5/7791135220/il_fullxfull.7791135220_od5j.jpg",
-        "https://i.etsystatic.com/55122258/r/il/0c7365/7812397302/il_fullxfull.7812397302_7p35.jpg"
+        "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.jpg",
+        "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
+        "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg"
       ]
     },
     "variantGroups": [
@@ -6599,7 +6602,11 @@
           "Large (+23cm ext)"
         ]
       }
-    ]
+    ],
+    "variantVideos": {
+      "Gold Tone": "/images/products/0614--16-.mp4",
+      "Silver Tone": "/images/products/0614--16-.mp4"
+    }
   },
   {
     "id": "pearl-backdrop-open-back-necklace",

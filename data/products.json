@@ -5266,7 +5266,7 @@
   {
     "id": "beaded-glasses-chain",
     "name": "Beaded Glasses Chain",
-    "price": 42.5,
+    "price": 40,
     "currency": "EUR",
     "category": "Eyeglasses Chains",
     "description": "Your boho eyewear accessory. This dainty gold beaded glasses chain features scattered decorative beads on a fine chain — a stylish, practical sunglass retainer handcrafted for effortless everyday wear.",
@@ -5308,9 +5308,9 @@
       "https://i.etsystatic.com/55122258/r/il/7bd1c4/7912921376/il_fullxfull.7912921376_e0os.jpg",
       "https://i.etsystatic.com/55122258/r/il/5c619f/7960797121/il_fullxfull.7960797121_ecyh.jpg",
       "https://i.etsystatic.com/55122258/r/il/2dfa84/7912764326/il_fullxfull.7912764326_nszz.jpg",
-      "https://i.etsystatic.com/55122258/r/il/b88a3b/7871497991/il_fullxfull.7871497991_bj5o.jpg",
       "https://i.etsystatic.com/55122258/r/il/c4f9ae/7763585068/il_fullxfull.7763585068_7ep3.jpg"
-    ]
+    ],
+    "video": "/images/products/0614--7-.mp4"
   },
   {
     "id": "boho-beaded-eyeglasses-chain",

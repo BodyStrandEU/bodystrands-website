@@ -5546,10 +5546,11 @@
       "https://i.etsystatic.com/55122258/r/il/15d2b6/8138543253/il_fullxfull.8138543253_p77g.jpg",
       "https://i.etsystatic.com/55122258/r/il/0df873/7772615942/il_fullxfull.7772615942_pva0.jpg",
       "https://i.etsystatic.com/55122258/r/il/bd1ab7/7820725957/il_fullxfull.7820725957_49nu.jpg",
-      "https://i.etsystatic.com/55122258/r/il/db5d3a/7812415874/il_fullxfull.7812415874_b86v.jpg",
       "https://i.etsystatic.com/55122258/r/il/5c671e/7820732007/il_fullxfull.7820732007_tn8h.jpg",
       "https://i.etsystatic.com/55122258/r/il/8f1422/7772793438/il_fullxfull.7772793438_o0s7.jpg",
-      "https://i.etsystatic.com/55122258/r/il/856c38/7820732077/il_fullxfull.7820732077_1nr0.jpg"
+      "https://i.etsystatic.com/55122258/r/il/856c38/7820732077/il_fullxfull.7820732077_1nr0.jpg",
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
+      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg"
     ],
     "variantGroups": [
       {
@@ -5560,7 +5561,8 @@
           "Large 71 cm - 100 cm"
         ]
       }
-    ]
+    ],
+    "video": "/images/products/0614--7--1-.mp4"
   },
   {
     "id": "pearl-lariat-backdrop",

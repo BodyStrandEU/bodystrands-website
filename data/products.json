@@ -7056,12 +7056,12 @@
       "https://i.etsystatic.com/55122258/r/il/2001b9/7698999546/il_fullxfull.7698999546_rxit.jpg",
       "https://i.etsystatic.com/55122258/r/il/4ba5d1/7805068851/il_fullxfull.7805068851_9t6p.jpg",
       "https://i.etsystatic.com/55122258/r/il/ff2c3d/8138547075/il_fullxfull.8138547075_5799.jpg",
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
       "https://i.etsystatic.com/55122258/r/il/6f32de/7805260215/il_fullxfull.7805260215_hpf4.jpg",
       "https://i.etsystatic.com/55122258/r/il/28c0a6/7757181622/il_fullxfull.7757181622_5sue.jpg",
-      "https://i.etsystatic.com/55122258/r/il/6f22cc/7812422722/il_fullxfull.7812422722_eywc.jpg",
       "https://i.etsystatic.com/55122258/r/il/728a96/7736687519/il_fullxfull.7736687519_os32.jpg",
-      "https://i.etsystatic.com/55122258/r/il/3c7a2a/7805135505/il_fullxfull.7805135505_sub4.jpg",
-      "https://i.etsystatic.com/55122258/r/il/be4849/7757121780/il_fullxfull.7757121780_4iz9.jpg"
+      "https://i.etsystatic.com/55122258/r/il/be4849/7757121780/il_fullxfull.7757121780_4iz9.jpg",
+      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg"
     ],
     "variantGroups": [
       {
@@ -7082,7 +7082,8 @@
           "Large 71 cm - 100 cm"
         ]
       }
-    ]
+    ],
+    "video": "/images/products/0614--20-.mp4"
   },
   {
     "id": "pearl-body-chain",

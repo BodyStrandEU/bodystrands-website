@@ -61,9 +61,9 @@ export default function Navbar() {
             <Image
               src="/images/logo.png"
               alt="Bodystrands"
-              width={2000}
-              height={2000}
-              className={`h-14 md:h-16 w-auto object-contain transition-all duration-300 ${
+              width={1802}
+              height={169}
+              className={`h-6 md:h-7 w-auto object-contain transition-all duration-300 ${
                 scrolled ? "" : "brightness-0 invert"
               }`}
               priority
@@ -77,7 +77,7 @@ export default function Navbar() {
               <button
                 onClick={() => setShopOpen(!shopOpen)}
                 className={`flex items-center gap-1.5 text-[0.65rem] font-light tracking-[0.22em] uppercase transition-colors duration-200 ${
-                  shopOpen ? "text-[#A0622A]" : "text-[#2C2220] hover:text-[#A0622A]"
+                  shopOpen ? "text-[#A0622A]" : scrolled ? "text-[#2C2220] hover:text-[#A0622A]" : "text-white/90 hover:text-white"
                 }`}
               >
                 Shop
@@ -130,7 +130,9 @@ export default function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-[0.65rem] font-light tracking-[0.22em] uppercase text-[#2C2220] hover:text-[#A0622A] transition-colors duration-200"
+                className={`text-[0.65rem] font-light tracking-[0.22em] uppercase transition-colors duration-200 ${
+                  scrolled ? "text-[#2C2220] hover:text-[#A0622A]" : "text-white/90 hover:text-white"
+                }`}
               >
                 {link.label}
               </Link>

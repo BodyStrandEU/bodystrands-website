@@ -3833,7 +3833,11 @@
           "Large (+23cm ext)"
         ]
       }
-    ]
+    ],
+    "variantVideos": {
+      "Gold Tone": "/images/products/fiji-vid.mp4",
+      "Silver Tone": "/images/products/fiji-vid.mp4"
+    }
   },
   {
     "id": "chain-waist-belt",

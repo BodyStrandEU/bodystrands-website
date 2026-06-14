@@ -30,21 +30,9 @@ export default function ContactPage() {
             </div>
 
             <div>
-              <p className="text-[0.55rem] tracking-[0.25em] uppercase text-[#A0622A] mb-3">Shop</p>
-              <a
-                href="https://www.etsy.com/shop/bodystrandseu"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-sm font-light text-[#2C2220] hover:text-[#A0622A] transition-colors tracking-wide block mb-1"
-              >
-                Etsy — bodystrandseu
-              </a>
-            </div>
-
-            <div>
               <p className="text-[0.55rem] tracking-[0.25em] uppercase text-[#A0622A] mb-3">Response Time</p>
               <p className="text-sm font-light text-[#8C7B6E] tracking-wide">
-                We typically respond within 24–48 hours.
+                We respond within 24 hours, guaranteed.
               </p>
             </div>
 

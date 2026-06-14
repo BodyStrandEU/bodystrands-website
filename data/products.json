@@ -7627,5 +7627,76 @@
         ]
       }
     ]
+  },
+  {
+    "id": "layered-turquoise-bead-bracelet",
+    "name": "Layered Turquoise Bead Bracelet",
+    "price": 30,
+    "currency": "EUR",
+    "category": "Bracelets",
+    "description": "There's something about a pop of turquoise on the wrist that just works — this double-strand bracelet pairs a delicate row of turquoise enamel beads with a fine cable chain, both worn together as one connected piece. Handcrafted in gold stainless steel.",
+    "fullDescription": "Each strand is crafted as one connected piece — a fine cable chain running alongside a longer-link chain set with small vivid turquoise enamel beads at even intervals. The two strands sit together naturally on the wrist for an effortless layered look, no stacking required.\n\nWaterproof and completely tarnish-resistant — wear it to the beach, the pool, or every day. Handcrafted with slight natural variations possible.",
+    "specs": [
+      {
+        "label": "Material",
+        "value": "316L Stainless Steel"
+      },
+      {
+        "label": "Finish",
+        "value": "Gold Tone"
+      },
+      {
+        "label": "Detail",
+        "value": "Turquoise enamel beads"
+      },
+      {
+        "label": "Sizes",
+        "value": "14 cm to 23 cm — select at checkout"
+      },
+      {
+        "label": "Extension",
+        "value": "+5 cm adjustable extension chain"
+      },
+      {
+        "label": "Closure",
+        "value": "Lobster clasp"
+      },
+      {
+        "label": "Care",
+        "value": "Wipe gently with a soft cloth. Store in an airtight container."
+      },
+      {
+        "label": "Shipping",
+        "value": "Dispatches within 1–2 business days"
+      }
+    ],
+    "featured": false,
+    "active": true,
+    "images": [
+      "/images/products/layered-turquoise-bracelet-1.jpg",
+      "/images/products/layered-turquoise-bracelet-2.png",
+      "/images/products/layered-turquoise-bracelet-3.png",
+      "/images/products/layered-turquoise-bracelet-4.jpg",
+      "/images/products/layered-turquoise-bracelet-5.png"
+    ],
+    "variantGroups": [
+      {
+        "label": "Size",
+        "type": "options",
+        "options": [
+          "14 CM",
+          "15 CM",
+          "16 CM",
+          "17 CM",
+          "18 CM",
+          "19 CM",
+          "20 CM",
+          "21 CM",
+          "22 CM",
+          "23 CM"
+        ]
+      }
+    ],
+    "video": "/images/products/layered-turquoise-bracelet.mp4"
   }
 ]

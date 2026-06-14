@@ -30,10 +30,10 @@ export default async function ShopPage({
 
   return (
     <div className="min-h-screen pt-28 md:pt-32 pb-24">
-      <div className="max-w-7xl mx-auto px-3 md:px-10">
+      <div className="max-w-7xl mx-auto px-1 md:px-10">
 
         {/* Page header */}
-        <div className="mb-12 md:mb-16">
+        <div className="mb-8 md:mb-12 px-2 md:px-0">
           <p className="text-[0.52rem] tracking-[0.35em] uppercase text-[#A0622A] mb-3">Bodystrands</p>
           <h1 className="font-heading text-5xl md:text-6xl font-light text-[#2C2220] leading-none">
             {activeLabel}
@@ -51,7 +51,7 @@ export default async function ShopPage({
 
           <div className="flex-1 min-w-0">
             {filtered.length > 0 ? (
-              <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-x-2 gap-y-6 md:gap-x-6 md:gap-y-12">
+              <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-x-0.5 gap-y-4 md:gap-x-4 md:gap-y-8">
                 {filtered.map((product, i) => (
                   <ProductCard key={product.id} product={product} priority={i < 4} />
                 ))}

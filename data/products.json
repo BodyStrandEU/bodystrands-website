@@ -7173,7 +7173,7 @@
     "price": 45,
     "currency": "EUR",
     "category": "Body Chains",
-    "description": "Your meaningful body accessory. This dainty gold body chain features a delicate cross charm — a personal, elegant piece handcrafted from waterproof stainless steel for the beach and everyday wear.",
+    "description": "Your meaningful body accessory. This dainty gold body chain features a delicate cross charm — a personal, elegant piece handcrafted from waterproof stainless steel for the beach and everyday wear.\n\nSize & Dimensions:\nNeck Fit: Adjustable from 46 cm to 59 cm (includes a 13 cm extender)\nWaist/Hip Fit: Adjustable from 79 cm to 102 cm\nSelect Small (+7 cm), Medium (+14 cm), or Large (+23 cm) extension",
     "fullDescription": "A fine stainless steel body chain with a small cross pendant at the centre — faith meets body jewelry in a piece that's subtle enough for every occasion. Three extender sizes for a custom fit.\n\nHandcrafted in gold-tone stainless steel. Completely waterproof and non-tarnish.",
     "specs": [
       {
@@ -7208,16 +7208,17 @@
     "featured": false,
     "active": true,
     "images": [
+      "/images/products/IMG_8906.jpeg",
+      "https://i.etsystatic.com/55122258/r/il/89f510/7787455583/il_fullxfull.7787455583_kuve.jpg",
+      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.jpg",
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
       "https://i.etsystatic.com/55122258/r/il/ea68a4/7750355964/il_fullxfull.7750355964_25s6.jpg",
       "https://i.etsystatic.com/55122258/r/il/33e888/7787368067/il_fullxfull.7787368067_8zvi.jpg",
-      "https://i.etsystatic.com/55122258/r/il/89f510/7787455583/il_fullxfull.7787455583_kuve.jpg",
-      "https://i.etsystatic.com/55122258/r/il/d0285b/7798307919/il_fullxfull.7798307919_807u.jpg",
       "https://i.etsystatic.com/55122258/r/il/d31d91/7798307897/il_fullxfull.7798307897_d9b4.jpg",
-      "https://i.etsystatic.com/55122258/r/il/0d3b34/7812425666/il_fullxfull.7812425666_ipil.jpg",
       "https://i.etsystatic.com/55122258/r/il/372c16/7742861574/il_fullxfull.7742861574_dgsv.jpg",
       "https://i.etsystatic.com/55122258/r/il/9bb31a/7787172961/il_fullxfull.7787172961_487s.jpg",
-      "https://i.etsystatic.com/55122258/r/il/780de3/7750363198/il_fullxfull.7750363198_da9v.jpg",
-      "https://i.etsystatic.com/55122258/r/il/1e7c1a/7787375199/il_fullxfull.7787375199_hxs5.jpg"
+      "https://i.etsystatic.com/55122258/r/il/1e7c1a/7787375199/il_fullxfull.7787375199_hxs5.jpg",
+      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg"
     ],
     "variantGroups": [
       {
@@ -7228,7 +7229,8 @@
           "Large (+23cm ext)"
         ]
       }
-    ]
+    ],
+    "video": "/images/products/0614--21-.mp4"
   },
   {
     "id": "beach-belly-chain",

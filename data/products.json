@@ -5048,11 +5048,10 @@
       "https://i.etsystatic.com/55122258/r/il/b78f3a/8138541925/il_fullxfull.8138541925_g6th.jpg",
       "https://i.etsystatic.com/55122258/r/il/af25e7/7926269718/il_fullxfull.7926269718_8xop.jpg",
       "https://i.etsystatic.com/55122258/r/il/c54d54/7807712879/il_fullxfull.7807712879_fg0v.jpg",
-      "https://i.etsystatic.com/55122258/r/il/0006d2/7807717149/il_fullxfull.7807717149_o5xw.jpg",
       "https://i.etsystatic.com/55122258/r/il/a4db4a/7926273142/il_fullxfull.7926273142_rpob.jpg",
-      "https://i.etsystatic.com/55122258/r/il/3817ea/7812484438/il_fullxfull.7812484438_g6ab.jpg",
       "https://i.etsystatic.com/55122258/r/il/0b7bbb/7807708103/il_fullxfull.7807708103_d3u1.jpg",
-      "https://i.etsystatic.com/55122258/r/il/19ec2b/7759756284/il_fullxfull.7759756284_19i0.jpg"
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
+      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg"
     ],
     "variantGroups": [
       {
@@ -5063,7 +5062,8 @@
           "Large 71 cm - 100 cm"
         ]
       }
-    ]
+    ],
+    "video": "/images/products/bell-chain-with-cross.mov"
   },
   {
     "id": "gold-belly-body-chain",

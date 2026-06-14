@@ -6040,12 +6040,12 @@
         "value": "Bridal, wedding, formal"
       },
       {
-        "label": "Custom fit",
-        "value": "Message us after ordering — we resize at no extra cost"
+        "label": "Fit",
+        "value": "Easy slip-on necklace"
       },
       {
         "label": "Care",
-        "value": "Avoid water, perfumes, lotions. Store in an airtight container."
+        "value": "Avoid perfumes, lotions. Store in an airtight container."
       },
       {
         "label": "Shipping",
@@ -6062,7 +6062,6 @@
       "https://i.etsystatic.com/55122258/r/il/5a6448/7883951523/il_fullxfull.7883951523_sded.jpg",
       "https://i.etsystatic.com/55122258/r/il/671d65/7883984639/il_fullxfull.7883984639_iztj.jpg",
       "https://i.etsystatic.com/55122258/r/il/891446/7836088356/il_fullxfull.7836088356_316o.jpg",
-      "https://i.etsystatic.com/55122258/r/il/885dbc/7860391007/il_fullxfull.7860391007_aw4s.jpg",
       "https://i.etsystatic.com/55122258/r/il/18ca85/7804755673/il_fullxfull.7804755673_8jj6.jpg",
       "https://i.etsystatic.com/55122258/r/il/ccdf8e/7804755677/il_fullxfull.7804755677_14iy.jpg"
     ],
@@ -6084,7 +6083,8 @@
           "December"
         ]
       }
-    ]
+    ],
+    "video": "/images/products/0614--12-.mp4"
   },
   {
     "id": "silver-waterproof-belly-chain",

@@ -53,11 +53,11 @@ function SortableImage({ id, url, onDelete, localPreview }: SortableImageProps) 
       <div style={{
         width: "100px",
         height: "100px",
-        border: "1px solid #e5e7eb",
+        border: "1px solid var(--admin-border)",
         borderRadius: "4px",
         overflow: "hidden",
         position: "relative",
-        background: "#f3f4f6",
+        background: "var(--admin-surface2)",
       }}>
         {url.endsWith(".mp4") || url.endsWith(".mov") ? (
           <video
@@ -172,7 +172,7 @@ function ImageSection({ title, images, onChange, onUpload }: ImageSectionProps) 
 
   return (
     <div style={{ marginBottom: "1.5rem" }}>
-      <h4 style={{ margin: "0 0 0.75rem", fontSize: "0.85rem", fontWeight: 600, color: "#374151" }}>
+      <h4 style={{ margin: "0 0 0.75rem", fontSize: "0.85rem", fontWeight: 600, color: "var(--admin-text2)" }}>
         {title}
       </h4>
 
@@ -184,7 +184,7 @@ function ImageSection({ title, images, onChange, onUpload }: ImageSectionProps) 
             ))}
             {/* Uploading previews */}
             {pending.map((p) => (
-              <div key={p.id} style={{ width: "100px", height: "100px", border: "1px solid #e5e7eb", borderRadius: "4px", overflow: "hidden", position: "relative", background: "#f3f4f6" }}>
+              <div key={p.id} style={{ width: "100px", height: "100px", border: "1px solid var(--admin-border)", borderRadius: "4px", overflow: "hidden", position: "relative", background: "var(--admin-surface2)" }}>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src={p.previewUrl} alt="" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
                 <div style={{ position: "absolute", inset: 0, background: "rgba(0,0,0,0.35)", display: "flex", alignItems: "center", justifyContent: "center" }}>
@@ -208,11 +208,11 @@ function ImageSection({ title, images, onChange, onUpload }: ImageSectionProps) 
         style={{
           display: "block",
           padding: "1rem",
-          border: `2px dashed ${dragOver ? "#A0622A" : "#d1d5db"}`,
+          border: `2px dashed ${dragOver ? "#A0622A" : "var(--admin-border2)"}`,
           borderRadius: "4px",
           textAlign: "center",
           cursor: isUploading ? "wait" : "pointer",
-          background: dragOver ? "#fdf6f0" : "#f9fafb",
+          background: dragOver ? "#fdf6f0" : "var(--admin-bg)",
           transition: "all 0.15s",
         }}
       >
@@ -224,7 +224,7 @@ function ImageSection({ title, images, onChange, onUpload }: ImageSectionProps) 
           onChange={(e) => { void handleFiles(e.target.files); }}
           disabled={isUploading}
         />
-        <span style={{ fontSize: "0.78rem", color: "#6b7280" }}>
+        <span style={{ fontSize: "0.78rem", color: "var(--admin-muted)" }}>
           {isUploading ? "Uploading..." : "Drop files here or click to upload (jpg, png, webp, mp4, mov)"}
         </span>
       </label>
@@ -307,8 +307,8 @@ function VideoDropZone({ value, onChange }: VideoDropZoneProps) {
   }
 
   const inputSt: React.CSSProperties = {
-    width: "100%", padding: "0.5rem 0.75rem", border: "1px solid #d1d5db",
-    borderRadius: "4px", fontSize: "0.85rem", color: "#111", background: "#fff", boxSizing: "border-box",
+    width: "100%", padding: "0.5rem 0.75rem", border: "1px solid var(--admin-border2)",
+    borderRadius: "4px", fontSize: "0.85rem", color: "var(--admin-text)", background: "var(--admin-surface)", boxSizing: "border-box",
   };
 
   return (
@@ -324,10 +324,10 @@ function VideoDropZone({ value, onChange }: VideoDropZoneProps) {
         }}
         style={{
           display: "block", padding: "1.25rem",
-          border: `2px dashed ${dragOver ? "#A0622A" : "#d1d5db"}`,
+          border: `2px dashed ${dragOver ? "#A0622A" : "var(--admin-border2)"}`,
           borderRadius: "4px", textAlign: "center",
           cursor: uploading ? "wait" : "pointer",
-          background: dragOver ? "#fdf6f0" : "#f9fafb",
+          background: dragOver ? "#fdf6f0" : "var(--admin-bg)",
           transition: "all 0.15s", marginBottom: "0.5rem",
         }}
       >
@@ -339,11 +339,11 @@ function VideoDropZone({ value, onChange }: VideoDropZoneProps) {
           disabled={uploading}
         />
         <div style={{ fontSize: "1.4rem", marginBottom: "0.25rem" }}>🎬</div>
-        <span style={{ fontSize: "0.78rem", color: uploading ? "#A0622A" : "#6b7280" }}>
+        <span style={{ fontSize: "0.78rem", color: uploading ? "#A0622A" : "var(--admin-muted)" }}>
           {progress || (uploading ? "Uploading…" : "Drop .mp4 here or click to upload")}
         </span>
         <br />
-        <span style={{ fontSize: "0.7rem", color: "#9ca3af" }}>
+        <span style={{ fontSize: "0.7rem", color: "var(--admin-muted2)" }}>
           Any size · H.264 mp4 recommended
         </span>
       </label>
@@ -364,7 +364,7 @@ function VideoDropZone({ value, onChange }: VideoDropZoneProps) {
       {value && (
         <video
           src={value}
-          style={{ marginTop: "0.5rem", width: "100%", maxWidth: "200px", height: "auto", borderRadius: "4px", border: "1px solid #e5e7eb" }}
+          style={{ marginTop: "0.5rem", width: "100%", maxWidth: "200px", height: "auto", borderRadius: "4px", border: "1px solid var(--admin-border)" }}
           muted
           controls
         />
@@ -631,11 +631,11 @@ export default function ProductEditor({ params }: { params: Promise<{ id: string
   const inputStyle: React.CSSProperties = {
     width: "100%",
     padding: "0.5rem 0.75rem",
-    border: "1px solid #d1d5db",
+    border: "1px solid var(--admin-border2)",
     borderRadius: "4px",
     fontSize: "0.85rem",
-    color: "#111",
-    background: "#fff",
+    color: "var(--admin-text)",
+    background: "var(--admin-surface)",
     boxSizing: "border-box",
   };
 
@@ -643,30 +643,30 @@ export default function ProductEditor({ params }: { params: Promise<{ id: string
     display: "block",
     fontSize: "0.75rem",
     fontWeight: 600,
-    color: "#374151",
+    color: "var(--admin-text2)",
     marginBottom: "0.35rem",
     textTransform: "uppercase",
     letterSpacing: "0.05em",
   };
 
   const sectionStyle: React.CSSProperties = {
-    background: "#fff",
-    border: "1px solid #e5e7eb",
+    background: "var(--admin-surface)",
+    border: "1px solid var(--admin-border)",
     borderRadius: "8px",
     padding: "1.5rem",
     marginBottom: "1.25rem",
   };
 
   if (loading) return (
-    <div style={{ padding: "2rem", color: "#6b7280" }}>Loading...</div>
+    <div style={{ padding: "2rem", color: "var(--admin-muted)" }}>Loading...</div>
   );
 
   return (
-    <div style={{ minHeight: "100vh", background: "#f9fafb" }}>
+    <div style={{ minHeight: "100vh", background: "var(--admin-bg)" }}>
       {/* Header */}
       <div style={{
-        background: "#fff",
-        borderBottom: "1px solid #e5e7eb",
+        background: "var(--admin-surface)",
+        borderBottom: "1px solid var(--admin-border)",
         padding: "1rem 2rem",
         display: "flex",
         alignItems: "center",
@@ -678,11 +678,11 @@ export default function ProductEditor({ params }: { params: Promise<{ id: string
         <div>
           <button
             onClick={() => router.push("/admin/dashboard")}
-            style={{ background: "none", border: "none", cursor: "pointer", color: "#6b7280", fontSize: "0.85rem", padding: 0 }}
+            style={{ background: "none", border: "none", cursor: "pointer", color: "var(--admin-muted)", fontSize: "0.85rem", padding: 0 }}
           >
             ← Dashboard
           </button>
-          <h1 style={{ margin: "0.25rem 0 0", fontSize: "1.1rem", fontWeight: 600, color: "#111" }}>
+          <h1 style={{ margin: "0.25rem 0 0", fontSize: "1.1rem", fontWeight: 600, color: "var(--admin-text)" }}>
             {isNew ? "New Product" : form.name || "Edit Product"}
           </h1>
         </div>
@@ -721,7 +721,7 @@ export default function ProductEditor({ params }: { params: Promise<{ id: string
 
         {/* Basic Info */}
         <div style={sectionStyle}>
-          <h2 style={{ margin: "0 0 1.25rem", fontSize: "0.9rem", fontWeight: 700, color: "#111", textTransform: "uppercase", letterSpacing: "0.08em" }}>
+          <h2 style={{ margin: "0 0 1.25rem", fontSize: "0.9rem", fontWeight: 700, color: "var(--admin-text)", textTransform: "uppercase", letterSpacing: "0.08em" }}>
             Basic Info
           </h2>
 
@@ -735,7 +735,7 @@ export default function ProductEditor({ params }: { params: Promise<{ id: string
                 placeholder="my-product-id"
                 disabled={!isNew}
               />
-              {isNew && <p style={{ fontSize: "0.7rem", color: "#6b7280", margin: "0.25rem 0 0" }}>URL-safe, lowercase, hyphens only. Cannot be changed later.</p>}
+              {isNew && <p style={{ fontSize: "0.7rem", color: "var(--admin-muted)", margin: "0.25rem 0 0" }}>URL-safe, lowercase, hyphens only. Cannot be changed later.</p>}
             </div>
             <div>
               <label style={labelStyle}>Name</label>
@@ -773,7 +773,7 @@ export default function ProductEditor({ params }: { params: Promise<{ id: string
               </select>
             </div>
             <div style={{ display: "flex", flexDirection: "column", justifyContent: "flex-end", gap: "0.5rem" }}>
-              <label style={{ display: "flex", alignItems: "center", gap: "0.5rem", cursor: "pointer", fontSize: "0.82rem", color: "#374151" }}>
+              <label style={{ display: "flex", alignItems: "center", gap: "0.5rem", cursor: "pointer", fontSize: "0.82rem", color: "var(--admin-text2)" }}>
                 <input
                   type="checkbox"
                   checked={form.featured}
@@ -781,7 +781,7 @@ export default function ProductEditor({ params }: { params: Promise<{ id: string
                 />
                 Featured
               </label>
-              <label style={{ display: "flex", alignItems: "center", gap: "0.5rem", cursor: "pointer", fontSize: "0.82rem", color: "#374151" }}>
+              <label style={{ display: "flex", alignItems: "center", gap: "0.5rem", cursor: "pointer", fontSize: "0.82rem", color: "var(--admin-text2)" }}>
                 <input
                   type="checkbox"
                   checked={form.active ?? true}
@@ -816,7 +816,7 @@ export default function ProductEditor({ params }: { params: Promise<{ id: string
         {/* Specs */}
         <div style={sectionStyle}>
           <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: "1rem" }}>
-            <h2 style={{ margin: 0, fontSize: "0.9rem", fontWeight: 700, color: "#111", textTransform: "uppercase", letterSpacing: "0.08em" }}>
+            <h2 style={{ margin: 0, fontSize: "0.9rem", fontWeight: 700, color: "var(--admin-text)", textTransform: "uppercase", letterSpacing: "0.08em" }}>
               Specs
             </h2>
             <button
@@ -828,7 +828,7 @@ export default function ProductEditor({ params }: { params: Promise<{ id: string
                 borderRadius: "4px",
                 fontSize: "0.75rem",
                 cursor: "pointer",
-                color: "#374151",
+                color: "var(--admin-text2)",
               }}
             >
               + Add Spec
@@ -855,7 +855,7 @@ export default function ProductEditor({ params }: { params: Promise<{ id: string
                   background: "none",
                   border: "none",
                   cursor: "pointer",
-                  color: "#9ca3af",
+                  color: "var(--admin-muted2)",
                   fontSize: "1.2rem",
                   lineHeight: 1,
                   padding: "0.25rem",
@@ -866,36 +866,36 @@ export default function ProductEditor({ params }: { params: Promise<{ id: string
             </div>
           ))}
           {(form.specs ?? []).length === 0 && (
-            <p style={{ fontSize: "0.78rem", color: "#9ca3af" }}>No specs yet.</p>
+            <p style={{ fontSize: "0.78rem", color: "var(--admin-muted2)" }}>No specs yet.</p>
           )}
         </div>
 
         {/* Variant Groups (mandatory customer selectors) */}
         <div style={sectionStyle}>
           <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: "0.5rem" }}>
-            <h2 style={{ margin: 0, fontSize: "0.9rem", fontWeight: 700, color: "#111", textTransform: "uppercase", letterSpacing: "0.08em" }}>
+            <h2 style={{ margin: 0, fontSize: "0.9rem", fontWeight: 700, color: "var(--admin-text)", textTransform: "uppercase", letterSpacing: "0.08em" }}>
               Customer Selectors
             </h2>
             <button
               onClick={addVariantGroup}
-              style={{ padding: "0.3rem 0.75rem", background: "transparent", border: "1px solid #d1d5db", borderRadius: "4px", fontSize: "0.75rem", cursor: "pointer", color: "#374151" }}
+              style={{ padding: "0.3rem 0.75rem", background: "transparent", border: "1px solid var(--admin-border2)", borderRadius: "4px", fontSize: "0.75rem", cursor: "pointer", color: "var(--admin-text2)" }}
             >
               + Add Selector
             </button>
           </div>
-          <p style={{ margin: "0 0 1rem", fontSize: "0.78rem", color: "#6b7280" }}>
+          <p style={{ margin: "0 0 1rem", fontSize: "0.78rem", color: "var(--admin-muted)" }}>
             Mandatory options the buyer must choose before adding to cart (e.g. Size, Butterfly Color, Birthstone).
           </p>
           {(form.variantGroups ?? []).map((group, i) => (
-            <div key={i} style={{ background: "#f9fafb", border: "1px solid #e5e7eb", borderRadius: "6px", padding: "0.75rem 1rem", marginBottom: "0.75rem" }}>
+            <div key={i} style={{ background: "var(--admin-bg)", border: "1px solid var(--admin-border)", borderRadius: "6px", padding: "0.75rem 1rem", marginBottom: "0.75rem" }}>
               <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: "0.5rem" }}>
                 <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
-                  <span style={{ fontSize: "0.82rem", fontWeight: 600, color: "#111" }}>{group.label}</span>
+                  <span style={{ fontSize: "0.82rem", fontWeight: 600, color: "var(--admin-text)" }}>{group.label}</span>
                   <span style={{ fontSize: "0.65rem", background: group.type === "text" ? "#ede9fe" : "#e0f2fe", color: group.type === "text" ? "#6d28d9" : "#0369a1", padding: "0.1rem 0.4rem", borderRadius: "3px", textTransform: "uppercase", letterSpacing: "0.05em" }}>
                     {group.type === "text" ? "Text Box" : "Options"}
                   </span>
                 </div>
-                <button onClick={() => removeVariantGroup(i)} style={{ background: "none", border: "none", cursor: "pointer", color: "#9ca3af", fontSize: "1.1rem", lineHeight: 1 }}>×</button>
+                <button onClick={() => removeVariantGroup(i)} style={{ background: "none", border: "none", cursor: "pointer", color: "var(--admin-muted2)", fontSize: "1.1rem", lineHeight: 1 }}>×</button>
               </div>
 
               {group.type === "text" ? (
@@ -906,7 +906,7 @@ export default function ProductEditor({ params }: { params: Promise<{ id: string
                     onChange={(e) => updateVariantGroupPlaceholder(i, e.target.value)}
                     placeholder="Placeholder text shown to customer (e.g. Enter your name)"
                   />
-                  <p style={{ margin: "0.3rem 0 0", fontSize: "0.72rem", color: "#9ca3af" }}>
+                  <p style={{ margin: "0.3rem 0 0", fontSize: "0.72rem", color: "var(--admin-muted2)" }}>
                     Customer must fill this in before they can buy
                   </p>
                 </>
@@ -918,7 +918,7 @@ export default function ProductEditor({ params }: { params: Promise<{ id: string
                     onChange={(e) => updateVariantGroupOptions(i, e.target.value)}
                     placeholder="Option 1, Option 2, Option 3"
                   />
-                  <p style={{ margin: "0 0 0.5rem", fontSize: "0.72rem", color: "#9ca3af" }}>
+                  <p style={{ margin: "0 0 0.5rem", fontSize: "0.72rem", color: "var(--admin-muted2)" }}>
                     Edit options as comma-separated values
                   </p>
                   <input
@@ -931,7 +931,7 @@ export default function ProductEditor({ params }: { params: Promise<{ id: string
                     }}
                     placeholder="Price add-ons (optional) — e.g. Large:5, XL:10"
                   />
-                  <p style={{ margin: "0.3rem 0 0", fontSize: "0.72rem", color: "#9ca3af" }}>
+                  <p style={{ margin: "0.3rem 0 0", fontSize: "0.72rem", color: "var(--admin-muted2)" }}>
                     Format: OptionName:amount — leave blank for no price add
                   </p>
                 </>
@@ -939,16 +939,16 @@ export default function ProductEditor({ params }: { params: Promise<{ id: string
             </div>
           ))}
           {(form.variantGroups ?? []).length === 0 && (
-            <p style={{ fontSize: "0.78rem", color: "#9ca3af" }}>No customer selectors yet.</p>
+            <p style={{ fontSize: "0.78rem", color: "var(--admin-muted2)" }}>No customer selectors yet.</p>
           )}
         </div>
 
         {/* Card thumbnail images */}
         <div style={sectionStyle}>
-          <h2 style={{ margin: "0 0 0.75rem", fontSize: "0.9rem", fontWeight: 700, color: "#111", textTransform: "uppercase", letterSpacing: "0.08em" }}>
+          <h2 style={{ margin: "0 0 0.75rem", fontSize: "0.9rem", fontWeight: 700, color: "var(--admin-text)", textTransform: "uppercase", letterSpacing: "0.08em" }}>
             Card Thumbnail Images
           </h2>
-          <p style={{ margin: "0 0 1rem", fontSize: "0.78rem", color: "#6b7280" }}>
+          <p style={{ margin: "0 0 1rem", fontSize: "0.78rem", color: "var(--admin-muted)" }}>
             Used on the shop grid. First image is the main thumbnail.
           </p>
           <ImageSection
@@ -963,10 +963,10 @@ export default function ProductEditor({ params }: { params: Promise<{ id: string
         <div style={sectionStyle}>
           <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: "1rem" }}>
             <div>
-              <h2 style={{ margin: 0, fontSize: "0.9rem", fontWeight: 700, color: "#111", textTransform: "uppercase", letterSpacing: "0.08em" }}>
+              <h2 style={{ margin: 0, fontSize: "0.9rem", fontWeight: 700, color: "var(--admin-text)", textTransform: "uppercase", letterSpacing: "0.08em" }}>
                 Variants &amp; Gallery Images
               </h2>
-              <p style={{ margin: "0.25rem 0 0", fontSize: "0.78rem", color: "#6b7280" }}>
+              <p style={{ margin: "0.25rem 0 0", fontSize: "0.78rem", color: "var(--admin-muted)" }}>
                 Per-variant image galleries. Drag to reorder. First image = sub-hero.
               </p>
             </div>
@@ -979,7 +979,7 @@ export default function ProductEditor({ params }: { params: Promise<{ id: string
                 borderRadius: "4px",
                 fontSize: "0.75rem",
                 cursor: "pointer",
-                color: "#374151",
+                color: "var(--admin-text2)",
               }}
             >
               + Add Variant
@@ -987,18 +987,18 @@ export default function ProductEditor({ params }: { params: Promise<{ id: string
           </div>
 
           {(form.variants ?? []).length === 0 && (
-            <p style={{ fontSize: "0.78rem", color: "#9ca3af" }}>No variants. Click "Add Variant" to add one.</p>
+            <p style={{ fontSize: "0.78rem", color: "var(--admin-muted2)" }}>No variants. Click "Add Variant" to add one.</p>
           )}
 
           {(form.variants ?? []).map((variant) => (
             <div key={variant} style={{
-              border: "1px solid #e5e7eb",
+              border: "1px solid var(--admin-border)",
               borderRadius: "6px",
               padding: "1rem",
               marginBottom: "1rem",
             }}>
               <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: "0.75rem" }}>
-                <h3 style={{ margin: 0, fontSize: "0.85rem", fontWeight: 600, color: "#374151" }}>
+                <h3 style={{ margin: 0, fontSize: "0.85rem", fontWeight: 600, color: "var(--admin-text2)" }}>
                   {variant}
                 </h3>
                 <button
@@ -1007,7 +1007,7 @@ export default function ProductEditor({ params }: { params: Promise<{ id: string
                     background: "none",
                     border: "none",
                     cursor: "pointer",
-                    color: "#9ca3af",
+                    color: "var(--admin-muted2)",
                     fontSize: "0.75rem",
                   }}
                 >
@@ -1036,7 +1036,7 @@ export default function ProductEditor({ params }: { params: Promise<{ id: string
         {/* No-variant video */}
         {(form.variants ?? []).length === 0 && (
           <div style={sectionStyle}>
-            <h2 style={{ margin: "0 0 0.75rem", fontSize: "0.9rem", fontWeight: 700, color: "#111", textTransform: "uppercase", letterSpacing: "0.08em" }}>
+            <h2 style={{ margin: "0 0 0.75rem", fontSize: "0.9rem", fontWeight: 700, color: "var(--admin-text)", textTransform: "uppercase", letterSpacing: "0.08em" }}>
               Video (optional)
             </h2>
             <VideoDropZone
@@ -1053,11 +1053,11 @@ export default function ProductEditor({ params }: { params: Promise<{ id: string
             style={{
               padding: "0.6rem 1.5rem",
               background: "transparent",
-              border: "1px solid #d1d5db",
+              border: "1px solid var(--admin-border2)",
               borderRadius: "4px",
               fontSize: "0.85rem",
               cursor: "pointer",
-              color: "#374151",
+              color: "var(--admin-text2)",
             }}
           >
             Cancel

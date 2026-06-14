@@ -13,6 +13,19 @@
   --font-body: var(--font-josefin);
 }
 
+/* Admin dark-mode CSS variables — light defaults, overridden by useAdminTheme */
+:root {
+  --admin-bg:       #f9fafb;
+  --admin-surface:  #ffffff;
+  --admin-surface2: #f3f4f6;
+  --admin-border:   #e5e7eb;
+  --admin-border2:  #d1d5db;
+  --admin-text:     #111111;
+  --admin-text2:    #374151;
+  --admin-muted:    #6b7280;
+  --admin-muted2:   #9ca3af;
+}
+
 * {
   box-sizing: border-box;
 }

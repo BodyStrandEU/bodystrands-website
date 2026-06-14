@@ -43,32 +43,31 @@ export default function AdminDashboard() {
     });
     if (!res.ok) {
       setError("Failed to save changes");
-      // revert
       setProducts(products);
     }
   }
 
   return (
-    <div style={{ minHeight: "100vh", background: "#f9fafb" }}>
+    <div style={{ minHeight: "100vh", background: "var(--admin-bg)" }}>
       {/* Header */}
       <div style={{
-        background: "#fff",
-        borderBottom: "1px solid #e5e7eb",
+        background: "var(--admin-surface)",
+        borderBottom: "1px solid var(--admin-border)",
         padding: "1rem 2rem",
         display: "flex",
         alignItems: "center",
         justifyContent: "space-between",
       }}>
         <div>
-          <h1 style={{ margin: 0, fontSize: "1.25rem", fontWeight: 600, color: "#111" }}>
+          <h1 style={{ margin: 0, fontSize: "1.25rem", fontWeight: 600, color: "var(--admin-text)" }}>
             Bodystrands Admin
           </h1>
-          <p style={{ margin: 0, fontSize: "0.75rem", color: "#6b7280" }}>Product Manager</p>
+          <p style={{ margin: 0, fontSize: "0.75rem", color: "var(--admin-muted)" }}>Product Manager</p>
         </div>
         <div style={{ display: "flex", gap: "1rem", alignItems: "center" }}>
           <a
             href="/"
-            style={{ fontSize: "0.8rem", color: "#6b7280", textDecoration: "none" }}
+            style={{ fontSize: "0.8rem", color: "var(--admin-muted)", textDecoration: "none" }}
           >
             ← Back to site
           </a>
@@ -77,11 +76,11 @@ export default function AdminDashboard() {
             style={{
               padding: "0.4rem 1rem",
               background: "transparent",
-              border: "1px solid #d1d5db",
+              border: "1px solid var(--admin-border2)",
               borderRadius: "4px",
               fontSize: "0.8rem",
               cursor: "pointer",
-              color: "#374151",
+              color: "var(--admin-text2)",
             }}
           >
             Logout
@@ -96,7 +95,7 @@ export default function AdminDashboard() {
             onClick={() => router.push("/admin/site-images")}
             style={{
               padding: "0.6rem 1.5rem",
-              background: "#fff",
+              background: "var(--admin-surface)",
               color: "#A0622A",
               border: "1px solid #A0622A",
               borderRadius: "4px",
@@ -124,11 +123,11 @@ export default function AdminDashboard() {
           </button>
         </div>
 
-        {loading && <p style={{ color: "#6b7280" }}>Loading products...</p>}
+        {loading && <p style={{ color: "var(--admin-muted)" }}>Loading products...</p>}
         {error && <p style={{ color: "#c0392b" }}>{error}</p>}
 
         {!loading && !error && products.length === 0 && (
-          <p style={{ color: "#6b7280" }}>No products found.</p>
+          <p style={{ color: "var(--admin-muted)" }}>No products found.</p>
         )}
 
         <div style={{
@@ -142,8 +141,8 @@ export default function AdminDashboard() {
               <div
                 key={product.id}
                 style={{
-                  background: "#fff",
-                  border: "1px solid #e5e7eb",
+                  background: "var(--admin-surface)",
+                  border: "1px solid var(--admin-border)",
                   borderRadius: "8px",
                   overflow: "hidden",
                   opacity: isActive ? 1 : 0.6,
@@ -152,7 +151,7 @@ export default function AdminDashboard() {
                 {/* Thumbnail */}
                 <div style={{
                   height: "180px",
-                  background: "#f3f4f6",
+                  background: "var(--admin-surface2)",
                   overflow: "hidden",
                   position: "relative",
                 }}>
@@ -169,7 +168,7 @@ export default function AdminDashboard() {
                       alignItems: "center",
                       justifyContent: "center",
                       height: "100%",
-                      color: "#9ca3af",
+                      color: "var(--admin-muted2)",
                       fontSize: "0.75rem",
                     }}>
                       No image
@@ -193,10 +192,10 @@ export default function AdminDashboard() {
 
                 {/* Info */}
                 <div style={{ padding: "1rem" }}>
-                  <h3 style={{ margin: "0 0 0.25rem", fontSize: "0.95rem", fontWeight: 600, color: "#111" }}>
+                  <h3 style={{ margin: "0 0 0.25rem", fontSize: "0.95rem", fontWeight: 600, color: "var(--admin-text)" }}>
                     {product.name}
                   </h3>
-                  <p style={{ margin: "0 0 0.25rem", fontSize: "0.8rem", color: "#6b7280" }}>
+                  <p style={{ margin: "0 0 0.25rem", fontSize: "0.8rem", color: "var(--admin-muted)" }}>
                     {product.category}
                   </p>
                   <p style={{ margin: "0 0 1rem", fontSize: "0.9rem", fontWeight: 500, color: "#A0622A" }}>
@@ -224,8 +223,8 @@ export default function AdminDashboard() {
                       style={{
                         padding: "0.4rem 0.75rem",
                         background: "transparent",
-                        color: "#6b7280",
-                        border: "1px solid #d1d5db",
+                        color: "var(--admin-muted)",
+                        border: "1px solid var(--admin-border2)",
                         borderRadius: "4px",
                         fontSize: "0.75rem",
                         cursor: "pointer",

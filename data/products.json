@@ -5067,7 +5067,7 @@
   },
   {
     "id": "gold-belly-body-chain",
-    "name": "Gold Belly Body Chain",
+    "name": "Belly Body Chain",
     "price": 45,
     "currency": "EUR",
     "category": "Body Chains",
@@ -5118,16 +5118,19 @@
         "https://i.etsystatic.com/55122258/r/il/ed39ed/7779996890/il_fullxfull.7779996890_mpq0.jpg",
         "https://i.etsystatic.com/55122258/r/il/77471a/7827944739/il_fullxfull.7827944739_ff8t.jpg",
         "https://i.etsystatic.com/55122258/r/il/878873/7827955559/il_fullxfull.7827955559_n4qc.jpg",
-        "https://i.etsystatic.com/55122258/r/il/e0d0b6/7801769979/il_fullxfull.7801769979_dtlp.jpg",
         "https://i.etsystatic.com/55122258/r/il/372c16/7742861574/il_fullxfull.7742861574_dgsv.jpg",
         "https://i.etsystatic.com/55122258/r/il/9bb31a/7787172961/il_fullxfull.7787172961_487s.jpg",
         "https://i.etsystatic.com/55122258/r/il/b22b9f/7976800048/il_fullxfull.7976800048_esh6.jpg",
-        "https://i.etsystatic.com/55122258/r/il/64dc3e/7812414682/il_fullxfull.7812414682_1fub.jpg"
+        "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
+        "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg",
+        "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.jpg"
       ],
       "Silver Tone": [
-        "https://i.etsystatic.com/55122258/r/il/e0d0b6/7801769979/il_fullxfull.7801769979_dtlp.jpg",
         "https://i.etsystatic.com/55122258/r/il/d76b2b/7779997014/il_fullxfull.7779997014_46jf.jpg",
-        "https://i.etsystatic.com/55122258/r/il/64dc3e/7812414682/il_fullxfull.7812414682_1fub.jpg"
+        "/images/products/9a0c82e4-a01e-47e0-a2b1-eb146080f383-2.jpg",
+        "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
+        "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg",
+        "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.jpg"
       ]
     },
     "variantGroups": [
@@ -5139,7 +5142,11 @@
           "Large (+23cm ext)"
         ]
       }
-    ]
+    ],
+    "variantVideos": {
+      "Silver Tone": "/images/products/0614--6-.mp4",
+      "Gold Tone": "/images/products/0614--6-.mp4"
+    }
   },
   {
     "id": "pearl-glasses-chain",

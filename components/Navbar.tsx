@@ -63,7 +63,7 @@ export default function Navbar() {
               alt="Bodystrands"
               width={1802}
               height={169}
-              className={`h-6 md:h-7 w-auto object-contain transition-all duration-300 ${
+              className={`h-3 md:h-3.5 w-auto object-contain transition-all duration-300 ${
                 scrolled ? "" : "brightness-0 invert"
               }`}
               priority

@@ -6357,8 +6357,8 @@
     "price": 40,
     "currency": "EUR",
     "category": "Back Chains",
-    "description": "Your open-back statement, with a butterfly twist. This gold or silver butterfly backdrop necklace features a delicate butterfly charm in your chosen colour — a romantic, playful piece for bridal occasions and prom.",
-    "fullDescription": "Choose your butterfly colour — White, Blue, Pink, Purple, or Yellow — alongside Gold or Silver stainless steel at checkout. The charm sits at the bottom of a fine chain that drapes down the open back, finishing with a delicate butterfly pendant.\n\nHandcrafted in stainless steel. Adjustable length. Message us your back measurement after ordering.",
+    "description": "Your open-back statement, with a butterfly twist. This gold butterfly backdrop necklace features a delicate butterfly charm in your chosen colour — a romantic, playful piece for bridal occasions and prom.",
+    "fullDescription": "Choose your butterfly colour — White, Blue, Pink, Purple, or Yellow — alongside Gold stainless steel at checkout. The charm sits at the bottom of a fine chain that drapes down the open back, finishing with a delicate butterfly pendant.\n\nHandcrafted in stainless steel. Adjustable length. Message us your back measurement after ordering.",
     "specs": [
       {
         "label": "Material",
@@ -6366,7 +6366,7 @@
       },
       {
         "label": "Colours",
-        "value": "Gold or Silver"
+        "value": "Gold"
       },
       {
         "label": "Butterfly",
@@ -6387,33 +6387,29 @@
       {
         "label": "Shipping",
         "value": "Dispatches within 1–2 business days"
+      },
+      {
+        "label": "Size",
+        "value": "Neck Measurement: 64 cm easy slip-on loop (no clasp required). Waist/Hip Fit: Fully adjustable up to a 102 cm total reach."
       }
     ],
     "featured": false,
     "active": true,
     "variants": [
-      "Gold Tone",
-      "Silver Tone"
+      "Gold Tone"
     ],
     "images": [
       "https://i.etsystatic.com/55122258/r/il/a68789/7850317727/il_fullxfull.7850317727_1dsd.jpg"
     ],
     "variantImages": {
       "Gold Tone": [
+        "https://i.etsystatic.com/55122258/r/il/bb8878/7802417294/il_fullxfull.7802417294_1vgp.jpg",
         "https://i.etsystatic.com/55122258/r/il/a68789/7850317727/il_fullxfull.7850317727_1dsd.jpg",
         "https://i.etsystatic.com/55122258/r/il/28aea9/7802431830/il_fullxfull.7802431830_f6hb.jpg",
-        "https://i.etsystatic.com/55122258/r/il/16d4dc/7802434784/il_fullxfull.7802434784_c2kj.jpg",
         "https://i.etsystatic.com/55122258/r/il/c4f6ca/7790859607/il_fullxfull.7790859607_ljlp.jpg",
-        "https://i.etsystatic.com/55122258/r/il/f16d48/7860338237/il_fullxfull.7860338237_qnbr.jpg",
-        "https://i.etsystatic.com/55122258/r/il/bb8878/7802417294/il_fullxfull.7802417294_1vgp.jpg",
         "https://i.etsystatic.com/55122258/r/il/292446/7850317601/il_fullxfull.7850317601_3wc6.jpg",
         "https://i.etsystatic.com/55122258/r/il/e57d7b/7802373466/il_fullxfull.7802373466_penx.jpg",
         "https://i.etsystatic.com/55122258/r/il/94c0e7/7802373322/il_fullxfull.7802373322_j3sv.jpg"
-      ],
-      "Silver Tone": [
-        "https://i.etsystatic.com/55122258/r/il/f50265/7850397775/il_fullxfull.7850397775_2hy5.jpg",
-        "https://i.etsystatic.com/55122258/r/il/c4f6ca/7790859607/il_fullxfull.7790859607_ljlp.jpg",
-        "https://i.etsystatic.com/55122258/r/il/f16d48/7860338237/il_fullxfull.7860338237_qnbr.jpg"
       ]
     },
     "variantGroups": [
@@ -6427,7 +6423,10 @@
           "Yellow"
         ]
       }
-    ]
+    ],
+    "variantVideos": {
+      "Gold Tone": "/images/products/0614--14-.mp4"
+    }
   },
   {
     "id": "bridal-open-back-necklace",

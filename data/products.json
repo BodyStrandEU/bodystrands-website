@@ -7552,7 +7552,7 @@
       }
     ],
     "featured": false,
-    "active": true,
+    "active": false,
     "variants": [
       "Gold Tone",
       "Silver Tone"

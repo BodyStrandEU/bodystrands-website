@@ -5679,23 +5679,27 @@
     ],
     "variantImages": {
       "Gold Tone": [
-        "https://i.etsystatic.com/55122258/r/il/01a0e7/7798159329/il_fullxfull.7798159329_53nd.jpg",
+        "/images/products/6a2d67bf-5008-41d9-982e-25bf2b68c444.png",
         "https://i.etsystatic.com/55122258/r/il/c3abc7/7750208352/il_fullxfull.7750208352_j22z.jpg",
         "https://i.etsystatic.com/55122258/r/il/bbf883/7750208394/il_fullxfull.7750208394_5km6.jpg",
         "https://i.etsystatic.com/55122258/r/il/d00793/7746874302/il_fullxfull.7746874302_831y.jpg",
-        "https://i.etsystatic.com/55122258/r/il/fbed20/7798245021/il_fullxfull.7798245021_s27u.jpg",
         "https://i.etsystatic.com/55122258/r/il/029399/7798159413/il_fullxfull.7798159413_38c2.jpg",
-        "https://i.etsystatic.com/55122258/r/il/6215a1/7812426718/il_fullxfull.7812426718_m79y.jpg",
         "https://i.etsystatic.com/55122258/r/il/60582a/7798159381/il_fullxfull.7798159381_8ayl.jpg",
         "https://i.etsystatic.com/55122258/r/il/153b29/7794757793/il_fullxfull.7794757793_f5wn.jpg"
       ],
       "Silver Tone": [
+        "/images/products/8a35ecec-5a49-4ea7-8f8b-609ac639139b.png",
         "https://i.etsystatic.com/55122258/r/il/596cbb/7794750177/il_fullxfull.7794750177_4qyy.jpg",
         "https://i.etsystatic.com/55122258/r/il/d00793/7746874302/il_fullxfull.7746874302_831y.jpg",
-        "https://i.etsystatic.com/55122258/r/il/fbed20/7798245021/il_fullxfull.7798245021_s27u.jpg",
-        "https://i.etsystatic.com/55122258/r/il/6215a1/7812426718/il_fullxfull.7812426718_m79y.jpg",
-        "https://i.etsystatic.com/55122258/r/il/153b29/7794757793/il_fullxfull.7794757793_f5wn.jpg"
+        "https://i.etsystatic.com/55122258/r/il/153b29/7794757793/il_fullxfull.7794757793_f5wn.jpg",
+        "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
+        "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg",
+        "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.jpg"
       ]
+    },
+    "variantVideos": {
+      "Silver Tone": "/images/products/0614--8-.mp4",
+      "Gold Tone": "/images/products/0614--8-.mp4"
     }
   },
   {

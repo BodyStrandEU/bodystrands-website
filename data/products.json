@@ -7344,6 +7344,10 @@
       {
         "label": "Shipping",
         "value": "Dispatches within 1–2 business days"
+      },
+      {
+        "label": "Size",
+        "value": "Neck Fit: Adjustable from 46 cm to 59 cm (includes a 13 cm extender) Waist/Hip Fit: Adjustable from 79 cm to 102 cm Select Small (+7 cm), Medium (+14 cm), or Large (+23 cm) extension."
       }
     ],
     "featured": false,
@@ -7352,13 +7356,15 @@
       "https://i.etsystatic.com/55122258/r/il/ae446a/8060401053/il_fullxfull.8060401053_15gk.jpg",
       "https://i.etsystatic.com/55122258/r/il/d363a2/8060489691/il_fullxfull.8060489691_74zq.jpg",
       "https://i.etsystatic.com/55122258/r/il/22c904/7874038194/il_fullxfull.7874038194_iu3b.jpg",
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
       "https://i.etsystatic.com/55122258/r/il/cc8e98/7742858740/il_fullxfull.7742858740_59xj.jpg",
       "https://i.etsystatic.com/55122258/r/il/6f7a29/8012508612/il_fullxfull.8012508612_4ucd.jpg",
       "https://i.etsystatic.com/55122258/r/il/54e6ae/7790819453/il_fullxfull.7790819453_cxbl.jpg",
       "https://i.etsystatic.com/55122258/r/il/c4f6ca/7790859607/il_fullxfull.7790859607_ljlp.jpg",
       "https://i.etsystatic.com/55122258/r/il/738458/7753862542/il_fullxfull.7753862542_ix8i.jpg",
-      "https://i.etsystatic.com/55122258/r/il/465d5b/7860372619/il_fullxfull.7860372619_961n.jpg",
-      "https://i.etsystatic.com/55122258/r/il/1e7c1a/7787375199/il_fullxfull.7787375199_hxs5.jpg"
+      "https://i.etsystatic.com/55122258/r/il/1e7c1a/7787375199/il_fullxfull.7787375199_hxs5.jpg",
+      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.jpg",
+      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg"
     ],
     "variantGroups": [
       {
@@ -7379,7 +7385,8 @@
           "Large (+23cm ext)"
         ]
       }
-    ]
+    ],
+    "video": "/images/products/0614--22-.mp4"
   },
   {
     "id": "gold-pearl-backdrop-necklace",

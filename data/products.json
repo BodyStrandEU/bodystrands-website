@@ -4953,7 +4953,7 @@
   {
     "id": "pearl-lariat-back-necklace",
     "name": "Pearl Lariat Back Necklace",
-    "price": 45,
+    "price": 40,
     "currency": "EUR",
     "category": "Back Chains",
     "description": "Your bridal back, redefined. This handcrafted pearl lariat backdrop necklace hangs in an elegant beaded arc down the spine — romantic, luminous, and completely unmissable on an open-back wedding gown.",
@@ -4977,26 +4977,30 @@
       },
       {
         "label": "Care",
-        "value": "Avoid water, perfumes, lotions. Store in an airtight container."
+        "value": "Avoid perfumes, lotions. Store in an airtight container."
       },
       {
         "label": "Shipping",
         "value": "Dispatches within 1–2 business days"
+      },
+      {
+        "label": "Fit",
+        "value": "Easy slip-on necklace (no clasp)"
       }
     ],
     "featured": false,
     "active": true,
     "images": [
-      "https://i.etsystatic.com/55122258/r/il/40ceba/7931717448/il_fullxfull.7931717448_10b2.jpg",
       "https://i.etsystatic.com/55122258/r/il/b127ae/7979789353/il_fullxfull.7979789353_dfhd.jpg",
+      "https://i.etsystatic.com/55122258/r/il/40ceba/7931717448/il_fullxfull.7931717448_10b2.jpg",
       "https://i.etsystatic.com/55122258/r/il/045b77/7979763959/il_fullxfull.7979763959_jen1.jpg",
       "https://i.etsystatic.com/55122258/r/il/f2db49/7979788535/il_fullxfull.7979788535_ixq2.jpg",
       "https://i.etsystatic.com/55122258/r/il/aa40a7/7931836542/il_fullxfull.7931836542_osp8.jpg",
       "https://i.etsystatic.com/55122258/r/il/5db0f6/7979793591/il_fullxfull.7979793591_nxdr.jpg",
-      "https://i.etsystatic.com/55122258/r/il/2eae8d/7812432750/il_fullxfull.7812432750_jhu4.jpg",
       "https://i.etsystatic.com/55122258/r/il/1f73d7/7778067055/il_fullxfull.7778067055_hplq.jpg",
       "https://i.etsystatic.com/55122258/r/il/c190fd/7860378489/il_fullxfull.7860378489_a7f0.jpg"
-    ]
+    ],
+    "video": "/images/products/pearl-back-necklace.mov"
   },
   {
     "id": "cross-belly-chain",

@@ -7788,11 +7788,11 @@
     "featured": false,
     "active": true,
     "images": [
-      "/images/products/layered-turquoise-bracelet-1.jpg",
-      "/images/products/layered-turquoise-bracelet-2.png",
       "/images/products/layered-turquoise-bracelet-3.png",
+      "/images/products/layered-turquoise-bracelet-2.png",
+      "/images/products/layered-turquoise-bracelet-5.png",
       "/images/products/layered-turquoise-bracelet-4.jpg",
-      "/images/products/layered-turquoise-bracelet-5.png"
+      "/images/products/layered-turquoise-bracelet-1.jpg"
     ],
     "variantGroups": [
       {

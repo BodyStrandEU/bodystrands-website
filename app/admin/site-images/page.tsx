@@ -67,7 +67,7 @@ function ImageSlotCard({ slot }: { slot: ImageSlot }) {
   const inputRef = useRef<HTMLInputElement>(null);
   const [status, setStatus] = useState<"idle" | "uploading" | "done" | "error">("idle");
   const [errMsg, setErrMsg] = useState("");
-  const [cacheBust, setCacheBust] = useState(Date.now());
+  const [cacheBust, setCacheBust] = useState(0);
   const [cleared, setCleared] = useState(false);
   const [dragging, setDragging] = useState(false);
 
@@ -149,8 +149,9 @@ function ImageSlotCard({ slot }: { slot: ImageSlot }) {
           <>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src={`/${slot.path}?v=${cacheBust}`}
+              src={cacheBust ? `/${slot.path}?v=${cacheBust}` : `/${slot.path}`}
               alt={slot.label}
+              loading="lazy"
               style={{ width: "100%", height: "100%", objectFit: "contain" }}
               onError={(e) => { (e.target as HTMLImageElement).style.opacity = "0.2"; }}
             />

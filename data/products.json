@@ -6903,16 +6903,13 @@
     "featured": false,
     "active": true,
     "images": [
-      "https://i.etsystatic.com/55122258/r/il/76c2d5/7818676027/il_fullxfull.7818676027_93c2.jpg",
-      "https://i.etsystatic.com/55122258/r/il/107fb1/7813624529/il_fullxfull.7813624529_6q4l.jpg",
-      "https://i.etsystatic.com/55122258/r/il/4f89b1/7763623772/il_fullxfull.7763623772_eskh.jpg",
       "https://i.etsystatic.com/55122258/r/il/1878f7/7765732386/il_fullxfull.7765732386_77p7.jpg",
-      "https://i.etsystatic.com/55122258/r/il/1ae9ed/7765869978/il_fullxfull.7765869978_plif.jpg",
-      "https://i.etsystatic.com/55122258/r/il/4813fe/7813678257/il_fullxfull.7813678257_7atp.jpg",
-      "https://i.etsystatic.com/55122258/r/il/25e08e/7812417834/il_fullxfull.7812417834_ngto.jpg",
-      "https://i.etsystatic.com/55122258/r/il/57e968/7765690210/il_fullxfull.7765690210_914s.jpg",
+      "https://i.etsystatic.com/55122258/r/il/76c2d5/7818676027/il_fullxfull.7818676027_93c2.jpg",
+      "https://i.etsystatic.com/55122258/r/il/4f89b1/7763623772/il_fullxfull.7763623772_eskh.jpg",
+      "https://i.etsystatic.com/55122258/r/il/107fb1/7813624529/il_fullxfull.7813624529_6q4l.jpg",
       "https://i.etsystatic.com/55122258/r/il/c6ea6a/7765663308/il_fullxfull.7765663308_3a19.jpg",
-      "https://i.etsystatic.com/55122258/r/il/4c9988/7813683031/il_fullxfull.7813683031_p8f7.jpg"
+      "https://i.etsystatic.com/55122258/r/il/1ae9ed/7765869978/il_fullxfull.7765869978_plif.jpg",
+      "https://i.etsystatic.com/55122258/r/il/4813fe/7813678257/il_fullxfull.7813678257_7atp.jpg"
     ],
     "variantGroups": [
       {
@@ -6925,7 +6922,8 @@
           "Purple"
         ]
       }
-    ]
+    ],
+    "video": "/images/products/0614--18-.mp4"
   },
   {
     "id": "zodiac-yoga-belly-chain",

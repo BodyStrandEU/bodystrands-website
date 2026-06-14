@@ -164,7 +164,11 @@
         ]
       }
     ],
-    "active": true
+    "active": true,
+    "variantVideos": {
+      "Gold Tone": "/images/products/fullshoulderchainvid-copy.mov",
+      "Silver Tone": "/images/products/fullshoulderchainvid-copy.mov"
+    }
   },
   {
     "id": "double-shoulder-chest-chain",

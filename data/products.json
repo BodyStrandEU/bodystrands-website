@@ -6088,7 +6088,7 @@
   },
   {
     "id": "silver-waterproof-belly-chain",
-    "name": "Silver Waterproof Belly Chain",
+    "name": "Silver Belly Chain",
     "price": 20,
     "currency": "EUR",
     "category": "Belly Chains",
@@ -6147,7 +6147,8 @@
           "Large 71 cm - 100 cm"
         ]
       }
-    ]
+    ],
+    "video": "/images/products/sterlingbellysinglevid.mov"
   },
   {
     "id": "butterfly-backdrop-necklace",

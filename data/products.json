@@ -5151,7 +5151,7 @@
   {
     "id": "pearl-glasses-chain",
     "name": "Pearl Glasses Chain",
-    "price": 42.5,
+    "price": 40,
     "currency": "EUR",
     "category": "Eyeglasses Chains",
     "description": "Your most elegant glasses strap. This dainty gold pearl eyeglasses chain keeps your favourite frames close while adding a refined, luminous detail — handcrafted stainless steel with freshwater-style pearl accents.",
@@ -5185,17 +5185,18 @@
     "featured": false,
     "active": true,
     "images": [
+      "https://i.etsystatic.com/55122258/r/il/faf0f6/7920365440/il_fullxfull.7920365440_2y69.jpg",
       "https://i.etsystatic.com/55122258/r/il/8d4d02/7920359992/il_fullxfull.7920359992_silt.jpg",
       "https://i.etsystatic.com/55122258/r/il/717acf/7968333275/il_fullxfull.7968333275_3yo0.jpg",
-      "https://i.etsystatic.com/55122258/r/il/faf0f6/7920365440/il_fullxfull.7920365440_2y69.jpg",
       "https://i.etsystatic.com/55122258/r/il/cd6f4a/7920407798/il_fullxfull.7920407798_3mtj.jpg",
       "https://i.etsystatic.com/55122258/r/il/44f142/7920414208/il_fullxfull.7920414208_ou47.jpg",
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
       "https://i.etsystatic.com/55122258/r/il/ad75f0/7968377977/il_fullxfull.7968377977_8eig.jpg",
       "https://i.etsystatic.com/55122258/r/il/136ed8/7968330537/il_fullxfull.7968330537_dy07.jpg",
-      "https://i.etsystatic.com/55122258/r/il/b88a3b/7871497991/il_fullxfull.7871497991_bj5o.jpg",
       "https://i.etsystatic.com/55122258/r/il/26282e/7734979557/il_fullxfull.7734979557_95jd.jpg",
-      "https://i.etsystatic.com/55122258/r/il/c4f9ae/7763585068/il_fullxfull.7763585068_7ep3.jpg"
-    ]
+      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg"
+    ],
+    "video": "/images/products/0614--7-.mp4"
   },
   {
     "id": "pearl-belly-chain",

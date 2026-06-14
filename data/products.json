@@ -5239,16 +5239,17 @@
     "featured": false,
     "active": true,
     "images": [
-      "https://i.etsystatic.com/55122258/r/il/cfd690/7916453364/il_fullxfull.7916453364_r07i.jpg",
       "https://i.etsystatic.com/55122258/r/il/cab98f/7964453381/il_fullxfull.7964453381_9ucg.jpg",
-      "https://i.etsystatic.com/55122258/r/il/79b01e/7964441161/il_fullxfull.7964441161_om90.jpg",
       "https://i.etsystatic.com/55122258/r/il/356032/7964389805/il_fullxfull.7964389805_a7d3.jpg",
-      "https://i.etsystatic.com/55122258/r/il/9652eb/7964665869/il_fullxfull.7964665869_jkcm.jpg",
+      "https://i.etsystatic.com/55122258/r/il/79b01e/7964441161/il_fullxfull.7964441161_om90.jpg",
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
+      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.jpg",
       "https://i.etsystatic.com/55122258/r/il/51593e/7916759762/il_fullxfull.7916759762_snb9.jpg",
-      "https://i.etsystatic.com/55122258/r/il/6215a1/7812426718/il_fullxfull.7812426718_m79y.jpg",
+      "https://i.etsystatic.com/55122258/r/il/9652eb/7964665869/il_fullxfull.7964665869_jkcm.jpg",
       "https://i.etsystatic.com/55122258/r/il/7a8599/7916711658/il_fullxfull.7916711658_ezo3.jpg",
       "https://i.etsystatic.com/55122258/r/il/153b29/7794757793/il_fullxfull.7794757793_f5wn.jpg",
-      "https://i.etsystatic.com/55122258/r/il/99edab/7794757877/il_fullxfull.7794757877_qxts.jpg"
+      "https://i.etsystatic.com/55122258/r/il/99edab/7794757877/il_fullxfull.7794757877_qxts.jpg",
+      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg"
     ],
     "variantGroups": [
       {
@@ -5259,7 +5260,8 @@
           "Large 77 cm - 97 cm"
         ]
       }
-    ]
+    ],
+    "video": "/images/products/Belly-chain-with-pearls.mov"
   },
   {
     "id": "beaded-glasses-chain",

@@ -52,8 +52,8 @@ export default async function ShopPage({
           <div className="flex-1 min-w-0">
             {filtered.length > 0 ? (
               <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-x-6 gap-y-12">
-                {filtered.map((product) => (
-                  <ProductCard key={product.id} product={product} />
+                {filtered.map((product, i) => (
+                  <ProductCard key={product.id} product={product} priority={i < 4} />
                 ))}
               </div>
             ) : (

@@ -9,7 +9,7 @@ const SWATCH_COLORS: Record<string, string> = {
   "Silver Tone": "#A8A8A8",
 };
 
-export default function ProductCard({ product }: { product: Product }) {
+export default function ProductCard({ product, priority = false }: { product: Product; priority?: boolean }) {
   const router    = useRouter();
   const cardRef   = useRef<HTMLDivElement>(null);
   const videoRef  = useRef<HTMLVideoElement>(null);
@@ -146,6 +146,8 @@ export default function ProductCard({ product }: { product: Product }) {
             alt={product.name}
             fill
             sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+            priority={priority}
+            loading={priority ? "eager" : "lazy"}
             className={`object-contain transition-opacity duration-300 ${
               displayVideo && videoOn ? "opacity-0" : "opacity-100"
             }`}
@@ -165,7 +167,7 @@ export default function ProductCard({ product }: { product: Product }) {
             muted
             loop
             playsInline
-            preload="metadata"
+            preload="none"
             className={`absolute inset-0 w-full h-full object-contain transition-opacity duration-300 ${
               videoOn ? "opacity-100" : "opacity-0"
             }`}

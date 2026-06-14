@@ -4534,16 +4534,23 @@
         "https://i.etsystatic.com/55122258/r/il/1291fe/7926644849/il_fullxfull.7926644849_pofd.jpg",
         "https://i.etsystatic.com/55122258/r/il/e92cea/7878694358/il_fullxfull.7878694358_33se.jpg",
         "https://i.etsystatic.com/55122258/r/il/3a5858/7878741112/il_fullxfull.7878741112_cl7w.jpg",
-        "https://i.etsystatic.com/55122258/r/il/92005f/7819806106/il_fullxfull.7819806106_nfek.jpg",
         "https://i.etsystatic.com/55122258/r/il/d34516/7878706574/il_fullxfull.7878706574_2yl3.jpg",
-        "https://i.etsystatic.com/55122258/r/il/d7cb64/7819806224/il_fullxfull.7819806224_ggv9.jpg",
         "https://i.etsystatic.com/55122258/r/il/3ea628/7926672539/il_fullxfull.7926672539_pfui.jpg",
         "https://i.etsystatic.com/55122258/r/il/d2e12b/7878724206/il_fullxfull.7878724206_pp90.jpg",
         "https://i.etsystatic.com/55122258/r/il/cbd1a6/7803902507/il_fullxfull.7803902507_7i39.jpg"
       ],
       "Silver Tone": [
-        "https://i.etsystatic.com/55122258/r/il/d7cb64/7819806224/il_fullxfull.7819806224_ggv9.jpg"
+        "/images/products/681d8d28-5625-4acd-990a-3d7b9349ff9b.png",
+        "https://i.etsystatic.com/55122258/r/il/d7cb64/7819806224/il_fullxfull.7819806224_ggv9.jpg",
+        "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
+        "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg",
+        "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.jpg",
+        "/images/products/d128ab2a-d0c2-4c29-98c3-8fcc437164c7.png"
       ]
+    },
+    "variantVideos": {
+      "Gold Tone": "/images/products/0614--1-.mp4",
+      "Silver Tone": "/images/products/0614--1-.mp4"
     }
   },
   {

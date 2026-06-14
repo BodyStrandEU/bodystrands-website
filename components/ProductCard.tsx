@@ -40,22 +40,8 @@ export default function ProductCard({ product, priority = false }: { product: Pr
 
   const currentImage = displayImages?.[0];
 
-  // ── DOM helpers (no state = no re-render = smooth) ─────────────────────────
-  function popOut() {
-    const el = cardRef.current;
-    if (!el) return;
-    el.style.transform  = "scale(1.06)";
-    el.style.boxShadow  = "0 18px 44px rgba(0,0,0,0.2)";
-    el.style.zIndex     = "10";
-  }
-
-  function popIn() {
-    const el = cardRef.current;
-    if (!el) return;
-    el.style.transform  = "";
-    el.style.boxShadow  = "";
-    el.style.zIndex     = "";
-  }
+  function popOut() {}
+  function popIn() {}
 
   // ── Stop / start helpers ───────────────────────────────────────────────────
   const stopRef = useRef<() => void>(() => {});
@@ -130,7 +116,7 @@ export default function ProductCard({ product, priority = false }: { product: Pr
     <div
       ref={cardRef}
       className="group block cursor-pointer relative"
-      style={{ transition: "transform 0.25s cubic-bezier(0.34,1.4,0.64,1), box-shadow 0.25s ease", borderRadius: "4px" }}
+      style={{ borderRadius: "4px" }}
       onTouchStart={onTouchStart}
       onTouchMove={onTouchMove}
       onTouchEnd={onTouchEnd}

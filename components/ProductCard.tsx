@@ -134,7 +134,7 @@ export default function ProductCard({ product, priority = false }: { product: Pr
             sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
             priority={priority}
             loading={priority ? "eager" : "lazy"}
-            className={`object-contain transition-opacity duration-300 ${
+            className={`object-cover transition-opacity duration-300 ${
               displayVideo && videoOn ? "opacity-0" : "opacity-100"
             }`}
           />
@@ -154,7 +154,7 @@ export default function ProductCard({ product, priority = false }: { product: Pr
             loop
             playsInline
             preload="none"
-            className={`absolute inset-0 w-full h-full object-contain transition-opacity duration-300 ${
+            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ${
               videoOn ? "opacity-100" : "opacity-0"
             }`}
           />

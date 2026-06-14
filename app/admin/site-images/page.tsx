@@ -23,13 +23,15 @@ const SECTIONS: Section[] = [
   {
     title: "Category Tiles",
     slots: [
+      { label: "Belly Chains", path: "images/category-belly.png" },
       { label: "Back Chains", path: "images/elvan-back-full.jpg" },
       { label: "Body Chains", path: "images/category-body.jpg" },
-      { label: "Belly Chains", path: "images/category-belly.png" },
       { label: "Shoulder Chains", path: "images/category-shoulder.jpg" },
       { label: "Anklets", path: "images/lifestyle-anklet.jpg" },
-      { label: "Necklaces", path: "images/category-necklace.jpg" },
       { label: "Bracelets", path: "images/category-bracelet.jpg" },
+      { label: "Necklaces", path: "images/category-necklace.jpg" },
+      { label: "Hand Chains", path: "images/category-hand.jpg" },
+      { label: "Head Chains", path: "images/category-head.jpg" },
       { label: "Eyeglasses Chains", path: "images/category-glasses.jpg" },
       { label: "Bikini Clip Chains", path: "images/category-bikini.jpg" },
     ],

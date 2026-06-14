@@ -1,15 +1,17 @@
 import productsData from "@/data/products.json";
 
 export const CATEGORIES = [
+  "Belly Chains",
   "Back Chains",
   "Body Chains",
   "Shoulder Chains",
   "Anklets",
-  "Eyeglasses Chains",
   "Bracelets",
-  "Bikini Clip Chains",
-  "Belly Chains",
   "Necklaces",
+  "Hand Chains",
+  "Head Chains",
+  "Eyeglasses Chains",
+  "Bikini Clip Chains",
 ] as const;
 
 export type Category = (typeof CATEGORIES)[number];

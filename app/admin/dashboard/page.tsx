@@ -26,6 +26,16 @@ export default function AdminDashboard() {
       .finally(() => setLoading(false));
   }, [router]);
 
+  // Restore scroll position after returning from product editor
+  useEffect(() => {
+    if (loading || products.length === 0) return;
+    const savedY = sessionStorage.getItem("admin-scroll-y");
+    if (savedY) {
+      sessionStorage.removeItem("admin-scroll-y");
+      window.scrollTo({ top: parseInt(savedY), behavior: "instant" });
+    }
+  }, [loading, products]);
+
   async function handleLogout() {
     await fetch("/api/admin/logout", { method: "POST" });
     router.push("/admin/login");
@@ -204,7 +214,10 @@ export default function AdminDashboard() {
 
                   <div style={{ display: "flex", gap: "0.5rem" }}>
                     <button
-                      onClick={() => router.push(`/admin/product/${product.id}`)}
+                      onClick={() => {
+                        sessionStorage.setItem("admin-scroll-y", String(window.scrollY));
+                        router.push(`/admin/product/${product.id}`);
+                      }}
                       style={{
                         flex: 1,
                         padding: "0.4rem",

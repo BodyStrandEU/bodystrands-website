@@ -136,7 +136,6 @@ function ImageSection({ title, images, onChange, onUpload }: ImageSectionProps) 
   }
 
   function confirmDelete(url: string) {
-    if (!confirm(`Delete image "${url.split("/").pop()}"?`)) return;
     onChange(images.filter((img) => img !== url));
   }
 

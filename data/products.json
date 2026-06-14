@@ -4647,7 +4647,7 @@
   {
     "id": "gemstone-zodiac-anklet",
     "name": "Gemstone Zodiac Anklet",
-    "price": 30,
+    "price": 35,
     "currency": "EUR",
     "category": "Anklets",
     "description": "Your personalised ankle piece with double meaning. This dainty gold anklet combines your zodiac sign charm with your birthstone gemstone — a truly individual gift or personal talisman.",
@@ -4692,9 +4692,10 @@
       "https://i.etsystatic.com/55122258/r/il/3552b6/7962950456/il_fullxfull.7962950456_hfid.jpg",
       "https://i.etsystatic.com/55122258/r/il/f9e117/8011001525/il_fullxfull.8011001525_pj8i.jpg",
       "https://i.etsystatic.com/55122258/r/il/4f89b1/7763623772/il_fullxfull.7763623772_eskh.jpg",
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
       "https://i.etsystatic.com/55122258/r/il/63cc1d/8010906213/il_fullxfull.8010906213_3hkc.jpg",
-      "https://i.etsystatic.com/55122258/r/il/4c9988/7813683031/il_fullxfull.7813683031_p8f7.jpg",
-      "https://i.etsystatic.com/55122258/r/il/2f6fcb/7812398930/il_fullxfull.7812398930_kic8.jpg"
+      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.jpg",
+      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg"
     ],
     "variantGroups": [
       {
@@ -4731,7 +4732,8 @@
           "December"
         ]
       }
-    ]
+    ],
+    "video": "/images/products/0614--4-.mp4"
   },
   {
     "id": "cowrie-shell-belly-chain",

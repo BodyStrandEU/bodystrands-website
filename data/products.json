@@ -5733,7 +5733,7 @@
       },
       {
         "label": "Care",
-        "value": "Avoid prolonged water exposure. Wipe gently with soft cloth."
+        "value": "Avoid perfume, lotions. Wipe gently with soft cloth."
       },
       {
         "label": "Shipping",
@@ -5753,19 +5753,21 @@
       "Gold Tone": [
         "https://i.etsystatic.com/55122258/r/il/d682a3/7914467747/il_fullxfull.7914467747_y0yl.jpg",
         "https://i.etsystatic.com/55122258/r/il/aa68bc/7866545038/il_fullxfull.7866545038_pl7p.jpg",
-        "https://i.etsystatic.com/55122258/r/il/6f1a26/7903922303/il_fullxfull.7903922303_ciwv.jpg",
         "https://i.etsystatic.com/55122258/r/il/83a3ea/7914467873/il_fullxfull.7914467873_qtz7.jpg",
         "https://i.etsystatic.com/55122258/r/il/cdd279/7866515030/il_fullxfull.7866515030_jjvy.jpg",
-        "https://i.etsystatic.com/55122258/r/il/73369a/7812427790/il_fullxfull.7812427790_mjrv.jpg",
-        "https://i.etsystatic.com/55122258/r/il/99edab/7794757877/il_fullxfull.7794757877_qxts.jpg"
+        "https://i.etsystatic.com/55122258/r/il/99edab/7794757877/il_fullxfull.7794757877_qxts.jpg",
+        "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
+        "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg",
+        "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.jpg"
       ],
       "Silver Tone": [
         "https://i.etsystatic.com/55122258/r/il/94a7c5/7866516384/il_fullxfull.7866516384_p69i.jpg",
-        "https://i.etsystatic.com/55122258/r/il/6f1a26/7903922303/il_fullxfull.7903922303_ciwv.jpg",
-        "https://i.etsystatic.com/55122258/r/il/73369a/7812427790/il_fullxfull.7812427790_mjrv.jpg",
         "https://i.etsystatic.com/55122258/r/il/1a3c71/7866516388/il_fullxfull.7866516388_jj7s.jpg",
         "https://i.etsystatic.com/55122258/r/il/366fd3/7914469437/il_fullxfull.7914469437_m4rm.jpg",
-        "https://i.etsystatic.com/55122258/r/il/99edab/7794757877/il_fullxfull.7794757877_qxts.jpg"
+        "https://i.etsystatic.com/55122258/r/il/99edab/7794757877/il_fullxfull.7794757877_qxts.jpg",
+        "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
+        "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg",
+        "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.jpg"
       ]
     },
     "variantGroups": [
@@ -5777,7 +5779,11 @@
           "Large 71 cm - 100 cm"
         ]
       }
-    ]
+    ],
+    "variantVideos": {
+      "Silver Tone": "/images/products/silver-waist-with-pearl.mov",
+      "Gold Tone": "/images/products/0614--9-.mp4"
+    }
   },
   {
     "id": "pearl-bridal-back-chain",

@@ -4384,28 +4384,12 @@
         "value": "Gold or Silver"
       },
       {
-        "label": "Anklet Length",
-        "value": "21 cm + 6 cm adjustable extender"
-      },
-      {
-        "label": "Toe Chain",
-        "value": "8 cm"
-      },
-      {
-        "label": "Chain Thickness",
-        "value": "1.5 mm — delicate and lightweight"
-      },
-      {
         "label": "Style",
         "value": "Barefoot toe chain / sandal anklet"
       },
       {
         "label": "Fit",
         "value": "Adjustable ankle and toe loops"
-      },
-      {
-        "label": "Care",
-        "value": "Rinse after salt water. Wipe dry."
       },
       {
         "label": "Shipping",
@@ -4423,25 +4407,30 @@
     ],
     "variantImages": {
       "Gold Tone": [
+        "/images/products/ad47d320-fe33-421d-917a-bcc3c014778d.png",
+        "/images/products/5a92a4d0-f869-4ad1-bbcb-3cc0609e2fea.png",
+        "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
         "https://i.etsystatic.com/55122258/r/il/35be58/7972448970/il_fullxfull.7972448970_9g7a.jpg",
-        "https://i.etsystatic.com/55122258/r/il/b897a5/7829706238/il_fullxfull.7829706238_nb0j.jpg",
-        "https://i.etsystatic.com/55122258/r/il/4c9988/7813683031/il_fullxfull.7813683031_p8f7.jpg",
-        "https://i.etsystatic.com/55122258/r/il/7cc80d/7812628962/il_fullxfull.7812628962_j62w.jpg",
+        "/images/products/9fea2b1d-a3f3-42c6-8e1a-2159889fcd91.png",
         "https://i.etsystatic.com/55122258/r/il/26282e/7734979557/il_fullxfull.7734979557_95jd.jpg",
-        "https://i.etsystatic.com/55122258/r/il/857d95/7811531149/il_fullxfull.7811531149_g087.jpg",
-        "https://i.etsystatic.com/55122258/r/il/c4f9ae/7763585068/il_fullxfull.7763585068_7ep3.jpg"
+        "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.jpg",
+        "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg"
       ],
       "Silver Tone": [
         "https://i.etsystatic.com/55122258/r/il/b79a37/7829652332/il_fullxfull.7829652332_e2do.jpg",
+        "/images/products/a76638d8-d72d-4dc7-862a-75bca966322b.png",
+        "/images/products/5a92a4d0-f869-4ad1-bbcb-3cc0609e2fea.png",
+        "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
         "https://i.etsystatic.com/55122258/r/il/f03253/8020365835/il_fullxfull.8020365835_hy24.jpg",
         "https://i.etsystatic.com/55122258/r/il/1265a5/7972411312/il_fullxfull.7972411312_f7pn.jpg",
-        "https://i.etsystatic.com/55122258/r/il/b897a5/7829706238/il_fullxfull.7829706238_nb0j.jpg",
-        "https://i.etsystatic.com/55122258/r/il/4c9988/7813683031/il_fullxfull.7813683031_p8f7.jpg",
-        "https://i.etsystatic.com/55122258/r/il/7cc80d/7812628962/il_fullxfull.7812628962_j62w.jpg",
         "https://i.etsystatic.com/55122258/r/il/26282e/7734979557/il_fullxfull.7734979557_95jd.jpg",
-        "https://i.etsystatic.com/55122258/r/il/857d95/7811531149/il_fullxfull.7811531149_g087.jpg",
-        "https://i.etsystatic.com/55122258/r/il/c4f9ae/7763585068/il_fullxfull.7763585068_7ep3.jpg"
+        "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.jpg",
+        "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg"
       ]
+    },
+    "variantVideos": {
+      "Gold Tone": "/images/products/0614--1-.mp4",
+      "Silver Tone": "/images/products/0614--1-.mp4"
     }
   },
   {

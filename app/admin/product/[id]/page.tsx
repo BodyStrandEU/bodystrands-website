@@ -362,12 +362,30 @@ function VideoDropZone({ value, onChange }: VideoDropZoneProps) {
       />
 
       {value && (
-        <video
-          src={value}
-          style={{ marginTop: "0.5rem", width: "100%", maxWidth: "200px", height: "auto", borderRadius: "4px", border: "1px solid var(--admin-border)" }}
-          muted
-          controls
-        />
+        <div style={{ marginTop: "0.5rem", display: "inline-flex", flexDirection: "column", gap: "0.4rem" }}>
+          <video
+            src={value}
+            style={{ width: "100%", maxWidth: "200px", height: "auto", borderRadius: "4px", border: "1px solid var(--admin-border)" }}
+            muted
+            controls
+          />
+          <button
+            type="button"
+            onClick={() => { if (confirm("Remove this video?")) onChange(""); }}
+            style={{
+              padding: "0.3rem 0.75rem",
+              background: "#fee2e2",
+              color: "#991b1b",
+              border: "1px solid #fca5a5",
+              borderRadius: "4px",
+              fontSize: "0.75rem",
+              cursor: "pointer",
+              alignSelf: "flex-start",
+            }}
+          >
+            Remove video
+          </button>
+        </div>
       )}
     </div>
   );

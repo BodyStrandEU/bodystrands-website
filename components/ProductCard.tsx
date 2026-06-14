@@ -125,7 +125,7 @@ export default function ProductCard({ product, priority = false }: { product: Pr
       onClick={onCardClick}
     >
       {/* Media */}
-      <div className="relative overflow-hidden bg-[#FDF9F7] aspect-square">
+      <div className="relative overflow-hidden bg-[#FDF9F7] aspect-[3/4]">
         {currentImage ? (
           <Image
             src={currentImage}
@@ -180,18 +180,15 @@ export default function ProductCard({ product, priority = false }: { product: Pr
       </div>
 
       {/* Info */}
-      <div className="pt-3">
-        <p className="text-[0.52rem] tracking-[0.2em] uppercase text-[#8C7B6E] mb-1">
-          {product.category}
-        </p>
-        <h3 className="text-[0.75rem] font-light tracking-[0.06em] text-[#2C2220] leading-snug group-hover:text-[#A0622A] transition-colors duration-300">
+      <div className="pt-2">
+        <h3 className="text-[0.72rem] font-light tracking-[0.04em] text-[#2C2220] leading-snug group-hover:text-[#A0622A] transition-colors duration-300 truncate">
           {product.name}
         </h3>
-        <p className="mt-1.5 text-[0.7rem] font-light tracking-wide text-[#2C2220]">
+        <p className="mt-0.5 text-[0.7rem] font-light tracking-wide text-[#2C2220]">
           {symbol}{product.price.toFixed(2)}
         </p>
         {product.variants && product.variants.length > 1 && (
-          <p className="mt-1 text-[0.5rem] tracking-[0.15em] uppercase text-[#8C7B6E]">
+          <p className="mt-0.5 text-[0.48rem] tracking-[0.15em] uppercase text-[#8C7B6E]">
             {activeVariant ?? product.variants.join(" · ")}
           </p>
         )}

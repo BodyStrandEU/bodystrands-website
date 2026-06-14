@@ -5366,16 +5366,16 @@
     "price": 25,
     "currency": "EUR",
     "category": "Eyeglasses Chains",
-    "description": "Your clean, everyday glasses holder. This minimalist stainless steel sunglass chain is available in gold, silver, or silver plated — a chic, no-fuss way to keep your frames close without sacrificing style.",
-    "fullDescription": "No beads, no embellishment — just a beautifully made fine chain with adjustable rubber grips that work on any glasses frame. Simple and elegant enough to be worn as a necklace when your glasses are on your face.\n\nAvailable in Gold Stainless Steel, Silver Stainless Steel, or Silver Plated. Tarnish-resistant and lightweight.",
+    "description": "Your clean, everyday glasses holder. This minimalist stainless steel sunglass chain is available in gold, silver — a chic, no-fuss way to keep your frames close without sacrificing style.",
+    "fullDescription": "No beads, no embellishment — just a beautifully made fine chain with adjustable rubber grips that work on any glasses frame. Simple and elegant enough to be worn as a necklace when your glasses are on your face.\n\nAvailable in Gold Stainless Steel, Silver Stainless Steel, Tarnish-resistant and lightweight.",
     "specs": [
       {
         "label": "Material",
-        "value": "Stainless steel (available in 3 finishes)"
+        "value": "Stainless steel "
       },
       {
         "label": "Finishes",
-        "value": "Gold, Silver Stainless, Silver Plated"
+        "value": "Gold, Silver Stainless"
       },
       {
         "label": "Style",
@@ -5406,21 +5406,24 @@
     "variantImages": {
       "Gold Tone": [
         "https://i.etsystatic.com/55122258/r/il/3a55b4/7919963019/il_fullxfull.7919963019_95zi.jpg",
-        "https://i.etsystatic.com/55122258/r/il/14e776/7919931731/il_fullxfull.7919931731_2l9m.jpg",
         "https://i.etsystatic.com/55122258/r/il/0223a9/7872012646/il_fullxfull.7872012646_n536.jpg",
-        "https://i.etsystatic.com/55122258/r/il/b88a3b/7871497991/il_fullxfull.7871497991_bj5o.jpg",
         "https://i.etsystatic.com/55122258/r/il/e40ae1/7872012612/il_fullxfull.7872012612_l7z0.jpg",
-        "https://i.etsystatic.com/55122258/r/il/26282e/7734979557/il_fullxfull.7734979557_95jd.jpg"
+        "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
+        "https://i.etsystatic.com/55122258/r/il/26282e/7734979557/il_fullxfull.7734979557_95jd.jpg",
+        "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg"
       ],
       "Silver Tone": [
-        "https://i.etsystatic.com/55122258/r/il/8b6c74/7919964655/il_fullxfull.7919964655_e1xe.jpg",
         "https://i.etsystatic.com/55122258/r/il/47ba12/7872020108/il_fullxfull.7872020108_8fgj.jpg",
-        "https://i.etsystatic.com/55122258/r/il/7a5229/7872028062/il_fullxfull.7872028062_3eyb.jpg",
-        "https://i.etsystatic.com/55122258/r/il/14e776/7919931731/il_fullxfull.7919931731_2l9m.jpg",
-        "https://i.etsystatic.com/55122258/r/il/b88a3b/7871497991/il_fullxfull.7871497991_bj5o.jpg",
+        "https://i.etsystatic.com/55122258/r/il/8b6c74/7919964655/il_fullxfull.7919964655_e1xe.jpg",
         "https://i.etsystatic.com/55122258/r/il/ff1e97/7872023852/il_fullxfull.7872023852_dg9s.jpg",
-        "https://i.etsystatic.com/55122258/r/il/26282e/7734979557/il_fullxfull.7734979557_95jd.jpg"
+        "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
+        "https://i.etsystatic.com/55122258/r/il/26282e/7734979557/il_fullxfull.7734979557_95jd.jpg",
+        "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg"
       ]
+    },
+    "variantVideos": {
+      "Gold Tone": "/images/products/snakesunglassvid.mov",
+      "Silver Tone": "/images/products/snakesunglassvid.mov"
     }
   },
   {

@@ -5820,7 +5820,7 @@
       },
       {
         "label": "Care",
-        "value": "Avoid water, perfumes, lotions. Store in an airtight container."
+        "value": "Avoid perfumes, lotions. Store in an airtight container."
       },
       {
         "label": "Shipping",
@@ -5838,19 +5838,22 @@
     ],
     "variantImages": {
       "Gold Tone": [
+        "https://i.etsystatic.com/55122258/r/il/341887/7835484089/il_fullxfull.7835484089_5bzk.jpg",
         "https://i.etsystatic.com/55122258/r/il/55bd28/7789532126/il_fullxfull.7789532126_93rk.jpg",
         "https://i.etsystatic.com/55122258/r/il/9b884a/7787337160/il_fullxfull.7787337160_cr8q.jpg",
-        "https://i.etsystatic.com/55122258/r/il/e0d0b6/7801769979/il_fullxfull.7801769979_dtlp.jpg",
-        "https://i.etsystatic.com/55122258/r/il/341887/7835484089/il_fullxfull.7835484089_5bzk.jpg",
-        "https://i.etsystatic.com/55122258/r/il/9e87fd/7860351189/il_fullxfull.7860351189_brb1.jpg",
         "https://i.etsystatic.com/55122258/r/il/dd6d5b/7835483841/il_fullxfull.7835483841_4hjy.jpg",
-        "https://i.etsystatic.com/55122258/r/il/5df657/7787416620/il_fullxfull.7787416620_sqt5.jpg"
+        "https://i.etsystatic.com/55122258/r/il/5df657/7787416620/il_fullxfull.7787416620_sqt5.jpg",
+        "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
+        "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg",
+        "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.jpg"
       ],
       "Silver Tone": [
         "https://i.etsystatic.com/55122258/r/il/74937c/7835483939/il_fullxfull.7835483939_e54z.jpg",
-        "https://i.etsystatic.com/55122258/r/il/9e87fd/7860351189/il_fullxfull.7860351189_brb1.jpg",
         "https://i.etsystatic.com/55122258/r/il/e5831c/7835527797/il_fullxfull.7835527797_hlrk.jpg",
-        "https://i.etsystatic.com/55122258/r/il/3299e8/7787555196/il_fullxfull.7787555196_r96o.jpg"
+        "https://i.etsystatic.com/55122258/r/il/3299e8/7787555196/il_fullxfull.7787555196_r96o.jpg",
+        "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
+        "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.jpg",
+        "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg"
       ]
     },
     "variantGroups": [
@@ -5862,7 +5865,11 @@
           "Large (+23cm ext)"
         ]
       }
-    ]
+    ],
+    "variantVideos": {
+      "Gold Tone": "/images/products/0614--10-.mp4",
+      "Silver Tone": "/images/products/0614--10-.mp4"
+    }
   },
   {
     "id": "bridal-hair-vine-chain",

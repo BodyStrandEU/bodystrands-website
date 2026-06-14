@@ -24,7 +24,7 @@ const SECTIONS: Section[] = [
     title: "Category Tiles",
     slots: [
       { label: "Back Chains", path: "images/elvan-back-full.jpg" },
-      { label: "Body Chains", path: "images/hero-back-chain.jpg" },
+      { label: "Body Chains", path: "images/category-body.jpg" },
       { label: "Belly Chains", path: "images/category-belly.png" },
       { label: "Shoulder Chains", path: "images/category-shoulder.jpg" },
       { label: "Anklets", path: "images/lifestyle-anklet.jpg" },
@@ -46,7 +46,7 @@ const SECTIONS: Section[] = [
   {
     title: "Lifestyle Photos",
     slots: [
-      { label: "Lifestyle — Anklet", path: "images/lifestyle-anklet.jpg" },
+      { label: "Lifestyle — Anklet", path: "images/lifestyle-anklet-2.jpg" },
       { label: "Lifestyle — Butterfly", path: "images/lifestyle-butterfly.jpg" },
       { label: "Lifestyle — Head Chain", path: "images/lifestyle-headchain.jpg" },
       { label: "Lifestyle — Pearl Back", path: "images/lifestyle-pearl-back.jpg" },
@@ -91,15 +91,20 @@ function ImageSlotCard({ slot }: { slot: ImageSlot }) {
 
   function onDragOver(e: React.DragEvent) {
     e.preventDefault();
+    e.stopPropagation();
     setDragging(true);
   }
 
-  function onDragLeave() {
+  function onDragLeave(e: React.DragEvent) {
+    e.stopPropagation();
+    // Only clear dragging state when leaving the card entirely, not child elements
+    if (e.currentTarget.contains(e.relatedTarget as Node)) return;
     setDragging(false);
   }
 
   function onDrop(e: React.DragEvent) {
     e.preventDefault();
+    e.stopPropagation();
     setDragging(false);
     const file = e.dataTransfer.files?.[0];
     if (file && file.type.startsWith("image/")) handleFile(file);

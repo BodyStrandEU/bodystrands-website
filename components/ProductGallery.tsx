@@ -128,7 +128,7 @@ export default function ProductGallery({
               alt={`${product.name}${activeVariant ? ` — ${activeVariant}` : ""}`}
               fill
               sizes="(max-width: 768px) 100vw, 50vw"
-              className={`object-cover transition-opacity duration-300 ${
+              className={`object-contain transition-opacity duration-300 ${
                 i === activeIndex ? "opacity-100" : "opacity-0"
               }`}
               priority={i === 0}

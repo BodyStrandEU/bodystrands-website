@@ -2,6 +2,7 @@
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import type { Product } from "@/lib/products";
+import { getVideoSources } from "@/lib/videoUtils";
 
 type MediaItem = { type: "image"; src: string } | { type: "video"; src: string };
 
@@ -136,11 +137,11 @@ export default function ProductGallery({
         )}
 
         {/* Video — always rendered, NEVER unmounted so the buffer is preserved.
+            Uses HLS for Cloudflare Stream (iOS-native, adaptive chunks) + MP4 fallback.
             Opacity toggles show/hide; playback controlled via ref above. */}
         {videoSrc && !videoError && (
           <video
             ref={videoRef}
-            src={videoSrc}
             muted
             loop
             playsInline
@@ -150,7 +151,11 @@ export default function ProductGallery({
             className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ${
               isOnVideo ? "opacity-100" : "opacity-0 pointer-events-none"
             }`}
-          />
+          >
+            {getVideoSources(videoSrc).map((s) => (
+              <source key={s.src} src={s.src} type={s.type} />
+            ))}
+          </video>
         )}
 
         {/* Buffering spinner — shown only while video is loading */}

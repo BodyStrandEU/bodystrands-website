@@ -3,6 +3,7 @@ import { useRef, useState, useMemo, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import type { Product } from "@/lib/products";
+import { getVideoSources } from "@/lib/videoUtils";
 
 const SWATCH_COLORS: Record<string, string> = {
   "Gold Tone":   "#C8A84B",
@@ -200,11 +201,12 @@ export default function ProductCard({ product, priority = false }: { product: Pr
           </div>
         )}
 
-        {/* Video — kept mounted so buffer is never discarded */}
+        {/* Video — kept mounted so buffer is never discarded.
+            HLS sources load in small adaptive chunks — the only format
+            iOS Safari actually starts preloading over cellular. */}
         {displayVideo && !videoError && (
           <video
             ref={videoRef}
-            src={displayVideo}
             muted
             loop
             playsInline
@@ -214,7 +216,11 @@ export default function ProductCard({ product, priority = false }: { product: Pr
             className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ${
               currentSlide?.type === "video" ? "opacity-100" : "opacity-0"
             }`}
-          />
+          >
+            {getVideoSources(displayVideo).map((s) => (
+              <source key={s.src} src={s.src} type={s.type} />
+            ))}
+          </video>
         )}
 
         {/* Buffering spinner on video slide */}

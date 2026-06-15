@@ -24,7 +24,7 @@ export default async function ProductPage({ params }: { params: Promise<{ id: st
   if (!product) notFound();
 
   return (
-    <div className="pt-20 md:pt-32 pb-24">
+    <div className="pt-32 md:pt-36 pb-24">
       <div className="max-w-7xl mx-auto px-6 md:px-10">
 
         {/* Breadcrumb */}

@@ -20,7 +20,9 @@ export default function ProductCard({ product, priority = false }: { product: Pr
   const [activeVariant, setActiveVariant] = useState<string | null>(null);
   const [slideIndex, setSlideIndex]       = useState(0);
 
+  const mediaRef   = useRef<HTMLDivElement>(null);
   const touchStart = useRef({ x: 0, y: 0, time: 0 });
+  const swipeDir   = useRef<"h" | "v" | null>(null);
   const lastTouch  = useRef(0);
 
   const symbol = product.currency === "EUR" ? "€" : product.currency === "GBP" ? "£" : "$";
@@ -52,6 +54,17 @@ export default function ProductCard({ product, priority = false }: { product: Pr
   // Reset carousel when variant changes
   useEffect(() => { setSlideIndex(0); }, [activeVariant]);
 
+  // Non-passive touchmove so we can preventDefault on horizontal swipes
+  useEffect(() => {
+    const el = mediaRef.current;
+    if (!el) return;
+    function onMove(e: TouchEvent) {
+      if (swipeDir.current === "h") e.preventDefault();
+    }
+    el.addEventListener("touchmove", onMove, { passive: false });
+    return () => el.removeEventListener("touchmove", onMove);
+  }, []);
+
   const currentSlide = mediaList[slideIndex] ?? mediaList[0];
 
   // Auto-play / pause video based on active slide
@@ -74,6 +87,14 @@ export default function ProductCard({ product, priority = false }: { product: Pr
   // ── Touch handlers ─────────────────────────────────────────────────────────
   function onTouchStart(e: React.TouchEvent) {
     touchStart.current = { x: e.touches[0].clientX, y: e.touches[0].clientY, time: Date.now() };
+    swipeDir.current = null;
+  }
+
+  function onTouchMove(e: React.TouchEvent) {
+    if (swipeDir.current) return;
+    const dx = Math.abs(e.touches[0].clientX - touchStart.current.x);
+    const dy = Math.abs(e.touches[0].clientY - touchStart.current.y);
+    if (dx > 6 || dy > 6) swipeDir.current = dx > dy ? "h" : "v";
   }
 
   function onTouchEnd(e: React.TouchEvent) {
@@ -82,9 +103,8 @@ export default function ProductCard({ product, priority = false }: { product: Pr
     const dy = e.changedTouches[0].clientY - touchStart.current.y;
     const dt = Date.now() - touchStart.current.time;
 
-    if (Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > 28) {
+    if (swipeDir.current === "h" && Math.abs(dx) > 28) {
       // Horizontal swipe → change slide
-      e.preventDefault();
       if (dx < 0) goTo(slideIndex + 1);
       else        goTo(slideIndex - 1);
     } else if (Math.abs(dx) < 12 && Math.abs(dy) < 12 && dt < 350) {
@@ -92,6 +112,7 @@ export default function ProductCard({ product, priority = false }: { product: Pr
       e.preventDefault();
       router.push(`/shop/${product.id}`);
     }
+    swipeDir.current = null;
   }
 
   // Desktop click (guarded against accidental fire after touch)
@@ -108,8 +129,10 @@ export default function ProductCard({ product, priority = false }: { product: Pr
     >
       {/* ── Media container ─────────────────────────────────────────────────── */}
       <div
+        ref={mediaRef}
         className="relative overflow-hidden bg-[#FDF9F7] aspect-[3/4] select-none"
         onTouchStart={onTouchStart}
+        onTouchMove={onTouchMove}
         onTouchEnd={onTouchEnd}
       >
         {/* Images (all rendered; only active is visible) */}

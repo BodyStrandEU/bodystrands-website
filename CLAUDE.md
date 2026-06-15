@@ -40,16 +40,29 @@ Product Name/
 - Customer selects **Gold** → Gold/ photos first + Apply to Both Variations/ photos after
 - Customer selects **Silver** → Silver/ photos first + Apply to Both Variations/ photos after
 - Shop grid card thumbnail → the single photo from Main hero image folder
-- Hover-to-play video on shop card → gold video if Gold selected, silver video if Silver selected
+- **NO hover video on shop card** — replaced with swipeable carousel
 - **Video is always inserted as the 2nd item in the product detail gallery** (position index 1)
 - Image order in gallery follows exactly the folder order (left to right)
 
+## Shop Card Carousel (ProductCard.tsx)
+- Swipeable image carousel — swipe left/right to browse images and video
+- Media order: [first image, video at position 2, remaining images]
+- Swipe uses non-passive native touchstart+touchmove DOM listeners (NOT React synthetic events)
+  — this is critical: React handlers fire AFTER native, so direction must be detected natively
+  to call preventDefault() on the very first touchmove before browser commits to scrolling
+- Video: preload="metadata" on render + preload="auto" + v.load() when on adjacent slide
+  (pre-buffers so video plays instantly when user swipes to it)
+- Default images: first variant's full image set (not just hero thumbnail)
+- Dot indicators at bottom, desktop prev/next arrows on hover
+- Variant swatches on desktop hover, positioned above dots
+
 ## Gallery & Swipe Rules (ALWAYS apply to every product)
-- ProductGallery always supports touch swipe on the main image (left/right to navigate)
+- ProductGallery (detail page) always supports touch swipe — same non-passive native listener pattern
 - Dot indicators shown on mobile at bottom of main image
 - Arrow buttons shown on desktop
 - Video thumbnail in strip shows a dark background with ▶ play icon
 - Video autoplays (muted, loop) when it becomes the active item
+- object-cover on all gallery images (NOT object-contain — that causes letterboxing)
 
 ## Video Rules
 - Gold/ has video AND Silver/ has video → use `variantVideos: { "Gold Tone": "...", "Silver Tone": "..." }`
@@ -81,26 +94,62 @@ Product Name/
 7. ProductGallery + swipe is always present — no extra setup needed per product
 8. activeCategories auto-updates navbar/homepage tiles when product is added
 
-## Categories Rule
-- **Only show categories that have photos/products ready**
-- activeCategories is derived automatically from products array — never hardcode
-- 9 defined categories: Back Chains, Body Chains, Shoulder Chains, Anklets, Eyeglasses Chains, Bracelets, Bikini Clip Chains, Belly Chains, Necklaces
+## Categories (11 total — all have products)
+Belly Chains, Back Chains, Body Chains, Shoulder Chains, Anklets, Bracelets, Necklaces, Hand Chains, Head Chains, Eyeglasses Chains, Bikini Clip Chains
+- All 11 are in CATEGORIES const in lib/products.ts
+- All 11 tiles ALWAYS render on homepage — no activeCategories filter (was hiding tiles when ScrollReveal didn't fire)
+- Category tile images: category-belly.png, elvan-back-full.jpg (Back Chains), category-body.jpg, category-shoulder.jpg, lifestyle-anklet.jpg (Anklets), category-necklace.jpg, category-bracelet.jpg, category-hand.jpg, category-head.jpg, category-glasses.jpg, category-bikini.jpg
+
+## Homepage Layout
+- Hero: full-screen /images/hero-back-chain.jpg
+- Category grid: Back Chains = col-span-2 md:row-span-2 portrait hero anchor, all others = aspect-[3/4] portrait, grid-cols-2 mobile / grid-cols-4 desktop, NO ScrollReveal on tiles
+- Lifestyle slider: reads all files from public/images/lifestyle/ folder sorted alphabetically (7 files: 01–07)
+- Brand Story: /images/elvan-back-cross.jpg
+- Page transitions: PageTransition component in layout.tsx, key={pathname}, animate-page-in CSS keyframe
+
+## Shop Page
+- "All Pieces" view: grouped by category with gold dividers in CATEGORIES order
+- Filtered view: flat grid
+- Grid: grid-cols-2 md:grid-cols-3 xl:grid-cols-4
+
+## Product Detail Page Extras
+- Sticky mobile CTA (md:hidden): IntersectionObserver on Buy button div, slides up with animate-slide-up when Buy button scrolls off screen
+- "You May Also Like": same category, first 4, below the main product content (YouMayAlsoLike.tsx server component)
 
 ## Admin Panel
 - URL: bodystrands.com/admin (password protected)
 - Every save commits directly to GitHub → Vercel auto-deploys in ~1 min
 - Image uploads go directly to `public/images/products/` via GitHub API
 - Drag-to-reorder images in the product editor
+- Dashboard: products grouped by category with red ✕ delete button (top-left of thumbnail, requires confirm)
+- Site Images page: 6 sections clearly labeled with WHERE each photo appears on the live site:
+  1. Homepage — Hero
+  2. Homepage — Category Tiles (11 slots)
+  3. Homepage — Lifestyle Slider (7 slots → images/lifestyle/XX-name.jpg)
+  4. Homepage — Brand Story
+  5. About Page (single slot: lifestyle-pearl-back.jpg)
+  6. Logo
 
 ## Key Files
 - `data/products.json` — single source of truth for all product data
-- `lib/products.ts` — imports products.json, exports Product type + activeCategories
+- `lib/products.ts` — imports products.json, exports Product type, CATEGORIES, activeCategories
+- `app/(site)/page.tsx` — homepage (category grid, lifestyle slider, brand story)
+- `app/(site)/shop/page.tsx` — shop page with category filter + grouped "All Pieces" view
 - `app/(site)/shop/[id]/page.tsx` — product detail page
-- `components/ProductCard.tsx` — shop grid card (hover video + variant swatch)
+- `components/ProductCard.tsx` — shop grid card with swipeable carousel
 - `components/ProductGallery.tsx` — detail page gallery (swipe, video at pos 2, thumbnails)
+- `components/ProductPageClient.tsx` — client wrapper with sticky CTA logic
+- `components/YouMayAlsoLike.tsx` — "You May Also Like" server component
+- `components/PageTransition.tsx` — page transition animation wrapper
 - `components/Navbar.tsx` — scroll-aware navbar with Shop dropdown
-- `app/(site)/page.tsx` — homepage with category tiles grid
+- `components/LifestyleSlider.tsx` — reads images/ lifestyle/ folder dynamically
+- `app/admin/dashboard/page.tsx` — admin product grid with delete
+- `app/admin/site-images/page.tsx` — admin image upload with 6 labeled sections
+- `app/(site)/api/admin/site-images/route.ts` — handles image upload to GitHub (supports subdirs like images/lifestyle/)
+- `app/globals.css` — CSS keyframes: page-in, slide-up, reveal-hidden/reveal-visible
+- `app/icon.png`, `app/favicon.ico`, `app/apple-icon.png` — generated from logo-pink.png
 - `public/images/products/` — all product images served from here
+- `public/images/lifestyle/` — lifestyle slider images (01-07, sorted alphabetically)
 - `proxy.ts` — Next.js 16 middleware (NOT middleware.ts — that's a breaking change in v16)
 
 ## Tech Stack

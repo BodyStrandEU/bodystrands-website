@@ -2,6 +2,7 @@ import Link from "next/link";
 import { products } from "@/lib/products";
 import { notFound } from "next/navigation";
 import ProductPageClient from "@/components/ProductPageClient";
+import YouMayAlsoLike from "@/components/YouMayAlsoLike";
 
 export async function generateStaticParams() {
   return products.map((p) => ({ id: p.id }));
@@ -36,6 +37,7 @@ export default async function ProductPage({ params }: { params: Promise<{ id: st
         </nav>
 
         <ProductPageClient product={product} />
+        <YouMayAlsoLike product={product} />
       </div>
     </div>
   );

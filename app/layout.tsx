@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Cormorant_Garamond, Josefin_Sans } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
+import PageTransition from "@/components/PageTransition";
 
 const cormorant = Cormorant_Garamond({
   variable: "--font-cormorant",
@@ -64,7 +65,7 @@ export default function RootLayout({
         </Script>
       </head>
       <body>
-        {children}
+        <PageTransition>{children}</PageTransition>
       </body>
     </html>
   );

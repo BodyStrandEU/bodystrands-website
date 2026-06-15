@@ -111,6 +111,24 @@ h1, h2, h3, h4 {
   animation-play-state: paused;
 }
 
+/* Page transition */
+@keyframes page-in {
+  from { opacity: 0; transform: translateY(7px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.animate-page-in {
+  animation: page-in 0.28s ease-out both;
+}
+
+/* Sticky bar slide-up */
+@keyframes slide-up {
+  from { transform: translateY(100%); }
+  to   { transform: translateY(0); }
+}
+.animate-slide-up {
+  animation: slide-up 0.22s ease-out both;
+}
+
 /* Scroll reveal animations */
 .reveal-hidden {
   opacity: 0;

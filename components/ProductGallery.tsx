@@ -148,7 +148,7 @@ export default function ProductGallery({
             preload="auto"
             onCanPlayThrough={() => setVideoReady(true)}
             onError={() => { setVideoError(true); setVideoReady(false); }}
-            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ${
+            className={`absolute inset-0 w-full h-full object-contain transition-opacity duration-300 ${
               isOnVideo ? "opacity-100" : "opacity-0 pointer-events-none"
             }`}
           >

@@ -107,6 +107,18 @@ export default function ProductCard({ product, priority = false }: { product: Pr
     }
   }, [currentSlide]);
 
+  // Pre-buffer video when user is on the slide just before it
+  // so swiping to it plays instantly with no network delay
+  useEffect(() => {
+    const v = videoRef.current;
+    if (!v || !displayVideo) return;
+    const videoIdx = mediaList.findIndex((m) => m.type === "video");
+    if (videoIdx !== -1 && Math.abs(slideIndex - videoIdx) <= 1) {
+      v.preload = "auto";
+      if (v.readyState === 0) v.load();
+    }
+  }, [slideIndex, mediaList, displayVideo]);
+
   function goTo(i: number) {
     setSlideIndex(Math.max(0, Math.min(i, mediaList.length - 1)));
   }
@@ -183,7 +195,7 @@ export default function ProductCard({ product, priority = false }: { product: Pr
             muted
             loop
             playsInline
-            preload="none"
+            preload="metadata"
             className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ${
               currentSlide?.type === "video" ? "opacity-100" : "opacity-0"
             }`}

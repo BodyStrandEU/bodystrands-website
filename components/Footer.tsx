@@ -23,6 +23,7 @@ const SHOP_LINKS = [
 const INFO_LINKS = [
   { href: "/about",          label: "About Us" },
   { href: "/contact",        label: "Contact" },
+  { href: "/track",          label: "Track Your Order" },
   { href: "/shipping",       label: "Shipping & Returns" },
   { href: "/privacy-policy", label: "Privacy Policy" },
   { href: "/terms",          label: "Terms & Conditions" },

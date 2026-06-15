@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Shipping & Returns — Bodystrands",
@@ -116,6 +117,18 @@ export default function ShippingPage() {
               storenavaria@gmail.com
             </a>
             . We will do everything we can to resolve the issue quickly.
+          </p>
+        </section>
+
+        {/* Track */}
+        <section>
+          <h2 className="font-josefin text-sm tracking-widest uppercase mb-3">Track Your Order</h2>
+          <p>
+            Already shipped?{" "}
+            <Link href="/track" className="text-[#A0622A] hover:underline">
+              Enter your tracking number here
+            </Link>{" "}
+            to follow your parcel in real time.
           </p>
         </section>
 

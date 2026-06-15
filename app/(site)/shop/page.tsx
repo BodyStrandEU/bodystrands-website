@@ -21,12 +21,22 @@ export default async function ShopPage({
 
   const activeProducts = products.filter((p) => p.active !== false);
 
-  const filtered =
-    category && isValidCategory(category)
-      ? activeProducts.filter((p) => p.category === category)
-      : activeProducts;
+  const isFiltered = !!(category && isValidCategory(category));
+  const filtered   = isFiltered
+    ? activeProducts.filter((p) => p.category === category)
+    : activeProducts;
 
-  const activeLabel = category && isValidCategory(category) ? category : "All Pieces";
+  const activeLabel = isFiltered ? category : "All Pieces";
+
+  // Group by category in CATEGORIES order when showing all
+  const grouped = isFiltered
+    ? null
+    : CATEGORIES
+        .map((cat) => ({
+          category: cat,
+          items: activeProducts.filter((p) => p.category === cat),
+        }))
+        .filter((g) => g.items.length > 0);
 
   return (
     <div className="min-h-screen pt-28 md:pt-32 pb-24">
@@ -50,13 +60,7 @@ export default async function ShopPage({
           </Suspense>
 
           <div className="flex-1 min-w-0">
-            {filtered.length > 0 ? (
-              <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-x-0.5 gap-y-4 md:gap-x-4 md:gap-y-8">
-                {filtered.map((product, i) => (
-                  <ProductCard key={product.id} product={product} priority={i < 4} />
-                ))}
-              </div>
-            ) : (
+            {filtered.length === 0 ? (
               <div className="py-24 text-center">
                 <div className="flex items-center justify-center gap-6 mb-8">
                   <div className="flex-1 h-px bg-[#E8B4A8]/30 max-w-24" />
@@ -66,6 +70,42 @@ export default async function ShopPage({
                 <p className="text-sm font-light tracking-wide text-[#8C7B6E]">
                   New pieces coming soon.
                 </p>
+              </div>
+            ) : grouped ? (
+              /* All Pieces — grouped by category */
+              <div className="flex flex-col gap-12 md:gap-16">
+                {grouped.map((group, gi) => (
+                  <div key={group.category}>
+                    {/* Category divider */}
+                    <div className="flex items-center gap-4 mb-5 px-0.5">
+                      <span className="text-[0.55rem] tracking-[0.28em] uppercase text-[#A0622A] whitespace-nowrap">
+                        {group.category}
+                      </span>
+                      <div className="flex-1 h-px bg-[#E8B4A8]/40" />
+                      <span className="text-[0.5rem] tracking-[0.15em] uppercase text-[#8C7B6E]/60 whitespace-nowrap">
+                        {group.items.length} {group.items.length === 1 ? "piece" : "pieces"}
+                      </span>
+                    </div>
+
+                    {/* Grid for this category */}
+                    <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-x-0.5 gap-y-4 md:gap-x-4 md:gap-y-8">
+                      {group.items.map((product, i) => (
+                        <ProductCard
+                          key={product.id}
+                          product={product}
+                          priority={gi === 0 && i < 4}
+                        />
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            ) : (
+              /* Single category — flat grid */
+              <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-x-0.5 gap-y-4 md:gap-x-4 md:gap-y-8">
+                {filtered.map((product, i) => (
+                  <ProductCard key={product.id} product={product} priority={i < 4} />
+                ))}
               </div>
             )}
           </div>

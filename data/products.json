@@ -480,13 +480,6 @@
           "Medium (71–91 cm)",
           "Large (71–100 cm)"
         ]
-      },
-      {
-        "label": "Finish",
-        "options": [
-          "Gold Stainless",
-          "Silver Stainless"
-        ]
       }
     ],
     "featured": false,

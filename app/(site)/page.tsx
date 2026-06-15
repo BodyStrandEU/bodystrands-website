@@ -37,13 +37,9 @@ function CategoryTile({ tile, large = false }: { tile: Tile; large?: boolean }) 
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[#2C2220]/75 via-transparent to-transparent" />
         <div className="absolute bottom-0 left-0 p-4 md:p-5">
-          <p className="text-[0.45rem] tracking-[0.3em] uppercase text-[#E8B4A8]/80 mb-1">{tile.sub}</p>
-          <h3 className={`font-heading font-light text-white leading-tight ${large ? "text-xl md:text-2xl" : "text-base md:text-lg"}`}>
+          <h3 className={`font-heading font-light text-white leading-tight ${large ? "text-2xl md:text-3xl" : "text-lg md:text-2xl"}`}>
             {tile.label}
           </h3>
-          <p className="mt-1.5 text-[0.45rem] tracking-[0.22em] uppercase text-white/50 group-hover:text-[#E8B4A8] transition-colors duration-300">
-            Explore →
-          </p>
         </div>
       </div>
     </Link>

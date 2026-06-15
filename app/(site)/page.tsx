@@ -5,6 +5,7 @@ import Link from "next/link";
 import ScrollReveal from "@/components/ScrollReveal";
 import ReviewsMarquee from "@/components/ReviewsMarquee";
 import LifestyleSlider from "@/components/LifestyleSlider";
+import BrandVideo from "@/components/BrandVideo";
 
 // All possible category tiles — filtered at render time to only show populated categories
 const allTiles = [
@@ -164,14 +165,7 @@ export default function HomePage() {
       {/* Brand Story */}
       <section className="max-w-7xl mx-auto px-6 md:px-10 py-20 md:py-28 grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
         <ScrollReveal>
-          <div className="relative aspect-square overflow-hidden">
-            <Image
-              src="/images/elvan-back-cross.jpg"
-              alt="Bodystrands back chain"
-              fill
-              className="object-cover object-center"
-            />
-          </div>
+          <BrandVideo src="/videos/promo.mp4" />
         </ScrollReveal>
         <ScrollReveal delay={150}>
           <div className="flex flex-col gap-6">

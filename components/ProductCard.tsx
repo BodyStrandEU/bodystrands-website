@@ -19,11 +19,14 @@ export default function ProductCard({ product, priority = false }: { product: Pr
 
   const [activeVariant, setActiveVariant] = useState<string | null>(null);
   const [slideIndex, setSlideIndex]       = useState(0);
+  const [videoError, setVideoError]       = useState(false);
+  const [videoReady, setVideoReady]       = useState(false);
 
-  const mediaRef   = useRef<HTMLDivElement>(null);
-  const touchStart = useRef({ x: 0, y: 0, time: 0 });
-  const swipeDir   = useRef<"h" | "v" | null>(null);
-  const lastTouch  = useRef(0);
+  const mediaRef      = useRef<HTMLDivElement>(null);
+  const touchStart    = useRef({ x: 0, y: 0, time: 0 });
+  const swipeDir      = useRef<"h" | "v" | null>(null);
+  const lastTouch     = useRef(0);
+  const lastVideoSrc  = useRef<string | null>(null);
 
   const symbol = product.currency === "EUR" ? "€" : product.currency === "GBP" ? "£" : "$";
 
@@ -47,18 +50,22 @@ export default function ProductCard({ product, priority = false }: { product: Pr
       ? product.variantVideos[activeVariant]
       : defaultVideo;
 
-  // First image → video (if any) → remaining images
+  // First image → video (if any, and not errored) → remaining images
   const mediaList = useMemo<MediaItem[]>(() => {
     const imgs   = displayImages ?? [];
     const result: MediaItem[] = [];
-    if (imgs[0])      result.push({ type: "image", src: imgs[0] });
-    if (displayVideo) result.push({ type: "video", src: displayVideo });
+    if (imgs[0])                       result.push({ type: "image", src: imgs[0] });
+    if (displayVideo && !videoError)   result.push({ type: "video", src: displayVideo });
     for (let i = 1; i < imgs.length; i++) result.push({ type: "image", src: imgs[i] });
     return result;
-  }, [displayImages, displayVideo]);
+  }, [displayImages, displayVideo, videoError]);
 
-  // Reset carousel when variant changes
-  useEffect(() => { setSlideIndex(0); }, [activeVariant]);
+  // Reset carousel and video state when variant changes
+  useEffect(() => {
+    setSlideIndex(0);
+    setVideoError(false);
+    setVideoReady(false);
+  }, [activeVariant]);
 
   // Native listeners handle ALL touch detection — must run in native handlers
   // so direction is known and preventDefault() fires on the very first touchmove
@@ -107,17 +114,23 @@ export default function ProductCard({ product, priority = false }: { product: Pr
     }
   }, [currentSlide]);
 
-  // Pre-buffer video when user is on the slide just before it
-  // so swiping to it plays instantly with no network delay
+  // Pre-buffer video when on an adjacent slide.
+  // Tracks lastVideoSrc so variant changes always trigger a fresh load —
+  // readyState-only guard was missing re-loads when src changed mid-session.
   useEffect(() => {
     const v = videoRef.current;
-    if (!v || !displayVideo) return;
+    if (!v || !displayVideo || videoError) return;
     const videoIdx = mediaList.findIndex((m) => m.type === "video");
-    if (videoIdx !== -1 && Math.abs(slideIndex - videoIdx) <= 1) {
+    if (videoIdx === -1) return;
+    if (Math.abs(slideIndex - videoIdx) <= 1) {
+      const isNewSrc = displayVideo !== lastVideoSrc.current;
       v.preload = "auto";
-      if (v.readyState === 0) v.load();
+      if (isNewSrc || v.readyState === 0) {
+        lastVideoSrc.current = displayVideo;
+        v.load();
+      }
     }
-  }, [slideIndex, mediaList, displayVideo]);
+  }, [slideIndex, mediaList, displayVideo, videoError]);
 
   function goTo(i: number) {
     setSlideIndex(Math.max(0, Math.min(i, mediaList.length - 1)));
@@ -187,8 +200,8 @@ export default function ProductCard({ product, priority = false }: { product: Pr
           </div>
         )}
 
-        {/* Video */}
-        {displayVideo && (
+        {/* Video — kept mounted so buffer is never discarded */}
+        {displayVideo && !videoError && (
           <video
             ref={videoRef}
             src={displayVideo}
@@ -196,10 +209,19 @@ export default function ProductCard({ product, priority = false }: { product: Pr
             loop
             playsInline
             preload="metadata"
+            onCanPlayThrough={() => setVideoReady(true)}
+            onError={() => { setVideoError(true); setVideoReady(false); }}
             className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ${
               currentSlide?.type === "video" ? "opacity-100" : "opacity-0"
             }`}
           />
+        )}
+
+        {/* Buffering spinner on video slide */}
+        {currentSlide?.type === "video" && !videoReady && !videoError && (
+          <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+            <div className="w-7 h-7 rounded-full border-2 border-white/30 border-t-white animate-spin" />
+          </div>
         )}
 
         {/* Slide dots */}

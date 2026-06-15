@@ -3,9 +3,7 @@ import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import type { Product } from "@/lib/products";
 
-type MediaItem =
-  | { type: "image"; src: string }
-  | { type: "video"; src: string };
+type MediaItem = { type: "image"; src: string } | { type: "video"; src: string };
 
 function buildMedia(images: string[], videoSrc?: string): MediaItem[] {
   const items: MediaItem[] = images.map((src) => ({ type: "image" as const, src }));
@@ -21,26 +19,67 @@ export default function ProductGallery({
   activeVariant: string;
 }) {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [videoError, setVideoError]   = useState(false);
+  const [videoReady, setVideoReady]   = useState(false);
+
   const mainRef    = useRef<HTMLDivElement>(null);
+  const videoRef   = useRef<HTMLVideoElement>(null);
   const touchStart = useRef({ x: 0, y: 0 });
   const swipeDir   = useRef<"h" | "v" | null>(null);
 
-  // Reset to first item whenever variant changes
+  const images = product.variantImages?.[activeVariant] ?? product.images ?? [];
+  const videoSrc =
+    product.variantVideos?.[activeVariant] ??
+    product.video ??
+    (product.variantVideos ? Object.values(product.variantVideos)[0] : undefined);
+
+  const allMedia = buildMedia(images, videoSrc);
+  // When video errors, drop it from the display list so swiping skips it cleanly
+  const media     = videoError ? allMedia.filter((m) => m.type !== "video") : allMedia;
+  const videoIdx  = media.findIndex((m) => m.type === "video"); // -1 when no video or error
+  const isOnVideo = activeIndex === videoIdx && videoIdx !== -1;
+
+  // Reset everything when variant changes
   useEffect(() => {
     setActiveIndex(0);
+    setVideoError(false);
+    setVideoReady(false);
   }, [activeVariant]);
 
-  // Native listeners — direction detection AND preventDefault must happen
-  // in the same event to block scroll before the browser commits to it
+  // If video errored while user was on the video slide, step back to slide 0
+  useEffect(() => {
+    if (videoError && isOnVideo) setActiveIndex(0);
+  }, [videoError, isOnVideo]);
+
+  // Eagerly buffer video as soon as the product page loads —
+  // it's at position 2, one swipe away, user is very likely to see it
+  useEffect(() => {
+    const v = videoRef.current;
+    if (!v || !videoSrc || videoError) return;
+    v.preload = "auto";
+    v.load();
+  }, [videoSrc, videoError]);
+
+  // Play/pause via ref so the element is never unmounted and never re-fetches
+  useEffect(() => {
+    const v = videoRef.current;
+    if (!v) return;
+    if (isOnVideo) {
+      v.currentTime = 0;
+      v.play().catch(() => {});
+    } else {
+      v.pause();
+    }
+  }, [isOnVideo]);
+
+  // Native touch listeners — direction detected here so preventDefault fires in time
   useEffect(() => {
     const el = mainRef.current;
     if (!el) return;
-
     function onStart(e: TouchEvent) {
       touchStart.current = { x: e.touches[0].clientX, y: e.touches[0].clientY };
       swipeDir.current = null;
     }
-
     function onMove(e: TouchEvent) {
       if (swipeDir.current === null) {
         const dx = Math.abs(e.touches[0].clientX - touchStart.current.x);
@@ -49,7 +88,6 @@ export default function ProductGallery({
       }
       if (swipeDir.current === "h") e.preventDefault();
     }
-
     el.addEventListener("touchstart", onStart, { passive: true });
     el.addEventListener("touchmove",  onMove,  { passive: false });
     return () => {
@@ -57,15 +95,6 @@ export default function ProductGallery({
       el.removeEventListener("touchmove",  onMove);
     };
   }, []);
-
-  const images = product.variantImages?.[activeVariant] ?? product.images ?? [];
-  const videoSrc =
-    product.variantVideos?.[activeVariant] ??
-    product.video ??
-    (product.variantVideos ? Object.values(product.variantVideos)[0] : undefined);
-
-  const media = buildMedia(images, videoSrc);
-  const currentItem = media[activeIndex] ?? media[0];
 
   const goTo = (i: number) =>
     setActiveIndex(Math.max(0, Math.min(i, media.length - 1)));
@@ -79,36 +108,58 @@ export default function ProductGallery({
     swipeDir.current = null;
   };
 
+  const currentItem = media[activeIndex];
+
   return (
     <div className="flex flex-col gap-3">
-      {/* Main viewer */}
+      {/* Main viewer — full-bleed on mobile */}
       <div
         ref={mainRef}
-        className="relative aspect-square overflow-hidden bg-[#FDF9F7] select-none"
+        className="relative aspect-square overflow-hidden bg-[#FDF9F7] select-none -mx-6 md:mx-0"
         onTouchEnd={handleTouchEnd}
       >
-        {currentItem?.type === "image" && (
-          <Image
-            src={currentItem.src}
-            alt={`${product.name}${activeVariant ? ` — ${activeVariant}` : ""}`}
-            fill
-            sizes="(max-width: 768px) 100vw, 50vw"
-            className="object-cover"
-            priority={activeIndex === 0}
-          />
+        {/* Images — all rendered, opacity controls visibility */}
+        {media.map((item, i) =>
+          item.type === "image" ? (
+            <Image
+              key={item.src}
+              src={item.src}
+              alt={`${product.name}${activeVariant ? ` — ${activeVariant}` : ""}`}
+              fill
+              sizes="(max-width: 768px) 100vw, 50vw"
+              className={`object-cover transition-opacity duration-300 ${
+                i === activeIndex ? "opacity-100" : "opacity-0"
+              }`}
+              priority={i === 0}
+            />
+          ) : null
         )}
-        {currentItem?.type === "video" && (
+
+        {/* Video — always rendered, NEVER unmounted so the buffer is preserved.
+            Opacity toggles show/hide; playback controlled via ref above. */}
+        {videoSrc && !videoError && (
           <video
-            key={currentItem.src}
-            src={currentItem.src}
-            autoPlay
+            ref={videoRef}
+            src={videoSrc}
             muted
             loop
             playsInline
-            preload="metadata"
-            className="absolute inset-0 w-full h-full object-cover"
+            preload="auto"
+            onCanPlayThrough={() => setVideoReady(true)}
+            onError={() => { setVideoError(true); setVideoReady(false); }}
+            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ${
+              isOnVideo ? "opacity-100" : "opacity-0 pointer-events-none"
+            }`}
           />
         )}
+
+        {/* Buffering spinner — shown only while video is loading */}
+        {isOnVideo && !videoReady && !videoError && (
+          <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+            <div className="w-10 h-10 rounded-full border-2 border-white/30 border-t-white animate-spin" />
+          </div>
+        )}
+
         {!currentItem && (
           <div className="absolute inset-0 flex items-center justify-center">
             <p className="text-[0.6rem] tracking-[0.2em] uppercase text-[#A0622A]/40">

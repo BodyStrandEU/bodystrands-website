@@ -5,7 +5,6 @@ import Link from "next/link";
 import ScrollReveal from "@/components/ScrollReveal";
 import ReviewsMarquee from "@/components/ReviewsMarquee";
 import LifestyleSlider from "@/components/LifestyleSlider";
-import { activeCategories } from "@/lib/products";
 
 // All possible category tiles — filtered at render time to only show populated categories
 const allTiles = [
@@ -56,13 +55,8 @@ export default function HomePage() {
         .map((f) => `/images/lifestyle/${f}`)
     : [];
 
-  // Only show tiles for categories that have real products
-  const visibleTiles = allTiles.filter((t) =>
-    (activeCategories as string[]).includes(t.label)
-  );
-
-  const heroTile  = visibleTiles.find((t) => t.label === "Back Chains");
-  const gridTiles = visibleTiles.filter((t) => t.label !== "Back Chains");
+  const heroTile  = allTiles.find((t) => t.label === "Back Chains");
+  const gridTiles = allTiles.filter((t) => t.label !== "Back Chains");
 
   return (
     <>
@@ -127,38 +121,34 @@ export default function HomePage() {
         </ScrollReveal>
 
         {/* Unified grid — Back Chains anchors top-left, spans 2 rows on desktop */}
-        {visibleTiles.length > 0 && (
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-1">
-            {/* Back Chains: full-width hero on mobile, 2×2 anchor on desktop */}
-            {heroTile && (
-              <div className="col-span-2 md:row-span-2">
-                <Link href={heroTile.href} className="group block h-full">
-                  <div className="relative overflow-hidden aspect-[3/4] md:aspect-auto md:h-full">
-                    <Image
-                      src={heroTile.image}
-                      alt={heroTile.label}
-                      fill
-                      priority
-                      className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-[1.04]"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#2C2220]/75 via-transparent to-transparent" />
-                    <div className="absolute bottom-0 left-0 p-4 md:p-6">
-                      <h3 className="font-heading font-light text-white leading-tight text-2xl md:text-3xl">
-                        {heroTile.label}
-                      </h3>
-                    </div>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-1">
+          {/* Back Chains: full-width hero on mobile, 2×2 anchor on desktop */}
+          {heroTile && (
+            <div className="col-span-2 md:row-span-2">
+              <Link href={heroTile.href} className="group block h-full">
+                <div className="relative overflow-hidden aspect-[3/4] md:aspect-auto md:h-full">
+                  <Image
+                    src={heroTile.image}
+                    alt={heroTile.label}
+                    fill
+                    priority
+                    className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-[1.04]"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#2C2220]/75 via-transparent to-transparent" />
+                  <div className="absolute bottom-0 left-0 p-4 md:p-6">
+                    <h3 className="font-heading font-light text-white leading-tight text-2xl md:text-3xl">
+                      {heroTile.label}
+                    </h3>
                   </div>
-                </Link>
-              </div>
-            )}
-            {/* All other categories — portrait tiles, always 2 per row on mobile */}
-            {gridTiles.map((tile, i) => (
-              <ScrollReveal key={tile.label} delay={Math.min(i * 40, 200)}>
-                <CategoryTile tile={tile} />
-              </ScrollReveal>
-            ))}
-          </div>
-        )}
+                </div>
+              </Link>
+            </div>
+          )}
+          {/* All 10 other categories — always visible, no animation delay */}
+          {gridTiles.map((tile) => (
+            <CategoryTile key={tile.label} tile={tile} />
+          ))}
+        </div>
       </section>
 
       {/* Lifestyle slider */}

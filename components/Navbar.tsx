@@ -1,11 +1,15 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
+import { usePathname } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import { activeCategories } from "@/lib/products";
 
 export default function Navbar() {
+  const pathname = usePathname();
+  const isHero = pathname === "/"; // only homepage has a dark full-bleed hero behind the nav
+
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [shopOpen, setShopOpen] = useState(false);
@@ -77,7 +81,7 @@ export default function Navbar() {
               <button
                 onClick={() => setShopOpen(!shopOpen)}
                 className={`flex items-center gap-1.5 text-[0.65rem] font-light tracking-[0.22em] uppercase transition-colors duration-200 ${
-                  shopOpen ? "text-[#A0622A]" : scrolled ? "text-[#2C2220] hover:text-[#A0622A]" : "text-[#FDF9F7] hover:text-white [text-shadow:0_1px_4px_rgba(0,0,0,0.5)]"
+                  shopOpen ? "text-[#A0622A]" : (scrolled || !isHero) ? "text-[#2C2220] hover:text-[#A0622A]" : "text-[#FDF9F7] hover:text-white [text-shadow:0_1px_4px_rgba(0,0,0,0.5)]"
                 }`}
               >
                 Shop
@@ -131,7 +135,7 @@ export default function Navbar() {
                 key={link.href}
                 href={link.href}
                 className={`text-[0.65rem] font-light tracking-[0.22em] uppercase transition-colors duration-200 ${
-                  scrolled ? "text-[#2C2220] hover:text-[#A0622A]" : "text-[#FDF9F7] hover:text-white [text-shadow:0_1px_4px_rgba(0,0,0,0.5)]"
+                  (scrolled || !isHero) ? "text-[#2C2220] hover:text-[#A0622A]" : "text-[#FDF9F7] hover:text-white [text-shadow:0_1px_4px_rgba(0,0,0,0.5)]"
                 }`}
               >
                 {link.label}

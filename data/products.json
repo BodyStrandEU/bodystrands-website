@@ -4307,12 +4307,13 @@
       "https://i.etsystatic.com/55122258/r/il/9f3ccf/8029757553/il_fullxfull.8029757553_i7rw.jpg",
       "https://i.etsystatic.com/55122258/r/il/2955d4/8029794213/il_fullxfull.8029794213_ps5m.jpg",
       "https://i.etsystatic.com/55122258/r/il/ef7ac5/8029746787/il_fullxfull.8029746787_6ngn.jpg",
-      "https://i.etsystatic.com/55122258/r/il/92005f/7819806106/il_fullxfull.7819806106_nfek.jpg",
       "https://i.etsystatic.com/55122258/r/il/59f15a/8029772403/il_fullxfull.8029772403_b02n.jpg",
       "https://i.etsystatic.com/55122258/r/il/698621/7867784241/il_fullxfull.7867784241_oh2z.jpg",
-      "https://i.etsystatic.com/55122258/r/il/d7cb64/7819806224/il_fullxfull.7819806224_ggv9.jpg",
       "https://i.etsystatic.com/55122258/r/il/cbd1a6/7803902507/il_fullxfull.7803902507_7i39.jpg",
-      "https://i.etsystatic.com/55122258/r/il/2d76f4/7803902439/il_fullxfull.7803902439_3q4q.jpg"
+      "https://i.etsystatic.com/55122258/r/il/2d76f4/7803902439/il_fullxfull.7803902439_3q4q.jpg",
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
+      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.jpg",
+      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg"
     ],
     "variantGroups": [
       {
@@ -4323,7 +4324,8 @@
           "Large (+23cm ext)"
         ]
       }
-    ]
+    ],
+    "video": "/images/products/0615--2-.mp4"
   },
   {
     "id": "pearl-hand-chain",

@@ -290,12 +290,18 @@ function VideoDropZone({ value, onChange }: VideoDropZoneProps) {
 
   async function handleFile(file: File) {
     setUploadError("");
-    setProgress("");
     setUploading(true);
     try {
       const mb = (file.size / 1024 / 1024).toFixed(1);
-      setProgress(`Uploading ${mb} MB…`);
-      const url = await uploadFileDirect(file);
+      setProgress(`Uploading ${mb} MB to Cloudflare Stream…`);
+      const form = new FormData();
+      form.append("file", file, file.name);
+      const res = await fetch("/api/admin/stream-upload", { method: "POST", body: form });
+      if (!res.ok) {
+        const err = await res.json() as { error?: string };
+        throw new Error(err.error ?? "Upload failed");
+      }
+      const { url } = await res.json() as { url: string };
       onChange(url);
       setProgress("");
     } catch (err) {
@@ -340,11 +346,11 @@ function VideoDropZone({ value, onChange }: VideoDropZoneProps) {
         />
         <div style={{ fontSize: "1.4rem", marginBottom: "0.25rem" }}>🎬</div>
         <span style={{ fontSize: "0.78rem", color: uploading ? "#A0622A" : "var(--admin-muted)" }}>
-          {progress || (uploading ? "Uploading…" : "Drop .mp4 here or click to upload")}
+          {progress || (uploading ? "Uploading…" : "Drop video here or click to upload")}
         </span>
         <br />
         <span style={{ fontSize: "0.7rem", color: "var(--admin-muted2)" }}>
-          Any size · H.264 mp4 recommended
+          Any size · .mp4 or .mov · uploads directly to Cloudflare Stream
         </span>
       </label>
 

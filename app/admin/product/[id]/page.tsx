@@ -1106,21 +1106,24 @@ export default function ProductEditor({ params }: { params: Promise<{ id: string
           )}
         </div>
 
-        {/* Card thumbnail images */}
-        <div style={sectionStyle}>
-          <h2 style={{ margin: "0 0 0.75rem", fontSize: "0.9rem", fontWeight: 700, color: "var(--admin-text)", textTransform: "uppercase", letterSpacing: "0.08em" }}>
-            Card Thumbnail Images
-          </h2>
-          <p style={{ margin: "0 0 1rem", fontSize: "0.78rem", color: "var(--admin-muted)" }}>
-            Used on the shop grid. First image is the main thumbnail.
-          </p>
-          <ImageSection
-            title=""
-            images={form.images}
-            onChange={(imgs) => setForm((f) => ({ ...f, images: imgs }))}
-            onUpload={uploadFile}
-          />
-        </div>
+        {/* Card thumbnail images — only shown when there are no variants,
+            otherwise the shop card uses the first variant's images automatically */}
+        {(form.variants ?? []).length === 0 && (
+          <div style={sectionStyle}>
+            <h2 style={{ margin: "0 0 0.75rem", fontSize: "0.9rem", fontWeight: 700, color: "var(--admin-text)", textTransform: "uppercase", letterSpacing: "0.08em" }}>
+              Card Thumbnail Images
+            </h2>
+            <p style={{ margin: "0 0 1rem", fontSize: "0.78rem", color: "var(--admin-muted)" }}>
+              Used on the shop grid. First image is the main thumbnail.
+            </p>
+            <ImageSection
+              title=""
+              images={form.images}
+              onChange={(imgs) => setForm((f) => ({ ...f, images: imgs }))}
+              onUpload={uploadFile}
+            />
+          </div>
+        )}
 
         {/* Variants & variant images */}
         <div style={sectionStyle}>

@@ -12,8 +12,10 @@ const SWATCH_COLORS: Record<string, string> = {
 export default function ProductCard({ product, priority = false }: { product: Product; priority?: boolean }) {
   const router = useRouter();
 
-  const [activeVariant, setActiveVariant] = useState<string | null>(null);
-  const [slideIndex, setSlideIndex]       = useState(0);
+  const [activeVariant, setActiveVariant] = useState<string | null>(
+    (product.variants ?? [])[0] ?? null
+  );
+  const [slideIndex, setSlideIndex] = useState(0);
 
   const mediaRef   = useRef<HTMLDivElement>(null);
   const touchStart = useRef({ x: 0, y: 0, time: 0 });
@@ -22,25 +24,43 @@ export default function ProductCard({ product, priority = false }: { product: Pr
 
   const symbol = product.currency === "EUR" ? "€" : product.currency === "GBP" ? "£" : "$";
 
-  // Images only — video lives on the product detail page
-  const defaultImages =
-    product.variantImages && Object.values(product.variantImages)[0]?.length
-      ? Object.values(product.variantImages)[0]
-      : product.images;
+  // All variant images combined in variant order, or fallback to product.images
+  const combinedImages = useMemo(() => {
+    const variants = product.variants ?? [];
+    if (variants.length > 0 && product.variantImages) {
+      return variants.flatMap((v) => product.variantImages![v] ?? []);
+    }
+    return product.images ?? [];
+  }, [product.variants, product.variantImages, product.images]);
 
-  const images = useMemo(
-    () =>
-      activeVariant && product.variantImages?.[activeVariant]?.length
-        ? product.variantImages[activeVariant]
-        : defaultImages ?? [],
-    [activeVariant, product.variantImages, defaultImages]
-  );
+  // Which variant does each slide index belong to?
+  const slideVariantMap = useMemo(() => {
+    const variants = product.variants ?? [];
+    if (variants.length === 0 || !product.variantImages) return [] as (string | null)[];
+    const result: (string | null)[] = [];
+    for (const v of variants) {
+      for (let i = 0; i < (product.variantImages[v]?.length ?? 0); i++) {
+        result.push(v);
+      }
+    }
+    return result;
+  }, [product.variants, product.variantImages]);
 
-  // Reset to first image when variant changes
-  useEffect(() => { setSlideIndex(0); }, [activeVariant]);
+  // Active swatch badge follows the carousel position automatically
+  useEffect(() => {
+    const v = slideVariantMap[slideIndex];
+    if (v) setActiveVariant(v);
+  }, [slideIndex, slideVariantMap]);
+
+  // Tap a swatch → jump to that variant's first image
+  function jumpToVariant(v: string) {
+    const idx = slideVariantMap.indexOf(v);
+    setSlideIndex(idx !== -1 ? idx : 0);
+    setActiveVariant(v);
+  }
 
   // Native touch listeners — direction detected here so preventDefault fires
-  // on the very first touchmove, before the browser commits to scrolling
+  // on the very first touchmove before the browser commits to scrolling
   useEffect(() => {
     const el = mediaRef.current;
     if (!el) return;
@@ -72,7 +92,7 @@ export default function ProductCard({ product, priority = false }: { product: Pr
   }, []);
 
   function goTo(i: number) {
-    setSlideIndex(Math.max(0, Math.min(i, images.length - 1)));
+    setSlideIndex(Math.max(0, Math.min(i, combinedImages.length - 1)));
   }
 
   function onTouchEnd(e: React.TouchEvent) {
@@ -107,7 +127,7 @@ export default function ProductCard({ product, priority = false }: { product: Pr
         className="relative overflow-hidden bg-[#FDF9F7] aspect-[3/4] select-none"
         onTouchEnd={onTouchEnd}
       >
-        {images.length === 0 && (
+        {combinedImages.length === 0 && (
           <div className="absolute inset-0 flex flex-col items-center justify-center gap-2">
             <div className="w-8 h-px bg-[#A0622A]/30" />
             <p className="text-[0.5rem] tracking-[0.25em] uppercase text-[#A0622A]/40">Coming Soon</p>
@@ -115,8 +135,7 @@ export default function ProductCard({ product, priority = false }: { product: Pr
           </div>
         )}
 
-        {/* All images rendered; opacity controls which is visible */}
-        {images.map((src, i) => (
+        {combinedImages.map((src, i) => (
           <Image
             key={src + i}
             src={src}
@@ -132,9 +151,9 @@ export default function ProductCard({ product, priority = false }: { product: Pr
         ))}
 
         {/* Slide dots */}
-        {images.length > 1 && (
+        {combinedImages.length > 1 && (
           <div className="absolute bottom-2 left-0 right-0 flex justify-center gap-1 z-10 pointer-events-none">
-            {images.map((_, i) => (
+            {combinedImages.map((_, i) => (
               <span
                 key={i}
                 className={`block rounded-full transition-all duration-200 ${
@@ -146,7 +165,7 @@ export default function ProductCard({ product, priority = false }: { product: Pr
         )}
 
         {/* Desktop prev / next arrows */}
-        {images.length > 1 && (
+        {combinedImages.length > 1 && (
           <>
             <button
               onClick={(e) => { e.stopPropagation(); goTo(slideIndex - 1); }}
@@ -158,7 +177,7 @@ export default function ProductCard({ product, priority = false }: { product: Pr
             </button>
             <button
               onClick={(e) => { e.stopPropagation(); goTo(slideIndex + 1); }}
-              disabled={slideIndex === images.length - 1}
+              disabled={slideIndex === combinedImages.length - 1}
               aria-label="Next"
               className="absolute right-1.5 top-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-white/80 backdrop-blur-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200 disabled:!opacity-0 z-10 text-[#2C2220] text-sm leading-none"
             >
@@ -167,15 +186,14 @@ export default function ProductCard({ product, priority = false }: { product: Pr
           </>
         )}
 
-        {/* Variant swatches — desktop hover */}
+        {/* Variant swatches — tap/click to jump to that variant's images */}
         {product.variants && product.variants.length > 1 && (
           <div className="absolute bottom-7 left-2 flex gap-1.5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
             {product.variants.map((v) => (
               <button
                 key={v}
                 aria-label={v}
-                onMouseEnter={() => setActiveVariant(v)}
-                onClick={(e) => e.stopPropagation()}
+                onClick={(e) => { e.stopPropagation(); jumpToVariant(v); }}
                 className={`w-4 h-4 rounded-full border-2 transition-all duration-200 ${
                   activeVariant === v ? "border-white scale-110" : "border-white/50"
                 }`}

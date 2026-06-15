@@ -15,6 +15,7 @@ import {
   SortableContext,
   sortableKeyboardCoordinates,
   rectSortingStrategy,
+  verticalListSortingStrategy,
   useSortable,
 } from "@dnd-kit/sortable";
 import { arrayMove } from "@dnd-kit/sortable";
@@ -390,6 +391,116 @@ function VideoDropZone({ value, onChange }: VideoDropZoneProps) {
   );
 }
 
+// ─── Sortable variant block ───────────────────────────────────────────────────
+
+interface SortableVariantBlockProps {
+  variant: string;
+  images: string[];
+  videoValue: string;
+  isFirst: boolean;
+  onImagesChange: (imgs: string[]) => void;
+  onVideoChange: (url: string) => void;
+  onRemove: () => void;
+  onUpload: (file: File) => Promise<string>;
+}
+
+function SortableVariantBlock({
+  variant, images, videoValue, isFirst,
+  onImagesChange, onVideoChange, onRemove, onUpload,
+}: SortableVariantBlockProps) {
+  const {
+    attributes,
+    listeners,
+    setNodeRef,
+    setActivatorNodeRef,
+    transform,
+    transition,
+    isDragging,
+  } = useSortable({ id: variant });
+
+  const blockStyle: React.CSSProperties = {
+    transform: CSS.Transform.toString(transform),
+    transition,
+    opacity: isDragging ? 0.4 : 1,
+    border: "1px solid var(--admin-border)",
+    borderRadius: "6px",
+    padding: "1rem",
+    marginBottom: "1rem",
+    background: isDragging ? "var(--admin-surface2)" : undefined,
+  };
+
+  const handleLabelStyle: React.CSSProperties = {
+    display: "block",
+    fontSize: "0.75rem",
+    fontWeight: 600,
+    color: "var(--admin-text2)",
+    marginBottom: "0.35rem",
+    textTransform: "uppercase",
+    letterSpacing: "0.05em",
+  };
+
+  return (
+    <div ref={setNodeRef} style={blockStyle} {...attributes}>
+      <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: "0.75rem" }}>
+        <div style={{ display: "flex", alignItems: "center", gap: "0.6rem" }}>
+          {/* Drag handle — only this triggers drag, not clicks inside the block */}
+          <div
+            ref={setActivatorNodeRef}
+            {...listeners}
+            title="Drag to reorder"
+            style={{
+              cursor: isDragging ? "grabbing" : "grab",
+              color: "var(--admin-muted2)",
+              fontSize: "1rem",
+              lineHeight: 1,
+              padding: "0.2rem 0.1rem",
+              userSelect: "none",
+              touchAction: "none",
+            }}
+          >
+            ⠿
+          </div>
+          <h3 style={{ margin: 0, fontSize: "0.85rem", fontWeight: 600, color: "var(--admin-text2)" }}>
+            {variant}
+          </h3>
+          {isFirst && (
+            <span style={{
+              fontSize: "0.65rem",
+              background: "#fef3c7",
+              color: "#92400e",
+              padding: "0.1rem 0.45rem",
+              borderRadius: "10px",
+              fontWeight: 600,
+              letterSpacing: "0.03em",
+            }}>
+              Default
+            </span>
+          )}
+        </div>
+        <button
+          onPointerDown={(e) => e.stopPropagation()}
+          onClick={onRemove}
+          style={{ background: "none", border: "none", cursor: "pointer", color: "var(--admin-muted2)", fontSize: "0.75rem" }}
+        >
+          Remove variant
+        </button>
+      </div>
+
+      <ImageSection
+        title={`${variant} — Images (drag to reorder)`}
+        images={images}
+        onChange={onImagesChange}
+        onUpload={onUpload}
+      />
+
+      <div>
+        <label style={handleLabelStyle}>Video (optional)</label>
+        <VideoDropZone value={videoValue} onChange={onVideoChange} />
+      </div>
+    </div>
+  );
+}
+
 // ─── Main page ───────────────────────────────────────────────────────────────
 
 type ProductForm = Omit<Product, "price"> & { price: string };
@@ -559,6 +670,41 @@ export default function ProductEditor({ params }: { params: Promise<{ id: string
         variantVideos: vv,
       };
     });
+  }
+
+  const variantSensors = useSensors(
+    useSensor(PointerSensor, { activationConstraint: { distance: 5 } }),
+    useSensor(KeyboardSensor, { coordinateGetter: sortableKeyboardCoordinates })
+  );
+
+  function handleVariantDragEnd(event: DragEndEvent) {
+    const { active, over } = event;
+    if (!over || active.id === over.id) return;
+
+    const variants = form.variants ?? [];
+    const oldIndex = variants.indexOf(active.id as string);
+    const newIndex = variants.indexOf(over.id as string);
+    if (oldIndex === -1 || newIndex === -1) return;
+
+    const newVariants = arrayMove(variants, oldIndex, newIndex);
+
+    // Rebuild both maps in the new order — Object.values() on the saved JSON must
+    // return the first variant's data first, so insertion order matters here.
+    const vi = form.variantImages ?? {};
+    const vv = form.variantVideos ?? {};
+    const newVariantImages: Record<string, string[]> = {};
+    const newVariantVideos: Record<string, string> = {};
+    for (const v of newVariants) {
+      if (vi[v] !== undefined) newVariantImages[v] = vi[v];
+      if (vv[v] !== undefined) newVariantVideos[v] = vv[v];
+    }
+
+    setForm((f) => ({
+      ...f,
+      variants: newVariants,
+      variantImages: newVariantImages,
+      variantVideos: newVariantVideos,
+    }));
   }
 
   function addSpec() {
@@ -984,7 +1130,7 @@ export default function ProductEditor({ params }: { params: Promise<{ id: string
                 Variants &amp; Gallery Images
               </h2>
               <p style={{ margin: "0.25rem 0 0", fontSize: "0.78rem", color: "var(--admin-muted)" }}>
-                Per-variant image galleries. Drag to reorder. First image = sub-hero.
+                Drag ⠿ to reorder variants — first variant is the default shown on shop cards.
               </p>
             </div>
             <button
@@ -1007,47 +1153,27 @@ export default function ProductEditor({ params }: { params: Promise<{ id: string
             <p style={{ fontSize: "0.78rem", color: "var(--admin-muted2)" }}>No variants. Click "Add Variant" to add one.</p>
           )}
 
-          {(form.variants ?? []).map((variant) => (
-            <div key={variant} style={{
-              border: "1px solid var(--admin-border)",
-              borderRadius: "6px",
-              padding: "1rem",
-              marginBottom: "1rem",
-            }}>
-              <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: "0.75rem" }}>
-                <h3 style={{ margin: 0, fontSize: "0.85rem", fontWeight: 600, color: "var(--admin-text2)" }}>
-                  {variant}
-                </h3>
-                <button
-                  onClick={() => removeVariant(variant)}
-                  style={{
-                    background: "none",
-                    border: "none",
-                    cursor: "pointer",
-                    color: "var(--admin-muted2)",
-                    fontSize: "0.75rem",
-                  }}
-                >
-                  Remove variant
-                </button>
-              </div>
-
-              <ImageSection
-                title={`${variant} — Images (drag to reorder)`}
-                images={(form.variantImages ?? {})[variant] ?? []}
-                onChange={(imgs) => updateVariantImages(variant, imgs)}
-                onUpload={uploadFile}
-              />
-
-              <div>
-                <label style={labelStyle}>Video (optional)</label>
-                <VideoDropZone
-                  value={(form.variantVideos ?? {})[variant] ?? ""}
-                  onChange={(v) => updateVariantVideo(variant, v)}
+          <DndContext
+            sensors={variantSensors}
+            collisionDetection={closestCenter}
+            onDragEnd={handleVariantDragEnd}
+          >
+            <SortableContext items={form.variants ?? []} strategy={verticalListSortingStrategy}>
+              {(form.variants ?? []).map((variant, index) => (
+                <SortableVariantBlock
+                  key={variant}
+                  variant={variant}
+                  images={(form.variantImages ?? {})[variant] ?? []}
+                  videoValue={(form.variantVideos ?? {})[variant] ?? ""}
+                  isFirst={index === 0}
+                  onImagesChange={(imgs) => updateVariantImages(variant, imgs)}
+                  onVideoChange={(v) => updateVariantVideo(variant, v)}
+                  onRemove={() => removeVariant(variant)}
+                  onUpload={uploadFile}
                 />
-              </div>
-            </div>
-          ))}
+              ))}
+            </SortableContext>
+          </DndContext>
         </div>
 
         {/* No-variant video */}

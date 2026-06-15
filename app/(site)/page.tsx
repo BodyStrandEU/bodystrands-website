@@ -9,26 +9,25 @@ import { activeCategories } from "@/lib/products";
 
 // All possible category tiles — filtered at render time to only show populated categories
 const allTiles = [
-  // Row 1 — editorial tall (col-span-2 + 1 + 1)
-  { label: "Back Chains",       sub: "Elegant back detail",      href: "/shop?category=Back+Chains",        image: "/images/elvan-back-full.jpg",    wide: true  },
-  { label: "Body Chains",       sub: "Full body coverage",       href: "/shop?category=Body+Chains",        image: "/images/category-body.jpg",      wide: false },
-  { label: "Belly Chains",      sub: "Dainty waist adornment",   href: "/shop?category=Belly+Chains",       image: "/images/category-belly.png",     wide: false },
-  // Row 2
-  { label: "Shoulder Chains",   sub: "Goddess shoulder drape",   href: "/shop?category=Shoulder+Chains",   image: "/images/category-shoulder.jpg",  wide: false },
-  { label: "Anklets",           sub: "Foot & ankle jewelry",     href: "/shop?category=Anklets",            image: "/images/lifestyle-anklet.jpg",   wide: false },
-  { label: "Necklaces",         sub: "Delicate neck pieces",     href: "/shop?category=Necklaces",          image: "/images/category-necklace.jpg",  wide: false },
-  // Row 3
-  { label: "Bracelets",         sub: "Wrist elegance",           href: "/shop?category=Bracelets",          image: "/images/category-bracelet.jpg",  wide: false },
-  { label: "Eyeglasses Chains", sub: "Functional chic",          href: "/shop?category=Eyeglasses+Chains", image: "/images/category-glasses.jpg",   wide: false },
-  { label: "Bikini Clip Chains",sub: "Beachwear jewellery",      href: "/shop?category=Bikini+Clip+Chains", image: "/images/category-bikini.jpg",    wide: false },
+  { label: "Back Chains",        href: "/shop?category=Back+Chains",         image: "/images/elvan-back-full.jpg"    },
+  { label: "Body Chains",        href: "/shop?category=Body+Chains",         image: "/images/category-body.jpg"     },
+  { label: "Belly Chains",       href: "/shop?category=Belly+Chains",        image: "/images/category-belly.png"    },
+  { label: "Shoulder Chains",    href: "/shop?category=Shoulder+Chains",     image: "/images/category-shoulder.jpg" },
+  { label: "Anklets",            href: "/shop?category=Anklets",             image: "/images/lifestyle-anklet.jpg"  },
+  { label: "Necklaces",          href: "/shop?category=Necklaces",           image: "/images/category-necklace.jpg" },
+  { label: "Bracelets",          href: "/shop?category=Bracelets",           image: "/images/category-bracelet.jpg" },
+  { label: "Hand Chains",        href: "/shop?category=Hand+Chains",         image: "/images/category-hand.jpg"     },
+  { label: "Head Chains",        href: "/shop?category=Head+Chains",         image: "/images/category-head.jpg"     },
+  { label: "Eyeglasses Chains",  href: "/shop?category=Eyeglasses+Chains",  image: "/images/category-glasses.jpg"  },
+  { label: "Bikini Clip Chains", href: "/shop?category=Bikini+Clip+Chains", image: "/images/category-bikini.jpg"   },
 ];
 
 type Tile = typeof allTiles[number];
 
-function CategoryTile({ tile, large = false }: { tile: Tile; large?: boolean }) {
+function CategoryTile({ tile }: { tile: Tile }) {
   return (
     <Link href={tile.href} className="group block">
-      <div className={`relative overflow-hidden ${large ? "aspect-[3/4]" : "aspect-square"}`}>
+      <div className="relative overflow-hidden aspect-[3/4]">
         <Image
           src={tile.image}
           alt={tile.label}
@@ -36,8 +35,8 @@ function CategoryTile({ tile, large = false }: { tile: Tile; large?: boolean }) 
           className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-[1.04]"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[#2C2220]/75 via-transparent to-transparent" />
-        <div className="absolute bottom-0 left-0 p-4 md:p-5">
-          <h3 className={`font-heading font-light text-white leading-tight ${large ? "text-2xl md:text-3xl" : "text-lg md:text-2xl"}`}>
+        <div className="absolute bottom-0 left-0 p-3 md:p-5">
+          <h3 className="font-heading font-light text-white leading-tight text-lg md:text-xl">
             {tile.label}
           </h3>
         </div>
@@ -62,9 +61,8 @@ export default function HomePage() {
     (activeCategories as string[]).includes(t.label)
   );
 
-  const row1 = visibleTiles.filter((t) => ["Back Chains", "Body Chains", "Belly Chains"].includes(t.label));
-  const row2 = visibleTiles.filter((t) => ["Shoulder Chains", "Anklets", "Necklaces"].includes(t.label));
-  const row3 = visibleTiles.filter((t) => ["Bracelets", "Eyeglasses Chains", "Bikini Clip Chains"].includes(t.label));
+  const heroTile  = visibleTiles.find((t) => t.label === "Back Chains");
+  const gridTiles = visibleTiles.filter((t) => t.label !== "Back Chains");
 
   return (
     <>
@@ -112,10 +110,10 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Shop by Category — all 15 */}
+      {/* Shop by Category */}
       <section className="max-w-7xl mx-auto px-4 md:px-10 py-20 md:py-28">
         <ScrollReveal>
-          <div className="flex items-end justify-between mb-10 px-2 md:px-0">
+          <div className="flex items-end justify-between mb-8 md:mb-10 px-2 md:px-0">
             <div>
               <p className="text-[0.6rem] tracking-[0.3em] uppercase text-[#A0622A] mb-3">Explore</p>
               <h2 className="font-heading text-4xl md:text-5xl font-light text-[#2C2220]">
@@ -128,36 +126,34 @@ export default function HomePage() {
           </div>
         </ScrollReveal>
 
-        {/* Row 1: Back Chains wide + Body Chains + Belly Chains */}
-        {row1.length > 0 && (
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-1 mb-1">
-            <ScrollReveal className="col-span-2">
-              <CategoryTile tile={row1[0]} large />
-            </ScrollReveal>
-            {row1.slice(1).map((tile, i) => (
-              <ScrollReveal key={tile.label} delay={i * 60}>
-                <CategoryTile tile={tile} large />
-              </ScrollReveal>
-            ))}
-          </div>
-        )}
-
-        {/* Row 2: Shoulder Chains, Anklets, Necklaces */}
-        {row2.length > 0 && (
-          <div className={`grid gap-1 mb-1 ${row2.length === 1 ? "grid-cols-1 max-w-xl" : "grid-cols-2 md:grid-cols-3"}`}>
-            {row2.map((tile, i) => (
-              <ScrollReveal key={tile.label} delay={i * 60}>
-                <CategoryTile tile={tile} large={row2.length === 1} />
-              </ScrollReveal>
-            ))}
-          </div>
-        )}
-
-        {/* Row 3: Bracelets, Eyeglasses Chains, Bikini Clip Chains */}
-        {row3.length > 0 && (
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-1">
-            {row3.map((tile, i) => (
-              <ScrollReveal key={tile.label} delay={i * 60}>
+        {/* Unified grid — Back Chains anchors top-left, spans 2 rows on desktop */}
+        {visibleTiles.length > 0 && (
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-1">
+            {/* Back Chains: full-width hero on mobile, 2×2 anchor on desktop */}
+            {heroTile && (
+              <div className="col-span-2 md:row-span-2">
+                <Link href={heroTile.href} className="group block h-full">
+                  <div className="relative overflow-hidden aspect-[3/4] md:aspect-auto md:h-full">
+                    <Image
+                      src={heroTile.image}
+                      alt={heroTile.label}
+                      fill
+                      priority
+                      className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-[1.04]"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#2C2220]/75 via-transparent to-transparent" />
+                    <div className="absolute bottom-0 left-0 p-4 md:p-6">
+                      <h3 className="font-heading font-light text-white leading-tight text-2xl md:text-3xl">
+                        {heroTile.label}
+                      </h3>
+                    </div>
+                  </div>
+                </Link>
+              </div>
+            )}
+            {/* All other categories — portrait tiles, always 2 per row on mobile */}
+            {gridTiles.map((tile, i) => (
+              <ScrollReveal key={tile.label} delay={Math.min(i * 40, 200)}>
                 <CategoryTile tile={tile} />
               </ScrollReveal>
             ))}

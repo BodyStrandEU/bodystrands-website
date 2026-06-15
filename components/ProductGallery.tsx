@@ -21,13 +21,25 @@ export default function ProductGallery({
   activeVariant: string;
 }) {
   const [activeIndex, setActiveIndex] = useState(0);
-  const touchStartX = useRef<number>(0);
-  const touchStartY = useRef<number>(0);
+  const mainRef    = useRef<HTMLDivElement>(null);
+  const touchStart = useRef({ x: 0, y: 0 });
+  const swipeDir   = useRef<"h" | "v" | null>(null);
 
   // Reset to first item whenever variant changes
   useEffect(() => {
     setActiveIndex(0);
   }, [activeVariant]);
+
+  // Non-passive touchmove so we can preventDefault on horizontal swipes
+  useEffect(() => {
+    const el = mainRef.current;
+    if (!el) return;
+    function onMove(e: TouchEvent) {
+      if (swipeDir.current === "h") e.preventDefault();
+    }
+    el.addEventListener("touchmove", onMove, { passive: false });
+    return () => el.removeEventListener("touchmove", onMove);
+  }, []);
 
   const images = product.variantImages?.[activeVariant] ?? product.images ?? [];
   const videoSrc =
@@ -42,24 +54,34 @@ export default function ProductGallery({
     setActiveIndex(Math.max(0, Math.min(i, media.length - 1)));
 
   const handleTouchStart = (e: React.TouchEvent) => {
-    touchStartX.current = e.touches[0].clientX;
-    touchStartY.current = e.touches[0].clientY;
+    touchStart.current = { x: e.touches[0].clientX, y: e.touches[0].clientY };
+    swipeDir.current = null;
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    if (swipeDir.current) return;
+    const dx = Math.abs(e.touches[0].clientX - touchStart.current.x);
+    const dy = Math.abs(e.touches[0].clientY - touchStart.current.y);
+    if (dx > 6 || dy > 6) swipeDir.current = dx > dy ? "h" : "v";
   };
 
   const handleTouchEnd = (e: React.TouchEvent) => {
-    const dx = touchStartX.current - e.changedTouches[0].clientX;
-    const dy = Math.abs(touchStartY.current - e.changedTouches[0].clientY);
-    if (Math.abs(dx) > 40 && Math.abs(dx) > dy) {
+    const dx = touchStart.current.x - e.changedTouches[0].clientX;
+    const dy = Math.abs(touchStart.current.y - e.changedTouches[0].clientY);
+    if (swipeDir.current === "h" && Math.abs(dx) > 30 && Math.abs(dx) > dy) {
       dx > 0 ? goTo(activeIndex + 1) : goTo(activeIndex - 1);
     }
+    swipeDir.current = null;
   };
 
   return (
     <div className="flex flex-col gap-3">
       {/* Main viewer */}
       <div
+        ref={mainRef}
         className="relative aspect-square overflow-hidden bg-[#FDF9F7] select-none"
         onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
         onTouchEnd={handleTouchEnd}
       >
         {currentItem?.type === "image" && (

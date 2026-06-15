@@ -27,10 +27,16 @@ export default function ProductCard({ product, priority = false }: { product: Pr
 
   const symbol = product.currency === "EUR" ? "€" : product.currency === "GBP" ? "£" : "$";
 
+  // Default to first variant's full image set so shop grid shows all photos
+  const defaultImages =
+    product.variantImages && Object.values(product.variantImages)[0]?.length
+      ? Object.values(product.variantImages)[0]
+      : product.images;
+
   const displayImages =
     activeVariant && product.variantImages?.[activeVariant]?.length
       ? product.variantImages[activeVariant]
-      : product.images;
+      : defaultImages;
 
   const defaultVideo =
     product.video ??

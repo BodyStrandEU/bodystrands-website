@@ -22,6 +22,7 @@ export default function AdminDashboard() {
   const [products, setProducts] = useState<Product[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
+  const [deleting, setDeleting] = useState<string | null>(null);
   const router = useRouter();
 
   useEffect(() => {
@@ -71,6 +72,23 @@ export default function AdminDashboard() {
     }
   }
 
+  async function deleteProduct(id: string, name: string) {
+    if (!window.confirm(`Delete "${name}"? This cannot be undone.`)) return;
+    setDeleting(id);
+    const updated = products.filter((p) => p.id !== id);
+    const res = await fetch("/api/admin/products", {
+      method: "PUT",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(updated),
+    });
+    if (res.ok) {
+      setProducts(updated);
+    } else {
+      setError("Failed to delete product");
+    }
+    setDeleting(null);
+  }
+
   // Group products by category in defined order
   const grouped: { category: string; items: Product[] }[] = [];
   const seen = new Set<string>();
@@ -97,6 +115,7 @@ export default function AdminDashboard() {
 
   function ProductCard({ product }: { product: Product }) {
     const isActive = product.active ?? true;
+    const isDeleting = deleting === product.id;
     return (
       <div
         style={{
@@ -105,6 +124,7 @@ export default function AdminDashboard() {
           borderRadius: "8px",
           overflow: "hidden",
           opacity: isActive ? 1 : 0.6,
+          position: "relative",
         }}
       >
         {/* Thumbnail */}
@@ -133,7 +153,37 @@ export default function AdminDashboard() {
               No image
             </div>
           )}
-          {/* Active badge */}
+          {/* Delete X — top left */}
+          <button
+            onClick={() => deleteProduct(product.id, product.name)}
+            disabled={isDeleting}
+            title="Delete product"
+            style={{
+              position: "absolute",
+              top: "0.5rem",
+              left: "0.5rem",
+              width: "24px",
+              height: "24px",
+              borderRadius: "50%",
+              border: "none",
+              background: isDeleting ? "#fca5a5" : "#ef4444",
+              color: "#fff",
+              fontSize: "0.75rem",
+              fontWeight: 700,
+              cursor: isDeleting ? "not-allowed" : "pointer",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              lineHeight: 1,
+              opacity: 0.85,
+              zIndex: 10,
+            }}
+            onMouseEnter={(e) => { (e.currentTarget as HTMLButtonElement).style.opacity = "1"; }}
+            onMouseLeave={(e) => { (e.currentTarget as HTMLButtonElement).style.opacity = "0.85"; }}
+          >
+            {isDeleting ? "…" : "✕"}
+          </button>
+          {/* Active badge — top right */}
           <span style={{
             position: "absolute",
             top: "0.5rem",

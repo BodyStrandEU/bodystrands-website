@@ -30,15 +30,32 @@ export default function ProductGallery({
     setActiveIndex(0);
   }, [activeVariant]);
 
-  // Non-passive touchmove so we can preventDefault on horizontal swipes
+  // Native listeners — direction detection AND preventDefault must happen
+  // in the same event to block scroll before the browser commits to it
   useEffect(() => {
     const el = mainRef.current;
     if (!el) return;
+
+    function onStart(e: TouchEvent) {
+      touchStart.current = { x: e.touches[0].clientX, y: e.touches[0].clientY };
+      swipeDir.current = null;
+    }
+
     function onMove(e: TouchEvent) {
+      if (swipeDir.current === null) {
+        const dx = Math.abs(e.touches[0].clientX - touchStart.current.x);
+        const dy = Math.abs(e.touches[0].clientY - touchStart.current.y);
+        if (dx > 4 || dy > 4) swipeDir.current = dx >= dy ? "h" : "v";
+      }
       if (swipeDir.current === "h") e.preventDefault();
     }
-    el.addEventListener("touchmove", onMove, { passive: false });
-    return () => el.removeEventListener("touchmove", onMove);
+
+    el.addEventListener("touchstart", onStart, { passive: true });
+    el.addEventListener("touchmove",  onMove,  { passive: false });
+    return () => {
+      el.removeEventListener("touchstart", onStart);
+      el.removeEventListener("touchmove",  onMove);
+    };
   }, []);
 
   const images = product.variantImages?.[activeVariant] ?? product.images ?? [];
@@ -52,18 +69,6 @@ export default function ProductGallery({
 
   const goTo = (i: number) =>
     setActiveIndex(Math.max(0, Math.min(i, media.length - 1)));
-
-  const handleTouchStart = (e: React.TouchEvent) => {
-    touchStart.current = { x: e.touches[0].clientX, y: e.touches[0].clientY };
-    swipeDir.current = null;
-  };
-
-  const handleTouchMove = (e: React.TouchEvent) => {
-    if (swipeDir.current) return;
-    const dx = Math.abs(e.touches[0].clientX - touchStart.current.x);
-    const dy = Math.abs(e.touches[0].clientY - touchStart.current.y);
-    if (dx > 6 || dy > 6) swipeDir.current = dx > dy ? "h" : "v";
-  };
 
   const handleTouchEnd = (e: React.TouchEvent) => {
     const dx = touchStart.current.x - e.changedTouches[0].clientX;
@@ -80,8 +85,6 @@ export default function ProductGallery({
       <div
         ref={mainRef}
         className="relative aspect-square overflow-hidden bg-[#FDF9F7] select-none"
-        onTouchStart={handleTouchStart}
-        onTouchMove={handleTouchMove}
         onTouchEnd={handleTouchEnd}
       >
         {currentItem?.type === "image" && (
@@ -90,7 +93,7 @@ export default function ProductGallery({
             alt={`${product.name}${activeVariant ? ` — ${activeVariant}` : ""}`}
             fill
             sizes="(max-width: 768px) 100vw, 50vw"
-            className="object-contain"
+            className="object-cover"
             priority={activeIndex === 0}
           />
         )}
@@ -103,7 +106,7 @@ export default function ProductGallery({
             loop
             playsInline
             preload="metadata"
-            className="absolute inset-0 w-full h-full object-contain"
+            className="absolute inset-0 w-full h-full object-cover"
           />
         )}
         {!currentItem && (

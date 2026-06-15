@@ -60,15 +60,36 @@ export default function ProductCard({ product, priority = false }: { product: Pr
   // Reset carousel when variant changes
   useEffect(() => { setSlideIndex(0); }, [activeVariant]);
 
-  // Non-passive touchmove so we can preventDefault on horizontal swipes
+  // Native listeners handle ALL touch detection — must run in native handlers
+  // so direction is known and preventDefault() fires on the very first touchmove
   useEffect(() => {
     const el = mediaRef.current;
     if (!el) return;
+
+    function onStart(e: TouchEvent) {
+      touchStart.current = {
+        x: e.touches[0].clientX,
+        y: e.touches[0].clientY,
+        time: Date.now(),
+      };
+      swipeDir.current = null;
+    }
+
     function onMove(e: TouchEvent) {
+      if (swipeDir.current === null) {
+        const dx = Math.abs(e.touches[0].clientX - touchStart.current.x);
+        const dy = Math.abs(e.touches[0].clientY - touchStart.current.y);
+        if (dx > 4 || dy > 4) swipeDir.current = dx >= dy ? "h" : "v";
+      }
       if (swipeDir.current === "h") e.preventDefault();
     }
-    el.addEventListener("touchmove", onMove, { passive: false });
-    return () => el.removeEventListener("touchmove", onMove);
+
+    el.addEventListener("touchstart", onStart, { passive: true });
+    el.addEventListener("touchmove",  onMove,  { passive: false });
+    return () => {
+      el.removeEventListener("touchstart", onStart);
+      el.removeEventListener("touchmove",  onMove);
+    };
   }, []);
 
   const currentSlide = mediaList[slideIndex] ?? mediaList[0];
@@ -90,19 +111,7 @@ export default function ProductCard({ product, priority = false }: { product: Pr
     setSlideIndex(Math.max(0, Math.min(i, mediaList.length - 1)));
   }
 
-  // ── Touch handlers ─────────────────────────────────────────────────────────
-  function onTouchStart(e: React.TouchEvent) {
-    touchStart.current = { x: e.touches[0].clientX, y: e.touches[0].clientY, time: Date.now() };
-    swipeDir.current = null;
-  }
-
-  function onTouchMove(e: React.TouchEvent) {
-    if (swipeDir.current) return;
-    const dx = Math.abs(e.touches[0].clientX - touchStart.current.x);
-    const dy = Math.abs(e.touches[0].clientY - touchStart.current.y);
-    if (dx > 6 || dy > 6) swipeDir.current = dx > dy ? "h" : "v";
-  }
-
+  // ── Touch end — direction already detected by native handlers above ────────
   function onTouchEnd(e: React.TouchEvent) {
     lastTouch.current = Date.now();
     const dx = e.changedTouches[0].clientX - touchStart.current.x;
@@ -137,8 +146,6 @@ export default function ProductCard({ product, priority = false }: { product: Pr
       <div
         ref={mediaRef}
         className="relative overflow-hidden bg-[#FDF9F7] aspect-[3/4] select-none"
-        onTouchStart={onTouchStart}
-        onTouchMove={onTouchMove}
         onTouchEnd={onTouchEnd}
       >
         {/* Images (all rendered; only active is visible) */}

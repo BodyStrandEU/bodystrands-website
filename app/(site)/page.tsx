@@ -11,7 +11,7 @@ import { activeCategories } from "@/lib/products";
 const allTiles = [
   // Row 1 — editorial tall (col-span-2 + 1 + 1)
   { label: "Back Chains",       sub: "Elegant back detail",      href: "/shop?category=Back+Chains",        image: "/images/elvan-back-full.jpg",    wide: true  },
-  { label: "Body Chains",       sub: "Full body coverage",       href: "/shop?category=Body+Chains",        image: "/images/hero-back-chain.jpg",    wide: false },
+  { label: "Body Chains",       sub: "Full body coverage",       href: "/shop?category=Body+Chains",        image: "/images/category-body.jpg",      wide: false },
   { label: "Belly Chains",      sub: "Dainty waist adornment",   href: "/shop?category=Belly+Chains",       image: "/images/category-belly.png",     wide: false },
   // Row 2
   { label: "Shoulder Chains",   sub: "Goddess shoulder drape",   href: "/shop?category=Shoulder+Chains",   image: "/images/category-shoulder.jpg",  wide: false },

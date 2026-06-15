@@ -10,26 +10,29 @@ type ImageSlot = {
 
 type Section = {
   title: string;
+  description: string;
   slots: ImageSlot[];
 };
 
 const SECTIONS: Section[] = [
   {
-    title: "Homepage Hero",
+    title: "Homepage — Hero",
+    description: "Full-screen background photo at the top of the homepage",
     slots: [
       { label: "Hero Background", path: "images/hero-back-chain.jpg" },
     ],
   },
   {
-    title: "Category Tiles",
+    title: "Homepage — Category Tiles",
+    description: "Photos in the 'Shop by Category' grid on the homepage",
     slots: [
-      { label: "Belly Chains", path: "images/category-belly.png" },
       { label: "Back Chains", path: "images/elvan-back-full.jpg" },
       { label: "Body Chains", path: "images/category-body.jpg" },
+      { label: "Belly Chains", path: "images/category-belly.png" },
       { label: "Shoulder Chains", path: "images/category-shoulder.jpg" },
       { label: "Anklets", path: "images/lifestyle-anklet.jpg" },
-      { label: "Bracelets", path: "images/category-bracelet.jpg" },
       { label: "Necklaces", path: "images/category-necklace.jpg" },
+      { label: "Bracelets", path: "images/category-bracelet.jpg" },
       { label: "Hand Chains", path: "images/category-hand.jpg" },
       { label: "Head Chains", path: "images/category-head.jpg" },
       { label: "Eyeglasses Chains", path: "images/category-glasses.jpg" },
@@ -37,25 +40,35 @@ const SECTIONS: Section[] = [
     ],
   },
   {
-    title: "About Page",
+    title: "Homepage — Lifestyle Slider",
+    description: "Scrolling photo gallery on the homepage, between Category Tiles and Brand Story. Photos display in filename order (01, 02, 03…)",
     slots: [
-      { label: "About — Main Photo", path: "images/elvan-back-cross.jpg" },
-      { label: "About — Side Photo", path: "images/elvan-back-medium.jpg" },
-      { label: "About — Choker Front", path: "images/elvan-choker-front.jpg" },
-      { label: "About — Choker Side", path: "images/elvan-choker-side.jpg" },
+      { label: "Slide 1", path: "images/lifestyle/01-elvan-back-full.jpg" },
+      { label: "Slide 2", path: "images/lifestyle/02-elvan-back-medium.jpg" },
+      { label: "Slide 3", path: "images/lifestyle/03-elvan-choker-front.jpg" },
+      { label: "Slide 4", path: "images/lifestyle/04-elvan-choker-side.jpg" },
+      { label: "Slide 5", path: "images/lifestyle/05-butterfly.jpg" },
+      { label: "Slide 6", path: "images/lifestyle/06-headchain.jpg" },
+      { label: "Slide 7", path: "images/lifestyle/07-anklet.jpg" },
     ],
   },
   {
-    title: "Lifestyle Photos",
+    title: "Homepage — Brand Story",
+    description: "Square photo in the 'Jewelry that moves with you' section, below the lifestyle slider",
     slots: [
-      { label: "Lifestyle — Anklet", path: "images/lifestyle-anklet-2.jpg" },
-      { label: "Lifestyle — Butterfly", path: "images/lifestyle-butterfly.jpg" },
-      { label: "Lifestyle — Head Chain", path: "images/lifestyle-headchain.jpg" },
-      { label: "Lifestyle — Pearl Back", path: "images/lifestyle-pearl-back.jpg" },
+      { label: "Brand Story Photo", path: "images/elvan-back-cross.jpg" },
+    ],
+  },
+  {
+    title: "About Page",
+    description: "Photos on the /about page",
+    slots: [
+      { label: "Main Photo", path: "images/lifestyle-pearl-back.jpg" },
     ],
   },
   {
     title: "Logo",
+    description: "Logo images used in the site header",
     slots: [
       { label: "Logo (dark background)", path: "images/logo.png" },
       { label: "Logo Pink", path: "images/logo-pink.png" },
@@ -291,18 +304,24 @@ export default function SiteImagesPage() {
         {SECTIONS.map((section) => (
           <div key={section.title} style={{ marginBottom: "3rem" }}>
             {/* Section header */}
-            <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", marginBottom: "1.25rem" }}>
-              <h2 style={{
-                fontSize: "0.7rem",
-                fontWeight: 700,
-                letterSpacing: "0.12em",
-                textTransform: "uppercase",
-                color: "var(--admin-muted)",
-                margin: 0,
-              }}>
-                {section.title}
-              </h2>
-              <div style={{ flex: 1, height: "1px", background: "var(--admin-border)" }} />
+            <div style={{ marginBottom: "1.25rem" }}>
+              <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", marginBottom: "0.4rem" }}>
+                <h2 style={{
+                  fontSize: "0.7rem",
+                  fontWeight: 700,
+                  letterSpacing: "0.12em",
+                  textTransform: "uppercase",
+                  color: "var(--admin-muted)",
+                  margin: 0,
+                  whiteSpace: "nowrap",
+                }}>
+                  {section.title}
+                </h2>
+                <div style={{ flex: 1, height: "1px", background: "var(--admin-border)" }} />
+              </div>
+              <p style={{ fontSize: "0.65rem", color: "var(--admin-muted)", margin: 0, opacity: 0.7 }}>
+                {section.description}
+              </p>
             </div>
 
             <div style={{

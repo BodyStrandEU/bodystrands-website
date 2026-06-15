@@ -1,3 +1,5 @@
+import ContactForm from "@/components/ContactForm";
+
 export const metadata = {
   title: "Contact — Bodystrands",
   description: "Get in touch with Bodystrands. We'd love to hear from you.",
@@ -39,49 +41,12 @@ export default function ContactPage() {
             <div className="h-px bg-[#E8B4A8]/30" />
 
             <p className="text-xs font-light leading-loose tracking-wide text-[#8C7B6E]">
-              Have a question about an order, a custom request, or just want to say hello? We'd love to hear from you.
+              Have a question about an order, a custom request, or just want to say hello? We&apos;d love to hear from you.
             </p>
           </div>
 
           {/* Form */}
-          <form className="flex flex-col gap-6">
-            <div className="flex flex-col gap-2">
-              <label className="text-[0.55rem] tracking-[0.25em] uppercase text-[#8C7B6E]">Name</label>
-              <input
-                type="text"
-                name="name"
-                required
-                className="px-4 py-3 text-xs tracking-wide font-light border border-[#A0622A]/20 bg-transparent text-[#2C2220] placeholder-[#8C7B6E]/50 outline-none focus:border-[#A0622A] transition-colors"
-                placeholder="Your name"
-              />
-            </div>
-
-            <div className="flex flex-col gap-2">
-              <label className="text-[0.55rem] tracking-[0.25em] uppercase text-[#8C7B6E]">Email</label>
-              <input
-                type="email"
-                name="email"
-                required
-                className="px-4 py-3 text-xs tracking-wide font-light border border-[#A0622A]/20 bg-transparent text-[#2C2220] placeholder-[#8C7B6E]/50 outline-none focus:border-[#A0622A] transition-colors"
-                placeholder="your@email.com"
-              />
-            </div>
-
-            <div className="flex flex-col gap-2">
-              <label className="text-[0.55rem] tracking-[0.25em] uppercase text-[#8C7B6E]">Message</label>
-              <textarea
-                name="message"
-                required
-                rows={5}
-                className="px-4 py-3 text-xs tracking-wide font-light border border-[#A0622A]/20 bg-transparent text-[#2C2220] placeholder-[#8C7B6E]/50 outline-none focus:border-[#A0622A] transition-colors resize-none"
-                placeholder="How can we help you?"
-              />
-            </div>
-
-            <button type="submit" className="btn-primary-filled w-full py-4">
-              Send Message
-            </button>
-          </form>
+          <ContactForm />
         </div>
       </div>
     </div>

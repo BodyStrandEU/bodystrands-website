@@ -3818,11 +3818,12 @@
       "https://i.etsystatic.com/55122258/r/il/55fcb3/8004334224/il_fullxfull.8004334224_3nmh.jpg",
       "https://i.etsystatic.com/55122258/r/il/836f20/8052215729/il_fullxfull.8052215729_6wc4.jpg",
       "https://i.etsystatic.com/55122258/r/il/f373c4/8052244385/il_fullxfull.8052244385_nb2j.jpg",
-      "https://i.etsystatic.com/55122258/r/il/bb7581/7812410186/il_fullxfull.7812410186_qegh.jpg",
       "https://i.etsystatic.com/55122258/r/il/5b8ce7/8004366964/il_fullxfull.8004366964_9uf5.jpg",
       "https://i.etsystatic.com/55122258/r/il/129578/8052215727/il_fullxfull.8052215727_9zz1.jpg",
       "https://i.etsystatic.com/55122258/r/il/78a788/8052276317/il_fullxfull.8052276317_5be9.jpg",
-      "https://i.etsystatic.com/55122258/r/il/a4faea/7774262738/il_fullxfull.7774262738_lktn.jpg"
+      "https://i.etsystatic.com/55122258/r/il/a4faea/7774262738/il_fullxfull.7774262738_lktn.jpg",
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
+      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg"
     ],
     "variantGroups": [
       {
@@ -3834,7 +3835,7 @@
         ]
       }
     ],
-    "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/44b5c57b8b435c7a96f92eb8544f6839/downloads/default.mp4"
+    "video": "/images/products/0615--1-.mp4"
   },
   {
     "id": "zodiac-charm-bracelet",

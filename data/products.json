@@ -378,11 +378,11 @@
     ],
     "images": [
       "https://i.etsystatic.com/55122258/r/il/d712b9/7824263931/il_fullxfull.7824263931_2tba.jpg",
-      "https://i.etsystatic.com/55122258/r/il/82e431/7824253621/il_fullxfull.7824253621_acsc.jpg",
       "https://i.etsystatic.com/55122258/r/il/88c617/7776334434/il_fullxfull.7776334434_9rer.jpg",
+      "https://i.etsystatic.com/55122258/r/il/c6ea6a/7765663308/il_fullxfull.7765663308_3a19.jpg",
       "https://i.etsystatic.com/55122258/r/il/78c9af/7774302186/il_fullxfull.7774302186_rbp8.jpg",
       "https://i.etsystatic.com/55122258/r/il/5f97f0/7824264089/il_fullxfull.7824264089_cy8j.jpg",
-      "https://i.etsystatic.com/55122258/r/il/c6ea6a/7765663308/il_fullxfull.7765663308_3a19.jpg",
+      "https://i.etsystatic.com/55122258/r/il/82e431/7824253621/il_fullxfull.7824253621_acsc.jpg",
       "https://i.etsystatic.com/55122258/r/il/4f89b1/7763623772/il_fullxfull.7763623772_eskh.jpg",
       "https://i.etsystatic.com/55122258/r/il/c073cd/7776334440/il_fullxfull.7776334440_jbeo.jpg",
       "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg",
@@ -435,7 +435,8 @@
         ]
       }
     ],
-    "active": true
+    "active": true,
+    "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/ba52149ce1569ec1f2515434fa8981f6/downloads/default.mp4"
   },
   {
     "id": "snake-belly-chain",

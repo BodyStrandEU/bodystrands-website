@@ -25,6 +25,7 @@ const INFO_LINKS = [
   { href: "/contact",        label: "Contact" },
   { href: "/track",          label: "Track Your Order" },
   { href: "/shipping",       label: "Shipping & Returns" },
+  { href: "/care",           label: "Jewelry Care" },
   { href: "/privacy-policy", label: "Privacy Policy" },
   { href: "/terms",          label: "Terms & Conditions" },
 ];

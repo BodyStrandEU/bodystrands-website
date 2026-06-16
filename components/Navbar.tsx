@@ -43,6 +43,7 @@ export default function Navbar() {
   const col2 = activeCategories.slice(Math.ceil(activeCategories.length / 2));
 
   return (
+    <>
     <header className="fixed top-0 left-0 right-0 z-50">
       {/* Announcement bar */}
       <div
@@ -220,5 +221,6 @@ export default function Navbar() {
     </header>
 
     {searchOpen && <SearchModal onClose={() => setSearchOpen(false)} />}
+    </>
   );
 }

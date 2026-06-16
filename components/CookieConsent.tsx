@@ -5,8 +5,8 @@ import Link from "next/link";
 const STORAGE_KEY = "bs_cookie_consent";
 
 function grantAnalytics() {
-  if (typeof window !== "undefined" && typeof (window as { gtag?: Function }).gtag === "function") {
-    (window as { gtag: Function }).gtag("consent", "update", {
+  if (typeof window !== "undefined" && typeof (window as unknown as { gtag?: Function }).gtag === "function") {
+    (window as unknown as { gtag: Function }).gtag("consent", "update", {
       analytics_storage: "granted",
     });
   }

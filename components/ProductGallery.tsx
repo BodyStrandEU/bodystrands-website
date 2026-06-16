@@ -30,7 +30,6 @@ export default function ProductGallery({
 
   const images = product.variantImages?.[activeVariant] ?? product.images ?? [];
   const videoSrc =
-    product.variantVideos?.[activeVariant] ??
     product.video ??
     (product.variantVideos ? Object.values(product.variantVideos)[0] : undefined);
 

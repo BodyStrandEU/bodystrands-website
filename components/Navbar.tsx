@@ -5,14 +5,16 @@ import { usePathname } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import { activeCategories } from "@/lib/products";
+import SearchModal from "@/components/SearchModal";
 
 export default function Navbar() {
   const pathname = usePathname();
   const isHero = pathname === "/"; // only homepage has a dark full-bleed hero behind the nav
 
-  const [scrolled, setScrolled] = useState(false);
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [shopOpen, setShopOpen] = useState(false);
+  const [scrolled,    setScrolled]    = useState(false);
+  const [menuOpen,    setMenuOpen]    = useState(false);
+  const [shopOpen,    setShopOpen]    = useState(false);
+  const [searchOpen,  setSearchOpen]  = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -143,9 +145,32 @@ export default function Navbar() {
             ))}
           </nav>
 
-          {/* Mobile hamburger */}
+          {/* Desktop search icon */}
           <button
-            className="md:hidden flex flex-col gap-1.5 p-2"
+            onClick={() => setSearchOpen(true)}
+            aria-label="Search"
+            className={`hidden md:flex items-center justify-center w-8 h-8 transition-colors duration-200 ${
+              (scrolled || !isHero) ? "text-[#2C2220] hover:text-[#A0622A]" : "text-[#FDF9F7] hover:text-white"
+            }`}
+          >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+              <circle cx="11" cy="11" r="8" /><path d="m21 21-4.35-4.35" />
+            </svg>
+          </button>
+
+          {/* Mobile: search + hamburger */}
+          <div className="md:hidden flex items-center gap-2">
+          <button
+            onClick={() => setSearchOpen(true)}
+            aria-label="Search"
+            className="flex items-center justify-center w-8 h-8 text-[#2C2220]"
+          >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+              <circle cx="11" cy="11" r="8" /><path d="m21 21-4.35-4.35" />
+            </svg>
+          </button>
+          <button
+            className="flex flex-col gap-1.5 p-2"
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Toggle menu"
           >
@@ -153,6 +178,7 @@ export default function Navbar() {
             <span className={`block w-6 h-px bg-[#A0622A] transition-all duration-300 ${menuOpen ? "opacity-0" : ""}`} />
             <span className={`block w-6 h-px bg-[#A0622A] transition-all duration-300 ${menuOpen ? "-rotate-45 -translate-y-2.5" : ""}`} />
           </button>
+          </div>
         </div>
 
         {/* Mobile menu */}
@@ -192,5 +218,7 @@ export default function Navbar() {
         )}
       </div>
     </header>
+
+    {searchOpen && <SearchModal onClose={() => setSearchOpen(false)} />}
   );
 }

@@ -8,6 +8,32 @@ import type { Product } from "@/lib/products";
 import { getOriginalPrice } from "@/lib/pricing";
 import CountdownTimer from "@/components/CountdownTimer";
 
+const FREE_SHIPPING_THRESHOLD = 50;
+
+function ShippingNudge({ price, symbol }: { price: number; symbol: string }) {
+  const remaining = FREE_SHIPPING_THRESHOLD - price;
+  if (remaining <= 0) {
+    return (
+      <p className="mt-2.5 text-[0.58rem] tracking-[0.12em] uppercase text-[#A0622A] flex items-center gap-1.5">
+        <span>✓</span>
+        <span>Free shipping on EU & UK orders — applied at checkout</span>
+      </p>
+    );
+  }
+  return (
+    <p className="mt-2.5 text-[0.58rem] tracking-[0.1em] uppercase text-[#8C7B6E] leading-relaxed">
+      Add{" "}
+      <span className="text-[#2C2220] font-medium">{symbol}{remaining.toFixed(2)}</span>
+      {" "}more and save up to{" "}
+      <span className="text-[#2C2220] font-medium">{symbol}8.00</span>
+      {" "}on shipping for EU & UK orders —{" "}
+      <Link href="/shop" className="text-[#A0622A] underline underline-offset-2 hover:text-[#8A5222] transition-colors">
+        browse more
+      </Link>
+    </p>
+  );
+}
+
 const SWATCH_COLORS: Record<string, string> = {
   "Gold Tone": "#C8A84B",
   "Silver Tone": "#A8A8A8",
@@ -219,6 +245,7 @@ export default function ProductPageClient({ product }: { product: Product }) {
             disabled={!allGroupsSelected}
             disabledMessage="Please complete all options above"
           />
+          <ShippingNudge price={totalPrice} symbol={symbol} />
         </div>
 
         {/* Feature bullets */}
@@ -264,6 +291,11 @@ export default function ProductPageClient({ product }: { product: Product }) {
         </div>
         {stickyError && (
           <p className="text-[0.6rem] tracking-wide text-[#A0622A] text-right">{stickyError}</p>
+        )}
+        {totalPrice < FREE_SHIPPING_THRESHOLD && (
+          <p className="text-[0.55rem] tracking-[0.08em] uppercase text-[#8C7B6E] text-center">
+            Add <span className="text-[#2C2220]">{symbol}{(FREE_SHIPPING_THRESHOLD - totalPrice).toFixed(2)}</span> more → save up to <span className="text-[#2C2220]">{symbol}8</span> shipping (EU & UK)
+          </p>
         )}
       </div>
     )}

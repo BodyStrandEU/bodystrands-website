@@ -8,6 +8,7 @@ import type { Product } from "@/lib/products";
 import { getOriginalPrice } from "@/lib/pricing";
 import CountdownTimer from "@/components/CountdownTimer";
 import { useCart } from "@/lib/cart";
+import { COUNTRY_GROUPS, getShippingRate } from "@/lib/shipping";
 
 const FREE_SHIPPING_THRESHOLD = 50;
 
@@ -41,7 +42,7 @@ const SWATCH_COLORS: Record<string, string> = {
 };
 
 export default function ProductPageClient({ product }: { product: Product }) {
-  const { add: addToCart } = useCart();
+  const { add: addToCart, shippingCountry, setShippingCountry } = useCart();
   const [activeVariant, setActiveVariant] = useState<string>(
     product.variants?.[0] ?? ""
   );
@@ -96,14 +97,14 @@ export default function ProductPageClient({ product }: { product: Product }) {
       .join(" — ") || undefined;
 
   async function handleStickyBuy() {
-    if (!allGroupsSelected || stickyLoading) return;
+    if (!allGroupsSelected || stickyLoading || !shippingCountry) return;
     setStickyLoading(true);
     setStickyError("");
     try {
       const res = await fetch("/api/checkout", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ productId: product.id, variant: combinedVariant, priceAdd }),
+        body: JSON.stringify({ productId: product.id, variant: combinedVariant, priceAdd, country: shippingCountry || undefined }),
       });
       const data = await res.json() as { url?: string; error?: string };
       if (data.url) window.location.href = data.url;
@@ -239,6 +240,47 @@ export default function ProductPageClient({ product }: { product: Product }) {
           </div>
         ))}
 
+        {/* Shipping destination selector */}
+        <div>
+          <p className="text-[0.55rem] tracking-[0.25em] uppercase text-[#8C7B6E] mb-2">
+            Ship to
+          </p>
+          <div className="relative">
+            <select
+              value={shippingCountry}
+              onChange={(e) => setShippingCountry(e.target.value)}
+              className="w-full border border-[#E8B4A8]/50 bg-transparent px-4 py-3 text-[0.65rem] tracking-wide text-[#2C2220] focus:outline-none focus:border-[#2C2220] transition-colors appearance-none cursor-pointer"
+              style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%238C7B6E' stroke-width='1.2' stroke-linecap='round'/%3E%3C/svg%3E")`, backgroundRepeat: "no-repeat", backgroundPosition: "right 14px center" }}
+            >
+              <option value="">Select your country…</option>
+              {COUNTRY_GROUPS.map((group) => (
+                <optgroup key={group.label} label={group.label}>
+                  {group.countries.map((c) => (
+                    <option key={c.code} value={c.code}>{c.name}</option>
+                  ))}
+                </optgroup>
+              ))}
+            </select>
+          </div>
+          {shippingCountry && (() => {
+            const rate = getShippingRate(shippingCountry, totalPrice);
+            return (
+              <p className="mt-1.5 text-[0.58rem] tracking-[0.1em] uppercase text-[#8C7B6E] flex items-center gap-2">
+                <span className="w-1 h-1 bg-[#A0622A] rounded-full inline-block flex-shrink-0" />
+                {rate.amount === 0
+                  ? <span className="text-[#A0622A]">Free shipping · {rate.deliveryMin}–{rate.deliveryMax} business days</span>
+                  : <span>{symbol}{(rate.amount / 100).toFixed(2)} shipping · {rate.deliveryMin}–{rate.deliveryMax} business days</span>
+                }
+              </p>
+            );
+          })()}
+          {!shippingCountry && (
+            <p className="mt-1.5 text-[0.55rem] tracking-[0.1em] uppercase text-[#8C7B6E]/60">
+              Select country to see shipping cost
+            </p>
+          )}
+        </div>
+
         {/* Buttons — observed for sticky bar visibility */}
         <div ref={buyRef} className="flex flex-col gap-2">
           {/* Add to Cart */}
@@ -311,10 +353,11 @@ export default function ProductPageClient({ product }: { product: Product }) {
           </div>
           <button
             onClick={handleStickyBuy}
-            disabled={stickyLoading}
+            disabled={stickyLoading || !shippingCountry}
+            title={!shippingCountry ? "Select your shipping country on the product page" : undefined}
             className="flex-shrink-0 bg-[#2C2220] text-[#FDF9F7] px-6 py-3 text-[0.6rem] tracking-[0.2em] uppercase disabled:opacity-60 transition-colors hover:bg-[#A0622A]"
           >
-            {stickyLoading ? "Processing…" : !allGroupsSelected ? "Select options" : "Buy Now"}
+            {stickyLoading ? "Processing…" : !allGroupsSelected ? "Select options" : !shippingCountry ? "Select country ↑" : "Buy Now"}
           </button>
         </div>
         {stickyError && (

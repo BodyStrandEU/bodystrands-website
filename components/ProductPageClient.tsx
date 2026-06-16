@@ -20,6 +20,7 @@ export default function ProductPageClient({ product }: { product: Product }) {
   const [groupSelections, setGroupSelections] = useState<Record<string, string>>({});
   const [showSticky, setShowSticky]           = useState(false);
   const [stickyLoading, setStickyLoading]     = useState(false);
+  const [stickyError, setStickyError]         = useState("");
   const buyRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -68,6 +69,7 @@ export default function ProductPageClient({ product }: { product: Product }) {
   async function handleStickyBuy() {
     if (!allGroupsSelected || stickyLoading) return;
     setStickyLoading(true);
+    setStickyError("");
     try {
       const res = await fetch("/api/checkout", {
         method: "POST",
@@ -76,8 +78,8 @@ export default function ProductPageClient({ product }: { product: Product }) {
       });
       const data = await res.json() as { url?: string; error?: string };
       if (data.url) window.location.href = data.url;
-      else { setStickyLoading(false); alert(data.error ?? "Something went wrong."); }
-    } catch { setStickyLoading(false); alert("Connection error."); }
+      else { setStickyLoading(false); setStickyError(data.error ?? "Something went wrong."); }
+    } catch { setStickyLoading(false); setStickyError("Connection error. Please try again."); }
   }
 
   return (
@@ -246,18 +248,23 @@ export default function ProductPageClient({ product }: { product: Product }) {
 
     {/* Sticky mobile buy bar */}
     {showSticky && (
-      <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-[#FDF9F7]/95 backdrop-blur-sm border-t border-[#E8B4A8]/40 px-4 py-3 flex items-center gap-4 shadow-[0_-4px_24px_rgba(44,34,32,0.08)] animate-slide-up">
-        <div className="flex-1 min-w-0">
-          <p className="text-[0.55rem] tracking-[0.15em] uppercase text-[#8C7B6E] truncate">{product.name}</p>
-          <p className="text-base font-light text-[#A0622A] tracking-wide">{symbol}{totalPrice.toFixed(2)}</p>
+      <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-[#FDF9F7]/95 backdrop-blur-sm border-t border-[#E8B4A8]/40 px-4 pt-3 pb-4 flex flex-col gap-1.5 shadow-[0_-4px_24px_rgba(44,34,32,0.08)] animate-slide-up">
+        <div className="flex items-center gap-4">
+          <div className="flex-1 min-w-0">
+            <p className="text-[0.55rem] tracking-[0.15em] uppercase text-[#8C7B6E] truncate">{product.name}</p>
+            <p className="text-base font-light text-[#A0622A] tracking-wide">{symbol}{totalPrice.toFixed(2)}</p>
+          </div>
+          <button
+            onClick={handleStickyBuy}
+            disabled={stickyLoading}
+            className="flex-shrink-0 bg-[#2C2220] text-[#FDF9F7] px-6 py-3 text-[0.6rem] tracking-[0.2em] uppercase disabled:opacity-60 transition-colors hover:bg-[#A0622A]"
+          >
+            {stickyLoading ? "Processing…" : !allGroupsSelected ? "Select options" : "Buy Now"}
+          </button>
         </div>
-        <button
-          onClick={handleStickyBuy}
-          disabled={stickyLoading}
-          className="flex-shrink-0 bg-[#2C2220] text-[#FDF9F7] px-6 py-3 text-[0.6rem] tracking-[0.2em] uppercase disabled:opacity-60 transition-colors hover:bg-[#A0622A]"
-        >
-          {stickyLoading ? "…" : !allGroupsSelected ? "Select options" : "Buy Now"}
-        </button>
+        {stickyError && (
+          <p className="text-[0.6rem] tracking-wide text-[#A0622A] text-right">{stickyError}</p>
+        )}
       </div>
     )}
     </>

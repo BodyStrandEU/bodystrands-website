@@ -74,13 +74,13 @@ export default function NewsletterBanner() {
               disabled={status === "loading"}
               className="px-6 py-3 bg-[#2C2220] text-[#FDF9F7] text-[0.6rem] tracking-[0.25em] uppercase font-light hover:bg-[#A0622A] transition-colors disabled:opacity-60 whitespace-nowrap"
             >
-              {status === "loading" ? "…" : "Subscribe"}
+              {status === "loading" ? "Subscribing…" : "Subscribe"}
             </button>
           </form>
         )}
 
         {status === "error" && (
-          <p className="mt-3 text-[0.65rem] tracking-wide text-red-400">{errMsg}</p>
+          <p className="mt-3 text-[0.65rem] tracking-wide text-[#A0622A]">{errMsg}</p>
         )}
 
         <p className="mt-5 text-[0.55rem] tracking-[0.15em] uppercase text-[#8C7B6E]/60">

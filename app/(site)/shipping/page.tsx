@@ -33,10 +33,11 @@ const SHIPPING_ZONES = [
 export default function ShippingPage() {
   return (
     <div className="max-w-3xl mx-auto px-6 py-20">
-      <h1 className="font-josefin text-3xl tracking-widest uppercase mb-2">Shipping & Returns</h1>
-      <p className="text-sm text-gray-400 mb-12">All orders are handmade and ship from Portugal.</p>
+      <p className="text-[0.6rem] tracking-[0.35em] uppercase text-[#A0622A] mb-3">Bodystrands</p>
+      <h1 className="font-heading text-4xl md:text-5xl font-light text-[#2C2220] mb-4">Shipping & Returns</h1>
+      <p className="text-sm font-light tracking-wide text-[#8C7B6E] leading-relaxed mb-12">All orders are handmade and ship from Portugal.</p>
 
-      <div className="space-y-12 font-cormorant text-lg leading-relaxed text-gray-700">
+      <div className="space-y-12 font-cormorant text-lg leading-relaxed text-[#2C2220]">
 
         {/* Processing */}
         <section>

@@ -21,6 +21,12 @@ export default function BuyButton({
   async function handleBuy() {
     setLoading(true);
     setError("");
+
+    if (typeof window !== "undefined") {
+      const w = window as Window & { fbq?: (...a: unknown[]) => void; gtag?: (...a: unknown[]) => void };
+      w.fbq?.("track", "InitiateCheckout");
+      w.gtag?.("event", "begin_checkout");
+    }
     try {
       const res = await fetch("/api/checkout", {
         method: "POST",

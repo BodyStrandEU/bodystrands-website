@@ -1,12 +1,66 @@
+"use client";
+
+import { Suspense, useEffect, useRef } from "react";
+import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 
-export const metadata = {
-  title: "Order Confirmed — Bodystrands",
-};
+declare global {
+  interface Window {
+    fbq?: (...args: unknown[]) => void;
+    gtag?: (...args: unknown[]) => void;
+  }
+}
+
+function PurchaseTracker() {
+  const searchParams = useSearchParams();
+  const fired = useRef(false);
+
+  useEffect(() => {
+    if (fired.current) return;
+    const sessionId = searchParams.get("session_id");
+    if (!sessionId) return;
+    fired.current = true;
+
+    fetch(`/api/session?id=${sessionId}`)
+      .then((r) => r.json() as Promise<{ productName?: string; amount?: number; currency?: string; error?: string }>)
+      .then((data) => {
+        if (data.error || !data.amount) return;
+
+        if (typeof window.fbq === "function") {
+          window.fbq("track", "Purchase", {
+            value:        data.amount,
+            currency:     data.currency ?? "EUR",
+            content_name: data.productName,
+            content_type: "product",
+          });
+        }
+
+        if (typeof window.gtag === "function") {
+          window.gtag("event", "purchase", {
+            transaction_id: sessionId,
+            value:          data.amount,
+            currency:       data.currency ?? "EUR",
+            items: [{
+              item_name: data.productName,
+              price:     data.amount,
+              quantity:  1,
+            }],
+          });
+        }
+      })
+      .catch(() => {});
+  }, [searchParams]);
+
+  return null;
+}
 
 export default function SuccessPage() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-[#FDF9F7] px-6">
+      <Suspense fallback={null}>
+        <PurchaseTracker />
+      </Suspense>
+
       <div className="text-center max-w-md">
 
         <div className="w-12 h-12 rounded-full bg-[#E8B4A8]/40 flex items-center justify-center mx-auto mb-8">

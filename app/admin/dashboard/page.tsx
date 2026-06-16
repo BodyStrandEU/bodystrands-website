@@ -292,6 +292,21 @@ export default function AdminDashboard() {
         {/* Actions bar */}
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "2rem", flexWrap: "wrap", gap: "0.75rem" }}>
           <button
+            onClick={() => router.push("/admin/analytics")}
+            style={{
+              padding: "0.6rem 1.5rem",
+              background: "var(--admin-surface)",
+              color: "#A0622A",
+              border: "1px solid #A0622A",
+              borderRadius: "4px",
+              fontSize: "0.85rem",
+              cursor: "pointer",
+              fontWeight: 500,
+            }}
+          >
+            📊 Analytics
+          </button>
+          <button
             onClick={() => router.push("/admin/site-images")}
             style={{
               padding: "0.6rem 1.5rem",

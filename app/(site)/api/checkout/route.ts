@@ -35,6 +35,12 @@ export async function POST(req: NextRequest) {
       },
     ],
     mode: "payment",
+    metadata: {
+      productId:   product.id,
+      productName: productName,
+      price:       (product.price + (priceAdd ?? 0)).toFixed(2),
+      currency:    product.currency,
+    },
     success_url: `${origin}/success?session_id={CHECKOUT_SESSION_ID}`,
     cancel_url: `${origin}/shop`,
     shipping_address_collection: {

@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import NewsletterBanner from "@/components/NewsletterBanner";
 import CookieConsent from "@/components/CookieConsent";
+import FloatingDMButton from "@/components/FloatingDMButton";
 
 export default function SiteLayout({
   children,
@@ -15,6 +16,7 @@ export default function SiteLayout({
       <NewsletterBanner />
       <Footer />
       <CookieConsent />
+      <FloatingDMButton />
     </div>
   );
 }

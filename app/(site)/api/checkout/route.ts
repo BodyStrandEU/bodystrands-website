@@ -1,12 +1,28 @@
 import { NextRequest, NextResponse } from "next/server";
 import Stripe from "stripe";
 import { products } from "@/lib/products";
+import { getShippingRate, ALL_COUNTRIES } from "@/lib/shipping";
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!);
 
 type CartItemInput = { productId: string; variant?: string; priceAdd?: number; quantity?: number };
 
-function buildShippingOptions(totalAmount: number) {
+function buildSingleShippingOption(country: string, totalAmount: number): Stripe.Checkout.SessionCreateParams.ShippingOption[] {
+  const rate = getShippingRate(country, totalAmount);
+  return [{
+    shipping_rate_data: {
+      type:          "fixed_amount" as const,
+      fixed_amount:  { amount: rate.amount, currency: "eur" },
+      display_name:  rate.displayName,
+      delivery_estimate: {
+        minimum: { unit: "business_day" as const, value: rate.deliveryMin },
+        maximum: { unit: "business_day" as const, value: rate.deliveryMax },
+      },
+    },
+  }];
+}
+
+function buildAllShippingOptions(totalAmount: number): Stripe.Checkout.SessionCreateParams.ShippingOption[] {
   const free = totalAmount >= 50;
   return [
     {
@@ -33,21 +49,24 @@ function buildShippingOptions(totalAmount: number) {
         delivery_estimate: { minimum: { unit: "business_day" as const, value: 7 }, maximum: { unit: "business_day" as const, value: 14 } },
       },
     },
+    {
+      shipping_rate_data: {
+        type: "fixed_amount" as const,
+        fixed_amount: { amount: 2500, currency: "eur" },
+        display_name: "International Shipping — Rest of World",
+        delivery_estimate: { minimum: { unit: "business_day" as const, value: 7 }, maximum: { unit: "business_day" as const, value: 20 } },
+      },
+    },
   ];
 }
 
-const ALLOWED_COUNTRIES = [
-  "AT","BE","BG","HR","CY","CZ","DK","EE","FI","FR",
-  "DE","GR","HU","IE","IT","LV","LT","LU","MT","NL",
-  "PL","PT","RO","SK","SI","ES","SE",
-  "GB","CH",
-  "US","CA",
-] as Stripe.Checkout.SessionCreateParams.ShippingAddressCollection.AllowedCountry[];
+const STRIPE_COUNTRIES = ALL_COUNTRIES as Stripe.Checkout.SessionCreateParams.ShippingAddressCollection.AllowedCountry[];
 
 export async function POST(req: NextRequest) {
   try {
-    const body = await req.json() as Record<string, unknown>;
+    const body   = await req.json() as Record<string, unknown>;
     const origin = req.headers.get("origin") ?? "https://bodystrands.com";
+    const country = (body.country as string | undefined) ?? "";
 
     // ── Cart checkout (multiple items) ──────────────────────────────────
     if (Array.isArray(body.items)) {
@@ -83,13 +102,17 @@ export async function POST(req: NextRequest) {
         return NextResponse.json({ error: "No valid products in cart" }, { status: 400 });
       }
 
+      const shipping_options = country
+        ? buildSingleShippingOption(country, totalAmount)
+        : buildAllShippingOptions(totalAmount);
+
       const session = await stripe.checkout.sessions.create({
         payment_method_types: ["card"],
         line_items:  lineItems,
         mode:        "payment",
         metadata:    { productName: productNames.join(", "), price: totalAmount.toFixed(2), currency: "EUR" },
-        shipping_options:            buildShippingOptions(totalAmount),
-        shipping_address_collection: { allowed_countries: ALLOWED_COUNTRIES },
+        shipping_options,
+        shipping_address_collection: { allowed_countries: STRIPE_COUNTRIES },
         success_url: `${origin}/success?session_id={CHECKOUT_SESSION_ID}`,
         cancel_url:  `${origin}/shop`,
       });
@@ -104,6 +127,10 @@ export async function POST(req: NextRequest) {
 
     const productName = variant ? `${product.name} — ${variant}` : product.name;
     const totalAmount = product.price + (priceAdd ?? 0);
+
+    const shipping_options = country
+      ? buildSingleShippingOption(country, totalAmount)
+      : buildAllShippingOptions(totalAmount);
 
     const session = await stripe.checkout.sessions.create({
       payment_method_types: ["card"],
@@ -121,8 +148,8 @@ export async function POST(req: NextRequest) {
       }],
       mode:     "payment",
       metadata: { productId: product.id, productName, price: totalAmount.toFixed(2), currency: product.currency },
-      shipping_options:            buildShippingOptions(totalAmount),
-      shipping_address_collection: { allowed_countries: ALLOWED_COUNTRIES },
+      shipping_options,
+      shipping_address_collection: { allowed_countries: STRIPE_COUNTRIES },
       success_url: `${origin}/success?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url:  `${origin}/shop`,
     });

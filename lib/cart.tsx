@@ -15,25 +15,30 @@ export type CartItem = {
 };
 
 type CartCtx = {
-  items:      CartItem[];
-  count:      number;
-  subtotal:   number;
-  add:        (item: Omit<CartItem, "cartId" | "quantity">) => void;
-  remove:     (cartId: string) => void;
-  updateQty:  (cartId: string, qty: number) => void;
-  clear:      () => void;
+  items:             CartItem[];
+  count:             number;
+  subtotal:          number;
+  shippingCountry:   string;
+  setShippingCountry:(code: string) => void;
+  add:               (item: Omit<CartItem, "cartId" | "quantity">) => void;
+  remove:            (cartId: string) => void;
+  updateQty:         (cartId: string, qty: number) => void;
+  clear:             () => void;
 };
 
 const CartContext = createContext<CartCtx | null>(null);
 
 export function CartProvider({ children }: { children: ReactNode }) {
-  const [items, setItems] = useState<CartItem[]>([]);
-  const [hydrated, setHydrated] = useState(false);
+  const [items, setItems]                   = useState<CartItem[]>([]);
+  const [shippingCountry, _setShippingCountry] = useState("");
+  const [hydrated, setHydrated]             = useState(false);
 
   useEffect(() => {
     try {
       const stored = localStorage.getItem("bs_cart");
       if (stored) setItems(JSON.parse(stored) as CartItem[]);
+      const storedCountry = localStorage.getItem("bs_shipping_country");
+      if (storedCountry) _setShippingCountry(storedCountry);
     } catch {}
     setHydrated(true);
   }, []);
@@ -41,6 +46,11 @@ export function CartProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     if (hydrated) localStorage.setItem("bs_cart", JSON.stringify(items));
   }, [items, hydrated]);
+
+  function setShippingCountry(code: string) {
+    _setShippingCountry(code);
+    try { localStorage.setItem("bs_shipping_country", code); } catch {}
+  }
 
   function add(item: Omit<CartItem, "cartId" | "quantity">) {
     const cartId = `${item.productId}:${item.variant ?? ""}`;
@@ -66,7 +76,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
   const subtotal = items.reduce((s, i) => s + i.unitPrice * i.quantity, 0);
 
   return (
-    <CartContext.Provider value={{ items, count, subtotal, add, remove, updateQty, clear }}>
+    <CartContext.Provider value={{ items, count, subtotal, shippingCountry, setShippingCountry, add, remove, updateQty, clear }}>
       {children}
     </CartContext.Provider>
   );

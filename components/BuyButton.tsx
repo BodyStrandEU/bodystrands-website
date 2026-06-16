@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useCart } from "@/lib/cart";
 
 export default function BuyButton({
   productId,
@@ -19,6 +20,7 @@ export default function BuyButton({
 }) {
   const [loading, setLoading] = useState(false);
   const [error,   setError]   = useState("");
+  const { shippingCountry }   = useCart();
 
   async function handleBuy() {
     setLoading(true);
@@ -33,7 +35,12 @@ export default function BuyButton({
       const res = await fetch("/api/checkout", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ productId, variant, priceAdd: priceAdd ?? 0 }),
+        body: JSON.stringify({
+          productId,
+          variant,
+          priceAdd: priceAdd ?? 0,
+          country:  shippingCountry || undefined,
+        }),
       });
       const data = await res.json() as { url?: string; error?: string };
       if (data.url) {

@@ -4,17 +4,17 @@ import { useRef, useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useCart } from "@/lib/cart";
+import { COUNTRY_GROUPS, getShippingRate } from "@/lib/shipping";
 
 const FREE_THRESHOLD = 50;
 
 export default function CartIcon({ light }: { light?: boolean }) {
-  const { items, count, subtotal, remove, updateQty, clear } = useCart();
-  const [open, setOpen]     = useState(false);
+  const { items, count, subtotal, remove, updateQty, clear, shippingCountry, setShippingCountry } = useCart();
+  const [open, setOpen]       = useState(false);
   const [loading, setLoading] = useState(false);
-  const [error, setError]   = useState("");
+  const [error, setError]     = useState("");
   const ref = useRef<HTMLDivElement>(null);
 
-  // Close on outside click
   useEffect(() => {
     function onClick(e: MouseEvent) {
       if (ref.current && !ref.current.contains(e.target as Node)) setOpen(false);
@@ -24,17 +24,26 @@ export default function CartIcon({ light }: { light?: boolean }) {
   }, []);
 
   const symbol   = "€";
-  const remaining = Math.max(0, FREE_THRESHOLD - subtotal);
+
+  // Shipping calculation
+  const shippingRate    = shippingCountry ? getShippingRate(shippingCountry, subtotal) : null;
+  const shippingAmount  = shippingRate ? shippingRate.amount / 100 : null;
+  const orderTotal      = subtotal + (shippingAmount ?? 0);
+  const remaining       = Math.max(0, FREE_THRESHOLD - subtotal);
 
   async function checkout() {
     if (items.length === 0) return;
+    if (!shippingCountry) return;
     setLoading(true);
     setError("");
     try {
       const res  = await fetch("/api/checkout", {
         method:  "POST",
         headers: { "Content-Type": "application/json" },
-        body:    JSON.stringify({ items: items.map((i) => ({ productId: i.productId, variant: i.variant, priceAdd: i.priceAdd, quantity: i.quantity })) }),
+        body:    JSON.stringify({
+          items:   items.map((i) => ({ productId: i.productId, variant: i.variant, priceAdd: i.priceAdd, quantity: i.quantity })),
+          country: shippingCountry,
+        }),
       });
       const data = await res.json() as { url?: string; error?: string };
       if (data.url) { clear(); window.location.href = data.url; }
@@ -51,7 +60,6 @@ export default function CartIcon({ light }: { light?: boolean }) {
         aria-label={`Cart — ${count} item${count !== 1 ? "s" : ""}`}
         className={`relative flex items-center justify-center w-8 h-8 transition-colors duration-200 hover:text-[#A0622A] ${iconColor}`}
       >
-        {/* Bag icon */}
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
           <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
           <line x1="3" y1="6" x2="21" y2="6"/>
@@ -82,7 +90,7 @@ export default function CartIcon({ light }: { light?: boolean }) {
           ) : (
             <>
               {/* Items */}
-              <div className="max-h-72 overflow-y-auto divide-y divide-[#E8B4A8]/30">
+              <div className="max-h-64 overflow-y-auto divide-y divide-[#E8B4A8]/30">
                 {items.map((item) => (
                   <div key={item.cartId} className="flex gap-3 p-4 items-start">
                     {item.image ? (
@@ -134,39 +142,93 @@ export default function CartIcon({ light }: { light?: boolean }) {
               </div>
 
               {/* Footer */}
-              <div className="border-t border-[#E8B4A8]/40 p-4">
-                {/* Subtotal */}
-                <div className="flex justify-between items-baseline mb-3">
+              <div className="border-t border-[#E8B4A8]/40 p-4 flex flex-col gap-3">
+
+                {/* Subtotal row */}
+                <div className="flex justify-between items-baseline">
                   <span className="text-[0.58rem] tracking-[0.15em] uppercase text-[#8C7B6E]">Subtotal</span>
                   <span className="text-base font-light text-[#2C2220]">{symbol}{subtotal.toFixed(2)}</span>
                 </div>
 
-                {/* Shipping nudge */}
-                {remaining > 0 ? (
-                  <p className="text-[0.55rem] tracking-[0.08em] uppercase text-[#8C7B6E] mb-3 leading-relaxed">
-                    Add <span className="text-[#A0622A]">{symbol}{remaining.toFixed(2)}</span> more for free shipping on EU & UK orders —{" "}
+                {/* Country selector */}
+                <div>
+                  <label className="block text-[0.52rem] tracking-[0.2em] uppercase text-[#8C7B6E] mb-1.5">
+                    Ship to
+                  </label>
+                  <select
+                    value={shippingCountry}
+                    onChange={(e) => setShippingCountry(e.target.value)}
+                    className="w-full border border-[#E8B4A8]/50 bg-transparent px-3 py-2 text-[0.6rem] tracking-wide text-[#2C2220] focus:outline-none focus:border-[#2C2220] transition-colors appearance-none cursor-pointer"
+                    style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%238C7B6E' stroke-width='1.2' stroke-linecap='round'/%3E%3C/svg%3E")`, backgroundRepeat: "no-repeat", backgroundPosition: "right 10px center" }}
+                  >
+                    <option value="">Select country…</option>
+                    {COUNTRY_GROUPS.map((group) => (
+                      <optgroup key={group.label} label={group.label}>
+                        {group.countries.map((c) => (
+                          <option key={c.code} value={c.code}>{c.name}</option>
+                        ))}
+                      </optgroup>
+                    ))}
+                  </select>
+                </div>
+
+                {/* Shipping cost row */}
+                {shippingCountry && shippingRate && (
+                  <div className="flex justify-between items-baseline">
+                    <span className="text-[0.55rem] tracking-[0.12em] uppercase text-[#8C7B6E]">
+                      Shipping · {shippingRate.deliveryMin}–{shippingRate.deliveryMax} days
+                    </span>
+                    <span className="text-[0.65rem] font-light text-[#2C2220]">
+                      {shippingRate.amount === 0 ? (
+                        <span className="text-[#A0622A]">Free</span>
+                      ) : (
+                        `${symbol}${(shippingRate.amount / 100).toFixed(2)}`
+                      )}
+                    </span>
+                  </div>
+                )}
+
+                {/* Free shipping nudge (only for EU/UK where threshold applies) */}
+                {shippingCountry && shippingRate && shippingRate.amount > 0 && remaining > 0 && (shippingRate.amount === 500 || shippingRate.amount === 800) && (
+                  <p className="text-[0.52rem] tracking-[0.08em] uppercase text-[#8C7B6E] leading-relaxed">
+                    Add <span className="text-[#A0622A]">{symbol}{remaining.toFixed(2)}</span> more for free shipping —{" "}
                     <Link href="/shop" onClick={() => setOpen(false)} className="text-[#A0622A] underline underline-offset-2">browse more</Link>
                   </p>
-                ) : (
-                  <p className="text-[0.55rem] tracking-[0.08em] uppercase text-[#A0622A] mb-3">
-                    ✓ Free shipping on EU & UK orders
+                )}
+                {!shippingCountry && remaining > 0 && (
+                  <p className="text-[0.52rem] tracking-[0.08em] uppercase text-[#8C7B6E] leading-relaxed">
+                    Free shipping on EU & UK orders over{" "}
+                    <span className="text-[#2C2220]">{symbol}{FREE_THRESHOLD}</span>
                   </p>
                 )}
 
-                {error && <p className="text-[0.55rem] text-[#A0622A] mb-2">{error}</p>}
+                {/* Order total (when country selected) */}
+                {shippingCountry && shippingRate && (
+                  <div className="flex justify-between items-baseline pt-2 border-t border-[#E8B4A8]/30">
+                    <span className="text-[0.6rem] tracking-[0.15em] uppercase text-[#2C2220]">Total</span>
+                    <span className="text-lg font-light text-[#2C2220]">{symbol}{orderTotal.toFixed(2)}</span>
+                  </div>
+                )}
+
+                {error && <p className="text-[0.55rem] text-[#A0622A]">{error}</p>}
 
                 <button
                   onClick={checkout}
-                  disabled={loading}
-                  className="w-full bg-[#2C2220] text-[#FDF9F7] py-3.5 text-[0.6rem] tracking-[0.22em] uppercase hover:bg-[#A0622A] transition-colors duration-200 disabled:opacity-60"
+                  disabled={loading || !shippingCountry}
+                  title={!shippingCountry ? "Please select your shipping country above" : undefined}
+                  className="w-full bg-[#2C2220] text-[#FDF9F7] py-3.5 text-[0.6rem] tracking-[0.22em] uppercase hover:bg-[#A0622A] transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  {loading ? "Processing…" : `Checkout — ${symbol}${subtotal.toFixed(2)}`}
+                  {loading
+                    ? "Processing…"
+                    : !shippingCountry
+                    ? "Select Country to Checkout"
+                    : `Checkout — ${symbol}${orderTotal.toFixed(2)}`}
                 </button>
 
                 <Link
                   href="/shop"
                   onClick={() => setOpen(false)}
-                  className="block text-center mt-3 text-[0.55rem] tracking-[0.15em] uppercase text-[#8C7B6E] hover:text-[#A0622A] transition-colors"
+                  className="block text-center text-[0.55rem] tracking-[0.15em] uppercase text-[#8C7B6E] hover:text-[#A0622A] transition-colors"
                 >
                   Continue shopping
                 </Link>

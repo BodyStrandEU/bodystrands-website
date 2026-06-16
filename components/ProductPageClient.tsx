@@ -7,6 +7,7 @@ import ProductDetails from "@/components/ProductDetails";
 import type { Product } from "@/lib/products";
 import { getOriginalPrice } from "@/lib/pricing";
 import CountdownTimer from "@/components/CountdownTimer";
+import { useCart } from "@/lib/cart";
 
 const FREE_SHIPPING_THRESHOLD = 50;
 
@@ -40,6 +41,7 @@ const SWATCH_COLORS: Record<string, string> = {
 };
 
 export default function ProductPageClient({ product }: { product: Product }) {
+  const { add: addToCart } = useCart();
   const [activeVariant, setActiveVariant] = useState<string>(
     product.variants?.[0] ?? ""
   );
@@ -47,6 +49,7 @@ export default function ProductPageClient({ product }: { product: Product }) {
   const [showSticky, setShowSticky]           = useState(false);
   const [stickyLoading, setStickyLoading]     = useState(false);
   const [stickyError, setStickyError]         = useState("");
+  const [addedMsg, setAddedMsg]               = useState(false);
   const buyRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -236,15 +239,40 @@ export default function ProductPageClient({ product }: { product: Product }) {
           </div>
         ))}
 
-        {/* Buy button — observed for sticky bar visibility */}
-        <div ref={buyRef}>
+        {/* Buttons — observed for sticky bar visibility */}
+        <div ref={buyRef} className="flex flex-col gap-2">
+          {/* Add to Cart */}
+          <button
+            onClick={() => {
+              if (!allGroupsSelected) return;
+              addToCart({
+                productId:   product.id,
+                productName: product.name,
+                variant:     combinedVariant,
+                priceAdd,
+                unitPrice:   totalPrice,
+                image:       product.images?.[0],
+                currency:    product.currency,
+              });
+              setAddedMsg(true);
+              setTimeout(() => setAddedMsg(false), 2000);
+            }}
+            disabled={!allGroupsSelected}
+            title={!allGroupsSelected ? "Please complete all options above" : undefined}
+            className="btn-primary-filled w-full text-center py-4 disabled:opacity-60 disabled:cursor-not-allowed"
+          >
+            {addedMsg ? "Added to cart ✓" : !allGroupsSelected ? "Please complete all options above" : "Add to Cart"}
+          </button>
+
+          {/* Buy Now — direct checkout */}
           <BuyButton
             productId={product.id}
             variant={combinedVariant}
             priceAdd={priceAdd}
             disabled={!allGroupsSelected}
-            disabledMessage="Please complete all options above"
+            secondary
           />
+
           <ShippingNudge price={totalPrice} symbol={symbol} />
         </div>
 

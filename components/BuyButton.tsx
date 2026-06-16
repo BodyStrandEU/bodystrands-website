@@ -8,12 +8,14 @@ export default function BuyButton({
   priceAdd,
   disabled: externalDisabled,
   disabledMessage,
+  secondary,
 }: {
   productId: string;
   variant?: string;
   priceAdd?: number;
   disabled?: boolean;
   disabledMessage?: string;
+  secondary?: boolean;
 }) {
   const [loading, setLoading] = useState(false);
   const [error,   setError]   = useState("");
@@ -54,9 +56,13 @@ export default function BuyButton({
         onClick={handleBuy}
         disabled={isDisabled}
         title={externalDisabled && disabledMessage ? disabledMessage : undefined}
-        className="btn-primary-filled w-full text-center py-4 disabled:opacity-60 disabled:cursor-not-allowed"
+        className={`w-full text-center py-4 disabled:opacity-60 disabled:cursor-not-allowed transition-colors duration-200 ${
+          secondary
+            ? "btn-primary text-[0.6rem] tracking-[0.22em] uppercase py-3"
+            : "btn-primary-filled"
+        }`}
       >
-        {loading ? "Processing…" : externalDisabled && disabledMessage ? disabledMessage : "Buy Now"}
+        {loading ? "Processing…" : "Buy Now — Skip Cart"}
       </button>
       {error && (
         <p className="text-[0.6rem] tracking-wide text-[#A0622A] text-center">{error}</p>

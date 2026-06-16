@@ -6,6 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { activeCategories } from "@/lib/products";
 import SearchModal from "@/components/SearchModal";
+import CartIcon from "@/components/CartIcon";
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -146,20 +147,23 @@ export default function Navbar() {
             ))}
           </nav>
 
-          {/* Desktop search icon */}
-          <button
-            onClick={() => setSearchOpen(true)}
-            aria-label="Search"
-            className={`hidden md:flex items-center justify-center w-8 h-8 transition-colors duration-200 ${
-              (scrolled || !isHero) ? "text-[#2C2220] hover:text-[#A0622A]" : "text-[#FDF9F7] hover:text-white"
-            }`}
-          >
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-              <circle cx="11" cy="11" r="8" /><path d="m21 21-4.35-4.35" />
-            </svg>
-          </button>
+          {/* Desktop: search + cart */}
+          <div className="hidden md:flex items-center gap-3">
+            <button
+              onClick={() => setSearchOpen(true)}
+              aria-label="Search"
+              className={`flex items-center justify-center w-8 h-8 transition-colors duration-200 ${
+                (scrolled || !isHero) ? "text-[#2C2220] hover:text-[#A0622A]" : "text-[#FDF9F7] hover:text-white"
+              }`}
+            >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                <circle cx="11" cy="11" r="8" /><path d="m21 21-4.35-4.35" />
+              </svg>
+            </button>
+            <CartIcon light={!scrolled && isHero} />
+          </div>
 
-          {/* Mobile: search + hamburger */}
+          {/* Mobile: search + cart + hamburger */}
           <div className="md:hidden flex items-center gap-2">
           <button
             onClick={() => setSearchOpen(true)}
@@ -170,6 +174,7 @@ export default function Navbar() {
               <circle cx="11" cy="11" r="8" /><path d="m21 21-4.35-4.35" />
             </svg>
           </button>
+          <CartIcon />
           <button
             className="flex flex-col gap-1.5 p-2"
             onClick={() => setMenuOpen(!menuOpen)}

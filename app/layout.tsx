@@ -37,35 +37,40 @@ export const metadata: Metadata = {
     description: "Dainty handmade body chains, waist chains, and anklets.",
     images: ["/images/og-image.jpg"],
   },
-  robots: {
-    index: true,
-    follow: true,
-  },
+  robots: { index: true, follow: true },
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={`${cormorant.variable} ${josefin.variable}`}>
       <head>
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-8ZSFBD94RN"
-          strategy="beforeInteractive"
-        />
-        <Script id="google-analytics" strategy="beforeInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-8ZSFBD94RN');
-          `}
-        </Script>
+        {/* Step 1: set consent defaults BEFORE GA loads — nothing is tracked until user accepts */}
+        <Script id="consent-default" strategy="beforeInteractive">{`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('consent', 'default', {
+            analytics_storage: 'denied',
+            ad_storage: 'denied',
+            wait_for_update: 500
+          });
+        `}</Script>
       </head>
       <body>
         <PageTransition>{children}</PageTransition>
+
+        {/* Step 2: load GA after page is interactive */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-8ZSFBD94RN"
+          strategy="afterInteractive"
+        />
+        <Script id="ga-init" strategy="afterInteractive">{`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-8ZSFBD94RN', { send_page_view: true });
+        `}</Script>
       </body>
     </html>
   );

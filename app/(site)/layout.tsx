@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import NewsletterBanner from "@/components/NewsletterBanner";
+import CookieConsent from "@/components/CookieConsent";
 
 export default function SiteLayout({
   children,
@@ -13,6 +14,7 @@ export default function SiteLayout({
       <main className="flex-1">{children}</main>
       <NewsletterBanner />
       <Footer />
+      <CookieConsent />
     </div>
   );
 }

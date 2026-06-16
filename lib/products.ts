@@ -42,7 +42,15 @@ export type Product = {
   variants?: string[];
   variantGroups?: VariantGroup[];
   active?: boolean;
+  infographicImages?: string[];
 };
+
+// Images that are infographics across all products — hidden on shop card, shown on product page
+export const INFOGRAPHIC_IMAGES = new Set([
+  "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",  // Free Tailored Fit
+  "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg", // Shipping Fast & Reliable
+  "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.jpg",  // Waterproof / Stainless Steel
+]);
 
 export function isValidCategory(value: string): value is Category {
   return (CATEGORIES as readonly string[]).includes(value);

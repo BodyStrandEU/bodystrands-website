@@ -3,6 +3,7 @@ import { useRef, useState, useMemo, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import type { Product } from "@/lib/products";
+import { INFOGRAPHIC_IMAGES } from "@/lib/products";
 import { getOriginalPrice } from "@/lib/pricing";
 
 const SWATCH_COLORS: Record<string, string> = {
@@ -26,13 +27,16 @@ export default function ProductCard({ product, priority = false }: { product: Pr
   const symbol = product.currency === "EUR" ? "€" : product.currency === "GBP" ? "£" : "$";
 
   // All variant images combined in variant order, or fallback to product.images
+  // Infographic images are excluded — they only appear on the product detail page
   const combinedImages = useMemo(() => {
+    const perProduct = new Set(product.infographicImages ?? []);
+    const isInfographic = (src: string) => INFOGRAPHIC_IMAGES.has(src) || perProduct.has(src);
     const variants = product.variants ?? [];
     if (variants.length > 0 && product.variantImages) {
-      return variants.flatMap((v) => product.variantImages![v] ?? []);
+      return variants.flatMap((v) => product.variantImages![v] ?? []).filter(src => !isInfographic(src));
     }
-    return product.images ?? [];
-  }, [product.variants, product.variantImages, product.images]);
+    return (product.images ?? []).filter(src => !isInfographic(src));
+  }, [product.variants, product.variantImages, product.images, product.infographicImages]);
 
   // Which variant does each slide index belong to?
   const slideVariantMap = useMemo(() => {

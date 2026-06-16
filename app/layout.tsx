@@ -72,6 +72,31 @@ export default function RootLayout({
           gtag('config', 'G-8ZSFBD94RN', { send_page_view: true });
         `}</Script>
 
+        {/* Site-level structured data */}
+        <Script id="schema-org" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([
+          {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            name:    "Bodystrands",
+            url:     "https://www.bodystrands.com",
+            logo:    "https://www.bodystrands.com/images/logo.png",
+            description: "Handmade body jewelry crafted in 316L surgical-grade stainless steel. Made in Portugal.",
+            sameAs: ["https://www.instagram.com/bodystrands/"],
+            contactPoint: { "@type": "ContactPoint", email: "storenavaria@gmail.com", contactType: "customer service" },
+          },
+          {
+            "@context": "https://schema.org",
+            "@type":    "WebSite",
+            name:       "Bodystrands",
+            url:        "https://www.bodystrands.com",
+            potentialAction: {
+              "@type":       "SearchAction",
+              target:        "https://www.bodystrands.com/shop?search={search_term_string}",
+              "query-input": "required name=search_term_string",
+            },
+          },
+        ]) }} />
+
         {/* Meta Pixel */}
         <Script id="meta-pixel" strategy="afterInteractive">{`
           !function(f,b,e,v,n,t,s)

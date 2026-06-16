@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { products } from "@/lib/products";
+import { products, INFOGRAPHIC_IMAGES } from "@/lib/products";
 import { notFound } from "next/navigation";
 import ProductPageClient from "@/components/ProductPageClient";
 import YouMayAlsoLike from "@/components/YouMayAlsoLike";
@@ -54,26 +54,35 @@ export default async function ProductPage({ params }: { params: Promise<{ id: st
     product.images?.[0] ||
     "/images/og-image.jpg";
 
-  const allImages = product.variants?.length && product.variantImages
-    ? product.variants.flatMap((v) => product.variantImages![v] ?? [])
-    : (product.images ?? []);
+  const allImages = (
+    product.variants?.length && product.variantImages
+      ? product.variants.flatMap((v) => product.variantImages![v] ?? [])
+      : (product.images ?? [])
+  ).filter((src) => !INFOGRAPHIC_IMAGES.has(src) && !(product.infographicImages ?? []).includes(src));
 
-  const jsonLd = {
+  const productJsonLd = {
     "@context": "https://schema.org",
     "@type": "Product",
-    name:        product.name,
-    description: product.description,
-    image:       allImages.length > 0 ? allImages : [firstImage],
+    name:          product.name,
+    description:   product.description,
+    sku:           product.id,
+    image:         allImages.length > 0 ? allImages : [firstImage],
+    material:      "316L Stainless Steel",
+    itemCondition: "https://schema.org/NewCondition",
     brand: {
       "@type": "Brand",
-      name: "Bodystrands",
+      name:    "Bodystrands",
     },
+    ...(product.variants?.length ? {
+      color: product.variants.join(", "),
+    } : {}),
     offers: {
-      "@type":           "Offer",
-      url:               `https://www.bodystrands.com/shop/${product.id}`,
-      price:             product.price.toFixed(2),
-      priceCurrency:     product.currency ?? "EUR",
-      availability:      "https://schema.org/InStock",
+      "@type":          "Offer",
+      url:              `https://www.bodystrands.com/shop/${product.id}`,
+      price:            product.price.toFixed(2),
+      priceCurrency:    product.currency ?? "EUR",
+      availability:     "https://schema.org/InStock",
+      itemCondition:    "https://schema.org/NewCondition",
       seller: {
         "@type": "Organization",
         name:    "Bodystrands",
@@ -81,12 +90,20 @@ export default async function ProductPage({ params }: { params: Promise<{ id: st
     },
   };
 
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type":    "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home",  item: "https://www.bodystrands.com" },
+      { "@type": "ListItem", position: 2, name: "Shop",  item: "https://www.bodystrands.com/shop" },
+      { "@type": "ListItem", position: 3, name: product.name, item: `https://www.bodystrands.com/shop/${product.id}` },
+    ],
+  };
+
   return (
     <div className="pt-32 md:pt-36 pb-24">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
 
       <div className="max-w-7xl mx-auto px-6 md:px-10">
 

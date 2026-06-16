@@ -163,6 +163,15 @@
           "Lobster Clasp",
           "Pearl Safety Pin"
         ]
+      },
+      {
+        "label": "Size",
+        "type": "options",
+        "options": [
+          "Small (+ 5cm ext)",
+          "Medium (+ 10cm ext)",
+          "Large (+ 15cm ext)"
+        ]
       }
     ],
     "active": true,
@@ -388,6 +397,42 @@
           "1 Zodiac Sign",
           "2 Zodiac Signs"
         ]
+      },
+      {
+        "label": "Horoscope",
+        "type": "options",
+        "options": [
+          "Aquarius",
+          "Pisces",
+          "Aries",
+          "Taurus",
+          "Gemini",
+          "Cancer",
+          "Leo",
+          "Virgo",
+          "Libra",
+          "Scorpio",
+          "Sagittarius",
+          "Capricorn"
+        ]
+      },
+      {
+        "label": "Gemstone",
+        "type": "options",
+        "options": [
+          "January",
+          "February",
+          "March",
+          "April",
+          "May",
+          "June",
+          "July",
+          "August",
+          "September",
+          "October",
+          "November",
+          "December"
+        ]
       }
     ],
     "active": true
@@ -480,6 +525,17 @@
           "Medium (71–91 cm)",
           "Large (71–100 cm)"
         ]
+      },
+      {
+        "label": "Butterfly Color",
+        "type": "options",
+        "options": [
+          "Pink Butterfly",
+          "Blue Butterfly",
+          "White Butterfly",
+          "Purple Butterfly",
+          "Yellow Butterfly"
+        ]
       }
     ],
     "featured": false,
@@ -551,7 +607,47 @@
       "Gold Tone",
       "Silver Tone"
     ],
-    "active": false
+    "active": false,
+    "variantGroups": [
+      {
+        "label": "Birthstone",
+        "type": "options",
+        "options": [
+          "January",
+          "February",
+          "March",
+          "April",
+          "May",
+          "June",
+          "July",
+          "August",
+          "September",
+          "October",
+          "November",
+          "December"
+        ]
+      },
+      {
+        "label": "Size",
+        "type": "options",
+        "options": [
+          "Small (+7cm ext)",
+          "Medium (+14cm ext)",
+          "Large (+23cm ext)"
+        ]
+      },
+      {
+        "label": "Butterfly Color",
+        "type": "options",
+        "options": [
+          "White",
+          "Blue",
+          "Pink",
+          "Purple",
+          "Yellow"
+        ]
+      }
+    ]
   },
   {
     "id": "beaded-bikini-clip-chain",
@@ -917,6 +1013,51 @@
           "Gold Stainless",
           "Silver Stainless"
         ]
+      },
+      {
+        "label": "Choose Your Stack",
+        "type": "options",
+        "options": [
+          "Single Bracelet",
+          "Double Stack (2)",
+          "Triple Stack (3)"
+        ]
+      },
+      {
+        "label": "Design",
+        "type": "options",
+        "options": [
+          "Small 71 cm - 81 cm",
+          "Medium 71 cm - 91 cm",
+          "Large 71 cm - 100 cm"
+        ]
+      },
+      {
+        "label": "Length",
+        "type": "options",
+        "options": [
+          "Small 71 cm - 81 cm",
+          "Medium 71 cm - 91 cm",
+          "Large 71 cm - 100 cm"
+        ]
+      },
+      {
+        "label": "Horoscope",
+        "type": "options",
+        "options": [
+          "Capricorn 12/22-1/19",
+          "Aquarius 1/20-2/18",
+          "Pisces 2/19-3/20",
+          "Aries 3/21-4/19",
+          "Taurus 4/20-5/20",
+          "Gemini 5/21-6/20",
+          "Cancer 6/21-7/22",
+          "Leo 7/23-8/22",
+          "Virgo 8/23-9/22",
+          "Libra 9/23-10/22",
+          "Scorpio 10/23-11/21",
+          "Sagitt. 11/22-12/21"
+        ]
       }
     ],
     "variantVideos": {
@@ -1064,7 +1205,18 @@
     "variantVideos": {
       "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/e70f0cf057a57f76956c21b7c7edc6d2/downloads/default.mp4",
       "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/e70f0cf057a57f76956c21b7c7edc6d2/downloads/default.mp4"
-    }
+    },
+    "variantGroups": [
+      {
+        "label": "Size",
+        "type": "options",
+        "options": [
+          "Small (+7cm ext)",
+          "Medium (+14cm ext)",
+          "Large (+23cm ext)"
+        ]
+      }
+    ]
   },
   {
     "id": "layered-pearl-anklet",
@@ -3336,6 +3488,24 @@
           "Medium (+14cm ext)",
           "Large (+23cm ext)"
         ]
+      },
+      {
+        "label": "Zodiac Sign",
+        "type": "options",
+        "options": [
+          "Aries (3.21-4.19)",
+          "Taurus (4.20-5.20)",
+          "Gemini (5.21-6.20)",
+          "Cancer (6.21-7.22)",
+          "Leo (7.23-8.22)",
+          "Virgo (8.23-9.22)",
+          "Libra (9.23-10.22)",
+          "Scorpio(10.23-11.21)",
+          "Sagit. (11.22-12.21)",
+          "Capricorn 12.22-1.19",
+          "Aquarius (1.20-2.18)",
+          "Pisces (2.19-3.20)"
+        ]
       }
     ],
     "variantVideos": {
@@ -3889,6 +4059,24 @@
     "variantGroups": [
       {
         "label": "Zodiac Sign",
+        "options": [
+          "Aquarius",
+          "Pisces",
+          "Aries",
+          "Taurus",
+          "Gemini",
+          "Cancer",
+          "Leo",
+          "Virgo",
+          "Libra",
+          "Scorpio",
+          "Sagittarius",
+          "Capricorn"
+        ]
+      },
+      {
+        "label": "Horoscope",
+        "type": "options",
         "options": [
           "Aquarius",
           "Pisces",
@@ -5154,6 +5342,17 @@
           "Small (+7cm ext)",
           "Medium (+14cm ext)",
           "Large (+23cm ext)"
+        ]
+      },
+      {
+        "label": "Butterfly Color",
+        "type": "options",
+        "options": [
+          "White",
+          "Blue",
+          "Pink",
+          "Purple",
+          "Yellow"
         ]
       }
     ],

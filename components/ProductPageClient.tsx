@@ -5,6 +5,8 @@ import ProductGallery from "@/components/ProductGallery";
 import BuyButton from "@/components/BuyButton";
 import ProductDetails from "@/components/ProductDetails";
 import type { Product } from "@/lib/products";
+import { getOriginalPrice } from "@/lib/pricing";
+import CountdownTimer from "@/components/CountdownTimer";
 
 const SWATCH_COLORS: Record<string, string> = {
   "Gold Tone": "#C8A84B",
@@ -98,14 +100,25 @@ export default function ProductPageClient({ product }: { product: Product }) {
           {product.name}
         </h1>
 
-        <p className="text-2xl font-light text-[#A0622A] tracking-wide">
-          {symbol}{totalPrice.toFixed(2)}
-          {priceAdd > 0 && (
-            <span className="text-sm text-[#8C7B6E] ml-2 font-light">
-              (+{symbol}{priceAdd.toFixed(2)})
+        <div className="flex flex-col gap-1.5">
+          <div className="flex items-baseline gap-3 flex-wrap">
+            <span className="text-2xl font-light text-[#A0622A] tracking-wide">
+              {symbol}{totalPrice.toFixed(2)}
+              {priceAdd > 0 && (
+                <span className="text-sm text-[#8C7B6E] ml-2 font-light">
+                  (+{symbol}{priceAdd.toFixed(2)})
+                </span>
+              )}
             </span>
-          )}
-        </p>
+            <span className="text-base font-light text-[#8C7B6E]/60 line-through tracking-wide">
+              {symbol}{getOriginalPrice(totalPrice).toFixed(2)}
+            </span>
+            <span className="text-[0.55rem] tracking-[0.18em] uppercase text-[#FDF9F7] bg-[#A0622A] px-2 py-0.5">
+              −25%
+            </span>
+          </div>
+          <CountdownTimer />
+        </div>
 
         <div className="h-px bg-[#E8B4A8]/40" />
 

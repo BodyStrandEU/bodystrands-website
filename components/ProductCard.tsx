@@ -3,6 +3,7 @@ import { useRef, useState, useMemo, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import type { Product } from "@/lib/products";
+import { getOriginalPrice } from "@/lib/pricing";
 
 const SWATCH_COLORS: Record<string, string> = {
   "Gold Tone":   "#C8A84B",
@@ -209,9 +210,14 @@ export default function ProductCard({ product, priority = false }: { product: Pr
         <h3 className="text-[0.65rem] font-light tracking-[0.03em] text-[#2C2220] leading-tight group-hover:text-[#A0622A] transition-colors duration-300 truncate">
           {product.name}
         </h3>
-        <p className="mt-0.5 text-[0.65rem] font-light tracking-wide text-[#2C2220]">
-          {symbol}{product.price.toFixed(2)}
-        </p>
+        <div className="mt-0.5 flex items-baseline gap-1.5 flex-wrap">
+          <span className="text-[0.65rem] font-light tracking-wide text-[#A0622A]">
+            {symbol}{product.price.toFixed(2)}
+          </span>
+          <span className="text-[0.58rem] font-light tracking-wide text-[#8C7B6E]/50 line-through">
+            {symbol}{getOriginalPrice(product.price).toFixed(2)}
+          </span>
+        </div>
         {product.variants && product.variants.length > 1 && (
           <p className="mt-0 text-[0.45rem] tracking-[0.12em] uppercase text-[#8C7B6E]">
             {activeVariant ?? product.variants.join(" · ")}

@@ -525,17 +525,6 @@
           "Medium (71–91 cm)",
           "Large (71–100 cm)"
         ]
-      },
-      {
-        "label": "Butterfly Color",
-        "type": "options",
-        "options": [
-          "Pink Butterfly",
-          "Blue Butterfly",
-          "White Butterfly",
-          "Purple Butterfly",
-          "Yellow Butterfly"
-        ]
       }
     ],
     "featured": false,

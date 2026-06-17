@@ -2,8 +2,10 @@ name: Daily Blog Post Generator
 
 on:
   schedule:
-    - cron: "0 8 * * *"  # 8am UTC every day
-  workflow_dispatch:       # allow manual trigger
+    - cron: "0 7 * * *"   # 7am UTC
+    - cron: "0 12 * * *"  # 12pm UTC
+    - cron: "0 17 * * *"  # 5pm UTC
+  workflow_dispatch:        # allow manual trigger
 
 jobs:
   generate:
@@ -34,5 +36,5 @@ jobs:
           git config user.name "Bodystrands Blog Bot"
           git config user.email "blog-bot@bodystrands.com"
           git add data/blog-posts.json
-          git diff --staged --quiet || git commit -m "Add daily blog post [skip ci]"
+          git diff --staged --quiet || git commit -m "Add blog post [skip ci]"
           git push

@@ -1,5 +1,6 @@
 import { MetadataRoute } from "next";
 import { products } from "@/lib/products";
+import blogPosts from "@/data/blog-posts.json";
 
 const BASE = "https://www.bodystrands.com";
 
@@ -23,5 +24,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly" as const,
     }));
 
-  return [...staticPages, ...productPages];
+  const blogPages: MetadataRoute.Sitemap = blogPosts.map((p) => ({
+    url:             `${BASE}/blog/${p.slug}`,
+    priority:        0.7,
+    changeFrequency: "monthly" as const,
+    lastModified:    new Date(p.date),
+  }));
+
+  return [...staticPages, ...productPages, blogPages[0] ? { url: `${BASE}/blog`, priority: 0.8, changeFrequency: "daily" as const } : null, ...blogPages].filter(Boolean) as MetadataRoute.Sitemap;
 }

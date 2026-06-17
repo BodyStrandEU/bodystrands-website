@@ -35,6 +35,7 @@ export default function Navbar() {
   }, []);
 
   const pages = [
+    { href: "/blog", label: "Journal" },
     { href: "/about", label: "About" },
     { href: "/contact", label: "Contact" },
   ];

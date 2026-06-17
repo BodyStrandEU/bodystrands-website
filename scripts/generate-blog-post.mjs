@@ -129,7 +129,7 @@ Rules:
     }],
   });
 
-  const raw = message.content[0].text.trim();
+  const raw = message.content[0].text.trim().replace(/^```json\s*/i, "").replace(/^```\s*/i, "").replace(/```\s*$/i, "");
   const parsed = JSON.parse(raw);
 
   const today = new Date().toISOString().split("T")[0];

@@ -1,5 +1,55 @@
 [
   {
+    "id": "pink-cross-choker",
+    "name": "Pink Cross Choker Necklace",
+    "price": 30,
+    "currency": "EUR",
+    "category": "Necklaces",
+    "description": "This necklace is for the girl who wants to say something without saying anything. The pink enamel cross sits right at the collarbone on a dainty gold mirror-link chain — sweet, feminine, and a little unexpected.",
+    "fullDescription": "Handmade from 316L stainless steel, it's built to wear every day without fading, tarnishing, or giving you grief. Waterproof and tarnish-resistant — pool days, beach days, everyday days.\n\nThe chain sits close at the collarbone, adjustable to fit most neck sizes. Sweet enough to gift, durable enough to keep.",
+    "specs": [
+      {
+        "label": "Material",
+        "value": "316L stainless steel"
+      },
+      {
+        "label": "Finish",
+        "value": "Gold tone"
+      },
+      {
+        "label": "Pendant",
+        "value": "Pink enamel cross charm"
+      },
+      {
+        "label": "Chain length",
+        "value": "35 cm + 6 cm extender"
+      },
+      {
+        "label": "Waterproof",
+        "value": "Yes"
+      },
+      {
+        "label": "Care",
+        "value": "Wipe with a soft cloth after wear. Store in an airtight container."
+      },
+      {
+        "label": "Shipping",
+        "value": "Dispatches within 1–2 business days"
+      }
+    ],
+    "images": [
+      "/images/products/1c38c724-056b-4eeb-9d8e-69338dee6535.jpeg",
+      "/images/products/842de9ea-3bcf-4c37-b617-a3a9aebf11e8.jpeg",
+      "/images/products/b7c149e1-4751-41da-9494-b0b4cae10a71.png",
+      "/images/products/IMG_1909.jpeg",
+      "/images/products/2394f642-d0d8-4e4e-af9a-96e01db744ae.png",
+      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg",
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png"
+    ],
+    "video": "/images/products/0617.mp4",
+    "featured": false
+  },
+  {
     "id": "goddess-shoulder-chain",
     "name": "Goddess Shoulder Chain",
     "price": 45,

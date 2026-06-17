@@ -51,6 +51,7 @@ export const INFOGRAPHIC_IMAGES = new Set([
   "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",  // Free Tailored Fit
   "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg", // Shipping Fast & Reliable
   "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.jpg",  // Waterproof / Stainless Steel
+  "/images/products/2394f642-d0d8-4e4e-af9a-96e01db744ae.png",  // Pink Cross Choker — Sizing infographic
   // Belly Chain Sizing Guide (one Etsy URL per product, same image)
   "https://i.etsystatic.com/55122258/r/il/a37305/8138540167/il_fullxfull.8138540167_cp1u.jpg",
   "https://i.etsystatic.com/55122258/r/il/15d2b6/8138543253/il_fullxfull.8138543253_p77g.jpg",

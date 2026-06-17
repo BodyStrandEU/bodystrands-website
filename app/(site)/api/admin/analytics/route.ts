@@ -66,15 +66,17 @@ async function fetchGA4(propertyId: string, credJson: string, ga4Start: string) 
   const property   = `properties/${propertyId}`;
   const dateRanges = [{ startDate: ga4Start, endDate: "today" }];
 
-  const [overview, sources, devices, countries, topPages] = await Promise.all([
+  const [overview, sources, devices, countries, topPages, addToCartByProduct] = await Promise.all([
     client.runReport({ property, dateRanges, metrics: [{ name: "sessions" }, { name: "activeUsers" }, { name: "engagementRate" }, { name: "newUsers" }] }),
     client.runReport({ property, dateRanges, dimensions: [{ name: "sessionDefaultChannelGroup" }], metrics: [{ name: "sessions" }], orderBys: [{ metric: { metricName: "sessions" }, desc: true }], limit: "8" }),
     client.runReport({ property, dateRanges, dimensions: [{ name: "deviceCategory" }], metrics: [{ name: "sessions" }] }),
     client.runReport({ property, dateRanges, dimensions: [{ name: "country" }], metrics: [{ name: "sessions" }], orderBys: [{ metric: { metricName: "sessions" }, desc: true }], limit: "8" }),
     client.runReport({ property, dateRanges, dimensions: [{ name: "pagePath" }], metrics: [{ name: "screenPageViews" }], orderBys: [{ metric: { metricName: "screenPageViews" }, desc: true }], limit: "10" }),
+    client.runReport({ property, dateRanges, dimensions: [{ name: "itemName" }], metrics: [{ name: "addToCarts" }], orderBys: [{ metric: { metricName: "addToCarts" }, desc: true }], limit: "10" }),
   ]);
 
   const row0 = overview[0]?.rows?.[0]?.metricValues ?? [];
+  const atcRows = addToCartByProduct[0]?.rows ?? [];
   return {
     sessions:       parseInt(row0[0]?.value ?? "0"),
     users:          parseInt(row0[1]?.value ?? "0"),
@@ -84,6 +86,8 @@ async function fetchGA4(propertyId: string, credJson: string, ga4Start: string) 
     devices:   (devices[0]?.rows  ?? []).map((r) => ({ device:   r.dimensionValues?.[0]?.value ?? "", sessions: parseInt(r.metricValues?.[0]?.value ?? "0") })),
     countries: (countries[0]?.rows ?? []).map((r) => ({ country:  r.dimensionValues?.[0]?.value ?? "", sessions: parseInt(r.metricValues?.[0]?.value ?? "0") })),
     topPages:  (topPages[0]?.rows  ?? []).map((r) => ({ path:     r.dimensionValues?.[0]?.value ?? "", views:    parseInt(r.metricValues?.[0]?.value ?? "0") })),
+    addToCartProducts: atcRows.map((r) => ({ name: r.dimensionValues?.[0]?.value ?? "", count: parseInt(r.metricValues?.[0]?.value ?? "0") })),
+    totalAddToCarts: atcRows.reduce((sum, r) => sum + parseInt(r.metricValues?.[0]?.value ?? "0"), 0),
   };
 }
 

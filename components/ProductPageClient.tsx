@@ -298,6 +298,11 @@ export default function ProductPageClient({ product }: { product: Product }) {
               });
               setAddedMsg(true);
               setTimeout(() => setAddedMsg(false), 2000);
+              if (typeof window !== "undefined") {
+                const w = window as Window & { fbq?: (...a: unknown[]) => void; gtag?: (...a: unknown[]) => void };
+                w.fbq?.("track", "AddToCart", { content_ids: [product.id], content_name: product.name, content_type: "product", value: totalPrice, currency: product.currency });
+                w.gtag?.("event", "add_to_cart", { currency: product.currency, value: totalPrice, items: [{ item_id: product.id, item_name: product.name, item_variant: combinedVariant ?? "", price: totalPrice, quantity: 1 }] });
+              }
             }}
             disabled={!allGroupsSelected}
             title={!allGroupsSelected ? "Please complete all options above" : undefined}

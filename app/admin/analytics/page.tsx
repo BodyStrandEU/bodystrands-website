@@ -34,6 +34,8 @@ type GA4Data = {
   devices:   { device: string; sessions: number }[];
   countries: { country: string; sessions: number }[];
   topPages:  { path: string; views: number }[];
+  addToCartProducts: { name: string; count: number }[];
+  totalAddToCarts: number;
 };
 
 type AnalyticsData = {
@@ -372,6 +374,31 @@ export default function AnalyticsPage() {
                     ))}
                   </div>
                 </div>
+              </div>
+            )}
+
+            {/* ── Add to Cart ── */}
+            {data.ga4 && (
+              <div style={{ ...sec, marginBottom: "1.25rem" }}>
+                <div style={sh}>
+                  <span>Add to Cart</span>
+                  <span>{data.ga4.totalAddToCarts} total in {data.periodLabel}</span>
+                </div>
+                {data.ga4.addToCartProducts.length === 0 ? (
+                  <p style={{ padding: "1rem 1.25rem", fontSize: "0.75rem", color: "var(--admin-text-muted)" }}>No add-to-cart events yet. Data will appear after customers start adding products.</p>
+                ) : (
+                  <div style={{ padding: "0.75rem 1.25rem", display: "flex", flexDirection: "column", gap: "0.8rem" }}>
+                    {data.ga4.addToCartProducts.map((p) => (
+                      <div key={p.name}>
+                        <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 4 }}>
+                          <span style={{ fontSize: "0.72rem", color: "var(--admin-text)" }}>{p.name}</span>
+                          <span style={{ fontSize: "0.72rem", color: "#A0622A", fontWeight: "bold" }}>{p.count}×</span>
+                        </div>
+                        <MiniBar value={p.count} max={data.ga4!.addToCartProducts[0]?.count ?? 1} color="#E8B4A8" />
+                      </div>
+                    ))}
+                  </div>
+                )}
               </div>
             )}
 

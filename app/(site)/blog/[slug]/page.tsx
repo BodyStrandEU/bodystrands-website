@@ -58,11 +58,11 @@ export default async function BlogPostPage({ params }: Props) {
 
       {/* Post body */}
       <div className="max-w-3xl mx-auto px-6 md:px-10 mb-16">
-        <div className="flex flex-col gap-6">
+        <div className="flex flex-col gap-6 blog-content">
           {post.content.map((paragraph, i) => (
-            <p key={i} className="text-sm font-light leading-loose tracking-wide text-[#2C2220]/80">
-              {paragraph}
-            </p>
+            <p key={i} className="text-sm font-light leading-loose tracking-wide text-[#2C2220]/80"
+              dangerouslySetInnerHTML={{ __html: paragraph }}
+            />
           ))}
         </div>
 

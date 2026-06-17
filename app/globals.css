@@ -143,3 +143,14 @@ h1, h2, h3, h4 {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* Blog post inline product links */
+.blog-content a {
+  color: #A0622A;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: opacity 0.15s ease;
+}
+.blog-content a:hover {
+  opacity: 0.7;
+}

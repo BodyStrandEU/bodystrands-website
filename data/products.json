@@ -95,36 +95,35 @@
       "/images/products/95cbb0fb-269c-42ea-bf41-10af0d40f06f.jpeg"
     ],
     "variantImages": {
-      "Gold Tone": [
-        "/images/products/435b9a3b-10b1-4b5d-a535-a4f3786d8057.jpeg",
-        "/images/products/goddess-shoulder-chain-gold-2.jpg",
-        "/images/products/goddess-shoulder-chain-gold-1.jpg",
-        "/images/products/goddess-shoulder-chain-both-2.jpg",
-        "/images/products/goddess-shoulder-chain-both-3.jpg",
-        "/images/products/goddess-shoulder-chain-gold-3.png",
-        "/images/products/goddess-shoulder-chain-both-4.png",
-        "/images/products/goddess-shoulder-chain-both-5.png",
-        "/images/products/goddess-shoulder-chain-both-1.jpg"
-      ],
       "Silver Tone": [
         "/images/products/goddess-shoulder-chain-main.png",
-        "/images/products/goddess-shoulder-chain-silver-2.jpg",
-        "/images/products/goddess-shoulder-chain-silver-3.jpg",
-        "/images/products/goddess-shoulder-chain-both-2.jpg",
-        "/images/products/goddess-shoulder-chain-both-3.jpg",
+        "/images/products/024eee9a-d4b6-4f63-980b-5cecf487705f.png",
+        "/images/products/74457a6f-013f-46bf-a8a1-fa04c63960a9.png",
         "/images/products/goddess-shoulder-chain-both-5.png",
         "/images/products/goddess-shoulder-chain-both-4.png",
+        "/images/products/goddess-shoulder-chain-both-3.jpg",
+        "/images/products/goddess-shoulder-chain-both-2.jpg",
+        "/images/products/goddess-shoulder-chain-both-1.jpg"
+      ],
+      "Gold Tone": [
+        "/images/products/435b9a3b-10b1-4b5d-a535-a4f3786d8057.jpeg",
+        "/images/products/831cc6e5-c83c-435b-afe9-5b28a9d1025e.png",
+        "/images/products/4a3d4343-1df8-4748-9a6e-289541a9de5c.png",
+        "/images/products/goddess-shoulder-chain-both-5.png",
+        "/images/products/goddess-shoulder-chain-both-4.png",
+        "/images/products/goddess-shoulder-chain-both-3.jpg",
+        "/images/products/goddess-shoulder-chain-both-2.jpg",
         "/images/products/goddess-shoulder-chain-both-1.jpg"
       ]
     },
     "variantVideos": {
-      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/a60ff139fe09398b9f4e48d687db28a8/downloads/default.mp4",
-      "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/992bfe17680bc4fbd83158154a7b1345/downloads/default.mp4"
+      "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/992bfe17680bc4fbd83158154a7b1345/downloads/default.mp4",
+      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/a60ff139fe09398b9f4e48d687db28a8/downloads/default.mp4"
     },
     "featured": true,
     "variants": [
-      "Gold Tone",
-      "Silver Tone"
+      "Silver Tone",
+      "Gold Tone"
     ],
     "active": true
   },

@@ -3563,7 +3563,7 @@
     "currency": "EUR",
     "category": "Back Chains",
     "description": "Your festival or wedding back statement. This boho back necklace drapes elegantly down the spine — a versatile piece that works at beach weddings, bohemian ceremonies, and every summer occasion in between.",
-    "fullDescription": "A delicate chain clips at the neckline and sweeps down the open back in a clean, elegant arc. Equally at home at a boho beach wedding as it is at a festival or summer party.\n\nHandcrafted in stainless steel. Adjustable length — message us after ordering with your back measurement and we'll resize at no extra cost.",
+    "fullDescription": "A delicate chain slips on the neckline and sweeps down the open back in a clean, elegant arc. Equally at home at a boho beach wedding as it is at a festival or summer party.\n\nHandcrafted in stainless steel. Adjustable length — You can message us after ordering with your back measurement for a more tailored fit!",
     "specs": [
       {
         "label": "Material",
@@ -3588,6 +3588,10 @@
       {
         "label": "Shipping",
         "value": "Dispatches within 1–2 business days"
+      },
+      {
+        "label": "Size",
+        "value": "Neck Measurement: 64 cm easy slip-on loop (no clasp required). Waist/Hip Fit: Adjustable from 79 cm to 102 cm Select Small (+7 cm), Medium (+14 cm), or Large (+23 cm) extension."
       }
     ],
     "featured": false,
@@ -3601,17 +3605,20 @@
     ],
     "variantImages": {
       "Gold Tone": [
-        "https://i.etsystatic.com/55122258/r/il/4a2c04/7852799106/il_fullxfull.7852799106_s51c.jpg",
         "https://i.etsystatic.com/55122258/r/il/b4b794/8099319218/il_fullxfull.8099319218_oykq.jpg",
+        "https://i.etsystatic.com/55122258/r/il/4a2c04/7852799106/il_fullxfull.7852799106_s51c.jpg",
         "https://i.etsystatic.com/55122258/r/il/841bda/8099273848/il_fullxfull.8099273848_t15b.jpg",
         "https://i.etsystatic.com/55122258/r/il/e7b8c3/8099273566/il_fullxfull.8099273566_uybm.jpg",
         "https://i.etsystatic.com/55122258/r/il/88ca45/7769131538/il_fullxfull.7769131538_9erk.jpg",
         "https://i.etsystatic.com/55122258/r/il/99f6c0/8147196789/il_fullxfull.8147196789_eg1l.jpg"
       ],
       "Silver Tone": [
-        "https://i.etsystatic.com/55122258/r/il/b95369/7843051781/il_fullxfull.7843051781_fmbm.jpg",
+        "/images/products/0a1b254c-5813-4737-8064-a672c92d0e4a.png",
         "https://i.etsystatic.com/55122258/r/il/7487f5/7971888395/il_fullxfull.7971888395_agfr.jpg",
-        "https://i.etsystatic.com/55122258/r/il/88ca45/7769131538/il_fullxfull.7769131538_9erk.jpg",
+        "/images/products/80f1d4cb-6a71-4e55-bd7e-923c2435be62.png",
+        "/images/products/90530ab8-ae9b-4ead-9785-9b1690eb1d19.png",
+        "/images/products/69a2a632-913d-42ed-9de2-1646f4a302c9.png",
+        "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
         "https://i.etsystatic.com/55122258/r/il/99f6c0/8147196789/il_fullxfull.8147196789_eg1l.jpg"
       ]
     },

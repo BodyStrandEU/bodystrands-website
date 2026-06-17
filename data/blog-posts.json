@@ -22,7 +22,13 @@
       "bridesmaids",
       "body jewelry"
     ],
-    "readTime": "3 min read"
+    "readTime": "3 min read",
+    "featuredProducts": [
+      {"id":"bridal-forehead-chain","name":"Bridal Forehead Chain","price":"€40","image":"https://i.etsystatic.com/55122258/r/il/3e1b20/7904377486/il_fullxfull.7904377486_3jjc.jpg","url":"/shop/bridal-forehead-chain"},
+      {"id":"bridal-hair-vine-chain","name":"Bridal Hair Vine Chain","price":"€45","image":"https://i.etsystatic.com/55122258/r/il/0c939a/7906758661/il_fullxfull.7906758661_tvgc.jpg","url":"/shop/bridal-hair-vine-chain"},
+      {"id":"boho-forehead-chain","name":"Boho Forehead Chain","price":"€30","image":"https://i.etsystatic.com/55122258/r/il/a79035/7808044518/il_fullxfull.7808044518_ll38.jpg","url":"/shop/boho-forehead-chain"},
+      {"id":"boho-hair-chain","name":"Boho Hair Chain","price":"€35","image":"https://i.etsystatic.com/55122258/r/il/e3caa7/7904567178/il_fullxfull.7904567178_dqhq.jpg","url":"/shop/boho-hair-chain"}
+    ]
   },
   {
     "slug": "how-to-style-body-chains-with-backless-dresses",
@@ -47,7 +53,12 @@
       "chain styling",
       "body jewelry"
     ],
-    "readTime": "2 min read"
+    "readTime": "2 min read",
+    "featuredProducts": [
+      {"id":"boho-back-chain","name":"Boho Back Chain","price":"€45","image":"https://i.etsystatic.com/55122258/r/il/4a2c04/7852799106/il_fullxfull.7852799106_s51c.jpg","url":"/shop/boho-back-chain"},
+      {"id":"pearl-backdrop-necklace","name":"Pearl Backdrop Necklace","price":"€30","image":"https://i.etsystatic.com/55122258/r/il/be66c8/7684059066/il_fullxfull.7684059066_tbvi.jpg","url":"/shop/pearl-backdrop-necklace"},
+      {"id":"dainty-backdrop-back-necklace","name":"Dainty Backdrop Back Necklace","price":"€40","image":"https://i.etsystatic.com/55122258/r/il/9f6ee4/7867616755/il_fullxfull.7867616755_78bt.jpg","url":"/shop/dainty-backdrop-back-necklace"}
+    ]
   },
   {
     "slug": "how-to-style-a-back-chain",
@@ -72,7 +83,12 @@
       "body jewelry",
       "summer"
     ],
-    "readTime": "3 min read"
+    "readTime": "3 min read",
+    "featuredProducts": [
+      {"id":"boho-back-chain","name":"Boho Back Chain","price":"€45","image":"https://i.etsystatic.com/55122258/r/il/4a2c04/7852799106/il_fullxfull.7852799106_s51c.jpg","url":"/shop/boho-back-chain"},
+      {"id":"pearl-backdrop-necklace","name":"Pearl Backdrop Necklace","price":"€30","image":"https://i.etsystatic.com/55122258/r/il/be66c8/7684059066/il_fullxfull.7684059066_tbvi.jpg","url":"/shop/pearl-backdrop-necklace"},
+      {"id":"dainty-backdrop-back-necklace","name":"Dainty Backdrop Back Necklace","price":"€40","image":"https://i.etsystatic.com/55122258/r/il/9f6ee4/7867616755/il_fullxfull.7867616755_78bt.jpg","url":"/shop/dainty-backdrop-back-necklace"}
+    ]
   },
   {
     "slug": "waterproof-jewelry-myth",
@@ -97,6 +113,11 @@
       "316L",
       "quality"
     ],
-    "readTime": "4 min read"
+    "readTime": "4 min read",
+    "featuredProducts": [
+      {"id":"snake-belly-chain","name":"Snake Belly Chain","price":"€20","image":"/images/products/c57a1652-13f0-4ad3-afe7-f24c470e85db-2.png","url":"/shop/snake-belly-chain"},
+      {"id":"cowrie-shell-anklet","name":"Cowrie Shell Anklet","price":"€30","image":"https://i.etsystatic.com/55122258/r/il/078f76/7734949271/il_fullxfull.7734949271_8z98.jpg","url":"/shop/cowrie-shell-anklet"},
+      {"id":"boho-back-chain","name":"Boho Back Chain","price":"€45","image":"https://i.etsystatic.com/55122258/r/il/4a2c04/7852799106/il_fullxfull.7852799106_s51c.jpg","url":"/shop/boho-back-chain"}
+    ]
   }
 ]

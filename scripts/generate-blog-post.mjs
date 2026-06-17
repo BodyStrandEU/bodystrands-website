@@ -88,9 +88,11 @@ function getRelevantProducts(topic, allProducts) {
   const shuffled = pool.sort(() => Math.random() - 0.5).slice(0, 4);
   return shuffled.map((p) => ({
     name: p.name,
+    id: p.id,
     url: `/shop/${p.id}`,
     price: `€${p.price}`,
     category: p.category,
+    image: p.images?.[0] ?? null,
   }));
 }
 
@@ -200,6 +202,13 @@ Rules:
     category,
     tags:     parsed.tags,
     readTime: `${Math.max(2, Math.ceil(parsed.content.join(" ").split(" ").length / 200))} min read`,
+    featuredProducts: relevantProducts.map((p) => ({
+      id:    p.id,
+      name:  p.name,
+      price: p.price,
+      image: p.image,
+      url:   p.url,
+    })),
   };
 
   posts.unshift(newPost);

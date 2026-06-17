@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import blogPosts from "@/data/blog-posts.json";
 import type { Metadata } from "next";
 
@@ -75,6 +76,38 @@ export default async function BlogPostPage({ params }: Props) {
           ))}
         </div>
       </div>
+
+      {/* Shop This Post */}
+      {"featuredProducts" in post && Array.isArray((post as {featuredProducts?: unknown[]}).featuredProducts) && (post as {featuredProducts: {id: string; name: string; price: string; image: string; url: string}[]}).featuredProducts.length > 0 && (
+        <div className="max-w-7xl mx-auto px-6 md:px-10 mb-20">
+          <div className="flex items-center gap-6 mb-10">
+            <div className="flex-1 h-px bg-[#E8B4A8]/30" />
+            <p className="text-[0.6rem] tracking-[0.35em] uppercase text-[#A0622A] whitespace-nowrap">Shop This Post</p>
+            <div className="flex-1 h-px bg-[#E8B4A8]/30" />
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {(post as {featuredProducts: {id: string; name: string; price: string; image: string; url: string}[]}).featuredProducts.map((product) => (
+              <Link key={product.id} href={product.url} className="group flex flex-col gap-3">
+                <div className="relative aspect-square overflow-hidden bg-[#F5EFE9]">
+                  {product.image && (
+                    <Image
+                      src={product.image}
+                      alt={product.name}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      sizes="(max-width: 768px) 50vw, 25vw"
+                    />
+                  )}
+                </div>
+                <div className="flex flex-col gap-1">
+                  <p className="text-[0.65rem] font-light tracking-wide text-[#2C2220] group-hover:text-[#A0622A] transition-colors leading-snug">{product.name}</p>
+                  <p className="text-[0.6rem] tracking-[0.1em] text-[#A0622A]">{product.price}</p>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      )}
 
       {/* CTA */}
       <div className="bg-[#2C2220] py-16 md:py-20 mb-20">

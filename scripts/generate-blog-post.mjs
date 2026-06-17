@@ -84,15 +84,18 @@ async function main() {
     max_tokens: 1500,
     messages: [{
       role: "user",
-      content: `You are writing a blog post for Bodystrands, a handmade body jewelry brand based in Portugal.
+      content: `You are writing a blog post for Bodystrands EU — a small, couple-run handmade body jewelry brand based in Portugal, run by El & Gio.
 
-Brand voice: warm, confident, editorial — like a knowledgeable friend who happens to have great taste. Not salesy. Not generic. Feels personal and real.
+The brand story: El and Gio are a couple who fell in love with the original Canadian Bodystrands brand and brought it to Europe. Every single piece is handmade by the two of them in their Portuguese studio — no factories, no middlemen. They pour their care into every strand.
 
-Brand details:
-- Jewelry is handmade from 316L stainless steel (waterproof, tarnish-resistant)
-- Categories: belly chains, back chains, body chains, shoulder chains, anklets, bracelets, necklaces, hand chains, head chains, eyeglasses chains, bikini clip chains
-- Made by El & Gio in Portugal
-- Ships across Europe
+Products: belly chains, back chains, body chains, shoulder chains, anklets, bracelets, necklaces, hand chains, head chains, eyeglasses chains, bikini clip chains. All made from 316L stainless steel — waterproof, tarnish-resistant, built for everyday wear. Prices range from €17.50 to €55, average around €36.
+
+Brand voice:
+- Warm, real, and direct — like a close friend who genuinely knows jewelry
+- Speaks TO the reader, not at them — always "you", never preaching
+- Confident but never arrogant
+- Human first — this is a real couple making things by hand, not a corporation
+- Short sentences. No fluff. No filler.
 
 Write a blog post about: "${topic}"
 Category: ${category}
@@ -117,9 +120,11 @@ Return ONLY valid JSON in this exact format (no markdown, no code blocks, just r
 Rules:
 - 8 paragraphs, each 2-4 sentences
 - No markdown in content (no bold, no bullet points, no headers)
+- Never use AI jargon or corporate language (no "elevate", "curated", "testament to", "journey", "delve", "game-changer", "transformative")
 - Don't start with "I" or the brand name
-- Don't be salesy — inform and inspire first
-- Naturally mention Bodystrands products where relevant but don't force it
+- Focus on the reader and what's useful or real to them — not on selling
+- Mention Bodystrands naturally only when it genuinely fits, never forced
+- Write like a human, not a content machine
 - Tags should be lowercase, relevant search terms`,
     }],
   });

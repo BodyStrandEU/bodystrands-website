@@ -42,6 +42,7 @@ export type Product = {
   variants?: string[];
   variantGroups?: VariantGroup[];
   active?: boolean;
+  altText?: string;
   infographicImages?: string[];
 };
 

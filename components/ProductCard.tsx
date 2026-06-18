@@ -144,7 +144,7 @@ export default function ProductCard({ product, priority = false }: { product: Pr
           <Image
             key={src + i}
             src={src}
-            alt={product.name}
+            alt={product.altText || product.name}
             fill
             sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
             priority={priority && i === 0}

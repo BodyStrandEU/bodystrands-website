@@ -124,7 +124,7 @@ export default function ProductGallery({
             <Image
               key={item.src}
               src={item.src}
-              alt={`${product.name}${activeVariant ? ` — ${activeVariant}` : ""}`}
+              alt={product.altText || `${product.name}${activeVariant ? ` — ${activeVariant}` : ""}`}
               fill
               sizes="(max-width: 768px) 100vw, 50vw"
               className={`object-contain transition-opacity duration-300 ${

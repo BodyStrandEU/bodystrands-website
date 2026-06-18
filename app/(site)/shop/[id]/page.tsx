@@ -4,6 +4,20 @@ import { notFound } from "next/navigation";
 import ProductPageClient from "@/components/ProductPageClient";
 import YouMayAlsoLike from "@/components/YouMayAlsoLike";
 
+const CATEGORY_SUFFIX: Record<string, string> = {
+  "Belly Chains":       "Handmade Belly Chain Waist Jewelry",
+  "Back Chains":        "Back Chain for Backless Dresses",
+  "Body Chains":        "Handmade Body Chain Jewelry",
+  "Shoulder Chains":    "Bridal Shoulder Body Jewelry",
+  "Anklets":            "Handmade Ankle Bracelet",
+  "Bracelets":          "Handmade Stainless Steel Bracelet",
+  "Necklaces":          "Handmade Chain Necklace",
+  "Hand Chains":        "Boho Hand Chain Jewelry",
+  "Head Chains":        "Bridal Hair Chain Headpiece",
+  "Eyeglasses Chains":  "Stylish Eyeglasses Chain",
+  "Bikini Clip Chains": "Beach Bikini Body Jewelry",
+};
+
 export async function generateStaticParams() {
   return products.map((p) => ({ id: p.id }));
 }
@@ -22,22 +36,26 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
   const url = `https://www.bodystrands.com/shop/${product.id}`;
   const symbol = product.currency === "EUR" ? "€" : product.currency === "GBP" ? "£" : "$";
   const priceLabel = `${symbol}${product.price.toFixed(2)}`;
+  const suffix = CATEGORY_SUFFIX[product.category] ?? "Handmade Body Jewelry";
+  const metaDescription = product.altText
+    ? `${product.altText}. Handmade in Portugal from waterproof stainless steel. ${priceLabel}.`
+    : product.description;
 
   return {
-    title: `${product.name} — Bodystrands`,
-    description: product.description,
+    title: `${product.name} | ${suffix} | Bodystrands`,
+    description: metaDescription,
     openGraph: {
-      title: `${product.name} — ${priceLabel}`,
-      description: product.description,
+      title: `${product.name} | ${suffix} — ${priceLabel}`,
+      description: metaDescription,
       url,
       type:     "website",
       siteName: "Bodystrands",
-      images: [{ url: firstImage, width: 1200, height: 1200, alt: product.name }],
+      images: [{ url: firstImage, width: 1200, height: 1200, alt: product.altText ?? product.name }],
     },
     twitter: {
       card:        "summary_large_image",
-      title:       `${product.name} — ${priceLabel}`,
-      description: product.description,
+      title:       `${product.name} | ${suffix} — ${priceLabel}`,
+      description: metaDescription,
       images:      [firstImage],
     },
   };

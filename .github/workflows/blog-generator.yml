@@ -34,7 +34,7 @@ jobs:
       - name: Commit and push
         run: |
           git config user.name "Bodystrands Blog Bot"
-          git config user.email "blog-bot@bodystrands.com"
+          git config user.email "storenavaria@gmail.com"
           git add data/blog-posts.json
           git diff --staged --quiet || git commit -m "Add blog post [skip ci]"
           git push

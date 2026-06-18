@@ -8275,8 +8275,21 @@
       },
       {
         "label": "Birth Month",
-        "type": "text",
-        "placeholder": "Enter your birth month (e.g. March)"
+        "type": "options",
+        "options": [
+          "January — Carnation",
+          "February — Violet",
+          "March — Daffodil",
+          "April — Daisy",
+          "May — Lily of the Valley",
+          "June — Rose",
+          "July — Water Lily",
+          "August — Poppy",
+          "September — Aster",
+          "October — Marigold",
+          "November — Chrysanthemum",
+          "December — Holly"
+        ]
       }
     ],
     "active": true,

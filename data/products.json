@@ -8191,5 +8191,99 @@
     ],
     "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/f35387e600366ebad4bee78cda9e9846/downloads/default.mp4",
     "altText": "Layered turquoise bead bracelet in stainless steel, delicate double-strand design for everyday wear"
+  },
+  {
+    "id": "birth-flower-charm-bracelet",
+    "name": "Birth Flower Charm Bracelet",
+    "price": 32.5,
+    "currency": "EUR",
+    "category": "Bracelets",
+    "description": "Your birth flower, always with you. A dainty bracelet featuring a delicate flower charm that matches your birth month — handcrafted in tarnish-resistant stainless steel, available in gold or silver.",
+    "fullDescription": "Choose your birth month and receive a bracelet with its corresponding flower charm — from January's Carnation to December's Holly. Each charm is beautifully detailed, sitting on a dainty chain that rests close to the wrist.\n\nPersonalised, wearable, and completely tarnish-resistant. Made from 316L stainless steel so it can be worn every day — through swimming, showering, and everything in between. A thoughtful gift or a quiet reminder of who you are.\n\nComes with a 5 cm extender for a perfect fit across all wrist sizes.",
+    "specs": [
+      {
+        "label": "Material",
+        "value": "316L stainless steel (tarnish-resistant)"
+      },
+      {
+        "label": "Finishes",
+        "value": "Gold Tone or Silver Tone"
+      },
+      {
+        "label": "Charm",
+        "value": "Birth flower — 12 months, 12 flowers"
+      },
+      {
+        "label": "Length",
+        "value": "14–23 cm + 5 cm extender"
+      },
+      {
+        "label": "Fit",
+        "value": "Adjustable — fits most wrist sizes, extender included"
+      },
+      {
+        "label": "Shipping",
+        "value": "Dispatches within 1–2 business days"
+      }
+    ],
+    "images": [
+      "/images/products/birth-flower-charm-bracelet/e0e3896f-5197-4d94-974f-7b14ee305954.png"
+    ],
+    "variantImages": {
+      "Gold Tone": [
+        "/images/products/birth-flower-charm-bracelet/e0e3896f-5197-4d94-974f-7b14ee305954.png",
+        "/images/products/birth-flower-charm-bracelet/25fe1c2f-6f88-4116-9922-23f730900978.png",
+        "/images/products/birth-flower-charm-bracelet/92022e6a-2968-4014-a577-94b76e8bdba8.png",
+        "/images/products/birth-flower-charm-bracelet/1f6f7c1d-1825-4cbe-93f8-4dd53e61cd63.png",
+        "/images/products/birth-flower-charm-bracelet/22f3e739-d337-4777-a775-58d9ad12ee1c.png",
+        "/images/products/birth-flower-charm-bracelet/035ca701-d84a-49fd-8b8d-196dd1903eb0.png",
+        "/images/products/birth-flower-charm-bracelet/f6314926-4454-4b6d-947b-0b5470742a2e.png",
+        "/images/products/birth-flower-charm-bracelet/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
+        "/images/products/birth-flower-charm-bracelet/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg"
+      ],
+      "Silver Tone": [
+        "/images/products/birth-flower-charm-bracelet/4746a3fe-b2a1-4cef-86cc-181e6f1a189a.png",
+        "/images/products/birth-flower-charm-bracelet/0.jpeg",
+        "/images/products/birth-flower-charm-bracelet/035ca701-d84a-49fd-8b8d-196dd1903eb0.png",
+        "/images/products/birth-flower-charm-bracelet/f6314926-4454-4b6d-947b-0b5470742a2e.png",
+        "/images/products/birth-flower-charm-bracelet/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
+        "/images/products/birth-flower-charm-bracelet/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg"
+      ]
+    },
+    "video": "/images/products/birth-flower-charm-bracelet/0618.mp4",
+    "featured": false,
+    "variants": [
+      "Gold Tone",
+      "Silver Tone"
+    ],
+    "variantGroups": [
+      {
+        "label": "Size",
+        "type": "options",
+        "options": [
+          "14 cm",
+          "15 cm",
+          "16 cm",
+          "17 cm",
+          "18 cm",
+          "19 cm",
+          "20 cm",
+          "21 cm",
+          "22 cm",
+          "23 cm"
+        ]
+      },
+      {
+        "label": "Birth Month",
+        "type": "text",
+        "placeholder": "Enter your birth month (e.g. March)"
+      }
+    ],
+    "active": true,
+    "infographicImages": [
+      "/images/products/birth-flower-charm-bracelet/035ca701-d84a-49fd-8b8d-196dd1903eb0.png",
+      "/images/products/birth-flower-charm-bracelet/f6314926-4454-4b6d-947b-0b5470742a2e.png"
+    ],
+    "altText": "Gold tone dainty charm bracelet with birth flower pendant, handcrafted 316L stainless steel jewelry for women"
   }
 ]

@@ -159,3 +159,34 @@ Belly Chains, Back Chains, Body Chains, Shoulder Chains, Anklets, Bracelets, Nec
 - TypeScript strict
 - Deployed on Vercel via GitHub (BodyStrandEU/bodystrands-website)
 - Stripe checkout in `/api/checkout` — secret key in `.env.local` only, never commit
+
+## New Product Listing Checklist (MANDATORY — do this every time)
+
+When adding any new product, always do the following WITHOUT being asked:
+
+### 1. Generate Alt Text — ONLY manual SEO step
+After adding product to `data/products.json`, run:
+```
+ANTHROPIC_API_KEY=<key> node scripts/generate-alt-text.mjs
+```
+This writes a long-tail SEO `altText` field to every product in products.json.
+The Anthropic API key is NOT in .env.local — ask the user to paste it (or create a new key at console.anthropic.com). Model: claude-haiku-4-5-20251001.
+
+### 2–6. Everything else is AUTOMATIC
+- **SEO title**: `CATEGORY_SUFFIX` map in `app/(site)/shop/[id]/page.tsx` — format: `Name | Category Suffix | Bodystrands`
+- **Meta description**: uses `product.altText` automatically in `generateMetadata`
+- **Sitemap**: `app/sitemap.ts` reads `data/products.json` automatically
+- **Blog links**: `scripts/generate-blog-post.mjs` reads `data/products.json` on every run
+- **Category metadata**: `CATEGORY_META` in `app/(site)/shop/page.tsx` covers all 11 categories
+
+## SEO Infrastructure (set up June 2026)
+- Google Search Console: verified, sitemap submitted (113+ pages indexed)
+- Bing Webmaster Tools: set up via GSC import
+- Blog auto-generation: 3x/day via cron-job.org → GitHub Actions (workflow ID: 297904761)
+  - Trigger times: 7:00, 12:00, 17:00 UTC (8am, 1pm, 6pm Portugal)
+  - cron-job.org job IDs: 7854981 (7am), 7854984 (12pm), 7854985 (5pm)
+- All 111 products have long-tail `altText` for Google Images SEO
+- All 11 category pages have unique meta titles/descriptions
+- All product pages have keyword-rich titles via CATEGORY_SUFFIX mapping
+- Blog posts auto-link to products + category pages for internal linking
+- `unoptimized: true` in next.config.ts is a TEMPORARY fix for Vercel free tier image quota — revert when upgrading to Vercel Pro

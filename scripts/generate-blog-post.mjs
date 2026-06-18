@@ -96,6 +96,25 @@ function getRelevantProducts(topic, allProducts) {
   }));
 }
 
+function getRelevantCategories(topic) {
+  const topicLower = topic.toLowerCase();
+  const matched = [];
+
+  for (const [cat, keywords] of Object.entries(CATEGORY_KEYWORDS)) {
+    if (keywords.some((kw) => topicLower.includes(kw))) {
+      const encoded = encodeURIComponent(cat);
+      matched.push({ name: cat, url: `/shop?category=${encoded}` });
+    }
+  }
+
+  // Always include the main shop as a fallback
+  if (matched.length === 0) {
+    matched.push({ name: "Body Jewelry", url: "/shop" });
+  }
+
+  return matched.slice(0, 3);
+}
+
 function pickTopic(existingPosts) {
   const existingTitles = existingPosts.map((p) => p.title.toLowerCase());
   const allTopics = TOPIC_POOLS.flatMap((pool) =>
@@ -124,12 +143,18 @@ async function main() {
 
   const { topic, category } = pickTopic(posts);
   const relevantProducts    = getRelevantProducts(topic, products);
+  const relevantCategories  = getRelevantCategories(topic);
 
   console.log(`Generating post about: "${topic}" (${category})`);
   console.log(`Linking products: ${relevantProducts.map((p) => p.name).join(", ")}`);
+  console.log(`Linking categories: ${relevantCategories.map((c) => c.name).join(", ")}`);
 
   const productContext = relevantProducts.length > 0
     ? `\nReal products from the Bodystrands shop you can link to naturally in the content:\n${relevantProducts.map((p) => `- "${p.name}" (${p.price}) → <a href="${p.url}">${p.name}</a>`).join("\n")}\n`
+    : "";
+
+  const categoryContext = relevantCategories.length > 0
+    ? `\nCategory pages you can link to when mentioning a collection broadly (use 1-2 times max):\n${relevantCategories.map((c) => `- ${c.name} collection → <a href="${c.url}">shop all ${c.name.toLowerCase()}</a>`).join("\n")}\n`
     : "";
 
   const message = await client.messages.create({
@@ -142,7 +167,7 @@ async function main() {
 The brand story: El and Gio are a couple who fell in love with the original Canadian Bodystrands brand and brought it to Europe. Every single piece is handmade by the two of them in their Portuguese studio — no factories, no middlemen. They pour their care into every strand.
 
 Products: belly chains, back chains, body chains, shoulder chains, anklets, bracelets, necklaces, hand chains, head chains, eyeglasses chains, bikini clip chains. All made from 316L stainless steel — waterproof, tarnish-resistant, built for everyday wear. Prices range from €17.50 to €55.
-${productContext}
+${productContext}${categoryContext}
 Brand voice:
 - Warm, real, and direct — like a close friend who genuinely knows jewelry
 - Speaks TO the reader, not at them — always "you", never preaching
@@ -172,7 +197,7 @@ Return ONLY valid JSON in this exact format (no markdown, no code blocks, just r
 
 Rules:
 - 8 paragraphs, each 2-4 sentences
-- Paragraphs may contain HTML anchor tags — use them naturally to link to 1-2 real products above where they fit in context. Don't force it. Example: "The <a href="/shop/gold-shoulder-chain">Gold Shoulder Chain</a> is one of our most-worn pieces for exactly this reason."
+- Paragraphs may contain HTML anchor tags — use them naturally to link to 1-2 real products AND 1-2 category pages where they fit in context. Don't force it. Example: "The <a href="/shop/goddess-shoulder-chain">Goddess Shoulder Chain</a> is one of our most-worn pieces for exactly this reason." or "Browse our full <a href="/shop?category=Shoulder%20Chains">shoulder chains collection</a> to find your fit."
 - No other HTML or markdown — only <a href="..."> tags are allowed
 - Never use AI jargon or corporate language (no "elevate", "curated", "testament to", "journey", "delve", "game-changer", "transformative")
 - Don't start with "I" or the brand name

@@ -1,7 +1,7 @@
 "use client";
 import { useRef, useState, useMemo, useEffect } from "react";
 import { useRouter } from "next/navigation";
-import Image from "next/image";
+import Image from "@/components/SmartImage";
 import type { Product } from "@/lib/products";
 import { INFOGRAPHIC_IMAGES } from "@/lib/products";
 import { getOriginalPrice } from "@/lib/pricing";

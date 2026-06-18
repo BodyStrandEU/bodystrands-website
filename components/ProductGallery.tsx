@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
-import Image from "next/image";
+import Image from "@/components/SmartImage";
 import type { Product } from "@/lib/products";
 import { getVideoSources } from "@/lib/videoUtils";
 

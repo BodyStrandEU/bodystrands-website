@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import Image from "next/image";
+import Image from "@/components/SmartImage";
 import blogPosts from "@/data/blog-posts.json";
 import type { Metadata } from "next";
 

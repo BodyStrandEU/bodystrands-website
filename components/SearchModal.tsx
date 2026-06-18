@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect, useRef, useCallback } from "react";
 import { useRouter } from "next/navigation";
-import Image from "next/image";
+import Image from "@/components/SmartImage";
 import { products } from "@/lib/products";
 import type { Product } from "@/lib/products";
 

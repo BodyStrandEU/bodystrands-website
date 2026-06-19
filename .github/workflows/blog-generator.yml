@@ -1,11 +1,7 @@
 name: Daily Blog Post Generator
 
 on:
-  schedule:
-    - cron: "0 7 * * *"   # 7am UTC
-    - cron: "0 12 * * *"  # 12pm UTC
-    - cron: "0 17 * * *"  # 5pm UTC
-  workflow_dispatch:        # allow manual trigger
+  workflow_dispatch:        # triggered by cron-job.org at 7am, 12pm, 5pm UTC
 
 jobs:
   generate:
@@ -37,4 +33,5 @@ jobs:
           git config user.email "storenavaria@gmail.com"
           git add data/blog-posts.json
           git diff --staged --quiet || git commit -m "Add blog post [skip ci]"
+          git pull --rebase origin main
           git push

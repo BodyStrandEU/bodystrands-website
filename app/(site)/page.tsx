@@ -197,30 +197,6 @@ export default function HomePage() {
         <div className="flex-1 h-px bg-[#E8B4A8]/30" />
       </div>
 
-      {/* Newsletter */}
-      <section className="bg-[#E8B4A8]/20 py-20">
-        <ScrollReveal>
-          <div className="max-w-xl mx-auto px-6 text-center">
-            <p className="text-[0.6rem] tracking-[0.3em] uppercase text-[#A0622A] mb-4">Stay Connected</p>
-            <h2 className="font-heading text-3xl md:text-4xl font-light text-[#2C2220] mb-4">
-              New pieces. First.
-            </h2>
-            <p className="text-sm font-light text-[#8C7B6E] tracking-wide mb-8">
-              Drop your email. We&apos;ll do the rest.
-            </p>
-            <form className="flex flex-col sm:flex-row gap-0 max-w-sm mx-auto">
-              <input
-                type="email"
-                placeholder="Your email address"
-                className="flex-1 px-4 py-3 text-xs tracking-wide font-light border border-[#A0622A]/30 bg-[#FDF9F7] text-[#2C2220] placeholder-[#8C7B6E]/60 outline-none focus:border-[#A0622A] transition-colors"
-              />
-              <button type="submit" className="btn-primary-filled whitespace-nowrap px-6 py-3 text-[0.65rem]">
-                Subscribe
-              </button>
-            </form>
-          </div>
-        </ScrollReveal>
-      </section>
     </>
   );
 }

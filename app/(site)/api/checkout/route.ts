@@ -7,6 +7,10 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!);
 
 type CartItemInput = { productId: string; variant?: string; priceAdd?: number; quantity?: number };
 
+function resolveImage(origin: string, img: string): string {
+  return img.startsWith("http") ? img : `${origin}${img}`;
+}
+
 function buildSingleShippingOption(country: string, totalAmount: number): Stripe.Checkout.SessionCreateParams.ShippingOption[] {
   const rate = getShippingRate(country, totalAmount);
   return [{
@@ -90,7 +94,7 @@ export async function POST(req: NextRequest) {
             product_data: {
               name,
               description: product.description,
-              images: product.images[0] ? [`${origin}${product.images[0]}`] : [],
+              images: product.images[0] ? [resolveImage(origin, product.images[0])] : [],
             },
             unit_amount: Math.round(unitPrice * 100),
           },
@@ -140,7 +144,7 @@ export async function POST(req: NextRequest) {
           product_data: {
             name: productName,
             description: product.description,
-            images: product.images[0] ? [`${origin}${product.images[0]}`] : [],
+            images: product.images[0] ? [resolveImage(origin, product.images[0])] : [],
           },
           unit_amount: Math.round(totalAmount * 100),
         },

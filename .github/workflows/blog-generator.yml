@@ -5,7 +5,7 @@ on:
     - cron: "0 7 * * *"    # 8am Portugal
     - cron: "0 12 * * *"   # 1pm Portugal
     - cron: "0 17 * * *"   # 6pm Portugal
-  workflow_dispatch:        # also triggered by cron-job.org as backup
+  workflow_dispatch:        # cron-job.org backup trigger
 
 concurrency:
   group: blog-generator
@@ -20,6 +20,16 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Configure git
+        run: |
+          git config user.name "Bodystrands Blog Bot"
+          git config user.email "storenavaria@gmail.com"
+
+      - name: Sync with latest main
+        run: git pull origin main
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -37,9 +47,10 @@ jobs:
 
       - name: Commit and push
         run: |
-          git config user.name "Bodystrands Blog Bot"
-          git config user.email "storenavaria@gmail.com"
           git add data/blog-posts.json
-          git diff --staged --quiet || git commit -m "Add blog post [skip ci]"
-          git pull --rebase origin main
-          git push
+          if git diff --staged --quiet; then
+            echo "No new post generated, skipping."
+            exit 0
+          fi
+          git commit -m "Add blog post [skip ci]"
+          git push || (git pull --rebase origin main && git push)

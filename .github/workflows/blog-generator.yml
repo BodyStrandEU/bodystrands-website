@@ -1,7 +1,15 @@
 name: Daily Blog Post Generator
 
 on:
-  workflow_dispatch:        # triggered by cron-job.org at 7am, 12pm, 5pm UTC
+  schedule:
+    - cron: "0 7 * * *"    # 8am Portugal
+    - cron: "0 12 * * *"   # 1pm Portugal
+    - cron: "0 17 * * *"   # 6pm Portugal
+  workflow_dispatch:        # also triggered by cron-job.org as backup
+
+concurrency:
+  group: blog-generator
+  cancel-in-progress: false
 
 jobs:
   generate:

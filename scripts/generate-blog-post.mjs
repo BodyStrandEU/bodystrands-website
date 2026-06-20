@@ -8,7 +8,7 @@ const BLOG_FILE     = join(__dirname, "../data/blog-posts.json");
 const PRODUCTS_FILE = join(__dirname, "../data/products.json");
 
 const TOPIC_POOLS = [
-  { category: "Style Guide", keywords: ["shoulder chain", "back chain", "belly chain", "body chain", "anklet", "head chain", "hand chain", "eyeglasses chain", "bikini"], topics: [
+  { category: "Style Guide", keywords: ["shoulder chain", "back chain", "belly chain", "body chain", "anklet", "head chain", "hand chain", "eyeglasses chain", "bikini", "bracelet", "necklace"], topics: [
     "how to style a shoulder chain for summer",
     "how to layer body jewelry without overdoing it",
     "best jewelry for a beach wedding guest",
@@ -23,8 +23,63 @@ const TOPIC_POOLS = [
     "how to style eyeglasses chains as a fashion statement",
     "how to wear a back chain to the beach",
     "the best shoulder chain outfits for summer",
+    "how to stack bracelets without it looking too busy",
+    "the best anklet and bracelet combinations for summer",
+    "how to wear a dainty necklace every single day",
+    "the right way to layer necklaces at different lengths",
+    "how to style a hand chain with any outfit",
+    "bikini jewelry the pieces that actually stay on",
+    "how to wear an eyeglasses chain and make it look intentional",
+    "belly chain styling tips for every body type",
+    "the best jewelry for a backless wedding dress",
+    "how to choose between gold and silver jewelry",
+    "how to wear a head chain without it looking costume-y",
   ]},
-  { category: "Care & Quality", keywords: ["stainless steel", "waterproof", "jewelry care"], topics: [
+  { category: "Personalized Jewelry", keywords: ["personalised", "personalized", "customized", "birthstone", "birth flower", "zodiac", "initial", "charm", "custom"], topics: [
+    "personalised bracelet gift ideas for every occasion",
+    "what is a birthstone bracelet and which one should you choose",
+    "birth flower jewelry the meaningful gift everyone actually wants",
+    "why personalised jewelry makes the best gift",
+    "zodiac charm bracelet the gift that matches their personality",
+    "initial bracelet who to buy it for and why",
+    "customized jewelry vs off the shelf why personal always wins",
+    "the best personalized jewelry gifts for her under 50 euros",
+    "how to choose the right birthstone for a gift",
+    "birth flower bracelet meaning and symbolism for all 12 months",
+    "why customized bracelets and necklaces are the most searched gifts right now",
+    "the most meaningful personalized jewelry for bridesmaids",
+    "personalised bracelet ideas that dont look cheap",
+    "zodiac jewelry which sign wears which style best",
+    "birthstone jewelry a complete guide to every month",
+    "how to personalise jewelry as a gift without overthinking it",
+    "charm bracelet meaning why every charm tells a story",
+    "the difference between birthstone and birth flower jewelry",
+  ]},
+  { category: "Gift Guide", keywords: ["gift", "birthday", "anniversary", "bridesmaid", "christmas", "mother", "valentine", "graduation", "friend"], topics: [
+    "best jewelry gifts for her under 50 euros",
+    "jewelry gift ideas for a birthday she will actually wear",
+    "what to buy a woman who has everything",
+    "the best handmade jewelry gifts from Europe",
+    "jewelry gift ideas for bridesmaids she will keep forever",
+    "anniversary jewelry gift ideas she will actually love",
+    "christmas jewelry gifts that feel personal not generic",
+    "mothers day jewelry gift ideas that arent boring",
+    "valentines day jewelry gifts beyond the usual",
+    "the best gift for a friend who loves jewelry",
+    "graduation gift ideas jewelry she will wear for years",
+    "jewelry gifts for the woman who has everything",
+    "affordable luxury jewelry gifts under 35 euros",
+    "the best jewelry gifts for a new girlfriend",
+    "handmade jewelry gifts that feel more personal than store bought",
+    "best friend jewelry gifts that arent cheesy",
+    "jewelry gift guide for every type of woman",
+    "what jewelry to buy someone who already has a lot",
+    "last minute jewelry gift ideas that still feel thoughtful",
+    "jewelry gifts for teenagers and young women",
+    "the best jewelry gifts for a sister",
+    "honeymoon gift ideas jewelry she will wear every day",
+  ]},
+  { category: "Care & Quality", keywords: ["stainless steel", "waterproof", "jewelry care", "tarnish"], topics: [
     "how to clean your stainless steel jewelry at home",
     "why 316L stainless steel is the best material for everyday jewelry",
     "how to store jewelry so it lasts longer",
@@ -32,40 +87,41 @@ const TOPIC_POOLS = [
     "can you really shower with your jewelry on",
     "what makes handmade jewelry different from mass produced",
     "how to tell if your jewelry is truly waterproof",
+    "why stainless steel jewelry is better than gold plated",
+    "how long does stainless steel jewelry last",
+    "the real difference between gold plated and gold tone jewelry",
   ]},
-  { category: "Inspiration", keywords: ["summer", "wedding", "beach", "holiday", "bride"], topics: [
+  { category: "Inspiration", keywords: ["summer", "wedding", "beach", "holiday", "bride", "bridal", "festival", "travel"], topics: [
     "the best jewelry trends for summer 2026",
-    "wedding jewelry ideas that aren't the usual necklace and earrings",
+    "wedding jewelry ideas that arent the usual necklace and earrings",
     "body jewelry for brides and bridesmaids",
     "why body jewelry is having a major moment right now",
     "jewelry ideas for your honeymoon packing list",
     "the most wearable jewelry for summer holidays",
     "how to build a jewelry wardrobe that works year round",
     "jewelry styling inspiration from the Mediterranean",
-    "bikini jewelry how to accessorize at the beach",
-  ]},
-  { category: "Gift Guide", keywords: ["gift", "birthday", "anniversary", "bridesmaid"], topics: [
-    "best jewelry gifts for her under 50 euros",
-    "jewelry gift ideas for a birthday",
-    "what to buy a woman who has everything",
-    "the best handmade jewelry gifts from Europe",
-    "jewelry gift ideas for bridesmaids",
-    "anniversary jewelry gift ideas she will actually wear",
+    "the best jewelry for a beach vacation",
+    "festival jewelry what to wear and how to style it",
+    "bridal jewelry beyond the veil and earrings",
+    "what jewelry to pack for a holiday in the sun",
+    "the jewelry pieces worth investing in this year",
+    "why handmade jewelry from small brands just hits different",
+    "jewelry trends that are actually wearable not just runway",
   ]},
 ];
 
 // Map topic text to product categories
 const CATEGORY_KEYWORDS = {
-  "Shoulder Chains":    ["shoulder"],
-  "Back Chains":        ["back chain", "backless"],
-  "Belly Chains":       ["belly"],
+  "Shoulder Chains":    ["shoulder chain"],
+  "Back Chains":        ["back chain", "backless dress"],
+  "Belly Chains":       ["belly chain", "belly", "waist chain"],
   "Body Chains":        ["body chain", "festival"],
-  "Anklets":            ["anklet", "ankle"],
-  "Head Chains":        ["head chain", "wedding", "bride", "bridal", "headpiece"],
+  "Anklets":            ["anklet", "ankle bracelet"],
+  "Head Chains":        ["head chain", "hair chain", "headpiece", "bridal headpiece", "wedding headpiece"],
   "Hand Chains":        ["hand chain"],
-  "Necklaces":          ["necklace", "choker"],
-  "Bracelets":          ["bracelet"],
-  "Eyeglasses Chains":  ["eyeglasses", "glasses chain"],
+  "Necklaces":          ["necklace", "choker", "lariat", "pendant necklace"],
+  "Bracelets":          ["bracelet", "birthstone", "birth flower", "zodiac", "initial", "personalised", "personalized", "customized", "charm bracelet", "layered bracelet", "stacking bracelet"],
+  "Eyeglasses Chains":  ["eyeglasses", "glasses chain", "sunglasses chain"],
   "Bikini Clip Chains": ["bikini"],
 };
 
@@ -166,7 +222,7 @@ async function main() {
 
 The brand story: El and Gio are a couple who fell in love with the original Canadian Bodystrands brand and brought it to Europe. Every single piece is handmade by the two of them in their Portuguese studio — no factories, no middlemen. They pour their care into every strand.
 
-Products: belly chains, back chains, body chains, shoulder chains, anklets, bracelets, necklaces, hand chains, head chains, eyeglasses chains, bikini clip chains. All made from 316L stainless steel — waterproof, tarnish-resistant, built for everyday wear. Prices range from €17.50 to €55.
+Products: belly chains, back chains, body chains, shoulder chains, anklets, bracelets (including birthstone bracelets, birth flower charm bracelets, zodiac charm bracelets, initial bracelets, pearl bracelets), necklaces, hand chains, head chains, eyeglasses chains, bikini clip chains. All made from 316L stainless steel — waterproof, tarnish-resistant, built for everyday wear. Prices range from €17.50 to €55. Many pieces are personalised — customers choose their birthstone, birth flower month, zodiac sign, or initial at checkout.
 ${productContext}${categoryContext}
 Brand voice:
 - Warm, real, and direct — like a close friend who genuinely knows jewelry

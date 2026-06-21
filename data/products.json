@@ -214,15 +214,6 @@
           "Lobster Clasp",
           "Pearl Safety Pin"
         ]
-      },
-      {
-        "label": "Size",
-        "type": "options",
-        "options": [
-          "Small (+ 5cm ext)",
-          "Medium (+ 10cm ext)",
-          "Large (+ 15cm ext)"
-        ]
       }
     ],
     "active": true,

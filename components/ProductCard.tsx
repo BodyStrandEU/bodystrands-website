@@ -26,20 +26,25 @@ export default function ProductCard({ product, priority = false }: { product: Pr
 
   const symbol = product.currency === "EUR" ? "€" : product.currency === "GBP" ? "£" : "$";
 
-  // All variant images combined in variant order, or fallback to product.images
-  // Infographic images are excluded — they only appear on the product detail page
+  // All images for the card carousel — infographics excluded
   const combinedImages = useMemo(() => {
     const perProduct = new Set(product.infographicImages ?? []);
     const isInfographic = (src: string) => INFOGRAPHIC_IMAGES.has(src) || perProduct.has(src);
+    // Gallery mode: flat unified array
+    if (product.gallery) {
+      return product.gallery.filter(src => !isInfographic(src));
+    }
+    // Per-variant mode: combine all variant images in order
     const variants = product.variants ?? [];
     if (variants.length > 0 && product.variantImages) {
       return variants.flatMap((v) => product.variantImages![v] ?? []).filter(src => !isInfographic(src));
     }
     return (product.images ?? []).filter(src => !isInfographic(src));
-  }, [product.variants, product.variantImages, product.images, product.infographicImages]);
+  }, [product.gallery, product.variants, product.variantImages, product.images, product.infographicImages]);
 
-  // Which variant does each slide index belong to?
+  // Which variant does each slide belong to? (only used in per-variant mode)
   const slideVariantMap = useMemo(() => {
+    if (product.gallery) return [] as (string | null)[];
     const variants = product.variants ?? [];
     if (variants.length === 0 || !product.variantImages) return [] as (string | null)[];
     const result: (string | null)[] = [];
@@ -49,7 +54,7 @@ export default function ProductCard({ product, priority = false }: { product: Pr
       }
     }
     return result;
-  }, [product.variants, product.variantImages]);
+  }, [product.gallery, product.variants, product.variantImages]);
 
   // Active swatch badge follows the carousel position automatically
   useEffect(() => {
@@ -57,10 +62,16 @@ export default function ProductCard({ product, priority = false }: { product: Pr
     if (v) setActiveVariant(v);
   }, [slideIndex, slideVariantMap]);
 
-  // Tap a swatch → jump to that variant's first image
+  // Tap a swatch → jump to that variant's hero image
   function jumpToVariant(v: string) {
-    const idx = slideVariantMap.indexOf(v);
-    setSlideIndex(idx !== -1 ? idx : 0);
+    if (product.gallery && product.variantHeroes?.[v]) {
+      const heroUrl = product.variantHeroes[v];
+      const idx = combinedImages.indexOf(heroUrl);
+      setSlideIndex(idx !== -1 ? idx : 0);
+    } else {
+      const idx = slideVariantMap.indexOf(v);
+      setSlideIndex(idx !== -1 ? idx : 0);
+    }
     setActiveVariant(v);
   }
 

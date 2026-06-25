@@ -532,7 +532,9 @@ export default function ProductEditor({ params }: { params: Promise<{ id: string
     specs: [],
     variantGroups: [],
     images: [],
+    gallery: undefined,
     variantImages: {},
+    variantHeroes: {},
     video: "",
     variantVideos: {},
     featured: false,
@@ -561,7 +563,9 @@ export default function ProductEditor({ params }: { params: Promise<{ id: string
               price: String(found.price),
               fullDescription: found.fullDescription ?? "",
               video: found.video ?? "",
+              gallery: found.gallery,
               variantImages: found.variantImages ?? {},
+              variantHeroes: found.variantHeroes ?? {},
               variantVideos: found.variantVideos ?? {},
               variants: found.variants ?? [],
               specs: found.specs ?? [],
@@ -596,7 +600,9 @@ export default function ProductEditor({ params }: { params: Promise<{ id: string
         price: Number(form.price),
         fullDescription: form.fullDescription || undefined,
         video: form.video || undefined,
-        variantImages: Object.keys(form.variantImages ?? {}).length > 0 ? form.variantImages : undefined,
+        gallery: (form.gallery ?? []).length > 0 ? form.gallery : undefined,
+        variantImages: !form.gallery && Object.keys(form.variantImages ?? {}).length > 0 ? form.variantImages : undefined,
+        variantHeroes: Object.keys(form.variantHeroes ?? {}).length > 0 ? form.variantHeroes : undefined,
         variantVideos: Object.keys(form.variantVideos ?? {}).length > 0 ? form.variantVideos : undefined,
         variants: (form.variants ?? []).length > 0 ? form.variants : undefined,
         specs: (form.specs ?? []).length > 0 ? form.specs : undefined,
@@ -1131,7 +1137,7 @@ export default function ProductEditor({ params }: { params: Promise<{ id: string
           </div>
         )}
 
-        {/* Variants & variant images */}
+        {/* Variants & Gallery Images */}
         <div style={sectionStyle}>
           <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: "1rem" }}>
             <div>
@@ -1139,50 +1145,173 @@ export default function ProductEditor({ params }: { params: Promise<{ id: string
                 Variants &amp; Gallery Images
               </h2>
               <p style={{ margin: "0.25rem 0 0", fontSize: "0.78rem", color: "var(--admin-muted)" }}>
-                Drag ⠿ to reorder variants — first variant is the default shown on shop cards.
+                {form.gallery ? "Unified gallery — one image row for all variants." : "Drag ⠿ to reorder variants — first variant is the default shown on shop cards."}
               </p>
             </div>
-            <button
-              onClick={addVariant}
-              style={{
-                padding: "0.3rem 0.75rem",
-                background: "transparent",
-                border: "1px solid #d1d5db",
-                borderRadius: "4px",
-                fontSize: "0.75rem",
-                cursor: "pointer",
-                color: "var(--admin-text2)",
-              }}
-            >
-              + Add Variant
-            </button>
+            <div style={{ display: "flex", gap: "0.5rem" }}>
+              <button
+                onClick={() => {
+                  if (form.gallery) {
+                    // Switch back to per-variant mode
+                    const vi: Record<string, string[]> = {};
+                    for (const v of form.variants ?? []) vi[v] = form.gallery ?? [];
+                    setForm((f) => ({ ...f, gallery: undefined, variantHeroes: {}, variantImages: vi }));
+                  } else {
+                    // Switch to gallery mode — merge all variant images
+                    const all: string[] = [];
+                    for (const v of form.variants ?? []) {
+                      for (const img of (form.variantImages ?? {})[v] ?? []) {
+                        if (!all.includes(img)) all.push(img);
+                      }
+                    }
+                    const heroes: Record<string, string> = {};
+                    for (const v of form.variants ?? []) {
+                      const first = (form.variantImages ?? {})[v]?.[0];
+                      if (first) heroes[v] = first;
+                    }
+                    setForm((f) => ({ ...f, gallery: all, variantHeroes: heroes, variantImages: {} }));
+                  }
+                }}
+                style={{
+                  padding: "0.3rem 0.75rem",
+                  background: form.gallery ? "#e0f2fe" : "transparent",
+                  border: `1px solid ${form.gallery ? "#0369a1" : "#d1d5db"}`,
+                  borderRadius: "4px",
+                  fontSize: "0.75rem",
+                  cursor: "pointer",
+                  color: form.gallery ? "#0369a1" : "var(--admin-text2)",
+                  fontWeight: form.gallery ? 600 : 400,
+                }}
+              >
+                {form.gallery ? "✓ Unified Gallery" : "Switch to Unified Gallery"}
+              </button>
+              {!form.gallery && (
+                <button
+                  onClick={addVariant}
+                  style={{
+                    padding: "0.3rem 0.75rem",
+                    background: "transparent",
+                    border: "1px solid #d1d5db",
+                    borderRadius: "4px",
+                    fontSize: "0.75rem",
+                    cursor: "pointer",
+                    color: "var(--admin-text2)",
+                  }}
+                >
+                  + Add Variant
+                </button>
+              )}
+            </div>
           </div>
 
-          {(form.variants ?? []).length === 0 && (
-            <p style={{ fontSize: "0.78rem", color: "var(--admin-muted2)" }}>No variants. Click "Add Variant" to add one.</p>
-          )}
+          {/* Unified Gallery Mode */}
+          {form.gallery ? (
+            <div>
+              {/* Flat image list */}
+              <ImageSection
+                title="All Images (drag to reorder)"
+                images={form.gallery}
+                onChange={(imgs) => setForm((f) => ({ ...f, gallery: imgs }))}
+                onUpload={uploadFile}
+              />
 
-          <DndContext
-            sensors={variantSensors}
-            collisionDetection={closestCenter}
-            onDragEnd={handleVariantDragEnd}
-          >
-            <SortableContext items={form.variants ?? []} strategy={verticalListSortingStrategy}>
-              {(form.variants ?? []).map((variant, index) => (
-                <SortableVariantBlock
-                  key={variant}
-                  variant={variant}
-                  images={(form.variantImages ?? {})[variant] ?? []}
-                  videoValue={(form.variantVideos ?? {})[variant] ?? ""}
-                  isFirst={index === 0}
-                  onImagesChange={(imgs) => updateVariantImages(variant, imgs)}
-                  onVideoChange={(v) => updateVariantVideo(variant, v)}
-                  onRemove={() => removeVariant(variant)}
-                  onUpload={uploadFile}
-                />
-              ))}
-            </SortableContext>
-          </DndContext>
+              {/* Hero selectors per variant */}
+              {(form.variants ?? []).length > 0 && (
+                <div style={{ marginTop: "1.25rem" }}>
+                  <p style={{ margin: "0 0 0.75rem", fontSize: "0.78rem", fontWeight: 600, color: "var(--admin-text2)", textTransform: "uppercase", letterSpacing: "0.05em" }}>
+                    Variant Hero Images
+                  </p>
+                  <p style={{ margin: "0 0 1rem", fontSize: "0.75rem", color: "var(--admin-muted)" }}>
+                    Click an image to set it as the hero for that variant. When a buyer selects that variant, this image appears first.
+                  </p>
+                  {(form.variants ?? []).map((v) => (
+                    <div key={v} style={{ marginBottom: "1.25rem" }}>
+                      <p style={{ margin: "0 0 0.5rem", fontSize: "0.82rem", fontWeight: 600, color: "var(--admin-text)" }}>{v}</p>
+                      <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap" }}>
+                        {(form.gallery ?? []).map((img) => {
+                          const isHero = (form.variantHeroes ?? {})[v] === img;
+                          return (
+                            <button
+                              key={img}
+                              type="button"
+                              onClick={() => setForm((f) => ({ ...f, variantHeroes: { ...(f.variantHeroes ?? {}), [v]: img } }))}
+                              title={isHero ? `Hero for ${v}` : `Set as ${v} hero`}
+                              style={{
+                                position: "relative",
+                                width: "64px",
+                                height: "64px",
+                                padding: 0,
+                                border: isHero ? "2px solid #A0622A" : "2px solid var(--admin-border)",
+                                borderRadius: "4px",
+                                overflow: "hidden",
+                                cursor: "pointer",
+                                background: "var(--admin-surface2)",
+                              }}
+                            >
+                              {/* eslint-disable-next-line @next/next/no-img-element */}
+                              <img src={img} alt="" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+                              {isHero && (
+                                <span style={{
+                                  position: "absolute", bottom: 0, left: 0, right: 0,
+                                  background: "#A0622A", color: "#fff",
+                                  fontSize: "0.55rem", textAlign: "center", padding: "1px 0",
+                                  fontWeight: 700, letterSpacing: "0.05em",
+                                }}>
+                                  HERO
+                                </span>
+                              )}
+                            </button>
+                          );
+                        })}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
+
+              {/* Variant list (names only — for customer selectors, no image blocks) */}
+              <div style={{ marginTop: "1rem", borderTop: "1px solid var(--admin-border)", paddingTop: "1rem" }}>
+                <p style={{ margin: "0 0 0.5rem", fontSize: "0.75rem", fontWeight: 600, color: "var(--admin-text2)", textTransform: "uppercase", letterSpacing: "0.05em" }}>
+                  Tone Variants
+                </p>
+                <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap" }}>
+                  {(form.variants ?? []).map((v) => (
+                    <span key={v} style={{ fontSize: "0.8rem", padding: "0.25rem 0.75rem", background: "var(--admin-surface2)", border: "1px solid var(--admin-border)", borderRadius: "4px", color: "var(--admin-text)" }}>
+                      {v}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          ) : (
+            /* Per-Variant Mode (existing behavior) */
+            <>
+              {(form.variants ?? []).length === 0 && (
+                <p style={{ fontSize: "0.78rem", color: "var(--admin-muted2)" }}>No variants. Click "Add Variant" to add one.</p>
+              )}
+              <DndContext
+                sensors={variantSensors}
+                collisionDetection={closestCenter}
+                onDragEnd={handleVariantDragEnd}
+              >
+                <SortableContext items={form.variants ?? []} strategy={verticalListSortingStrategy}>
+                  {(form.variants ?? []).map((variant, index) => (
+                    <SortableVariantBlock
+                      key={variant}
+                      variant={variant}
+                      images={(form.variantImages ?? {})[variant] ?? []}
+                      videoValue={(form.variantVideos ?? {})[variant] ?? ""}
+                      isFirst={index === 0}
+                      onImagesChange={(imgs) => updateVariantImages(variant, imgs)}
+                      onVideoChange={(v) => updateVariantVideo(variant, v)}
+                      onRemove={() => removeVariant(variant)}
+                      onUpload={uploadFile}
+                    />
+                  ))}
+                </SortableContext>
+              </DndContext>
+            </>
+          )}
         </div>
 
         {/* No-variant video */}

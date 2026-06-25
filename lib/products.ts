@@ -35,7 +35,9 @@ export type Product = {
   fullDescription?: string;
   specs?: Spec[];
   images: string[];
+  gallery?: string[];
   variantImages?: Record<string, string[]>;
+  variantHeroes?: Record<string, string>;
   video?: string;
   variantVideos?: Record<string, string>;
   featured: boolean;

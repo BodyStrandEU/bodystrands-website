@@ -28,8 +28,9 @@ export default function ProductGallery({
   const touchStart = useRef({ x: 0, y: 0 });
   const swipeDir   = useRef<"h" | "v" | null>(null);
 
-  const images = product.variantImages?.[activeVariant] ?? product.images ?? [];
+  const images = product.gallery ?? product.variantImages?.[activeVariant] ?? product.images ?? [];
   const videoSrc =
+    product.variantVideos?.[activeVariant] ??
     product.video ??
     (product.variantVideos ? Object.values(product.variantVideos)[0] : undefined);
 
@@ -39,12 +40,17 @@ export default function ProductGallery({
   const videoIdx  = media.findIndex((m) => m.type === "video"); // -1 when no video or error
   const isOnVideo = activeIndex === videoIdx && videoIdx !== -1;
 
-  // Reset everything when variant changes
+  // Reset/jump when variant changes
   useEffect(() => {
-    setActiveIndex(0);
+    if (product.gallery && product.variantHeroes?.[activeVariant]) {
+      const heroIdx = product.gallery.indexOf(product.variantHeroes[activeVariant]);
+      setActiveIndex(heroIdx !== -1 ? heroIdx : 0);
+    } else {
+      setActiveIndex(0);
+    }
     setVideoError(false);
     setVideoReady(false);
-  }, [activeVariant]);
+  }, [activeVariant, product.gallery, product.variantHeroes]);
 
   // If video errored while user was on the video slide, step back to slide 0
   useEffect(() => {

@@ -8,6 +8,8 @@ on:
 jobs:
   monitor:
     runs-on: ubuntu-latest
+    permissions:
+      issues: write
     steps:
       - name: Check and recover failed posts
         env:

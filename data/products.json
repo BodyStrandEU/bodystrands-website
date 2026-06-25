@@ -8289,5 +8289,94 @@
       "/images/products/birth-flower-charm-bracelet/f6314926-4454-4b6d-947b-0b5470742a2e.png"
     ],
     "altText": "Gold tone dainty charm bracelet with birth flower pendant, handcrafted 316L stainless steel jewelry for women"
+  },
+  {
+    "id": "birth-flower-charm-necklace",
+    "name": "Birth Flower Charm Necklace",
+    "price": 35,
+    "currency": "EUR",
+    "category": "Necklaces",
+    "description": "Your birth flower, always close to your heart. A dainty necklace featuring a delicate flower charm that matches your birth month — handcrafted in tarnish-resistant stainless steel, available in gold or silver.",
+    "fullDescription": "Choose your birth month and receive a necklace with its corresponding flower charm — from January's Carnation to December's Holly. Each charm is beautifully detailed, hanging on a dainty flat-link chain in the perfect length for you.\n\nPersonalised, wearable, and completely tarnish-resistant. Made from 316L stainless steel so it can be worn every day — through swimming, showering, and everything in between. A thoughtful gift or a quiet reminder of who you are.\n\nAvailable in 7 lengths from 35 to 56 cm.",
+    "specs": [
+      {
+        "label": "Material",
+        "value": "316L stainless steel (tarnish-resistant)"
+      },
+      {
+        "label": "Finishes",
+        "value": "Gold Tone or Silver Tone"
+      },
+      {
+        "label": "Charm",
+        "value": "Birth flower — 12 months, 12 flowers"
+      },
+      {
+        "label": "Lengths",
+        "value": "35 / 38 / 41 / 44 / 47 / 50 / 53 / 56 cm"
+      },
+      {
+        "label": "Shipping",
+        "value": "Dispatches within 1–2 business days"
+      }
+    ],
+    "images": [
+      "/images/products/birth-flower-charm-necklace/1a219f4a-68c8-42d7-b46e-85c90a7f3f1b.jpeg"
+    ],
+    "variantImages": {
+      "Gold Tone": [
+        "/images/products/birth-flower-charm-necklace/1a219f4a-68c8-42d7-b46e-85c90a7f3f1b.jpeg",
+        "/images/products/birth-flower-charm-necklace/299dfc8c-83ef-472c-90fb-c24ce7f2290f.jpg",
+        "/images/products/birth-flower-charm-necklace/2ba8ecb3-c756-42a5-9545-76bc67926144-copy.png",
+        "/images/products/birth-flower-charm-necklace/aad39965-f4f4-4ecc-b2cb-9de082ceb86f.png",
+        "/images/products/birth-flower-charm-necklace/IMG_1908.jpeg"
+      ],
+      "Silver Tone": [
+        "/images/products/birth-flower-charm-necklace/69ca433e-f2e4-4fb1-924b-e1aecb5f4f70.jpeg",
+        "/images/products/birth-flower-charm-necklace/5184190f-9338-4b57-8214-774497883a64.png"
+      ]
+    },
+    "video": "/images/products/birth-flower-charm-necklace/0625.mp4",
+    "featured": false,
+    "variants": [
+      "Gold Tone",
+      "Silver Tone"
+    ],
+    "variantGroups": [
+      {
+        "label": "Size",
+        "type": "options",
+        "options": [
+          "35 cm",
+          "38 cm",
+          "41 cm",
+          "44 cm",
+          "47 cm",
+          "50 cm",
+          "53 cm",
+          "56 cm"
+        ]
+      },
+      {
+        "label": "Birth Month",
+        "type": "options",
+        "options": [
+          "January — Carnation",
+          "February — Violet",
+          "March — Daffodil",
+          "April — Daisy",
+          "May — Lily of the Valley",
+          "June — Rose",
+          "July — Water Lily",
+          "August — Poppy",
+          "September — Aster",
+          "October — Marigold",
+          "November — Chrysanthemum",
+          "December — Holly"
+        ]
+      }
+    ],
+    "active": true,
+    "altText": "Delicate gold tone birth flower pendant necklace in stainless steel, handcrafted dainty charm necklace for everyday wear."
   }
 ]

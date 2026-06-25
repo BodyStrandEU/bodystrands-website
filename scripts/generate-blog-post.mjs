@@ -263,8 +263,9 @@ Rules:
     }],
   });
 
-  const raw    = message.content[0].text.trim().replace(/^```json\s*/i, "").replace(/^```\s*/i, "").replace(/```\s*$/i, "");
-  const parsed = JSON.parse(raw);
+  const raw     = message.content[0].text.trim().replace(/^```json\s*/i, "").replace(/^```\s*/i, "").replace(/```\s*$/i, "");
+  const cleaned = raw.replace(/,(\s*[}\]])/g, "$1");
+  const parsed  = JSON.parse(cleaned);
 
   const today = new Date().toISOString().split("T")[0];
   const slug  = slugify(parsed.title);

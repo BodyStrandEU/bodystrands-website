@@ -8324,23 +8324,27 @@
       "/images/products/birth-flower-charm-necklace/1a219f4a-68c8-42d7-b46e-85c90a7f3f1b.jpeg"
     ],
     "variantImages": {
+      "Silver Tone": [
+        "/images/products/birth-flower-charm-necklace/69ca433e-f2e4-4fb1-924b-e1aecb5f4f70.jpeg",
+        "/images/products/birth-flower-charm-necklace/5184190f-9338-4b57-8214-774497883a64.png",
+        "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
+        "/images/products/035ca701-d84a-49fd-8b8d-196dd1903eb0.png",
+        "/images/products/f6314926-4454-4b6d-947b-0b5470742a2e.png"
+      ],
       "Gold Tone": [
         "/images/products/birth-flower-charm-necklace/1a219f4a-68c8-42d7-b46e-85c90a7f3f1b.jpeg",
         "/images/products/birth-flower-charm-necklace/299dfc8c-83ef-472c-90fb-c24ce7f2290f.jpg",
         "/images/products/birth-flower-charm-necklace/2ba8ecb3-c756-42a5-9545-76bc67926144-copy.png",
         "/images/products/birth-flower-charm-necklace/aad39965-f4f4-4ecc-b2cb-9de082ceb86f.png",
-        "/images/products/birth-flower-charm-necklace/IMG_1908.jpeg"
-      ],
-      "Silver Tone": [
-        "/images/products/birth-flower-charm-necklace/69ca433e-f2e4-4fb1-924b-e1aecb5f4f70.jpeg",
-        "/images/products/birth-flower-charm-necklace/5184190f-9338-4b57-8214-774497883a64.png"
+        "/images/products/birth-flower-charm-necklace/IMG_1908.jpeg",
+        "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png"
       ]
     },
     "video": "/images/products/birth-flower-charm-necklace/0625.mp4",
     "featured": false,
     "variants": [
-      "Gold Tone",
-      "Silver Tone"
+      "Silver Tone",
+      "Gold Tone"
     ],
     "variantGroups": [
       {

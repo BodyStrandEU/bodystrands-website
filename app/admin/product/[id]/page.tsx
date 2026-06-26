@@ -284,22 +284,18 @@ interface GallerySectionProps {
   images: string[];
   variants: string[];
   variantHeroes: Record<string, string>;
-  mainImage: string | undefined;
   onReorder: (imgs: string[]) => void;
   onUpload: (file: File) => Promise<string>;
   onSetHero: (variant: string, img: string) => void;
-  onSetMain: (img: string) => void;
 }
 
 function GallerySection({
   images,
   variants,
   variantHeroes,
-  mainImage,
   onReorder,
   onUpload,
   onSetHero,
-  onSetMain,
 }: GallerySectionProps) {
   const [dragOver, setDragOver] = useState(false);
   const [pending, setPending] = useState<{ id: string; previewUrl: string }[]>([]);
@@ -348,28 +344,20 @@ function GallerySection({
         All Images (drag to reorder)
       </h4>
       <p style={{ margin: "0 0 0.75rem", fontSize: "0.72rem", color: "var(--admin-muted)" }}>
-        Click <strong>★</strong> to set the shop card thumbnail.
-        {variants.length > 0 && <> Click <strong>{variants.map(v => v.charAt(0)).join(" / ")}</strong> to set the hero image shown when a buyer picks that tone.</>}
+        First image = shop card thumbnail. Drag to reorder.
+        {variants.length > 0 && <> Click <strong>{variants.map(v => v.charAt(0)).join(" / ")}</strong> to set the hero shown when a buyer picks that tone.</>}
       </p>
 
       <DndContext sensors={sensors} collisionDetection={closestCenter} onDragEnd={handleDragEnd}>
         <SortableContext items={images} strategy={rectSortingStrategy}>
           <div style={{ display: "flex", flexWrap: "wrap", gap: "0.5rem", marginBottom: "0.75rem" }}>
             {images.map((url) => {
-              const badges: HeroBadge[] = [
-                {
-                  label: "★",
-                  active: url === mainImage,
-                  activeColor: "#A0622A",
-                  onClick: () => onSetMain(url),
-                },
-                ...variants.map((v) => ({
-                  label: v.charAt(0),
-                  active: variantHeroes[v] === url,
-                  activeColor: VARIANT_BADGE_COLORS[v] ?? "#A0622A",
-                  onClick: () => onSetHero(v, url),
-                })),
-              ];
+              const badges: HeroBadge[] = variants.map((v) => ({
+                label: v.charAt(0),
+                active: variantHeroes[v] === url,
+                activeColor: VARIANT_BADGE_COLORS[v] ?? "#A0622A",
+                onClick: () => onSetHero(v, url),
+              }));
               return (
                 <SortableImage
                   key={url}
@@ -794,6 +782,8 @@ export default function ProductEditor({ params }: { params: Promise<{ id: string
         fullDescription: form.fullDescription || undefined,
         video: form.video || undefined,
         gallery: (form.gallery ?? []).length > 0 ? form.gallery : undefined,
+        // In gallery mode, first image is always the shop card thumbnail
+        images: form.gallery && form.gallery.length > 0 ? [form.gallery[0]] : form.images,
         variantImages: !form.gallery && Object.keys(form.variantImages ?? {}).length > 0 ? form.variantImages : undefined,
         variantHeroes: Object.keys(form.variantHeroes ?? {}).length > 0 ? form.variantHeroes : undefined,
         variantVideos: Object.keys(form.variantVideos ?? {}).length > 0 ? form.variantVideos : undefined,
@@ -1404,14 +1394,12 @@ export default function ProductEditor({ params }: { params: Promise<{ id: string
                 images={form.gallery}
                 variants={form.variants ?? []}
                 variantHeroes={form.variantHeroes ?? {}}
-                mainImage={form.images[0]}
                 onReorder={(imgs) => setForm((f) => ({ ...f, gallery: imgs }))}
                 onUpload={uploadFile}
                 onSetHero={(variant, img) => setForm((f) => ({
                   ...f,
                   variantHeroes: { ...(f.variantHeroes ?? {}), [variant]: img },
                 }))}
-                onSetMain={(img) => setForm((f) => ({ ...f, images: [img] }))}
               />
             </div>
           ) : (

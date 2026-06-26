@@ -67,16 +67,18 @@ export default async function ProductPage({ params }: { params: Promise<{ id: st
   if (!product) notFound();
 
   // JSON-LD structured data for Google Shopping rich results
-  const firstImage =
-    (product.variants?.[0] && product.variantImages?.[product.variants[0]]?.[0]) ||
-    product.images?.[0] ||
-    "/images/og-image.jpg";
+  const perProductInfographics = new Set(product.infographicImages ?? []);
+  const isInfographic = (src: string) => INFOGRAPHIC_IMAGES.has(src) || perProductInfographics.has(src);
 
   const allImages = (
-    product.variants?.length && product.variantImages
-      ? product.variants.flatMap((v) => product.variantImages![v] ?? [])
-      : (product.images ?? [])
-  ).filter((src) => !INFOGRAPHIC_IMAGES.has(src) && !(product.infographicImages ?? []).includes(src));
+    product.gallery
+      ? product.gallery
+      : product.variants?.length && product.variantImages
+        ? product.variants.flatMap((v) => product.variantImages![v] ?? [])
+        : (product.images ?? [])
+  ).filter((src) => !isInfographic(src));
+
+  const firstImage = product.images?.[0] || allImages[0] || "/images/og-image.jpg";
 
   const productJsonLd = {
     "@context": "https://schema.org",

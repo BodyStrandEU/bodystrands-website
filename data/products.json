@@ -989,58 +989,6 @@
           "Medium (+14cm ext)",
           "Large (+23cm ext)"
         ]
-      },
-      {
-        "label": "Metal Color",
-        "options": [
-          "Gold Stainless",
-          "Silver Stainless"
-        ]
-      },
-      {
-        "label": "Choose Your Stack",
-        "type": "options",
-        "options": [
-          "Single Bracelet",
-          "Double Stack (2)",
-          "Triple Stack (3)"
-        ]
-      },
-      {
-        "label": "Design",
-        "type": "options",
-        "options": [
-          "Small 71 cm - 81 cm",
-          "Medium 71 cm - 91 cm",
-          "Large 71 cm - 100 cm"
-        ]
-      },
-      {
-        "label": "Length",
-        "type": "options",
-        "options": [
-          "Small 71 cm - 81 cm",
-          "Medium 71 cm - 91 cm",
-          "Large 71 cm - 100 cm"
-        ]
-      },
-      {
-        "label": "Horoscope",
-        "type": "options",
-        "options": [
-          "Capricorn 12/22-1/19",
-          "Aquarius 1/20-2/18",
-          "Pisces 2/19-3/20",
-          "Aries 3/21-4/19",
-          "Taurus 4/20-5/20",
-          "Gemini 5/21-6/20",
-          "Cancer 6/21-7/22",
-          "Leo 7/23-8/22",
-          "Virgo 8/23-9/22",
-          "Libra 9/23-10/22",
-          "Scorpio 10/23-11/21",
-          "Sagitt. 11/22-12/21"
-        ]
       }
     ],
     "variantVideos": {
@@ -1050,16 +998,15 @@
     "altText": "Dainty gold body chain in stainless steel, adjustable festival wear for minimalist body jewelry enthusiasts",
     "gallery": [
       "/images/products/Untitled-design--1-.png",
-      "https://i.etsystatic.com/55122258/r/il/1d08fb/7739339773/il_fullxfull.7739339773_3tb8.jpg",
+      "/images/products/3e4aeecf-aa9b-434f-8dd4-538b7fc69074.png",
       "https://i.etsystatic.com/55122258/r/il/01cb28/7801900345/il_fullxfull.7801900345_7n0g.jpg",
+      "https://i.etsystatic.com/55122258/r/il/1d08fb/7739339773/il_fullxfull.7739339773_3tb8.jpg",
       "/images/products/85c77225-f32d-4de3-b3f3-91732290d8d5.png",
       "/images/products/Untitled-design--1--copy-2.png",
-      "/images/products/Listings-for-Bodystrands.jpeg",
-      "/images/products/124ba28f-2fa0-4150-a3ed-25d6d7f90841-md.jpg",
-      "/images/products/3e4aeecf-aa9b-434f-8dd4-538b7fc69074.png",
       "/images/products/a5999a38-d6e5-47aa-b1b3-76c16581b41e.png",
       "https://i.etsystatic.com/55122258/r/il/5aed4c/7691395674/il_fullxfull.7691395674_31gb.jpg",
-      "/images/products/AW6C0518-2.jpg"
+      "/images/products/AW6C0518-2.jpg",
+      "/images/products/124ba28f-2fa0-4150-a3ed-25d6d7f90841-md.jpg"
     ],
     "variantHeroes": {
       "Gold Tone": "/images/products/Untitled-design--1-.png",

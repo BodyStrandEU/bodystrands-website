@@ -43,14 +43,19 @@ export default function ProductGallery({
   // Reset/jump when variant changes
   useEffect(() => {
     if (product.gallery && product.variantHeroes?.[activeVariant]) {
-      const heroIdx = product.gallery.indexOf(product.variantHeroes[activeVariant]);
-      setActiveIndex(heroIdx !== -1 ? heroIdx : 0);
+      const heroUrl = product.variantHeroes[activeVariant];
+      // Search in the actual media array (video is spliced at index 1, shifting all later items)
+      const vid = product.variantVideos?.[activeVariant] ?? product.video
+        ?? (product.variantVideos ? Object.values(product.variantVideos)[0] : undefined);
+      const mediaItems = buildMedia(product.gallery, vid);
+      const heroMediaIdx = mediaItems.findIndex((m) => m.type === "image" && m.src === heroUrl);
+      setActiveIndex(heroMediaIdx !== -1 ? heroMediaIdx : 0);
     } else {
       setActiveIndex(0);
     }
     setVideoError(false);
     setVideoReady(false);
-  }, [activeVariant, product.gallery, product.variantHeroes]);
+  }, [activeVariant, product.gallery, product.variantHeroes, product.video, product.variantVideos]);
 
   // If video errored while user was on the video slide, step back to slide 0
   useEffect(() => {

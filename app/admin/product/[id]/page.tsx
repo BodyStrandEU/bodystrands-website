@@ -24,14 +24,22 @@ import { CATEGORIES, type Category, type Product } from "@/lib/products";
 
 // ─── Sortable image item ──────────────────────────────────────────────────────
 
+interface HeroBadge {
+  label: string;
+  active: boolean;
+  activeColor: string;
+  onClick: () => void;
+}
+
 interface SortableImageProps {
   id: string;
   url: string;
   onDelete: (url: string) => void;
   localPreview?: string;
+  heroBadges?: HeroBadge[];
 }
 
-function SortableImage({ id, url, onDelete, localPreview }: SortableImageProps) {
+function SortableImage({ id, url, onDelete, localPreview, heroBadges }: SortableImageProps) {
   const { attributes, listeners, setNodeRef, transform, transition, isDragging } =
     useSortable({ id });
 
@@ -101,6 +109,39 @@ function SortableImage({ id, url, onDelete, localPreview }: SortableImageProps) 
         >
           ×
         </button>
+        {/* Inline hero/main badge buttons — only shown in gallery mode */}
+        {heroBadges && heroBadges.length > 0 && (
+          <div style={{ position: "absolute", bottom: "2px", left: "2px", display: "flex", gap: "2px" }}>
+            {heroBadges.map((badge) => (
+              <button
+                key={badge.label}
+                type="button"
+                onPointerDown={(e) => e.stopPropagation()}
+                onClick={(e) => { e.stopPropagation(); badge.onClick(); }}
+                title={badge.active ? `Currently set as ${badge.label}` : `Set as ${badge.label}`}
+                style={{
+                  width: "20px",
+                  height: "20px",
+                  borderRadius: "3px",
+                  border: badge.active ? `1px solid ${badge.activeColor}` : "1px solid rgba(255,255,255,0.3)",
+                  background: badge.active ? badge.activeColor : "rgba(0,0,0,0.55)",
+                  color: "#fff",
+                  fontSize: "9px",
+                  fontWeight: 700,
+                  cursor: "pointer",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  lineHeight: 1,
+                  letterSpacing: 0,
+                  transition: "all 0.12s",
+                }}
+              >
+                {badge.label}
+              </button>
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );
@@ -205,6 +246,158 @@ function ImageSection({ title, images, onChange, onUpload }: ImageSectionProps) 
           setDragOver(false);
           void handleFiles(e.dataTransfer.files);
         }}
+        style={{
+          display: "block",
+          padding: "1rem",
+          border: `2px dashed ${dragOver ? "#A0622A" : "var(--admin-border2)"}`,
+          borderRadius: "4px",
+          textAlign: "center",
+          cursor: isUploading ? "wait" : "pointer",
+          background: dragOver ? "#fdf6f0" : "var(--admin-bg)",
+          transition: "all 0.15s",
+        }}
+      >
+        <input
+          type="file"
+          accept="image/jpeg,image/png,image/webp,video/mp4,video/quicktime"
+          multiple
+          style={{ display: "none" }}
+          onChange={(e) => { void handleFiles(e.target.files); }}
+          disabled={isUploading}
+        />
+        <span style={{ fontSize: "0.78rem", color: "var(--admin-muted)" }}>
+          {isUploading ? "Uploading..." : "Drop files here or click to upload (jpg, png, webp, mp4, mov)"}
+        </span>
+      </label>
+    </div>
+  );
+}
+
+// ─── Gallery section (unified mode) — images with inline hero badges ─────────
+
+const VARIANT_BADGE_COLORS: Record<string, string> = {
+  "Gold Tone": "#C8A84B",
+  "Silver Tone": "#9ca3af",
+};
+
+interface GallerySectionProps {
+  images: string[];
+  variants: string[];
+  variantHeroes: Record<string, string>;
+  mainImage: string | undefined;
+  onReorder: (imgs: string[]) => void;
+  onUpload: (file: File) => Promise<string>;
+  onSetHero: (variant: string, img: string) => void;
+  onSetMain: (img: string) => void;
+}
+
+function GallerySection({
+  images,
+  variants,
+  variantHeroes,
+  mainImage,
+  onReorder,
+  onUpload,
+  onSetHero,
+  onSetMain,
+}: GallerySectionProps) {
+  const [dragOver, setDragOver] = useState(false);
+  const [pending, setPending] = useState<{ id: string; previewUrl: string }[]>([]);
+  const [localPreviews, setLocalPreviews] = useState<Record<string, string>>({});
+
+  const sensors = useSensors(
+    useSensor(PointerSensor),
+    useSensor(KeyboardSensor, { coordinateGetter: sortableKeyboardCoordinates })
+  );
+
+  function handleDragEnd(event: DragEndEvent) {
+    const { active, over } = event;
+    if (over && active.id !== over.id) {
+      const oldIndex = images.indexOf(active.id as string);
+      const newIndex = images.indexOf(over.id as string);
+      onReorder(arrayMove(images, oldIndex, newIndex));
+    }
+  }
+
+  async function handleFiles(files: FileList | null) {
+    if (!files || files.length === 0) return;
+    const items = Array.from(files).map((file) => ({
+      id: Math.random().toString(36).slice(2),
+      file,
+      previewUrl: URL.createObjectURL(file),
+    }));
+    setPending((p) => [...p, ...items.map(({ id, previewUrl }) => ({ id, previewUrl }))]);
+    try {
+      for (const item of items) {
+        const url = await onUpload(item.file);
+        setLocalPreviews((prev) => ({ ...prev, [url]: item.previewUrl }));
+        setPending((p) => p.filter((x) => x.id !== item.id));
+        onReorder([...images, url]);
+      }
+    } catch (err) {
+      items.forEach((item) => { setPending((p) => p.filter((x) => x.id !== item.id)); });
+      alert(`Upload failed: ${err instanceof Error ? err.message : String(err)}`);
+    }
+  }
+
+  const isUploading = pending.length > 0;
+
+  return (
+    <div style={{ marginBottom: "1.5rem" }}>
+      <h4 style={{ margin: "0 0 0.4rem", fontSize: "0.85rem", fontWeight: 600, color: "var(--admin-text2)" }}>
+        All Images (drag to reorder)
+      </h4>
+      <p style={{ margin: "0 0 0.75rem", fontSize: "0.72rem", color: "var(--admin-muted)" }}>
+        Click <strong>★</strong> to set the shop card thumbnail.
+        {variants.length > 0 && <> Click <strong>{variants.map(v => v.charAt(0)).join(" / ")}</strong> to set the hero image shown when a buyer picks that tone.</>}
+      </p>
+
+      <DndContext sensors={sensors} collisionDetection={closestCenter} onDragEnd={handleDragEnd}>
+        <SortableContext items={images} strategy={rectSortingStrategy}>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: "0.5rem", marginBottom: "0.75rem" }}>
+            {images.map((url) => {
+              const badges: HeroBadge[] = [
+                {
+                  label: "★",
+                  active: url === mainImage,
+                  activeColor: "#A0622A",
+                  onClick: () => onSetMain(url),
+                },
+                ...variants.map((v) => ({
+                  label: v.charAt(0),
+                  active: variantHeroes[v] === url,
+                  activeColor: VARIANT_BADGE_COLORS[v] ?? "#A0622A",
+                  onClick: () => onSetHero(v, url),
+                })),
+              ];
+              return (
+                <SortableImage
+                  key={url}
+                  id={url}
+                  url={url}
+                  onDelete={(img) => onReorder(images.filter((x) => x !== img))}
+                  localPreview={localPreviews[url]}
+                  heroBadges={badges}
+                />
+              );
+            })}
+            {pending.map((p) => (
+              <div key={p.id} style={{ width: "100px", height: "100px", border: "1px solid var(--admin-border)", borderRadius: "4px", overflow: "hidden", position: "relative", background: "var(--admin-surface2)" }}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={p.previewUrl} alt="" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+                <div style={{ position: "absolute", inset: 0, background: "rgba(0,0,0,0.35)", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                  <span style={{ color: "#fff", fontSize: "0.55rem", letterSpacing: "0.08em", textTransform: "uppercase" }}>Uploading…</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </SortableContext>
+      </DndContext>
+
+      <label
+        onDragOver={(e) => { e.preventDefault(); setDragOver(true); }}
+        onDragLeave={() => setDragOver(false)}
+        onDrop={(e) => { e.preventDefault(); setDragOver(false); void handleFiles(e.dataTransfer.files); }}
         style={{
           display: "block",
           padding: "1rem",
@@ -1207,81 +1400,19 @@ export default function ProductEditor({ params }: { params: Promise<{ id: string
           {/* Unified Gallery Mode */}
           {form.gallery ? (
             <div>
-              {/* Flat image list */}
-              <ImageSection
-                title="All Images (drag to reorder)"
+              <GallerySection
                 images={form.gallery}
-                onChange={(imgs) => setForm((f) => ({ ...f, gallery: imgs }))}
+                variants={form.variants ?? []}
+                variantHeroes={form.variantHeroes ?? {}}
+                mainImage={form.images[0]}
+                onReorder={(imgs) => setForm((f) => ({ ...f, gallery: imgs }))}
                 onUpload={uploadFile}
+                onSetHero={(variant, img) => setForm((f) => ({
+                  ...f,
+                  variantHeroes: { ...(f.variantHeroes ?? {}), [variant]: img },
+                }))}
+                onSetMain={(img) => setForm((f) => ({ ...f, images: [img] }))}
               />
-
-              {/* Hero selectors per variant */}
-              {(form.variants ?? []).length > 0 && (
-                <div style={{ marginTop: "1.25rem" }}>
-                  <p style={{ margin: "0 0 0.75rem", fontSize: "0.78rem", fontWeight: 600, color: "var(--admin-text2)", textTransform: "uppercase", letterSpacing: "0.05em" }}>
-                    Variant Hero Images
-                  </p>
-                  <p style={{ margin: "0 0 1rem", fontSize: "0.75rem", color: "var(--admin-muted)" }}>
-                    Click an image to set it as the hero for that variant. When a buyer selects that variant, this image appears first.
-                  </p>
-                  {(form.variants ?? []).map((v) => (
-                    <div key={v} style={{ marginBottom: "1.25rem" }}>
-                      <p style={{ margin: "0 0 0.5rem", fontSize: "0.82rem", fontWeight: 600, color: "var(--admin-text)" }}>{v}</p>
-                      <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap" }}>
-                        {(form.gallery ?? []).map((img) => {
-                          const isHero = (form.variantHeroes ?? {})[v] === img;
-                          return (
-                            <button
-                              key={img}
-                              type="button"
-                              onClick={() => setForm((f) => ({ ...f, variantHeroes: { ...(f.variantHeroes ?? {}), [v]: img } }))}
-                              title={isHero ? `Hero for ${v}` : `Set as ${v} hero`}
-                              style={{
-                                position: "relative",
-                                width: "64px",
-                                height: "64px",
-                                padding: 0,
-                                border: isHero ? "2px solid #A0622A" : "2px solid var(--admin-border)",
-                                borderRadius: "4px",
-                                overflow: "hidden",
-                                cursor: "pointer",
-                                background: "var(--admin-surface2)",
-                              }}
-                            >
-                              {/* eslint-disable-next-line @next/next/no-img-element */}
-                              <img src={img} alt="" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
-                              {isHero && (
-                                <span style={{
-                                  position: "absolute", bottom: 0, left: 0, right: 0,
-                                  background: "#A0622A", color: "#fff",
-                                  fontSize: "0.55rem", textAlign: "center", padding: "1px 0",
-                                  fontWeight: 700, letterSpacing: "0.05em",
-                                }}>
-                                  HERO
-                                </span>
-                              )}
-                            </button>
-                          );
-                        })}
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              )}
-
-              {/* Variant list (names only — for customer selectors, no image blocks) */}
-              <div style={{ marginTop: "1rem", borderTop: "1px solid var(--admin-border)", paddingTop: "1rem" }}>
-                <p style={{ margin: "0 0 0.5rem", fontSize: "0.75rem", fontWeight: 600, color: "var(--admin-text2)", textTransform: "uppercase", letterSpacing: "0.05em" }}>
-                  Tone Variants
-                </p>
-                <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap" }}>
-                  {(form.variants ?? []).map((v) => (
-                    <span key={v} style={{ fontSize: "0.8rem", padding: "0.25rem 0.75rem", background: "var(--admin-surface2)", border: "1px solid var(--admin-border)", borderRadius: "4px", color: "var(--admin-text)" }}>
-                      {v}
-                    </span>
-                  ))}
-                </div>
-              </div>
             </div>
           ) : (
             /* Per-Variant Mode (existing behavior) */

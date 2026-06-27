@@ -7959,5 +7959,72 @@
       "/images/products/birth-flower-charm-bracelet/035ca701-d84a-49fd-8b8d-196dd1903eb0.png",
       "/images/products/birth-flower-charm-bracelet/f6314926-4454-4b6d-947b-0b5470742a2e.png"
     ]
+  },
+  {
+    "id": "pink-cross-charm-bracelet",
+    "name": "Pink Cross Charm Bracelet",
+    "price": 30,
+    "currency": "EUR",
+    "category": "Bracelets",
+    "description": "A soft pink enamel cross charm on a delicate gold mirror-link chain — understated faith jewelry you can wear every day without taking off. Made from 316L stainless steel, it's fully waterproof and tarnish-free. Fastens with a lobster clasp and includes a 5 cm extension chain so you can adjust the fit. Available from 14 to 23 cm.",
+    "variants": [
+      "14 CM",
+      "15 CM",
+      "16 CM",
+      "17 CM",
+      "18 CM",
+      "19 CM",
+      "20 CM",
+      "21 CM",
+      "22 CM",
+      "23 CM"
+    ],
+    "variantGroups": [
+      {
+        "name": "Size",
+        "options": [
+          "14 CM",
+          "15 CM",
+          "16 CM",
+          "17 CM",
+          "18 CM",
+          "19 CM",
+          "20 CM",
+          "21 CM",
+          "22 CM",
+          "23 CM"
+        ]
+      }
+    ],
+    "images": [
+      "/images/products/pink-cross-charm-bracelet/72b7106a-7423-47b8-b131-427b12d83546.png"
+    ],
+    "gallery": [
+      "/images/products/pink-cross-charm-bracelet/72b7106a-7423-47b8-b131-427b12d83546.png",
+      "/images/products/pink-cross-charm-bracelet/bc9e6a17-4222-4642-87a4-33d3bb1830e2.png",
+      "/images/products/pink-cross-charm-bracelet/93141b7c-c1b3-49c9-80be-c8d93a031d37.png",
+      "/images/products/pink-cross-charm-bracelet/c79b1023-33a0-4607-a357-ed311593fee0.png",
+      "/images/products/pink-cross-charm-bracelet/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg",
+      "/images/products/pink-cross-charm-bracelet/55110011-2bba-4572-8dcb-5f9d06f99c32.png"
+    ],
+    "video": "/images/products/pink-cross-charm-bracelet/0627.mp4",
+    "altText": "Pink enamel cross charm bracelet on gold mirror-link chain, 316L stainless steel waterproof faith bracelet for First Communion, Confirmation and Baptism gifts",
+    "tags": [
+      "cross charm bracelet",
+      "pink cross bracelet",
+      "gold cross bracelet",
+      "dainty cross bracelet",
+      "religious jewelry women",
+      "enamel cross bracelet",
+      "first communion gift",
+      "confirmation gift",
+      "faith bracelet",
+      "stainless steel bracelet",
+      "waterproof bracelet",
+      "adjustable bracelet",
+      "gold chain bracelet",
+      "pink enamel jewelry",
+      "gift for her"
+    ]
   }
 ]

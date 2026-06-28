@@ -4182,8 +4182,8 @@
     "price": 40,
     "currency": "EUR",
     "category": "Shoulder Chains",
-    "description": "Your evening gown's most striking accent. This dainty silver shoulder harness drapes elegantly across the body — handcrafted stainless steel with adjustable sizing for Small, Medium, or Large/Plus.",
-    "fullDescription": "A structured yet delicate shoulder harness that drapes from the neck across the shoulders and down the chest, creating a statement silhouette for evening gowns, bachelorette looks, and any occasion that calls for something extraordinary.\n\nAvailable in Silver or Gold stainless steel. Three sizes: Small, Medium, Large/Plus. Message us your measurements after ordering and we'll customise the fit.",
+    "description": "Your evening gown's most striking accent. This dainty shoulder harness drapes elegantly across the body — handcrafted stainless steel with four sizes to choose from.",
+    "fullDescription": "A structured yet delicate shoulder harness that drapes from the neck across the shoulders and down the chest, creating a statement silhouette for evening gowns, bachelorette looks, and any occasion that calls for something extraordinary.\n\nAvailable in Gold or Silver stainless steel.\n\nSizing:\nS — Neck Chain: 34.5 cm (13.6\") · Extension: 8 cm (3.1\") · Shoulder Chain: 51 cm (20.1\")\nM — Neck Chain: 35.5 cm (14\") · Extension: 9 cm (3.5\") · Shoulder Chain: 56 cm (22\")\nL — Neck Chain: 36.5 cm (14.4\") · Extension: 9 cm (3.5\") · Shoulder Chain: 60.5 cm (23.8\")\nXL — Neck Chain: 38 cm (15\") · Extension: 10 cm (3.9\") · Shoulder Chain: 65 cm (25.6\")\n\nNeed a custom size? Message us after ordering and we'll adjust at no extra cost.",
     "specs": [
       {
         "label": "Material",
@@ -4195,7 +4195,23 @@
       },
       {
         "label": "Sizes",
-        "value": "Small, Medium, Large/Plus"
+        "value": "S, M, L, XL"
+      },
+      {
+        "label": "S",
+        "value": "Neck 34.5 cm · Extension 8 cm · Shoulder 51 cm"
+      },
+      {
+        "label": "M",
+        "value": "Neck 35.5 cm · Extension 9 cm · Shoulder 56 cm"
+      },
+      {
+        "label": "L",
+        "value": "Neck 36.5 cm · Extension 9 cm · Shoulder 60.5 cm"
+      },
+      {
+        "label": "XL",
+        "value": "Neck 38 cm · Extension 10 cm · Shoulder 65 cm"
       },
       {
         "label": "Style",
@@ -4231,9 +4247,10 @@
       {
         "label": "Size",
         "options": [
-          "Small",
-          "Medium",
-          "Large/Plus size"
+          "S (34.5 cm neck)",
+          "M (35.5 cm neck)",
+          "L (36.5 cm neck)",
+          "XL (38 cm neck)"
         ]
       }
     ],

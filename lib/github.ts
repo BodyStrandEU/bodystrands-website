@@ -31,6 +31,13 @@ export async function getFile(path: string): Promise<GitHubFileResult> {
   return { content, sha: data.sha };
 }
 
+function committer() {
+  return {
+    name: process.env.GITHUB_COMMITTER_NAME ?? "Bodystrands Admin",
+    email: process.env.GITHUB_COMMITTER_EMAIL ?? "noreply@github.com",
+  };
+}
+
 export async function putFile(
   path: string,
   content: string,
@@ -38,10 +45,12 @@ export async function putFile(
   message: string
 ): Promise<void> {
   const url = `${GITHUB_API}/repos/${REPO}/contents/${path}`;
-  const body: Record<string, string> = {
+  const body: Record<string, unknown> = {
     message,
     content: Buffer.from(content, "utf-8").toString("base64"),
     branch: BRANCH,
+    committer: committer(),
+    author: committer(),
   };
   if (sha) body.sha = sha;
 
@@ -62,7 +71,7 @@ export async function deleteFile(
   message: string
 ): Promise<void> {
   const url = `${GITHUB_API}/repos/${REPO}/contents/${path}`;
-  const body = { message, sha, branch: BRANCH };
+  const body = { message, sha, branch: BRANCH, committer: committer(), author: committer() };
   const res = await fetch(url, {
     method: "DELETE",
     headers: getHeaders(),
@@ -89,10 +98,12 @@ export async function uploadImage(
   }
 
   const url = `${GITHUB_API}/repos/${REPO}/contents/${path}`;
-  const body: Record<string, string> = {
+  const body: Record<string, unknown> = {
     message: `Upload product image: ${filename}`,
     content: base64Content,
     branch: BRANCH,
+    committer: committer(),
+    author: committer(),
   };
   if (sha) body.sha = sha;
 

@@ -144,6 +144,27 @@ h1, h2, h3, h4 {
   transform: translateY(0);
 }
 
+/* Hero text entrance — staggered fade-up */
+@keyframes hero-fade-up {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.hero-enter {
+  animation: hero-fade-up 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+/* Scroll indicator — fades in, bounces, fades out, loops seamlessly */
+@keyframes scroll-cue {
+  0%    { opacity: 0;    transform: translateY(0); }
+  18%   { opacity: 0.35; transform: translateY(0); }
+  48%   { opacity: 0.35; transform: translateY(7px); }
+  78%   { opacity: 0.35; transform: translateY(0); }
+  100%  { opacity: 0;    transform: translateY(0); }
+}
+.scroll-cue {
+  animation: scroll-cue 3.2s ease-in-out 1.8s infinite both;
+}
+
 /* Blog post inline product links */
 .blog-content a {
   color: #A0622A;

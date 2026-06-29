@@ -180,6 +180,15 @@ export default function ProductCard({ product, priority = false }: { product: Pr
           </div>
         )}
 
+        {/* Quick-view pill — desktop hover only */}
+        <div className={`absolute inset-x-0 flex justify-center z-10 pointer-events-none transition-[opacity,transform] duration-300 opacity-0 group-hover:opacity-100 translate-y-1 group-hover:translate-y-0 ${
+          product.variants && product.variants.length > 1 ? "bottom-14" : "bottom-9"
+        }`}>
+          <span className="bg-white/85 text-[#2C2220] text-[0.5rem] tracking-[0.25em] uppercase px-5 py-2">
+            View Piece
+          </span>
+        </div>
+
         {/* Desktop prev / next arrows */}
         {combinedImages.length > 1 && (
           <>
@@ -221,20 +230,25 @@ export default function ProductCard({ product, priority = false }: { product: Pr
       </div>
 
       {/* Info */}
-      <div className="pt-1.5 px-0.5">
-        <h3 className="text-[0.65rem] font-light tracking-[0.03em] text-[#2C2220] leading-tight group-hover:text-[#A0622A] transition-colors duration-300 truncate">
+      <div className="pt-3 px-1">
+        <h3 className="text-[0.7rem] font-light tracking-[0.03em] text-[#2C2220] leading-tight group-hover:text-[#A0622A] transition-colors duration-300 truncate">
           {product.name}
         </h3>
-        <div className="mt-0.5 flex items-baseline gap-1.5 flex-wrap">
-          <span className="text-[0.65rem] font-light tracking-wide text-[#A0622A]">
-            {symbol}{product.price.toFixed(2)}
-          </span>
-          <span className="text-[0.58rem] font-light tracking-wide text-[#8C7B6E]/50 line-through">
-            {symbol}{getOriginalPrice(product.price).toFixed(2)}
+        <div className="mt-1 flex items-baseline justify-between gap-1.5">
+          <div className="flex items-baseline gap-1.5 flex-wrap">
+            <span className="text-[0.68rem] font-light tracking-wide text-[#A0622A]">
+              {symbol}{product.price.toFixed(2)}
+            </span>
+            <span className="text-[0.58rem] font-light tracking-wide text-[#8C7B6E]/50 line-through">
+              {symbol}{getOriginalPrice(product.price).toFixed(2)}
+            </span>
+          </div>
+          <span className="text-[#A0622A] text-[0.75rem] leading-none opacity-0 group-hover:opacity-100 -translate-x-1 group-hover:translate-x-0 transition-[opacity,transform] duration-300">
+            →
           </span>
         </div>
         {product.variants && product.variants.length > 1 && (
-          <p className="mt-0 text-[0.45rem] tracking-[0.12em] uppercase text-[#8C7B6E]">
+          <p className="mt-0.5 text-[0.45rem] tracking-[0.12em] uppercase text-[#8C7B6E]">
             {activeVariant ?? product.variants.join(" · ")}
           </p>
         )}

@@ -75,21 +75,28 @@ export default function HomePage() {
         </div>
         <div className="flex-1" />
         <div className="relative z-10 flex flex-col items-center text-center px-6 pb-20 md:pb-28">
-          <p className="text-[0.6rem] tracking-[0.4em] uppercase text-[#E8B4A8] mb-5">
+          <p className="hero-enter text-[0.6rem] tracking-[0.4em] uppercase text-[#E8B4A8] mb-5" style={{ animationDelay: "0.05s" }}>
             Handmade Body Jewelry
           </p>
-          <h1 className="font-heading text-5xl md:text-7xl font-light text-white leading-[1.05] mb-8 drop-shadow-md">
+          <h1 className="hero-enter font-heading text-5xl md:text-7xl font-light text-white leading-[1.05] mb-8 drop-shadow-md" style={{ animationDelay: "0.3s" }}>
             Wear it.<br />
             <em className="not-italic text-[#E8B4A8]">Feel it.</em>
           </h1>
-          <p className="text-sm font-light leading-relaxed tracking-wide text-white/80 mb-10 max-w-sm">
+          <p className="hero-enter text-sm font-light leading-relaxed tracking-wide text-white/80 mb-10 max-w-sm" style={{ animationDelay: "0.52s" }}>
             Dainty, minimal body chains crafted by hand. Made to move with you.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4">
+          <div className="hero-enter flex flex-col sm:flex-row gap-4" style={{ animationDelay: "0.7s" }}>
             <Link href="/shop" className="btn-primary-filled text-center">Shop Now</Link>
             <Link href="/about" className="text-[0.65rem] tracking-[0.22em] uppercase border border-white/50 text-white hover:bg-white/10 transition-colors px-8 py-3 text-center">
               Our Story
             </Link>
+          </div>
+          {/* Scroll cue */}
+          <div className="scroll-cue mt-12 flex flex-col items-center gap-2">
+            <span className="text-[0.42rem] tracking-[0.45em] uppercase text-white">Scroll</span>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.3" className="text-white">
+              <polyline points="6 9 12 15 18 9" />
+            </svg>
           </div>
         </div>
       </section>

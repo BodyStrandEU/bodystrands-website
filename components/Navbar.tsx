@@ -95,44 +95,48 @@ export default function Navbar() {
                 </span>
               </button>
 
-              {/* Dropdown panel */}
-              {shopOpen && (
-                <div className="absolute top-full left-1/2 -translate-x-1/2 mt-6 w-96 bg-[#FDF9F7] border border-[#E8B4A8]/30 shadow-lg p-8">
-                  <div className="flex gap-12">
-                    <div className="flex flex-col gap-0">
+              {/* Dropdown panel — always in DOM, animated via CSS */}
+              <div
+                className={`absolute top-full left-1/2 -translate-x-1/2 mt-6 w-96 bg-[#FDF9F7] border border-[#E8B4A8]/30 shadow-lg p-8 transition-all duration-200 ease-out ${
+                  shopOpen
+                    ? "opacity-100 pointer-events-auto"
+                    : "opacity-0 -translate-y-2 pointer-events-none"
+                }`}
+              >
+                <div className="flex gap-12">
+                  <div className="flex flex-col gap-0">
+                    <Link
+                      href="/shop"
+                      onClick={() => setShopOpen(false)}
+                      className="py-2 text-[0.6rem] tracking-[0.18em] uppercase text-[#A0622A] hover:text-[#2C2220] transition-colors border-b border-[#E8B4A8]/30 mb-2 font-normal"
+                    >
+                      All Pieces
+                    </Link>
+                    {col1.map((cat) => (
                       <Link
-                        href="/shop"
+                        key={cat}
+                        href={`/shop?category=${encodeURIComponent(cat)}`}
                         onClick={() => setShopOpen(false)}
-                        className="py-2 text-[0.6rem] tracking-[0.18em] uppercase text-[#A0622A] hover:text-[#2C2220] transition-colors border-b border-[#E8B4A8]/30 mb-2 font-normal"
+                        className="py-1.5 text-[0.58rem] tracking-[0.15em] uppercase text-[#8C7B6E] hover:text-[#2C2220] transition-colors"
                       >
-                        All Pieces
+                        {cat}
                       </Link>
-                      {col1.map((cat) => (
-                        <Link
-                          key={cat}
-                          href={`/shop?category=${encodeURIComponent(cat)}`}
-                          onClick={() => setShopOpen(false)}
-                          className="py-1.5 text-[0.58rem] tracking-[0.15em] uppercase text-[#8C7B6E] hover:text-[#2C2220] transition-colors"
-                        >
-                          {cat}
-                        </Link>
-                      ))}
-                    </div>
-                    <div className="flex flex-col gap-0 pt-10">
-                      {col2.map((cat) => (
-                        <Link
-                          key={cat}
-                          href={`/shop?category=${encodeURIComponent(cat)}`}
-                          onClick={() => setShopOpen(false)}
-                          className="py-1.5 text-[0.58rem] tracking-[0.15em] uppercase text-[#8C7B6E] hover:text-[#2C2220] transition-colors"
-                        >
-                          {cat}
-                        </Link>
-                      ))}
-                    </div>
+                    ))}
+                  </div>
+                  <div className="flex flex-col gap-0 pt-10">
+                    {col2.map((cat) => (
+                      <Link
+                        key={cat}
+                        href={`/shop?category=${encodeURIComponent(cat)}`}
+                        onClick={() => setShopOpen(false)}
+                        className="py-1.5 text-[0.58rem] tracking-[0.15em] uppercase text-[#8C7B6E] hover:text-[#2C2220] transition-colors"
+                      >
+                        {cat}
+                      </Link>
+                    ))}
                   </div>
                 </div>
-              )}
+              </div>
             </div>
 
             {pages.map((link) => (
@@ -188,9 +192,13 @@ export default function Navbar() {
           </div>
         </div>
 
-        {/* Mobile menu */}
-        {menuOpen && (
-          <div className="md:hidden bg-[#FDF9F7] border-t border-[#E8B4A8]/30 px-6 py-8 max-h-[80vh] overflow-y-auto">
+        {/* Mobile menu — always in DOM, animated via max-height */}
+        <div
+          className={`md:hidden bg-[#FDF9F7] border-t border-[#E8B4A8]/30 overflow-hidden transition-all duration-300 ease-in-out ${
+            menuOpen ? "max-h-[80vh] opacity-100" : "max-h-0 opacity-0"
+          }`}
+        >
+          <div className="px-6 py-8">
             <p className="text-[0.52rem] tracking-[0.3em] uppercase text-[#A0622A] mb-4">Shop</p>
             <Link
               href="/shop"
@@ -222,7 +230,7 @@ export default function Navbar() {
               ))}
             </div>
           </div>
-        )}
+        </div>
       </div>
     </header>
 

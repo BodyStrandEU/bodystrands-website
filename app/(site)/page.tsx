@@ -171,7 +171,8 @@ export default function HomePage() {
                       alt={product.altText || product.name}
                       fill
                       sizes="(max-width: 768px) 55vw, 22vw"
-                      className="object-cover object-top group-hover:scale-[1.04] transition-transform duration-700"
+                      className="object-cover group-hover:scale-[1.04] transition-transform duration-700"
+                    style={{ objectPosition: "50% 20%" }}
                     />
                   )}
                 </div>

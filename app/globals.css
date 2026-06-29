@@ -144,6 +144,12 @@ h1, h2, h3, h4 {
   transform: translateY(0);
 }
 
+/* Custom cursor — applied to <html> by CustomCursor component on pointer-fine devices */
+.cursor-none,
+.cursor-none * {
+  cursor: none !important;
+}
+
 /* Hero text entrance — staggered fade-up */
 @keyframes hero-fade-up {
   from { opacity: 0; transform: translateY(24px); }

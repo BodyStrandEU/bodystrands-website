@@ -3,6 +3,7 @@ import { Cormorant_Garamond, Josefin_Sans } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
 import PageTransition from "@/components/PageTransition";
+import CustomCursor from "@/components/CustomCursor";
 import { CartProvider } from "@/lib/cart";
 
 const cormorant = Cormorant_Garamond({
@@ -63,6 +64,7 @@ export default function RootLayout({
         <CartProvider>
           <PageTransition>{children}</PageTransition>
         </CartProvider>
+        <CustomCursor />
 
         {/* Step 2: load GA after page is interactive */}
         <Script

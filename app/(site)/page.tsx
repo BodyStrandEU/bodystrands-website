@@ -2,12 +2,31 @@ import fs from "fs";
 import path from "path";
 import Image from "next/image";
 import Link from "next/link";
+import SmartImage from "@/components/SmartImage";
 import ScrollReveal from "@/components/ScrollReveal";
 import ReviewsMarquee from "@/components/ReviewsMarquee";
 import LifestyleSlider from "@/components/LifestyleSlider";
 import BrandVideo from "@/components/BrandVideo";
+import { products } from "@/lib/products";
 
-// All possible category tiles — filtered at render time to only show populated categories
+const MARQUEE_TAGS = [
+  "HANDMADE",
+  "STAINLESS STEEL",
+  "SHIPS IN 1–2 DAYS",
+  "MADE IN PORTUGAL",
+  "TARNISH RESISTANT",
+  "ADJUSTABLE FIT",
+  "WATERPROOF",
+  "DAINTY DESIGNS",
+];
+
+const STATS = [
+  { number: "50+",    label: "Handmade styles"  },
+  { number: "3,000+", label: "Happy customers"  },
+  { number: "1–2",    label: "Days to dispatch" },
+  { number: "316L",   label: "Surgical steel"   },
+];
+
 const allTiles = [
   { label: "Back Chains",        href: "/shop?category=Back+Chains",         image: "/images/elvan-back-full.jpg"    },
   { label: "Body Chains",        href: "/shop?category=Body+Chains",         image: "/images/category-body.jpg"     },
@@ -34,9 +53,9 @@ function CategoryTile({ tile }: { tile: Tile }) {
           fill
           className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-[1.04]"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#2C2220]/75 via-transparent to-transparent" />
-        <div className="absolute bottom-0 left-0 p-3 md:p-5">
-          <h3 className="font-heading font-light text-white leading-tight text-lg md:text-xl">
+        <div className="absolute bottom-0 left-0 right-0 h-2/5 bg-gradient-to-t from-black/55 to-transparent" />
+        <div className="absolute bottom-0 left-0 p-3 md:p-4">
+          <h3 className="font-heading font-light text-white leading-tight text-base md:text-lg">
             {tile.label}
           </h3>
         </div>
@@ -46,7 +65,6 @@ function CategoryTile({ tile }: { tile: Tile }) {
 }
 
 export default function HomePage() {
-  // Read lifestyle images dynamically — just drop images in the folder
   const lifestyleDir = path.join(process.cwd(), "public/images/lifestyle");
   const lifestyleImages: string[] = fs.existsSync(lifestyleDir)
     ? fs
@@ -56,22 +74,27 @@ export default function HomePage() {
         .map((f) => `/images/lifestyle/${f}`)
     : [];
 
-  const heroTile  = allTiles.find((t) => t.label === "Back Chains");
-  const gridTiles = allTiles.filter((t) => t.label !== "Back Chains");
+  const heroTile     = allTiles.find((t) => t.label === "Back Chains");
+  const gridTiles    = allTiles.filter((t) => t.label !== "Back Chains");
+  const featured     = products.filter((p) => p.active !== false).slice(0, 5);
 
   return (
     <>
-      {/* Hero */}
+      {/* ── HERO — video background ── */}
       <section className="relative min-h-screen flex flex-col">
-        <div className="absolute inset-0">
-          <Image
-            src="/images/hero-back-chain.jpg"
-            alt="Bodystrands back chain jewelry"
-            fill
-            className="object-cover object-center"
-            priority
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#2C2220]/50 via-transparent to-[#2C2220]/65" />
+        <div className="absolute inset-0 overflow-hidden">
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="metadata"
+            poster="/images/hero-back-chain.jpg"
+            className="absolute inset-0 w-full h-full object-cover object-center"
+          >
+            <source src="/videos/promo.mp4" type="video/mp4" />
+          </video>
+          <div className="absolute inset-0 bg-gradient-to-b from-[#2C2220]/55 via-transparent to-[#2C2220]/70" />
         </div>
         <div className="flex-1" />
         <div className="relative z-10 flex flex-col items-center text-center px-6 pb-20 md:pb-28">
@@ -91,7 +114,6 @@ export default function HomePage() {
               Our Story
             </Link>
           </div>
-          {/* Scroll cue */}
           <div className="scroll-cue mt-12 flex flex-col items-center gap-2">
             <span className="text-[0.42rem] tracking-[0.45em] uppercase text-white">Scroll</span>
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.3" className="text-white">
@@ -101,19 +123,73 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Brand bar */}
-      <section className="bg-[#2C2220] py-5">
-        <div className="max-w-7xl mx-auto px-6 md:px-10 flex flex-wrap justify-center gap-6 md:gap-16">
-          {["Handmade", "Tarnish-Resistant", "Water-Resistant", "Adjustable Fit", "Stainless Steel"].map((tag) => (
-            <span key={tag} className="text-[0.55rem] tracking-[0.25em] uppercase text-[#E8B4A8]/60">
-              {tag}
-            </span>
+      {/* ── MARQUEE BELT ── */}
+      <div className="bg-[#2C2220] py-4 overflow-hidden select-none">
+        <div className="marquee-track flex whitespace-nowrap">
+          {[0, 1].map((i) => (
+            <div key={i} className="flex items-center shrink-0">
+              {MARQUEE_TAGS.map((tag) => (
+                <span key={tag} className="flex items-center">
+                  <span className="text-[0.5rem] tracking-[0.28em] uppercase text-[#E8B4A8]/50 px-6 md:px-8">
+                    {tag}
+                  </span>
+                  <span className="text-[#A0622A]/45 text-[0.55rem]">◆</span>
+                </span>
+              ))}
+            </div>
           ))}
         </div>
-      </section>
+      </div>
 
-      {/* Shop by Category */}
-      <section className="max-w-7xl mx-auto px-4 md:px-10 py-20 md:py-28">
+      {/* ── FEATURED STRIP ── */}
+      {featured.length > 0 && (
+        <section className="py-16 md:py-24">
+          <ScrollReveal>
+            <div className="max-w-7xl mx-auto px-6 md:px-10 mb-8 md:mb-12">
+              <div className="flex items-end justify-between">
+                <div>
+                  <p className="text-[0.6rem] tracking-[0.3em] uppercase text-[#A0622A] mb-3">Just Arrived</p>
+                  <h2 className="font-heading text-4xl md:text-5xl font-light text-[#2C2220]">New Pieces</h2>
+                </div>
+                <Link href="/shop" className="hidden md:block text-[0.6rem] tracking-[0.22em] uppercase text-[#A0622A] hover:underline underline-offset-4">
+                  View All →
+                </Link>
+              </div>
+            </div>
+          </ScrollReveal>
+          <div className="flex gap-4 md:gap-5 overflow-x-auto scrollbar-hide px-6 md:px-10 pb-2 snap-x snap-mandatory">
+            {featured.map((product) => (
+              <Link
+                key={product.id}
+                href={`/shop/${product.id}`}
+                className="group flex-shrink-0 w-[55vw] md:w-[22vw] snap-start"
+              >
+                <div className="relative overflow-hidden aspect-[3/4] bg-[#F5F1EF]">
+                  {product.images[0] && (
+                    <SmartImage
+                      src={product.images[0]}
+                      alt={product.altText || product.name}
+                      fill
+                      sizes="(max-width: 768px) 55vw, 22vw"
+                      className="object-cover object-center group-hover:scale-[1.04] transition-transform duration-700"
+                    />
+                  )}
+                </div>
+                <div className="pt-3 px-0.5">
+                  <p className="text-[0.48rem] tracking-[0.2em] uppercase text-[#8C7B6E]/70 mb-0.5">{product.category}</p>
+                  <p className="text-[0.72rem] font-light text-[#2C2220] group-hover:text-[#A0622A] transition-colors duration-300 truncate">{product.name}</p>
+                  <p className="text-[0.65rem] font-light text-[#A0622A] mt-0.5">€{product.price.toFixed(2)}</p>
+                </div>
+              </Link>
+            ))}
+            {/* trailing touch spacer */}
+            <div className="flex-shrink-0 w-4 md:hidden" aria-hidden />
+          </div>
+        </section>
+      )}
+
+      {/* ── SHOP BY CATEGORY ── */}
+      <section className="max-w-7xl mx-auto px-4 md:px-10 py-16 md:py-24">
         <ScrollReveal>
           <div className="flex items-end justify-between mb-8 md:mb-10 px-2 md:px-0">
             <div>
@@ -128,9 +204,7 @@ export default function HomePage() {
           </div>
         </ScrollReveal>
 
-        {/* Unified grid — Back Chains anchors top-left, spans 2 rows on desktop */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-1">
-          {/* Back Chains: full-width hero on mobile, 2×2 anchor on desktop */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-3">
           {heroTile && (
             <div className="col-span-2 md:row-span-2">
               <Link href={heroTile.href} className="group block h-full">
@@ -142,8 +216,8 @@ export default function HomePage() {
                     priority
                     className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-[1.04]"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#2C2220]/75 via-transparent to-transparent" />
-                  <div className="absolute bottom-0 left-0 p-4 md:p-6">
+                  <div className="absolute bottom-0 left-0 right-0 h-2/5 bg-gradient-to-t from-black/55 to-transparent" />
+                  <div className="absolute bottom-0 left-0 p-4 md:p-7">
                     <h3 className="font-heading font-light text-white leading-tight text-2xl md:text-3xl">
                       {heroTile.label}
                     </h3>
@@ -152,24 +226,50 @@ export default function HomePage() {
               </Link>
             </div>
           )}
-          {/* All 10 other categories — always visible, no animation delay */}
           {gridTiles.map((tile) => (
             <CategoryTile key={tile.label} tile={tile} />
           ))}
         </div>
       </section>
 
-      {/* Lifestyle slider */}
+      {/* ── STATEMENT ── */}
+      <ScrollReveal>
+        <section className="bg-[#2C2220] py-24 md:py-36 overflow-hidden">
+          <div className="max-w-7xl mx-auto px-6 md:px-10">
+            <p
+              className="font-heading font-light text-[#E8B4A8] leading-[0.88] tracking-tight"
+              style={{ fontSize: "clamp(3.2rem, 9vw, 7.5rem)" }}
+            >
+              Put it on.
+            </p>
+            <p
+              className="font-heading font-light italic text-white leading-[0.88] tracking-tight text-right"
+              style={{ fontSize: "clamp(3.2rem, 9vw, 7.5rem)" }}
+            >
+              Leave it on.
+            </p>
+          </div>
+        </section>
+      </ScrollReveal>
+
+      {/* ── STATS ── */}
+      <section className="border-y border-[#E8B4A8]/20 py-14 md:py-20">
+        <ScrollReveal>
+          <div className="max-w-7xl mx-auto px-6 md:px-10 grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-6">
+            {STATS.map((stat) => (
+              <div key={stat.number} className="flex flex-col items-center text-center gap-2">
+                <span className="font-heading text-4xl md:text-5xl font-light text-[#A0622A]">{stat.number}</span>
+                <span className="text-[0.55rem] tracking-[0.22em] uppercase text-[#8C7B6E]">{stat.label}</span>
+              </div>
+            ))}
+          </div>
+        </ScrollReveal>
+      </section>
+
+      {/* ── LIFESTYLE SLIDER ── */}
       <LifestyleSlider images={lifestyleImages} />
 
-      {/* Diamond divider */}
-      <div className="max-w-7xl mx-auto px-6 md:px-10 mt-20 flex items-center gap-6">
-        <div className="flex-1 h-px bg-[#E8B4A8]/30" />
-        <span className="text-[#E8B4A8]/50 text-[0.6rem]">◆</span>
-        <div className="flex-1 h-px bg-[#E8B4A8]/30" />
-      </div>
-
-      {/* Brand Story */}
+      {/* ── BRAND STORY ── */}
       <section className="max-w-7xl mx-auto px-6 md:px-10 py-20 md:py-28 grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
         <ScrollReveal>
           <BrandVideo src="/videos/promo.mp4" />
@@ -192,7 +292,7 @@ export default function HomePage() {
         </ScrollReveal>
       </section>
 
-      {/* Reviews marquee */}
+      {/* ── REVIEWS ── */}
       <div className="bg-[#FAF7F5]">
         <ReviewsMarquee />
       </div>
@@ -203,7 +303,6 @@ export default function HomePage() {
         <span className="text-[#E8B4A8]/50 text-[0.6rem]">◆</span>
         <div className="flex-1 h-px bg-[#E8B4A8]/30" />
       </div>
-
     </>
   );
 }

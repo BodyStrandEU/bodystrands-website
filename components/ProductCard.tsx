@@ -231,6 +231,7 @@ export default function ProductCard({ product, priority = false }: { product: Pr
 
       {/* Info */}
       <div className="pt-3 px-1">
+        <p className="text-[0.47rem] tracking-[0.2em] uppercase text-[#8C7B6E]/65 mb-0.5">{product.category}</p>
         <h3 className="text-[0.7rem] font-light tracking-[0.03em] text-[#2C2220] leading-tight group-hover:text-[#A0622A] transition-colors duration-300 truncate">
           {product.name}
         </h3>

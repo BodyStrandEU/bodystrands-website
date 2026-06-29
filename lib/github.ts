@@ -125,5 +125,6 @@ export async function uploadImage(
     throw new Error(`GitHub uploadImage(${filename}) failed ${res.status}: ${text}`);
   }
 
+  await triggerDeploy();
   return `/images/products/${filename}`;
 }

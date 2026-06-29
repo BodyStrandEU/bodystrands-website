@@ -140,7 +140,7 @@ export default function ProductCard({ product, priority = false }: { product: Pr
       {/* Media container */}
       <div
         ref={mediaRef}
-        className="relative overflow-hidden bg-[#FDF9F7] aspect-[3/4] select-none"
+        className="relative overflow-hidden bg-[#FDF9F7] aspect-square select-none"
         onTouchEnd={onTouchEnd}
       >
         {combinedImages.length === 0 && (

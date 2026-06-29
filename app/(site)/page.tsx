@@ -164,15 +164,14 @@ export default function HomePage() {
                 href={`/shop/${product.id}`}
                 className="group flex-shrink-0 w-[55vw] md:w-[22vw] snap-start"
               >
-                <div className="relative overflow-hidden aspect-[3/4] bg-[#F5F1EF]">
+                <div className="relative overflow-hidden aspect-square bg-[#F5F1EF]">
                   {product.images[0] && (
                     <SmartImage
                       src={product.images[0]}
                       alt={product.altText || product.name}
                       fill
                       sizes="(max-width: 768px) 55vw, 22vw"
-                      className="object-cover group-hover:scale-[1.04] transition-transform duration-700"
-                    style={{ objectPosition: "50% 20%" }}
+                      className="object-cover object-center group-hover:scale-[1.04] transition-transform duration-700"
                     />
                   )}
                 </div>

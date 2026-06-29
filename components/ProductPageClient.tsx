@@ -12,6 +12,41 @@ import { COUNTRY_GROUPS, getShippingRate } from "@/lib/shipping";
 
 const FREE_SHIPPING_THRESHOLD = 50;
 
+function ShareButton({ name }: { name: string }) {
+  const [done, setDone] = useState(false);
+
+  async function handleShare() {
+    const url = typeof window !== "undefined" ? window.location.href : "";
+    try {
+      if (navigator.share) {
+        await navigator.share({ title: name, url });
+      } else {
+        await navigator.clipboard.writeText(url);
+        setDone(true);
+        setTimeout(() => setDone(false), 2200);
+      }
+    } catch {}
+  }
+
+  return (
+    <button
+      onClick={handleShare}
+      aria-label="Share this piece"
+      className="flex items-center gap-1.5 text-[#8C7B6E]/60 hover:text-[#A0622A] transition-colors duration-200"
+    >
+      {done ? (
+        <span className="text-[0.48rem] tracking-[0.18em] uppercase text-[#A0622A]">Copied ✓</span>
+      ) : (
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M4 12v8a2 2 0 002 2h12a2 2 0 002-2v-8" />
+          <polyline points="16 6 12 2 8 6" />
+          <line x1="12" y1="2" x2="12" y2="15" />
+        </svg>
+      )}
+    </button>
+  );
+}
+
 function ShippingNudge({ price, symbol }: { price: number; symbol: string }) {
   const remaining = FREE_SHIPPING_THRESHOLD - price;
   if (remaining <= 0) {
@@ -124,9 +159,12 @@ export default function ProductPageClient({ product }: { product: Product }) {
       {/* Details + purchase controls */}
       <div className="flex flex-col gap-5 md:gap-6 px-0 md:sticky md:top-32">
 
-        <p className="text-[0.55rem] tracking-[0.25em] uppercase text-[#A0622A]">
-          {product.category}
-        </p>
+        <div className="flex items-center justify-between">
+          <p className="text-[0.55rem] tracking-[0.25em] uppercase text-[#A0622A]">
+            {product.category}
+          </p>
+          <ShareButton name={product.name} />
+        </div>
 
         <h1 className="font-heading text-4xl md:text-5xl font-light text-[#2C2220]">
           {product.name}

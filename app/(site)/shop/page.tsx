@@ -1,6 +1,7 @@
+import Image from "next/image";
 import { Suspense } from "react";
-import ProductCard from "@/components/ProductCard";
 import CategoryFilter from "@/components/CategoryFilter";
+import ShopGridClient from "@/components/ShopGridClient";
 import { products, CATEGORIES } from "@/lib/products";
 import type { Category } from "@/lib/products";
 import type { Metadata } from "next";
@@ -17,6 +18,20 @@ const CATEGORY_META: Record<string, { title: string; description: string }> = {
   "Head Chains":        { title: "Head Chains — Bridal Hair Jewelry | Bodystrands", description: "Delicate head chains and hair jewelry for brides, weddings, and festivals. Handcrafted stainless steel, made in Portugal." },
   "Eyeglasses Chains":  { title: "Eyeglasses Chains — Stylish Glasses Holders | Bodystrands", description: "Dainty gold and silver eyeglasses chains in stainless steel. Beaded, pearl, and minimalist styles. Handmade in Portugal." },
   "Bikini Clip Chains": { title: "Bikini Clip Chains — Beach Body Jewelry | Bodystrands", description: "Handmade bikini clip chains and beach body jewelry in stainless steel. Perfect for summer holidays and festivals. Made in Portugal." },
+};
+
+const CATEGORY_IMAGES: Partial<Record<Category, string>> = {
+  "Belly Chains":       "/images/category-belly.png",
+  "Back Chains":        "/images/elvan-back-full.jpg",
+  "Body Chains":        "/images/category-body.jpg",
+  "Shoulder Chains":    "/images/category-shoulder.jpg",
+  "Anklets":            "/images/lifestyle-anklet.jpg",
+  "Necklaces":          "/images/category-necklace.jpg",
+  "Bracelets":          "/images/category-bracelet.jpg",
+  "Hand Chains":        "/images/category-hand.jpg",
+  "Head Chains":        "/images/category-head.jpg",
+  "Eyeglasses Chains":  "/images/category-glasses.jpg",
+  "Bikini Clip Chains": "/images/category-bikini.jpg",
 };
 
 export async function generateMetadata({
@@ -51,8 +66,6 @@ export default async function ShopPage({
     ? activeProducts.filter((p) => p.category === category)
     : activeProducts;
 
-  const activeLabel = isFiltered ? category : "All Pieces";
-
   // Group by category in CATEGORIES order when showing all
   const grouped = isFiltered
     ? null
@@ -63,76 +76,68 @@ export default async function ShopPage({
         }))
         .filter((g) => g.items.length > 0);
 
+  const heroImage = isFiltered ? (CATEGORY_IMAGES[category as Category] ?? null) : null;
+
   return (
-    <div className="min-h-screen pt-28 md:pt-32 pb-24">
+    <div className="min-h-screen pb-24">
+
+      {/* ── Editorial category hero (filtered views only) ── */}
+      {isFiltered && heroImage ? (
+        <div className="relative overflow-hidden h-52 md:h-80 pt-20 md:pt-24">
+          <Image
+            src={heroImage}
+            alt={category}
+            fill
+            priority
+            className="object-cover object-top"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#2C2220]/75 via-[#2C2220]/45 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#2C2220]/30 to-transparent" />
+          <div className="absolute inset-0 flex flex-col justify-end px-6 md:px-16 pb-8 md:pb-10">
+            <p className="text-[0.52rem] tracking-[0.38em] uppercase text-[#E8B4A8]/80 mb-2">
+              Bodystrands
+            </p>
+            <h1 className="font-heading text-4xl md:text-6xl font-light text-white leading-none">
+              {category}
+            </h1>
+            <p className="mt-2.5 text-[0.55rem] tracking-[0.18em] uppercase text-white/50">
+              {filtered.length} {filtered.length === 1 ? "piece" : "pieces"}
+            </p>
+          </div>
+        </div>
+      ) : (
+        /* Plain header for "All Pieces" */
+        <div className="pt-28 md:pt-32" />
+      )}
+
       <div className="max-w-7xl mx-auto px-1 md:px-10">
 
-        {/* Page header */}
-        <div className="mb-8 md:mb-12 px-2 md:px-0">
-          <p className="text-[0.52rem] tracking-[0.35em] uppercase text-[#A0622A] mb-3">Bodystrands</p>
-          <h1 className="font-heading text-5xl md:text-6xl font-light text-[#2C2220] leading-none">
-            {activeLabel}
-          </h1>
-          <p className="mt-3 text-[0.6rem] tracking-[0.15em] uppercase text-[#8C7B6E]">
-            {filtered.length} {filtered.length === 1 ? "piece" : "pieces"}
-          </p>
-        </div>
+        {/* "All Pieces" text header */}
+        {!isFiltered && (
+          <div className="mb-8 md:mb-12 px-2 md:px-0">
+            <p className="text-[0.52rem] tracking-[0.35em] uppercase text-[#A0622A] mb-3">Bodystrands</p>
+            <h1 className="font-heading text-5xl md:text-6xl font-light text-[#2C2220] leading-none">
+              All Pieces
+            </h1>
+            <p className="mt-3 text-[0.6rem] tracking-[0.15em] uppercase text-[#8C7B6E]">
+              {filtered.length} pieces
+            </p>
+          </div>
+        )}
 
-        {/* Layout: filter on top (mobile) / sidebar (desktop) */}
+        {/* Piece count below hero (filtered only) */}
+        {isFiltered && (
+          <div className="mt-6 mb-6 px-2 md:px-0" />
+        )}
+
+        {/* Layout: filter sidebar (desktop) / pills (mobile) + grid */}
         <div className="flex flex-col lg:flex-row gap-6 lg:gap-16">
           <Suspense fallback={null}>
             <CategoryFilter />
           </Suspense>
 
           <div className="flex-1 min-w-0">
-            {filtered.length === 0 ? (
-              <div className="py-24 text-center">
-                <div className="flex items-center justify-center gap-6 mb-8">
-                  <div className="flex-1 h-px bg-[#E8B4A8]/30 max-w-24" />
-                  <span className="text-[#E8B4A8]/50 text-[0.6rem]">◆</span>
-                  <div className="flex-1 h-px bg-[#E8B4A8]/30 max-w-24" />
-                </div>
-                <p className="text-sm font-light tracking-wide text-[#8C7B6E]">
-                  New pieces coming soon.
-                </p>
-              </div>
-            ) : grouped ? (
-              /* All Pieces — grouped by category */
-              <div className="flex flex-col gap-12 md:gap-16">
-                {grouped.map((group, gi) => (
-                  <div key={group.category}>
-                    {/* Category divider */}
-                    <div className="flex items-center gap-4 mb-5 px-0.5">
-                      <span className="text-[0.55rem] tracking-[0.28em] uppercase text-[#A0622A] whitespace-nowrap">
-                        {group.category}
-                      </span>
-                      <div className="flex-1 h-px bg-[#E8B4A8]/40" />
-                      <span className="text-[0.5rem] tracking-[0.15em] uppercase text-[#8C7B6E]/60 whitespace-nowrap">
-                        {group.items.length} {group.items.length === 1 ? "piece" : "pieces"}
-                      </span>
-                    </div>
-
-                    {/* Grid for this category */}
-                    <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-x-0.5 gap-y-4 md:gap-x-4 md:gap-y-8">
-                      {group.items.map((product, i) => (
-                        <ProductCard
-                          key={product.id}
-                          product={product}
-                          priority={gi === 0 && i < 4}
-                        />
-                      ))}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            ) : (
-              /* Single category — flat grid */
-              <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-x-0.5 gap-y-4 md:gap-x-4 md:gap-y-8">
-                {filtered.map((product, i) => (
-                  <ProductCard key={product.id} product={product} priority={i < 4} />
-                ))}
-              </div>
-            )}
+            <ShopGridClient filtered={filtered} grouped={grouped} />
           </div>
         </div>
 

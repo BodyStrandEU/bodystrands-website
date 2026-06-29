@@ -38,6 +38,12 @@ function committer() {
   };
 }
 
+async function triggerDeploy(): Promise<void> {
+  const hookUrl = process.env.VERCEL_DEPLOY_HOOK_URL;
+  if (!hookUrl) return;
+  await fetch(hookUrl, { method: "POST" }).catch(() => {});
+}
+
 export async function putFile(
   path: string,
   content: string,
@@ -63,6 +69,7 @@ export async function putFile(
     const text = await res.text();
     throw new Error(`GitHub putFile(${path}) failed ${res.status}: ${text}`);
   }
+  await triggerDeploy();
 }
 
 export async function deleteFile(
@@ -81,6 +88,7 @@ export async function deleteFile(
     const text = await res.text();
     throw new Error(`GitHub deleteFile(${path}) failed ${res.status}: ${text}`);
   }
+  await triggerDeploy();
 }
 
 export async function uploadImage(

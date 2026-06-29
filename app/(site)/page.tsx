@@ -76,7 +76,7 @@ export default function HomePage() {
 
   const heroTile     = allTiles.find((t) => t.label === "Back Chains");
   const gridTiles    = allTiles.filter((t) => t.label !== "Back Chains");
-  const featured     = products.filter((p) => p.active !== false).slice(0, 5);
+  const featured     = products.filter((p) => p.active !== false).slice(0, 10);
 
   return (
     <>
@@ -171,7 +171,7 @@ export default function HomePage() {
                       alt={product.altText || product.name}
                       fill
                       sizes="(max-width: 768px) 55vw, 22vw"
-                      className="object-cover object-center group-hover:scale-[1.04] transition-transform duration-700"
+                      className="object-cover object-top group-hover:scale-[1.04] transition-transform duration-700"
                     />
                   )}
                 </div>

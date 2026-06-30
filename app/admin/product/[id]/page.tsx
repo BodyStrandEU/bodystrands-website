@@ -578,6 +578,93 @@ function VideoDropZone({ value, onChange }: VideoDropZoneProps) {
   );
 }
 
+// ─── Size guide image drop zone ───────────────────────────────────────────────
+
+interface SizeGuideDropZoneProps {
+  value: string;
+  onChange: (url: string) => void;
+  onUpload: (file: File) => Promise<string>;
+}
+
+function SizeGuideDropZone({ value, onChange, onUpload }: SizeGuideDropZoneProps) {
+  const [uploading, setUploading] = useState(false);
+  const [dragOver, setDragOver]   = useState(false);
+  const [error, setError]         = useState("");
+  const [localPreview, setLocalPreview] = useState("");
+
+  async function handleFile(file: File) {
+    setError("");
+    setUploading(true);
+    setLocalPreview(URL.createObjectURL(file));
+    try {
+      const url = await onUpload(file);
+      onChange(url);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Upload failed");
+      setLocalPreview("");
+    } finally {
+      setUploading(false);
+    }
+  }
+
+  if (value || localPreview) {
+    return (
+      <div style={{ display: "inline-flex", flexDirection: "column", gap: "0.5rem" }}>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={localPreview || value}
+          alt="Size guide"
+          style={{ width: "160px", height: "160px", objectFit: "cover", borderRadius: "4px", border: "1px solid var(--admin-border)" }}
+        />
+        <button
+          type="button"
+          onClick={() => { setLocalPreview(""); onChange(""); }}
+          style={{ padding: "0.3rem 0.75rem", background: "#fee2e2", color: "#991b1b", border: "1px solid #fca5a5", borderRadius: "4px", fontSize: "0.75rem", cursor: "pointer", alignSelf: "flex-start" }}
+        >
+          Remove
+        </button>
+      </div>
+    );
+  }
+
+  return (
+    <div>
+      <label
+        onDragOver={(e) => { e.preventDefault(); setDragOver(true); }}
+        onDragLeave={() => setDragOver(false)}
+        onDrop={(e) => {
+          e.preventDefault();
+          setDragOver(false);
+          const file = e.dataTransfer.files[0];
+          if (file) void handleFile(file);
+        }}
+        style={{
+          display: "block", padding: "1.25rem",
+          border: `2px dashed ${dragOver ? "#A0622A" : "var(--admin-border2)"}`,
+          borderRadius: "4px", textAlign: "center",
+          cursor: uploading ? "wait" : "pointer",
+          background: dragOver ? "#fdf6f0" : "var(--admin-bg)",
+          transition: "all 0.15s",
+        }}
+      >
+        <input
+          type="file"
+          accept="image/jpeg,image/png,image/webp"
+          style={{ display: "none" }}
+          onChange={(e) => { const f = e.target.files?.[0]; if (f) void handleFile(f); }}
+          disabled={uploading}
+        />
+        <span style={{ fontSize: "0.78rem", color: uploading ? "#A0622A" : "var(--admin-muted)" }}>
+          {uploading ? "Uploading…" : "Drop sizing image here or click to upload"}
+        </span>
+      </label>
+      {error && (
+        <p style={{ fontSize: "0.75rem", color: "#991b1b", margin: "0.5rem 0 0" }}>{error}</p>
+      )}
+    </div>
+  );
+}
+
 // ─── Sortable variant block ───────────────────────────────────────────────────
 
 interface SortableVariantBlockProps {
@@ -782,6 +869,7 @@ export default function ProductEditor({ params }: { params: Promise<{ id: string
         fullDescription: form.fullDescription || undefined,
         video: form.video || undefined,
         gallery: (form.gallery ?? []).length > 0 ? form.gallery : undefined,
+        sizeGuideImage: form.sizeGuideImage || undefined,
         // In gallery mode, first image is always the shop card thumbnail
         images: form.gallery && form.gallery.length > 0 ? [form.gallery[0]] : form.images,
         variantImages: !form.gallery && Object.keys(form.variantImages ?? {}).length > 0 ? form.variantImages : undefined,
@@ -1299,6 +1387,21 @@ export default function ProductEditor({ params }: { params: Promise<{ id: string
           {(form.variantGroups ?? []).length === 0 && (
             <p style={{ fontSize: "0.78rem", color: "var(--admin-muted2)" }}>No customer selectors yet.</p>
           )}
+        </div>
+
+        {/* Size Guide — single image shown via a "Size Guide" button on the product page */}
+        <div style={sectionStyle}>
+          <h2 style={{ margin: "0 0 0.5rem", fontSize: "0.9rem", fontWeight: 700, color: "var(--admin-text)", textTransform: "uppercase", letterSpacing: "0.08em" }}>
+            Size Guide
+          </h2>
+          <p style={{ margin: "0 0 1rem", fontSize: "0.78rem", color: "var(--admin-muted)" }}>
+            Optional. Upload a sizing infographic and a &quot;Size Guide&quot; button automatically appears next to the Size selector on this product&apos;s page. Leave empty to hide it.
+          </p>
+          <SizeGuideDropZone
+            value={form.sizeGuideImage ?? ""}
+            onChange={(url) => setForm((f) => ({ ...f, sizeGuideImage: url }))}
+            onUpload={uploadFile}
+          />
         </div>
 
         {/* Card thumbnail images — only shown when there are no variants,

@@ -3,6 +3,7 @@ import { products, INFOGRAPHIC_IMAGES } from "@/lib/products";
 import { notFound } from "next/navigation";
 import ProductPageClient from "@/components/ProductPageClient";
 import YouMayAlsoLike from "@/components/YouMayAlsoLike";
+import RecentlyViewed from "@/components/RecentlyViewed";
 
 const CATEGORY_SUFFIX: Record<string, string> = {
   "Belly Chains":       "Handmade Belly Chain Waist Jewelry",
@@ -138,6 +139,7 @@ export default async function ProductPage({ params }: { params: Promise<{ id: st
 
         <ProductPageClient product={product} />
         <YouMayAlsoLike product={product} />
+        <RecentlyViewed excludeId={product.id} />
       </div>
     </div>
   );

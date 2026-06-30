@@ -46,6 +46,7 @@ export type Product = {
   active?: boolean;
   altText?: string;
   infographicImages?: string[];
+  sizeGuideImage?: string;
 };
 
 // Images that are infographics across all products — hidden on shop card, shown on product page

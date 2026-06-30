@@ -9,6 +9,9 @@ import { getOriginalPrice } from "@/lib/pricing";
 import CountdownTimer from "@/components/CountdownTimer";
 import { useCart } from "@/lib/cart";
 import { COUNTRY_GROUPS, getShippingRate } from "@/lib/shipping";
+import WishlistButton from "@/components/WishlistButton";
+import { trackRecentlyViewed } from "@/lib/recentlyViewed";
+import SizeGuideButton from "@/components/SizeGuideButton";
 
 const FREE_SHIPPING_THRESHOLD = 50;
 
@@ -96,6 +99,10 @@ export default function ProductPageClient({ product }: { product: Product }) {
     return () => obs.disconnect();
   }, []);
 
+  useEffect(() => {
+    trackRecentlyViewed(product.id);
+  }, [product.id]);
+
   const symbol =
     product.currency === "EUR" ? "€" : product.currency === "GBP" ? "£" : "$";
 
@@ -163,7 +170,10 @@ export default function ProductPageClient({ product }: { product: Product }) {
           <p className="text-[0.55rem] tracking-[0.25em] uppercase text-[#A0622A]">
             {product.category}
           </p>
-          <ShareButton name={product.name} />
+          <div className="flex items-center gap-4">
+            <WishlistButton productId={product.id} variant="page" />
+            <ShareButton name={product.name} />
+          </div>
         </div>
 
         <h1 className="font-heading text-4xl md:text-5xl font-light text-[#2C2220]">
@@ -231,16 +241,21 @@ export default function ProductPageClient({ product }: { product: Product }) {
         {/* Customer selectors */}
         {product.variantGroups?.map((group) => (
           <div key={group.label}>
-            <p className="text-[0.55rem] tracking-[0.25em] uppercase text-[#8C7B6E] mb-3">
-              {group.label}
-              {group.type !== "text" && (
-                !groupSelections[group.label] ? (
-                  <span className="ml-2 text-[#A0622A]">— please select</span>
-                ) : (
-                  <span className="ml-2 text-[#2C2220]">— {groupSelections[group.label]}</span>
-                )
+            <div className="flex items-center justify-between mb-3">
+              <p className="text-[0.55rem] tracking-[0.25em] uppercase text-[#8C7B6E]">
+                {group.label}
+                {group.type !== "text" && (
+                  !groupSelections[group.label] ? (
+                    <span className="ml-2 text-[#A0622A]">— please select</span>
+                  ) : (
+                    <span className="ml-2 text-[#2C2220]">— {groupSelections[group.label]}</span>
+                  )
+                )}
+              </p>
+              {group.label.toLowerCase().includes("size") && (
+                <SizeGuideButton image={product.sizeGuideImage} />
               )}
-            </p>
+            </div>
 
             {group.type === "text" ? (
               <input

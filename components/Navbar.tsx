@@ -7,6 +7,29 @@ import Link from "next/link";
 import { activeCategories } from "@/lib/products";
 import SearchModal from "@/components/SearchModal";
 import CartIcon from "@/components/CartIcon";
+import { useWishlist } from "@/lib/wishlist";
+
+function WishlistIcon({ light }: { light?: boolean }) {
+  const { ids } = useWishlist();
+  return (
+    <Link
+      href="/saved"
+      aria-label="Saved pieces"
+      className={`relative flex items-center justify-center w-8 h-8 transition-colors duration-200 ${
+        light ? "text-[#FDF9F7] hover:text-white" : "text-[#2C2220] hover:text-[#A0622A]"
+      }`}
+    >
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z" />
+      </svg>
+      {ids.length > 0 && (
+        <span className="absolute -top-0.5 -right-0.5 w-3.5 h-3.5 rounded-full bg-[#A0622A] text-white text-[0.45rem] flex items-center justify-center leading-none">
+          {ids.length}
+        </span>
+      )}
+    </Link>
+  );
+}
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -165,10 +188,11 @@ export default function Navbar() {
                 <circle cx="11" cy="11" r="8" /><path d="m21 21-4.35-4.35" />
               </svg>
             </button>
+            <WishlistIcon light={!scrolled && isHero} />
             <CartIcon light={!scrolled && isHero} />
           </div>
 
-          {/* Mobile: search + cart + hamburger */}
+          {/* Mobile: search + wishlist + cart + hamburger */}
           <div className="md:hidden flex items-center gap-2">
           <button
             onClick={() => setSearchOpen(true)}
@@ -179,6 +203,7 @@ export default function Navbar() {
               <circle cx="11" cy="11" r="8" /><path d="m21 21-4.35-4.35" />
             </svg>
           </button>
+          <WishlistIcon />
           <CartIcon />
           <button
             className="flex flex-col gap-1.5 p-2"

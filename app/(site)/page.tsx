@@ -7,6 +7,7 @@ import ScrollReveal from "@/components/ScrollReveal";
 import ReviewsMarquee from "@/components/ReviewsMarquee";
 import LifestyleSlider from "@/components/LifestyleSlider";
 import BrandVideo from "@/components/BrandVideo";
+import UGCGallery from "@/components/UGCGallery";
 import { products } from "@/lib/products";
 
 const MARQUEE_TAGS = [
@@ -296,6 +297,9 @@ export default function HomePage() {
       <div className="bg-[#FAF7F5]">
         <ReviewsMarquee />
       </div>
+
+      {/* ── CUSTOMER PHOTOS (UGC) ── */}
+      <UGCGallery />
 
       {/* Diamond divider */}
       <div className="max-w-7xl mx-auto px-6 md:px-10 flex items-center gap-6">

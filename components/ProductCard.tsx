@@ -5,6 +5,7 @@ import Image from "@/components/SmartImage";
 import type { Product } from "@/lib/products";
 import { INFOGRAPHIC_IMAGES } from "@/lib/products";
 import { getOriginalPrice } from "@/lib/pricing";
+import WishlistButton from "@/components/WishlistButton";
 
 const SWATCH_COLORS: Record<string, string> = {
   "Gold Tone":   "#C8A84B",
@@ -143,6 +144,8 @@ export default function ProductCard({ product, priority = false }: { product: Pr
         className="relative overflow-hidden bg-[#FDF9F7] aspect-square select-none"
         onTouchEnd={onTouchEnd}
       >
+        <WishlistButton productId={product.id} />
+
         {combinedImages.length === 0 && (
           <div className="absolute inset-0 flex flex-col items-center justify-center gap-2">
             <div className="w-8 h-px bg-[#A0622A]/30" />

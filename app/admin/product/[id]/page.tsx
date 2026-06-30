@@ -1504,6 +1504,32 @@ export default function ProductEditor({ params }: { params: Promise<{ id: string
                   variantHeroes: { ...(f.variantHeroes ?? {}), [variant]: img },
                 }))}
               />
+              {/* Video section for gallery mode */}
+              <div style={{ marginTop: "1.5rem" }}>
+                <h3 style={{ margin: "0 0 0.75rem", fontSize: "0.85rem", fontWeight: 700, color: "var(--admin-text)", textTransform: "uppercase", letterSpacing: "0.08em" }}>
+                  Video
+                </h3>
+                {(form.variants ?? []).length > 0 ? (
+                  <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
+                    {(form.variants ?? []).map((variant) => (
+                      <div key={variant}>
+                        <label style={{ fontSize: "0.78rem", fontWeight: 600, color: "var(--admin-text2)", display: "block", marginBottom: "0.4rem" }}>
+                          {variant}
+                        </label>
+                        <VideoDropZone
+                          value={(form.variantVideos ?? {})[variant] ?? ""}
+                          onChange={(v) => updateVariantVideo(variant, v)}
+                        />
+                      </div>
+                    ))}
+                  </div>
+                ) : (
+                  <VideoDropZone
+                    value={form.video ?? ""}
+                    onChange={(v) => setForm((f) => ({ ...f, video: v }))}
+                  />
+                )}
+              </div>
             </div>
           ) : (
             /* Per-Variant Mode (existing behavior) */

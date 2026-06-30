@@ -2979,13 +2979,6 @@
     ],
     "variantGroups": [
       {
-        "label": "Metal",
-        "options": [
-          "Silver Stainless",
-          "Gold Stainless"
-        ]
-      },
-      {
         "label": "Size",
         "options": [
           "Small (Fits XSâM)",

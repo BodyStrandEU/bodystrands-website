@@ -252,7 +252,7 @@ export default function ProductPageClient({ product }: { product: Product }) {
                   )
                 )}
               </p>
-              {group.label.toLowerCase().includes("size") && (
+              {(group.label ?? "").toLowerCase().includes("size") && (
                 <SizeGuideButton image={product.sizeGuideImage} />
               )}
             </div>

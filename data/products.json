@@ -8002,7 +8002,6 @@
     ],
     "variantGroups": [
       {
-        "name": "Size",
         "options": [
           "14 CM",
           "15 CM",
@@ -8014,7 +8013,8 @@
           "21 CM",
           "22 CM",
           "23 CM"
-        ]
+        ],
+        "label": "Size"
       }
     ],
     "images": [

@@ -474,16 +474,23 @@ function VideoDropZone({ value, onChange }: VideoDropZoneProps) {
     setUploading(true);
     try {
       const mb = (file.size / 1024 / 1024).toFixed(1);
-      setProgress(`Uploading ${mb} MB to Cloudflare Stream…`);
+      // Step 1: get a one-time direct upload URL from Cloudflare via our API (tiny request, no file bytes)
+      setProgress(`Preparing upload (${mb} MB)…`);
+      const urlRes = await fetch("/api/admin/stream-upload");
+      if (!urlRes.ok) {
+        const err = await urlRes.json() as { error?: string };
+        throw new Error(err.error ?? "Failed to get upload URL");
+      }
+      const { uploadURL, streamUrl } = await urlRes.json() as { uploadURL: string; streamUrl: string };
+
+      // Step 2: POST file directly to Cloudflare — bypasses Vercel entirely, no size limit
+      setProgress(`Uploading ${mb} MB directly to Cloudflare…`);
       const form = new FormData();
       form.append("file", file, file.name);
-      const res = await fetch("/api/admin/stream-upload", { method: "POST", body: form });
-      if (!res.ok) {
-        const err = await res.json() as { error?: string };
-        throw new Error(err.error ?? "Upload failed");
-      }
-      const { url } = await res.json() as { url: string };
-      onChange(url);
+      const cfRes = await fetch(uploadURL, { method: "POST", body: form });
+      if (!cfRes.ok) throw new Error(`Cloudflare rejected upload (${cfRes.status})`);
+
+      onChange(streamUrl);
       setProgress("");
     } catch (err) {
       setUploadError(err instanceof Error ? err.message : "Upload failed");
@@ -1504,31 +1511,25 @@ export default function ProductEditor({ params }: { params: Promise<{ id: string
                   variantHeroes: { ...(f.variantHeroes ?? {}), [variant]: img },
                 }))}
               />
-              {/* Video section for gallery mode */}
+              {/* Video section for gallery mode — single unified dropzone */}
               <div style={{ marginTop: "1.5rem" }}>
                 <h3 style={{ margin: "0 0 0.75rem", fontSize: "0.85rem", fontWeight: 700, color: "var(--admin-text)", textTransform: "uppercase", letterSpacing: "0.08em" }}>
                   Video
                 </h3>
-                {(form.variants ?? []).length > 0 ? (
-                  <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
-                    {(form.variants ?? []).map((variant) => (
-                      <div key={variant}>
-                        <label style={{ fontSize: "0.78rem", fontWeight: 600, color: "var(--admin-text2)", display: "block", marginBottom: "0.4rem" }}>
-                          {variant}
-                        </label>
-                        <VideoDropZone
-                          value={(form.variantVideos ?? {})[variant] ?? ""}
-                          onChange={(v) => updateVariantVideo(variant, v)}
-                        />
-                      </div>
-                    ))}
-                  </div>
-                ) : (
-                  <VideoDropZone
-                    value={form.video ?? ""}
-                    onChange={(v) => setForm((f) => ({ ...f, video: v }))}
-                  />
-                )}
+                <VideoDropZone
+                  value={(form.variants ?? []).length > 0
+                    ? (form.variantVideos ?? {})[(form.variants ?? [])[0]] ?? ""
+                    : form.video ?? ""}
+                  onChange={(v) => {
+                    if ((form.variants ?? []).length > 0) {
+                      const vv: Record<string, string> = {};
+                      for (const variant of (form.variants ?? [])) vv[variant] = v;
+                      setForm((f) => ({ ...f, variantVideos: vv }));
+                    } else {
+                      setForm((f) => ({ ...f, video: v }));
+                    }
+                  }}
+                />
               </div>
             </div>
           ) : (

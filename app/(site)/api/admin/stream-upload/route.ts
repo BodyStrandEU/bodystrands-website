@@ -6,7 +6,8 @@ function checkAuth(request: NextRequest): boolean {
   return !!token && isValidToken(token);
 }
 
-export async function POST(request: NextRequest) {
+// GET: returns a one-time Cloudflare direct upload URL — browser uploads straight to CF, bypassing Vercel's 4.5MB body limit
+export async function GET(request: NextRequest) {
   if (!checkAuth(request)) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
@@ -19,31 +20,26 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: "Cloudflare Stream not configured" }, { status: 500 });
   }
 
-  const formData = await request.formData();
-  const file = formData.get("file") as File | null;
-  if (!file) {
-    return NextResponse.json({ error: "No file provided" }, { status: 400 });
-  }
-
-  const cfForm = new FormData();
-  cfForm.append("file", file, file.name);
-
   const res = await fetch(
-    `https://api.cloudflare.com/client/v4/accounts/${account}/stream`,
+    `https://api.cloudflare.com/client/v4/accounts/${account}/stream/direct_upload`,
     {
       method: "POST",
-      headers: { Authorization: `Bearer ${token}` },
-      body: cfForm,
+      headers: {
+        Authorization: `Bearer ${token}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ maxDurationSeconds: 3600 }),
     }
   );
 
-  const data = await res.json() as { success: boolean; result?: { uid: string }; errors?: unknown[] };
+  const data = await res.json() as { success: boolean; result?: { uid: string; uploadURL: string }; errors?: unknown[] };
 
-  if (!data.success || !data.result?.uid) {
-    return NextResponse.json({ error: "Cloudflare upload failed", details: data.errors }, { status: 500 });
+  if (!data.success || !data.result) {
+    return NextResponse.json({ error: "Failed to get upload URL", details: data.errors }, { status: 500 });
   }
 
-  const uid = data.result.uid;
-  const url = `https://${customer}.cloudflarestream.com/${uid}/downloads/default.mp4`;
-  return NextResponse.json({ url });
+  const { uid, uploadURL } = data.result;
+  const streamUrl = `https://${customer}.cloudflarestream.com/${uid}/downloads/default.mp4`;
+
+  return NextResponse.json({ uploadURL, streamUrl });
 }

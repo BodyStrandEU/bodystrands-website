@@ -2992,24 +2992,28 @@
       "Silver Tone"
     ],
     "variantVideos": {
-      "Silver Tone": "",
-      "Gold Tone": ""
+      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/a3f29f61fea5ad1a0c9095ac351c24aa/downloads/default.mp4",
+      "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/a3f29f61fea5ad1a0c9095ac351c24aa/downloads/default.mp4"
     },
     "altText": "Delicate gold tone stainless steel thigh chain body jewelry for festival wear and editorial styling",
     "gallery": [
       "https://i.etsystatic.com/55122258/r/il/d40760/7983748545/il_fullxfull.7983748545_o5p6.jpg",
+      "/images/products/IMG_2392-copy.jpeg",
       "https://i.etsystatic.com/55122258/r/il/354af4/7935793534/il_fullxfull.7935793534_b4sw.jpg",
       "https://i.etsystatic.com/55122258/r/il/5b3f84/7985199449/il_fullxfull.7985199449_c7m1.jpg",
       "https://i.etsystatic.com/55122258/r/il/a259e0/7983748989/il_fullxfull.7983748989_tvt7.jpg",
-      "https://i.etsystatic.com/55122258/r/il/6d4ca5/7935793492/il_fullxfull.7935793492_2y5s.jpg",
       "https://i.etsystatic.com/55122258/r/il/1da472/7935980726/il_fullxfull.7935980726_jsa6.jpg",
-      "https://i.etsystatic.com/55122258/r/il/92ddb9/7983749037/il_fullxfull.7983749037_bp1m.jpg",
-      "https://i.etsystatic.com/55122258/r/il/dd27a1/7983749035/il_fullxfull.7983749035_44la.jpg"
+      "https://i.etsystatic.com/55122258/r/il/dd27a1/7983749035/il_fullxfull.7983749035_44la.jpg",
+      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.jpg",
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
+      "/images/products/e60f989d-690c-4f66-9816-3c3084cb7fde.png",
+      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg"
     ],
     "variantHeroes": {
       "Gold Tone": "https://i.etsystatic.com/55122258/r/il/d40760/7983748545/il_fullxfull.7983748545_o5p6.jpg",
-      "Silver Tone": "https://i.etsystatic.com/55122258/r/il/6d4ca5/7935793492/il_fullxfull.7935793492_2y5s.jpg"
-    }
+      "Silver Tone": "/images/products/IMG_2392-copy.jpeg"
+    },
+    "sizeGuideImage": "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png"
   },
   {
     "id": "script-initial-bracelet",

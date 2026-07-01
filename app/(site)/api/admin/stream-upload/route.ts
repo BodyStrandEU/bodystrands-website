@@ -41,5 +41,10 @@ export async function GET(request: NextRequest) {
   const { uid, uploadURL } = data.result;
   const streamUrl = `https://${customer}.cloudflarestream.com/${uid}/downloads/default.mp4`;
 
-  return NextResponse.json({ uploadURL, streamUrl });
+  // Enable MP4 downloads so /downloads/default.mp4 URL works after upload completes
+  // Fire-and-forget after a delay — video must finish uploading first
+  // The admin VideoDropZone calls this endpoint again after upload to trigger MP4 generation
+  // (handled via /api/admin/stream-enable-mp4?uid=xxx)
+
+  return NextResponse.json({ uploadURL, streamUrl, uid });
 }

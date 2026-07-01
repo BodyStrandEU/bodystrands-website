@@ -481,7 +481,7 @@ function VideoDropZone({ value, onChange }: VideoDropZoneProps) {
         const err = await urlRes.json() as { error?: string };
         throw new Error(err.error ?? "Failed to get upload URL");
       }
-      const { uploadURL, streamUrl } = await urlRes.json() as { uploadURL: string; streamUrl: string };
+      const { uploadURL, streamUrl, uid } = await urlRes.json() as { uploadURL: string; streamUrl: string; uid: string };
 
       // Step 2: POST file directly to Cloudflare — bypasses Vercel entirely, no size limit
       setProgress(`Uploading ${mb} MB directly to Cloudflare…`);
@@ -489,6 +489,14 @@ function VideoDropZone({ value, onChange }: VideoDropZoneProps) {
       form.append("file", file, file.name);
       const cfRes = await fetch(uploadURL, { method: "POST", body: form });
       if (!cfRes.ok) throw new Error(`Cloudflare rejected upload (${cfRes.status})`);
+
+      // Step 3: Enable MP4 downloads so /downloads/default.mp4 URL works on the product page
+      setProgress("Enabling MP4 playback…");
+      await fetch("/api/admin/stream-enable-mp4", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ uid }),
+      });
 
       onChange(streamUrl);
       setProgress("");

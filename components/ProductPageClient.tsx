@@ -180,6 +180,18 @@ export default function ProductPageClient({ product }: { product: Product }) {
           {product.name}
         </h1>
 
+        {/* Inline star rating */}
+        <div className="flex items-center gap-2.5">
+          <div className="flex gap-0.5">
+            {[...Array(5)].map((_, i) => (
+              <svg key={i} width="13" height="13" viewBox="0 0 24 24" fill="#A0622A">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              </svg>
+            ))}
+          </div>
+          <span className="text-[0.65rem] tracking-[0.12em] text-[#8C7B6E]">4.9 · 847 reviews</span>
+        </div>
+
         <div className="flex flex-col gap-1.5">
           <div className="flex items-baseline gap-3 flex-wrap">
             <span className="text-2xl font-light text-[#A0622A] tracking-wide">

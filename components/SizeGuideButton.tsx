@@ -51,13 +51,17 @@ export default function SizeGuideButton({ image }: { image?: string }) {
       <button
         type="button"
         onClick={() => setOpen(true)}
-        className="inline-flex items-center gap-1.5 text-[#A0622A] hover:text-[#8A5222] transition-colors duration-200"
+        className="inline-flex items-center gap-2 px-4 py-2.5 border border-[#A0622A] text-[#A0622A] hover:bg-[#A0622A] hover:text-white transition-all duration-200 rounded-sm w-full justify-center"
       >
-        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-          <rect x="3" y="3" width="18" height="18" rx="1" />
-          <path d="M7 3v4M11 3v2M15 3v4M19 3v2" />
+        {/* Ruler icon */}
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M21.21 15.89A10 10 0 1 1 8 2.83" />
+          <path d="M22 12A10 10 0 0 0 12 2v10z" />
         </svg>
-        <span className="text-[0.55rem] tracking-[0.15em] uppercase underline underline-offset-2">Size Guide</span>
+        <span className="text-[0.7rem] tracking-[0.2em] uppercase font-medium">Size Guide</span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M9 18l6-6-6-6" />
+        </svg>
       </button>
 
       {open && typeof document !== "undefined" && createPortal(

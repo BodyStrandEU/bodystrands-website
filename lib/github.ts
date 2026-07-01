@@ -26,7 +26,6 @@ export async function getFile(path: string): Promise<GitHubFileResult> {
     throw new Error(`GitHub getFile(${path}) failed ${res.status}: ${text}`);
   }
   const data = (await res.json()) as { content: string; sha: string };
-  // content is base64-encoded with newlines — decode it
   const content = Buffer.from(data.content, "base64").toString("utf-8");
   return { content, sha: data.sha };
 }
@@ -36,12 +35,6 @@ function committer() {
     name: process.env.GITHUB_COMMITTER_NAME ?? "Bodystrands Admin",
     email: process.env.GITHUB_COMMITTER_EMAIL ?? "noreply@github.com",
   };
-}
-
-async function triggerDeploy(): Promise<void> {
-  const hookUrl = process.env.VERCEL_DEPLOY_HOOK_URL;
-  if (!hookUrl) return;
-  await fetch(hookUrl, { method: "POST" }).catch(() => {});
 }
 
 export async function putFile(
@@ -69,7 +62,6 @@ export async function putFile(
     const text = await res.text();
     throw new Error(`GitHub putFile(${path}) failed ${res.status}: ${text}`);
   }
-  await triggerDeploy();
 }
 
 export async function deleteFile(
@@ -88,7 +80,6 @@ export async function deleteFile(
     const text = await res.text();
     throw new Error(`GitHub deleteFile(${path}) failed ${res.status}: ${text}`);
   }
-  await triggerDeploy();
 }
 
 export async function uploadImage(
@@ -96,7 +87,6 @@ export async function uploadImage(
   base64Content: string
 ): Promise<string> {
   const path = `public/images/products/${filename}`;
-  // Check if file exists to get sha for update
   let sha: string | undefined;
   try {
     const existing = await getFile(path);
@@ -125,6 +115,5 @@ export async function uploadImage(
     throw new Error(`GitHub uploadImage(${filename}) failed ${res.status}: ${text}`);
   }
 
-  await triggerDeploy();
   return `/images/products/${filename}`;
 }

@@ -263,9 +263,27 @@ Rules:
     }],
   });
 
-  const raw     = message.content[0].text.trim().replace(/^```json\s*/i, "").replace(/^```\s*/i, "").replace(/```\s*$/i, "");
+  let raw = message.content[0].text.trim()
+    .replace(/^```json\s*/i, "").replace(/^```\s*\n?/i, "").replace(/\n?```\s*$/i, "");
+
+  // Fix unescaped " inside href="..." attributes (common Claude JSON mistake)
+  raw = raw.replace(/href="([^"]*)"/g, (_, url) => `href='${url}'`);
+  // Fix trailing commas before } or ]
   const cleaned = raw.replace(/,(\s*[}\]])/g, "$1");
-  const parsed  = JSON.parse(cleaned);
+
+  let parsed;
+  try {
+    parsed = JSON.parse(cleaned);
+  } catch (e) {
+    // Last resort: extract outermost {} and retry
+    const start = cleaned.indexOf("{");
+    const end   = cleaned.lastIndexOf("}");
+    if (start !== -1 && end !== -1) {
+      parsed = JSON.parse(cleaned.slice(start, end + 1));
+    } else {
+      throw e;
+    }
+  }
 
   const today = new Date().toISOString().split("T")[0];
   const slug  = slugify(parsed.title);

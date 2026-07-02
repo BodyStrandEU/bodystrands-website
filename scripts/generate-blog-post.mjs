@@ -298,4 +298,11 @@ Rules:
   console.log(`Done! Added: "${newPost.title}"`);
 }
 
-main().catch((e) => { console.error(e); process.exit(1); });
+main().catch((e) => {
+  if (e?.status === 401 || e?.status === 403) {
+    console.error("Anthropic API key invalid or expired — skipping blog generation. Update ANTHROPIC_API_KEY in GitHub secrets.");
+    process.exit(0);
+  }
+  console.error(e);
+  process.exit(1);
+});

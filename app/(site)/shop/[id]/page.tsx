@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import ProductPageClient from "@/components/ProductPageClient";
 import YouMayAlsoLike from "@/components/YouMayAlsoLike";
 import RecentlyViewed from "@/components/RecentlyViewed";
+import ProductReviews from "@/components/ProductReviews";
 
 const CATEGORY_SUFFIX: Record<string, string> = {
   "Belly Chains":       "Handmade Belly Chain Waist Jewelry",
@@ -138,6 +139,7 @@ export default async function ProductPage({ params }: { params: Promise<{ id: st
         </nav>
 
         <ProductPageClient product={product} />
+        <ProductReviews category={product.category} />
         <YouMayAlsoLike product={product} />
         <RecentlyViewed excludeId={product.id} />
       </div>

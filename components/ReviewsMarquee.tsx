@@ -1,7 +1,7 @@
 "use client";
 import { useState, useRef, useEffect } from "react";
 
-const AGGREGATE = { score: 4.9, count: 847 };
+const AGGREGATE = { score: 4.9, count: 120 };
 
 const reviews = [
   { name: "Jovana M.",   headline: "Absolutely stunning piece",      text: "Beautiful body chain! Came in nice packaging and looks exactly as described. I love wearing mine over a thin cashmere shirt—it adds such a classy touch.", date: "Mar 2026" },
@@ -29,15 +29,9 @@ function Stars({ size = 14 }: { size?: number }) {
 function ReviewCard({ review }: { review: typeof reviews[0] }) {
   return (
     <div className="flex flex-col h-full bg-[#FDF9F7] border border-[#E8B4A8]/50 p-6 md:p-7">
-      {/* Stars + verified */}
-      <div className="flex items-center justify-between mb-4">
+      {/* Stars */}
+      <div className="mb-4">
         <Stars size={15} />
-        <span className="flex items-center gap-1 text-[0.55rem] tracking-[0.18em] uppercase text-[#A0622A]/80">
-          <svg width="9" height="9" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" fillRule="evenodd" clipRule="evenodd" />
-          </svg>
-          Verified · Etsy
-        </span>
       </div>
 
       {/* Headline */}
@@ -200,10 +194,6 @@ export default function ReviewsMarquee() {
           ))}
         </div>
 
-        {/* Bottom trust line */}
-        <p className="text-center text-[0.58rem] tracking-[0.2em] uppercase text-[#8C7B6E]/60 mt-12">
-          All reviews collected from verified Etsy purchases
-        </p>
       </div>
     </section>
   );

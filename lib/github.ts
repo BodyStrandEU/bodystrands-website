@@ -33,7 +33,7 @@ export async function getFile(path: string): Promise<GitHubFileResult> {
 function committer() {
   return {
     name: process.env.GITHUB_COMMITTER_NAME ?? "Bodystrands Admin",
-    email: process.env.GITHUB_COMMITTER_EMAIL ?? "noreply@github.com",
+    email: process.env.GITHUB_COMMITTER_EMAIL ?? "storenavaria@gmail.com",
   };
 }
 

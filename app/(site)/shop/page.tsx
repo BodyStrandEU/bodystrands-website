@@ -41,11 +41,15 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { category } = await searchParams;
   if (category && CATEGORY_META[category]) {
-    return CATEGORY_META[category];
+    return {
+      ...CATEGORY_META[category],
+      alternates: { canonical: `/shop?category=${encodeURIComponent(category)}` },
+    };
   }
   return {
     title: "Shop — Handmade Body Jewelry | Bodystrands",
     description: "Shop handmade body chains, belly chains, back chains, anklets and more. All pieces crafted in waterproof stainless steel, handmade in Portugal.",
+    alternates: { canonical: "/shop" },
   };
 }
 

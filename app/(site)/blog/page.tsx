@@ -4,6 +4,7 @@ import blogPosts from "@/data/blog-posts.json";
 export const metadata = {
   title: "Journal — Bodystrands",
   description: "Style guides, jewelry care tips, and inspiration from the Bodystrands studio in Portugal.",
+  alternates: { canonical: "/blog" },
 };
 
 export default function BlogPage() {

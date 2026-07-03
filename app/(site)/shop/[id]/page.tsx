@@ -46,6 +46,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
   return {
     title: `${product.name} | ${suffix} | Bodystrands`,
     description: metaDescription,
+    alternates: { canonical: `/shop/${product.id}` },
     openGraph: {
       title: `${product.name} | ${suffix} — ${priceLabel}`,
       description: metaDescription,

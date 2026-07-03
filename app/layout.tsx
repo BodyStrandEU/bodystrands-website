@@ -24,6 +24,7 @@ export const metadata: Metadata = {
   description: "Dainty handmade body chains, waist chains, and anklets. Crafted in 316L surgical-grade stainless steel. Tarnish-resistant, waterproof, and adjustable.",
   keywords: "body chain, waist chain, anklet, handmade jewelry, body jewelry, gold body chain, stainless steel body chain, dainty body jewelry",
   metadataBase: new URL("https://www.bodystrands.com"),
+  alternates: { canonical: "/" },
   openGraph: {
     title: "Bodystrands — Handmade Body Jewelry",
     description: "Dainty handmade body chains, waist chains, and anklets. Crafted in 316L surgical-grade stainless steel.",

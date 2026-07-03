@@ -16,6 +16,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${post.title} — Bodystrands Journal`,
     description: post.excerpt,
+    alternates: { canonical: `/blog/${slug}` },
   };
 }
 

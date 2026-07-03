@@ -4250,7 +4250,7 @@
       "Silver Tone"
     ],
     "images": [
-      "https://i.etsystatic.com/55122258/r/il/7687c3/7987885450/il_fullxfull.7987885450_gvr8.jpg"
+      "/images/products/67b40e8a-fd66-4c80-9d83-611f2e8a16ae-copy.png"
     ],
     "variantGroups": [
       {
@@ -4264,15 +4264,15 @@
       }
     ],
     "variantVideos": {
-      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/35ceb737754ddc8730725694bf88a12a/downloads/default.mp4",
-      "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/35ceb737754ddc8730725694bf88a12a/downloads/default.mp4"
+      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/3b5597d550632d7ed412630037a8b052/downloads/default.mp4",
+      "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/3b5597d550632d7ed412630037a8b052/downloads/default.mp4"
     },
     "altText": "Silver stainless steel shoulder harness chain for elegant evening wear and special occasions",
     "gallery": [
-      "https://i.etsystatic.com/55122258/r/il/7687c3/7987885450/il_fullxfull.7987885450_gvr8.jpg",
+      "/images/products/67b40e8a-fd66-4c80-9d83-611f2e8a16ae-copy.png",
       "https://i.etsystatic.com/55122258/r/il/b9181f/7987888140/il_fullxfull.7987888140_9j6g.jpg",
       "https://i.etsystatic.com/55122258/r/il/145235/7987884440/il_fullxfull.7987884440_5ck3.jpg",
-      "/images/products/25f995a3-cea4-4872-b772-7d62d0e000ec.png",
+      "/images/products/1ae16d95-0e18-4ce4-aeb3-0c755b4d618c-copy.png",
       "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
       "https://i.etsystatic.com/55122258/r/il/07c056/7987871718/il_fullxfull.7987871718_fldp.jpg",
       "https://i.etsystatic.com/55122258/r/il/0d1ed3/7987871978/il_fullxfull.7987871978_kq45.jpg",
@@ -4281,9 +4281,10 @@
       "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.jpg"
     ],
     "variantHeroes": {
-      "Gold Tone": "https://i.etsystatic.com/55122258/r/il/7687c3/7987885450/il_fullxfull.7987885450_gvr8.jpg",
+      "Gold Tone": "/images/products/67b40e8a-fd66-4c80-9d83-611f2e8a16ae-copy.png",
       "Silver Tone": "https://i.etsystatic.com/55122258/r/il/b9181f/7987888140/il_fullxfull.7987888140_9j6g.jpg"
-    }
+    },
+    "sizeGuideImage": "/images/products/25f995a3-cea4-4872-b772-7d62d0e000ec.png"
   },
   {
     "id": "pearl-wedding-back-necklace",

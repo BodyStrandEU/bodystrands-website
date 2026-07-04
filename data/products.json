@@ -8061,7 +8061,7 @@
   {
     "id": "birth-flower-anklet",
     "name": "Birth Flower Anklet",
-    "price": 0,
+    "price": 35,
     "currency": "EUR",
     "category": "Anklets",
     "description": "Your birth month. Your flower. On your ankle, every day. A personalized double-strand anklet combining a dainty pearl chain with a fine stainless steel cable link chain, finished with your birth month flower charm. No stacking required — the layered look is built in.",
@@ -8127,18 +8127,19 @@
       }
     ],
     "gallery": [
+      "/images/products/birth-flower-anklet/img-8.jpeg",
       "/images/products/birth-flower-anklet/img-1.png",
       "/images/products/birth-flower-anklet/img-2.png",
+      "/images/products/birth-flower-anklet/img-6.jpg",
       "/images/products/birth-flower-anklet/img-3.png",
       "/images/products/birth-flower-anklet/img-4.png",
       "/images/products/birth-flower-anklet/img-5.png",
-      "/images/products/birth-flower-anklet/img-6.jpg",
-      "/images/products/birth-flower-anklet/img-7.jpeg",
-      "/images/products/birth-flower-anklet/img-8.jpeg"
+      "/images/products/birth-flower-anklet/img-7.jpeg"
     ],
     "images": [
-      "/images/products/birth-flower-anklet/img-1.png"
+      "/images/products/birth-flower-anklet/img-8.jpeg"
     ],
-    "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/a273033ef061fbe09c1f56485f82fd39/downloads/default.mp4"
+    "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/a273033ef061fbe09c1f56485f82fd39/downloads/default.mp4",
+    "sizeGuideImage": "/images/products/esty-thumnails-new--19-.png"
   }
 ]

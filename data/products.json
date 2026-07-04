@@ -8100,9 +8100,14 @@
         "value": "Dispatches within 1–2 business days"
       }
     ],
+    "variants": [
+      "Gold Tone",
+      "Silver Tone"
+    ],
     "variantGroups": [
       {
         "label": "Birth Month",
+        "type": "options",
         "options": [
           "January",
           "February",
@@ -8117,15 +8122,12 @@
           "November",
           "December"
         ]
-      },
-      {
-        "label": "Color",
-        "options": [
-          "Gold Tone",
-          "Silver Tone"
-        ]
       }
     ],
+    "variantVideos": {
+      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/a273033ef061fbe09c1f56485f82fd39/downloads/default.mp4",
+      "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/a273033ef061fbe09c1f56485f82fd39/downloads/default.mp4"
+    },
     "gallery": [
       "/images/products/birth-flower-anklet/img-8.jpeg",
       "/images/products/birth-flower-anklet/img-1.png",
@@ -8139,7 +8141,6 @@
     "images": [
       "/images/products/birth-flower-anklet/img-8.jpeg"
     ],
-    "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/a273033ef061fbe09c1f56485f82fd39/downloads/default.mp4",
     "sizeGuideImage": "/images/products/esty-thumnails-new--19-.png"
   }
 ]

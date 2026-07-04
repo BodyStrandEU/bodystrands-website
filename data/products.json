@@ -8057,5 +8057,88 @@
       "pink enamel jewelry",
       "gift for her"
     ]
+  },
+  {
+    "id": "birth-flower-anklet",
+    "name": "Birth Flower Anklet",
+    "price": 0,
+    "currency": "EUR",
+    "category": "Anklets",
+    "description": "Your birth month. Your flower. On your ankle, every day. A personalized double-strand anklet combining a dainty pearl chain with a fine stainless steel cable link chain, finished with your birth month flower charm. No stacking required — the layered look is built in.",
+    "fullDescription": "Pick the month that means the most — yours, your daughter's, your best friend's — and we'll make the anklet with that exact flower charm. Twelve flowers. Twelve stories. One for every person you love.\n\nThe piece that makes you look twice — because two strands always feel like more than one. This handmade anklet combines a dainty pearl chain with a fine stainless steel cable link chain as one single piece, finished with a delicate birth month flower charm that hangs at the centre. No stacking required — the layered look is built in, and the personalisation makes it entirely yours.\n\nPerfect for the beach, a poolside afternoon, a summer wedding, or any barefoot moment in between. The pearl adds a classic touch that works as well with a linen dress in October as it does with a bikini in July.\n\nA thoughtful gift for bridesmaids, best friends, and anyone who loves dainty foot jewelry that actually lasts.\n\n✿ Your birth month and what it means:\n🌸 January — Carnation — Love, loyalty, and admiration\n🌸 February — Violet — Faithfulness, wisdom, and modesty\n🌸 March — Daffodil — New beginnings, rebirth, and prosperity\n🌸 April — Daisy — Purity, innocence, and true love\n🌸 May — Hawthorn — Sweetness, hope, and happiness\n🌸 June — Rose — Romance, passion, and deep gratitude\n🌸 July — Water Lily — Peace, purity, and grace\n🌸 August — Poppy — Strength, remembrance, and imagination\n🌸 September — Morning Glory — Affection, resilience, and mindfulness\n🌸 October — Cosmos — Order, peace, and harmony\n🌸 November — Chrysanthemum — Loyalty, joy, and good luck\n🌸 December — Holly — Protection, happiness, and celebration",
+    "specs": [
+      {
+        "label": "Material",
+        "value": "316L stainless steel (waterproof & tarnish-resistant)"
+      },
+      {
+        "label": "Style",
+        "value": "Double-strand — pearl chain and cable link chain as one piece"
+      },
+      {
+        "label": "Closure",
+        "value": "Lobster clasp with adjustable extender"
+      },
+      {
+        "label": "Base length",
+        "value": "21 cm"
+      },
+      {
+        "label": "Extender",
+        "value": "+5 cm (total 26 cm)"
+      },
+      {
+        "label": "Chain thickness",
+        "value": "1.5 mm"
+      },
+      {
+        "label": "Care",
+        "value": "Wipe gently with a soft cloth after wear. Store in an airtight container."
+      },
+      {
+        "label": "Shipping",
+        "value": "Dispatches within 1–2 business days"
+      }
+    ],
+    "variantGroups": [
+      {
+        "label": "Birth Month",
+        "options": [
+          "January",
+          "February",
+          "March",
+          "April",
+          "May",
+          "June",
+          "July",
+          "August",
+          "September",
+          "October",
+          "November",
+          "December"
+        ]
+      },
+      {
+        "label": "Color",
+        "options": [
+          "Gold Tone",
+          "Silver Tone"
+        ]
+      }
+    ],
+    "gallery": [
+      "/images/products/birth-flower-anklet/img-1.png",
+      "/images/products/birth-flower-anklet/img-2.png",
+      "/images/products/birth-flower-anklet/img-3.png",
+      "/images/products/birth-flower-anklet/img-4.png",
+      "/images/products/birth-flower-anklet/img-5.png",
+      "/images/products/birth-flower-anklet/img-6.jpg",
+      "/images/products/birth-flower-anklet/img-7.jpeg",
+      "/images/products/birth-flower-anklet/img-8.jpeg"
+    ],
+    "images": [
+      "/images/products/birth-flower-anklet/img-1.png"
+    ],
+    "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/a273033ef061fbe09c1f56485f82fd39/downloads/default.mp4"
   }
 ]

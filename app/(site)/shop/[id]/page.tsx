@@ -106,6 +106,7 @@ export default async function ProductPage({ params }: { params: Promise<{ id: st
       priceCurrency:    product.currency ?? "EUR",
       availability:     "https://schema.org/InStock",
       itemCondition:    "https://schema.org/NewCondition",
+      priceValidUntil:  new Date(Date.now() + 365 * 86400 * 1000).toISOString().slice(0, 10),
       seller: {
         "@type": "Organization",
         name:    "Bodystrands",

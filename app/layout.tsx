@@ -4,6 +4,7 @@ import "./globals.css";
 import Script from "next/script";
 import PageTransition from "@/components/PageTransition";
 import CustomCursor from "@/components/CustomCursor";
+import AnalyticsPageview from "@/components/AnalyticsPageview";
 import { CartProvider } from "@/lib/cart";
 
 const cormorant = Cormorant_Garamond({
@@ -76,8 +77,10 @@ export default function RootLayout({
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-          gtag('config', 'G-8ZSFBD94RN', { send_page_view: true });
+          gtag('config', 'G-8ZSFBD94RN', { send_page_view: false });
         `}</Script>
+        {/* Manual pageview firing (AnalyticsPageview) skips /admin routes so internal usage never pollutes reporting */}
+        <AnalyticsPageview />
 
         {/* Site-level structured data */}
         <Script id="schema-org" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([
@@ -115,7 +118,9 @@ export default function RootLayout({
           s.parentNode.insertBefore(t,s)}(window,document,'script',
           'https://connect.facebook.net/en_US/fbevents.js');
           fbq('init', '1921612571995204');
-          fbq('track', 'PageView');
+          if (!window.location.pathname.startsWith('/admin')) {
+            fbq('track', 'PageView');
+          }
         `}</Script>
         <noscript>{`<img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1921612571995204&ev=PageView&noscript=1"/>`}</noscript>
       </body>

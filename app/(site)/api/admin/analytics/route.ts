@@ -74,7 +74,7 @@ async function fetchGA4(propertyId: string, credJson: string, ga4Start: string) 
     client.runReport({ property, dateRanges, dimensions: [{ name: "deviceCategory" }], metrics: [{ name: "sessions" }] }),
     client.runReport({ property, dateRanges, dimensions: [{ name: "country" }], metrics: [{ name: "sessions" }], orderBys: [{ metric: { metricName: "sessions" }, desc: true }], limit: "8" }),
     client.runReport({ property, dateRanges, dimensions: [{ name: "pagePath" }], metrics: [{ name: "screenPageViews" }], orderBys: [{ metric: { metricName: "screenPageViews" }, desc: true }], limit: "10" }),
-    client.runReport({ property, dateRanges, dimensions: [{ name: "itemName" }], metrics: [{ name: "addToCarts" }], orderBys: [{ metric: { metricName: "addToCarts" }, desc: true }], limit: "10" }),
+    client.runReport({ property, dateRanges, dimensions: [{ name: "itemName" }], metrics: [{ name: "itemsAddedToCart" }], orderBys: [{ metric: { metricName: "itemsAddedToCart" }, desc: true }], limit: "10" }),
   ]);
 
   const row0 = overview[0]?.rows?.[0]?.metricValues ?? [];

@@ -8212,11 +8212,15 @@
         ]
       }
     ],
-    "variants": ["Gold Tone", "Silver Plated", "Stainless Steel"],
+    "variants": [
+      "Gold Tone",
+      "Silver Plated",
+      "Stainless Steel"
+    ],
     "variantHeroes": {
       "Gold Tone": "/images/products/layered-arm-chain/img-gold.png",
-      "Silver Plated": "/images/products/layered-arm-chain/img-silver.png",
-      "Stainless Steel": "/images/products/layered-arm-chain/img-stainless.png"
+      "Silver Plated": "/images/products/layered-arm-chain/img-stainless.png",
+      "Stainless Steel": "/images/products/layered-arm-chain/img-silver.png"
     },
     "variantVideos": {
       "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/625af9cccd93e10d5d3ce87272a4a101/downloads/default.mp4",
@@ -8225,14 +8229,15 @@
     },
     "gallery": [
       "/images/products/layered-arm-chain/img-gold.png",
-      "/images/products/layered-arm-chain/img-silver.png",
       "/images/products/layered-arm-chain/img-stainless.png",
+      "/images/products/layered-arm-chain/img-silver.png",
       "/images/products/layered-arm-chain/img-material.jpg",
       "/images/products/layered-arm-chain/img-fit.png",
       "/images/products/layered-arm-chain/img-shipping.jpeg"
     ],
     "images": [
       "/images/products/layered-arm-chain/img-gold.png"
-    ]
+    ],
+    "sizeGuideImage": "/images/products/4a34f7fe-cab7-4c40-a10f-cff8807d32cf.png"
   }
 ]

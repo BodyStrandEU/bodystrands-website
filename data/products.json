@@ -8133,7 +8133,6 @@
       "/images/products/birth-flower-anklet/img-1.png",
       "/images/products/birth-flower-anklet/img-2.png",
       "/images/products/birth-flower-anklet/img-6.jpg",
-      "/images/products/birth-flower-anklet/img-3.png",
       "/images/products/birth-flower-anklet/img-4.png",
       "/images/products/birth-flower-anklet/img-5.png",
       "/images/products/birth-flower-anklet/img-7.jpeg"
@@ -8141,6 +8140,10 @@
     "images": [
       "/images/products/birth-flower-anklet/img-8.jpeg"
     ],
-    "sizeGuideImage": "/images/products/esty-thumnails-new--19-.png"
+    "sizeGuideImage": "/images/products/esty-thumnails-new--19-.png",
+    "variantHeroes": {
+      "Gold Tone": "/images/products/birth-flower-anklet/img-8.jpeg",
+      "Silver Tone": "/images/products/birth-flower-anklet/img-1.png"
+    }
   }
 ]

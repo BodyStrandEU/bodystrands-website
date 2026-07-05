@@ -6,9 +6,13 @@ const STORAGE_KEY = "bs_cookie_consent";
 
 function grantAnalytics() {
   if (typeof window !== "undefined" && typeof (window as unknown as { gtag?: Function }).gtag === "function") {
-    (window as unknown as { gtag: Function }).gtag("consent", "update", {
-      analytics_storage: "granted",
-    });
+    (window as unknown as { gtag: Function }).gtag("consent", "update", { analytics_storage: "granted" });
+  }
+}
+
+function denyAnalytics() {
+  if (typeof window !== "undefined" && typeof (window as unknown as { gtag?: Function }).gtag === "function") {
+    (window as unknown as { gtag: Function }).gtag("consent", "update", { analytics_storage: "denied" });
   }
 }
 
@@ -17,12 +21,12 @@ export default function CookieConsent() {
 
   useEffect(() => {
     const stored = localStorage.getItem(STORAGE_KEY);
-    if (stored === "granted") {
-      grantAnalytics();
+    if (stored === "denied") {
+      denyAnalytics();
     } else if (!stored) {
       setVisible(true);
     }
-    // "denied" → banner stays hidden, GA stays blocked
+    // no stored preference → show banner; "granted" → already on by default
   }, []);
 
   function accept() {
@@ -33,6 +37,7 @@ export default function CookieConsent() {
 
   function decline() {
     localStorage.setItem(STORAGE_KEY, "denied");
+    denyAnalytics();
     setVisible(false);
   }
 
@@ -46,8 +51,7 @@ export default function CookieConsent() {
     >
       <div className="max-w-7xl mx-auto px-6 md:px-10 py-5 flex flex-col sm:flex-row items-start sm:items-center gap-4 justify-between">
         <p className="text-[0.65rem] font-light tracking-wide leading-relaxed text-[#E8B4A8]/80 max-w-xl">
-          We use cookies to understand how visitors use our site and improve your experience.
-          See our{" "}
+          We use cookies to understand how visitors use our site. Analytics are enabled by default — click Decline to opt out.{" "}
           <Link href="/privacy-policy" className="underline underline-offset-2 hover:text-[#E8B4A8] transition-colors">
             Privacy Policy
           </Link>

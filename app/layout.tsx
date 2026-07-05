@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Cormorant_Garamond, Josefin_Sans } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
+import { Analytics } from "@vercel/analytics/next";
 import PageTransition from "@/components/PageTransition";
 import CustomCursor from "@/components/CustomCursor";
 import AnalyticsPageview from "@/components/AnalyticsPageview";
@@ -51,14 +52,14 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${cormorant.variable} ${josefin.variable}`}>
       <head>
-        {/* Step 1: set consent defaults BEFORE GA loads — nothing is tracked until user accepts */}
+        {/* Consent defaults: analytics on by default (opt-out), ads always off */}
         <Script id="consent-default" strategy="beforeInteractive">{`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('consent', 'default', {
-            analytics_storage: 'denied',
+            analytics_storage: 'granted',
             ad_storage: 'denied',
-            wait_for_update: 500
+            wait_for_update: 300
           });
         `}</Script>
       </head>
@@ -81,6 +82,7 @@ export default function RootLayout({
         `}</Script>
         {/* Manual pageview firing (AnalyticsPageview) skips /admin routes so internal usage never pollutes reporting */}
         <AnalyticsPageview />
+        <Analytics />
 
         {/* Site-level structured data */}
         <Script id="schema-org" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([

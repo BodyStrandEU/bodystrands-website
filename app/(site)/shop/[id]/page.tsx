@@ -10,7 +10,7 @@ const CATEGORY_SUFFIX: Record<string, string> = {
   "Belly Chains":       "Handmade Belly Chain Waist Jewelry",
   "Back Chains":        "Back Chain for Backless Dresses",
   "Body Chains":        "Handmade Body Chain Jewelry",
-  "Shoulder Chains":    "Bridal Shoulder Body Jewelry",
+  "Shoulder & Arm Chains":    "Bridal Shoulder Body Jewelry",
   "Anklets":            "Handmade Ankle Bracelet",
   "Bracelets":          "Handmade Stainless Steel Bracelet",
   "Necklaces":          "Handmade Chain Necklace",

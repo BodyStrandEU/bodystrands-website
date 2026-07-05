@@ -4,7 +4,7 @@ export const CATEGORIES = [
   "Belly Chains",
   "Back Chains",
   "Body Chains",
-  "Shoulder Chains",
+  "Shoulder & Arm Chains",
   "Anklets",
   "Bracelets",
   "Necklaces",

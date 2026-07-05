@@ -8,7 +8,7 @@ const CATEGORY_ORDER = [
   "Belly Chains",
   "Back Chains",
   "Body Chains",
-  "Shoulder Chains",
+  "Shoulder & Arm Chains",
   "Anklets",
   "Bracelets",
   "Necklaces",

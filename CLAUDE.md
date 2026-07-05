@@ -64,11 +64,47 @@ Product Name/
 - Video autoplays (muted, loop) when it becomes the active item
 - object-cover on all gallery images (NOT object-contain — that causes letterboxing)
 
+## Product Data Modes — ALWAYS use one of these three, never mix incorrectly
+
+### Mode 1 — Per-variant images (different photo sets per finish, e.g. most belly/back chains)
+```json
+{ "variants": ["Gold Tone", "Silver Tone"],
+  "variantImages": { "Gold Tone": [...], "Silver Tone": [...] },
+  "variantVideos": { "Gold Tone": "url", "Silver Tone": "url" },
+  "images": ["first-gold-hero.jpg"] }
+```
+
+### Mode 2 — Unified gallery + hero selector (shared images, per-finish hero, e.g. layered-arm-chain)
+```json
+{ "variants": ["Gold Tone", "Silver Plated", "Stainless Steel"],
+  "variantHeroes": { "Gold Tone": "img-gold.png", "Silver Plated": "img-silver.png", "Stainless Steel": "img-stainless.png" },
+  "variantVideos": { "Gold Tone": "url", "Silver Plated": "url", "Stainless Steel": "url" },
+  "gallery": ["img-gold.png", "img-silver.png", "img-stainless.png", "img-info.jpg"],
+  "images": ["img-gold.png"] }
+```
+- `variants` = hero badge buttons in admin + drives activeVariant
+- `variantHeroes` = which gallery image becomes the main hero per finish
+- `variantVideos` = same URL repeated for all (admin writes all at once via single dropzone)
+- NO root `"video"` field in this mode
+
+### Mode 3 — No variants, single video (simple product)
+```json
+{ "gallery": [...], "video": "url", "images": ["hero.jpg"] }
+```
+
+### CRITICAL — never set `gallery` + no `variants` + root `video`
+That combination shows TWO video slots in admin. Admin bug is permanently patched (`!form.gallery` guard on no-variant section), but still follow the correct mode above.
+
+### When variantGroups covers the same options as variants (e.g. Finish dropdown + optionPrices):
+- Keep `variants` for admin hero selector
+- Keep `variantGroups[Finish]` for pricing via `optionPrices`
+- ProductPageClient auto-suppresses duplicate swatch buttons and syncs activeVariant from the dropdown — no extra setup needed
+
 ## Video Rules
-- Gold/ has video AND Silver/ has video → use `variantVideos: { "Gold Tone": "...", "Silver Tone": "..." }`
-- Only one video found → apply it to both variants
+- Per-variant mode: use `variantVideos` keyed by variant name
+- Unified gallery mode: use `variantVideos` with the same URL for every variant key (NOT root `video`)
+- Simple / no-variant: use root `video` field only
 - Accepted formats: .mp4 only (convert .mov with: `avconvert -s input.mov -o output.mp4 -p PresetMediumQuality --replace`)
-- Video goes in the variant folder (Gold/ or Silver/) if variant-specific, or root if shared
 
 ## Mobile-First Rules (80% of customers are on mobile)
 - Gallery is full-bleed on mobile (no horizontal padding): wrap in `-mx-6 md:mx-0`

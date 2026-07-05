@@ -2939,7 +2939,7 @@
     "currency": "EUR",
     "category": "Belly Chains",
     "description": "Your most unexpected accessory. This dainty gold or silver thigh chain wraps around the upper leg like a garter — festival-ready, editorial, and completely waterproof stainless steel.",
-    "fullDescription": "Drape it around the thigh for a leg garter effect, or wear it lower as a waist belt. This versatile piece works equally well as a belly chain, a thigh accent, or a hip statement at a festival.\n\nHandcrafted in stainless steel in gold or silver.\n\nSizing:\nXS — Waist/High Hip: 74 cm base + 12 cm extender (fits 74–86 cm) · Thigh: 50 cm base + 10 cm extender (fits 50–60 cm) · Drop Chain: 20 cm\nS — Waist/High Hip: 79 cm base + 12 cm extender (fits 79–91 cm) · Thigh: 55 cm base + 10 cm extender (fits 55–65 cm) · Drop Chain: 21.5 cm\nM — Waist/High Hip: 84 cm base + 12 cm extender (fits 84–96 cm) · Thigh: 61 cm base + 10 cm extender (fits 61–71 cm) · Drop Chain: 23 cm\nL — Waist/High Hip: 96 cm base + 12 cm extender (fits 96–108 cm) · Thigh: 71 cm base + 10 cm extender (fits 71–81 cm) · Drop Chain: 24.5 cm\nXL — Waist/High Hip: 108 cm base + 12 cm extender (fits 108–120 cm) · Thigh: 81 cm base + 10 cm extender (fits 81–91 cm) · Drop Chain: 26 cm\n\nMessage us your measurements after ordering and we'll customise the fit at no extra cost.",
+    "fullDescription": "Drape it around the thigh for a leg garter effect, or wear it lower as a waist belt. This versatile piece works equally well as a belly chain, a thigh accent, or a hip statement at a festival.\n\nHandcrafted in stainless steel in gold or silver.\n\nSizing:\nS — Waist/High Hip: 71 cm base + 12 cm extender (fits 71–83 cm) · Thigh: 48 cm base + 10 cm extender (fits 48–58 cm) · Drop Chain: 20 cm\nM — Waist/High Hip: 81 cm base + 12 cm extender (fits 81–93 cm) · Thigh: 58 cm base + 10 cm extender (fits 58–68 cm) · Drop Chain: 21.5 cm\nL — Waist/High Hip: 93 cm base + 12 cm extender (fits 93–105 cm) · Thigh: 68 cm base + 10 cm extender (fits 68–78 cm) · Drop Chain: 23 cm\nXL — Waist/High Hip: 105 cm base + 12 cm extender (fits 105–117 cm) · Thigh: 78 cm base + 10 cm extender (fits 78–88 cm) · Drop Chain: 24.5 cm\n\nMessage us your measurements after ordering and we'll customise the fit at no extra cost.",
     "specs": [
       {
         "label": "Material",
@@ -2962,24 +2962,20 @@
         "value": "Dispatches within 1–2 business days"
       },
       {
-        "label": "XS",
-        "value": "Waist: 74–86 cm · Thigh: 50–60 cm · Drop: 20 cm"
-      },
-      {
         "label": "S",
-        "value": "Waist: 79–91 cm · Thigh: 55–65 cm · Drop: 21.5 cm"
+        "value": "Waist: 71–83 cm · Thigh: 48–58 cm · Drop: 20 cm"
       },
       {
         "label": "M",
-        "value": "Waist: 84–96 cm · Thigh: 61–71 cm · Drop: 23 cm"
+        "value": "Waist: 81–93 cm · Thigh: 58–68 cm · Drop: 21.5 cm"
       },
       {
         "label": "L",
-        "value": "Waist: 96–108 cm · Thigh: 71–81 cm · Drop: 24.5 cm"
+        "value": "Waist: 93–105 cm · Thigh: 68–78 cm · Drop: 23 cm"
       },
       {
         "label": "XL",
-        "value": "Waist: 108–120 cm · Thigh: 81–91 cm · Drop: 26 cm"
+        "value": "Waist: 105–117 cm · Thigh: 78–88 cm · Drop: 24.5 cm"
       }
     ],
     "featured": false,
@@ -2991,11 +2987,10 @@
       {
         "label": "Size",
         "options": [
-          "XS (74 cm waist)",
-          "S (79 cm waist)",
-          "M (84 cm waist)",
-          "L (96 cm waist)",
-          "XL (108 cm waist)"
+          "S (71 cm waist)",
+          "M (81 cm waist)",
+          "L (93 cm waist)",
+          "XL (105 cm waist)"
         ]
       }
     ],

@@ -1571,8 +1571,8 @@ export default function ProductEditor({ params }: { params: Promise<{ id: string
           )}
         </div>
 
-        {/* No-variant video */}
-        {(form.variants ?? []).length === 0 && (
+        {/* No-variant video — only when not in gallery mode (gallery has its own video slot) */}
+        {(form.variants ?? []).length === 0 && !form.gallery && (
           <div style={sectionStyle}>
             <h2 style={{ margin: "0 0 0.75rem", fontSize: "0.9rem", fontWeight: 700, color: "var(--admin-text)", textTransform: "uppercase", letterSpacing: "0.08em" }}>
               Video (optional)

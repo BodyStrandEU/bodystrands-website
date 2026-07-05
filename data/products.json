@@ -8212,6 +8212,17 @@
         ]
       }
     ],
+    "variants": ["Gold Tone", "Silver Plated", "Stainless Steel"],
+    "variantHeroes": {
+      "Gold Tone": "/images/products/layered-arm-chain/img-gold.png",
+      "Silver Plated": "/images/products/layered-arm-chain/img-silver.png",
+      "Stainless Steel": "/images/products/layered-arm-chain/img-stainless.png"
+    },
+    "variantVideos": {
+      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/625af9cccd93e10d5d3ce87272a4a101/downloads/default.mp4",
+      "Silver Plated": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/625af9cccd93e10d5d3ce87272a4a101/downloads/default.mp4",
+      "Stainless Steel": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/625af9cccd93e10d5d3ce87272a4a101/downloads/default.mp4"
+    },
     "gallery": [
       "/images/products/layered-arm-chain/img-gold.png",
       "/images/products/layered-arm-chain/img-silver.png",
@@ -8222,7 +8233,6 @@
     ],
     "images": [
       "/images/products/layered-arm-chain/img-gold.png"
-    ],
-    "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/625af9cccd93e10d5d3ce87272a4a101/downloads/default.mp4"
+    ]
   }
 ]

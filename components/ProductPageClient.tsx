@@ -103,6 +103,17 @@ export default function ProductPageClient({ product }: { product: Product }) {
     trackRecentlyViewed(product.id);
   }, [product.id]);
 
+  // If a variantGroup covers the same options as variants (e.g. Finish dropdown + optionPrices),
+  // sync activeVariant from that dropdown so the gallery hero updates, and suppress duplicate swatches.
+  const finishGroup = (product.variantGroups ?? []).find(
+    (g) => g.options && product.variants?.some((v) => g.options!.includes(v))
+  );
+  useEffect(() => {
+    if (finishGroup && groupSelections[finishGroup.label]) {
+      setActiveVariant(groupSelections[finishGroup.label]);
+    }
+  }, [groupSelections, finishGroup?.label]);
+
   const symbol =
     product.currency === "EUR" ? "€" : product.currency === "GBP" ? "£" : "$";
 
@@ -220,8 +231,8 @@ export default function ProductPageClient({ product }: { product: Product }) {
 
         <div className="h-px bg-[#E8B4A8]/40" />
 
-        {/* Finish selector */}
-        {product.variants && product.variants.length > 1 && (
+        {/* Finish selector — hidden when a variantGroup already covers the same options */}
+        {product.variants && product.variants.length > 1 && !finishGroup && (
           <div>
             <p className="text-[0.55rem] tracking-[0.25em] uppercase text-[#8C7B6E] mb-3">
               Finish —{" "}

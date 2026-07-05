@@ -276,9 +276,22 @@ function ImageSection({ title, images, onChange, onUpload }: ImageSectionProps) 
 // ─── Gallery section (unified mode) — images with inline hero badges ─────────
 
 const VARIANT_BADGE_COLORS: Record<string, string> = {
-  "Gold Tone": "#C8A84B",
-  "Silver Tone": "#9ca3af",
+  "Gold Tone":       "#C8A84B",
+  "Silver Tone":     "#9ca3af",
+  "Silver Plated":   "#9ca3af",
+  "Stainless Steel": "#6b7280",
 };
+
+// Shortest prefix that uniquely identifies this variant among all variants
+function variantBadgeLabel(v: string, all: string[]): string {
+  for (let len = 1; len <= v.length; len++) {
+    const candidate = v.slice(0, len);
+    if (all.every((other) => other === v || !other.toLowerCase().startsWith(candidate.toLowerCase()))) {
+      return candidate;
+    }
+  }
+  return v.slice(0, 2);
+}
 
 interface GallerySectionProps {
   images: string[];
@@ -345,7 +358,7 @@ function GallerySection({
       </h4>
       <p style={{ margin: "0 0 0.75rem", fontSize: "0.72rem", color: "var(--admin-muted)" }}>
         First image = shop card thumbnail. Drag to reorder.
-        {variants.length > 0 && <> Click <strong>{variants.map(v => v.charAt(0)).join(" / ")}</strong> to set the hero shown when a buyer picks that tone.</>}
+        {variants.length > 0 && <> Click <strong>{variants.map(v => variantBadgeLabel(v, variants)).join(" / ")}</strong> to set the hero shown when a buyer picks that tone.</>}
       </p>
 
       <DndContext sensors={sensors} collisionDetection={closestCenter} onDragEnd={handleDragEnd}>
@@ -353,7 +366,7 @@ function GallerySection({
           <div style={{ display: "flex", flexWrap: "wrap", gap: "0.5rem", marginBottom: "0.75rem" }}>
             {images.map((url) => {
               const badges: HeroBadge[] = variants.map((v) => ({
-                label: v.charAt(0),
+                label: variantBadgeLabel(v, variants),
                 active: variantHeroes[v] === url,
                 activeColor: VARIANT_BADGE_COLORS[v] ?? "#A0622A",
                 onClick: () => onSetHero(v, url),

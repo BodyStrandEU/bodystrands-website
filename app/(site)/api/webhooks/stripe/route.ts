@@ -19,6 +19,46 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: msg }, { status: 400 });
   }
 
+  if (event.type === "checkout.session.expired") {
+    const session = event.data.object as Stripe.Checkout.Session;
+    const customerEmail = session.customer_details?.email;
+    const productName   = session.metadata?.productName;
+    const productId     = session.metadata?.productId;
+    const FROM          = process.env.RESEND_FROM_EMAIL;
+
+    if (customerEmail && productName && FROM) {
+      const productUrl = productId
+        ? `https://www.bodystrands.com/shop/${productId}`
+        : "https://www.bodystrands.com/shop";
+
+      await resend.emails.send({
+        from:    `Bodystrands <${FROM}>`,
+        to:      customerEmail,
+        subject: `You left something behind — ${productName}`,
+        html: `
+          <div style="font-family:Georgia,serif;max-width:520px;margin:0 auto;color:#2C2220;background:#FDF9F7;padding:48px 40px;">
+            <p style="font-size:11px;letter-spacing:0.3em;text-transform:uppercase;color:#A0622A;margin:0 0 24px;">Bodystrands</p>
+            <h1 style="font-weight:300;font-size:26px;margin:0 0 16px;line-height:1.3;">Still thinking about it?</h1>
+            <p style="font-size:14px;line-height:1.9;color:#8C7B6E;margin:0 0 12px;">
+              You left <strong style="color:#2C2220;">${productName}</strong> in your cart.
+              It's still waiting for you — each piece is handmade in our studio in Portugal, so once it's gone, it's gone.
+            </p>
+            <p style="font-size:14px;line-height:1.9;color:#8C7B6E;margin:0 0 32px;">
+              Use code <strong style="color:#2C2220;letter-spacing:0.1em;">WELCOME10</strong> for 10% off if it's your first order.
+            </p>
+            <a href="${productUrl}"
+               style="display:inline-block;background:#2C2220;color:#FDF9F7;padding:14px 36px;font-size:11px;letter-spacing:0.25em;text-transform:uppercase;text-decoration:none;">
+              Complete Your Order
+            </a>
+            <p style="font-size:11px;color:#8C7B6E;margin-top:40px;padding-top:20px;border-top:1px solid #E8B4A8;">
+              Made in Portugal · Handcrafted in 316L stainless steel · Waterproof &amp; tarnish-resistant
+            </p>
+          </div>
+        `,
+      });
+    }
+  }
+
   if (event.type === "checkout.session.completed") {
     const session = event.data.object as Stripe.Checkout.Session;
 

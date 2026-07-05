@@ -4,6 +4,7 @@ import NewsletterBanner from "@/components/NewsletterBanner";
 import CookieConsent from "@/components/CookieConsent";
 import FloatingDMButton from "@/components/FloatingDMButton";
 import TrustBar from "@/components/TrustBar";
+import EmailCapturePopup from "@/components/EmailCapturePopup";
 
 export default function SiteLayout({
   children,
@@ -19,6 +20,7 @@ export default function SiteLayout({
       <Footer />
       <CookieConsent />
       <FloatingDMButton />
+      <EmailCapturePopup />
     </div>
   );
 }

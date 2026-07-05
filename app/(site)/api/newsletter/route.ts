@@ -32,12 +32,14 @@ export async function POST(request: NextRequest) {
             our little studio in Portugal.
           </p>
 
-          <p style="font-size:14px;line-height:1.9;color:#8C7B6E;margin:0 0 40px;">
-            We put love into every strand, and we're so glad you're here.
-          </p>
+          <div style="border:1px solid #E8B4A8;padding:20px 24px;margin:0 0 28px;text-align:center;">
+            <p style="font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:#8C7B6E;margin:0 0 8px;">Your welcome discount</p>
+            <p style="font-size:22px;letter-spacing:0.18em;color:#2C2220;margin:0 0 6px;font-weight:400;">WELCOME10</p>
+            <p style="font-size:12px;color:#8C7B6E;margin:0;">10% off — applies on top of any sale</p>
+          </div>
 
           <a href="https://www.bodystrands.com/shop"
-             style="display:inline-block;border:1px solid #A0622A;color:#A0622A;padding:14px 36px;font-size:11px;letter-spacing:0.25em;text-transform:uppercase;text-decoration:none;">
+             style="display:inline-block;background:#2C2220;color:#FDF9F7;padding:14px 36px;font-size:11px;letter-spacing:0.25em;text-transform:uppercase;text-decoration:none;">
             Shop Now
           </a>
 

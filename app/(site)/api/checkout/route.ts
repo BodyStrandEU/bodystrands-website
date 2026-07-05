@@ -117,6 +117,8 @@ export async function POST(req: NextRequest) {
         metadata:    { productName: productNames.join(", "), price: totalAmount.toFixed(2), currency: "EUR" },
         shipping_options,
         shipping_address_collection: { allowed_countries: STRIPE_COUNTRIES },
+        allow_promotion_codes: true,
+        expires_at: Math.floor(Date.now() / 1000) + 4 * 60 * 60,
         success_url: `${origin}/success?session_id={CHECKOUT_SESSION_ID}`,
         cancel_url:  `${origin}/shop`,
       });
@@ -154,6 +156,8 @@ export async function POST(req: NextRequest) {
       metadata: { productId: product.id, productName, price: totalAmount.toFixed(2), currency: product.currency },
       shipping_options,
       shipping_address_collection: { allowed_countries: STRIPE_COUNTRIES },
+      allow_promotion_codes: true,
+      expires_at: Math.floor(Date.now() / 1000) + 4 * 60 * 60,
       success_url: `${origin}/success?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url:  `${origin}/shop`,
     });

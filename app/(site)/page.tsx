@@ -89,8 +89,8 @@ export default function HomePage() {
             muted
             loop
             playsInline
-            preload="metadata"
-            poster="/images/hero-back-chain.jpg"
+            preload="auto"
+            poster="/images/hero-video-poster.jpg"
             className="absolute inset-0 w-full h-full object-cover object-center"
           >
             <source src="/videos/promo.mp4" type="video/mp4" />

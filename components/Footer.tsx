@@ -93,10 +93,10 @@ export default function Footer() {
         <div className="flex flex-col gap-3">
           <p className="text-[0.6rem] tracking-[0.25em] uppercase text-[#E8B4A8]/50 mb-1">Contact</p>
           <a
-            href="mailto:hello@bodystrands.com"
+            href="mailto:info@bodystrands.com"
             className="text-[0.65rem] font-light tracking-[0.1em] text-[#E8B4A8]/60 hover:text-[#E8B4A8] transition-colors"
           >
-            hello@bodystrands.com
+            info@bodystrands.com
           </a>
           <p className="text-[0.65rem] font-light tracking-[0.1em] text-[#E8B4A8]/60">
             Handmade in Portugal

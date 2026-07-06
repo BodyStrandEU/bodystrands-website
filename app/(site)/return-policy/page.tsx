@@ -75,8 +75,8 @@ export default function ReturnPolicyPage() {
         <section>
           <h2 className="font-josefin text-sm tracking-widest uppercase mb-3">How to Start a Return</h2>
           <p className="mb-4">To initiate a return, email us at{" "}
-            <a href="mailto:hello@bodystrands.com" className="text-[#A0622A] hover:underline">
-              hello@bodystrands.com
+            <a href="mailto:info@bodystrands.com" className="text-[#A0622A] hover:underline">
+              info@bodystrands.com
             </a>{" "}
             with:
           </p>
@@ -95,8 +95,8 @@ export default function ReturnPolicyPage() {
           <h2 className="font-josefin text-sm tracking-widest uppercase mb-3">Questions?</h2>
           <p>
             Reach us anytime at{" "}
-            <a href="mailto:hello@bodystrands.com" className="text-[#A0622A] hover:underline">
-              hello@bodystrands.com
+            <a href="mailto:info@bodystrands.com" className="text-[#A0622A] hover:underline">
+              info@bodystrands.com
             </a>{" "}
             — we typically reply within one business day.
           </p>

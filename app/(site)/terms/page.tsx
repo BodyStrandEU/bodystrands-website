@@ -36,7 +36,7 @@ export default function TermsPage() {
 
         <section>
           <h2 className="font-josefin text-sm tracking-widest uppercase mb-3">5. Returns & Refunds</h2>
-          <p>We accept returns within 14 days of delivery for unworn, undamaged items in original condition. To initiate a return, contact us at hello@bodystrands.com. Return shipping costs are the buyer's responsibility unless the item is faulty.</p>
+          <p>We accept returns within 14 days of delivery for unworn, undamaged items in original condition. To initiate a return, contact us at info@bodystrands.com. Return shipping costs are the buyer's responsibility unless the item is faulty.</p>
         </section>
 
         <section>
@@ -51,7 +51,7 @@ export default function TermsPage() {
 
         <section>
           <h2 className="font-josefin text-sm tracking-widest uppercase mb-3">8. Contact</h2>
-          <p>For any questions about your order or these terms, reach us at hello@bodystrands.com.</p>
+          <p>For any questions about your order or these terms, reach us at info@bodystrands.com.</p>
         </section>
 
       </div>

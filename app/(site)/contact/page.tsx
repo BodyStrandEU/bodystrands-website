@@ -24,10 +24,10 @@ export default function ContactPage() {
             <div>
               <p className="text-[0.55rem] tracking-[0.25em] uppercase text-[#A0622A] mb-3">Email</p>
               <a
-                href="mailto:hello@bodystrands.com"
+                href="mailto:info@bodystrands.com"
                 className="text-sm font-light text-[#2C2220] hover:text-[#A0622A] transition-colors tracking-wide"
               >
-                hello@bodystrands.com
+                info@bodystrands.com
               </a>
             </div>
 

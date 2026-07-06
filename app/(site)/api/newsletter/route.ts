@@ -18,7 +18,7 @@ export async function POST(request: NextRequest) {
   const [welcome, notify] = await Promise.allSettled([
     // Welcome email to subscriber
     resend.emails.send({
-      from:    "Bodystrands <hello@bodystrands.com>",
+      from:    "Bodystrands <info@bodystrands.com>",
       to:      email,
       subject: "Welcome to Bodystrands ✨",
       html: `
@@ -53,7 +53,7 @@ export async function POST(request: NextRequest) {
 
     // Notification to admin
     resend.emails.send({
-      from:    "Bodystrands <hello@bodystrands.com>",
+      from:    "Bodystrands <info@bodystrands.com>",
       to:      "storenavaria@gmail.com",
       subject: `New subscriber: ${email}`,
       html: `<p style="font-family:sans-serif;">New newsletter signup: <strong>${email}</strong></p>`,

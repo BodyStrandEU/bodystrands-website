@@ -16,7 +16,7 @@ export default function PrivacyPolicyPage() {
 
         <section>
           <h2 className="font-josefin text-sm tracking-widest uppercase mb-3">1. Who We Are</h2>
-          <p>Bodystrands is a handmade body jewelry brand selling through bodystrands.com. Our contact email is hello@bodystrands.com.</p>
+          <p>Bodystrands is a handmade body jewelry brand selling through bodystrands.com. Our contact email is info@bodystrands.com.</p>
         </section>
 
         <section>
@@ -36,7 +36,7 @@ export default function PrivacyPolicyPage() {
 
         <section>
           <h2 className="font-josefin text-sm tracking-widest uppercase mb-3">5. Your Rights (GDPR)</h2>
-          <p>If you are based in the European Economic Area, you have the right to access, correct, or delete your personal data at any time. To make a request, email us at hello@bodystrands.com.</p>
+          <p>If you are based in the European Economic Area, you have the right to access, correct, or delete your personal data at any time. To make a request, email us at info@bodystrands.com.</p>
         </section>
 
         <section>
@@ -46,7 +46,7 @@ export default function PrivacyPolicyPage() {
 
         <section>
           <h2 className="font-josefin text-sm tracking-widest uppercase mb-3">7. Contact</h2>
-          <p>For any privacy-related questions, contact us at hello@bodystrands.com.</p>
+          <p>For any privacy-related questions, contact us at info@bodystrands.com.</p>
         </section>
 
       </div>

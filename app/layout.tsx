@@ -94,7 +94,7 @@ export default function RootLayout({
             logo:    "https://www.bodystrands.com/images/logo.png",
             description: "Handmade body jewelry crafted in 316L surgical-grade stainless steel. Made in Portugal.",
             sameAs: ["https://www.instagram.com/bodystrands/"],
-            contactPoint: { "@type": "ContactPoint", email: "hello@bodystrands.com", contactType: "customer service" },
+            contactPoint: { "@type": "ContactPoint", email: "info@bodystrands.com", contactType: "customer service" },
           },
           {
             "@context": "https://schema.org",

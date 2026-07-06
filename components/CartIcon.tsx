@@ -36,6 +36,22 @@ export default function CartIcon({ light }: { light?: boolean }) {
     if (!shippingCountry) return;
     setLoading(true);
     setError("");
+
+    if (typeof window !== "undefined") {
+      const w = window as Window & { fbq?: (...a: unknown[]) => void; gtag?: (...a: unknown[]) => void };
+      w.fbq?.("track", "InitiateCheckout");
+      w.gtag?.("event", "begin_checkout", {
+        currency: "EUR",
+        value:    orderTotal,
+        items: items.map((i) => ({
+          item_id:      i.productId,
+          item_name:    i.productName,
+          item_variant: i.variant ?? "",
+          price:        i.unitPrice,
+          quantity:     i.quantity,
+        })),
+      });
+    }
     try {
       const res  = await fetch("/api/checkout", {
         method:  "POST",

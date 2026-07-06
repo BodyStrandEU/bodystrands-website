@@ -68,9 +68,10 @@ async function fetchGA4(propertyId: string, credJson: string, ga4Start: string) 
   const property   = `properties/${propertyId}`;
   const dateRanges = [{ startDate: ga4Start, endDate: "today" }];
 
-  const [overview, sources, devices, countries, topPages, addToCartByProduct] = await Promise.all([
+  const [overview, channelRes, sourceMedium, devices, countries, topPages, addToCartByProduct] = await Promise.all([
     client.runReport({ property, dateRanges, metrics: [{ name: "sessions" }, { name: "activeUsers" }, { name: "engagementRate" }, { name: "newUsers" }] }),
     client.runReport({ property, dateRanges, dimensions: [{ name: "sessionDefaultChannelGroup" }], metrics: [{ name: "sessions" }], orderBys: [{ metric: { metricName: "sessions" }, desc: true }], limit: "8" }),
+    client.runReport({ property, dateRanges, dimensions: [{ name: "sessionSource" }, { name: "sessionMedium" }], metrics: [{ name: "sessions" }], orderBys: [{ metric: { metricName: "sessions" }, desc: true }], limit: "10" }),
     client.runReport({ property, dateRanges, dimensions: [{ name: "deviceCategory" }], metrics: [{ name: "sessions" }] }),
     client.runReport({ property, dateRanges, dimensions: [{ name: "country" }], metrics: [{ name: "sessions" }], orderBys: [{ metric: { metricName: "sessions" }, desc: true }], limit: "8" }),
     client.runReport({ property, dateRanges, dimensions: [{ name: "pagePath" }], metrics: [{ name: "screenPageViews" }], orderBys: [{ metric: { metricName: "screenPageViews" }, desc: true }], limit: "10" }),
@@ -84,7 +85,8 @@ async function fetchGA4(propertyId: string, credJson: string, ga4Start: string) 
     users:          parseInt(row0[1]?.value ?? "0"),
     engagementRate: parseFloat(row0[2]?.value ?? "0"),
     newUsers:       parseInt(row0[3]?.value ?? "0"),
-    channels:  (sources[0]?.rows  ?? []).map((r) => ({ channel:  r.dimensionValues?.[0]?.value ?? "", sessions: parseInt(r.metricValues?.[0]?.value ?? "0") })),
+    channels:  (channelRes[0]?.rows  ?? []).map((r) => ({ channel:  r.dimensionValues?.[0]?.value ?? "", sessions: parseInt(r.metricValues?.[0]?.value ?? "0") })),
+    sources:   (sourceMedium[0]?.rows ?? []).map((r) => ({ source: r.dimensionValues?.[0]?.value ?? "", medium: r.dimensionValues?.[1]?.value ?? "", sessions: parseInt(r.metricValues?.[0]?.value ?? "0") })),
     devices:   (devices[0]?.rows  ?? []).map((r) => ({ device:   r.dimensionValues?.[0]?.value ?? "", sessions: parseInt(r.metricValues?.[0]?.value ?? "0") })),
     countries: (countries[0]?.rows ?? []).map((r) => ({ country:  r.dimensionValues?.[0]?.value ?? "", sessions: parseInt(r.metricValues?.[0]?.value ?? "0") })),
     topPages:  (topPages[0]?.rows  ?? []).map((r) => ({ path:     r.dimensionValues?.[0]?.value ?? "", views:    parseInt(r.metricValues?.[0]?.value ?? "0") })),

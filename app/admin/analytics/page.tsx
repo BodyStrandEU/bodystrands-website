@@ -31,6 +31,7 @@ type GA4Data = {
   engagementRate: number;
   newUsers: number;
   channels:  { channel: string; sessions: number }[];
+  sources:   { source: string; medium: string; sessions: number }[];
   devices:   { device: string; sessions: number }[];
   countries: { country: string; sessions: number }[];
   topPages:  { path: string; views: number }[];
@@ -302,6 +303,24 @@ export default function AnalyticsPage() {
                         </div>
                       ))}
                     </div>
+
+                    {data.ga4.sources.length > 0 && (
+                      <>
+                        <div style={{ ...sh, borderTop: "1px solid var(--admin-border)", fontSize: "0.62rem" }}>
+                          <span>Exact Source / Medium</span>
+                        </div>
+                        <div style={{ padding: "0.75rem 1.25rem", display: "flex", flexDirection: "column", gap: "0.6rem" }}>
+                          {data.ga4.sources.map((s, i) => (
+                            <div key={`${s.source}-${s.medium}-${i}`} style={{ display: "flex", justifyContent: "space-between" }}>
+                              <span style={{ fontSize: "0.68rem", color: "var(--admin-text)" }}>
+                                {s.source || "(direct)"} <span style={{ color: "var(--admin-text-muted)" }}>/ {s.medium || "(none)"}</span>
+                              </span>
+                              <span style={{ fontSize: "0.68rem", color: "var(--admin-text-muted)" }}>{s.sessions.toLocaleString()}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </>
+                    )}
                   </>
                 ) : (
                   <>

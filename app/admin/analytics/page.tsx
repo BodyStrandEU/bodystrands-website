@@ -26,6 +26,7 @@ type Order = {
   source: string | null;
   medium: string | null;
   channel: string | null;
+  landingPage: string | null;
 };
 
 type GA4Data = {
@@ -449,6 +450,9 @@ export default function AnalyticsPage() {
                             <>
                               <div style={{ color: "var(--admin-text)" }}>{o.source}</div>
                               <div style={{ fontSize: "0.58rem", color: "var(--admin-text-muted)" }}>{o.medium}</div>
+                              {o.landingPage && (
+                                <div style={{ fontSize: "0.56rem", color: "var(--admin-text-muted)", opacity: 0.7 }} title="Landing page">→ {o.landingPage}</div>
+                              )}
                             </>
                           ) : (
                             <span style={{ color: "var(--admin-text-muted)" }}>untracked</span>

@@ -80,7 +80,7 @@ async function fetchGA4(propertyId: string, credJson: string, ga4Start: string) 
     // (see SuccessPage.tsx's gtag purchase event), so this joins 1:1 to a specific Stripe order.
     client.runReport({
       property, dateRanges,
-      dimensions: [{ name: "transactionId" }, { name: "sessionSource" }, { name: "sessionMedium" }, { name: "sessionDefaultChannelGroup" }],
+      dimensions: [{ name: "transactionId" }, { name: "sessionSource" }, { name: "sessionMedium" }, { name: "sessionDefaultChannelGroup" }, { name: "landingPagePlusQueryString" }],
       metrics: [{ name: "eventCount" }],
       dimensionFilter: { filter: { fieldName: "eventName", stringFilter: { value: "purchase" } } },
       limit: "100",
@@ -106,6 +106,7 @@ async function fetchGA4(propertyId: string, credJson: string, ga4Start: string) 
       source:        r.dimensionValues?.[1]?.value ?? "",
       medium:        r.dimensionValues?.[2]?.value ?? "",
       channel:       r.dimensionValues?.[3]?.value ?? "",
+      landingPage:   r.dimensionValues?.[4]?.value ?? "",
     })),
   };
 }
@@ -189,9 +190,10 @@ export async function GET(request: NextRequest) {
       const match = attributionByTxId.get(o.id);
       return {
         ...o,
-        source:  match?.source  ?? null,
-        medium:  match?.medium  ?? null,
-        channel: match?.channel ?? null,
+        source:      match?.source  ?? null,
+        medium:      match?.medium  ?? null,
+        channel:     match?.channel ?? null,
+        landingPage: match?.landingPage ?? null,
       };
     });
 

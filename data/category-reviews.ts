@@ -39,7 +39,7 @@ export const CATEGORY_REVIEWS: Record<string, Review[]> = {
       rating: 4,
       date: "Mar 2026",
       headline: "Beautiful quality, shipping took about a week",
-      text: "The chain itself is gorgeous — way nicer than the photos even. My only note is that shipping from Portugal took a bit longer than I expected, but it arrived safely and well packaged. Been wearing it every day since and no issues at all. Would absolutely order again.",
+      text: "Gorgeous chain, nicer than the photos. Shipping from Portugal took a little longer than expected but it arrived safe and well packaged.",
     },
     {
       name: "Marta G.",
@@ -47,7 +47,7 @@ export const CATEGORY_REVIEWS: Record<string, Review[]> = {
       rating: 5,
       date: "Jul 2026",
       headline: "Three strangers asked where I got it",
-      text: "Wore mine at a festival in the south of France last summer and it was a whole thing. The gold catches the light in the best way when you're outside. It's become my go-to piece for anything that's not a full outfit, if that makes sense. Just clips on and suddenly the whole look is done.",
+      text: "Wore mine at a festival in the south of France and it was a whole thing. Gold catches the light so well outdoors. My new go-to piece.",
     },
     {
       name: "Inês C.",
@@ -55,7 +55,7 @@ export const CATEGORY_REVIEWS: Record<string, Review[]> = {
       rating: 5,
       date: "May 2026",
       headline: "Bought it for my daughter, now I want one",
-      text: "My daughter turned 22 in April and I'd been looking for something a bit different. She's impossible to buy for but I took a chance on this. She called me from her room screaming when she opened it. Wore it the same night with the tiniest bikini top and looked stunning. I've been eyeing the pearl version for myself.",
+      text: "My daughter turned 22 and I'd been looking for something different for her. She called me from her room screaming when she opened it, wore it the same night, looked stunning. Now I want the pearl version for myself.",
     },
     {
       name: "Rachel O.",
@@ -63,7 +63,7 @@ export const CATEGORY_REVIEWS: Record<string, Review[]> = {
       rating: 5,
       date: "Jun 2026",
       headline: "Survived the Algarve heat and my own carelessness",
-      text: "I'm not someone who takes jewelry off carefully before bed or before swimming. I just forget. This chain has been through a week in the Algarve, multiple showers, and one accidental washing machine incident (not proud of it). Still perfect. Not a single mark or colour change. Genuinely impressed.",
+      text: "Never take it off, not even in the shower or the gym. Week in the Algarve, one accidental trip through the washing machine — still perfect.",
     },
     {
       name: "Annika L.",
@@ -71,7 +71,7 @@ export const CATEGORY_REVIEWS: Record<string, Review[]> = {
       rating: 5,
       date: "Apr 2026",
       headline: "Delicate looking but actually really durable",
-      text: "I was nervous ordering because I've had fine chains break on me before. But this one is properly made. The clasp is secure, the links feel strong, and after three months of daily wear it looks brand new. It's the kind of piece you just leave on and forget about — in the best way.",
+      text: "Was worried a fine chain like this would snap easily. Three months of daily wear later, clasp's still solid and it looks brand new.",
     },
     {
       name: "Valentina F.",
@@ -79,7 +79,7 @@ export const CATEGORY_REVIEWS: Record<string, Review[]> = {
       rating: 5,
       date: "Mar 2026",
       headline: "I know belly chains and this is the real deal",
-      text: "Growing up in Brazil belly chains are just part of summer. I've worn dozens of them. What I found when I moved to Europe was that most of the options here are either very expensive or very bad quality. This is neither. The proportions are perfect and the steel is actually good. I've been recommending it to every Brazilian friend I have here.",
+      text: "Growing up in Brazil, belly chains are just part of summer — I've worn dozens. Moving to Europe I found most options here were either overpriced or poor quality. This is neither. Proportions are perfect, steel actually holds up. I recommend it to every Brazilian friend I have here now.",
     },
     {
       name: "Petra N.",
@@ -87,7 +87,7 @@ export const CATEGORY_REVIEWS: Record<string, Review[]> = {
       rating: 5,
       date: "May 2026",
       headline: "My whole summer wardrobe makes more sense with it",
-      text: "Wore it in Croatia for two weeks straight. Bikinis, sundresses, evening looks — it worked with everything. There's something about a belly chain that just pulls a simple summer outfit together and this one does that without being too loud about it. I can't imagine packing for summer now without it.",
+      text: "Two weeks in Croatia, wore it with everything — bikinis, sundresses, evening looks. Pulls a simple outfit together without trying too hard.",
     },
     {
       name: "Giulia B.",
@@ -95,7 +95,7 @@ export const CATEGORY_REVIEWS: Record<string, Review[]> = {
       rating: 5,
       date: "Jun 2026",
       headline: "More elegant than I expected",
-      text: "I was a little worried it might look cheap or too costume-y in person but it's honestly really elegant. Dainty without being invisible. I've been wearing it under shirts sometimes and you can just catch a glimpse of it which I love. The gold tone is the perfect warm shade — not too yellow, not too pale.",
+      text: "Worried it might look costume-y in person. It doesn't — dainty, not cheap looking at all, and the gold tone is a lovely warm shade.",
     },
     {
       name: "Sarah C.",
@@ -103,7 +103,7 @@ export const CATEGORY_REVIEWS: Record<string, Review[]> = {
       rating: 5,
       date: "Apr 2026",
       headline: "I wear it literally every single day",
-      text: "Shower. Sleep. Weekend trips. It stays on. I got the silver about four months ago and it's part of my body at this point. My boyfriend didn't even notice I was wearing it for the first two weeks because it's just there, like it belongs. That's kind of the best compliment I can give jewelry I think.",
+      text: "Shower, sleep, weekend trips, it stays on. Four months in and my boyfriend didn't even notice I had it on for the first two weeks — it just belongs there.",
     },
     {
       name: "Nadia O.",
@@ -111,7 +111,7 @@ export const CATEGORY_REVIEWS: Record<string, Review[]> = {
       rating: 5,
       date: "May 2026",
       headline: "Way better quality than places charging twice the price",
-      text: "I've bought belly chains from bigger brands at much higher prices and honestly this beats them. The material feels premium, the chain lies flat and doesn't twist up, and the clasp doesn't have that annoying looseness where you're worried it'll fall off. Very happy with it.",
+      text: "Bought from bigger brands before at much higher prices. This beats them — lies flat, doesn't twist, clasp feels secure.",
     },
     {
       name: "Maja K.",
@@ -119,7 +119,7 @@ export const CATEGORY_REVIEWS: Record<string, Review[]> = {
       rating: 5,
       date: "Jun 2026",
       headline: "Everyone at the beach wanted to know where it was from",
-      text: "Wore it on the Dalmatian coast and it was a whole conversation starter. The gold against tanned skin in the sun looks incredible. I wasn't even sure about buying it initially — I was worried about the size — but the medium fits perfectly and I've had zero problems with it sitting where it should.",
+      text: "Wore it on the Dalmatian coast, gold against tanned skin looked incredible. Was worried about sizing but the medium fits exactly right.",
     },
     {
       name: "Yasmine E.",
@@ -127,7 +127,7 @@ export const CATEGORY_REVIEWS: Record<string, Review[]> = {
       rating: 5,
       date: "Mar 2026",
       headline: "Bought the gold and the silver, zero regrets",
-      text: "I switch between them depending on what I'm wearing. Gold for warm tones and summer looks, silver for cooler outfits and evenings. Both are perfect quality. The packaging is also really nice — feels like a proper gift even when you're buying it for yourself, which I fully did.",
+      text: "Switch between them depending on the outfit. Both perfect quality, and the packaging alone feels like a proper gift.",
     },
     {
       name: "Florentina D.",
@@ -135,7 +135,7 @@ export const CATEGORY_REVIEWS: Record<string, Review[]> = {
       rating: 4,
       date: "Apr 2026",
       headline: "Gorgeous piece, had to figure out sizing",
-      text: "My first order was a size too small — that's on me for not measuring carefully. I messaged the shop and they were so helpful and fast about sorting it out. Once I got the right size it fit perfectly and I've been wearing it almost every day. Really beautiful chain, the gold is a lovely warm tone.",
+      text: "Ordered a size too small at first (my fault, didn't measure properly). Messaged the shop and they sorted it out fast. Fits perfectly now, wear it almost daily, gold is a really lovely warm tone.",
     },
     {
       name: "Tara M.",
@@ -143,7 +143,7 @@ export const CATEGORY_REVIEWS: Record<string, Review[]> = {
       rating: 5,
       date: "May 2026",
       headline: "Best impulse buy I've made in years",
-      text: "Saw it on Instagram late at night, ordered it within ten minutes without really thinking about it. It arrived, I tried it on, and I genuinely couldn't believe how good it looked. I haven't taken it off in six weeks. My sister has already sent me a screenshot asking if it's the same one she saw on my stories.",
+      text: "Saw it on Instagram at midnight, ordered it in ten minutes without thinking twice. Haven't taken it off in six weeks.",
     },
     {
       name: "Amélie D.",
@@ -151,7 +151,7 @@ export const CATEGORY_REVIEWS: Record<string, Review[]> = {
       rating: 5,
       date: "Jun 2026",
       headline: "My non-negotiable beach bag item now",
-      text: "Goes in the bag alongside sunscreen and a good book. I never used to be a belly chain person — thought they weren't for me — but I tried this one on a whim and now I can't stop. It just makes you feel a certain way when you're wearing it. Hard to explain but you'll understand when you put it on.",
+      text: "Goes in the bag with the sunscreen now. Never thought belly chains were for me until this one.",
     },
     {
       name: "Zeynep Y.",
@@ -159,7 +159,7 @@ export const CATEGORY_REVIEWS: Record<string, Review[]> = {
       rating: 5,
       date: "Apr 2026",
       headline: "The packaging alone made me emotional",
-      text: "I know that sounds dramatic but the little note inside and the way it was wrapped made it feel really special. You can tell real people made this and thought about the person receiving it. The chain itself is stunning — I ordered it for myself but it arrived feeling like a gift. My friend saw it and immediately ordered one.",
+      text: "Sounds dramatic but the little note inside and the way it was wrapped felt genuinely special — you can tell real people packed it. Ordered it for myself, it arrived feeling like a gift. My friend saw it and ordered one within the hour.",
     },
     {
       name: "Katarzyna W.",
@@ -167,7 +167,31 @@ export const CATEGORY_REVIEWS: Record<string, Review[]> = {
       rating: 5,
       date: "May 2026",
       headline: "I now own three of them",
-      text: "It started with one gold tone that a friend was wearing in a photo. I tracked it down, ordered it, loved it. A month later I got the silver. Then the layered version. I don't have a problem. I have a collection. The quality is consistent across all three and they look beautiful worn together or separately.",
+      text: "Started with one gold tone, then the silver a month later, then the layered version. Quality's consistent across all three.",
+    },
+    {
+      name: "Ana P.",
+      location: "Faro, Portugal",
+      rating: 5,
+      date: "Jul 2026",
+      headline: "Perfect gift, arrived so fast",
+      text: "Ordered for a friend's birthday and it came within two days. Beautifully packaged too.",
+    },
+    {
+      name: "Ingrid S.",
+      location: "Oslo, Norway",
+      rating: 5,
+      date: "Jun 2026",
+      headline: "Exactly as pictured",
+      text: "No surprises, just a genuinely well-made chain. Would order again.",
+    },
+    {
+      name: "Camille R.",
+      location: "Nice, France",
+      rating: 5,
+      date: "May 2026",
+      headline: "Good weight, doesn't feel flimsy",
+      text: "Was expecting something thinner for the price. Pleasantly surprised — feels substantial without being heavy.",
     },
   ],
 };

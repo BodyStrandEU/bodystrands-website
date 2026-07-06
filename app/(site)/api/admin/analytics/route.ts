@@ -68,7 +68,7 @@ async function fetchGA4(propertyId: string, credJson: string, ga4Start: string) 
   const property   = `properties/${propertyId}`;
   const dateRanges = [{ startDate: ga4Start, endDate: "today" }];
 
-  const [overview, channelRes, sourceMedium, devices, countries, topPages, addToCartByProduct] = await Promise.all([
+  const [overview, channelRes, sourceMedium, devices, countries, topPages, addToCartByProduct, orderAttribution] = await Promise.all([
     client.runReport({ property, dateRanges, metrics: [{ name: "sessions" }, { name: "activeUsers" }, { name: "engagementRate" }, { name: "newUsers" }] }),
     client.runReport({ property, dateRanges, dimensions: [{ name: "sessionDefaultChannelGroup" }], metrics: [{ name: "sessions" }], orderBys: [{ metric: { metricName: "sessions" }, desc: true }], limit: "8" }),
     client.runReport({ property, dateRanges, dimensions: [{ name: "sessionSource" }, { name: "sessionMedium" }], metrics: [{ name: "sessions" }], orderBys: [{ metric: { metricName: "sessions" }, desc: true }], limit: "10" }),
@@ -76,6 +76,15 @@ async function fetchGA4(propertyId: string, credJson: string, ga4Start: string) 
     client.runReport({ property, dateRanges, dimensions: [{ name: "country" }], metrics: [{ name: "sessions" }], orderBys: [{ metric: { metricName: "sessions" }, desc: true }], limit: "8" }),
     client.runReport({ property, dateRanges, dimensions: [{ name: "pagePath" }], metrics: [{ name: "screenPageViews" }], orderBys: [{ metric: { metricName: "screenPageViews" }, desc: true }], limit: "10" }),
     client.runReport({ property, dateRanges, dimensions: [{ name: "itemName" }], metrics: [{ name: "itemsAddedToCart" }], orderBys: [{ metric: { metricName: "itemsAddedToCart" }, desc: true }], limit: "10" }),
+    // Definitive per-order attribution: transactionId is set to the Stripe checkout session id
+    // (see SuccessPage.tsx's gtag purchase event), so this joins 1:1 to a specific Stripe order.
+    client.runReport({
+      property, dateRanges,
+      dimensions: [{ name: "transactionId" }, { name: "sessionSource" }, { name: "sessionMedium" }, { name: "sessionDefaultChannelGroup" }],
+      metrics: [{ name: "eventCount" }],
+      dimensionFilter: { filter: { fieldName: "eventName", stringFilter: { value: "purchase" } } },
+      limit: "100",
+    }),
   ]);
 
   const row0 = overview[0]?.rows?.[0]?.metricValues ?? [];
@@ -92,6 +101,12 @@ async function fetchGA4(propertyId: string, credJson: string, ga4Start: string) 
     topPages:  (topPages[0]?.rows  ?? []).map((r) => ({ path:     r.dimensionValues?.[0]?.value ?? "", views:    parseInt(r.metricValues?.[0]?.value ?? "0") })),
     addToCartProducts: atcRows.map((r) => ({ name: r.dimensionValues?.[0]?.value ?? "", count: parseInt(r.metricValues?.[0]?.value ?? "0") })),
     totalAddToCarts: atcRows.reduce((sum, r) => sum + parseInt(r.metricValues?.[0]?.value ?? "0"), 0),
+    orderAttribution: (orderAttribution[0]?.rows ?? []).map((r) => ({
+      transactionId: r.dimensionValues?.[0]?.value ?? "",
+      source:        r.dimensionValues?.[1]?.value ?? "",
+      medium:        r.dimensionValues?.[2]?.value ?? "",
+      channel:       r.dimensionValues?.[3]?.value ?? "",
+    })),
   };
 }
 
@@ -167,6 +182,19 @@ export async function GET(request: NextRequest) {
       catch (e) { console.error("GA4 error:", e); }
     }
 
+    // transactionId in GA4's purchase event is set to the Stripe checkout session id, so this
+    // joins each order to the exact session that converted — not a channel-group guess.
+    const attributionByTxId = new Map((ga4?.orderAttribution ?? []).map((a) => [a.transactionId, a]));
+    const recentOrdersWithSource = recentOrders.map((o) => {
+      const match = attributionByTxId.get(o.id);
+      return {
+        ...o,
+        source:  match?.source  ?? null,
+        medium:  match?.medium  ?? null,
+        channel: match?.channel ?? null,
+      };
+    });
+
     return NextResponse.json({
       period,
       periodLabel: label,
@@ -176,7 +204,7 @@ export async function GET(request: NextRequest) {
       aov,
       uniqueCustomers: uniqueEmails.size,
       chartData,
-      recentOrders,
+      recentOrders: recentOrdersWithSource,
       topProducts,
       topCountries,
       ga4,

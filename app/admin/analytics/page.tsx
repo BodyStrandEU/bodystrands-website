@@ -23,6 +23,9 @@ type Order = {
   country: string;
   createdAt: number;
   paymentIntent: string | null;
+  source: string | null;
+  medium: string | null;
+  channel: string | null;
 };
 
 type GA4Data = {
@@ -429,7 +432,7 @@ export default function AnalyticsPage() {
               ) : (
                 <table style={{ width: "100%", borderCollapse: "collapse" }}>
                   <thead>
-                    <tr>{["Time", "Product", "Customer", "Country", "Amount", ""].map((h) => <th key={h} style={th}>{h}</th>)}</tr>
+                    <tr>{["Time", "Product", "Customer", "Country", "Source", "Amount", ""].map((h) => <th key={h} style={th}>{h}</th>)}</tr>
                   </thead>
                   <tbody>
                     {data.recentOrders.map((o) => (
@@ -441,6 +444,16 @@ export default function AnalyticsPage() {
                           <div style={{ fontSize: "0.62rem", color: "var(--admin-text-muted)" }}>{o.customerEmail}</div>
                         </td>
                         <td style={{ ...td, fontSize: "0.68rem", color: "var(--admin-text-muted)" }}>{o.country}</td>
+                        <td style={{ ...td, fontSize: "0.68rem" }}>
+                          {o.source ? (
+                            <>
+                              <div style={{ color: "var(--admin-text)" }}>{o.source}</div>
+                              <div style={{ fontSize: "0.58rem", color: "var(--admin-text-muted)" }}>{o.medium}</div>
+                            </>
+                          ) : (
+                            <span style={{ color: "var(--admin-text-muted)" }}>untracked</span>
+                          )}
+                        </td>
                         <td style={{ ...td, color: "#A0622A", fontWeight: "bold", whiteSpace: "nowrap" }}>{fmt(o.amount, o.currency)}</td>
                         <td style={{ ...td, textAlign: "right" }}>
                           {o.paymentIntent && (

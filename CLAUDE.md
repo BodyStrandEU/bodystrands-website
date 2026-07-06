@@ -34,6 +34,9 @@ From the session where the user said "very good job, save this to memory" — th
 - Soft natural window light from upper left hitting the necklace directly
 - The phrase: *"The jewelry is the only subject"*
 
+### Aspect ratio — always 1:1
+All thumbnail prompts must specify **square format, 1:1 aspect ratio**. Etsy thumbnails are square. Include the line: *"Square format, 1:1 aspect ratio."* in every prompt.
+
 ### Always specify camera lens
 - **Tight product / thumbnail**: 105mm f/2.8 macro
 - **Portrait / editorial**: 85mm f/1.4 or 85mm f/1.2

@@ -71,8 +71,11 @@ export default function EmailCapturePopup() {
             <h2 className="font-heading text-[2.1rem] font-light text-[#2C2220] leading-[1.15] mb-3">
               10% off your<br />first order
             </h2>
-            <p className="text-[0.65rem] font-light tracking-wide text-[#8C7B6E] leading-relaxed mb-7">
+            <p className="text-[0.65rem] font-light tracking-wide text-[#8C7B6E] leading-relaxed mb-2">
               Subscribe for your welcome discount code, plus new arrivals and behind-the-scenes moments from our studio in Portugal.
+            </p>
+            <p className="text-[0.6rem] font-light tracking-wide text-[#A0622A] leading-relaxed mb-7">
+              Stacks with any current sale — always an extra 10% off, no matter what&apos;s already discounted.
             </p>
 
             <form onSubmit={subscribe} className="flex flex-col gap-3">

@@ -2,7 +2,7 @@ import fs from "fs";
 import path from "path";
 import Image from "next/image";
 import Link from "next/link";
-import SmartImage from "@/components/SmartImage";
+import NewPiecesRow from "@/components/NewPiecesRow";
 import ScrollReveal from "@/components/ScrollReveal";
 import ReviewsMarquee from "@/components/ReviewsMarquee";
 import LifestyleSlider from "@/components/LifestyleSlider";
@@ -158,34 +158,7 @@ export default function HomePage() {
               </div>
             </div>
           </ScrollReveal>
-          <div className="flex gap-4 md:gap-5 overflow-x-auto scrollbar-hide px-6 md:px-10 pb-2 snap-x snap-mandatory">
-            {featured.map((product) => (
-              <Link
-                key={product.id}
-                href={`/shop/${product.id}`}
-                className="group flex-shrink-0 w-[55vw] md:w-[22vw] snap-start"
-              >
-                <div className="relative overflow-hidden aspect-square bg-[#F5F1EF]">
-                  {product.images[0] && (
-                    <SmartImage
-                      src={product.images[0]}
-                      alt={product.altText || product.name}
-                      fill
-                      sizes="(max-width: 768px) 55vw, 22vw"
-                      className="object-cover object-center group-hover:scale-[1.04] transition-transform duration-700"
-                    />
-                  )}
-                </div>
-                <div className="pt-3 px-0.5">
-                  <p className="text-[0.48rem] tracking-[0.2em] uppercase text-[#8C7B6E]/70 mb-0.5">{product.category}</p>
-                  <p className="text-[0.72rem] font-light text-[#2C2220] group-hover:text-[#A0622A] transition-colors duration-300 truncate">{product.name}</p>
-                  <p className="text-[0.65rem] font-light text-[#A0622A] mt-0.5">€{product.price.toFixed(2)}</p>
-                </div>
-              </Link>
-            ))}
-            {/* trailing touch spacer */}
-            <div className="flex-shrink-0 w-4 md:hidden" aria-hidden />
-          </div>
+          <NewPiecesRow featured={featured} />
         </section>
       )}
 

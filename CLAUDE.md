@@ -34,6 +34,13 @@ From the session where the user said "very good job, save this to memory" — th
 - Soft natural window light from upper left hitting the necklace directly
 - The phrase: *"The jewelry is the only subject"*
 
+### Model realism — no AI plastic skin
+Models must look like real humans, not AI-generated mannequins. Always include natural skin texture cues in every prompt:
+- Use phrases like: *"natural skin texture, subtle freckles, realistic pores, soft imperfections"*
+- Still beautiful editorial models — great bone structure, clean look — just human, not synthetic
+- Avoid over-smoothed, waxy, or poreless AI-skin
+- Suggested phrase to add to every prompt: *"realistic skin texture with subtle natural imperfections, not AI-smooth — photographed on real film"*
+
 ### Aspect ratio — always 1:1
 All thumbnail prompts must specify **square format, 1:1 aspect ratio**. Etsy thumbnails are square. Include the line: *"Square format, 1:1 aspect ratio."* in every prompt.
 

@@ -82,7 +82,7 @@ export default async function ShopPage({
 
       {/* ── Editorial category hero (filtered views only) ── */}
       {isFiltered && heroImage ? (
-        <div className="relative overflow-hidden h-52 md:h-80 pt-20 md:pt-24">
+        <div className="relative overflow-hidden h-52 md:h-80 pt-20 md:pt-24 max-w-[1600px] mx-auto">
           <Image
             src={heroImage}
             alt={category}

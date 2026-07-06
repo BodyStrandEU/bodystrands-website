@@ -8,7 +8,53 @@
 - Fonts: Cormorant Garamond (headings) + Josefin Sans (body) — **Inter is FORBIDDEN**
 - Colors: blush `#E8B4A8`, gold `#A0622A`, warm dark `#2C2220`, cream `#FDF9F7`, warm gray `#8C7B6E`
 
-## Hard Rules
+## Image Generation Prompts — MANDATORY RULES (every single time)
+
+Giordano drops the reference jewelry photo directly into the LLM alongside the prompt. The LLM uses it as a visual reference. These rules apply to EVERY prompt, no exceptions:
+
+### What to describe in prompts
+- Scene, model, lighting, outfit, environment, camera lens — that is ALL
+- **NEVER describe the jewelry itself** — the reference image handles that
+- Every prompt ends with: **"Keep the jewelry from the reference image exactly as shown — do not alter, stylize, or reinterpret any part of it."**
+
+### Lighting — non-negotiable
+- Always natural daylight
+- A subtle natural sun reflection / metallic sheen catching on the chain links — makes it look bright and alive
+- **NEVER**: sparkle effects, star bursts, lens flares, artificial studio strobes
+- The phrase to use: *"a soft natural highlight catches across the chain links, making the metal appear luminous without any alteration"*
+
+### What a thumbnail prompt looks like (the APPROVED format)
+From the session where the user said "very good job, save this to memory" — the successful image had:
+- Gray seamless background
+- 105mm f/2.8 or 85mm f/1.4 lens spec
+- Tight crop from chin to mid-chest — face cropped at jaw/chin, not shown
+- Hair swept back so the neck is completely clear
+- Jewelry centered and the sharpest element in the entire frame
+- Warm olive skin model, dark hair
+- Soft natural window light from upper left hitting the necklace directly
+- The phrase: *"The jewelry is the only subject"*
+
+### Always specify camera lens
+- **Tight product / thumbnail**: 105mm f/2.8 macro
+- **Portrait / editorial**: 85mm f/1.4 or 85mm f/1.2
+- **Lifestyle / environmental**: 70–200mm f/2.8 at 135mm (compresses background)
+
+### Prompt set structure (when asked for a full set)
+Generate 6 prompts minimum:
+1. **Gray background studio** — pure product focus, chin-to-chest crop, 105mm, gray seamless backdrop (always include this one)
+2. **Beach / coastal lifestyle** — bright, turquoise water bokeh behind, tight crop
+3. **Mediterranean terrace** — white stone, warm sunlight, mid-distance
+4. **Garden / nature** — green bokeh, dappled light
+5. **Golden hour outdoor** — warm tones, desert/dunes or coastal
+6. **Urban / fashion editorial** — rooftop, structured outfit, clean background
+
+Switch up: model skin tone, hair, outfit color, environment — every prompt is a different model and setting.
+
+### Outfit language that avoids nudity filters
+- ✅ sleeveless top, ribbed tank, off-shoulder linen, crochet cover-up, strappy sundress, structured blazer, white blouse, halter neck
+- ❌ bikini, swimsuit, bare chest, topless, naked, shirtless
+
+### Hard Rules
 - **NO Etsy links anywhere on the site** — customers would find cheaper prices. The Buy on Etsy button was intentionally removed and must never come back.
 - No Amazon links either.
 - No `etsy_url` or `amazon_url` fields on Product type.

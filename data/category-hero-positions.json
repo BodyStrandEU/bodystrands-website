@@ -1,0 +1,13 @@
+{
+  "Belly Chains": { "x": 50, "y": 55 },
+  "Back Chains": { "x": 50, "y": 0 },
+  "Body Chains": { "x": 50, "y": 0 },
+  "Shoulder & Arm Chains": { "x": 50, "y": 0 },
+  "Anklets": { "x": 50, "y": 0 },
+  "Necklaces": { "x": 50, "y": 0 },
+  "Bracelets": { "x": 50, "y": 0 },
+  "Hand Chains": { "x": 50, "y": 0 },
+  "Head Chains": { "x": 50, "y": 0 },
+  "Eyeglasses Chains": { "x": 50, "y": 0 },
+  "Bikini Clip Chains": { "x": 50, "y": 0 }
+}

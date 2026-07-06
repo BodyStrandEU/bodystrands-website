@@ -4,6 +4,8 @@ import CategoryFilter from "@/components/CategoryFilter";
 import ShopGridClient from "@/components/ShopGridClient";
 import { products, CATEGORIES } from "@/lib/products";
 import type { Category } from "@/lib/products";
+import { CATEGORY_HERO_IMAGES } from "@/lib/categoryHeroImages";
+import categoryHeroPositions from "@/data/category-hero-positions.json";
 import type { Metadata } from "next";
 
 const CATEGORY_META: Record<string, { title: string; description: string }> = {
@@ -20,26 +22,10 @@ const CATEGORY_META: Record<string, { title: string; description: string }> = {
   "Bikini Clip Chains": { title: "Bikini Clip Chains — Beach Body Jewelry | Bodystrands", description: "Handmade bikini clip chains and beach body jewelry in stainless steel. Perfect for summer holidays and festivals. Made in Portugal." },
 };
 
-const CATEGORY_IMAGES: Partial<Record<Category, string>> = {
-  "Belly Chains":       "/images/category-belly.png",
-  "Back Chains":        "/images/elvan-back-full.jpg",
-  "Body Chains":        "/images/category-body.jpg",
-  "Shoulder & Arm Chains":    "/images/category-shoulder.jpg",
-  "Anklets":            "/images/lifestyle-anklet.jpg",
-  "Necklaces":          "/images/category-necklace.jpg",
-  "Bracelets":          "/images/category-bracelet.jpg",
-  "Hand Chains":        "/images/category-hand.jpg",
-  "Head Chains":        "/images/category-head.jpg",
-  "Eyeglasses Chains":  "/images/category-glasses.jpg",
-  "Bikini Clip Chains": "/images/category-bikini.jpg",
-};
+const CATEGORY_IMAGES = CATEGORY_HERO_IMAGES;
 
-// Per-category vertical crop anchor for the hero banner (defaults to "top" — see below).
-// Belly Chains' source photo has the chain draped low in frame, so the default top-anchored
-// crop showed bare skin with no jewelry visible.
-const CATEGORY_IMAGE_POSITION: Partial<Record<Category, string>> = {
-  "Belly Chains": "center 55%",
-};
+type HeroPosition = { x: number; y: number };
+const HERO_POSITIONS = categoryHeroPositions as Record<string, HeroPosition>;
 
 export async function generateMetadata({
   searchParams,
@@ -88,7 +74,8 @@ export default async function ShopPage({
         .filter((g) => g.items.length > 0);
 
   const heroImage = isFiltered ? (CATEGORY_IMAGES[category as Category] ?? null) : null;
-  const heroImagePosition = CATEGORY_IMAGE_POSITION[category as Category] ?? "top";
+  const heroPos = HERO_POSITIONS[category as Category] ?? { x: 50, y: 0 };
+  const heroImagePosition = `${heroPos.x}% ${heroPos.y}%`;
 
   return (
     <div className="min-h-screen pb-24">

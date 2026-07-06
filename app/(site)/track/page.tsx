@@ -30,7 +30,7 @@ export default function TrackPage() {
           <p className="text-[0.65rem] font-light tracking-wide text-[#8C7B6E]">
             No tracking number yet?{" "}
             <a
-              href="mailto:storenavaria@gmail.com"
+              href="mailto:hello@bodystrands.com"
               className="text-[#A0622A] hover:underline"
             >
               Contact us

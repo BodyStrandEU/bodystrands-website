@@ -100,8 +100,8 @@ export default function ShippingPage() {
           </ul>
           <p className="mt-4">
             To initiate a return, email us at{" "}
-            <a href="mailto:storenavaria@gmail.com" className="text-[#A0622A] hover:underline">
-              storenavaria@gmail.com
+            <a href="mailto:hello@bodystrands.com" className="text-[#A0622A] hover:underline">
+              hello@bodystrands.com
             </a>{" "}
             with your order number and reason for return. We will respond within 1–2 business days
             with instructions.
@@ -114,8 +114,8 @@ export default function ShippingPage() {
           <p>
             If your order arrives damaged or does not arrive within the estimated timeframe, please
             contact us immediately at{" "}
-            <a href="mailto:storenavaria@gmail.com" className="text-[#A0622A] hover:underline">
-              storenavaria@gmail.com
+            <a href="mailto:hello@bodystrands.com" className="text-[#A0622A] hover:underline">
+              hello@bodystrands.com
             </a>
             . We will do everything we can to resolve the issue quickly.
           </p>
@@ -138,8 +138,8 @@ export default function ShippingPage() {
           <h2 className="font-josefin text-sm tracking-widest uppercase mb-3">Questions?</h2>
           <p>
             Reach us anytime at{" "}
-            <a href="mailto:storenavaria@gmail.com" className="text-[#A0622A] hover:underline">
-              storenavaria@gmail.com
+            <a href="mailto:hello@bodystrands.com" className="text-[#A0622A] hover:underline">
+              hello@bodystrands.com
             </a>{" "}
             — we typically reply within one business day.
           </p>

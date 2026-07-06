@@ -34,6 +34,13 @@ const CATEGORY_IMAGES: Partial<Record<Category, string>> = {
   "Bikini Clip Chains": "/images/category-bikini.jpg",
 };
 
+// Per-category vertical crop anchor for the hero banner (defaults to "top" — see below).
+// Belly Chains' source photo has the chain draped low in frame, so the default top-anchored
+// crop showed bare skin with no jewelry visible.
+const CATEGORY_IMAGE_POSITION: Partial<Record<Category, string>> = {
+  "Belly Chains": "center 55%",
+};
+
 export async function generateMetadata({
   searchParams,
 }: {
@@ -81,6 +88,7 @@ export default async function ShopPage({
         .filter((g) => g.items.length > 0);
 
   const heroImage = isFiltered ? (CATEGORY_IMAGES[category as Category] ?? null) : null;
+  const heroImagePosition = CATEGORY_IMAGE_POSITION[category as Category] ?? "top";
 
   return (
     <div className="min-h-screen pb-24">
@@ -93,7 +101,8 @@ export default async function ShopPage({
             alt={category}
             fill
             priority
-            className="object-cover object-top"
+            className="object-cover"
+            style={{ objectPosition: heroImagePosition }}
           />
           <div className="absolute inset-0 bg-gradient-to-r from-[#2C2220]/75 via-[#2C2220]/45 to-transparent" />
           <div className="absolute inset-0 bg-gradient-to-t from-[#2C2220]/30 to-transparent" />

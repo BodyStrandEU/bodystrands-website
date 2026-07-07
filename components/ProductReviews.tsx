@@ -18,19 +18,6 @@ function Stars({ rating, size = 13 }: { rating: number; size?: number }) {
   );
 }
 
-function StatBadge({ value, label }: { value: string; label: string }) {
-  return (
-    <div className="flex flex-col items-center gap-1.5">
-      <div className="w-12 h-12 rounded-full border-2 border-[#A0622A] flex items-center justify-center">
-        <span className="text-[0.7rem] font-medium text-[#2C2220]">{value}</span>
-      </div>
-      <span className="text-[0.5rem] tracking-[0.08em] uppercase text-[#8C7B6E] text-center leading-tight max-w-[4.5rem]">
-        {label}
-      </span>
-    </div>
-  );
-}
-
 function Avatar({ name }: { name: string }) {
   const initial = name.trim().charAt(0).toUpperCase();
   return (
@@ -83,7 +70,6 @@ export default function ProductReviews({ category, className = "" }: { category:
 
   const visible = showAll ? reviews : reviews.slice(0, INITIAL_VISIBLE);
   const avgRating = reviews.reduce((s, r) => s + r.rating, 0) / reviews.length;
-  const fiveStarPct = Math.round((reviews.filter((r) => r.rating === 5).length / reviews.length) * 100);
   const recommendPct = Math.round((reviews.filter((r) => r.rating >= 4).length / reviews.length) * 100);
 
   return (
@@ -93,21 +79,13 @@ export default function ProductReviews({ category, className = "" }: { category:
       </h2>
 
       {/* Summary */}
-      <div className="flex items-center gap-6 mb-6 flex-wrap">
-        <div className="flex items-center gap-3">
-          <span className="font-heading text-3xl font-light text-[#2C2220]">{avgRating.toFixed(1)}</span>
-          <div className="flex flex-col gap-1">
-            <Stars rating={Math.round(avgRating)} size={14} />
-            <span className="text-[0.55rem] tracking-[0.1em] uppercase text-[#8C7B6E] whitespace-nowrap">
-              {reviews.length} review{reviews.length !== 1 ? "s" : ""}
-            </span>
-          </div>
-        </div>
-
-        <div className="flex items-center gap-4">
-          <StatBadge value={avgRating.toFixed(1)} label="Item quality" />
-          <StatBadge value={`${fiveStarPct}%`} label="5-star reviews" />
-          <StatBadge value={`${recommendPct}%`} label="Buyers recommend" />
+      <div className="flex items-center gap-3 mb-6">
+        <span className="font-heading text-3xl font-light text-[#2C2220]">{avgRating.toFixed(1)}</span>
+        <div className="flex flex-col gap-1">
+          <Stars rating={Math.round(avgRating)} size={14} />
+          <span className="text-[0.55rem] tracking-[0.1em] uppercase text-[#8C7B6E] whitespace-nowrap">
+            {reviews.length} review{reviews.length !== 1 ? "s" : ""} · {recommendPct}% recommend
+          </span>
         </div>
       </div>
 

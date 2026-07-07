@@ -5,10 +5,65 @@ export type Review = {
   date: string;
   headline: string;
   text: string;
+  image?: string;
 };
 
 export const CATEGORY_REVIEWS: Record<string, Review[]> = {
   "Belly Chains": [
+    {
+      name: "Noor H.",
+      location: "Rotterdam, Netherlands",
+      rating: 5,
+      date: "Jun 2026",
+      headline: "Wore it over a dress and it stole the whole outfit",
+      text: "Didn't expect a belly chain to work over a dress but it does. Layered the coin disc chain over a fitted knit dress for a dinner out and it looked so intentional, like a proper accessory instead of an afterthought. The discs catch the light beautifully.",
+      image: "/images/reviews/belly-chains/coin-disc-belly-chain-1.jpg",
+    },
+    {
+      name: "Freya B.",
+      location: "Manchester, UK",
+      rating: 5,
+      date: "May 2026",
+      headline: "Even wear it with sweats now",
+      text: "Bought this thinking I'd only wear it out, but honestly I put it on with a plain top and sweatpants around the house and it instantly makes the outfit feel put together. The little beads catch the light so nicely against skin.",
+      image: "/images/reviews/belly-chains/pearl-beaded-belly-chain-1.jpg",
+    },
+    {
+      name: "Hannah P.",
+      location: "Bristol, UK",
+      rating: 5,
+      date: "Apr 2026",
+      headline: "So thin you forget it's there",
+      text: "This is exactly the delicate look I wanted — a barely-there chain that peeks out just above the waistband of my jeans. Comfortable enough that I've slept in it by accident more than once and it's held up perfectly.",
+      image: "/images/reviews/belly-chains/dainty-summer-belly-chain-1.jpg",
+    },
+    {
+      name: "Brooke T.",
+      location: "Gold Coast, Australia",
+      rating: 5,
+      date: "Jul 2026",
+      headline: "Perfect with low-rise jeans, total Y2K moment",
+      text: "Ordered this specifically to recreate that early 2000s low-rise look and it's perfect. The turquoise beads against the gold pop so well against denim. Wore it out with friends and got asked twice where it was from.",
+      image: "/images/reviews/belly-chains/turquoise-beaded-belly-chain-1.jpg",
+    },
+    {
+      name: "Delphine M.",
+      location: "Nice, France",
+      rating: 5,
+      date: "Jun 2026",
+      headline: "Shower, gym, everything — never take it off",
+      text: "Bought this one specifically because it's marketed as waterproof and I can confirm it holds up. I wear it every single day including in the shower, and it still looks brand new weeks later.",
+      image: "/images/reviews/belly-chains/waterproof-belly-chain-1.jpg",
+    },
+    {
+      name: "Isla C.",
+      location: "Edinburgh, UK",
+      rating: 5,
+      date: "May 2026",
+      headline: "Layered look without buying two separate chains",
+      text: "Love that this comes pre-layered so I didn't have to buy two chains and stack them myself. Sits perfectly on the waist and looks great with anything from pajama shorts to a going-out fit.",
+      image: "/images/reviews/belly-chains/layered-silver-belly-chain-1.jpg",
+    },
     {
       name: "Sofia A.",
       location: "Lisbon, Portugal",

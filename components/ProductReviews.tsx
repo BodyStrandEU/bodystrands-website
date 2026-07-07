@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import Image from "@/components/SmartImage";
 import { CATEGORY_REVIEWS, type Review } from "@/data/category-reviews";
 
 function Stars({ rating, size = 13 }: { rating: number; size?: number }) {
@@ -29,36 +30,52 @@ function Avatar({ name }: { name: string }) {
 
 function ReviewCard({ review }: { review: Review }) {
   return (
-    <div className="flex flex-col bg-white border border-[#E8B4A8]/40 p-4 md:p-5">
-      <div className="flex items-center gap-2.5 mb-3">
-        <Avatar name={review.name} />
-        <div className="min-w-0">
-          <p className="text-[0.62rem] tracking-[0.1em] uppercase text-[#2C2220] font-medium truncate">
-            {review.name}
-          </p>
-          <p className="text-[0.55rem] text-[#8C7B6E]/70 truncate">
-            {review.location}
-          </p>
+    <div className="flex flex-col bg-white border border-[#E8B4A8]/40 overflow-hidden">
+      {review.image && (
+        <div className="relative w-full aspect-[4/5]">
+          <Image
+            src={review.image}
+            alt={`${review.name}'s photo review — ${review.headline}`}
+            fill
+            sizes="(max-width: 768px) 100vw, 40vw"
+            className="object-cover"
+          />
         </div>
-        <span className="ml-auto text-[0.55rem] tracking-[0.1em] text-[#8C7B6E]/70 whitespace-nowrap">
-          {review.date}
-        </span>
+      )}
+
+      <div className="flex flex-col p-4 md:p-5">
+        <div className="flex items-center gap-2.5 mb-3">
+          <Avatar name={review.name} />
+          <div className="min-w-0">
+            <p className="text-[0.62rem] tracking-[0.1em] uppercase text-[#2C2220] font-medium truncate">
+              {review.name}
+            </p>
+            <p className="text-[0.55rem] text-[#8C7B6E]/70 truncate">
+              {review.location}
+            </p>
+          </div>
+          <span className="ml-auto text-[0.55rem] tracking-[0.1em] text-[#8C7B6E]/70 whitespace-nowrap">
+            {review.date}
+          </span>
+        </div>
+
+        <Stars rating={review.rating} />
+
+        <p className="text-[0.72rem] font-semibold tracking-wide text-[#2C2220] mt-2.5 mb-1.5 leading-snug">
+          {review.headline}
+        </p>
+
+        <p className="text-[0.75rem] font-light leading-relaxed text-[#5C4E47]">
+          {review.text}
+        </p>
       </div>
-
-      <Stars rating={review.rating} />
-
-      <p className="text-[0.72rem] font-semibold tracking-wide text-[#2C2220] mt-2.5 mb-1.5 leading-snug">
-        {review.headline}
-      </p>
-
-      <p className="text-[0.75rem] font-light leading-relaxed text-[#5C4E47]">
-        {review.text}
-      </p>
     </div>
   );
 }
 
-const INITIAL_VISIBLE = 3;
+// Photo reviews are shown first, so keep enough initially visible that none of
+// them are hidden behind "Show all" — bump this if more photo reviews are added.
+const INITIAL_VISIBLE = 6;
 
 export default function ProductReviews({ category, className = "" }: { category: string; className?: string }) {
   const reviews = CATEGORY_REVIEWS[category];
@@ -68,7 +85,9 @@ export default function ProductReviews({ category, className = "" }: { category:
 
   if (!reviews || reviews.length === 0) return null;
 
-  const visible = showAll ? reviews : reviews.slice(0, INITIAL_VISIBLE);
+  // Photo reviews first (stable sort preserves relative order within each group).
+  const sorted = [...reviews].sort((a, b) => (b.image ? 1 : 0) - (a.image ? 1 : 0));
+  const visible = showAll ? sorted : sorted.slice(0, INITIAL_VISIBLE);
   const avgRating = reviews.reduce((s, r) => s + r.rating, 0) / reviews.length;
   const recommendPct = Math.round((reviews.filter((r) => r.rating >= 4).length / reviews.length) * 100);
 

@@ -184,15 +184,6 @@ export default function ProductCard({ product, priority = false }: { product: Pr
           </div>
         )}
 
-        {/* Quick-view pill — desktop hover only */}
-        <div className={`absolute inset-x-0 flex justify-center z-10 pointer-events-none transition-[opacity,transform] duration-300 opacity-0 group-hover:opacity-100 translate-y-1 group-hover:translate-y-0 ${
-          product.variants && product.variants.length > 1 ? "bottom-14" : "bottom-9"
-        }`}>
-          <span className="bg-white/85 text-[#2C2220] text-[0.5rem] tracking-[0.25em] uppercase px-5 py-2">
-            View Piece
-          </span>
-        </div>
-
         {/* Desktop prev / next arrows */}
         {combinedImages.length > 1 && (
           <>

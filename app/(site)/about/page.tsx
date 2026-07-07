@@ -73,7 +73,7 @@ export default function AboutPage() {
               },
               {
                 title: "High Quality",
-                body: "Carefully selected 316L surgical-grade stainless steel — tarnish-resistant, waterproof, and built to be worn every single day.",
+                body: "High-quality stainless steel — tarnish-resistant, waterproof, and built to be worn every single day.",
               },
             ].map((value) => (
               <div key={value.title} className="flex flex-col gap-4">

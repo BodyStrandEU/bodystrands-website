@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 const CARE_SECTIONS = [
   {
     title: "Your Jewelry is Built to Last",
-    body: `All Bodystrands pieces are crafted from 316L surgical-grade stainless steel — the same material used in medical implants. It is naturally tarnish-resistant, hypoallergenic, and does not require any special maintenance to stay beautiful.`,
+    body: `All Bodystrands pieces are crafted from high-quality stainless steel — tarnish-resistant, hypoallergenic, and waterproof. No special maintenance required to keep your jewelry looking beautiful.`,
   },
   {
     title: "It's Waterproof",

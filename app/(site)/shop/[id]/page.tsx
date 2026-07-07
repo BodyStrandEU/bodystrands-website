@@ -90,7 +90,7 @@ export default async function ProductPage({ params }: { params: Promise<{ id: st
     description:   product.description,
     sku:           product.id,
     image:         allImages.length > 0 ? allImages : [firstImage],
-    material:      "316L Stainless Steel",
+    material:      "Stainless Steel",
     itemCondition: "https://schema.org/NewCondition",
     brand: {
       "@type": "Brand",

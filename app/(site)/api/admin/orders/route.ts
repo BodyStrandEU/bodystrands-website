@@ -116,7 +116,7 @@ export async function POST(req: NextRequest) {
 
         <p style="font-size:11px;color:#8C7B6E;margin:0;padding-top:24px;border-top:1px solid #E8B4A8;line-height:1.8;">
           Questions? Reach us at <a href="mailto:info@bodystrands.com" style="color:#A0622A;">info@bodystrands.com</a> — we respond within 24 hours.<br>
-          Made in Portugal · Handcrafted in 316L stainless steel · Waterproof &amp; tarnish-resistant
+          Made in Portugal · Handcrafted in stainless steel · Waterproof &amp; tarnish-resistant
         </p>
       </div>
     `,

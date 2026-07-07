@@ -23,13 +23,13 @@ const josefin = Josefin_Sans({
 
 export const metadata: Metadata = {
   title: "Bodystrands — Handmade Body Jewelry",
-  description: "Dainty handmade body chains, waist chains, and anklets. Crafted in 316L surgical-grade stainless steel. Tarnish-resistant, waterproof, and adjustable.",
+  description: "Dainty handmade body chains, waist chains, and anklets. Crafted in high-quality stainless steel. Tarnish-resistant, waterproof, and adjustable.",
   keywords: "body chain, waist chain, anklet, handmade jewelry, body jewelry, gold body chain, stainless steel body chain, dainty body jewelry",
   metadataBase: new URL("https://www.bodystrands.com"),
   alternates: { canonical: "/" },
   openGraph: {
     title: "Bodystrands — Handmade Body Jewelry",
-    description: "Dainty handmade body chains, waist chains, and anklets. Crafted in 316L surgical-grade stainless steel.",
+    description: "Dainty handmade body chains, waist chains, and anklets. Crafted in high-quality stainless steel.",
     url: "https://www.bodystrands.com",
     siteName: "Bodystrands",
     locale: "en_US",
@@ -92,7 +92,7 @@ export default function RootLayout({
             name:    "Bodystrands",
             url:     "https://www.bodystrands.com",
             logo:    "https://www.bodystrands.com/images/logo.png",
-            description: "Handmade body jewelry crafted in 316L surgical-grade stainless steel. Made in Portugal.",
+            description: "Handmade body jewelry crafted in high-quality stainless steel. Made in Portugal.",
             sameAs: ["https://www.instagram.com/bodystrands/"],
             contactPoint: { "@type": "ContactPoint", email: "info@bodystrands.com", contactType: "customer service" },
           },

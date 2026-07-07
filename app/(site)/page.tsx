@@ -25,7 +25,7 @@ const STATS = [
   { number: "50+",    label: "Handmade styles"  },
   { number: "3,000+", label: "Happy customers"  },
   { number: "1–2",    label: "Days to dispatch" },
-  { number: "316L",   label: "Surgical steel"   },
+  { number: "100%",   label: "Waterproof"        },
 ];
 
 const allTiles = [
@@ -256,7 +256,7 @@ export default function HomePage() {
               <em className="not-italic text-[#A0622A]">with you</em>
             </h2>
             <p className="text-sm font-light leading-relaxed tracking-wide text-[#8C7B6E]">
-              Every piece is handmade. Every chain is 316L surgical-grade stainless steel. Built to last, built to move — waterproof, tarnish-resistant, and made to be forgotten about in the best way.
+              Every piece is handmade. Every chain is high-quality stainless steel. Built to last, built to move — waterproof, tarnish-resistant, and made to be forgotten about in the best way.
             </p>
             <p className="text-sm font-light leading-relaxed tracking-wide text-[#8C7B6E]">
               Put it on. Leave it on.

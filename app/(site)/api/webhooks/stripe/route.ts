@@ -51,7 +51,7 @@ export async function POST(req: NextRequest) {
               Complete Your Order
             </a>
             <p style="font-size:11px;color:#8C7B6E;margin-top:40px;padding-top:20px;border-top:1px solid #E8B4A8;">
-              Made in Portugal · Handcrafted in 316L stainless steel · Waterproof &amp; tarnish-resistant
+              Made in Portugal · Handcrafted in stainless steel · Waterproof &amp; tarnish-resistant
             </p>
           </div>
         `,
@@ -120,7 +120,7 @@ export async function POST(req: NextRequest) {
 
             <p style="font-size:11px;color:#8C7B6E;margin:0;padding-top:24px;border-top:1px solid #E8B4A8;line-height:1.8;">
               Questions? Reply to this email or reach us at <a href="mailto:info@bodystrands.com" style="color:#A0622A;">info@bodystrands.com</a><br>
-              Made in Portugal · Handcrafted in 316L stainless steel · Waterproof &amp; tarnish-resistant
+              Made in Portugal · Handcrafted in stainless steel · Waterproof &amp; tarnish-resistant
             </p>
           </div>
         `,

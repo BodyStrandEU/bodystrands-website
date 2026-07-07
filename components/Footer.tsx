@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { CATEGORIES } from "@/lib/products";
 
 function InstagramIcon() {
   return (
@@ -13,11 +14,7 @@ function InstagramIcon() {
 
 const SHOP_LINKS = [
   { href: "/shop", label: "All Pieces" },
-  { href: "/shop?category=Belly+Chains", label: "Belly Chains" },
-  { href: "/shop?category=Anklets", label: "Anklets" },
-  { href: "/shop?category=Necklaces", label: "Necklaces" },
-  { href: "/shop?category=Bracelets", label: "Bracelets" },
-  { href: "/shop?category=Body+Chains", label: "Body Chains" },
+  ...CATEGORIES.map((c) => ({ href: `/shop?category=${encodeURIComponent(c)}`, label: c })),
 ];
 
 const INFO_LINKS = [

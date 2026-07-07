@@ -150,7 +150,7 @@ export async function POST(req: NextRequest) {
     await resend.emails.send({
       from:    "Bodystrands <info@bodystrands.com>",
       to:      "storenavaria@gmail.com",
-      subject: `New order — ${productName} (${currency} ${amountTotal})`,
+      subject: `Cha-Ching! 💰 ${productName} (${currency} ${amountTotal})`,
       html: `
         <div style="font-family:Georgia,serif;max-width:560px;margin:0 auto;color:#2C2220;">
           <h2 style="font-weight:300;letter-spacing:0.05em;border-bottom:1px solid #E8B4A8;padding-bottom:12px;">

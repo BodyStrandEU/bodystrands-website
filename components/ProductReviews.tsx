@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import Image from "@/components/SmartImage";
 import { createPortal } from "react-dom";
 import { CATEGORY_REVIEWS, type Review } from "@/data/category-reviews";
@@ -8,6 +8,16 @@ import customerReviewsRaw from "@/data/customer-reviews.json";
 // Real, verified-purchase reviews approved via /admin/reviews. Committed to this JSON
 // file on approval, so a new one goes live on the next deploy just like any other content edit.
 const CUSTOMER_REVIEWS = customerReviewsRaw as Record<string, Review[]>;
+
+// Deterministic "random-looking" order — a stable hash of each review's own content, not
+// Math.random(). Using real randomness here would render a different order on the server
+// vs. the client and trigger a hydration mismatch; this stays identical on every render.
+function stableShuffleKey(r: Review): number {
+  const s = `${r.name}|${r.date}|${r.headline}`;
+  let hash = 0;
+  for (let i = 0; i < s.length; i++) hash = (hash * 31 + s.charCodeAt(i)) | 0;
+  return hash;
+}
 
 function Stars({ rating, size = 13 }: { rating: number; size?: number }) {
   return (
@@ -28,8 +38,8 @@ function Stars({ rating, size = 13 }: { rating: number; size?: number }) {
 function Avatar({ name }: { name: string }) {
   const initial = name.trim().charAt(0).toUpperCase();
   return (
-    <div className="w-11 h-11 rounded-full bg-[#E8B4A8]/50 flex items-center justify-center flex-shrink-0">
-      <span className="text-[0.65rem] font-medium text-[#8A5222]">{initial}</span>
+    <div className="w-9 h-9 rounded-full bg-[#E8B4A8]/50 flex items-center justify-center flex-shrink-0">
+      <span className="text-[0.6rem] font-medium text-[#8A5222]">{initial}</span>
     </div>
   );
 }
@@ -55,29 +65,55 @@ function Lightbox({ src, alt, onClose }: { src: string; alt: string; onClose: ()
   );
 }
 
+// Horizontal strip of every photo submitted for this category — the "proof gallery",
+// separate from the text list below so the list itself doesn't need photos clustered up top.
+function PhotoStrip({ reviews }: { reviews: Review[] }) {
+  const scrollerRef = useRef<HTMLDivElement>(null);
+  const [lightbox, setLightbox] = useState<Review | null>(null);
+  const withPhotos = reviews.filter((r) => r.image);
+  if (withPhotos.length === 0) return null;
+
+  function scroll(dir: 1 | -1) {
+    scrollerRef.current?.scrollBy({ left: dir * 180, behavior: "smooth" });
+  }
+
+  return (
+    <div className="relative mb-6">
+      <div ref={scrollerRef} className="flex gap-2.5 overflow-x-auto scrollbar-hide pb-1 -mx-1 px-1">
+        {withPhotos.map((r, i) => (
+          <button
+            key={i}
+            onClick={() => setLightbox(r)}
+            aria-label={`View ${r.name}'s photo`}
+            className="relative w-20 h-20 flex-shrink-0 overflow-hidden"
+          >
+            <Image src={r.image!} alt={`${r.name}'s photo review`} fill sizes="80px" className="object-cover" />
+          </button>
+        ))}
+      </div>
+      {withPhotos.length > 4 && (
+        <button
+          onClick={() => scroll(1)}
+          aria-label="See more photos"
+          className="hidden md:flex absolute -right-3 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-white border border-[#E8B4A8]/50 items-center justify-center text-[#2C2220] text-xs shadow-sm hover:bg-[#FDF9F7] transition-colors"
+        >
+          →
+        </button>
+      )}
+      {lightbox && (
+        <Lightbox src={lightbox.image!} alt={`${lightbox.name}'s photo review`} onClose={() => setLightbox(null)} />
+      )}
+    </div>
+  );
+}
+
 function ReviewCard({ review }: { review: Review }) {
   const [lightboxOpen, setLightboxOpen] = useState(false);
 
   return (
     <div className="flex flex-col bg-white border border-[#E8B4A8]/40 p-4 md:p-5">
       <div className="flex items-center gap-2.5 mb-3">
-        {review.image ? (
-          <button
-            onClick={() => setLightboxOpen(true)}
-            aria-label={`View ${review.name}'s photo`}
-            className="relative w-11 h-11 flex-shrink-0 overflow-hidden"
-          >
-            <Image
-              src={review.image}
-              alt={`${review.name}'s photo review — ${review.headline}`}
-              fill
-              sizes="44px"
-              className="object-cover"
-            />
-          </button>
-        ) : (
-          <Avatar name={review.name} />
-        )}
+        <Avatar name={review.name} />
         <div className="min-w-0">
           <p className="text-[0.62rem] tracking-[0.1em] uppercase text-[#2C2220] font-medium truncate">
             {review.name}
@@ -97,9 +133,26 @@ function ReviewCard({ review }: { review: Review }) {
         {review.headline}
       </p>
 
-      <p className="text-[0.75rem] font-light leading-relaxed text-[#5C4E47]">
-        {review.text}
-      </p>
+      <div className="flex items-start gap-3">
+        <p className="text-[0.75rem] font-light leading-relaxed text-[#5C4E47] flex-1">
+          {review.text}
+        </p>
+        {review.image && (
+          <button
+            onClick={() => setLightboxOpen(true)}
+            aria-label={`View ${review.name}'s photo`}
+            className="relative w-14 h-14 flex-shrink-0 overflow-hidden"
+          >
+            <Image
+              src={review.image}
+              alt={`${review.name}'s photo review — ${review.headline}`}
+              fill
+              sizes="56px"
+              className="object-cover"
+            />
+          </button>
+        )}
+      </div>
 
       {review.image && lightboxOpen && (
         <Lightbox
@@ -112,9 +165,7 @@ function ReviewCard({ review }: { review: Review }) {
   );
 }
 
-// Photo reviews are shown first, so keep enough initially visible that none of
-// them are hidden behind "Show all" — bump this if more photo reviews are added.
-const INITIAL_VISIBLE = 6;
+const INITIAL_VISIBLE = 4;
 
 export default function ProductReviews({ category, className = "" }: { category: string; className?: string }) {
   const reviews = [...(CATEGORY_REVIEWS[category] ?? []), ...(CUSTOMER_REVIEWS[category] ?? [])];
@@ -124,11 +175,16 @@ export default function ProductReviews({ category, className = "" }: { category:
 
   if (reviews.length === 0) return null;
 
-  // Photo reviews first (stable sort preserves relative order within each group).
-  const sorted = [...reviews].sort((a, b) => (b.image ? 1 : 0) - (a.image ? 1 : 0));
+  // Natural-looking order — not grouped by whether a review has a photo, since that's
+  // handled separately by the photo strip above the list.
+  const sorted = [...reviews].sort((a, b) => stableShuffleKey(a) - stableShuffleKey(b));
   const visible = showAll ? sorted : sorted.slice(0, INITIAL_VISIBLE);
   const avgRating = reviews.reduce((s, r) => s + r.rating, 0) / reviews.length;
-  const recommendPct = Math.round((reviews.filter((r) => r.rating >= 4).length / reviews.length) * 100);
+
+  const breakdown = [5, 4, 3, 2, 1].map((star) => {
+    const count = reviews.filter((r) => Math.round(r.rating) === star).length;
+    return { star, pct: Math.round((count / reviews.length) * 100) };
+  });
 
   return (
     <section className={`pt-8 mt-2 border-t border-[#E8B4A8]/40 ${className}`}>
@@ -136,16 +192,32 @@ export default function ProductReviews({ category, className = "" }: { category:
         Reviews for this piece
       </h2>
 
-      {/* Summary */}
-      <div className="flex items-center gap-3 mb-6">
-        <span className="font-heading text-3xl font-light text-[#2C2220]">{avgRating.toFixed(1)}</span>
-        <div className="flex flex-col gap-1">
-          <Stars rating={Math.round(avgRating)} size={14} />
-          <span className="text-[0.55rem] tracking-[0.1em] uppercase text-[#8C7B6E] whitespace-nowrap">
-            {reviews.length} review{reviews.length !== 1 ? "s" : ""} · {recommendPct}% recommend
-          </span>
+      {/* Summary: score + star breakdown bars */}
+      <div className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-8 mb-6">
+        <div className="flex items-center gap-3 flex-shrink-0">
+          <span className="font-heading text-3xl font-light text-[#2C2220]">{avgRating.toFixed(1)}</span>
+          <div className="flex flex-col gap-1">
+            <Stars rating={Math.round(avgRating)} size={14} />
+            <span className="text-[0.55rem] tracking-[0.1em] uppercase text-[#8C7B6E] whitespace-nowrap">
+              {reviews.length} review{reviews.length !== 1 ? "s" : ""}
+            </span>
+          </div>
+        </div>
+        <div className="flex flex-col gap-1 w-full sm:max-w-[200px]">
+          {breakdown.map(({ star, pct }) => (
+            <div key={star} className="flex items-center gap-2">
+              <span className="text-[0.55rem] text-[#8C7B6E] w-2.5 flex-shrink-0">{star}</span>
+              <div className="flex-1 h-1 bg-[#E8B4A8]/25 rounded-full overflow-hidden">
+                <div className="h-full bg-[#A0622A] rounded-full" style={{ width: `${pct}%` }} />
+              </div>
+              <span className="text-[0.55rem] text-[#8C7B6E] w-6 flex-shrink-0 text-right">{pct}%</span>
+            </div>
+          ))}
         </div>
       </div>
+
+      {/* Photo strip */}
+      <PhotoStrip reviews={sorted} />
 
       {/* List */}
       <div className="flex flex-col gap-3">

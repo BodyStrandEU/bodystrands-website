@@ -10,7 +10,7 @@ export default function PrivacyPolicyPage() {
     <div className="max-w-3xl mx-auto px-6 py-20">
       <p className="text-[0.6rem] tracking-[0.35em] uppercase text-[#A0622A] mb-3">Bodystrands</p>
       <h1 className="font-heading text-4xl md:text-5xl font-light text-[#2C2220] mb-4">Privacy Policy</h1>
-      <p className="text-sm font-light tracking-wide text-[#8C7B6E] leading-relaxed mb-12">Last updated: June 2026</p>
+      <p className="text-sm font-light tracking-wide text-[#8C7B6E] leading-relaxed mb-12">Last updated: July 2026</p>
 
       <div className="space-y-10 font-cormorant text-lg leading-relaxed text-[#2C2220]">
 
@@ -31,7 +31,13 @@ export default function PrivacyPolicyPage() {
 
         <section>
           <h2 className="font-josefin text-sm tracking-widest uppercase mb-3">4. Cookies & Analytics</h2>
-          <p>We use Google Analytics to understand how visitors use our site. This may collect anonymised data about your visit including pages viewed and time spent. You can opt out via your browser settings.</p>
+          <p className="mb-4">We use the following third-party tools to understand how visitors use our site and to improve it:</p>
+          <ul className="list-disc list-inside space-y-2 mb-4">
+            <li><strong>Google Analytics</strong> — collects anonymised data about pages viewed and time spent on site.</li>
+            <li><strong>Meta (Facebook) Pixel</strong> — helps us measure the effectiveness of our social media advertising.</li>
+            <li><strong>Microsoft Clarity</strong> — records how visitors interact with our site (mouse movement, clicks, and scrolling) and generates heatmaps, so we can identify and fix usability issues. Clarity automatically masks sensitive form fields (such as passwords and payment details) and never records what you type into them. Data collected is processed by Microsoft in line with the <a href="https://privacy.microsoft.com/en-us/privacystatement" className="text-[#A0622A] hover:underline" target="_blank" rel="noopener noreferrer">Microsoft Privacy Statement</a>.</li>
+          </ul>
+          <p>None of these tools are active on our internal admin pages. You can opt out of this kind of tracking at any time via your browser&apos;s cookie or tracking-prevention settings.</p>
         </section>
 
         <section>

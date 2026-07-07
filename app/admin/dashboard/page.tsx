@@ -336,6 +336,26 @@ export default function AdminDashboard() {
           >
             📝 Reviews
           </button>
+          <a
+            href="https://clarity.microsoft.com/projects/view/xivm4b8y1m/dashboard"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              padding: "0.6rem 1.5rem",
+              background: "var(--admin-surface)",
+              color: "#A0622A",
+              border: "1px solid #A0622A",
+              borderRadius: "4px",
+              fontSize: "0.85rem",
+              cursor: "pointer",
+              fontWeight: 500,
+              textDecoration: "none",
+              display: "inline-flex",
+              alignItems: "center",
+            }}
+          >
+            🎥 Session Recordings
+          </a>
           <button
             onClick={() => router.push("/admin/site-images")}
             style={{

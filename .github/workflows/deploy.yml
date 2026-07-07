@@ -5,6 +5,15 @@ on:
     branches:
       - main
 
+# Only one deploy to production at a time. Without this, rapid successive pushes (e.g.
+# several admin-panel saves plus a few code commits within a few minutes) each start their
+# own `vercel deploy` in parallel — they contend with each other against the same Vercel
+# project and can hang indefinitely instead of failing cleanly. A new push now cancels
+# whatever deploy is still in flight rather than piling up alongside it.
+concurrency:
+  group: production-deploy
+  cancel-in-progress: true
+
 jobs:
   deploy:
     runs-on: ubuntu-latest

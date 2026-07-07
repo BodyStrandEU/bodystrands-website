@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 
 type Order = {
   id: string;
@@ -27,6 +28,7 @@ export default function OrdersPage() {
   const [sending, setSending]         = useState<Record<string, boolean>>({});
   const [sent, setSent]               = useState<Record<string, boolean>>({});
   const [error, setError]             = useState<Record<string, string>>({});
+  const router = useRouter();
 
   useEffect(() => {
     fetch("/api/admin/orders")
@@ -35,8 +37,8 @@ export default function OrdersPage() {
       .catch(() => setLoading(false));
   }, []);
 
-  async function sendTracking(orderId: string) {
-    const num = tracking[orderId]?.trim();
+  async function sendTracking(orderId: string, existingNumber: string | null) {
+    const num = (tracking[orderId] ?? existingNumber ?? "").trim();
     if (!num) return;
     setSending(p => ({ ...p, [orderId]: true }));
     setError(p => ({ ...p, [orderId]: "" }));
@@ -61,91 +63,129 @@ export default function OrdersPage() {
   }
 
   return (
-    <div className="p-6 md:p-10 max-w-5xl mx-auto">
-      <div className="mb-8">
-        <p className="text-[0.55rem] tracking-[0.3em] uppercase text-[#A0622A] mb-1">Admin</p>
-        <h1 className="text-2xl font-light tracking-wide text-[#2C2220]">Orders</h1>
-      </div>
+    <div style={{ minHeight: "100vh", background: "var(--admin-bg)" }}>
+      <div className="p-6 md:p-10 max-w-5xl mx-auto">
+        <div className="mb-8 flex items-center gap-4">
+          <button
+            onClick={() => router.push("/admin/dashboard")}
+            aria-label="Back to dashboard"
+            style={{ fontSize: "1.1rem", color: "var(--admin-muted)", background: "none", border: "none", cursor: "pointer", lineHeight: 1, padding: "0.25rem" }}
+          >
+            ←
+          </button>
+          <div>
+            <p style={{ fontSize: "0.55rem", letterSpacing: "0.3em", textTransform: "uppercase", color: "#A0622A", marginBottom: "0.25rem" }}>Admin</p>
+            <h1 style={{ fontSize: "1.5rem", fontWeight: 300, letterSpacing: "0.02em", color: "var(--admin-text)" }}>Orders</h1>
+          </div>
+        </div>
 
-      {loading ? (
-        <p className="text-[0.7rem] tracking-wide text-[#8C7B6E]">Loading orders…</p>
-      ) : orders.length === 0 ? (
-        <p className="text-[0.7rem] tracking-wide text-[#8C7B6E]">No orders found.</p>
-      ) : (
-        <div className="flex flex-col gap-4">
-          {orders.map(order => {
-            const date = new Date(order.createdAt * 1000).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" });
-            const flag = order.address ? (COUNTRY_FLAG[order.address.country] ?? "🌍") : "—";
-            const shipped = !!(order.trackingNumber || sent[order.id]);
-            const currentTracking = order.trackingNumber ?? tracking[order.id] ?? "";
+        {loading ? (
+          <p style={{ fontSize: "0.7rem", letterSpacing: "0.02em", color: "var(--admin-muted)" }}>Loading orders…</p>
+        ) : orders.length === 0 ? (
+          <p style={{ fontSize: "0.7rem", letterSpacing: "0.02em", color: "var(--admin-muted)" }}>No orders found.</p>
+        ) : (
+          <div className="flex flex-col gap-4">
+            {orders.map(order => {
+              const date = new Date(order.createdAt * 1000).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" });
+              const flag = order.address ? (COUNTRY_FLAG[order.address.country] ?? "🌍") : "—";
+              const shipped = !!(order.trackingNumber || sent[order.id]);
+              const currentTracking = tracking[order.id] ?? order.trackingNumber ?? "";
 
-            return (
-              <div key={order.id} className={`border rounded-none p-5 ${shipped ? "border-[#A0622A]/30 bg-[#A0622A]/5" : "border-[#E8D5CB] bg-white"}`}>
-                <div className="flex flex-col md:flex-row md:items-start gap-4">
+              return (
+                <div
+                  key={order.id}
+                  className="p-5"
+                  style={{
+                    border: `1px solid ${shipped ? "#A0622A4d" : "var(--admin-border)"}`,
+                    background: shipped ? "#A0622A0d" : "var(--admin-surface)",
+                  }}
+                >
+                  <div className="flex flex-col md:flex-row md:items-start gap-4">
 
-                  {/* Order info */}
-                  <div className="flex-1 min-w-0">
-                    <div className="flex items-center gap-3 mb-2">
-                      <span className="text-xl">{flag}</span>
-                      <div>
-                        <p className="text-[0.8rem] font-medium text-[#2C2220]">{order.customerName}</p>
-                        <p className="text-[0.65rem] text-[#8C7B6E]">{order.customerEmail}</p>
+                    {/* Order info */}
+                    <div className="flex-1 min-w-0">
+                      <div className="flex items-center gap-3 mb-2">
+                        <span className="text-xl">{flag}</span>
+                        <div>
+                          <p style={{ fontSize: "0.8rem", fontWeight: 500, color: "var(--admin-text)" }}>{order.customerName}</p>
+                          <p style={{ fontSize: "0.65rem", color: "var(--admin-muted)" }}>{order.customerEmail}</p>
+                        </div>
+                        <span
+                          className="ml-auto px-2 py-1"
+                          style={{
+                            fontSize: "0.55rem", letterSpacing: "0.15em", textTransform: "uppercase",
+                            background: shipped ? "#A0622A1a" : "var(--admin-surface2)",
+                            color: shipped ? "#A0622A" : "var(--admin-muted)",
+                          }}
+                        >
+                          {shipped ? "Shipped" : "Pending"}
+                        </span>
                       </div>
-                      <span className={`ml-auto text-[0.55rem] tracking-[0.15em] uppercase px-2 py-1 ${shipped ? "bg-[#A0622A]/10 text-[#A0622A]" : "bg-[#E8B4A8]/20 text-[#8C7B6E]"}`}>
-                        {shipped ? "Shipped" : "Pending"}
-                      </span>
+
+                      <p style={{ fontSize: "0.75rem", color: "var(--admin-text)", marginBottom: "0.25rem" }} className="truncate">{order.productName}</p>
+                      <p style={{ fontSize: "0.65rem", color: "var(--admin-muted)", marginBottom: "0.5rem" }}>{date} · {order.currency} {order.amount.toFixed(2)}</p>
+
+                      {order.address && (
+                        <p style={{ fontSize: "0.65rem", color: "var(--admin-muted)", lineHeight: 1.6 }}>
+                          {[order.address.line1, order.address.line2, order.address.city, order.address.postal_code, order.address.country].filter(Boolean).join(", ")}
+                        </p>
+                      )}
+
+                      {shipped && order.trackingNumber && (
+                        <p style={{ fontSize: "0.65rem", color: "#A0622A", marginTop: "0.5rem", letterSpacing: "0.02em" }}>
+                          Tracking sent: <strong>{order.trackingNumber}</strong>
+                          {order.trackingSentAt && ` · ${new Date(order.trackingSentAt).toLocaleDateString("en-GB", { day: "numeric", month: "short" })}`}
+                        </p>
+                      )}
                     </div>
 
-                    <p className="text-[0.75rem] text-[#2C2220] mb-1 truncate">{order.productName}</p>
-                    <p className="text-[0.65rem] text-[#8C7B6E] mb-2">{date} · {order.currency} {order.amount.toFixed(2)}</p>
-
-                    {order.address && (
-                      <p className="text-[0.65rem] text-[#8C7B6E] leading-relaxed">
-                        {[order.address.line1, order.address.line2, order.address.city, order.address.postal_code, order.address.country].filter(Boolean).join(", ")}
-                      </p>
-                    )}
-
-                    {shipped && order.trackingNumber && (
-                      <p className="text-[0.65rem] text-[#A0622A] mt-2 tracking-wide">
-                        Tracking sent: <strong>{order.trackingNumber}</strong>
-                        {order.trackingSentAt && ` · ${new Date(order.trackingSentAt).toLocaleDateString("en-GB", { day: "numeric", month: "short" })}`}
-                      </p>
-                    )}
-                  </div>
-
-                  {/* Tracking input */}
-                  <div className="flex flex-col gap-2 md:w-64 flex-shrink-0">
-                    <input
-                      type="text"
-                      placeholder="Tracking number"
-                      value={shipped ? (order.trackingNumber ?? "") : (tracking[order.id] ?? "")}
-                      onChange={e => setTracking(p => ({ ...p, [order.id]: e.target.value }))}
-                      disabled={shipped}
-                      className="w-full border border-[#2C2220]/20 px-3 py-2 text-[0.7rem] tracking-widest text-[#2C2220] placeholder-[#8C7B6E]/50 focus:outline-none focus:border-[#A0622A] disabled:bg-[#F5F0EC] disabled:text-[#8C7B6E] transition-colors"
-                    />
-                    {!shipped && (
+                    {/* Tracking input — stays editable after shipping so mistakes can be corrected and resent */}
+                    <div className="flex flex-col gap-2 md:w-64 flex-shrink-0">
+                      <input
+                        type="text"
+                        placeholder="Tracking number"
+                        value={currentTracking}
+                        onChange={e => { setTracking(p => ({ ...p, [order.id]: e.target.value })); setSent(p => ({ ...p, [order.id]: false })); }}
+                        className="w-full px-3 py-2 transition-colors"
+                        style={{
+                          border: "1px solid var(--admin-border2)",
+                          background: "var(--admin-surface)",
+                          fontSize: "0.7rem",
+                          letterSpacing: "0.05em",
+                          color: "var(--admin-text)",
+                        }}
+                      />
                       <button
-                        onClick={() => sendTracking(order.id)}
-                        disabled={sending[order.id] || !tracking[order.id]?.trim()}
-                        className="w-full bg-[#2C2220] text-[#FDF9F7] py-2 text-[0.58rem] tracking-[0.22em] uppercase hover:bg-[#A0622A] transition-colors disabled:opacity-40"
+                        onClick={() => sendTracking(order.id, order.trackingNumber)}
+                        disabled={sending[order.id] || !currentTracking.trim()}
+                        className="w-full py-2 transition-colors disabled:opacity-40"
+                        style={{
+                          background: "#A0622A",
+                          color: "#FDF9F7",
+                          fontSize: "0.58rem",
+                          letterSpacing: "0.22em",
+                          textTransform: "uppercase",
+                          border: "none",
+                          cursor: sending[order.id] || !currentTracking.trim() ? "default" : "pointer",
+                        }}
                       >
-                        {sending[order.id] ? "Sending…" : "Send Tracking Email"}
+                        {sending[order.id] ? "Sending…" : shipped ? "Resend Tracking Email" : "Send Tracking Email"}
                       </button>
-                    )}
-                    {sent[order.id] && !order.trackingNumber && (
-                      <p className="text-[0.6rem] text-[#A0622A] tracking-wide">✓ Tracking email sent</p>
-                    )}
-                    {error[order.id] && (
-                      <p className="text-[0.6rem] text-red-400 tracking-wide">{error[order.id]}</p>
-                    )}
-                  </div>
+                      {sent[order.id] && (
+                        <p style={{ fontSize: "0.6rem", color: "#A0622A", letterSpacing: "0.02em" }}>✓ Tracking email sent</p>
+                      )}
+                      {error[order.id] && (
+                        <p style={{ fontSize: "0.6rem", color: "#f87171", letterSpacing: "0.02em" }}>{error[order.id]}</p>
+                      )}
+                    </div>
 
+                  </div>
                 </div>
-              </div>
-            );
-          })}
-        </div>
-      )}
+              );
+            })}
+          </div>
+        )}
+      </div>
     </div>
   );
 }

@@ -104,7 +104,7 @@ function RevenueChart({ data, unit }: { data: Record<string, number>; unit: stri
               }}
             />
             {showLabels && (
-              <span style={{ fontSize: 8, color: "var(--admin-text-muted)", transform: unit === "hour" ? "none" : "rotate(-45deg)", transformOrigin: "center", whiteSpace: "nowrap", lineHeight: 1 }}>
+              <span style={{ fontSize: 8, color: "var(--admin-muted)", transform: unit === "hour" ? "none" : "rotate(-45deg)", transformOrigin: "center", whiteSpace: "nowrap", lineHeight: 1 }}>
                 {label}
               </span>
             )}
@@ -116,12 +116,12 @@ function RevenueChart({ data, unit }: { data: Record<string, number>; unit: stri
 }
 
 const card: React.CSSProperties = { background: "var(--admin-surface)", border: "1px solid var(--admin-border)", borderRadius: 8, padding: "1.25rem" };
-const lbl: React.CSSProperties  = { fontSize: "0.58rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "var(--admin-text-muted)", marginBottom: "0.35rem" };
+const lbl: React.CSSProperties  = { fontSize: "0.58rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "var(--admin-muted)", marginBottom: "0.35rem" };
 const big: React.CSSProperties  = { fontSize: "1.6rem", fontWeight: 300, color: "#A0622A", lineHeight: 1.1 };
-const sub: React.CSSProperties  = { fontSize: "0.63rem", color: "var(--admin-text-muted)", marginTop: "0.25rem" };
+const sub: React.CSSProperties  = { fontSize: "0.63rem", color: "var(--admin-muted)", marginTop: "0.25rem" };
 const sec: React.CSSProperties  = { background: "var(--admin-surface)", border: "1px solid var(--admin-border)", borderRadius: 8, overflow: "hidden", marginBottom: "1.25rem" };
-const sh:  React.CSSProperties  = { padding: "0.85rem 1.25rem", fontSize: "0.58rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "var(--admin-text-muted)", borderBottom: "1px solid var(--admin-border)", display: "flex", justifyContent: "space-between", alignItems: "center" };
-const th:  React.CSSProperties  = { padding: "0.6rem 1rem", fontSize: "0.53rem", letterSpacing: "0.15em", textTransform: "uppercase", color: "var(--admin-text-muted)", textAlign: "left", background: "var(--admin-bg)", borderBottom: "1px solid var(--admin-border)" };
+const sh:  React.CSSProperties  = { padding: "0.85rem 1.25rem", fontSize: "0.58rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "var(--admin-muted)", borderBottom: "1px solid var(--admin-border)", display: "flex", justifyContent: "space-between", alignItems: "center" };
+const th:  React.CSSProperties  = { padding: "0.6rem 1rem", fontSize: "0.53rem", letterSpacing: "0.15em", textTransform: "uppercase", color: "var(--admin-muted)", textAlign: "left", background: "var(--admin-bg)", borderBottom: "1px solid var(--admin-border)" };
 const td:  React.CSSProperties  = { padding: "0.7rem 1rem", fontSize: "0.75rem", borderBottom: "1px solid var(--admin-border2)", verticalAlign: "middle" };
 
 export default function AnalyticsPage() {
@@ -155,7 +155,7 @@ export default function AnalyticsPage() {
       <div style={{ background: "var(--admin-surface)", borderBottom: "1px solid var(--admin-border)", padding: "1rem 2rem", display: "flex", alignItems: "center", justifyContent: "space-between", gap: "1rem", flexWrap: "wrap" }}>
         <div>
           <h1 style={{ margin: 0, fontSize: "1.25rem", fontWeight: 600, color: "var(--admin-text)" }}>Analytics</h1>
-          <p style={{ margin: 0, fontSize: "0.68rem", color: "var(--admin-text-muted)" }}>
+          <p style={{ margin: 0, fontSize: "0.68rem", color: "var(--admin-muted)" }}>
             {data ? data.periodLabel : "Loading…"}{data?.ga4Ready ? " • Stripe + Google Analytics" : " • Stripe data"}
           </p>
         </div>
@@ -174,7 +174,7 @@ export default function AnalyticsPage() {
                 borderRadius: 6,
                 cursor: "pointer",
                 background:  period === p.key ? "#A0622A" : "transparent",
-                color:       period === p.key ? "#fff" : "var(--admin-text-muted)",
+                color:       period === p.key ? "#fff" : "var(--admin-muted)",
                 fontWeight:  period === p.key ? 600 : 400,
                 transition:  "all 0.15s",
               }}
@@ -185,7 +185,7 @@ export default function AnalyticsPage() {
         </div>
 
         <div style={{ display: "flex", gap: "0.75rem", alignItems: "center" }}>
-          <button onClick={() => router.push("/admin/dashboard")} style={{ fontSize: "0.73rem", color: "var(--admin-text-muted)", background: "none", border: "none", cursor: "pointer" }}>← Dashboard</button>
+          <button onClick={() => router.push("/admin/dashboard")} style={{ fontSize: "0.73rem", color: "var(--admin-muted)", background: "none", border: "none", cursor: "pointer" }}>← Dashboard</button>
           <button onClick={() => load(period)} style={{ fontSize: "0.73rem", color: "#A0622A", background: "none", border: "1px solid #A0622A", borderRadius: 4, padding: "0.35rem 0.9rem", cursor: "pointer" }}>
             {loading ? "Loading…" : "Refresh"}
           </button>
@@ -273,7 +273,7 @@ export default function AnalyticsPage() {
               <div style={sec}>
                 <div style={sh}><span>Top Products</span><span>by revenue</span></div>
                 {data.topProducts.length === 0 ? (
-                  <p style={{ padding: "1rem 1.25rem", fontSize: "0.75rem", color: "var(--admin-text-muted)" }}>No sales in this period.</p>
+                  <p style={{ padding: "1rem 1.25rem", fontSize: "0.75rem", color: "var(--admin-muted)" }}>No sales in this period.</p>
                 ) : (
                   <div style={{ padding: "0.75rem 1.25rem", display: "flex", flexDirection: "column", gap: "0.8rem" }}>
                     {data.topProducts.map((p) => (
@@ -284,7 +284,7 @@ export default function AnalyticsPage() {
                         </div>
                         <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
                           <MiniBar value={p.revenue} max={data.topProducts[0]?.revenue ?? 1} />
-                          <span style={{ fontSize: "0.6rem", color: "var(--admin-text-muted)", whiteSpace: "nowrap" }}>{p.count} sold</span>
+                          <span style={{ fontSize: "0.6rem", color: "var(--admin-muted)", whiteSpace: "nowrap" }}>{p.count} sold</span>
                         </div>
                       </div>
                     ))}
@@ -301,7 +301,7 @@ export default function AnalyticsPage() {
                         <div key={c.channel}>
                           <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 4 }}>
                             <span style={{ fontSize: "0.72rem", color: "var(--admin-text)", textTransform: "capitalize" }}>{c.channel || "Direct"}</span>
-                            <span style={{ fontSize: "0.72rem", color: "var(--admin-text-muted)" }}>{c.sessions.toLocaleString()} sessions</span>
+                            <span style={{ fontSize: "0.72rem", color: "var(--admin-muted)" }}>{c.sessions.toLocaleString()} sessions</span>
                           </div>
                           <MiniBar value={c.sessions} max={data.ga4!.channels[0]?.sessions ?? 1} color="#6B8E6B" />
                         </div>
@@ -317,9 +317,9 @@ export default function AnalyticsPage() {
                           {data.ga4.sources.map((s, i) => (
                             <div key={`${s.source}-${s.medium}-${i}`} style={{ display: "flex", justifyContent: "space-between" }}>
                               <span style={{ fontSize: "0.68rem", color: "var(--admin-text)" }}>
-                                {s.source || "(direct)"} <span style={{ color: "var(--admin-text-muted)" }}>/ {s.medium || "(none)"}</span>
+                                {s.source || "(direct)"} <span style={{ color: "var(--admin-muted)" }}>/ {s.medium || "(none)"}</span>
                               </span>
-                              <span style={{ fontSize: "0.68rem", color: "var(--admin-text-muted)" }}>{s.sessions.toLocaleString()}</span>
+                              <span style={{ fontSize: "0.68rem", color: "var(--admin-muted)" }}>{s.sessions.toLocaleString()}</span>
                             </div>
                           ))}
                         </div>
@@ -330,14 +330,14 @@ export default function AnalyticsPage() {
                   <>
                     <div style={sh}><span>Customer Countries</span><span>from orders</span></div>
                     {data.topCountries.length === 0 ? (
-                      <p style={{ padding: "1rem 1.25rem", fontSize: "0.75rem", color: "var(--admin-text-muted)" }}>No data in this period.</p>
+                      <p style={{ padding: "1rem 1.25rem", fontSize: "0.75rem", color: "var(--admin-muted)" }}>No data in this period.</p>
                     ) : (
                       <div style={{ padding: "0.75rem 1.25rem", display: "flex", flexDirection: "column", gap: "0.8rem" }}>
                         {data.topCountries.map((c) => (
                           <div key={c.country}>
                             <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 4 }}>
                               <span style={{ fontSize: "0.72rem", color: "var(--admin-text)" }}>{c.country}</span>
-                              <span style={{ fontSize: "0.72rem", color: "var(--admin-text-muted)" }}>{c.count} order{c.count !== 1 ? "s" : ""}</span>
+                              <span style={{ fontSize: "0.72rem", color: "var(--admin-muted)" }}>{c.count} order{c.count !== 1 ? "s" : ""}</span>
                             </div>
                             <MiniBar value={c.count} max={data.topCountries[0]?.count ?? 1} color="#6B8E6B" />
                           </div>
@@ -361,7 +361,7 @@ export default function AnalyticsPage() {
                         <div key={d.device}>
                           <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 4 }}>
                             <span style={{ fontSize: "0.72rem", color: "var(--admin-text)", textTransform: "capitalize" }}>{d.device}</span>
-                            <span style={{ fontSize: "0.72rem", color: "var(--admin-text-muted)" }}>{total > 0 ? Math.round(d.sessions / total * 100) : 0}%</span>
+                            <span style={{ fontSize: "0.72rem", color: "var(--admin-muted)" }}>{total > 0 ? Math.round(d.sessions / total * 100) : 0}%</span>
                           </div>
                           <MiniBar value={d.sessions} max={data.ga4!.devices[0]?.sessions ?? 1} color="#8B7355" />
                         </div>
@@ -376,7 +376,7 @@ export default function AnalyticsPage() {
                       <div key={c.country}>
                         <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 4 }}>
                           <span style={{ fontSize: "0.72rem", color: "var(--admin-text)" }}>{c.country}</span>
-                          <span style={{ fontSize: "0.72rem", color: "var(--admin-text-muted)" }}>{c.sessions.toLocaleString()}</span>
+                          <span style={{ fontSize: "0.72rem", color: "var(--admin-muted)" }}>{c.sessions.toLocaleString()}</span>
                         </div>
                         <MiniBar value={c.sessions} max={data.ga4!.countries[0]?.sessions ?? 1} color="#6B8E6B" />
                       </div>
@@ -390,7 +390,7 @@ export default function AnalyticsPage() {
                       <div key={p.path}>
                         <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 4 }}>
                           <span style={{ fontSize: "0.68rem", color: "var(--admin-text)", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap", maxWidth: 130 }} title={p.path}>{p.path}</span>
-                          <span style={{ fontSize: "0.72rem", color: "var(--admin-text-muted)" }}>{p.views.toLocaleString()}</span>
+                          <span style={{ fontSize: "0.72rem", color: "var(--admin-muted)" }}>{p.views.toLocaleString()}</span>
                         </div>
                         <MiniBar value={p.views} max={data.ga4!.topPages[0]?.views ?? 1} color="#A0622A" />
                       </div>
@@ -408,7 +408,7 @@ export default function AnalyticsPage() {
                   <span>{data.ga4.totalAddToCarts} total in {data.periodLabel}</span>
                 </div>
                 {data.ga4.addToCartProducts.length === 0 ? (
-                  <p style={{ padding: "1rem 1.25rem", fontSize: "0.75rem", color: "var(--admin-text-muted)" }}>No add-to-cart events yet. Data will appear after customers start adding products.</p>
+                  <p style={{ padding: "1rem 1.25rem", fontSize: "0.75rem", color: "var(--admin-muted)" }}>No add-to-cart events yet. Data will appear after customers start adding products.</p>
                 ) : (
                   <div style={{ padding: "0.75rem 1.25rem", display: "flex", flexDirection: "column", gap: "0.8rem" }}>
                     {data.ga4.addToCartProducts.map((p) => (
@@ -429,7 +429,7 @@ export default function AnalyticsPage() {
             <div style={sec}>
               <div style={sh}><span>Recent Orders</span><span>{data.orderCount} in {data.periodLabel}</span></div>
               {data.recentOrders.length === 0 ? (
-                <p style={{ padding: "1rem 1.25rem", fontSize: "0.75rem", color: "var(--admin-text-muted)" }}>No orders in this period.</p>
+                <p style={{ padding: "1rem 1.25rem", fontSize: "0.75rem", color: "var(--admin-muted)" }}>No orders in this period.</p>
               ) : (
                 <table style={{ width: "100%", borderCollapse: "collapse" }}>
                   <thead>
@@ -438,24 +438,24 @@ export default function AnalyticsPage() {
                   <tbody>
                     {data.recentOrders.map((o) => (
                       <tr key={o.id}>
-                        <td style={{ ...td, color: "var(--admin-text-muted)", whiteSpace: "nowrap", fontSize: "0.68rem" }}>{timeAgo(o.createdAt)}</td>
+                        <td style={{ ...td, color: "var(--admin-muted)", whiteSpace: "nowrap", fontSize: "0.68rem" }}>{timeAgo(o.createdAt)}</td>
                         <td style={{ ...td, maxWidth: 180, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>{o.productName}</td>
                         <td style={td}>
                           <div style={{ fontSize: "0.72rem" }}>{o.customerName}</div>
-                          <div style={{ fontSize: "0.62rem", color: "var(--admin-text-muted)" }}>{o.customerEmail}</div>
+                          <div style={{ fontSize: "0.62rem", color: "var(--admin-muted)" }}>{o.customerEmail}</div>
                         </td>
-                        <td style={{ ...td, fontSize: "0.68rem", color: "var(--admin-text-muted)" }}>{o.country}</td>
+                        <td style={{ ...td, fontSize: "0.68rem", color: "var(--admin-muted)" }}>{o.country}</td>
                         <td style={{ ...td, fontSize: "0.68rem" }}>
                           {o.source ? (
                             <>
                               <div style={{ color: "var(--admin-text)" }}>{o.source}</div>
-                              <div style={{ fontSize: "0.58rem", color: "var(--admin-text-muted)" }}>{o.medium}</div>
+                              <div style={{ fontSize: "0.58rem", color: "var(--admin-muted)" }}>{o.medium}</div>
                               {o.landingPage && (
-                                <div style={{ fontSize: "0.56rem", color: "var(--admin-text-muted)", opacity: 0.7 }} title="Landing page">→ {o.landingPage}</div>
+                                <div style={{ fontSize: "0.56rem", color: "var(--admin-muted)", opacity: 0.7 }} title="Landing page">→ {o.landingPage}</div>
                               )}
                             </>
                           ) : (
-                            <span style={{ color: "var(--admin-text-muted)" }}>untracked</span>
+                            <span style={{ color: "var(--admin-muted)" }}>untracked</span>
                           )}
                         </td>
                         <td style={{ ...td, color: "#A0622A", fontWeight: "bold", whiteSpace: "nowrap" }}>{fmt(o.amount, o.currency)}</td>
@@ -478,7 +478,7 @@ export default function AnalyticsPage() {
             {!data.ga4Ready && (
               <div id="ga4-setup" style={{ ...sec, border: "1px solid #A0622A33" }}>
                 <div style={{ ...sh, color: "#A0622A" }}><span>Connect Google Analytics — Unlock Visitor Data</span></div>
-                <div style={{ padding: "1.25rem", fontSize: "0.78rem", lineHeight: 1.8, color: "var(--admin-text-muted)" }}>
+                <div style={{ padding: "1.25rem", fontSize: "0.78rem", lineHeight: 1.8, color: "var(--admin-muted)" }}>
                   <p style={{ marginTop: 0 }}>Once connected you&apos;ll see: <strong style={{ color: "var(--admin-text)" }}>sessions, traffic sources, devices, visitor countries, top pages,</strong> and conversion rate — all filtered by the same time period.</p>
                 </div>
               </div>

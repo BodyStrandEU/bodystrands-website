@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
+import { CARRIERS, type CarrierId } from "@/lib/tracking";
 
 type Order = {
   id: string;
@@ -14,7 +15,12 @@ type Order = {
   address: { line1: string; line2: string; city: string; postal_code: string; country: string } | null;
   trackingNumber: string | null;
   trackingSentAt: string | null;
+  trackingCarrier: string | null;
 };
+
+// Most orders ship via DHL Germany right now, so default new entries to that
+// instead of leaving 17track to guess the carrier (it's guessed wrong before).
+const DEFAULT_CARRIER: CarrierId = "dhl-de";
 
 const COUNTRY_FLAG: Record<string, string> = {
   FR:"🇫🇷",GB:"🇬🇧",DE:"🇩🇪",IT:"🇮🇹",ES:"🇪🇸",NL:"🇳🇱",PT:"🇵🇹",BE:"🇧🇪",PL:"🇵🇱",SE:"🇸🇪",
@@ -25,6 +31,7 @@ export default function OrdersPage() {
   const [orders, setOrders]           = useState<Order[]>([]);
   const [loading, setLoading]         = useState(true);
   const [tracking, setTracking]       = useState<Record<string, string>>({});
+  const [carrier, setCarrier]         = useState<Record<string, string>>({});
   const [sending, setSending]         = useState<Record<string, boolean>>({});
   const [sent, setSent]               = useState<Record<string, boolean>>({});
   const [error, setError]             = useState<Record<string, string>>({});
@@ -37,8 +44,9 @@ export default function OrdersPage() {
       .catch(() => setLoading(false));
   }, []);
 
-  async function sendTracking(orderId: string, existingNumber: string | null) {
+  async function sendTracking(orderId: string, existingNumber: string | null, existingCarrier: string | null) {
     const num = (tracking[orderId] ?? existingNumber ?? "").trim();
+    const car = carrier[orderId] ?? existingCarrier ?? DEFAULT_CARRIER;
     if (!num) return;
     setSending(p => ({ ...p, [orderId]: true }));
     setError(p => ({ ...p, [orderId]: "" }));
@@ -46,14 +54,14 @@ export default function OrdersPage() {
       const res = await fetch("/api/admin/orders", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ sessionId: orderId, trackingNumber: num }),
+        body: JSON.stringify({ sessionId: orderId, trackingNumber: num, carrier: car }),
       });
       if (!res.ok) {
         const d = await res.json();
         setError(p => ({ ...p, [orderId]: d.error ?? "Failed" }));
       } else {
         setSent(p => ({ ...p, [orderId]: true }));
-        setOrders(prev => prev.map(o => o.id === orderId ? { ...o, trackingNumber: num, trackingSentAt: new Date().toISOString() } : o));
+        setOrders(prev => prev.map(o => o.id === orderId ? { ...o, trackingNumber: num, trackingSentAt: new Date().toISOString(), trackingCarrier: car } : o));
       }
     } catch {
       setError(p => ({ ...p, [orderId]: "Network error" }));
@@ -90,6 +98,7 @@ export default function OrdersPage() {
               const flag = order.address ? (COUNTRY_FLAG[order.address.country] ?? "🌍") : "—";
               const shipped = !!(order.trackingNumber || sent[order.id]);
               const currentTracking = tracking[order.id] ?? order.trackingNumber ?? "";
+              const currentCarrier = carrier[order.id] ?? order.trackingCarrier ?? DEFAULT_CARRIER;
 
               return (
                 <div
@@ -134,6 +143,7 @@ export default function OrdersPage() {
                       {shipped && order.trackingNumber && (
                         <p style={{ fontSize: "0.65rem", color: "#A0622A", marginTop: "0.5rem", letterSpacing: "0.02em" }}>
                           Tracking sent: <strong>{order.trackingNumber}</strong>
+                          {" "}({CARRIERS.find(c => c.id === order.trackingCarrier)?.label ?? "Auto-detect (17track)"})
                           {order.trackingSentAt && ` · ${new Date(order.trackingSentAt).toLocaleDateString("en-GB", { day: "numeric", month: "short" })}`}
                         </p>
                       )}
@@ -155,8 +165,22 @@ export default function OrdersPage() {
                           color: "var(--admin-text)",
                         }}
                       />
+                      <select
+                        value={currentCarrier}
+                        onChange={e => { setCarrier(p => ({ ...p, [order.id]: e.target.value })); setSent(p => ({ ...p, [order.id]: false })); }}
+                        className="w-full px-3 py-2 transition-colors"
+                        style={{
+                          border: "1px solid var(--admin-border2)",
+                          background: "var(--admin-surface)",
+                          fontSize: "0.65rem",
+                          letterSpacing: "0.03em",
+                          color: "var(--admin-text)",
+                        }}
+                      >
+                        {CARRIERS.map(c => <option key={c.id} value={c.id}>{c.label}</option>)}
+                      </select>
                       <button
-                        onClick={() => sendTracking(order.id, order.trackingNumber)}
+                        onClick={() => sendTracking(order.id, order.trackingNumber, order.trackingCarrier)}
                         disabled={sending[order.id] || !currentTracking.trim()}
                         className="w-full py-2 transition-colors disabled:opacity-40"
                         style={{

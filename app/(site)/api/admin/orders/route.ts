@@ -4,6 +4,7 @@ import { NextRequest, NextResponse } from "next/server";
 import Stripe from "stripe";
 import { Resend } from "resend";
 import { isValidToken, COOKIE_NAME } from "@/lib/auth";
+import { buildTrackingUrl, carrierLabel } from "@/lib/tracking";
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!);
 const resend = new Resend(process.env.RESEND_API_KEY);
@@ -25,12 +26,14 @@ export async function GET(req: NextRequest) {
     const addr = sh?.address || cd?.address;
     let trackingNumber: string | null = null;
     let trackingSentAt: string | null = null;
+    let trackingCarrier: string | null = null;
 
     if (typeof s.payment_intent === "string") {
       try {
         const pi = await stripe.paymentIntents.retrieve(s.payment_intent);
-        trackingNumber = pi.metadata?.tracking_number ?? null;
-        trackingSentAt = pi.metadata?.tracking_sent_at ?? null;
+        trackingNumber  = pi.metadata?.tracking_number ?? null;
+        trackingSentAt  = pi.metadata?.tracking_sent_at ?? null;
+        trackingCarrier = pi.metadata?.tracking_carrier ?? null;
       } catch {}
     }
 
@@ -52,6 +55,7 @@ export async function GET(req: NextRequest) {
       } : null,
       trackingNumber,
       trackingSentAt,
+      trackingCarrier,
     };
   }));
 
@@ -61,7 +65,7 @@ export async function GET(req: NextRequest) {
 export async function POST(req: NextRequest) {
   if (!checkAuth(req)) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
 
-  const { sessionId, trackingNumber } = await req.json() as { sessionId: string; trackingNumber: string };
+  const { sessionId, trackingNumber, carrier } = await req.json() as { sessionId: string; trackingNumber: string; carrier?: string };
   if (!sessionId || !trackingNumber?.trim()) {
     return NextResponse.json({ error: "Missing sessionId or trackingNumber" }, { status: 400 });
   }
@@ -94,7 +98,7 @@ export async function POST(req: NextRequest) {
   const productName = session.metadata?.productName ?? "your order";
   const FROM = process.env.RESEND_FROM_EMAIL;
   const trackNum = trackingNumber.trim();
-  const trackUrl = `https://t.17track.net/en#nums=${encodeURIComponent(trackNum)}`;
+  const trackUrl = buildTrackingUrl(carrier, trackNum);
 
   const isEU = ["AT","BE","BG","HR","CY","CZ","DK","EE","FI","FR","DE","GR","HU","IE","IT","LV","LT","LU","MT","NL","PL","PT","RO","SK","SI","ES","SE"].includes(addr?.country ?? "");
   const deliveryEst = isEU ? "4–7 business days" : "7–14 business days";
@@ -103,51 +107,86 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "No customer email or FROM address configured" }, { status: 400 });
   }
 
+  const carrierText = carrierLabel(carrier);
+
   await resend.emails.send({
     from:    `Bodystrands <${FROM}>`,
     to:      email,
     subject: `Your Bodystrands order is on its way ✨`,
     html: `
-      <div style="font-family:Georgia,serif;max-width:520px;margin:0 auto;color:#2C2220;background:#FDF9F7;padding:48px 40px;">
-        <p style="font-size:11px;letter-spacing:0.3em;text-transform:uppercase;color:#A0622A;margin:0 0 32px;">Bodystrands</p>
-        <h1 style="font-weight:300;font-size:28px;margin:0 0 8px;line-height:1.3;">It's on its way, ${firstName}!</h1>
-        <p style="font-size:13px;color:#8C7B6E;margin:0 0 32px;line-height:1.8;">Your <strong style="color:#2C2220;">${productName}</strong> has left our studio in Portugal and is heading your way. Estimated delivery: <strong style="color:#2C2220;">${deliveryEst}</strong>.</p>
+      <div style="font-family:Georgia,serif;max-width:560px;margin:0 auto;color:#2C2220;background:#FDF9F7;">
+        <div style="height:5px;background:linear-gradient(90deg,#E8B4A8,#A0622A);"></div>
 
-        ${productImages.length > 0 ? `
-        <div style="text-align:center;margin:0 0 28px;">
-          ${productImages.map((img) => `<img src="${img}" alt="${productName}" width="120" height="120" style="width:120px;height:120px;object-fit:cover;border:1px solid #E8B4A8;margin:0 4px;" />`).join("")}
+        <div style="padding:48px 40px;">
+          <p style="font-size:11px;letter-spacing:0.35em;text-transform:uppercase;color:#A0622A;text-align:center;margin:0 0 6px;">Bodystrands</p>
+          <div style="width:28px;height:1px;background:#E8B4A8;margin:0 auto 28px;"></div>
+
+          <p style="font-size:11px;letter-spacing:0.25em;text-transform:uppercase;color:#A0622A;text-align:center;margin:0 0 14px;">✨ &nbsp;On Its Way&nbsp; ✨</p>
+          <h1 style="font-weight:300;font-size:30px;margin:0 0 16px;line-height:1.3;text-align:center;">Great news, ${firstName}!</h1>
+          <p style="font-size:14px;color:#8C7B6E;margin:0 0 32px;line-height:1.9;text-align:center;">
+            Your <strong style="color:#2C2220;">${productName}</strong> just left our studio in Portugal — handcrafted with care, and on its way to you now. Estimated arrival: <strong style="color:#2C2220;">${deliveryEst}</strong>.
+          </p>
+
+          ${productImages.length > 0 ? `
+          <div style="text-align:center;margin:0 0 32px;">
+            ${productImages.map((img) => `<img src="${img}" alt="${productName}" width="220" height="220" style="width:220px;height:220px;object-fit:cover;border:6px solid #ffffff;box-shadow:0 6px 24px rgba(44,34,32,0.15);margin:0 6px;" />`).join("")}
+          </div>
+          ` : ""}
+
+          <table role="presentation" style="width:100%;margin:0 0 36px;border-collapse:collapse;">
+            <tr>
+              <td style="text-align:center;width:33.33%;">
+                <div style="width:9px;height:9px;border-radius:50%;background:#A0622A;margin:0 auto 8px;"></div>
+                <p style="font-size:9px;letter-spacing:0.12em;text-transform:uppercase;color:#2C2220;margin:0;">Ordered</p>
+              </td>
+              <td style="text-align:center;width:33.33%;border-top:2px solid #A0622A;">
+                <div style="width:9px;height:9px;border-radius:50%;background:#A0622A;margin:-5.5px auto 8px;"></div>
+                <p style="font-size:9px;letter-spacing:0.12em;text-transform:uppercase;color:#2C2220;margin:0;font-weight:bold;">Shipped</p>
+              </td>
+              <td style="text-align:center;width:33.33%;border-top:2px solid #E8B4A8;">
+                <div style="width:9px;height:9px;border-radius:50%;background:#E8B4A8;margin:-5.5px auto 8px;"></div>
+                <p style="font-size:9px;letter-spacing:0.12em;text-transform:uppercase;color:#8C7B6E;margin:0;">Delivered</p>
+              </td>
+            </tr>
+          </table>
+
+          <div style="border:1px solid #E8B4A8;margin:0 0 28px;">
+            <div style="padding:24px;text-align:center;">
+              <p style="font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:#8C7B6E;margin:0 0 10px;">Tracking Number</p>
+              <p style="font-size:22px;letter-spacing:0.2em;color:#2C2220;margin:0 0 6px;font-weight:400;">${trackNum}</p>
+              <p style="font-size:11px;color:#8C7B6E;margin:0;">${carrierText}</p>
+            </div>
+            <a href="${trackUrl}"
+               style="display:block;background:#2C2220;color:#FDF9F7;text-align:center;padding:18px;font-size:11px;letter-spacing:0.28em;text-transform:uppercase;text-decoration:none;">
+              Track My Parcel &nbsp;→
+            </a>
+          </div>
+
+          <p style="font-size:13px;color:#8C7B6E;line-height:1.8;margin:0 0 32px;text-align:center;">
+            You can also track anytime at <a href="https://www.bodystrands.com/track" style="color:#A0622A;">bodystrands.com/track</a>
+          </p>
+
+          <div style="text-align:center;padding-top:24px;border-top:1px solid #E8B4A8;">
+            <p style="font-size:13px;color:#8C7B6E;line-height:1.9;margin:0 0 18px;">
+              With love from our studio,<br><strong style="color:#2C2220;">The Bodystrands Team</strong>
+            </p>
+            <p style="font-size:11px;color:#8C7B6E;margin:0;line-height:1.8;">
+              Questions? <a href="mailto:info@bodystrands.com" style="color:#A0622A;">info@bodystrands.com</a><br>
+              Made in Portugal · Handcrafted in stainless steel · Waterproof &amp; tarnish-resistant
+            </p>
+          </div>
         </div>
-        ` : ""}
-
-        <div style="border:1px solid #E8B4A8;padding:24px;margin:0 0 28px;text-align:center;">
-          <p style="font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:#8C7B6E;margin:0 0 10px;">Tracking Number</p>
-          <p style="font-size:22px;letter-spacing:0.2em;color:#2C2220;margin:0 0 6px;font-weight:400;">${trackNum}</p>
-          <p style="font-size:11px;color:#8C7B6E;margin:0;">Supported on CTT, DHL, FedEx, UPS & more</p>
-        </div>
-
-        <a href="${trackUrl}"
-           style="display:block;background:#2C2220;color:#FDF9F7;text-align:center;padding:16px;font-size:11px;letter-spacing:0.25em;text-transform:uppercase;text-decoration:none;margin-bottom:28px;">
-          Track My Parcel
-        </a>
-
-        <p style="font-size:13px;color:#8C7B6E;line-height:1.8;margin:0 0 32px;">
-          You can also track your order anytime at <a href="https://www.bodystrands.com/track" style="color:#A0622A;">bodystrands.com/track</a> using the number above.
-        </p>
-
-        <p style="font-size:11px;color:#8C7B6E;margin:0;padding-top:24px;border-top:1px solid #E8B4A8;line-height:1.8;">
-          Questions? Reach us at <a href="mailto:info@bodystrands.com" style="color:#A0622A;">info@bodystrands.com</a> — we respond within 24 hours.<br>
-          Made in Portugal · Handcrafted in stainless steel · Waterproof &amp; tarnish-resistant
-        </p>
       </div>
     `,
   });
 
-  // Save tracking number to PaymentIntent metadata
+  // Save tracking number + carrier to PaymentIntent metadata
   if (session.payment_intent && typeof session.payment_intent === "string") {
     await stripe.paymentIntents.update(session.payment_intent, {
       metadata: {
         tracking_number:  trackNum,
         tracking_sent_at: new Date().toISOString(),
+        tracking_carrier: carrier ?? "",
       },
     }).catch(() => {});
   }

@@ -7992,6 +7992,78 @@
     ]
   },
   {
+    "id": "turquoise-beaded-choker",
+    "name": "Turquoise Enamel Bead Double Choker",
+    "category": "Necklaces",
+    "price": 35,
+    "currency": "EUR",
+    "description": "Two delicate chains, one cool colour. A gold mirror-link chain and a turquoise enamel bead chain — made as one seamless double-layer choker that sits right at your collarbone, effortless and just a little undone.",
+    "specs": [
+      {
+        "label": "Material",
+        "value": "316L stainless steel"
+      },
+      {
+        "label": "Finish",
+        "value": "Gold tone"
+      },
+      {
+        "label": "Design",
+        "value": "Double-layer choker — turquoise enamel bead chain + mirror-link gold chain"
+      },
+      {
+        "label": "Chain length",
+        "value": "35 cm + 6 cm extender"
+      },
+      {
+        "label": "Adjustable",
+        "value": "35–41 cm"
+      },
+      {
+        "label": "Closure",
+        "value": "Lobster clasp"
+      },
+      {
+        "label": "Waterproof",
+        "value": "Yes"
+      },
+      {
+        "label": "Care",
+        "value": "Wipe with a soft cloth after wear. Store in an airtight container."
+      },
+      {
+        "label": "Shipping",
+        "value": "Dispatches within 1–2 business days"
+      }
+    ],
+    "images": [
+      "/images/products/turquoise-beaded-choker/bc1cedf8-007d-42fa-8efe-ddc293434510.png"
+    ],
+    "gallery": [
+      "/images/products/turquoise-beaded-choker/bc1cedf8-007d-42fa-8efe-ddc293434510.png",
+      "/images/products/turquoise-beaded-choker/cfda3394-a412-4f57-90e1-1cd93e473762.png",
+      "/images/products/turquoise-beaded-choker/401a7a63-c61a-4e09-82e9-7a6118e8bf21.jpeg",
+      "/images/products/turquoise-beaded-choker/50718202-68fc-4146-99c2-07e9e5844bdc.jpeg",
+      "/images/products/turquoise-beaded-choker/5bf3f57a-726e-4859-8286-928bebf9108c.png",
+      "/images/products/turquoise-beaded-choker/9d0f9a24-5863-4c48-bd4c-66e0fb5d6e4a.png",
+      "/images/products/turquoise-beaded-choker/724af1fc-42bc-4657-8849-9899f3b923c4.jpeg",
+      "/images/products/turquoise-beaded-choker/73ce30b9-e3ea-4bd2-aa79-06371a0aff21.png",
+      "/images/products/turquoise-beaded-choker/35dc6f27-f6c3-4913-b4bc-6b0554227fd2.jpeg",
+      "/images/products/turquoise-beaded-choker/390e92bb-46a4-4bb6-bba0-47cfaa9bd545.png",
+      "/images/products/turquoise-beaded-choker/12890c8c-b504-43d6-97b6-42f584a9dee8.png",
+      "/images/products/turquoise-beaded-choker/038c4035-eb5d-4786-95f7-f431025e3970.png",
+      "/images/products/turquoise-beaded-choker/9720bcf5-6e80-417a-b3f1-72657037edf8-2.jpeg",
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
+      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg"
+    ],
+    "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/d2eb2426300791e065e511537f223448/downloads/default.mp4",
+    "infographicImages": [
+      "/images/products/turquoise-beaded-choker/038c4035-eb5d-4786-95f7-f431025e3970.png",
+      "/images/products/turquoise-beaded-choker/9720bcf5-6e80-417a-b3f1-72657037edf8-2.jpeg"
+    ],
+    "altText": "Turquoise enamel bead double layer gold choker necklace — dainty stacked choker with turquoise beads and mirror link chain, adjustable 35–41 cm, waterproof stainless steel handmade boho jewelry"
+  },
+  {
     "id": "pink-cross-charm-bracelet",
     "name": "Pink Cross Charm Bracelet",
     "price": 30,

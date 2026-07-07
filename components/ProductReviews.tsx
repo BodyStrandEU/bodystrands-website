@@ -32,13 +32,13 @@ function ReviewCard({ review }: { review: Review }) {
   return (
     <div className="flex flex-col bg-white border border-[#E8B4A8]/40 overflow-hidden">
       {review.image && (
-        <div className="relative w-full aspect-[4/5]">
+        <div className="relative w-full h-44 md:h-52">
           <Image
             src={review.image}
             alt={`${review.name}'s photo review — ${review.headline}`}
             fill
             sizes="(max-width: 768px) 100vw, 40vw"
-            className="object-cover"
+            className="object-cover object-[center_70%]"
           />
         </div>
       )}

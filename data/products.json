@@ -6140,11 +6140,10 @@
     "images": [
       "https://i.etsystatic.com/55122258/r/il/787e06/7772715502/il_fullxfull.7772715502_d707.jpg",
       "https://i.etsystatic.com/55122258/r/il/316511/7772715982/il_fullxfull.7772715982_1mgj.jpg",
-      "https://i.etsystatic.com/55122258/r/il/1aad66/8138545889/il_fullxfull.8138545889_li6b.jpg",
-      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
       "https://i.etsystatic.com/55122258/r/il/43d38b/7772614736/il_fullxfull.7772614736_nze8.jpg",
       "https://i.etsystatic.com/55122258/r/il/0df873/7772615942/il_fullxfull.7772615942_pva0.jpg",
       "https://i.etsystatic.com/55122258/r/il/8f56fc/7703156812/il_fullxfull.7703156812_5jq5.jpg",
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
       "https://i.etsystatic.com/55122258/r/il/b0e75b/7751094603/il_fullxfull.7751094603_r1dj.jpg",
       "https://i.etsystatic.com/55122258/r/il/e7dacb/7820649197/il_fullxfull.7820649197_8p7a.jpg",
       "https://i.etsystatic.com/55122258/r/il/3b2757/7820649577/il_fullxfull.7820649577_p46g.jpg",
@@ -6161,7 +6160,8 @@
       }
     ],
     "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/0b78741a901616f76cee775175bfebe9/downloads/default.mp4",
-    "altText": "Minimalist silver-tone stainless steel belly body chain for beach wear, water-resistant and adjustable."
+    "altText": "Minimalist silver-tone stainless steel belly body chain for beach wear, water-resistant and adjustable.",
+    "sizeGuideImage": "/images/products/il_fullxfull.8090630842_9i25.jpeg"
   },
   {
     "id": "butterfly-backdrop-necklace",

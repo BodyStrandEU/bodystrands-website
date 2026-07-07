@@ -129,7 +129,7 @@ export async function POST(req: NextRequest) {
 
     // Owner notification
     await resend.emails.send({
-      from:    "Bodystrands Orders <onboarding@resend.dev>",
+      from:    "Bodystrands <info@bodystrands.com>",
       to:      "storenavaria@gmail.com",
       subject: `New order — ${productName} (${currency} ${amountTotal})`,
       html: `

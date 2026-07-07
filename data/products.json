@@ -818,7 +818,6 @@
     "images": [
       "https://i.etsystatic.com/55122258/r/il/773cdb/7690300976/il_fullxfull.7690300976_30na.jpg",
       "https://i.etsystatic.com/55122258/r/il/5d8410/7690054538/il_fullxfull.7690054538_s4hw.jpg",
-      "https://i.etsystatic.com/55122258/r/il/d372c8/8138549735/il_fullxfull.8138549735_a729.jpg",
       "https://i.etsystatic.com/55122258/r/il/2001b9/7698999546/il_fullxfull.7698999546_rxit.jpg",
       "https://i.etsystatic.com/55122258/r/il/66de73/7690107296/il_fullxfull.7690107296_5rup.jpg",
       "https://i.etsystatic.com/55122258/r/il/669754/7700124762/il_fullxfull.7700124762_h91t.jpg",
@@ -846,7 +845,8 @@
         ]
       }
     ],
-    "altText": "Delicate gold butterfly charm belly chain in waterproof stainless steel for summer fashion"
+    "altText": "Delicate gold butterfly charm belly chain in waterproof stainless steel for summer fashion",
+    "sizeGuideImage": "/images/products/il_fullxfull.8090630842_9i25.jpeg"
   },
   {
     "id": "boho-shell-choker-necklace",

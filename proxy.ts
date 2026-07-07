@@ -1,7 +1,9 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
+import { currencyForCountry } from "@/lib/currency";
 
-const COOKIE_NAME = "admin_token";
+const COOKIE_NAME     = "admin_token";
+const CURRENCY_COOKIE = "bs_currency";
 
 export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
@@ -26,9 +28,20 @@ export function proxy(request: NextRequest) {
     return NextResponse.next();
   }
 
-  return NextResponse.next();
+  // Detect shopper's local currency from Vercel's geo-IP header, once per browser
+  const response = NextResponse.next();
+  if (!request.cookies.get(CURRENCY_COOKIE)) {
+    const country  = request.headers.get("x-vercel-ip-country") ?? "";
+    const currency = currencyForCountry(country);
+    response.cookies.set(CURRENCY_COOKIE, currency, { path: "/", maxAge: 60 * 60 * 24 * 30 });
+  }
+  return response;
 }
 
 export const config = {
-  matcher: ["/admin/:path*", "/api/admin/:path*"],
+  matcher: [
+    "/admin/:path*",
+    "/api/admin/:path*",
+    "/((?!admin|api|_next/static|_next/image|favicon.ico|.*\\..*).*)",
+  ],
 };

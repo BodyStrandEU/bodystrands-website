@@ -3,6 +3,7 @@ export type ShippingRate = {
   amount:      number; // cents
   deliveryMin: number;
   deliveryMax: number;
+  freeThreshold: number | null; // EUR cart total that unlocks free shipping, null = no free tier
 };
 
 const EU = new Set([
@@ -12,32 +13,38 @@ const EU = new Set([
 ]);
 
 export function getShippingRate(countryCode: string, cartTotal: number): ShippingRate {
-  const free = cartTotal >= 50;
   if (EU.has(countryCode)) {
+    const free = cartTotal >= 50;
     return {
       displayName: free ? "Free Shipping — European Union" : "Standard Shipping — European Union",
       amount:      free ? 0 : 500,
       deliveryMin: 4, deliveryMax: 7,
+      freeThreshold: 50,
     };
   }
   if (countryCode === "GB" || countryCode === "CH") {
+    const free = cartTotal >= 50;
     return {
       displayName: free ? "Free Shipping — UK & Switzerland" : "Standard Shipping — UK & Switzerland",
       amount:      free ? 0 : 800,
       deliveryMin: 4, deliveryMax: 7,
+      freeThreshold: 50,
     };
   }
   if (countryCode === "US" || countryCode === "CA") {
+    const free = cartTotal >= 75;
     return {
-      displayName: "Standard Shipping — USA & Canada",
-      amount:      1500,
+      displayName: free ? "Free Shipping — USA & Canada" : "Standard Shipping — USA & Canada",
+      amount:      free ? 0 : 800,
       deliveryMin: 7, deliveryMax: 14,
+      freeThreshold: 75,
     };
   }
   return {
     displayName: "International Shipping — Rest of World",
     amount:      2500,
     deliveryMin: 7, deliveryMax: 20,
+    freeThreshold: null,
   };
 }
 

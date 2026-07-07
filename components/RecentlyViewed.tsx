@@ -4,9 +4,11 @@ import Link from "next/link";
 import SmartImage from "@/components/SmartImage";
 import { products } from "@/lib/products";
 import { getRecentlyViewed } from "@/lib/recentlyViewed";
+import { useCurrency } from "@/lib/currency-context";
 
 export default function RecentlyViewed({ excludeId }: { excludeId: string }) {
   const [ids, setIds] = useState<string[]>([]);
+  const { format } = useCurrency();
 
   useEffect(() => {
     setIds(getRecentlyViewed());
@@ -53,7 +55,7 @@ export default function RecentlyViewed({ excludeId }: { excludeId: string }) {
                 {product.name}
               </p>
               <p className="text-[0.62rem] font-light text-[#A0622A] mt-0.5">
-                {product.currency === "EUR" ? "€" : product.currency === "GBP" ? "£" : "$"}{product.price.toFixed(2)}
+                {format(product.price)}
               </p>
             </div>
           </Link>

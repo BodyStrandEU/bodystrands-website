@@ -3,9 +3,11 @@ import { useRef } from "react";
 import Link from "next/link";
 import SmartImage from "@/components/SmartImage";
 import type { Product } from "@/lib/products";
+import { useCurrency } from "@/lib/currency-context";
 
 export default function NewPiecesRow({ featured }: { featured: Product[] }) {
   const scrollerRef = useRef<HTMLDivElement>(null);
+  const { format } = useCurrency();
 
   function scrollByAmount(dir: 1 | -1) {
     const el = scrollerRef.current;
@@ -40,7 +42,7 @@ export default function NewPiecesRow({ featured }: { featured: Product[] }) {
             <div className="pt-3 px-0.5">
               <p className="text-[0.48rem] tracking-[0.2em] uppercase text-[#8C7B6E]/70 mb-0.5">{product.category}</p>
               <p className="text-[0.72rem] font-light text-[#2C2220] group-hover:text-[#A0622A] transition-colors duration-300 truncate">{product.name}</p>
-              <p className="text-[0.65rem] font-light text-[#A0622A] mt-0.5">€{product.price.toFixed(2)}</p>
+              <p className="text-[0.65rem] font-light text-[#A0622A] mt-0.5">{format(product.price)}</p>
             </div>
           </Link>
         ))}

@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useCart } from "@/lib/cart";
 import { COUNTRY_GROUPS, getShippingRate } from "@/lib/shipping";
+import { useCurrency } from "@/lib/currency-context";
 
 const FREE_THRESHOLD = 50;
 
@@ -23,13 +24,13 @@ export default function CartIcon({ light }: { light?: boolean }) {
     return () => document.removeEventListener("mousedown", onClick);
   }, []);
 
-  const symbol   = "€";
+  const { format } = useCurrency();
 
   // Shipping calculation
   const shippingRate    = shippingCountry ? getShippingRate(shippingCountry, subtotal) : null;
   const shippingAmount  = shippingRate ? shippingRate.amount / 100 : null;
   const orderTotal      = subtotal + (shippingAmount ?? 0);
-  const remaining       = Math.max(0, FREE_THRESHOLD - subtotal);
+  const remaining       = Math.max(0, (shippingRate?.freeThreshold ?? FREE_THRESHOLD) - subtotal);
 
   async function checkout() {
     if (items.length === 0) return;
@@ -139,7 +140,7 @@ export default function CartIcon({ light }: { light?: boolean }) {
                           </button>
                         </div>
                         <p className="text-[0.65rem] text-[#A0622A] font-light">
-                          {symbol}{(item.unitPrice * item.quantity).toFixed(2)}
+                          {format(item.unitPrice * item.quantity)}
                         </p>
                       </div>
                     </div>
@@ -163,7 +164,7 @@ export default function CartIcon({ light }: { light?: boolean }) {
                 {/* Subtotal row */}
                 <div className="flex justify-between items-baseline">
                   <span className="text-[0.58rem] tracking-[0.15em] uppercase text-[#8C7B6E]">Subtotal</span>
-                  <span className="text-base font-light text-[#2C2220]">{symbol}{subtotal.toFixed(2)}</span>
+                  <span className="text-base font-light text-[#2C2220]">{format(subtotal)}</span>
                 </div>
 
                 {/* Country selector */}
@@ -198,23 +199,23 @@ export default function CartIcon({ light }: { light?: boolean }) {
                       {shippingRate.amount === 0 ? (
                         <span className="text-[#A0622A]">Free</span>
                       ) : (
-                        `${symbol}${(shippingRate.amount / 100).toFixed(2)}`
+                        format(shippingRate.amount / 100)
                       )}
                     </span>
                   </div>
                 )}
 
-                {/* Free shipping nudge (only for EU/UK where threshold applies) */}
-                {shippingCountry && shippingRate && shippingRate.amount > 0 && remaining > 0 && (shippingRate.amount === 500 || shippingRate.amount === 800) && (
+                {/* Free shipping nudge (only for zones with a free threshold) */}
+                {shippingCountry && shippingRate && shippingRate.amount > 0 && shippingRate.freeThreshold != null && remaining > 0 && (
                   <p className="text-[0.52rem] tracking-[0.08em] uppercase text-[#8C7B6E] leading-relaxed">
-                    Add <span className="text-[#A0622A]">{symbol}{remaining.toFixed(2)}</span> more for free shipping —{" "}
+                    Add <span className="text-[#A0622A]">{format(remaining)}</span> more for free shipping —{" "}
                     <Link href="/shop" onClick={() => setOpen(false)} className="text-[#A0622A] underline underline-offset-2">browse more</Link>
                   </p>
                 )}
                 {!shippingCountry && remaining > 0 && (
                   <p className="text-[0.52rem] tracking-[0.08em] uppercase text-[#8C7B6E] leading-relaxed">
                     Free shipping on EU & UK orders over{" "}
-                    <span className="text-[#2C2220]">{symbol}{FREE_THRESHOLD}</span>
+                    <span className="text-[#2C2220]">€{FREE_THRESHOLD}</span>
                   </p>
                 )}
 
@@ -222,7 +223,7 @@ export default function CartIcon({ light }: { light?: boolean }) {
                 {shippingCountry && shippingRate && (
                   <div className="flex justify-between items-baseline pt-2 border-t border-[#E8B4A8]/30">
                     <span className="text-[0.6rem] tracking-[0.15em] uppercase text-[#2C2220]">Total</span>
-                    <span className="text-lg font-light text-[#2C2220]">{symbol}{orderTotal.toFixed(2)}</span>
+                    <span className="text-lg font-light text-[#2C2220]">{format(orderTotal)}</span>
                   </div>
                 )}
 
@@ -238,7 +239,7 @@ export default function CartIcon({ light }: { light?: boolean }) {
                     ? "Processing…"
                     : !shippingCountry
                     ? "Select Country to Checkout"
-                    : `Checkout — ${symbol}${orderTotal.toFixed(2)}`}
+                    : `Checkout — ${format(orderTotal)}`}
                 </button>
 
                 <Link

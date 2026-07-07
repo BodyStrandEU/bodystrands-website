@@ -27,41 +27,23 @@ function buildSingleShippingOption(country: string, totalAmount: number): Stripe
 }
 
 function buildAllShippingOptions(totalAmount: number): Stripe.Checkout.SessionCreateParams.ShippingOption[] {
-  const free = totalAmount >= 50;
-  return [
-    {
+  // One representative country per zone — getShippingRate is the single source of truth
+  // for rates/thresholds, so this can't drift out of sync with the per-country path again.
+  const zoneSamples = ["DE", "GB", "US", "AU"];
+  return zoneSamples.map((code) => {
+    const rate = getShippingRate(code, totalAmount);
+    return {
       shipping_rate_data: {
-        type: "fixed_amount" as const,
-        fixed_amount: { amount: free ? 0 : 500, currency: "eur" },
-        display_name: free ? "Free Shipping — European Union" : "Standard Shipping — European Union",
-        delivery_estimate: { minimum: { unit: "business_day" as const, value: 4 }, maximum: { unit: "business_day" as const, value: 7 } },
+        type:          "fixed_amount" as const,
+        fixed_amount:  { amount: rate.amount, currency: "eur" },
+        display_name:  rate.displayName,
+        delivery_estimate: {
+          minimum: { unit: "business_day" as const, value: rate.deliveryMin },
+          maximum: { unit: "business_day" as const, value: rate.deliveryMax },
+        },
       },
-    },
-    {
-      shipping_rate_data: {
-        type: "fixed_amount" as const,
-        fixed_amount: { amount: free ? 0 : 800, currency: "eur" },
-        display_name: free ? "Free Shipping — UK & Switzerland" : "Standard Shipping — UK & Switzerland",
-        delivery_estimate: { minimum: { unit: "business_day" as const, value: 4 }, maximum: { unit: "business_day" as const, value: 7 } },
-      },
-    },
-    {
-      shipping_rate_data: {
-        type: "fixed_amount" as const,
-        fixed_amount: { amount: 1500, currency: "eur" },
-        display_name: "Standard Shipping — USA & Canada",
-        delivery_estimate: { minimum: { unit: "business_day" as const, value: 7 }, maximum: { unit: "business_day" as const, value: 14 } },
-      },
-    },
-    {
-      shipping_rate_data: {
-        type: "fixed_amount" as const,
-        fixed_amount: { amount: 2500, currency: "eur" },
-        display_name: "International Shipping — Rest of World",
-        delivery_estimate: { minimum: { unit: "business_day" as const, value: 7 }, maximum: { unit: "business_day" as const, value: 20 } },
-      },
-    },
-  ];
+    };
+  });
 }
 
 const STRIPE_COUNTRIES = ALL_COUNTRIES as Stripe.Checkout.SessionCreateParams.ShippingAddressCollection.AllowedCountry[];
@@ -117,6 +99,9 @@ export async function POST(req: NextRequest) {
         metadata:    { productName: productNames.join(", "), price: totalAmount.toFixed(2), currency: "EUR" },
         shipping_options,
         shipping_address_collection: { allowed_countries: STRIPE_COUNTRIES },
+        // Shows and charges the shopper in their local currency (Stripe converts using
+        // live FX and still settles into our EUR account — line items/metadata stay in EUR).
+        adaptive_pricing: { enabled: true },
         allow_promotion_codes: true,
         expires_at: Math.floor(Date.now() / 1000) + 4 * 60 * 60,
         success_url: `${origin}/success?session_id={CHECKOUT_SESSION_ID}`,
@@ -156,6 +141,7 @@ export async function POST(req: NextRequest) {
       metadata: { productId: product.id, productName, price: totalAmount.toFixed(2), currency: product.currency },
       shipping_options,
       shipping_address_collection: { allowed_countries: STRIPE_COUNTRIES },
+      adaptive_pricing: { enabled: true },
       allow_promotion_codes: true,
       expires_at: Math.floor(Date.now() / 1000) + 4 * 60 * 60,
       success_url: `${origin}/success?session_id={CHECKOUT_SESSION_ID}`,

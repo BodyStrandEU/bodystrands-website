@@ -6,6 +6,7 @@ import type { Product } from "@/lib/products";
 import { INFOGRAPHIC_IMAGES } from "@/lib/products";
 import { getOriginalPrice } from "@/lib/pricing";
 import WishlistButton from "@/components/WishlistButton";
+import { useCurrency } from "@/lib/currency-context";
 
 const SWATCH_COLORS: Record<string, string> = {
   "Gold Tone":   "#C8A84B",
@@ -25,7 +26,7 @@ export default function ProductCard({ product, priority = false }: { product: Pr
   const swipeDir   = useRef<"h" | "v" | null>(null);
   const lastTouch  = useRef(0);
 
-  const symbol = product.currency === "EUR" ? "€" : product.currency === "GBP" ? "£" : "$";
+  const { format } = useCurrency();
 
   // All images for the card carousel — infographics excluded
   const combinedImages = useMemo(() => {
@@ -241,10 +242,10 @@ export default function ProductCard({ product, priority = false }: { product: Pr
         <div className="mt-1 flex items-baseline justify-between gap-1.5">
           <div className="flex items-baseline gap-1.5 flex-wrap">
             <span className="text-[0.68rem] font-light tracking-wide text-[#A0622A]">
-              {symbol}{product.price.toFixed(2)}
+              {format(product.price)}
             </span>
             <span className="text-[0.58rem] font-light tracking-wide text-[#8C7B6E]/50 line-through">
-              {symbol}{getOriginalPrice(product.price).toFixed(2)}
+              {format(getOriginalPrice(product.price))}
             </span>
           </div>
           <span className="text-[#A0622A] text-[0.75rem] leading-none opacity-0 group-hover:opacity-100 -translate-x-1 group-hover:translate-x-0 transition-[opacity,transform] duration-300">

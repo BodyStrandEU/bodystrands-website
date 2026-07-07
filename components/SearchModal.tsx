@@ -4,6 +4,7 @@ import { useRouter } from "next/navigation";
 import Image from "@/components/SmartImage";
 import { products } from "@/lib/products";
 import type { Product } from "@/lib/products";
+import { useCurrency } from "@/lib/currency-context";
 
 function searchProducts(query: string): Product[] {
   const q = query.toLowerCase().trim();
@@ -25,8 +26,7 @@ export default function SearchModal({ onClose }: { onClose: () => void }) {
   const inputRef = useRef<HTMLInputElement>(null);
   const router   = useRouter();
 
-  const symbol = (p: Product) =>
-    p.currency === "EUR" ? "€" : p.currency === "GBP" ? "£" : "$";
+  const { format } = useCurrency();
 
   useEffect(() => {
     inputRef.current?.focus();
@@ -112,7 +112,7 @@ export default function SearchModal({ onClose }: { onClose: () => void }) {
                   <p className="text-[0.55rem] tracking-[0.15em] uppercase text-[#8C7B6E] mt-0.5">{p.category}</p>
                 </div>
                 <p className="text-[0.7rem] font-light text-[#A0622A] flex-shrink-0">
-                  {symbol(p)}{p.price.toFixed(2)}
+                  {format(p.price)}
                 </p>
               </button>
             );

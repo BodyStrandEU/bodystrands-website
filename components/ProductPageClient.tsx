@@ -12,6 +12,8 @@ import { COUNTRY_GROUPS, getShippingRate } from "@/lib/shipping";
 import WishlistButton from "@/components/WishlistButton";
 import { trackRecentlyViewed } from "@/lib/recentlyViewed";
 import SizeGuideButton from "@/components/SizeGuideButton";
+import { useCurrency } from "@/lib/currency-context";
+import ProductReviews from "@/components/ProductReviews";
 
 const FREE_SHIPPING_THRESHOLD = 50;
 
@@ -50,7 +52,9 @@ function ShareButton({ name }: { name: string }) {
   );
 }
 
-function ShippingNudge({ price, symbol }: { price: number; symbol: string }) {
+// Prices here are always in EUR — this banner specifically describes the EU/UK
+// shipping threshold (see lib/shipping.ts), independent of the visitor's own currency.
+function ShippingNudge({ price }: { price: number }) {
   const remaining = FREE_SHIPPING_THRESHOLD - price;
   if (remaining <= 0) {
     return (
@@ -63,9 +67,9 @@ function ShippingNudge({ price, symbol }: { price: number; symbol: string }) {
   return (
     <p className="mt-2.5 text-[0.58rem] tracking-[0.1em] uppercase text-[#8C7B6E] leading-relaxed">
       Add{" "}
-      <span className="text-[#2C2220] font-medium">{symbol}{remaining.toFixed(2)}</span>
+      <span className="text-[#2C2220] font-medium">€{remaining.toFixed(2)}</span>
       {" "}more and save up to{" "}
-      <span className="text-[#2C2220] font-medium">{symbol}8.00</span>
+      <span className="text-[#2C2220] font-medium">€8.00</span>
       {" "}on shipping for EU & UK orders —{" "}
       <Link href="/shop" className="text-[#A0622A] underline underline-offset-2 hover:text-[#8A5222] transition-colors">
         browse more
@@ -114,8 +118,7 @@ export default function ProductPageClient({ product }: { product: Product }) {
     }
   }, [groupSelections, finishGroup?.label]);
 
-  const symbol =
-    product.currency === "EUR" ? "€" : product.currency === "GBP" ? "£" : "$";
+  const { format } = useCurrency();
 
   // Sum price add-ons from selected options
   const priceAdd = (product.variantGroups ?? []).reduce((sum, group) => {
@@ -170,12 +173,13 @@ export default function ProductPageClient({ product }: { product: Product }) {
     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-start">
 
       {/* Gallery — full bleed on mobile */}
-      <div className="-mx-6 md:mx-0">
+      <div className="-mx-6 md:mx-0 md:col-start-1 md:row-start-1">
         <ProductGallery product={product} activeVariant={activeVariant} />
       </div>
 
-      {/* Details + purchase controls */}
-      <div className="flex flex-col gap-5 md:gap-6 px-0 md:sticky md:top-32">
+      {/* Details + purchase controls — spans both rows on desktop so it stays beside
+          the gallery + reviews stack below it, not just the gallery alone */}
+      <div className="flex flex-col gap-5 md:gap-6 px-0 md:sticky md:top-32 md:col-start-2 md:row-start-1 md:row-span-2">
 
         <div className="flex items-center justify-between">
           <p className="text-[0.55rem] tracking-[0.25em] uppercase text-[#A0622A]">
@@ -206,15 +210,15 @@ export default function ProductPageClient({ product }: { product: Product }) {
         <div className="flex flex-col gap-1.5">
           <div className="flex items-baseline gap-3 flex-wrap">
             <span className="text-2xl font-light text-[#A0622A] tracking-wide">
-              {symbol}{totalPrice.toFixed(2)}
+              {format(totalPrice)}
               {priceAdd > 0 && (
                 <span className="text-sm text-[#8C7B6E] ml-2 font-light">
-                  (+{symbol}{priceAdd.toFixed(2)})
+                  (+{format(priceAdd)})
                 </span>
               )}
             </span>
             <span className="text-base font-light text-[#8C7B6E]/60 line-through tracking-wide">
-              {symbol}{getOriginalPrice(totalPrice).toFixed(2)}
+              {format(getOriginalPrice(totalPrice))}
             </span>
             <span className="text-[0.55rem] tracking-[0.18em] uppercase text-[#FDF9F7] bg-[#A0622A] px-2 py-0.5">
               −25%
@@ -307,7 +311,7 @@ export default function ProductPageClient({ product }: { product: Product }) {
                       }`}
                     >
                       {opt}
-                      {add ? <span className="ml-1 normal-case">+{symbol}{add}</span> : null}
+                      {add ? <span className="ml-1 normal-case">+{format(add)}</span> : null}
                     </button>
                   );
                 })}
@@ -345,7 +349,7 @@ export default function ProductPageClient({ product }: { product: Product }) {
                 <span className="w-1 h-1 bg-[#A0622A] rounded-full inline-block flex-shrink-0" />
                 {rate.amount === 0
                   ? <span className="text-[#A0622A]">Free shipping · {rate.deliveryMin}–{rate.deliveryMax} business days</span>
-                  : <span>{symbol}{(rate.amount / 100).toFixed(2)} shipping · {rate.deliveryMin}–{rate.deliveryMax} business days</span>
+                  : <span>{format(rate.amount / 100)} shipping · {rate.deliveryMin}–{rate.deliveryMax} business days</span>
                 }
               </p>
             );
@@ -396,7 +400,7 @@ export default function ProductPageClient({ product }: { product: Product }) {
             secondary
           />
 
-          <ShippingNudge price={totalPrice} symbol={symbol} />
+          <ShippingNudge price={totalPrice} />
         </div>
 
         {/* Feature bullets */}
@@ -422,6 +426,10 @@ export default function ProductPageClient({ product }: { product: Product }) {
           specs={product.specs}
         />
       </div>
+
+      {/* Reviews — sits below the gallery on desktop (col 1, row 2); on mobile
+          it naturally falls after the buy panel so the CTA stays up top */}
+      <ProductReviews category={product.category} className="md:col-start-1 md:row-start-2" />
     </div>
 
     {/* Sticky mobile buy bar */}
@@ -430,7 +438,7 @@ export default function ProductPageClient({ product }: { product: Product }) {
         <div className="flex items-center gap-4">
           <div className="flex-1 min-w-0">
             <p className="text-[0.55rem] tracking-[0.15em] uppercase text-[#8C7B6E] truncate">{product.name}</p>
-            <p className="text-base font-light text-[#A0622A] tracking-wide">{symbol}{totalPrice.toFixed(2)}</p>
+            <p className="text-base font-light text-[#A0622A] tracking-wide">{format(totalPrice)}</p>
           </div>
           <button
             onClick={handleStickyBuy}
@@ -446,7 +454,7 @@ export default function ProductPageClient({ product }: { product: Product }) {
         )}
         {totalPrice < FREE_SHIPPING_THRESHOLD && (
           <p className="text-[0.55rem] tracking-[0.08em] uppercase text-[#8C7B6E] text-center">
-            Add <span className="text-[#2C2220]">{symbol}{(FREE_SHIPPING_THRESHOLD - totalPrice).toFixed(2)}</span> more → save up to <span className="text-[#2C2220]">{symbol}8</span> shipping (EU & UK)
+            Add <span className="text-[#2C2220]">€{(FREE_SHIPPING_THRESHOLD - totalPrice).toFixed(2)}</span> more → save up to <span className="text-[#2C2220]">€8</span> shipping (EU & UK)
           </p>
         )}
       </div>

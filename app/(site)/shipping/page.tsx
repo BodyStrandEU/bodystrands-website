@@ -24,7 +24,7 @@ const SHIPPING_ZONES = [
   {
     zone: "USA & Canada",
     rate: "€8.00",
-    freeOver: "Free over €50",
+    freeOver: "Free over €75",
     delivery: "7–14 business days",
     countries: "United States, Canada",
   },

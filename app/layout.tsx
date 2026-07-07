@@ -7,6 +7,8 @@ import PageTransition from "@/components/PageTransition";
 import CustomCursor from "@/components/CustomCursor";
 import AnalyticsPageview from "@/components/AnalyticsPageview";
 import { CartProvider } from "@/lib/cart";
+import { CurrencyProvider } from "@/lib/currency-context";
+import { fetchExchangeRates } from "@/lib/currency";
 
 const cormorant = Cormorant_Garamond({
   variable: "--font-cormorant",
@@ -46,9 +48,13 @@ export const metadata: Metadata = {
   verification: { google: "4wuuduuIvTMEvYh_KsNjBGLGBYV3B5yyXhA-jSURoUQ" },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
+  // Cached fetch only (no cookies()/headers() here) — keeps the site's static/SSG
+  // pages (product pages, blog posts, etc.) prerendered instead of forcing them dynamic.
+  const rates = await fetchExchangeRates();
+
   return (
     <html lang="en" className={`${cormorant.variable} ${josefin.variable}`}>
       <head>
@@ -64,9 +70,11 @@ export default function RootLayout({
         `}</Script>
       </head>
       <body>
-        <CartProvider>
-          <PageTransition>{children}</PageTransition>
-        </CartProvider>
+        <CurrencyProvider rates={rates}>
+          <CartProvider>
+            <PageTransition>{children}</PageTransition>
+          </CartProvider>
+        </CurrencyProvider>
         <CustomCursor />
 
         {/* Step 2: load GA after page is interactive */}

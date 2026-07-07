@@ -84,8 +84,8 @@ export async function POST(req: NextRequest) {
 
     // Customer order confirmation
     const FROM = process.env.RESEND_FROM_EMAIL;
-    const shippingAddr = session.shipping_details?.address || session.customer_details?.address;
-    const shippingName = session.shipping_details?.name || customerName;
+    const shippingAddr = session.collected_information?.shipping_details?.address || session.customer_details?.address;
+    const shippingName = session.collected_information?.shipping_details?.name || customerName;
     const isEU = ["AT","BE","BG","HR","CY","CZ","DK","EE","FI","FR","DE","GR","HU","IE","IT","LV","LT","LU","MT","NL","PL","PT","RO","SK","SI","ES","SE"].includes(shippingAddr?.country ?? "");
     const deliveryEst = isEU ? "4–7 business days" : "7–14 business days";
 

@@ -21,7 +21,7 @@ export async function GET(req: NextRequest) {
 
   const orders = await Promise.all(paid.map(async (s) => {
     const cd   = s.customer_details;
-    const sh   = s.shipping_details;
+    const sh   = s.collected_information?.shipping_details;
     const addr = sh?.address || cd?.address;
     let trackingNumber: string | null = null;
     let trackingSentAt: string | null = null;
@@ -72,7 +72,7 @@ export async function POST(req: NextRequest) {
   }
 
   const cd   = session.customer_details;
-  const sh   = session.shipping_details;
+  const sh   = session.collected_information?.shipping_details;
   const addr = sh?.address || cd?.address;
   const name = sh?.name || cd?.name || "there";
   const firstName = name.split(" ")[0];

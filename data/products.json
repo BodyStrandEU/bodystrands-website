@@ -7602,7 +7602,6 @@
     "images": [
       "https://i.etsystatic.com/55122258/r/il/e0607c/8094646617/il_fullxfull.8094646617_bgdy.jpg",
       "https://i.etsystatic.com/55122258/r/il/2017a9/7764225047/il_fullxfull.7764225047_acqq.jpg",
-      "https://i.etsystatic.com/55122258/r/il/de39c3/8138549029/il_fullxfull.8138549029_6q5v.jpg",
       "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
       "https://i.etsystatic.com/55122258/r/il/f31f71/7716319856/il_fullxfull.7716319856_7zke.jpg",
       "https://i.etsystatic.com/55122258/r/il/773296/7764224949/il_fullxfull.7764224949_pkt0.jpg",
@@ -7639,7 +7638,8 @@
       }
     ],
     "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/d8995bb3c3eb33065f2c1683bf7c75c8/downloads/default.mp4",
-    "altText": "Gold-tone stainless steel zodiac belly chain with snake charm, adjustable waist chain for body jewelry"
+    "altText": "Gold-tone stainless steel zodiac belly chain with snake charm, adjustable waist chain for body jewelry",
+    "sizeGuideImage": "/images/products/il_fullxfull.8090630842_9i25.jpeg"
   },
   {
     "id": "gold-body-chain-harness",

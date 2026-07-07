@@ -542,14 +542,14 @@
       "/images/products/b737f6ce-566c-4f01-aa20-ef40d07d82ce.png",
       "/images/products/987a3619-11d9-42a4-bd7d-316d1a4fa2cd.png",
       "https://i.etsystatic.com/55122258/r/il/bd436c/7831325315/il_fullxfull.7831325315_bq5k.jpg",
-      "https://i.etsystatic.com/55122258/r/il/db27f4/8090630842/il_fullxfull.8090630842_9i25.jpg",
       "https://i.etsystatic.com/55122258/r/il/3ca3d7/7783400862/il_fullxfull.7783400862_3lw5.jpg",
       "https://i.etsystatic.com/55122258/r/il/bf8477/7759760622/il_fullxfull.7759760622_7bz7.jpg"
     ],
     "variantHeroes": {
       "Gold Tone": "https://i.etsystatic.com/55122258/r/il/214012/7696123770/il_fullxfull.7696123770_7r5h.jpg",
       "Silver Tone": "/images/products/f1f33d88-633e-4472-bf35-69b16a308986.png"
-    }
+    },
+    "sizeGuideImage": "/images/products/il_fullxfull.8090630842_9i25.jpeg"
   },
   {
     "id": "bridal-backdrop-necklace",

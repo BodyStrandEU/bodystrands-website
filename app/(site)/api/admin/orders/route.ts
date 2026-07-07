@@ -71,6 +71,20 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "Session not paid" }, { status: 400 });
   }
 
+  // Product images were attached at checkout (see product_data.images in /api/checkout) and
+  // persist on the ephemeral Stripe Product tied to each line item's price — pull them back
+  // out here so the shipping email can show what was actually ordered.
+  const lineItems = await stripe.checkout.sessions.listLineItems(sessionId, {
+    expand: ["data.price.product"],
+    limit: 10,
+  });
+  const productImages = lineItems.data
+    .map((li) => {
+      const product = li.price?.product;
+      return typeof product === "object" && product && !("deleted" in product && product.deleted) ? product.images?.[0] : undefined;
+    })
+    .filter((img): img is string => !!img);
+
   const cd   = session.customer_details;
   const sh   = session.collected_information?.shipping_details;
   const addr = sh?.address || cd?.address;
@@ -98,6 +112,12 @@ export async function POST(req: NextRequest) {
         <p style="font-size:11px;letter-spacing:0.3em;text-transform:uppercase;color:#A0622A;margin:0 0 32px;">Bodystrands</p>
         <h1 style="font-weight:300;font-size:28px;margin:0 0 8px;line-height:1.3;">It's on its way, ${firstName}!</h1>
         <p style="font-size:13px;color:#8C7B6E;margin:0 0 32px;line-height:1.8;">Your <strong style="color:#2C2220;">${productName}</strong> has left our studio in Portugal and is heading your way. Estimated delivery: <strong style="color:#2C2220;">${deliveryEst}</strong>.</p>
+
+        ${productImages.length > 0 ? `
+        <div style="text-align:center;margin:0 0 28px;">
+          ${productImages.map((img) => `<img src="${img}" alt="${productName}" width="120" height="120" style="width:120px;height:120px;object-fit:cover;border:1px solid #E8B4A8;margin:0 4px;" />`).join("")}
+        </div>
+        ` : ""}
 
         <div style="border:1px solid #E8B4A8;padding:24px;margin:0 0 28px;text-align:center;">
           <p style="font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:#8C7B6E;margin:0 0 10px;">Tracking Number</p>

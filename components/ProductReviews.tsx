@@ -92,7 +92,7 @@ function PhotoReviewLightbox({
         className="flex flex-col md:flex-row w-full max-w-3xl max-h-[90vh] bg-white overflow-hidden"
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="relative w-full md:w-3/5 aspect-square md:aspect-auto flex-shrink-0">
+        <div className="relative w-full md:w-3/5 aspect-square flex-shrink-0">
           <Image src={review.image!} alt={`${review.name}'s photo review`} fill sizes="(max-width: 768px) 100vw, 60vw" className="object-cover" />
         </div>
         <div className="flex flex-col p-5 md:p-6 md:w-2/5 overflow-y-auto">

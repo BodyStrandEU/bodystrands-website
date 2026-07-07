@@ -82,6 +82,52 @@ export async function POST(req: NextRequest) {
       timeZone: "Europe/Lisbon",
     });
 
+    // Customer order confirmation
+    const FROM = process.env.RESEND_FROM_EMAIL;
+    const shippingAddr = session.shipping_details?.address || session.customer_details?.address;
+    const shippingName = session.shipping_details?.name || customerName;
+    const isEU = ["AT","BE","BG","HR","CY","CZ","DK","EE","FI","FR","DE","GR","HU","IE","IT","LV","LT","LU","MT","NL","PL","PT","RO","SK","SI","ES","SE"].includes(shippingAddr?.country ?? "");
+    const deliveryEst = isEU ? "4–7 business days" : "7–14 business days";
+
+    if (FROM && customerEmail !== "—") {
+      await resend.emails.send({
+        from:    `Bodystrands <${FROM}>`,
+        to:      customerEmail,
+        subject: `Your Bodystrands order is confirmed ✨`,
+        html: `
+          <div style="font-family:Georgia,serif;max-width:520px;margin:0 auto;color:#2C2220;background:#FDF9F7;padding:48px 40px;">
+            <p style="font-size:11px;letter-spacing:0.3em;text-transform:uppercase;color:#A0622A;margin:0 0 32px;">Bodystrands</p>
+            <h1 style="font-weight:300;font-size:28px;margin:0 0 8px;line-height:1.3;">Order Confirmed</h1>
+            <p style="font-size:13px;color:#8C7B6E;margin:0 0 32px;">Thank you, ${shippingName.split(" ")[0]}. We've received your order and we're preparing it with care in our studio in Portugal.</p>
+
+            <div style="border:1px solid #E8B4A8;padding:24px;margin:0 0 28px;">
+              <p style="font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:#8C7B6E;margin:0 0 14px;">Order Summary</p>
+              <table style="width:100%;border-collapse:collapse;">
+                <tr><td style="font-size:13px;padding:6px 0;color:#8C7B6E;width:110px;">Item</td><td style="font-size:13px;padding:6px 0;color:#2C2220;">${productName}</td></tr>
+                <tr><td style="font-size:13px;padding:6px 0;color:#8C7B6E;">Total</td><td style="font-size:14px;padding:6px 0;color:#A0622A;font-weight:bold;">${currency} ${amountTotal}</td></tr>
+                <tr><td style="font-size:13px;padding:6px 0;color:#8C7B6E;">Ship to</td><td style="font-size:13px;padding:6px 0;color:#2C2220;">${[shippingAddr?.line1, shippingAddr?.city, shippingAddr?.country].filter(Boolean).join(", ")}</td></tr>
+              </table>
+            </div>
+
+            <div style="margin:0 0 32px;">
+              <p style="font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:#8C7B6E;margin:0 0 14px;">What happens next</p>
+              <p style="font-size:13px;color:#8C7B6E;line-height:1.8;margin:0 0 8px;">📦 &nbsp;We'll ship your order within <strong style="color:#2C2220;">1–2 business days</strong>.</p>
+              <p style="font-size:13px;color:#8C7B6E;line-height:1.8;margin:0 0 8px;">✉️ &nbsp;You'll receive a <strong style="color:#2C2220;">shipping confirmation</strong> with your tracking number as soon as it's on its way.</p>
+              <p style="font-size:13px;color:#8C7B6E;line-height:1.8;margin:0;">🚚 &nbsp;Estimated delivery: <strong style="color:#2C2220;">${deliveryEst}</strong>.</p>
+            </div>
+
+            <a href="https://www.bodystrands.com/track" style="display:inline-block;background:#2C2220;color:#FDF9F7;padding:14px 36px;font-size:11px;letter-spacing:0.25em;text-transform:uppercase;text-decoration:none;margin-bottom:32px;">Track Your Order</a>
+
+            <p style="font-size:11px;color:#8C7B6E;margin:0;padding-top:24px;border-top:1px solid #E8B4A8;line-height:1.8;">
+              Questions? Reply to this email or reach us at <a href="mailto:info@bodystrands.com" style="color:#A0622A;">info@bodystrands.com</a><br>
+              Made in Portugal · Handcrafted in 316L stainless steel · Waterproof &amp; tarnish-resistant
+            </p>
+          </div>
+        `,
+      }).catch(e => console.error("Customer confirmation email failed:", e));
+    }
+
+    // Owner notification
     await resend.emails.send({
       from:    "Bodystrands Orders <onboarding@resend.dev>",
       to:      "storenavaria@gmail.com",

@@ -16,8 +16,8 @@ export const CATEGORY_REVIEWS: Record<string, Review[]> = {
       location: "Rotterdam, Netherlands",
       rating: 5,
       date: "Jun 2026",
-      headline: "Didn't think it would work over a dress but it does",
-      text: "Layered it over a dress for dinner and got so many compliments. Wasn't expecting that honestly.",
+      headline: "Arrived way faster than expected",
+      text: "Wasn't expecting it so soon and the packaging alone felt like a little gift. Wore it out over a dress the same night.",
       image: "/images/reviews/belly-chains/coin-disc-belly-chain-1.jpg",
     },
     {
@@ -25,8 +25,8 @@ export const CATEGORY_REVIEWS: Record<string, Review[]> = {
       location: "Manchester, UK",
       rating: 5,
       date: "May 2026",
-      headline: "Wear it with sweats more than I thought I would",
-      text: "Honestly wear this around the house just as much as I wear it out. Even with a plain top and sweats it looks put together.",
+      headline: "Great experience from start to finish",
+      text: "Shipping was quick, packaging was lovely, and it looked exactly like the photos. Already thinking about which one I'll get next.",
       image: "/images/reviews/belly-chains/pearl-beaded-belly-chain-1.jpg",
     },
     {
@@ -61,8 +61,8 @@ export const CATEGORY_REVIEWS: Record<string, Review[]> = {
       location: "Edinburgh, UK",
       rating: 5,
       date: "May 2026",
-      headline: "Saves you buying two chains",
-      text: "Comes already layered so no need to stack two separate chains yourself. Wear it with pajama shorts around the house just as much as I do actually going out in it.",
+      headline: "Highly recommend, no notes",
+      text: "Came earlier than the estimate and packaged really nicely. Had a quick question before it arrived and customer service replied same day too.",
       image: "/images/reviews/belly-chains/layered-silver-belly-chain-1.jpg",
     },
     {

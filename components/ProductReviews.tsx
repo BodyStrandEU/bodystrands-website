@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Image from "@/components/SmartImage";
+import { createPortal } from "react-dom";
 import { CATEGORY_REVIEWS, type Review } from "@/data/category-reviews";
 import customerReviewsRaw from "@/data/customer-reviews.json";
 
@@ -27,53 +28,86 @@ function Stars({ rating, size = 13 }: { rating: number; size?: number }) {
 function Avatar({ name }: { name: string }) {
   const initial = name.trim().charAt(0).toUpperCase();
   return (
-    <div className="w-8 h-8 rounded-full bg-[#E8B4A8]/50 flex items-center justify-center flex-shrink-0">
+    <div className="w-11 h-11 rounded-full bg-[#E8B4A8]/50 flex items-center justify-center flex-shrink-0">
       <span className="text-[0.65rem] font-medium text-[#8A5222]">{initial}</span>
     </div>
   );
 }
 
-function ReviewCard({ review }: { review: Review }) {
-  return (
-    <div className="flex flex-col bg-white border border-[#E8B4A8]/40 overflow-hidden">
-      {review.image && (
-        <div className="relative w-full h-44 md:h-52">
-          <Image
-            src={review.image}
-            alt={`${review.name}'s photo review — ${review.headline}`}
-            fill
-            sizes="(max-width: 768px) 100vw, 40vw"
-            className="object-cover object-[center_70%]"
-          />
-        </div>
-      )}
-
-      <div className="flex flex-col p-4 md:p-5">
-        <div className="flex items-center gap-2.5 mb-3">
-          <Avatar name={review.name} />
-          <div className="min-w-0">
-            <p className="text-[0.62rem] tracking-[0.1em] uppercase text-[#2C2220] font-medium truncate">
-              {review.name}
-            </p>
-            <p className="text-[0.55rem] text-[#8C7B6E]/70 truncate">
-              {review.location}
-            </p>
-          </div>
-          <span className="ml-auto text-[0.55rem] tracking-[0.1em] text-[#8C7B6E]/70 whitespace-nowrap">
-            {review.date}
-          </span>
-        </div>
-
-        <Stars rating={review.rating} />
-
-        <p className="text-[0.72rem] font-semibold tracking-wide text-[#2C2220] mt-2.5 mb-1.5 leading-snug">
-          {review.headline}
-        </p>
-
-        <p className="text-[0.75rem] font-light leading-relaxed text-[#5C4E47]">
-          {review.text}
-        </p>
+function Lightbox({ src, alt, onClose }: { src: string; alt: string; onClose: () => void }) {
+  return createPortal(
+    <div
+      className="fixed inset-0 z-[100] bg-black/80 flex items-center justify-center p-6"
+      onClick={onClose}
+    >
+      <button
+        onClick={onClose}
+        aria-label="Close"
+        className="absolute top-5 right-5 text-white/80 hover:text-white text-2xl leading-none"
+      >
+        ✕
+      </button>
+      <div className="relative w-full max-w-md aspect-square" onClick={(e) => e.stopPropagation()}>
+        <Image src={src} alt={alt} fill sizes="(max-width: 768px) 90vw, 448px" className="object-contain" />
       </div>
+    </div>,
+    document.body
+  );
+}
+
+function ReviewCard({ review }: { review: Review }) {
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+
+  return (
+    <div className="flex flex-col bg-white border border-[#E8B4A8]/40 p-4 md:p-5">
+      <div className="flex items-center gap-2.5 mb-3">
+        {review.image ? (
+          <button
+            onClick={() => setLightboxOpen(true)}
+            aria-label={`View ${review.name}'s photo`}
+            className="relative w-11 h-11 flex-shrink-0 overflow-hidden"
+          >
+            <Image
+              src={review.image}
+              alt={`${review.name}'s photo review — ${review.headline}`}
+              fill
+              sizes="44px"
+              className="object-cover"
+            />
+          </button>
+        ) : (
+          <Avatar name={review.name} />
+        )}
+        <div className="min-w-0">
+          <p className="text-[0.62rem] tracking-[0.1em] uppercase text-[#2C2220] font-medium truncate">
+            {review.name}
+          </p>
+          <p className="text-[0.55rem] text-[#8C7B6E]/70 truncate">
+            {review.location}
+          </p>
+        </div>
+        <span className="ml-auto text-[0.55rem] tracking-[0.1em] text-[#8C7B6E]/70 whitespace-nowrap">
+          {review.date}
+        </span>
+      </div>
+
+      <Stars rating={review.rating} />
+
+      <p className="text-[0.72rem] font-semibold tracking-wide text-[#2C2220] mt-2.5 mb-1.5 leading-snug">
+        {review.headline}
+      </p>
+
+      <p className="text-[0.75rem] font-light leading-relaxed text-[#5C4E47]">
+        {review.text}
+      </p>
+
+      {review.image && lightboxOpen && (
+        <Lightbox
+          src={review.image}
+          alt={`${review.name}'s photo review — ${review.headline}`}
+          onClose={() => setLightboxOpen(false)}
+        />
+      )}
     </div>
   );
 }

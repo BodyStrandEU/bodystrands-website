@@ -6,6 +6,7 @@ export type ReviewTokenPayload = {
   sessionId:   string;
   category:    string;
   productName: string;
+  productId?:  string; // undefined for multi-item cart orders we couldn't resolve to one product
   exp:         number; // unix seconds
 };
 
@@ -21,11 +22,12 @@ function sign(data: string): string {
 
 const SIXTY_DAYS = 60 * 24 * 60 * 60;
 
-export function createReviewToken(sessionId: string, category: string, productName: string): string {
+export function createReviewToken(sessionId: string, category: string, productName: string, productId?: string): string {
   const payload: ReviewTokenPayload = {
     sessionId,
     category,
     productName,
+    productId,
     exp: Math.floor(Date.now() / 1000) + SIXTY_DAYS,
   };
   const body = Buffer.from(JSON.stringify(payload)).toString("base64url");

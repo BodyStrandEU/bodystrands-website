@@ -19,6 +19,11 @@ function stableShuffleKey(r: Review): number {
   return hash;
 }
 
+function parseDate(d: string): number {
+  const t = Date.parse(d);
+  return Number.isNaN(t) ? 0 : t;
+}
+
 function Stars({ rating, size = 13 }: { rating: number; size?: number }) {
   return (
     <div className="flex gap-0.5">
@@ -167,7 +172,7 @@ function ReviewCard({ review }: { review: Review }) {
 
 const INITIAL_VISIBLE = 4;
 
-export default function ProductReviews({ category, className = "" }: { category: string; className?: string }) {
+export default function ProductReviews({ category, productId, className = "" }: { category: string; productId?: string; className?: string }) {
   const reviews = [...(CATEGORY_REVIEWS[category] ?? []), ...(CUSTOMER_REVIEWS[category] ?? [])];
 
   // Hooks must run unconditionally — bail out in the render below if there's no data.
@@ -175,9 +180,11 @@ export default function ProductReviews({ category, className = "" }: { category:
 
   if (reviews.length === 0) return null;
 
-  // Natural-looking order — not grouped by whether a review has a photo, since that's
-  // handled separately by the photo strip above the list.
-  const sorted = [...reviews].sort((a, b) => stableShuffleKey(a) - stableShuffleKey(b));
+  // This product's own reviews float to the top (most recent first) as they accumulate;
+  // the rest of the category fills in underneath in a natural-looking (not photo-grouped) order.
+  const own   = reviews.filter((r) => productId && r.productId === productId).sort((a, b) => parseDate(b.date) - parseDate(a.date));
+  const other = reviews.filter((r) => !(productId && r.productId === productId)).sort((a, b) => stableShuffleKey(a) - stableShuffleKey(b));
+  const sorted = [...own, ...other];
   const visible = showAll ? sorted : sorted.slice(0, INITIAL_VISIBLE);
   const avgRating = reviews.reduce((s, r) => s + r.rating, 0) / reviews.length;
 
@@ -189,7 +196,7 @@ export default function ProductReviews({ category, className = "" }: { category:
   return (
     <section className={`pt-8 mt-2 border-t border-[#E8B4A8]/40 ${className}`}>
       <h2 className="font-heading text-xl md:text-2xl font-light text-[#2C2220] mb-4">
-        Reviews for this piece
+        What our customers think about our {category}
       </h2>
 
       {/* Summary: score + star breakdown bars */}

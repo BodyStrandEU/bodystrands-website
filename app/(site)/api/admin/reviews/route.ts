@@ -52,6 +52,7 @@ export async function POST(req: NextRequest) {
         text:      body.text?.trim()     || entry.text,
         sessionId: entry.sessionId, // prevents this order from submitting a second review later
         ...(entry.image ? { image: entry.image } : {}),
+        ...(entry.productId ? { productId: entry.productId } : {}),
       };
 
       const { data: customerReviews, sha: customerSha } = await getCustomerReviews();

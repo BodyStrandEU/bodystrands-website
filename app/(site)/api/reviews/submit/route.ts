@@ -67,6 +67,7 @@ export async function POST(req: NextRequest) {
       id:          `${payload.sessionId}-${Date.now()}`,
       sessionId:   payload.sessionId,
       category:    payload.category,
+      productId:   payload.productId,
       productName: payload.productName,
       name,
       location,

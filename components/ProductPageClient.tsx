@@ -429,7 +429,7 @@ export default function ProductPageClient({ product }: { product: Product }) {
 
       {/* Reviews — sits below the gallery on desktop (col 1, row 2); on mobile
           it naturally falls after the buy panel so the CTA stays up top */}
-      <ProductReviews category={product.category} className="md:col-start-1 md:row-start-2" />
+      <ProductReviews category={product.category} productId={product.id} className="md:col-start-1 md:row-start-2" />
     </div>
 
     {/* Sticky mobile buy bar */}

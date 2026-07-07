@@ -44,7 +44,7 @@ export async function POST(req: NextRequest) {
     : products.find((p) => productName.startsWith(p.name));
   const category = product?.category ?? "General";
 
-  const token      = createReviewToken(sessionId, category, productName);
+  const token      = createReviewToken(sessionId, category, productName, product?.id);
   const reviewUrl  = `https://www.bodystrands.com/review/${token}`;
 
   await resend.emails.send({

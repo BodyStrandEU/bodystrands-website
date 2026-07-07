@@ -5,6 +5,7 @@ export type PendingReview = {
   id:          string; // sessionId + submission timestamp, unique per submission
   sessionId:   string;
   category:    string;
+  productId?:  string; // undefined for multi-item cart orders we couldn't resolve to one product
   productName: string;
   name:        string;
   location:    string;

@@ -89,7 +89,7 @@ export default function AdminReviewsPage() {
                   )}
                   <div className="flex-1 min-w-0 flex flex-col gap-2">
                     <p style={{ fontSize: "0.65rem", color: "var(--admin-muted)" }}>
-                      {r.category} · {r.location} · {new Date(r.submittedAt).toLocaleDateString("en-GB", { day: "numeric", month: "short" })}
+                      {r.productName} ({r.category}) · {r.location} · {new Date(r.submittedAt).toLocaleDateString("en-GB", { day: "numeric", month: "short" })}
                     </p>
 
                     <div className="flex items-center gap-2">

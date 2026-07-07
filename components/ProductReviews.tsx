@@ -40,30 +40,74 @@ function Stars({ rating, size = 13 }: { rating: number; size?: number }) {
   );
 }
 
-function Avatar({ name }: { name: string }) {
+function Avatar({ name, size = "w-9 h-9 text-[0.6rem]" }: { name: string; size?: string }) {
   const initial = name.trim().charAt(0).toUpperCase();
   return (
-    <div className="w-9 h-9 rounded-full bg-[#E8B4A8]/50 flex items-center justify-center flex-shrink-0">
-      <span className="text-[0.6rem] font-medium text-[#8A5222]">{initial}</span>
+    <div className={`${size} rounded-full bg-[#E8B4A8]/50 flex items-center justify-center flex-shrink-0`}>
+      <span className="font-medium text-[#8A5222]">{initial}</span>
     </div>
   );
 }
 
-function Lightbox({ src, alt, onClose }: { src: string; alt: string; onClose: () => void }) {
+// Etsy-style lightbox: photo on one side, that photo's own review alongside it, with
+// prev/next arrows cycling through every photo review — not just a single static image.
+function PhotoReviewLightbox({
+  reviews, index, onIndexChange, onClose,
+}: {
+  reviews: Review[]; index: number; onIndexChange: (i: number) => void; onClose: () => void;
+}) {
+  const review = reviews[index];
+  const go = (dir: 1 | -1) => onIndexChange((index + dir + reviews.length) % reviews.length);
+
   return createPortal(
-    <div
-      className="fixed inset-0 z-[100] bg-black/80 flex items-center justify-center p-6"
-      onClick={onClose}
-    >
+    <div className="fixed inset-0 z-[100] bg-black/80 flex items-center justify-center p-4 md:p-8" onClick={onClose}>
       <button
         onClick={onClose}
         aria-label="Close"
-        className="absolute top-5 right-5 text-white/80 hover:text-white text-2xl leading-none"
+        className="absolute top-4 right-4 md:top-5 md:right-5 text-white/80 hover:text-white text-2xl leading-none z-10"
       >
         ✕
       </button>
-      <div className="relative w-full max-w-md aspect-square" onClick={(e) => e.stopPropagation()}>
-        <Image src={src} alt={alt} fill sizes="(max-width: 768px) 90vw, 448px" className="object-contain" />
+
+      {reviews.length > 1 && (
+        <>
+          <button
+            onClick={(e) => { e.stopPropagation(); go(-1); }}
+            aria-label="Previous photo review"
+            className="absolute left-2 md:left-5 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white flex items-center justify-center text-[#2C2220] shadow-lg z-10 hover:bg-[#FDF9F7] transition-colors"
+          >
+            ‹
+          </button>
+          <button
+            onClick={(e) => { e.stopPropagation(); go(1); }}
+            aria-label="Next photo review"
+            className="absolute right-2 md:right-5 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white flex items-center justify-center text-[#2C2220] shadow-lg z-10 hover:bg-[#FDF9F7] transition-colors"
+          >
+            ›
+          </button>
+        </>
+      )}
+
+      <div
+        className="flex flex-col md:flex-row w-full max-w-3xl max-h-[90vh] bg-white overflow-hidden"
+        onClick={(e) => e.stopPropagation()}
+      >
+        <div className="relative w-full md:w-3/5 aspect-square md:aspect-auto flex-shrink-0">
+          <Image src={review.image!} alt={`${review.name}'s photo review`} fill sizes="(max-width: 768px) 100vw, 60vw" className="object-cover" />
+        </div>
+        <div className="flex flex-col p-5 md:p-6 md:w-2/5 overflow-y-auto">
+          <div className="flex items-center gap-2.5 mb-3">
+            <Avatar name={review.name} />
+            <div className="min-w-0">
+              <p className="text-[0.62rem] tracking-[0.1em] uppercase text-[#2C2220] font-medium truncate">{review.name}</p>
+              <p className="text-[0.55rem] text-[#8C7B6E]/70 truncate">{review.location}</p>
+            </div>
+            <span className="ml-auto text-[0.55rem] tracking-[0.1em] text-[#8C7B6E]/70 whitespace-nowrap">{review.date}</span>
+          </div>
+          <Stars rating={review.rating} />
+          <p className="text-[0.78rem] font-semibold tracking-wide text-[#2C2220] mt-3 mb-1.5 leading-snug">{review.headline}</p>
+          <p className="text-[0.8rem] font-light leading-relaxed text-[#5C4E47]">{review.text}</p>
+        </div>
       </div>
     </div>,
     document.body
@@ -72,11 +116,9 @@ function Lightbox({ src, alt, onClose }: { src: string; alt: string; onClose: ()
 
 // Horizontal strip of every photo submitted for this category — the "proof gallery",
 // separate from the text list below so the list itself doesn't need photos clustered up top.
-function PhotoStrip({ reviews }: { reviews: Review[] }) {
+function PhotoStrip({ photoReviews, onOpen }: { photoReviews: Review[]; onOpen: (i: number) => void }) {
   const scrollerRef = useRef<HTMLDivElement>(null);
-  const [lightbox, setLightbox] = useState<Review | null>(null);
-  const withPhotos = reviews.filter((r) => r.image);
-  if (withPhotos.length === 0) return null;
+  if (photoReviews.length === 0) return null;
 
   function scroll(dir: 1 | -1) {
     scrollerRef.current?.scrollBy({ left: dir * 180, behavior: "smooth" });
@@ -85,10 +127,10 @@ function PhotoStrip({ reviews }: { reviews: Review[] }) {
   return (
     <div className="relative mb-6">
       <div ref={scrollerRef} className="flex gap-2.5 overflow-x-auto scrollbar-hide pb-1 -mx-1 px-1">
-        {withPhotos.map((r, i) => (
+        {photoReviews.map((r, i) => (
           <button
             key={i}
-            onClick={() => setLightbox(r)}
+            onClick={() => onOpen(i)}
             aria-label={`View ${r.name}'s photo`}
             className="relative w-20 h-20 flex-shrink-0 overflow-hidden"
           >
@@ -96,7 +138,7 @@ function PhotoStrip({ reviews }: { reviews: Review[] }) {
           </button>
         ))}
       </div>
-      {withPhotos.length > 4 && (
+      {photoReviews.length > 4 && (
         <button
           onClick={() => scroll(1)}
           aria-label="See more photos"
@@ -105,16 +147,11 @@ function PhotoStrip({ reviews }: { reviews: Review[] }) {
           →
         </button>
       )}
-      {lightbox && (
-        <Lightbox src={lightbox.image!} alt={`${lightbox.name}'s photo review`} onClose={() => setLightbox(null)} />
-      )}
     </div>
   );
 }
 
-function ReviewCard({ review }: { review: Review }) {
-  const [lightboxOpen, setLightboxOpen] = useState(false);
-
+function ReviewCard({ review, onOpenPhoto }: { review: Review; onOpenPhoto: () => void }) {
   return (
     <div className="flex flex-col bg-white border border-[#E8B4A8]/40 p-4 md:p-5">
       <div className="flex items-center gap-2.5 mb-3">
@@ -144,7 +181,7 @@ function ReviewCard({ review }: { review: Review }) {
         </p>
         {review.image && (
           <button
-            onClick={() => setLightboxOpen(true)}
+            onClick={onOpenPhoto}
             aria-label={`View ${review.name}'s photo`}
             className="relative w-14 h-14 flex-shrink-0 overflow-hidden"
           >
@@ -158,14 +195,6 @@ function ReviewCard({ review }: { review: Review }) {
           </button>
         )}
       </div>
-
-      {review.image && lightboxOpen && (
-        <Lightbox
-          src={review.image}
-          alt={`${review.name}'s photo review — ${review.headline}`}
-          onClose={() => setLightboxOpen(false)}
-        />
-      )}
     </div>
   );
 }
@@ -177,6 +206,7 @@ export default function ProductReviews({ category, productId, className = "" }: 
 
   // Hooks must run unconditionally — bail out in the render below if there's no data.
   const [showAll, setShowAll] = useState(false);
+  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
 
   if (reviews.length === 0) return null;
 
@@ -192,6 +222,11 @@ export default function ProductReviews({ category, productId, className = "" }: 
     const count = reviews.filter((r) => Math.round(r.rating) === star).length;
     return { star, pct: Math.round((count / reviews.length) * 100) };
   });
+
+  // Single shared pool of photo reviews — the strip and every inline thumbnail all open
+  // the same lightbox instance, just at a different starting index, so prev/next cycles
+  // through every photo review site-wide rather than being scoped to one card.
+  const photoReviews = sorted.filter((r) => r.image);
 
   return (
     <section className={`pt-8 mt-2 border-t border-[#E8B4A8]/40 ${className}`}>
@@ -224,12 +259,16 @@ export default function ProductReviews({ category, productId, className = "" }: 
       </div>
 
       {/* Photo strip */}
-      <PhotoStrip reviews={sorted} />
+      <PhotoStrip photoReviews={photoReviews} onOpen={setLightboxIndex} />
 
       {/* List */}
       <div className="flex flex-col gap-3">
         {visible.map((review, i) => (
-          <ReviewCard key={i} review={review} />
+          <ReviewCard
+            key={i}
+            review={review}
+            onOpenPhoto={() => setLightboxIndex(photoReviews.indexOf(review))}
+          />
         ))}
       </div>
 
@@ -243,6 +282,15 @@ export default function ProductReviews({ category, productId, className = "" }: 
             <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
           </svg>
         </button>
+      )}
+
+      {lightboxIndex !== null && (
+        <PhotoReviewLightbox
+          reviews={photoReviews}
+          index={lightboxIndex}
+          onIndexChange={setLightboxIndex}
+          onClose={() => setLightboxIndex(null)}
+        />
       )}
     </section>
   );

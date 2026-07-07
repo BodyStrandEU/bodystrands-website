@@ -16,6 +16,7 @@ type Order = {
   trackingNumber: string | null;
   trackingSentAt: string | null;
   trackingCarrier: string | null;
+  reviewRequestedAt: string | null;
 };
 
 // Most orders ship via DHL Germany right now, so default new entries to that
@@ -35,6 +36,9 @@ export default function OrdersPage() {
   const [sending, setSending]         = useState<Record<string, boolean>>({});
   const [sent, setSent]               = useState<Record<string, boolean>>({});
   const [error, setError]             = useState<Record<string, string>>({});
+  const [reviewSending, setReviewSending] = useState<Record<string, boolean>>({});
+  const [reviewSent, setReviewSent]       = useState<Record<string, boolean>>({});
+  const [reviewError, setReviewError]     = useState<Record<string, string>>({});
   const router = useRouter();
 
   useEffect(() => {
@@ -67,6 +71,29 @@ export default function OrdersPage() {
       setError(p => ({ ...p, [orderId]: "Network error" }));
     } finally {
       setSending(p => ({ ...p, [orderId]: false }));
+    }
+  }
+
+  async function requestReview(orderId: string) {
+    setReviewSending(p => ({ ...p, [orderId]: true }));
+    setReviewError(p => ({ ...p, [orderId]: "" }));
+    try {
+      const res = await fetch("/api/admin/request-review", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ sessionId: orderId }),
+      });
+      if (!res.ok) {
+        const d = await res.json();
+        setReviewError(p => ({ ...p, [orderId]: d.error ?? "Failed" }));
+      } else {
+        setReviewSent(p => ({ ...p, [orderId]: true }));
+        setOrders(prev => prev.map(o => o.id === orderId ? { ...o, reviewRequestedAt: new Date().toISOString() } : o));
+      }
+    } catch {
+      setReviewError(p => ({ ...p, [orderId]: "Network error" }));
+    } finally {
+      setReviewSending(p => ({ ...p, [orderId]: false }));
     }
   }
 
@@ -200,6 +227,35 @@ export default function OrdersPage() {
                       )}
                       {error[order.id] && (
                         <p style={{ fontSize: "0.6rem", color: "#f87171", letterSpacing: "0.02em" }}>{error[order.id]}</p>
+                      )}
+
+                      <button
+                        onClick={() => requestReview(order.id)}
+                        disabled={reviewSending[order.id]}
+                        className="w-full py-2 mt-1 transition-colors disabled:opacity-40"
+                        style={{
+                          background: "none",
+                          color: "var(--admin-muted)",
+                          fontSize: "0.58rem",
+                          letterSpacing: "0.15em",
+                          textTransform: "uppercase",
+                          border: "1px solid var(--admin-border2)",
+                          cursor: reviewSending[order.id] ? "default" : "pointer",
+                        }}
+                      >
+                        {reviewSending[order.id]
+                          ? "Sending…"
+                          : order.reviewRequestedAt
+                          ? "Resend Review Request"
+                          : "Send Review Request"}
+                      </button>
+                      {(reviewSent[order.id] || order.reviewRequestedAt) && (
+                        <p style={{ fontSize: "0.6rem", color: "var(--admin-muted)", letterSpacing: "0.02em" }}>
+                          ✓ Review requested{order.reviewRequestedAt && ` · ${new Date(order.reviewRequestedAt).toLocaleDateString("en-GB", { day: "numeric", month: "short" })}`}
+                        </p>
+                      )}
+                      {reviewError[order.id] && (
+                        <p style={{ fontSize: "0.6rem", color: "#f87171", letterSpacing: "0.02em" }}>{reviewError[order.id]}</p>
                       )}
                     </div>
 

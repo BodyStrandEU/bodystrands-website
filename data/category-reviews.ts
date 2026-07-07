@@ -6,6 +6,7 @@ export type Review = {
   headline: string;
   text: string;
   image?: string;
+  sessionId?: string; // present on real customer-submitted reviews, used to prevent duplicate submissions
 };
 
 export const CATEGORY_REVIEWS: Record<string, Review[]> = {

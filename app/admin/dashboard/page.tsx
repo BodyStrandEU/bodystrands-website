@@ -322,6 +322,21 @@ export default function AdminDashboard() {
             📦 Orders
           </button>
           <button
+            onClick={() => router.push("/admin/reviews")}
+            style={{
+              padding: "0.6rem 1.5rem",
+              background: "var(--admin-surface)",
+              color: "#A0622A",
+              border: "1px solid #A0622A",
+              borderRadius: "4px",
+              fontSize: "0.85rem",
+              cursor: "pointer",
+              fontWeight: 500,
+            }}
+          >
+            📝 Reviews
+          </button>
+          <button
             onClick={() => router.push("/admin/site-images")}
             style={{
               padding: "0.6rem 1.5rem",

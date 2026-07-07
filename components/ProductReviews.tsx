@@ -2,6 +2,11 @@
 import { useState } from "react";
 import Image from "@/components/SmartImage";
 import { CATEGORY_REVIEWS, type Review } from "@/data/category-reviews";
+import customerReviewsRaw from "@/data/customer-reviews.json";
+
+// Real, verified-purchase reviews approved via /admin/reviews. Committed to this JSON
+// file on approval, so a new one goes live on the next deploy just like any other content edit.
+const CUSTOMER_REVIEWS = customerReviewsRaw as Record<string, Review[]>;
 
 function Stars({ rating, size = 13 }: { rating: number; size?: number }) {
   return (
@@ -78,12 +83,12 @@ function ReviewCard({ review }: { review: Review }) {
 const INITIAL_VISIBLE = 6;
 
 export default function ProductReviews({ category, className = "" }: { category: string; className?: string }) {
-  const reviews = CATEGORY_REVIEWS[category];
+  const reviews = [...(CATEGORY_REVIEWS[category] ?? []), ...(CUSTOMER_REVIEWS[category] ?? [])];
 
   // Hooks must run unconditionally — bail out in the render below if there's no data.
   const [showAll, setShowAll] = useState(false);
 
-  if (!reviews || reviews.length === 0) return null;
+  if (reviews.length === 0) return null;
 
   // Photo reviews first (stable sort preserves relative order within each group).
   const sorted = [...reviews].sort((a, b) => (b.image ? 1 : 0) - (a.image ? 1 : 0));

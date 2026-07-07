@@ -27,13 +27,15 @@ export async function GET(req: NextRequest) {
     let trackingNumber: string | null = null;
     let trackingSentAt: string | null = null;
     let trackingCarrier: string | null = null;
+    let reviewRequestedAt: string | null = null;
 
     if (typeof s.payment_intent === "string") {
       try {
         const pi = await stripe.paymentIntents.retrieve(s.payment_intent);
-        trackingNumber  = pi.metadata?.tracking_number ?? null;
-        trackingSentAt  = pi.metadata?.tracking_sent_at ?? null;
-        trackingCarrier = pi.metadata?.tracking_carrier ?? null;
+        trackingNumber    = pi.metadata?.tracking_number ?? null;
+        trackingSentAt    = pi.metadata?.tracking_sent_at ?? null;
+        trackingCarrier   = pi.metadata?.tracking_carrier ?? null;
+        reviewRequestedAt = pi.metadata?.review_requested_at ?? null;
       } catch {}
     }
 
@@ -56,6 +58,7 @@ export async function GET(req: NextRequest) {
       trackingNumber,
       trackingSentAt,
       trackingCarrier,
+      reviewRequestedAt,
     };
   }));
 

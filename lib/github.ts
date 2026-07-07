@@ -82,11 +82,12 @@ export async function deleteFile(
   }
 }
 
-export async function uploadImage(
+export async function uploadImageToDir(
+  publicDir: string, // e.g. "images/products" or "images/reviews/customer-submitted"
   filename: string,
   base64Content: string
 ): Promise<string> {
-  const path = `public/images/products/${filename}`;
+  const path = `public/${publicDir}/${filename}`;
   let sha: string | undefined;
   try {
     const existing = await getFile(path);
@@ -97,7 +98,7 @@ export async function uploadImage(
 
   const url = `${GITHUB_API}/repos/${REPO}/contents/${path}`;
   const body: Record<string, unknown> = {
-    message: `Upload product image: ${filename}`,
+    message: `Upload image: ${publicDir}/${filename}`,
     content: base64Content,
     branch: BRANCH,
     committer: committer(),
@@ -112,8 +113,12 @@ export async function uploadImage(
   });
   if (!res.ok) {
     const text = await res.text();
-    throw new Error(`GitHub uploadImage(${filename}) failed ${res.status}: ${text}`);
+    throw new Error(`GitHub uploadImageToDir(${publicDir}/${filename}) failed ${res.status}: ${text}`);
   }
 
-  return `/images/products/${filename}`;
+  return `/${publicDir}/${filename}`;
+}
+
+export async function uploadImage(filename: string, base64Content: string): Promise<string> {
+  return uploadImageToDir("images/products", filename, base64Content);
 }

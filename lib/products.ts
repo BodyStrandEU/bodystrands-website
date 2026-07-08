@@ -2,6 +2,7 @@ import productsData from "@/data/products.json";
 
 export const CATEGORIES = [
   "Belly Chains",
+  "Leg Chains",
   "Back Chains",
   "Body Chains",
   "Shoulder & Arm Chains",

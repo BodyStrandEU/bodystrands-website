@@ -8,6 +8,7 @@ import RecentlyViewed from "@/components/RecentlyViewed";
 
 const CATEGORY_SUFFIX: Record<string, string> = {
   "Belly Chains":       "Handmade Belly Chain Waist Jewelry",
+  "Leg Chains":         "Dainty Leg Chain Thigh Jewelry",
   "Back Chains":        "Back Chain for Backless Dresses",
   "Body Chains":        "Handmade Body Chain Jewelry",
   "Shoulder & Arm Chains":    "Shoulder & Arm Body Jewelry",

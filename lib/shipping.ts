@@ -42,7 +42,7 @@ export function getShippingRate(countryCode: string, cartTotal: number): Shippin
   }
   return {
     displayName: "International Shipping — Rest of World",
-    amount:      2500,
+    amount:      1500,
     deliveryMin: 7, deliveryMax: 20,
     freeThreshold: null,
   };

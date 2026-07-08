@@ -3028,6 +3028,85 @@
     "sizeGuideImage": "/images/products/7bed8d3e-34bd-47c7-b460-e93f19e7eddd.png"
   },
   {
+    "id": "birthstone-thigh-chain",
+    "name": "Birthstone Thigh Chain",
+    "category": "Belly Chains",
+    "price": 40,
+    "currency": "EUR",
+    "description": "The piece nobody else in the room is wearing. One dainty chain wraps around the upper thigh — from it, an arc drop with your gemstone at the lowest point. Choose your stone, your birthstone, your colour. 12 colours, one piece, completely personal.",
+    "specs": [
+      {
+        "label": "Material",
+        "value": "316L stainless steel, gold-tone finish"
+      },
+      {
+        "label": "Pendant",
+        "value": "Teardrop gemstone charm — 12 colours available"
+      },
+      {
+        "label": "Closure",
+        "value": "Slip-on with hidden stretch closure — no clasp needed"
+      },
+      {
+        "label": "Waterproof",
+        "value": "Yes — safe for water, sun, and everyday wear"
+      },
+      {
+        "label": "Care",
+        "value": "Wipe with a soft cloth after wear. Store in an airtight container."
+      },
+      {
+        "label": "Shipping",
+        "value": "Dispatches within 1–2 business days"
+      }
+    ],
+    "variantGroups": [
+      {
+        "label": "Gemstone",
+        "type": "options",
+        "options": [
+          "Blue Topaz",
+          "Sapphire Blue",
+          "Ruby Red",
+          "Garnet Red",
+          "Emerald Green",
+          "Peridot Green",
+          "Amethyst",
+          "Lavender",
+          "Pink Rose",
+          "Clear Crystal",
+          "Yellow Citrine",
+          "Aqua Blue"
+        ]
+      },
+      {
+        "label": "Size",
+        "type": "options",
+        "options": [
+          "S — 46 to 51 cm",
+          "M — 51 to 56 cm",
+          "L — 56 to 61 cm",
+          "XL — 61 to 66 cm"
+        ]
+      }
+    ],
+    "images": [
+      "/images/products/birthstone-thigh-chain/582329d4-blue-beach.jpeg"
+    ],
+    "gallery": [
+      "/images/products/birthstone-thigh-chain/582329d4-blue-beach.jpeg",
+      "/images/products/birthstone-thigh-chain/3a5aca88-ruby-path.png",
+      "/images/products/birthstone-thigh-chain/652e239a-sizing-chart.jpeg",
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
+      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg"
+    ],
+    "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/54d089371a0f5a654f30255de53c5f2e/downloads/default.mp4",
+    "infographicImages": [
+      "/images/products/birthstone-thigh-chain/652e239a-sizing-chart.jpeg"
+    ],
+    "altText": "Birthstone thigh chain gold-tone stainless steel — dainty leg chain with teardrop gemstone pendant and arc drop, adjustable S to XL, waterproof personalized body jewelry handmade"
+  },
+  {
     "id": "script-initial-bracelet",
     "name": "Script Initial Bracelet",
     "price": 30,

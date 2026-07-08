@@ -176,6 +176,47 @@ That combination shows TWO video slots in admin. Admin bug is permanently patche
 - Use the copy's description verbatim (lightly adapted for tone) — do NOT invent specs or measurements
 - If a Size variant group is listed in the copy, add it as a `variantGroup` (mandatory selector, same as Attachment)
 
+## Etsy Description Format — ALWAYS use this structure, no exceptions
+
+The correct format (confirmed by user Jul 2026). Never invent a different structure.
+
+```
+[Bold hook line — short, punchy, 1–2 lines max]
+
+[Product paragraph — evocative, first-person warmth, describes the piece + occasion/feeling + material benefit naturally woven in. NO "solid gold" language — always "gold-tone" or "gold-tone stainless steel".]
+
+Product Details
+Material: [material]
+[other specs as labeled lines]
+Closure: [closure type]
+Waterproof & Sweat-Proof: Yes — safe for water, sun, and everyday wear
+
+Size Guide
+[size table or list]
+
+Fit Note: [how to measure + sizing guidance]
+
+Custom Sizing: Need a specific measurement? Message me before ordering and I'll make it to your exact size at no extra cost.
+
+Care Instructions
+Wipe gently with a soft cloth after each wear.
+Store in an airtight container when not in use.
+
+Shipping: Dispatches within 1–2 business days.
+
+Please note that as each piece is handcrafted, no two pieces are identical and slight variations may occur.
+
+Check out more jewellery in our shop: bodystrandseu.etsy.com
+
+Thanks for looking! Feel free to message me if you have any questions.
+```
+
+### Key rules for the opening:
+- Bold hook line = short, striking, unexpected angle on the product
+- Product paragraph = warm, personal, first-person ("I made this...")
+- Never say "gold" as if it's solid gold — always "gold-tone finish" or "gold-tone stainless steel"
+- Describe the feeling + occasion naturally, don't list features in the paragraph
+
 ## Master Listing Procedure (apply to every new product)
 1. Read product folder structure (Gold/, Silver/, Apply to Both Variations/, hero folders)
 2. Map images to variantImages: Gold first, then Silver, "Apply to Both" appended to BOTH variants

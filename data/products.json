@@ -3062,21 +3062,21 @@
     ],
     "variantGroups": [
       {
-        "label": "Gemstone",
+        "label": "Birthstone",
         "type": "options",
         "options": [
-          "Blue Topaz",
-          "Sapphire Blue",
-          "Ruby Red",
-          "Garnet Red",
-          "Emerald Green",
-          "Peridot Green",
-          "Amethyst",
-          "Lavender",
-          "Pink Rose",
-          "Clear Crystal",
-          "Yellow Citrine",
-          "Aqua Blue"
+          "January — Garnet",
+          "February — Amethyst",
+          "March — Aquamarine",
+          "April — Diamond",
+          "May — Emerald",
+          "June — Alexandrite",
+          "July — Ruby",
+          "August — Peridot",
+          "September — Sapphire",
+          "October — Rose Quartz",
+          "November — Citrine",
+          "December — Turquoise"
         ]
       },
       {
@@ -3096,12 +3096,15 @@
     "gallery": [
       "/images/products/birthstone-thigh-chain/582329d4-blue-beach.jpeg",
       "/images/products/birthstone-thigh-chain/3a5aca88-ruby-path.png",
+      "/images/products/birthstone-thigh-chain/2fea701c-gemstones.png",
+      "/images/products/birthstone-thigh-chain/8c1a99ad-birthstone-chart.jpeg",
       "/images/products/birthstone-thigh-chain/652e239a-sizing-chart.jpeg",
       "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
       "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg"
     ],
     "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/54d089371a0f5a654f30255de53c5f2e/downloads/default.mp4",
     "infographicImages": [
+      "/images/products/birthstone-thigh-chain/8c1a99ad-birthstone-chart.jpeg",
       "/images/products/birthstone-thigh-chain/652e239a-sizing-chart.jpeg"
     ],
     "altText": "Birthstone thigh chain gold-tone stainless steel — dainty leg chain with teardrop gemstone pendant and arc drop, adjustable S to XL, waterproof personalized body jewelry handmade"

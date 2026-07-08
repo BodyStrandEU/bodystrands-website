@@ -117,7 +117,11 @@ h1, h2, h3, h4 {
 /* Page transition */
 @keyframes page-in {
   from { opacity: 0; transform: translateY(7px); }
-  to   { opacity: 1; transform: translateY(0); }
+  /* Must be the literal keyword "none", not translateY(0) — any non-none transform,
+     even an identity one, makes this element a containing block for descendant
+     position:fixed elements (cookie banner, WhatsApp button, popups), pinning them
+     to this wrapper's height instead of the viewport. */
+  to   { opacity: 1; transform: none; }
 }
 .animate-page-in {
   animation: page-in 0.28s ease-out both;
@@ -130,6 +134,15 @@ h1, h2, h3, h4 {
 }
 .animate-slide-up {
   animation: slide-up 0.22s ease-out both;
+}
+
+/* Floating WhatsApp button — slow attention pulse */
+@keyframes ping-slow {
+  0%   { transform: scale(1); opacity: 0.55; }
+  75%, 100% { transform: scale(1.7); opacity: 0; }
+}
+.animate-ping-slow {
+  animation: ping-slow 2.4s cubic-bezier(0, 0, 0.2, 1) infinite;
 }
 
 /* Scroll reveal animations */

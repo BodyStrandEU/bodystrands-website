@@ -3,7 +3,6 @@ import { Cormorant_Garamond, Josefin_Sans } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
 import { Analytics } from "@vercel/analytics/next";
-import PageTransition from "@/components/PageTransition";
 import CustomCursor from "@/components/CustomCursor";
 import AnalyticsPageview from "@/components/AnalyticsPageview";
 import { CartProvider } from "@/lib/cart";
@@ -72,7 +71,7 @@ export default async function RootLayout({
       <body>
         <CurrencyProvider rates={rates}>
           <CartProvider>
-            <PageTransition>{children}</PageTransition>
+            {children}
           </CartProvider>
         </CurrencyProvider>
         <CustomCursor />

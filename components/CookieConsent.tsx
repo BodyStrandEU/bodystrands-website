@@ -33,12 +33,14 @@ export default function CookieConsent() {
     localStorage.setItem(STORAGE_KEY, "granted");
     grantAnalytics();
     setVisible(false);
+    window.dispatchEvent(new Event("bs:cookie-consent-resolved"));
   }
 
   function decline() {
     localStorage.setItem(STORAGE_KEY, "denied");
     denyAnalytics();
     setVisible(false);
+    window.dispatchEvent(new Event("bs:cookie-consent-resolved"));
   }
 
   if (!visible) return null;

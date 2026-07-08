@@ -323,3 +323,61 @@ The Anthropic API key is NOT in .env.local — ask the user to paste it (or crea
 - All product pages have keyword-rich titles via CATEGORY_SUFFIX mapping
 - Blog posts auto-link to products + category pages for internal linking
 - `unoptimized: true` in next.config.ts is a TEMPORARY fix for Vercel free tier image quota — revert when upgrading to Vercel Pro
+
+## Social Media Scheduling Rules (Postiz) — ALWAYS follow these
+
+### Platforms & Integration IDs
+- Instagram: `cmqlb4q1h01plp40y69rmv5ml`
+- Facebook: `cmqmpm92f01uzmm0ysb6fbid0`
+- Pinterest: `cmqlao2zv0efwmm0y5cq6miuu`
+- TikTok: `cmqlbc5bg0em0mm0ysygo2yvi` — **SUSPENDED, do not schedule until user confirms appeal resolved**
+
+### Daily volume (maximized without flooding)
+- **Instagram**: 2 posts/day — 10:00 UTC + 15:00 UTC
+- **Facebook**: 2 posts/day — 10:00 UTC + 15:00 UTC
+- **Pinterest**: 15 pins/day — spread across: 07:00, 07:30, 08:00, 08:30, 09:00, 09:30, 10:00, 11:00, 12:00, 13:00, 14:00, 15:00, 16:00, 17:00, 18:00
+- **Total**: 19 posts/day, ~133/week
+
+### Platform settings
+- IG: `{"post_type":"post"}`
+- FB: `{"post_type":"post","url":"<product_url>"}`
+- PIN: `{"board":"<board_id>","link":"<product_url>","title":"<pin_title>"}`
+- TikTok (when active): `{"privacy_level":"PUBLIC_TO_EVERYONE","duet":true,"stitch":true,"comment":true,"autoAddMusic":"no","brand_content_toggle":false,"brand_organic_toggle":false,"content_posting_method":"DIRECT_POST"}`
+
+### Pinterest board IDs
+- Shoulder/Arm: `1122663082051843209`
+- Anklet/Barefoot: `1122663082051443454`
+- Back/Backdrop: `1122663082051406999`
+- Head/Forehead: `1122663082051515031`
+- Belly/Waist: `1122663082051406606`
+- Body/Bracelet: `1122663082051403313`
+- Choker/Necklace: `1122663082051417775`
+
+### New product rule
+- New launches: **first 3 days on IG + FB are priority solo** (fill both daily slots with the new product, cycling through its images)
+- Pinterest: new products enter rotation immediately from day 1
+- After day 3: new product joins normal rotation
+
+### Rotation
+- IG + FB: 2 different product images per day, rotating through full catalogue (~17+ products, full cycle every ~10 days)
+- Pinterest: cycle through ALL products and all their images across correct boards
+- Use `itertools.cycle()` over flattened product post list
+
+### Schedule horizon
+- Build **3 weeks at a time** — never schedule more than 3 weeks out
+- When rebuilding: `postiz posts:list --startDate ... --endDate ...` → parse `"id"` fields from JSON → delete all → rebuild fresh
+
+### API rate limiting — CRITICAL
+- Always add `time.sleep(0.5)` between every `postiz posts:create` call
+- After bulk deletes (100+ posts), wait 2–3 minutes before starting new creates
+- 429 ThrottlerException = too many requests too fast; increase sleep to 1s if it persists
+
+### When user says "schedule" — do it immediately
+- No confirmation questions, no date checks with the user
+- Fill the **next available date slot** in the existing sequence
+- If asked to schedule a new product and schedule is empty/fresh: start from tomorrow
+- If schedule already has posts: append after the last scheduled date
+
+### Script location
+- Schedule script: scratchpad `new_schedule.py` (rebuild each session from the product catalogue below)
+- Postiz API key: in `.env.local` as `POSTIZ_API_KEY`

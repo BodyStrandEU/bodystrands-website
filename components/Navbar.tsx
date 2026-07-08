@@ -120,15 +120,15 @@ export default function Navbar() {
 
               {/* Dropdown panel — always in DOM, animated via CSS */}
               <div
-                className={`absolute top-full left-1/2 -translate-x-1/2 mt-6 w-[600px] bg-[#FDF9F7] border border-[#E8B4A8]/40 shadow-[0_18px_50px_-12px_rgba(44,34,32,0.25)] transition-all duration-200 ease-out ${
+                className={`absolute top-full left-1/2 -translate-x-1/2 mt-6 w-[420px] bg-[#FDF9F7] border border-[#E8B4A8]/40 shadow-[0_18px_50px_-12px_rgba(44,34,32,0.25)] transition-all duration-200 ease-out ${
                   shopOpen
                     ? "opacity-100 pointer-events-auto"
                     : "opacity-0 -translate-y-2 pointer-events-none"
                 }`}
               >
-                <div className="grid grid-cols-[1fr_1fr_200px]">
+                <div className="grid grid-cols-1">
                   {/* Category links */}
-                  <div className="col-span-2 p-8">
+                  <div className="p-8">
                     <div className="flex items-center gap-3 mb-5">
                       <p className="text-[0.55rem] tracking-[0.3em] uppercase text-[#A0622A]">Shop by Category</p>
                       <div className="flex-1 h-px bg-[#E8B4A8]/40" />
@@ -176,31 +176,6 @@ export default function Navbar() {
                       </div>
                     </div>
                   </div>
-
-                  {/* Featured visual panel */}
-                  <Link
-                    href="/shop?category=Back+Chains"
-                    onClick={() => setShopOpen(false)}
-                    className="group relative overflow-hidden border-l border-[#E8B4A8]/30"
-                  >
-                    <Image
-                      src="/images/elvan-back-full.jpg"
-                      alt="Back Chains"
-                      fill
-                      sizes="200px"
-                      className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-[1.06]"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#2C2220]/80 via-[#2C2220]/10 to-transparent" />
-                    <div className="absolute bottom-0 left-0 right-0 p-5">
-                      <p className="text-[0.48rem] tracking-[0.25em] uppercase text-[#E8B4A8] mb-1.5">Best Seller</p>
-                      <p className="font-heading text-lg font-light text-white leading-tight mb-2">
-                        Back Chains
-                      </p>
-                      <span className="text-[0.5rem] tracking-[0.18em] uppercase text-white/80 group-hover:text-white transition-colors inline-flex items-center gap-1">
-                        Shop Now →
-                      </span>
-                    </div>
-                  </Link>
                 </div>
               </div>
             </div>

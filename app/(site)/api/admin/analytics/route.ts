@@ -11,27 +11,32 @@ function checkAuth(request: NextRequest): boolean {
   return !!token && isValidToken(token);
 }
 
-function periodToRange(period: string): { gte: number; label: string; chartUnit: "hour" | "day" | "week"; chartPoints: number; ga4Start: string } {
+function periodToRange(period: string): { gte: number; lte?: number; label: string; chartUnit: "hour" | "day" | "week"; chartPoints: number; ga4Start: string; ga4End: string; chartEnd: Date } {
   const now = Math.floor(Date.now() / 1000);
+  const startOfToday = Math.floor(new Date(new Date().setHours(0, 0, 0, 0)).getTime() / 1000);
   switch (period) {
     case "today":
-      return { gte: Math.floor(new Date(new Date().setHours(0, 0, 0, 0)).getTime() / 1000), label: "Today", chartUnit: "hour", chartPoints: 24, ga4Start: "today" };
+      return { gte: startOfToday, label: "Today", chartUnit: "hour", chartPoints: 24, ga4Start: "today", ga4End: "today", chartEnd: new Date() };
+    case "yesterday": {
+      const endOfYesterday = new Date(new Date().setHours(0, 0, 0, 0) - 1000); // 23:59:59 yesterday
+      return { gte: startOfToday - 86400, lte: startOfToday - 1, label: "Yesterday", chartUnit: "hour", chartPoints: 24, ga4Start: "yesterday", ga4End: "yesterday", chartEnd: endOfYesterday };
+    }
     case "7d":
-      return { gte: now - 7 * 86400, label: "Last 7 Days", chartUnit: "day", chartPoints: 7, ga4Start: "7daysAgo" };
+      return { gte: now - 7 * 86400, label: "Last 7 Days", chartUnit: "day", chartPoints: 7, ga4Start: "7daysAgo", ga4End: "today", chartEnd: new Date() };
     case "30d":
-      return { gte: now - 30 * 86400, label: "Last 30 Days", chartUnit: "day", chartPoints: 30, ga4Start: "30daysAgo" };
+      return { gte: now - 30 * 86400, label: "Last 30 Days", chartUnit: "day", chartPoints: 30, ga4Start: "30daysAgo", ga4End: "today", chartEnd: new Date() };
     case "90d":
-      return { gte: now - 90 * 86400, label: "Last 90 Days", chartUnit: "week", chartPoints: 13, ga4Start: "90daysAgo" };
+      return { gte: now - 90 * 86400, label: "Last 90 Days", chartUnit: "week", chartPoints: 13, ga4Start: "90daysAgo", ga4End: "today", chartEnd: new Date() };
     case "all":
-      return { gte: 0, label: "All Time", chartUnit: "week", chartPoints: 52, ga4Start: "365daysAgo" };
+      return { gte: 0, label: "All Time", chartUnit: "week", chartPoints: 52, ga4Start: "365daysAgo", ga4End: "today", chartEnd: new Date() };
     default:
-      return { gte: now - 30 * 86400, label: "Last 30 Days", chartUnit: "day", chartPoints: 30, ga4Start: "30daysAgo" };
+      return { gte: now - 30 * 86400, label: "Last 30 Days", chartUnit: "day", chartPoints: 30, ga4Start: "30daysAgo", ga4End: "today", chartEnd: new Date() };
   }
 }
 
-function buildChartKeys(unit: "hour" | "day" | "week", points: number): string[] {
+function buildChartKeys(unit: "hour" | "day" | "week", points: number, endDate: Date): string[] {
   const keys: string[] = [];
-  const now = new Date();
+  const now = endDate;
   for (let i = points - 1; i >= 0; i--) {
     if (unit === "hour") {
       const d = new Date(now);
@@ -61,12 +66,12 @@ function sessionToChartKey(ts: number, unit: "hour" | "day" | "week"): string {
   return `${monday.getMonth() + 1}/${monday.getDate()}`;
 }
 
-async function fetchGA4(propertyId: string, credJson: string, ga4Start: string) {
+async function fetchGA4(propertyId: string, credJson: string, ga4Start: string, ga4End: string) {
   const { BetaAnalyticsDataClient } = await import("@google-analytics/data");
   const creds  = JSON.parse(credJson) as Record<string, string>;
   const client = new BetaAnalyticsDataClient({ credentials: creds });
   const property   = `properties/${propertyId}`;
-  const dateRanges = [{ startDate: ga4Start, endDate: "today" }];
+  const dateRanges = [{ startDate: ga4Start, endDate: ga4End }];
 
   const [overview, channelRes, sourceMedium, devices, countries, topPages, addToCartByProduct, orderAttribution] = await Promise.all([
     client.runReport({ property, dateRanges, metrics: [{ name: "sessions" }, { name: "activeUsers" }, { name: "engagementRate" }, { name: "newUsers" }] }),
@@ -115,11 +120,11 @@ export async function GET(request: NextRequest) {
   if (!checkAuth(request)) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
 
   const period = request.nextUrl.searchParams.get("period") ?? "30d";
-  const { gte, label, chartUnit, chartPoints, ga4Start } = periodToRange(period);
+  const { gte, lte, label, chartUnit, chartPoints, ga4Start, ga4End, chartEnd } = periodToRange(period);
 
   try {
     const listOpts: Parameters<typeof stripe.checkout.sessions.list>[0] = { limit: 100 };
-    if (gte > 0) listOpts.created = { gte };
+    if (gte > 0 || lte) listOpts.created = { ...(gte > 0 ? { gte } : {}), ...(lte ? { lte } : {}) };
 
     const allSessions = await stripe.checkout.sessions.list(listOpts);
     const paid = allSessions.data.filter((s) => s.payment_status === "paid");
@@ -130,7 +135,7 @@ export async function GET(request: NextRequest) {
     const uniqueEmails = new Set<string>();
 
     // Build chart
-    const chartKeys = buildChartKeys(chartUnit, chartPoints);
+    const chartKeys = buildChartKeys(chartUnit, chartPoints, chartEnd);
     const chartData: Record<string, number> = Object.fromEntries(chartKeys.map((k) => [k, 0]));
 
     for (const s of paid) {
@@ -179,7 +184,7 @@ export async function GET(request: NextRequest) {
     const ga4PropertyId = process.env.GA4_PROPERTY_ID;
     const ga4Creds      = process.env.GA4_SERVICE_ACCOUNT_JSON;
     if (ga4PropertyId && ga4Creds) {
-      try { ga4 = await fetchGA4(ga4PropertyId, ga4Creds, ga4Start); }
+      try { ga4 = await fetchGA4(ga4PropertyId, ga4Creds, ga4Start, ga4End); }
       catch (e) { console.error("GA4 error:", e); }
     }
 

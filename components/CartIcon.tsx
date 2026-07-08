@@ -6,6 +6,7 @@ import Link from "next/link";
 import { useCart } from "@/lib/cart";
 import { COUNTRY_GROUPS, getShippingRate } from "@/lib/shipping";
 import { useCurrency } from "@/lib/currency-context";
+import { TrustBadgesInline } from "@/components/TrustBadges";
 
 const FREE_THRESHOLD = 50;
 
@@ -241,6 +242,8 @@ export default function CartIcon({ light }: { light?: boolean }) {
                     ? "Select Country to Checkout"
                     : `Checkout — ${format(orderTotal)}`}
                 </button>
+
+                <TrustBadgesInline />
 
                 <Link
                   href="/shop"

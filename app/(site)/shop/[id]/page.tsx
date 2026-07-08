@@ -2,6 +2,7 @@ import Link from "next/link";
 import { products, INFOGRAPHIC_IMAGES } from "@/lib/products";
 import { notFound } from "next/navigation";
 import ProductPageClient from "@/components/ProductPageClient";
+import CompleteTheLook from "@/components/CompleteTheLook";
 import YouMayAlsoLike from "@/components/YouMayAlsoLike";
 import RecentlyViewed from "@/components/RecentlyViewed";
 
@@ -140,6 +141,7 @@ export default async function ProductPage({ params }: { params: Promise<{ id: st
         </nav>
 
         <ProductPageClient product={product} />
+        <CompleteTheLook product={product} />
         <YouMayAlsoLike product={product} />
         <RecentlyViewed excludeId={product.id} />
       </div>

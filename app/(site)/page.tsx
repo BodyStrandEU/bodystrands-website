@@ -8,6 +8,8 @@ import ReviewsMarquee from "@/components/ReviewsMarquee";
 import LifestyleSlider from "@/components/LifestyleSlider";
 import BrandVideo from "@/components/BrandVideo";
 import UGCGallery from "@/components/UGCGallery";
+import InstagramSection from "@/components/InstagramSection";
+import { TrustBadgesStrip } from "@/components/TrustBadges";
 import { products } from "@/lib/products";
 
 const MARQUEE_TAGS = [
@@ -73,6 +75,15 @@ export default function HomePage() {
         .filter((f) => /\.(jpg|jpeg|png|webp)$/i.test(f) && !f.startsWith("."))
         .sort()
         .map((f) => `/images/lifestyle/${f}`)
+    : [];
+
+  const instagramDir = path.join(process.cwd(), "public/images/instagram");
+  const instagramImages: string[] = fs.existsSync(instagramDir)
+    ? fs
+        .readdirSync(instagramDir)
+        .filter((f) => /\.(jpg|jpeg|png|webp)$/i.test(f) && !f.startsWith("."))
+        .sort()
+        .map((f) => `/images/instagram/${f}`)
     : [];
 
   const heroTile     = allTiles.find((t) => t.label === "Back Chains");
@@ -141,6 +152,9 @@ export default function HomePage() {
           ))}
         </div>
       </div>
+
+      {/* ── TRUST BADGES ── */}
+      <TrustBadgesStrip />
 
       {/* ── FEATURED STRIP ── */}
       {featured.length > 0 && (
@@ -273,6 +287,9 @@ export default function HomePage() {
 
       {/* ── CUSTOMER PHOTOS (UGC) ── */}
       <UGCGallery />
+
+      {/* ── INSTAGRAM ── */}
+      <InstagramSection images={instagramImages} />
 
       {/* Diamond divider */}
       <div className="max-w-7xl mx-auto px-6 md:px-10 flex items-center gap-6">

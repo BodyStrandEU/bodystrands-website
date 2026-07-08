@@ -32,6 +32,18 @@ export default function ContactPage() {
             </div>
 
             <div>
+              <p className="text-[0.55rem] tracking-[0.25em] uppercase text-[#A0622A] mb-3">WhatsApp</p>
+              <a
+                href="https://wa.me/351935483918?text=Hi!%20I%20have%20a%20question%20about%20a%20Bodystrands%20piece."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm font-light text-[#2C2220] hover:text-[#A0622A] transition-colors tracking-wide"
+              >
+                +351 935 483 918
+              </a>
+            </div>
+
+            <div>
               <p className="text-[0.55rem] tracking-[0.25em] uppercase text-[#A0622A] mb-3">Response Time</p>
               <p className="text-sm font-light text-[#8C7B6E] tracking-wide">
                 We respond within 24 hours, guaranteed.

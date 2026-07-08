@@ -23,6 +23,7 @@ const INFO_LINKS = [
   { href: "/track",          label: "Track Your Order" },
   { href: "/shipping",       label: "Shipping & Returns" },
   { href: "/care",           label: "Jewelry Care" },
+  { href: "/faq",            label: "FAQ" },
   { href: "/privacy-policy", label: "Privacy Policy" },
   { href: "/terms",          label: "Terms & Conditions" },
 ];
@@ -95,6 +96,14 @@ export default function Footer() {
           >
             info@bodystrands.com
           </a>
+          <a
+            href="https://wa.me/351935483918?text=Hi!%20I%20have%20a%20question%20about%20a%20Bodystrands%20piece."
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[0.65rem] font-light tracking-[0.1em] text-[#E8B4A8]/60 hover:text-[#E8B4A8] transition-colors"
+          >
+            WhatsApp: +351 935 483 918
+          </a>
           <p className="text-[0.65rem] font-light tracking-[0.1em] text-[#E8B4A8]/60">
             Handmade in Portugal
           </p>
@@ -110,7 +119,10 @@ export default function Footer() {
           <p className="text-[0.6rem] tracking-[0.18em] uppercase text-[#E8B4A8]/35">
             © {year} Bodystrands. All rights reserved.
           </p>
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-4">
+            <span className="text-[0.5rem] tracking-[0.15em] uppercase text-[#E8B4A8]/40 whitespace-nowrap">
+              🔒 Secure Checkout
+            </span>
             {["VISA", "MASTERCARD", "AMEX", "APPLE PAY", "GOOGLE PAY"].map((brand) => (
               <span
                 key={brand}

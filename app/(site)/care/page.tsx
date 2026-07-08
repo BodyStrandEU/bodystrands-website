@@ -52,6 +52,19 @@ export default function CarePage() {
         </p>
       </div>
 
+      <div className="mb-12 bg-[#FAF7F5] border border-[#E8B4A8]/40 px-6 py-8 md:px-10 md:py-10">
+        <p className="text-[0.55rem] tracking-[0.3em] uppercase text-[#A0622A] mb-3">The Water Test</p>
+        <h2 className="font-heading text-2xl md:text-3xl font-light text-[#2C2220] mb-4 leading-snug">
+          We soak every design in water for days at a time.
+        </h2>
+        <p className="text-sm font-light leading-relaxed tracking-wide text-[#8C7B6E] max-w-xl">
+          Before a piece ever ships, we test it — fully submerged, for days on end. No dulling,
+          no discoloration, same shine as day one. That is the standard every Bodystrands piece
+          is held to, which is why we can confidently say: shower in it, swim in it, forget it is
+          even on. It will still look brand new.
+        </p>
+      </div>
+
       <div className="space-y-10">
         {CARE_SECTIONS.map((s) => (
           <section key={s.title} className="border-t border-[#E8B4A8]/40 pt-8">

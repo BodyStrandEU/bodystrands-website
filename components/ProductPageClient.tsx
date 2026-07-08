@@ -14,6 +14,7 @@ import { trackRecentlyViewed } from "@/lib/recentlyViewed";
 import SizeGuideButton from "@/components/SizeGuideButton";
 import { useCurrency } from "@/lib/currency-context";
 import ProductReviews from "@/components/ProductReviews";
+import { TrustBadgesRow } from "@/components/TrustBadges";
 
 const FREE_SHIPPING_THRESHOLD = 50;
 
@@ -403,22 +404,9 @@ export default function ProductPageClient({ product }: { product: Product }) {
           <ShippingNudge price={totalPrice} />
         </div>
 
-        {/* Feature bullets */}
-        <div className="flex flex-col gap-2">
-          {[
-            "Handmade",
-            "Tarnish-resistant stainless steel",
-            "Water-resistant",
-            "Adjustable fit",
-          ].map((feat) => (
-            <p
-              key={feat}
-              className="text-[0.6rem] tracking-[0.15em] uppercase text-[#8C7B6E] flex items-center gap-2"
-            >
-              <span className="w-1 h-1 bg-[#A0622A] inline-block rounded-full" />
-              {feat}
-            </p>
-          ))}
+        {/* Trust badges */}
+        <div className="border-t border-[#E8B4A8]/40 pt-5">
+          <TrustBadgesRow />
         </div>
 
         <ProductDetails

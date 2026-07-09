@@ -17,5 +17,6 @@ export const CATEGORY_PAIRINGS: Record<Category, Category[]> = {
   "Hand Chains":           ["Bracelets", "Shoulder & Arm Chains", "Head Chains"],
   "Head Chains":           ["Back Chains", "Shoulder & Arm Chains", "Necklaces"],
   "Eyeglasses Chains":     ["Necklaces", "Bracelets", "Hand Chains"],
+  "Leg Chains":            ["Belly Chains", "Anklets", "Body Chains"],
   "Bikini Clip Chains":    ["Body Chains", "Anklets", "Belly Chains"],
 };

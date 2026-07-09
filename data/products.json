@@ -8312,5 +8312,58 @@
       "/images/products/layered-arm-chain/img-gold.png"
     ],
     "sizeGuideImage": "/images/products/4a34f7fe-cab7-4c40-a10f-cff8807d32cf.png"
+  },
+  {
+    "id": "satellite-link-choker",
+    "name": "Dainty Satellite Link Choker",
+    "price": 25,
+    "currency": "EUR",
+    "category": "Necklaces",
+    "description": "This necklace is for the girl who doesn't need anything extra. A dainty twisted oval-link sits right at the collarbone — no pendant, no fuss, just clean lines and quiet confidence.",
+    "fullDescription": "Handmade from stainless steel, it's built to stack, layer, or wear solo every day without fading, tarnishing, or asking for attention it didn't earn. Waterproof and tarnish-resistant — pool days, beach days, and everyday wear.\n\nThe chain sits close at the collarbone, adjustable to fit most neck sizes. Wear it solo or layer it with anything.",
+    "specs": [
+      {
+        "label": "Material",
+        "value": "316L stainless steel"
+      },
+      {
+        "label": "Finish",
+        "value": "Gold tone / Silver tone"
+      },
+      {
+        "label": "Style",
+        "value": "Twisted oval-link (satellite) chain"
+      },
+      {
+        "label": "Chain length",
+        "value": "35 cm + 6 cm extender"
+      },
+      {
+        "label": "Waterproof",
+        "value": "Yes"
+      },
+      {
+        "label": "Care",
+        "value": "Wipe with a soft cloth after wear. Store in an airtight container."
+      },
+      {
+        "label": "Shipping",
+        "value": "Dispatches within 1–2 business days"
+      }
+    ],
+    "gallery": [
+      "/images/products/54cc1ca6-cebd-47b1-ad59-85bc939b0294.png",
+      "/images/products/f05bdfd4-bb4e-46e5-9de6-db8d038ec039.png",
+      "/images/products/IMG_1908.jpeg",
+      "/images/products/b045dcb9-2e69-4b7f-832f-03cba5b65b9a.png",
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
+      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg"
+    ],
+    "video": "/images/products/minimalist-choker.mp4",
+    "images": [
+      "/images/products/54cc1ca6-cebd-47b1-ad59-85bc939b0294.png"
+    ],
+    "featured": false,
+    "altText": "Dainty stainless steel satellite link choker necklace — waterproof tarnish-free twisted oval chain in gold and silver tone, minimalist everyday layering necklace for women"
   }
 ]

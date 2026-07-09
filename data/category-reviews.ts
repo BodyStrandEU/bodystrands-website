@@ -9,8 +9,6 @@ export type Review = {
   sessionId?: string; // present on real customer-submitted reviews, used to prevent duplicate submissions
   productId?: string; // present when the order resolved to one specific product — used to surface
                        // this product's own reviews first on its page as volume builds up
-  verified?: boolean; // real review from an actual customer (e.g. imported from Etsy) — only these
-                       // should ever feed AggregateRating/Review structured data for Google
 };
 
 export const CATEGORY_REVIEWS: Record<string, Review[]> = {
@@ -627,7 +625,6 @@ export const CATEGORY_REVIEWS: Record<string, Review[]> = {
       headline: "So in love with this delicate necklace",
       text: "I'm so in love with this delicate necklace. Thank you so much and best regards 💗",
       image: "/images/reviews/necklaces/pink-cross-choker-necklace-1.webp",
-      verified: true,
     },
     {
       name: "Elin M.",

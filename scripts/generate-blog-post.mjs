@@ -122,6 +122,7 @@ const CATEGORY_KEYWORDS = {
   "Necklaces":          ["necklace", "choker", "lariat", "pendant necklace"],
   "Bracelets":          ["bracelet", "birthstone", "birth flower", "zodiac", "initial", "personalised", "personalized", "customized", "charm bracelet", "layered bracelet", "stacking bracelet"],
   "Eyeglasses Chains":  ["eyeglasses", "glasses chain", "sunglasses chain"],
+  "Leg Chains":         ["leg chain", "thigh chain"],
   "Bikini Clip Chains": ["bikini"],
 };
 
@@ -193,6 +194,10 @@ function slugify(title) {
 }
 
 async function main() {
+  if (!process.env.ANTHROPIC_API_KEY) {
+    console.log("ANTHROPIC_API_KEY not set — skipping blog generation.");
+    return;
+  }
   const client   = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
   const posts    = JSON.parse(readFileSync(BLOG_FILE, "utf-8"));
   const products = JSON.parse(readFileSync(PRODUCTS_FILE, "utf-8"));

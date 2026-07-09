@@ -6,6 +6,7 @@ import type { Product } from "@/lib/products";
 
 const CATEGORY_ORDER = [
   "Belly Chains",
+  "Leg Chains",
   "Back Chains",
   "Body Chains",
   "Shoulder & Arm Chains",

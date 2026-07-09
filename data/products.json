@@ -8361,11 +8361,22 @@
       "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
       "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg"
     ],
-    "video": "/images/products/minimalist-choker.mp4",
     "images": [
       "/images/products/54cc1ca6-cebd-47b1-ad59-85bc939b0294.png"
     ],
     "featured": false,
-    "altText": "Dainty satellite link choker necklace in stainless steel, minimalist gold-finish chain for everyday wear"
+    "altText": "Dainty satellite link choker necklace in stainless steel, minimalist gold-finish chain for everyday wear",
+    "variants": [
+      "Gold Tone",
+      "Silver Tone"
+    ],
+    "variantHeroes": {
+      "Gold Tone": "/images/products/IMG_1908.jpeg",
+      "Silver Tone": "/images/products/54cc1ca6-cebd-47b1-ad59-85bc939b0294.png"
+    },
+    "variantVideos": {
+      "Gold Tone": "/images/products/minimalist-choker.mp4",
+      "Silver Tone": "/images/products/minimalist-choker.mp4"
+    }
   }
 ]

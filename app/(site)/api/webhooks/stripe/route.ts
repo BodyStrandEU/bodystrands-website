@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import Stripe from "stripe";
 import { Resend } from "resend";
+import { addToAudience } from "@/lib/audience";
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!);
 const resend = new Resend(process.env.RESEND_API_KEY);
@@ -144,6 +145,10 @@ export async function POST(req: NextRequest) {
           </div>
         `,
       }).catch(e => console.error("Customer confirmation email failed:", e));
+    }
+
+    if (customerEmail !== "—") {
+      await addToAudience(process.env.RESEND_CUSTOMER_SEGMENT_ID, customerEmail, shippingName);
     }
 
     // Owner notification

@@ -367,6 +367,10 @@ The Anthropic API key is NOT in .env.local — ask the user to paste it (or crea
 - Build **3 weeks at a time** — never schedule more than 3 weeks out
 - When rebuilding: `postiz posts:list --startDate ... --endDate ...` → parse `"id"` fields from JSON → delete all → rebuild fresh
 
+### Video posts — NO cover image
+When scheduling a video, post the video URL alone as media — no cover image, no thumbnail paired with it.
+`-m "video_url"` only. Applies to all platforms (IG, FB, Pinterest).
+
 ### API rate limiting — CRITICAL
 - Always add `time.sleep(0.5)` between every `postiz posts:create` call
 - After bulk deletes (100+ posts), wait 2–3 minutes before starting new creates

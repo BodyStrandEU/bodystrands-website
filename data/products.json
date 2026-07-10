@@ -5798,21 +5798,28 @@
       "Silver Tone"
     ],
     "images": [
-      "https://i.etsystatic.com/55122258/r/il/0c939a/7906758661/il_fullxfull.7906758661_tvgc.jpg"
+      "/images/products/0c82c788-c58b-4dc8-b448-f63750bc15e6.png"
     ],
     "altText": "Delicate gold tone stainless steel bridal hair vine chain draped through wedding updo",
     "gallery": [
-      "https://i.etsystatic.com/55122258/r/il/0c939a/7906758661/il_fullxfull.7906758661_tvgc.jpg",
-      "https://i.etsystatic.com/55122258/r/il/edf758/7858805084/il_fullxfull.7858805084_q33j.jpg",
-      "https://i.etsystatic.com/55122258/r/il/f3917d/7807937506/il_fullxfull.7807937506_heeo.jpg",
-      "https://i.etsystatic.com/55122258/r/il/fd4744/7807979968/il_fullxfull.7807979968_qa8r.jpg",
+      "/images/products/0c82c788-c58b-4dc8-b448-f63750bc15e6.png",
+      "/images/products/b3deb32a-fae4-4005-8751-d36d3e2aec0f.png",
+      "/images/products/IMG_2533-2.jpeg",
+      "/images/products/f227eb4c-343a-43ea-89ec-3d9f6eaed86a.png",
       "https://i.etsystatic.com/55122258/r/il/26282e/7734979557/il_fullxfull.7734979557_95jd.jpg",
-      "https://i.etsystatic.com/55122258/r/il/a80e97/7906869519/il_fullxfull.7906869519_jzjg.jpg"
+      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.jpg",
+      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf-copy.jpeg",
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png"
     ],
     "variantHeroes": {
-      "Gold Tone": "https://i.etsystatic.com/55122258/r/il/0c939a/7906758661/il_fullxfull.7906758661_tvgc.jpg",
-      "Silver Tone": "https://i.etsystatic.com/55122258/r/il/a80e97/7906869519/il_fullxfull.7906869519_jzjg.jpg"
-    }
+      "Gold Tone": "/images/products/0c82c788-c58b-4dc8-b448-f63750bc15e6.png",
+      "Silver Tone": "/images/products/b3deb32a-fae4-4005-8751-d36d3e2aec0f.png"
+    },
+    "variantVideos": {
+      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/6cc3ebaf9e58d8f218cde6d699724327/downloads/default.mp4",
+      "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/6cc3ebaf9e58d8f218cde6d699724327/downloads/default.mp4"
+    },
+    "sizeGuideImage": "/images/products/esty-thumnails-new--25-.png"
   },
   {
     "id": "boho-finger-hand-chain",

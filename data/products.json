@@ -4253,7 +4253,19 @@
     ],
     "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/6fc8335347ccfd5e332cdf6a30175fa8/downloads/default.mp4",
     "altText": "Delicate gold-tone hand chain with pearl accents, elegant bridal hand jewelry for weddings and special occasions",
-    "sizeGuideImage": "/images/products/c213697c-ffba-4e49-826c-5dd871a9be0c.png"
+    "sizeGuideImage": "/images/products/c213697c-ffba-4e49-826c-5dd871a9be0c.png",
+    "variantGroups": [
+      {
+        "label": "Ring Size",
+        "type": "options",
+        "options": [
+          "US 6 / EU 52 (5.18 cm)",
+          "US 7 / EU 54 (5.40 cm)",
+          "US 8 / EU 57 (5.61 cm)",
+          "US 9 / EU 59 (5.82 cm)"
+        ]
+      }
+    ]
   },
   {
     "id": "barefoot-toe-chain-anklet",
@@ -6151,7 +6163,19 @@
       "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/0c7ef49c91f64384dc980afcb755cd36/downloads/default.mp4",
       "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/0c7ef49c91f64384dc980afcb755cd36/downloads/default.mp4"
     },
-    "sizeGuideImage": "/images/products/a22af6e6-942a-4263-aa3f-e8072ea80396-copy.png"
+    "sizeGuideImage": "/images/products/a22af6e6-942a-4263-aa3f-e8072ea80396-copy.png",
+    "variantGroups": [
+      {
+        "label": "Ring Size",
+        "type": "options",
+        "options": [
+          "US 6 / EU 52 (5.18 cm)",
+          "US 7 / EU 54 (5.40 cm)",
+          "US 8 / EU 57 (5.61 cm)",
+          "US 9 / EU 59 (5.82 cm)"
+        ]
+      }
+    ]
   },
   {
     "id": "dainty-summer-belly-chain",

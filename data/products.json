@@ -4199,20 +4199,32 @@
     "price": 37,
     "currency": "EUR",
     "category": "Hand Chains",
-    "description": "Your bridal hand detail, in pearl. This dainty gold pearl hand chain drapes from wrist to finger — a delicate, romantic accessory for weddings, boho occasions, and any look that deserves a finishing touch.",
-    "fullDescription": "Pearl accents trace the chain from bracelet to ring, creating a luminous hand harness that sits beautifully in wedding photos and feels completely effortless to wear.\n\nHandcrafted in gold-tone stainless steel. One size, adjustable ring and bracelet sections. A unique bridal accessory that adds something genuinely special to a wedding look.",
+    "description": "Your bridal hand detail, in pearl. This dainty gold pearl hand chain drapes from wrist to finger — a delicate, luminous accessory for weddings, boho occasions, and any look that deserves a finishing touch.",
+    "fullDescription": "Pearl accents trace the chain from bracelet to ring, creating a luminous hand harness that sits beautifully in wedding photos and feels completely effortless to wear.\n\nHandcrafted in gold-tone stainless steel with pearl detailing. Durable and tarnish-resistant — built to keep its shine. A unique bridal accessory that adds something genuinely special to a wedding look.\n\nNeed a different ring size? Message us after checkout — we'll custom make it to your exact fit for free.",
     "specs": [
       {
         "label": "Material",
-        "value": "Gold-tone stainless steel with pearl accents"
+        "value": "Gold-tone 316L stainless steel with pearl accents"
       },
       {
         "label": "Style",
         "value": "Pearl hand chain / slave bracelet"
       },
       {
-        "label": "Fit",
-        "value": "Adjustable"
+        "label": "Ring Size",
+        "value": "US 6 / EU 52 (5.18 cm) · US 7 / EU 54 (5.40 cm) · US 8 / EU 57 (5.61 cm) · US 9 / EU 59 (5.82 cm)"
+      },
+      {
+        "label": "Custom Sizing",
+        "value": "Message us after checkout — we'll make your exact size for free"
+      },
+      {
+        "label": "Bracelet Length",
+        "value": "16.5 cm + 4 cm extender (16.5–20.5 cm total)"
+      },
+      {
+        "label": "Connector Chain",
+        "value": "9 cm (wrist to finger)"
       },
       {
         "label": "Occasion",
@@ -4220,7 +4232,7 @@
       },
       {
         "label": "Care",
-        "value": "Handle gently. Store in an airtight container."
+        "value": "Wipe gently with a soft cloth after each wear. Store in an airtight container."
       },
       {
         "label": "Shipping",
@@ -6070,32 +6082,40 @@
     "price": 30,
     "currency": "EUR",
     "category": "Hand Chains",
-    "description": "Your bridal hand detail. This dainty silver or gold hand chain connects ring to bracelet for a minimalist hand harness — perfect for bridal shoots, weddings, and any occasion where your hands are on display.",
-    "fullDescription": "A delicate chain bridges the finger to the wrist in a floating hand harness silhouette. Lightweight and adjustable — it photographs beautifully in ring-detail shots and close-ups of the wedding look.\n\nAvailable in Gold or Silver stainless steel. Adjustable bracelet and ring sections.",
+    "description": "This delicate stainless steel hand chain is the kind of detail that does the talking for you — a dainty rolo chain that drapes gracefully from wrist to finger for a barely-there feel that's impossible to ignore.",
+    "fullDescription": "Whether you're finishing a boho festival look, searching for unique bridal jewelry, or just want something romantic for everyday wear, this piece sits effortlessly on the back of your hand and elevates everything.\n\nHandcrafted from durable, tarnish-resistant stainless steel so your new favourite accessory keeps its shine — no fading, no tarnishing, no fuss. Available in Gold Tone and Silver Tone.\n\nNeed a different size? Message us after checkout — we'll custom make it to your exact fit for free.",
     "specs": [
       {
         "label": "Material",
-        "value": "Stainless steel"
+        "value": "316L stainless steel"
       },
       {
-        "label": "Colours",
-        "value": "Gold or Silver"
+        "label": "Finish",
+        "value": "Gold Tone / Silver Tone"
       },
       {
-        "label": "Style",
-        "value": "Hand chain / ring bracelet"
+        "label": "Ring Size",
+        "value": "US 6 / EU 52 (5.18 cm) · US 7 / EU 54 (5.40 cm) · US 8 / EU 57 (5.61 cm) · US 9 / EU 59 (5.82 cm)"
       },
       {
-        "label": "Fit",
-        "value": "Adjustable"
+        "label": "Custom Sizing",
+        "value": "Message us after checkout — we'll make your exact size for free"
       },
       {
-        "label": "Occasion",
-        "value": "Bridal, wedding, editorial"
+        "label": "Bracelet Length",
+        "value": "16.5 cm + 4 cm extender (16.5–20.5 cm total)"
+      },
+      {
+        "label": "Connector Chain",
+        "value": "9 cm (wrist to finger)"
+      },
+      {
+        "label": "Waterproof",
+        "value": "Yes"
       },
       {
         "label": "Care",
-        "value": "Wipe gently with soft cloth. Store in an airtight container."
+        "value": "Wipe gently with a soft cloth after each wear. Store in an airtight container."
       },
       {
         "label": "Shipping",

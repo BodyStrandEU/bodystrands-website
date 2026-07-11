@@ -370,6 +370,9 @@ The Anthropic API key is NOT in .env.local — ask the user to paste it (or crea
 ### Caption rule — NO "Handmade in Portugal"
 Never include "Handmade in Portugal" or "Made in Portugal" or "🇵🇹" in any social media caption (IG, FB, Pinterest). Ever.
 
+### Pinterest — never repeat images in the same campaign
+Never schedule the same image more than once within a campaign window. If there aren't enough unique images to fill 15 pins/day, post fewer — one pin per unique image only. Never pad with repeats. User rule: "if i say to post 15 per day and you don't have enough, instead of reposting, post 14."
+
 ### Video posts — NO cover image
 When scheduling a video, post the video URL alone as media — no cover image, no thumbnail paired with it.
 `-m "video_url"` only. Applies to all platforms (IG, FB, Pinterest).

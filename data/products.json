@@ -8129,7 +8129,7 @@
     "specs": [
       {
         "label": "Material",
-        "value": "316L stainless steel (waterproof & tarnish-resistant)"
+        "value": "Stainless steel (waterproof & tarnish-resistant)"
       },
       {
         "label": "Style",
@@ -8193,21 +8193,22 @@
       }
     ],
     "gallery": [
-      "/images/products/birthstone-arm-chain/img-1.jpeg",
-      "/images/products/birthstone-arm-chain/img-2.png",
-      "/images/products/birthstone-arm-chain/img-3.png",
-      "/images/products/birthstone-arm-chain/img-4.png",
-      "/images/products/birthstone-arm-chain/img-5.png",
-      "/images/products/birthstone-arm-chain/img-6.jpeg",
+      "/images/products/birthstone-arm-chain/img-january.png",
       "/images/products/birthstone-arm-chain/img-7.png",
-      "/images/products/birthstone-arm-chain/img-january.png"
+      "/images/products/birthstone-arm-chain/img-6.jpeg",
+      "/images/products/birthstone-arm-chain/img-2.png",
+      "/images/products/birthstone-arm-chain/img-4.png",
+      "/images/products/birthstone-arm-chain/img-3.png",
+      "/images/products/birthstone-arm-chain/img-5.png",
+      "/images/products/birthstone-arm-chain/img-1.jpeg"
     ],
     "images": [
-      "/images/products/birthstone-arm-chain/img-1.jpeg"
+      "/images/products/birthstone-arm-chain/img-january.png"
     ],
     "video": "/images/products/birthstone-arm-chain/video.mp4",
     "featured": false,
-    "altText": "Gold birthstone arm chain with teardrop gemstone pendant — personalized upper arm cuff in stainless steel for beach, wedding, and everyday wear"
+    "altText": "Gold birthstone arm chain with teardrop gemstone pendant — personalized upper arm cuff in stainless steel for beach, wedding, and everyday wear",
+    "sizeGuideImage": "/images/products/137e8322-36db-4670-afed-c289f61ce7ae.png"
   },
   {
     "id": "bicep-chain",

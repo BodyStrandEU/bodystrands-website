@@ -367,6 +367,9 @@ The Anthropic API key is NOT in .env.local — ask the user to paste it (or crea
 - Build **3 weeks at a time** — never schedule more than 3 weeks out
 - When rebuilding: `postiz posts:list --startDate ... --endDate ...` → parse `"id"` fields from JSON → delete all → rebuild fresh
 
+### Caption rule — NO "Handmade in Portugal"
+Never include "Handmade in Portugal" or "Made in Portugal" or "🇵🇹" in any social media caption (IG, FB, Pinterest). Ever.
+
 ### Video posts — NO cover image
 When scheduling a video, post the video URL alone as media — no cover image, no thumbnail paired with it.
 `-m "video_url"` only. Applies to all platforms (IG, FB, Pinterest).

@@ -1103,9 +1103,9 @@
     <g:link>https://www.bodystrands.com/shop/silver-waist-chain</g:link>
     <g:image_link>https://i.etsystatic.com/55122258/r/il/00c68e/7783598352/il_fullxfull.7783598352_ord3.jpg</g:image_link>
       <g:additional_image_link>https://www.bodystrands.com/images/products/f985b2bb-689d-4d24-90e2-7d6f06d84ae9.png</g:additional_image_link>
+      <g:additional_image_link>https://i.etsystatic.com/55122258/r/il/3ca3d7/7783400862/il_fullxfull.7783400862_3lw5.jpg</g:additional_image_link>
       <g:additional_image_link>https://www.bodystrands.com/images/products/6ff3c5b2-4fa2-4c93-8458-e83dc479cbd8.png</g:additional_image_link>
       <g:additional_image_link>https://i.etsystatic.com/55122258/r/il/17f798/7787214796/il_fullxfull.7787214796_ampn.jpg</g:additional_image_link>
-      <g:additional_image_link>https://i.etsystatic.com/55122258/r/il/3ca3d7/7783400862/il_fullxfull.7783400862_3lw5.jpg</g:additional_image_link>
       <g:additional_image_link>https://i.etsystatic.com/55122258/r/il/d7b84c/7783600598/il_fullxfull.7783600598_op0k.jpg</g:additional_image_link>
       <g:additional_image_link>https://i.etsystatic.com/55122258/r/il/da142d/7783600828/il_fullxfull.7783600828_l2oi.jpg</g:additional_image_link>
     <g:price>30.00 EUR</g:price>
@@ -1333,6 +1333,24 @@
     <g:material>Stainless Steel</g:material>
     <g:google_product_category>201</g:google_product_category>
       <g:color>Silver Tone</g:color>
+    <g:identifier_exists>false</g:identifier_exists>
+  </item>
+  <item>
+    <g:id>birthstone-thigh-chain</g:id>
+    <g:title>Birthstone Thigh Chain</g:title>
+    <g:description>The piece nobody else in the room is wearing. One dainty chain wraps around the upper thigh — from it, an arc drop with your gemstone at the lowest point. Choose your stone, your birthstone, your colour. 12 colours, one piece, completely personal.</g:description>
+    <g:link>https://www.bodystrands.com/shop/birthstone-thigh-chain</g:link>
+    <g:image_link>https://www.bodystrands.com/images/products/birthstone-thigh-chain/582329d4-blue-beach.jpeg</g:image_link>
+      <g:additional_image_link>https://www.bodystrands.com/images/products/birthstone-thigh-chain/3a5aca88-ruby-path.png</g:additional_image_link>
+      <g:additional_image_link>https://www.bodystrands.com/images/products/birthstone-thigh-chain/2fea701c-gemstones.png</g:additional_image_link>
+      <g:additional_image_link>https://www.bodystrands.com/images/products/f9ddd93a-310e-4508-ad2a-94dbe54bf2bb.png</g:additional_image_link>
+    <g:price>35.00 EUR</g:price>
+    <g:availability>in_stock</g:availability>
+    <g:condition>new</g:condition>
+    <g:brand>Bodystrands</g:brand>
+    <g:mpn>birthstone-thigh-chain</g:mpn>
+    <g:material>Stainless Steel</g:material>
+    <g:google_product_category>201</g:google_product_category>
     <g:identifier_exists>false</g:identifier_exists>
   </item>
   <item>
@@ -1722,8 +1740,8 @@
     <g:title>Zodiac Charm Bracelet</g:title>
     <g:description>Your star sign on your wrist. This Y2K-inspired gold bracelet features a zodiac charm — a personalised, minimalist piece handcrafted from tarnish-resistant stainless steel for everyday wear.</g:description>
     <g:link>https://www.bodystrands.com/shop/zodiac-charm-bracelet</g:link>
-    <g:image_link>https://i.etsystatic.com/55122258/r/il/0c66ec/8051673155/il_fullxfull.8051673155_ta78.jpg</g:image_link>
-      <g:additional_image_link>https://i.etsystatic.com/55122258/r/il/fdce1a/8049938055/il_fullxfull.8049938055_2a2s.jpg</g:additional_image_link>
+    <g:image_link>https://i.etsystatic.com/55122258/r/il/fdce1a/8049938055/il_fullxfull.8049938055_2a2s.jpg</g:image_link>
+      <g:additional_image_link>https://i.etsystatic.com/55122258/r/il/0c66ec/8051673155/il_fullxfull.8051673155_ta78.jpg</g:additional_image_link>
       <g:additional_image_link>https://i.etsystatic.com/55122258/r/il/82e431/7824253621/il_fullxfull.7824253621_acsc.jpg</g:additional_image_link>
       <g:additional_image_link>https://i.etsystatic.com/55122258/r/il/71cca8/8049941925/il_fullxfull.8049941925_6i0u.jpg</g:additional_image_link>
       <g:additional_image_link>https://i.etsystatic.com/55122258/r/il/fed2cd/8003728682/il_fullxfull.8003728682_b0x8.jpg</g:additional_image_link>
@@ -3408,6 +3426,25 @@ Select Small (+7 cm), Medium (+14 cm), or Large (+23 cm) extension</g:descriptio
     <g:identifier_exists>false</g:identifier_exists>
   </item>
   <item>
+    <g:id>turquoise-beaded-choker</g:id>
+    <g:title>Turquoise Enamel Bead Double Choker</g:title>
+    <g:description>Two delicate chains, one cool colour. A gold mirror-link chain and a turquoise enamel bead chain — made as one seamless double-layer choker that sits right at your collarbone, effortless and just a little undone.</g:description>
+    <g:link>https://www.bodystrands.com/shop/turquoise-beaded-choker</g:link>
+    <g:image_link>https://www.bodystrands.com/images/products/turquoise-beaded-choker/35dc6f27-f6c3-4913-b4bc-6b0554227fd2.jpeg</g:image_link>
+      <g:additional_image_link>https://www.bodystrands.com/images/products/turquoise-beaded-choker/5bf3f57a-726e-4859-8286-928bebf9108c.png</g:additional_image_link>
+      <g:additional_image_link>https://www.bodystrands.com/images/products/turquoise-beaded-choker/390e92bb-46a4-4bb6-bba0-47cfaa9bd545.png</g:additional_image_link>
+      <g:additional_image_link>https://www.bodystrands.com/images/products/turquoise-beaded-choker/401a7a63-c61a-4e09-82e9-7a6118e8bf21.jpeg</g:additional_image_link>
+      <g:additional_image_link>https://www.bodystrands.com/images/products/turquoise-beaded-choker/50718202-68fc-4146-99c2-07e9e5844bdc.jpeg</g:additional_image_link>
+    <g:price>35.00 EUR</g:price>
+    <g:availability>in_stock</g:availability>
+    <g:condition>new</g:condition>
+    <g:brand>Bodystrands</g:brand>
+    <g:mpn>turquoise-beaded-choker</g:mpn>
+    <g:material>Stainless Steel</g:material>
+    <g:google_product_category>201</g:google_product_category>
+    <g:identifier_exists>false</g:identifier_exists>
+  </item>
+  <item>
     <g:id>pink-cross-charm-bracelet-14-cm</g:id>
     <g:title>Pink Cross Charm Bracelet — 14 CM</g:title>
     <g:description>A soft pink enamel cross charm on a delicate gold mirror-link chain — understated faith jewelry you can wear every day without taking off. Made from 316L stainless steel, it&apos;s fully waterproof and tarnish-free. Fastens with a lobster clasp and includes a 5 cm extension chain so you can adjust the fit. Available from 14 to 23 cm.</g:description>
@@ -3666,8 +3703,8 @@ Select Small (+7 cm), Medium (+14 cm), or Large (+23 cm) extension</g:descriptio
     <g:description>There&apos;s nothing quite like finding that one perfect accessory that makes you feel effortlessly put together — whether you&apos;re in a swimsuit, a summer dress, an evening gown, or a simple white shirt on a weekend out. This dainty layered arm chain is designed to be exactly that: a weightless, eye-catching piece of arm jewelry that catches the light beautifully whether you&apos;re lounging by the pool, attending a wedding, heading to a festival, or simply elevating your everyday look.</g:description>
     <g:link>https://www.bodystrands.com/shop/layered-arm-chain</g:link>
     <g:image_link>https://www.bodystrands.com/images/products/layered-arm-chain/img-gold.png</g:image_link>
-      <g:additional_image_link>https://www.bodystrands.com/images/products/layered-arm-chain/img-silver.png</g:additional_image_link>
       <g:additional_image_link>https://www.bodystrands.com/images/products/layered-arm-chain/img-stainless.png</g:additional_image_link>
+      <g:additional_image_link>https://www.bodystrands.com/images/products/layered-arm-chain/img-silver.png</g:additional_image_link>
       <g:additional_image_link>https://www.bodystrands.com/images/products/layered-arm-chain/img-material.jpg</g:additional_image_link>
       <g:additional_image_link>https://www.bodystrands.com/images/products/layered-arm-chain/img-fit.png</g:additional_image_link>
       <g:additional_image_link>https://www.bodystrands.com/images/products/layered-arm-chain/img-shipping.jpeg</g:additional_image_link>
@@ -3686,8 +3723,8 @@ Select Small (+7 cm), Medium (+14 cm), or Large (+23 cm) extension</g:descriptio
     <g:title>Layered Arm Chain — Silver Plated</g:title>
     <g:description>There&apos;s nothing quite like finding that one perfect accessory that makes you feel effortlessly put together — whether you&apos;re in a swimsuit, a summer dress, an evening gown, or a simple white shirt on a weekend out. This dainty layered arm chain is designed to be exactly that: a weightless, eye-catching piece of arm jewelry that catches the light beautifully whether you&apos;re lounging by the pool, attending a wedding, heading to a festival, or simply elevating your everyday look.</g:description>
     <g:link>https://www.bodystrands.com/shop/layered-arm-chain</g:link>
-    <g:image_link>https://www.bodystrands.com/images/products/layered-arm-chain/img-silver.png</g:image_link>
-      <g:additional_image_link>https://www.bodystrands.com/images/products/layered-arm-chain/img-stainless.png</g:additional_image_link>
+    <g:image_link>https://www.bodystrands.com/images/products/layered-arm-chain/img-stainless.png</g:image_link>
+      <g:additional_image_link>https://www.bodystrands.com/images/products/layered-arm-chain/img-silver.png</g:additional_image_link>
       <g:additional_image_link>https://www.bodystrands.com/images/products/layered-arm-chain/img-material.jpg</g:additional_image_link>
       <g:additional_image_link>https://www.bodystrands.com/images/products/layered-arm-chain/img-fit.png</g:additional_image_link>
       <g:additional_image_link>https://www.bodystrands.com/images/products/layered-arm-chain/img-shipping.jpeg</g:additional_image_link>
@@ -3706,8 +3743,8 @@ Select Small (+7 cm), Medium (+14 cm), or Large (+23 cm) extension</g:descriptio
     <g:title>Layered Arm Chain — Stainless Steel</g:title>
     <g:description>There&apos;s nothing quite like finding that one perfect accessory that makes you feel effortlessly put together — whether you&apos;re in a swimsuit, a summer dress, an evening gown, or a simple white shirt on a weekend out. This dainty layered arm chain is designed to be exactly that: a weightless, eye-catching piece of arm jewelry that catches the light beautifully whether you&apos;re lounging by the pool, attending a wedding, heading to a festival, or simply elevating your everyday look.</g:description>
     <g:link>https://www.bodystrands.com/shop/layered-arm-chain</g:link>
-    <g:image_link>https://www.bodystrands.com/images/products/layered-arm-chain/img-stainless.png</g:image_link>
-      <g:additional_image_link>https://www.bodystrands.com/images/products/layered-arm-chain/img-silver.png</g:additional_image_link>
+    <g:image_link>https://www.bodystrands.com/images/products/layered-arm-chain/img-silver.png</g:image_link>
+      <g:additional_image_link>https://www.bodystrands.com/images/products/layered-arm-chain/img-stainless.png</g:additional_image_link>
       <g:additional_image_link>https://www.bodystrands.com/images/products/layered-arm-chain/img-material.jpg</g:additional_image_link>
       <g:additional_image_link>https://www.bodystrands.com/images/products/layered-arm-chain/img-fit.png</g:additional_image_link>
       <g:additional_image_link>https://www.bodystrands.com/images/products/layered-arm-chain/img-shipping.jpeg</g:additional_image_link>

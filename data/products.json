@@ -8117,5 +8117,96 @@
       "Gold Tone": "/images/products/minimalist-choker.mp4",
       "Silver Tone": "/images/products/minimalist-choker.mp4"
     }
+  },
+  {
+    "id": "birthstone-arm-chain",
+    "name": "Birthstone Arm Chain",
+    "price": 35,
+    "currency": "EUR",
+    "category": "Shoulder & Arm Chains",
+    "description": "Wear your birth month. Gift someone theirs. This dainty birthstone arm chain wraps softly around your upper arm, finished with a teardrop gemstone pendant in your chosen birth month stone — subtle enough for everyday, personal enough to remember.",
+    "fullDescription": "Twelve gemstones. Twelve months. One piece of arm jewelry that means something.\n\nThis dainty birthstone arm chain wraps softly around your upper arm, finished with a teardrop gemstone pendant in your chosen birth month stone — subtle enough for everyday, personal enough to remember. Whether you're wearing it poolside, at a wedding, or just elevating a simple white shirt on a weekend out, it catches the light in a way that makes people ask.\n\nBuy it for yourself. Gift it to someone you love. Either way, it arrives sized to fit perfectly.\n\nSizing Guide\nMeasure around the fullest part of your upper arm (mid-bicep, relaxed — not flexed). That number is your size.\n\nXS — fits 22 to 25 cm\nS — fits 25 to 28 cm\nM — fits 28 to 31 cm\nL — fits 31 to 35 cm\nXL — fits 35 to 39 cm\nCustom Fit — message us your exact measurement in cm\n\nCustom sizing is always available at no extra cost — just send us a message after purchase with your measurement and we'll make it to fit.\n\nPerfect for\nBirthdays, bridesmaid gifts, self-gifts, pool days, beach holidays, summer weddings, festival season, resort wear, boho styling, date nights, and everyday wear — twelve months a year.\n\nWaterproof • Tarnish-resistant",
+    "specs": [
+      {
+        "label": "Material",
+        "value": "316L stainless steel (waterproof & tarnish-resistant)"
+      },
+      {
+        "label": "Style",
+        "value": "Dainty upper arm chain with birthstone drop pendant"
+      },
+      {
+        "label": "Available in",
+        "value": "Gold Tone"
+      },
+      {
+        "label": "Birthstone",
+        "value": "Choose your month at checkout (January – December)"
+      },
+      {
+        "label": "Closure",
+        "value": "Easy slip on"
+      },
+      {
+        "label": "Flexibility",
+        "value": "Rubber attachment for a comfortable, secure fit around the arm"
+      },
+      {
+        "label": "Care",
+        "value": "Wipe gently with a soft cloth after wear. Store in an airtight container."
+      },
+      {
+        "label": "Shipping",
+        "value": "Dispatches within 1–2 business days"
+      }
+    ],
+    "variantGroups": [
+      {
+        "label": "Birthstone",
+        "type": "options",
+        "options": [
+          "January — Garnet",
+          "February — Amethyst",
+          "March — Aquamarine",
+          "April — Diamond",
+          "May — Emerald",
+          "June — Pearl",
+          "July — Ruby",
+          "August — Peridot",
+          "September — Sapphire",
+          "October — Opal",
+          "November — Citrine",
+          "December — Turquoise"
+        ]
+      },
+      {
+        "label": "Upper Arm Size",
+        "type": "options",
+        "options": [
+          "XS - 22 to 25 cm",
+          "S - 25 to 28 cm",
+          "M - 28 to 31 cm",
+          "L - 31 to 35 cm",
+          "XL - 35 to 39 cm",
+          "Custom Fit"
+        ]
+      }
+    ],
+    "gallery": [
+      "/images/products/birthstone-arm-chain/img-1.jpeg",
+      "/images/products/birthstone-arm-chain/img-2.png",
+      "/images/products/birthstone-arm-chain/img-3.png",
+      "/images/products/birthstone-arm-chain/img-4.png",
+      "/images/products/birthstone-arm-chain/img-5.png",
+      "/images/products/birthstone-arm-chain/img-6.jpeg",
+      "/images/products/birthstone-arm-chain/img-7.png",
+      "/images/products/birthstone-arm-chain/img-january.png"
+    ],
+    "images": [
+      "/images/products/birthstone-arm-chain/img-1.jpeg"
+    ],
+    "video": "/images/products/birthstone-arm-chain/video.mp4",
+    "featured": false,
+    "altText": "Gold birthstone arm chain with teardrop gemstone pendant — personalized upper arm cuff in stainless steel for beach, wedding, and everyday wear"
   }
 ]

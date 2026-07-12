@@ -8283,15 +8283,18 @@
     ],
     "variantHeroes": {
       "Gold Tone": "/images/products/bicep-chain/img-gold.png",
-      "Silver Plated": "/images/products/bicep-chain/img-silver.png",
+      "Silver Plated": "/images/products/bicep-chain/img-lifestyle-casual.png",
       "Stainless Steel": "/images/products/bicep-chain/img-silver.png"
     },
     "gallery": [
       "/images/products/bicep-chain/img-gold.png",
+      "/images/products/bicep-chain/img-lifestyle-casual.png",
       "/images/products/bicep-chain/img-silver.png",
       "/images/products/bicep-chain/img-editorial.png",
       "/images/products/bicep-chain/img-lifestyle-cafe.jpeg",
-      "/images/products/bicep-chain/img-lifestyle-casual.png"
+      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf-copy.jpeg",
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
+      "/images/products/b0803c14-f4b0-469d-9867-b3f7510566e8.png"
     ],
     "images": [
       "/images/products/bicep-chain/img-gold.png"
@@ -8299,6 +8302,11 @@
     "video": "/images/products/bicep-chain/video.mp4",
     "sizeGuideImage": "/images/products/bicep-chain/img-sizing.png",
     "featured": false,
-    "altText": "Gold tone stainless steel bicep chain for summer fashion and beach accessory styling"
+    "altText": "Gold tone stainless steel bicep chain for summer fashion and beach accessory styling",
+    "variantVideos": {
+      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/81c6a9cf4cd77c67e33bb40160d6127e/downloads/default.mp4",
+      "Silver Plated": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/81c6a9cf4cd77c67e33bb40160d6127e/downloads/default.mp4",
+      "Stainless Steel": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/81c6a9cf4cd77c67e33bb40160d6127e/downloads/default.mp4"
+    }
   }
 ]

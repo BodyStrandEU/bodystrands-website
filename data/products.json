@@ -2287,67 +2287,6 @@
     "altText": "Dainty gold monogram letter necklace in stainless steel, personalized initial charm handmade jewelry"
   },
   {
-    "id": "goddess-shoulder-body-chain",
-    "name": "Goddess Shoulder Body Chain",
-    "price": 45,
-    "currency": "EUR",
-    "category": "Shoulder & Arm Chains",
-    "description": "Your goddess moment, made wearable. This handcrafted shoulder chain drapes from neck across both shoulders in a soft, symmetrical silhouette — designed for honeymoons, bridal occasions, and those who don't do ordinary.",
-    "fullDescription": "Inspired by ancient adornment, this shoulder chain wraps the upper body in delicate gold chain, with strands draping across the shoulders and down the arms in a layered, sculptural effect. It photographs beautifully against bare skin, a white dress, or a sheer top.\n\nHandcrafted in gold-tone stainless steel. Adjustable length — message us your measurements after ordering and we'll customise the fit at no extra cost.",
-    "specs": [
-      {
-        "label": "Material",
-        "value": "Gold-tone stainless steel"
-      },
-      {
-        "label": "Style",
-        "value": "Goddess shoulder and body chain"
-      },
-      {
-        "label": "Occasion",
-        "value": "Honeymoon, bridal, prom, editorial"
-      },
-      {
-        "label": "Custom fit",
-        "value": "Message us after ordering — we resize at no extra cost"
-      },
-      {
-        "label": "Care",
-        "value": "Wipe gently with soft cloth. Store in an airtight container."
-      },
-      {
-        "label": "Shipping",
-        "value": "Dispatches within 1–2 business days"
-      }
-    ],
-    "featured": false,
-    "active": false,
-    "variants": [
-      "Gold Tone",
-      "Silver Tone"
-    ],
-    "images": [
-      "https://i.etsystatic.com/55122258/r/il/32aebb/8037205749/il_fullxfull.8037205749_kc07.jpg"
-    ],
-    "altText": "Handmade gold-tone stainless steel shoulder body chain for goddess-inspired evening wear and special occasions",
-    "gallery": [
-      "https://i.etsystatic.com/55122258/r/il/32aebb/8037205749/il_fullxfull.8037205749_kc07.jpg",
-      "https://i.etsystatic.com/55122258/r/il/caf322/8103179364/il_fullxfull.8103179364_3zp0.jpg",
-      "https://i.etsystatic.com/55122258/r/il/76fac1/8151087369/il_fullxfull.8151087369_8s8r.jpg",
-      "https://i.etsystatic.com/55122258/r/il/0b520a/8031914441/il_fullxfull.8031914441_q8u0.jpg",
-      "https://i.etsystatic.com/55122258/r/il/63657d/8103191626/il_fullxfull.8103191626_oeiz.jpg",
-      "https://i.etsystatic.com/55122258/r/il/9215ca/8151099245/il_fullxfull.8151099245_ohyn.jpg",
-      "https://i.etsystatic.com/55122258/r/il/677855/7987546440/il_fullxfull.7987546440_f0j5.jpg",
-      "https://i.etsystatic.com/55122258/r/il/cbd1a6/7803902507/il_fullxfull.7803902507_7i39.jpg",
-      "https://i.etsystatic.com/55122258/r/il/066342/8151089621/il_fullxfull.8151089621_rag7.jpg",
-      "https://i.etsystatic.com/55122258/r/il/14754c/8103179860/il_fullxfull.8103179860_ftc0.jpg"
-    ],
-    "variantHeroes": {
-      "Gold Tone": "https://i.etsystatic.com/55122258/r/il/32aebb/8037205749/il_fullxfull.8037205749_kc07.jpg",
-      "Silver Tone": "https://i.etsystatic.com/55122258/r/il/14754c/8103179860/il_fullxfull.8103179860_ftc0.jpg"
-    }
-  },
-  {
     "id": "initial-letter-anklet",
     "name": "Initial Letter Anklet",
     "price": 30,

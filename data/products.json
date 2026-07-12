@@ -1393,67 +1393,6 @@
     }
   },
   {
-    "id": "bridal-epaulette-shoulder-chain",
-    "name": "Bridal Epaulette Shoulder Chain",
-    "price": 45,
-    "currency": "EUR",
-    "category": "Shoulder & Arm Chains",
-    "description": "Your bridal statement piece. This dainty shoulder chain drapes elegantly from the neck across both shoulders — handcrafted in tarnish-resistant stainless steel in gold or silver for your most important day.",
-    "fullDescription": "Designed to complement strapless gowns, off-the-shoulder dresses, and sweetheart necklines, this shoulder chain adds a sculptural shimmer that photographs beautifully and feels completely weightless to wear.\n\nHandmade in high-quality stainless steel in gold or silver tone. Custom sizing available — message us after ordering and we'll adjust every chain length to your measurements at no extra cost.",
-    "specs": [
-      {
-        "label": "Material",
-        "value": "High-quality stainless steel"
-      },
-      {
-        "label": "Colours",
-        "value": "Gold or Silver"
-      },
-      {
-        "label": "Style",
-        "value": "Bridal epaulette / shoulder drape"
-      },
-      {
-        "label": "Custom fit",
-        "value": "Message us after ordering — we resize at no extra cost"
-      },
-      {
-        "label": "Care",
-        "value": "Wipe gently with soft cloth. Store in an airtight container."
-      },
-      {
-        "label": "Shipping",
-        "value": "Dispatches within 1–2 business days"
-      }
-    ],
-    "featured": false,
-    "active": false,
-    "variants": [
-      "Gold Tone",
-      "Silver Tone"
-    ],
-    "images": [
-      "https://i.etsystatic.com/55122258/r/il/9215ca/8151099245/il_fullxfull.8151099245_ohyn.jpg"
-    ],
-    "altText": "Gold tone stainless steel bridal shoulder chain, elegant handcrafted statement jewelry for weddings",
-    "gallery": [
-      "https://i.etsystatic.com/55122258/r/il/9215ca/8151099245/il_fullxfull.8151099245_ohyn.jpg",
-      "https://i.etsystatic.com/55122258/r/il/caf322/8103179364/il_fullxfull.8103179364_3zp0.jpg",
-      "https://i.etsystatic.com/55122258/r/il/76fac1/8151087369/il_fullxfull.8151087369_8s8r.jpg",
-      "https://i.etsystatic.com/55122258/r/il/0b520a/8031914441/il_fullxfull.8031914441_q8u0.jpg",
-      "https://i.etsystatic.com/55122258/r/il/32aebb/8037205749/il_fullxfull.8037205749_kc07.jpg",
-      "https://i.etsystatic.com/55122258/r/il/63657d/8103191626/il_fullxfull.8103191626_oeiz.jpg",
-      "https://i.etsystatic.com/55122258/r/il/677855/7987546440/il_fullxfull.7987546440_f0j5.jpg",
-      "https://i.etsystatic.com/55122258/r/il/cbd1a6/7803902507/il_fullxfull.7803902507_7i39.jpg",
-      "https://i.etsystatic.com/55122258/r/il/066342/8151089621/il_fullxfull.8151089621_rag7.jpg",
-      "https://i.etsystatic.com/55122258/r/il/49e966/8103215820/il_fullxfull.8103215820_ftc0.jpg"
-    ],
-    "variantHeroes": {
-      "Gold Tone": "https://i.etsystatic.com/55122258/r/il/9215ca/8151099245/il_fullxfull.8151099245_ohyn.jpg",
-      "Silver Tone": "https://i.etsystatic.com/55122258/r/il/49e966/8103215820/il_fullxfull.8103215820_ftc0.jpg"
-    }
-  },
-  {
     "id": "barefoot-sandal-toe-chain",
     "name": "Barefoot Sandal Toe Chain",
     "price": 32.5,

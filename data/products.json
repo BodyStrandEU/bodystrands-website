@@ -264,7 +264,7 @@
       }
     ],
     "images": [
-      "/images/products/double-shoulder-chest-chain-gold-7.png"
+      "/images/products/bf05115b-938f-437c-9744-78ffa7503f8f.png"
     ],
     "featured": true,
     "variants": [
@@ -284,18 +284,23 @@
     "active": true,
     "altText": "Delicate gold tone stainless steel shoulder chain draping across collarbone for layered chest jewelry styling",
     "gallery": [
-      "/images/products/double-shoulder-chest-chain-gold-7.png",
-      "/images/products/double-shoulder-chest-chain-gold-1.png",
-      "/images/products/double-shoulder-chest-chain-gold-9.jpg",
-      "/images/products/double-shoulder-chest-chain-gold-10.png",
-      "/images/products/double-shoulder-chest-chain-gold-11.png",
-      "/images/products/double-shoulder-chest-chain-silver-1.png",
-      "/images/products/8944fd51-aa95-485b-90f5-8297175e0c11.png"
+      "/images/products/bf05115b-938f-437c-9744-78ffa7503f8f.png",
+      "/images/products/0218471e-ca76-4bbd-9590-a8d35236fdc0.jpeg",
+      "/images/products/IMG_2581-2.jpeg",
+      "/images/products/IMG_2587.jpeg",
+      "/images/products/d1285c89-1ff4-407e-bf5b-25ddd1a2e7a7-copy.png",
+      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf-copy.jpeg",
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png"
     ],
     "variantHeroes": {
       "Gold Tone": "/images/products/double-shoulder-chest-chain-gold-7.png",
-      "Silver Tone": "/images/products/double-shoulder-chest-chain-silver-1.png"
-    }
+      "Silver Tone": "/images/products/0218471e-ca76-4bbd-9590-a8d35236fdc0.jpeg"
+    },
+    "variantVideos": {
+      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/01c9b742a276bba95cffb33c4828c2e7/downloads/default.mp4",
+      "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/01c9b742a276bba95cffb33c4828c2e7/downloads/default.mp4"
+    },
+    "sizeGuideImage": "/images/products/c3dd0fbe-c4bf-4e40-bdc7-eb8bef0ea431.png"
   },
   {
     "id": "dainty-eyeglasses-chain",

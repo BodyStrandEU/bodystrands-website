@@ -8369,13 +8369,11 @@
     },
     "gallery": [
       "/images/products/stacked-pearl-cross-choker/7478046c-ca3b-4bc1-a41e-4a7c8df4ef58.png",
-      "/images/products/stacked-pearl-cross-choker/0e443386-0a68-40ce-a633-e8818b20f8f1.png",
-      "/images/products/stacked-pearl-cross-choker/6f4fc186-f2e6-43f0-a1b9-2ed1afd43055.png",
-      "/images/products/stacked-pearl-cross-choker/bbdb8e1b-10e4-4456-92b3-4e1a46f0a51a.png",
-      "/images/products/stacked-pearl-cross-choker/f4ff33c4-d44b-416f-9ddd-4710976739e3.png",
-      "/images/products/stacked-pearl-cross-choker/2289a6f4-09e0-4fc8-91e2-0b96c373e028.png",
       "/images/products/stacked-pearl-cross-choker/b3f03ce0-fc74-4b69-be26-f154ab85d0fc.png",
-      "/images/products/stacked-pearl-cross-choker/46ff1ac5-bd04-4706-8c12-2d3cb7fbad68.png"
+      "/images/products/stacked-pearl-cross-choker/2289a6f4-09e0-4fc8-91e2-0b96c373e028.png",
+      "/images/products/stacked-pearl-cross-choker/0e443386-0a68-40ce-a633-e8818b20f8f1.png",
+      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf-copy.jpeg",
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png"
     ],
     "infographicImages": [
       "/images/products/stacked-pearl-cross-choker/46ff1ac5-bd04-4706-8c12-2d3cb7fbad68.png"
@@ -8385,6 +8383,7 @@
     ],
     "featured": false,
     "active": true,
-    "altText": "Layered pearl bead and gold chain choker necklace with cross pendant, dainty stainless steel design for women"
+    "altText": "Layered pearl bead and gold chain choker necklace with cross pendant, dainty stainless steel design for women",
+    "sizeGuideImage": "/images/products/46ff1ac5-bd04-4706-8c12-2d3cb7fbad68.png"
   }
 ]

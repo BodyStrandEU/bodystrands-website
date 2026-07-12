@@ -173,14 +173,29 @@ function getRelevantCategories(topic) {
 }
 
 function pickTopic(existingPosts) {
-  const existingTitles = existingPosts.map((p) => p.title.toLowerCase());
   const allTopics = TOPIC_POOLS.flatMap((pool) =>
     pool.topics.map((t) => ({ topic: t, category: pool.category }))
   );
-  const unused = allTopics.filter(
-    ({ topic }) => !existingTitles.some((t) => t.includes(topic.split(" ").slice(0, 3).join(" ")))
+
+  // Exact-match against the literal topic string used to generate each past post
+  // (not the LLM-rewritten title, which rarely shares wording with the topic).
+  const usedTopics = new Set(existingPosts.map((p) => p.topic).filter(Boolean));
+  const neverUsed = allTopics.filter(({ topic }) => !usedTopics.has(topic));
+
+  if (neverUsed.length > 0) {
+    return neverUsed[Math.floor(Math.random() * neverUsed.length)];
+  }
+
+  // Full pool has cycled at least once — still avoid anything used in the last 21 days
+  const cutoff = new Date();
+  cutoff.setDate(cutoff.getDate() - 21);
+  const recentTopics = new Set(
+    existingPosts
+      .filter((p) => p.topic && new Date(p.date) >= cutoff)
+      .map((p) => p.topic)
   );
-  const pool = unused.length > 0 ? unused : allTopics;
+  const cooledDown = allTopics.filter(({ topic }) => !recentTopics.has(topic));
+  const pool = cooledDown.length > 0 ? cooledDown : allTopics;
   return pool[Math.floor(Math.random() * pool.length)];
 }
 
@@ -305,6 +320,7 @@ Rules:
     content:  parsed.content,
     date:     today,
     category,
+    topic,
     tags:     parsed.tags,
     readTime: `${Math.max(2, Math.ceil(parsed.content.join(" ").split(" ").length / 200))} min read`,
     featuredProducts: relevantProducts.map((p) => ({

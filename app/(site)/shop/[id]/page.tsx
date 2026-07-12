@@ -6,20 +6,30 @@ import CompleteTheLook from "@/components/CompleteTheLook";
 import YouMayAlsoLike from "@/components/YouMayAlsoLike";
 import RecentlyViewed from "@/components/RecentlyViewed";
 
-const CATEGORY_SUFFIX: Record<string, string> = {
-  "Belly Chains":       "Handmade Belly Chain Waist Jewelry",
-  "Leg Chains":         "Dainty Leg Chain Thigh Jewelry",
-  "Back Chains":        "Back Chain for Backless Dresses",
-  "Body Chains":        "Handmade Body Chain Jewelry",
-  "Shoulder & Arm Chains":    "Shoulder & Arm Body Jewelry",
-  "Anklets":            "Handmade Ankle Bracelet",
-  "Bracelets":          "Handmade Stainless Steel Bracelet",
-  "Necklaces":          "Handmade Chain Necklace",
-  "Hand Chains":        "Boho Hand Chain Jewelry",
-  "Head Chains":        "Bridal Hair Chain Headpiece",
-  "Eyeglasses Chains":  "Stylish Eyeglasses Chain",
-  "Bikini Clip Chains": "Beach Bikini Body Jewelry",
+// Multiple long-tail, occasion/utility-driven suffixes per category — a stable hash of the
+// product id picks one, so products in the same category don't all share an identical,
+// repetitive suffix (and don't restate a noun the product name already contains).
+const CATEGORY_SUFFIXES: Record<string, string[]> = {
+  "Belly Chains":          ["Belly Chain for Beach Days", "Waist Chain for Festival Season", "Belly Chain for Bikini Season", "Waist Jewelry Gift for Her"],
+  "Leg Chains":            ["Leg Chain for Beach Days", "Thigh Chain for Festival Season", "Leg Jewelry for Summer Outfits"],
+  "Back Chains":           ["Back Chain for Backless Dresses", "Back Chain for Wedding Guest Looks", "Back Jewelry for Evening Occasions"],
+  "Body Chains":           ["Body Chain for Festival Outfits", "Body Jewelry for Beach Vacations", "Body Chain for Going Out Looks"],
+  "Shoulder & Arm Chains": ["Shoulder Chain for Summer Dresses", "Arm Chain for Festival Outfits", "Shoulder Jewelry for Prom Night"],
+  "Anklets":               ["Anklet for Beach Vacations", "Ankle Bracelet for Summer Outfits", "Dainty Anklet for Everyday Wear"],
+  "Bracelets":             ["Bracelet Gift for Her", "Stacking Bracelet for Everyday Wear", "Bracelet for Birthday Gifting"],
+  "Necklaces":             ["Necklace for Prom Night", "Necklace for Dress Up Looks", "Choker for Everyday Wear", "Necklace for Wedding Guest Style", "Layered Necklace Gift for Her"],
+  "Hand Chains":           ["Hand Chain for Festival Looks", "Hand Chain for Beach Days", "Hand Jewelry for Wedding Guest Style"],
+  "Head Chains":           ["Head Chain for Bridal Hair Styling", "Hair Chain for Wedding Guest Looks", "Head Jewelry for Festival Season"],
+  "Eyeglasses Chains":     ["Eyeglasses Chain for Everyday Wear", "Glasses Chain as a Stylish Accessory", "Sunglasses Chain for Summer Days"],
+  "Bikini Clip Chains":    ["Bikini Belly Chain for Beach", "Bikini Body Chain for Pool Days", "Bikini Jewelry for Summer Vacation"],
 };
+
+function pickSuffix(productId: string, category: string): string {
+  const pool = CATEGORY_SUFFIXES[category] ?? ["Handmade Body Jewelry"];
+  let hash = 0;
+  for (let i = 0; i < productId.length; i++) hash = (hash * 31 + productId.charCodeAt(i)) >>> 0;
+  return pool[hash % pool.length];
+}
 
 export async function generateStaticParams() {
   return products.map((p) => ({ id: p.id }));
@@ -39,7 +49,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
   const url = `https://www.bodystrands.com/shop/${product.id}`;
   const symbol = product.currency === "EUR" ? "€" : product.currency === "GBP" ? "£" : "$";
   const priceLabel = `${symbol}${product.price.toFixed(2)}`;
-  const suffix = CATEGORY_SUFFIX[product.category] ?? "Handmade Body Jewelry";
+  const suffix = pickSuffix(product.id, product.category);
   const metaDescription = product.altText
     ? `${product.altText}. Handmade in Portugal from waterproof stainless steel. ${priceLabel}.`
     : product.description;

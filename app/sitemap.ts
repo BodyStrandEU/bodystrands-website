@@ -5,17 +5,21 @@ import blogPosts from "@/data/blog-posts.json";
 const BASE = "https://www.bodystrands.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  // Deploy-time timestamp — every save (admin edit, new product, new blog post)
+  // triggers a rebuild, so this reflects real "last verified" freshness for Google.
+  const buildTime = new Date();
+
   const staticPages: MetadataRoute.Sitemap = [
-    { url: BASE,                         priority: 1.0, changeFrequency: "weekly" },
-    { url: `${BASE}/shop`,               priority: 0.9, changeFrequency: "daily"  },
-    { url: `${BASE}/about`,              priority: 0.7, changeFrequency: "monthly" },
-    { url: `${BASE}/contact`,            priority: 0.6, changeFrequency: "monthly" },
-    { url: `${BASE}/track`,              priority: 0.5, changeFrequency: "monthly" },
-    { url: `${BASE}/shipping`,           priority: 0.5, changeFrequency: "monthly" },
-    { url: `${BASE}/care`,               priority: 0.5, changeFrequency: "monthly" },
-    { url: `${BASE}/return-policy`,      priority: 0.4, changeFrequency: "monthly" },
-    { url: `${BASE}/privacy-policy`,     priority: 0.3, changeFrequency: "yearly"  },
-    { url: `${BASE}/terms`,              priority: 0.3, changeFrequency: "yearly"  },
+    { url: BASE,                         priority: 1.0, changeFrequency: "weekly",  lastModified: buildTime },
+    { url: `${BASE}/shop`,               priority: 0.9, changeFrequency: "daily",   lastModified: buildTime },
+    { url: `${BASE}/about`,              priority: 0.7, changeFrequency: "monthly", lastModified: buildTime },
+    { url: `${BASE}/contact`,            priority: 0.6, changeFrequency: "monthly", lastModified: buildTime },
+    { url: `${BASE}/track`,              priority: 0.5, changeFrequency: "monthly", lastModified: buildTime },
+    { url: `${BASE}/shipping`,           priority: 0.5, changeFrequency: "monthly", lastModified: buildTime },
+    { url: `${BASE}/care`,               priority: 0.5, changeFrequency: "monthly", lastModified: buildTime },
+    { url: `${BASE}/return-policy`,      priority: 0.4, changeFrequency: "monthly", lastModified: buildTime },
+    { url: `${BASE}/privacy-policy`,     priority: 0.3, changeFrequency: "yearly",  lastModified: buildTime },
+    { url: `${BASE}/terms`,              priority: 0.3, changeFrequency: "yearly",  lastModified: buildTime },
   ];
 
   const productPages: MetadataRoute.Sitemap = products
@@ -24,6 +28,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url:             `${BASE}/shop/${p.id}`,
       priority:        0.8,
       changeFrequency: "weekly" as const,
+      lastModified:    buildTime,
     }));
 
   const blogPages: MetadataRoute.Sitemap = blogPosts.map((p) => ({

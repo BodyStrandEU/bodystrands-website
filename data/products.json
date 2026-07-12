@@ -8308,5 +8308,83 @@
       "Silver Plated": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/81c6a9cf4cd77c67e33bb40160d6127e/downloads/default.mp4",
       "Stainless Steel": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/81c6a9cf4cd77c67e33bb40160d6127e/downloads/default.mp4"
     }
+  },
+  {
+    "id": "stacked-pearl-cross-choker",
+    "name": "Stacked Pearl Cross Choker",
+    "price": 40,
+    "currency": "EUR",
+    "category": "Necklaces",
+    "description": "Pearls that already know how to layer themselves — a dainty pearl bead chain and fine gold-tone cable chain with a cross charm resting right at the collarbone.",
+    "fullDescription": "I paired a dainty pearl bead chain with a fine gold-tone cable chain and a tiny cross charm resting right at the collarbone — pre-layered, so there's no fussing with two clasps, just clip it on and go. Wear it to church, a christening, a wedding, or stacked into your everyday little gold jewelry rotation.",
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Gold-tone stainless steel chain (Silver-tone also available)"
+      },
+      {
+        "label": "Pearls",
+        "value": "Pearl beads (glass)"
+      },
+      {
+        "label": "Pendant",
+        "value": "Cross charm"
+      },
+      {
+        "label": "Design",
+        "value": "Double-layer choker — pearl bead chain + fine cable chain"
+      },
+      {
+        "label": "Chain length",
+        "value": "35 cm + 6 cm extender"
+      },
+      {
+        "label": "Closure",
+        "value": "Lobster clasp"
+      },
+      {
+        "label": "Waterproof",
+        "value": "Yes"
+      },
+      {
+        "label": "Care",
+        "value": "Wipe with a soft cloth after wear. Store in an airtight container."
+      },
+      {
+        "label": "Shipping",
+        "value": "Dispatches within 1–2 business days"
+      }
+    ],
+    "variants": [
+      "Gold Tone",
+      "Silver Tone"
+    ],
+    "variantHeroes": {
+      "Gold Tone": "/images/products/stacked-pearl-cross-choker/7478046c-ca3b-4bc1-a41e-4a7c8df4ef58.png",
+      "Silver Tone": "/images/products/stacked-pearl-cross-choker/b3f03ce0-fc74-4b69-be26-f154ab85d0fc.png"
+    },
+    "variantVideos": {
+      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/2786312dfc400b5d050125f0ca3f30e6/downloads/default.mp4",
+      "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/2786312dfc400b5d050125f0ca3f30e6/downloads/default.mp4"
+    },
+    "gallery": [
+      "/images/products/stacked-pearl-cross-choker/7478046c-ca3b-4bc1-a41e-4a7c8df4ef58.png",
+      "/images/products/stacked-pearl-cross-choker/0e443386-0a68-40ce-a633-e8818b20f8f1.png",
+      "/images/products/stacked-pearl-cross-choker/6f4fc186-f2e6-43f0-a1b9-2ed1afd43055.png",
+      "/images/products/stacked-pearl-cross-choker/bbdb8e1b-10e4-4456-92b3-4e1a46f0a51a.png",
+      "/images/products/stacked-pearl-cross-choker/f4ff33c4-d44b-416f-9ddd-4710976739e3.png",
+      "/images/products/stacked-pearl-cross-choker/2289a6f4-09e0-4fc8-91e2-0b96c373e028.png",
+      "/images/products/stacked-pearl-cross-choker/b3f03ce0-fc74-4b69-be26-f154ab85d0fc.png",
+      "/images/products/stacked-pearl-cross-choker/46ff1ac5-bd04-4706-8c12-2d3cb7fbad68.png"
+    ],
+    "infographicImages": [
+      "/images/products/stacked-pearl-cross-choker/46ff1ac5-bd04-4706-8c12-2d3cb7fbad68.png"
+    ],
+    "images": [
+      "/images/products/stacked-pearl-cross-choker/7478046c-ca3b-4bc1-a41e-4a7c8df4ef58.png"
+    ],
+    "featured": false,
+    "active": true,
+    "altText": "Layered pearl bead and gold chain choker necklace with cross pendant, dainty stainless steel design for women"
   }
 ]

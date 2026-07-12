@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { uploadImage, deleteFile, getFile } from "@/lib/github";
 import { isValidToken, COOKIE_NAME } from "@/lib/auth";
+import { optimizeImageBuffer } from "@/lib/image-optimize";
 
 function checkAuth(request: NextRequest): boolean {
   const token = request.cookies.get(COOKIE_NAME)?.value;
@@ -21,8 +22,9 @@ export async function POST(request: NextRequest) {
     }
 
     const arrayBuffer = await file.arrayBuffer();
-    const base64 = Buffer.from(arrayBuffer).toString("base64");
     const filename = file.name.replace(/[^a-zA-Z0-9._-]/g, "-");
+    const optimized = await optimizeImageBuffer(Buffer.from(arrayBuffer), filename);
+    const base64 = optimized.toString("base64");
 
     const url = await uploadImage(filename, base64);
     return NextResponse.json({ url });

@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { isValidToken, COOKIE_NAME } from "@/lib/auth";
+import { optimizeImageBuffer } from "@/lib/image-optimize";
 
 function checkAuth(request: NextRequest): boolean {
   const token = request.cookies.get(COOKIE_NAME)?.value;
@@ -48,7 +49,8 @@ export async function POST(request: NextRequest) {
       sha = data.sha;
     }
 
-    const base64 = Buffer.from(await file.arrayBuffer()).toString("base64");
+    const optimized = await optimizeImageBuffer(Buffer.from(await file.arrayBuffer()), file.name);
+    const base64 = optimized.toString("base64");
     const body: Record<string, string> = {
       message: `Update site image: ${targetPath}`,
       content: base64,

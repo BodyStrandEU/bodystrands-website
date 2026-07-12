@@ -7,6 +7,7 @@ import { verifyReviewToken } from "@/lib/reviewToken";
 import { getPendingReviews, savePendingReviews, getCustomerReviews, type PendingReview } from "@/lib/reviews-data";
 import { uploadImageToDir } from "@/lib/github";
 import { COUNTRY_GROUPS } from "@/lib/shipping";
+import { optimizeImageBuffer } from "@/lib/image-optimize";
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!);
 const resend = new Resend(process.env.RESEND_API_KEY);
@@ -59,7 +60,8 @@ export async function POST(req: NextRequest) {
     if (photo && photo.size > 0) {
       const ext = photo.type === "image/png" ? "png" : photo.type === "image/webp" ? "webp" : "jpg";
       const filename = `${payload.sessionId}-${Date.now()}.${ext}`;
-      const base64 = Buffer.from(await photo.arrayBuffer()).toString("base64");
+      const optimized = await optimizeImageBuffer(Buffer.from(await photo.arrayBuffer()), filename);
+      const base64 = optimized.toString("base64");
       image = await uploadImageToDir("images/reviews/customer-submitted", filename, base64);
     }
 

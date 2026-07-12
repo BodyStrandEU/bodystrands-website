@@ -373,9 +373,15 @@ Never include "Handmade in Portugal" or "Made in Portugal" or "🇵🇹" in any 
 ### Pinterest — never repeat images in the same campaign
 Never schedule the same image more than once within a campaign window. If there aren't enough unique images to fill 15 pins/day, post fewer — one pin per unique image only. Never pad with repeats. User rule: "if i say to post 15 per day and you don't have enough, instead of reposting, post 14."
 
-### Video posts — NO cover image
-When scheduling a video, post the video URL alone as media — no cover image, no thumbnail paired with it.
-`-m "video_url"` only. Applies to all platforms (IG, FB, Pinterest).
+### NEVER duplicate the same post on the same platform — HARD RULE (confirmed Jul 2026)
+The same caption/image must never be scheduled more than once on the *same* platform in the near term. Cross-posting identical content to IG + FB + Pinterest at the same time is fine (that's normal). Reposting the *same* content again on the *same* platform is only acceptable after a multi-month gap — never within the same rotation cycle.
+- Found and cleaned up 352 excess duplicate posts (348 Pinterest, 4 Facebook) on Jul 12, 2026 — caused by a rotation script that cycled back to the same caption/image every ~4–16 days, well short of "a few months."
+- Before scheduling anything new, or when rebuilding a rotation, check for exact-content duplicates per platform (group by `(integration, content)`, flag any group with count > 1) and refuse to create a post that already exists on that platform within the lookback window.
+- User rule, verbatim: "obviously the same post will go on insta and pinterest and facebook but never duplicate the same posts on the same platform... we can maybe in a few months do some reposts but never right away."
+
+### Video posts — no cover image on IG/FB, but Pinterest REQUIRES one
+When scheduling a video on Instagram or Facebook, post the video URL alone as media — no cover image, no thumbnail paired with it: `-m "video_url"` only.
+**Pinterest is the exception** — its API rejects a video-only pin with `"If posting a video you have to also include a cover image as second media"`. For Pinterest video pins, always pass a cover image as the second media item: `-m "video_url,cover_image_url"`.
 
 ### API rate limiting — CRITICAL
 - Always add `time.sleep(0.5)` between every `postiz posts:create` call

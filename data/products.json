@@ -8385,5 +8385,95 @@
     "active": true,
     "altText": "Layered pearl bead and gold chain choker necklace with cross pendant, dainty stainless steel design for women",
     "sizeGuideImage": "/images/products/46ff1ac5-bd04-4706-8c12-2d3cb7fbad68.png"
+  },
+  {
+    "id": "birthstone-arm-band",
+    "name": "Birthstone Arm Band",
+    "price": 30,
+    "currency": "EUR",
+    "category": "Shoulder & Arm Chains",
+    "description": "One thin gold chain, one gemstone that means something. This single-strand birthstone arm band sits softly on the upper arm — the simplest way to wear your birth month or gift someone theirs.",
+    "fullDescription": "Twelve gemstones. Twelve months. One quiet, single-strand chain that says more than words.\n\nThis delicate birthstone arm band wraps around your upper arm with just one fine gold chain, finished with a teardrop gemstone in your chosen birth month stone. No layers, no fuss — just a simple, meaningful detail that catches the light on beach days, at weddings, or under a rolled-up sleeve on an ordinary afternoon.\n\nBuy it for yourself. Gift it to someone you love. Either way, it arrives sized to fit perfectly.\n\nSizing Guide\nMeasure around the fullest part of your upper arm (mid-bicep, relaxed — not flexed). That number is your size.\n\nXS — fits 22 to 25 cm\nS — fits 25 to 28 cm\nM — fits 28 to 31 cm\nL — fits 31 to 35 cm\nXL — fits 35 to 39 cm\nCustom Fit — message us your exact measurement in cm\n\nCustom sizing is always available at no extra cost — just send us a message after purchase with your measurement and we will make it to fit.\n\nPerfect for\nBirthdays, bridesmaid gifts, self-gifts, pool days, beach holidays, summer weddings, festival season, resort wear, minimalist everyday layering, and gifting twelve months a year.\n\nWaterproof • Tarnish-resistant",
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Stainless steel (waterproof & tarnish-resistant)"
+      },
+      {
+        "label": "Style",
+        "value": "Single-strand upper arm band with birthstone drop pendant"
+      },
+      {
+        "label": "Available in",
+        "value": "Gold Tone"
+      },
+      {
+        "label": "Birthstone",
+        "value": "Choose your month at checkout (January – December)"
+      },
+      {
+        "label": "Closure",
+        "value": "Easy slip on"
+      },
+      {
+        "label": "Flexibility",
+        "value": "Rubber attachment for a comfortable, secure fit around the arm"
+      },
+      {
+        "label": "Care",
+        "value": "Wipe gently with a soft cloth after wear. Store in an airtight container."
+      },
+      {
+        "label": "Shipping",
+        "value": "Dispatches within 1–2 business days"
+      }
+    ],
+    "variantGroups": [
+      {
+        "label": "Birthstone",
+        "type": "options",
+        "options": [
+          "January — Garnet",
+          "February — Amethyst",
+          "March — Aquamarine",
+          "April — Diamond",
+          "May — Emerald",
+          "June — Pearl",
+          "July — Ruby",
+          "August — Peridot",
+          "September — Sapphire",
+          "October — Opal",
+          "November — Citrine",
+          "December — Turquoise"
+        ]
+      },
+      {
+        "label": "Upper Arm Size",
+        "type": "options",
+        "options": [
+          "XS - 22 to 25 cm",
+          "S - 25 to 28 cm",
+          "M - 28 to 31 cm",
+          "L - 31 to 35 cm",
+          "XL - 35 to 39 cm",
+          "Custom Fit"
+        ]
+      }
+    ],
+    "gallery": [
+      "/images/products/birthstone-arm-band/7d42276c-6049-49fb-834a-b8ae3e2ad277.png",
+      "/images/products/birthstone-arm-band/4916e4ee-99ad-4012-8131-dc7c8be5665f.png",
+      "/images/products/birthstone-arm-band/8e550763-5dc8-43d9-8c75-0adfb544a12f.png",
+      "/images/products/birthstone-arm-band/af0c2021-f688-49fa-9906-f4dc49516ea3.png",
+      "/images/products/birthstone-arm-band/d13632f1-ad9d-4d7c-9e3e-cb575ac49a8a.png"
+    ],
+    "images": [
+      "/images/products/birthstone-arm-band/7d42276c-6049-49fb-834a-b8ae3e2ad277.png"
+    ],
+    "video": "/images/products/birthstone-arm-band/video.mp4",
+    "featured": false,
+    "active": true,
+    "altText": "Dainty single-strand gold stainless steel birthstone arm band with teardrop gemstone, waterproof upper arm jewelry",
+    "sizeGuideImage": "/images/products/birthstone-arm-band/d13632f1-ad9d-4d7c-9e3e-cb575ac49a8a.png"
   }
 ]

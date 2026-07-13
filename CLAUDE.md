@@ -353,10 +353,12 @@ The Anthropic API key is NOT in .env.local — ask the user to paste it (or crea
 - Body/Bracelet: `1122663082051403313`
 - Choker/Necklace: `1122663082051417775`
 
-### New product rule
-- New launches: **first 3 days on IG + FB are priority solo** (fill both daily slots with the new product, cycling through its images)
-- Pinterest: new products enter rotation immediately from day 1
-- After day 3: new product joins normal rotation
+### New product rule — REVISED Jul 2026, supersedes the old "3-day solo priority window"
+**Never cluster the same product together — always mix products within the same day.** User feedback (verbatim): "I feel like my viewers are getting annoyed by seeing the same product several times a day like it's gotta be mixed up... I'm not asking you to change the amount of posting per day, I'm not asking you to change the platform rules. The only thing I'm telling you is the mix and match all the products."
+- IG + FB: still 2 posts/day, but **the two daily slots must feature two different products** — never both slots the same day for one new launch.
+- When adding a new product's launch posts, interleave with 2-3 other real catalog products (pull their actual images from `products.json`) across the new days so each day reads as a mix, not a dedicated block for the new item.
+- Pinterest: spread a new product's pins across multiple different days (2-3/day) mixed with other products' pins that same day — never dump all of a product's pins into one single day/burst.
+- **Known limitation:** Postiz's public API (`posts:list`) does not return the media/images attached to an already-scheduled post — only `id`, `content`, `publishDate`, `state`, `integration`. There is no "get single post" or "update date" endpoint, only create/delete. This means the *already-scheduled* backlog cannot be safely reshuffled after the fact (no way to recover what image a past post used without guessing). Apply the mixing rule going forward on every new addition instead of retroactively — don't attempt a full historical reshuffle without flagging this constraint to the user first.
 
 ### Rotation
 - IG + FB: 2 different product images per day, rotating through full catalogue (~17+ products, full cycle every ~10 days)

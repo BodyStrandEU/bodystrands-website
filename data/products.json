@@ -264,7 +264,7 @@
       }
     ],
     "images": [
-      "/images/products/double-shoulder-chest-chain-gold-7.png"
+      "/images/products/bf05115b-938f-437c-9744-78ffa7503f8f.png"
     ],
     "featured": true,
     "variants": [
@@ -284,18 +284,23 @@
     "active": true,
     "altText": "Delicate gold tone stainless steel shoulder chain draping across collarbone for layered chest jewelry styling",
     "gallery": [
-      "/images/products/double-shoulder-chest-chain-gold-7.png",
-      "/images/products/double-shoulder-chest-chain-gold-1.png",
-      "/images/products/double-shoulder-chest-chain-gold-9.jpg",
-      "/images/products/double-shoulder-chest-chain-gold-10.png",
-      "/images/products/double-shoulder-chest-chain-gold-11.png",
-      "/images/products/double-shoulder-chest-chain-silver-1.png",
-      "/images/products/8944fd51-aa95-485b-90f5-8297175e0c11.png"
+      "/images/products/bf05115b-938f-437c-9744-78ffa7503f8f.png",
+      "/images/products/0218471e-ca76-4bbd-9590-a8d35236fdc0.jpeg",
+      "/images/products/IMG_2581-2.jpeg",
+      "/images/products/IMG_2587.jpeg",
+      "/images/products/d1285c89-1ff4-407e-bf5b-25ddd1a2e7a7-copy.png",
+      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf-copy.jpeg",
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png"
     ],
     "variantHeroes": {
       "Gold Tone": "/images/products/double-shoulder-chest-chain-gold-7.png",
-      "Silver Tone": "/images/products/double-shoulder-chest-chain-silver-1.png"
-    }
+      "Silver Tone": "/images/products/0218471e-ca76-4bbd-9590-a8d35236fdc0.jpeg"
+    },
+    "variantVideos": {
+      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/01c9b742a276bba95cffb33c4828c2e7/downloads/default.mp4",
+      "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/01c9b742a276bba95cffb33c4828c2e7/downloads/default.mp4"
+    },
+    "sizeGuideImage": "/images/products/c3dd0fbe-c4bf-4e40-bdc7-eb8bef0ea431.png"
   },
   {
     "id": "dainty-eyeglasses-chain",
@@ -598,75 +603,6 @@
     "featured": false,
     "active": true,
     "altText": "Handmade beaded bikini clip chain in stainless steel, triple-strand beach jewelry for bikini straps and waistbands"
-  },
-  {
-    "id": "bridal-shoulder-chain-2",
-    "name": "Bridal Shoulder Chain",
-    "price": 35,
-    "currency": "EUR",
-    "category": "Shoulder & Arm Chains",
-    "description": "Your wedding look, completed. This minimalist shoulder chain sweeps softly across your upper arm, attaching to your dress strap with a lobster clasp or pearl safety pin. Handcrafted from tarnish-resistant stainless steel in gold or silver.",
-    "fullDescription": "Designed for brides who want that delicate extra shimmer without altering their gown. This dainty arm chain clips directly onto your dress strap or bra in seconds — no sewing, no pins through fabric, no trip to the tailor.\n\nLightweight enough to forget you're wearing it, beautiful enough to notice in every photo. Made from high-quality stainless steel in gold or silver tone, it holds its colour through the ceremony, the first dance, and everything in between.",
-    "specs": [
-      {
-        "label": "Material",
-        "value": "High-quality stainless steel"
-      },
-      {
-        "label": "Colours",
-        "value": "Gold or Silver"
-      },
-      {
-        "label": "Attachment",
-        "value": "Lobster clasp or pearl safety pin"
-      },
-      {
-        "label": "Custom fit",
-        "value": "Message us after ordering — we resize at no extra cost"
-      },
-      {
-        "label": "Care",
-        "value": "Wipe gently with a soft cloth. Store in an airtight container."
-      },
-      {
-        "label": "Shipping",
-        "value": "Dispatches within 1–2 business days"
-      }
-    ],
-    "featured": false,
-    "active": false,
-    "variants": [
-      "Gold Tone",
-      "Silver Tone"
-    ],
-    "images": [
-      "https://i.etsystatic.com/55122258/r/il/98bec6/7983753786/il_fullxfull.7983753786_22ep.jpg"
-    ],
-    "variantGroups": [
-      {
-        "label": "Attachment",
-        "options": [
-          "Lobster Clasp",
-          "Safety Pin"
-        ]
-      }
-    ],
-    "altText": "Delicate gold tone stainless steel bridal shoulder chain for wedding dresses and formal events",
-    "gallery": [
-      "https://i.etsystatic.com/55122258/r/il/98bec6/7983753786/il_fullxfull.7983753786_22ep.jpg",
-      "https://i.etsystatic.com/55122258/r/il/53fd85/8102551786/il_fullxfull.8102551786_lz07.jpg",
-      "https://i.etsystatic.com/55122258/r/il/0a85e1/8148872635/il_fullxfull.8148872635_mn8k.jpg",
-      "https://i.etsystatic.com/55122258/r/il/cbd1a6/7803902507/il_fullxfull.7803902507_7i39.jpg",
-      "https://i.etsystatic.com/55122258/r/il/9bc617/8100971134/il_fullxfull.8100971134_j4za.jpg",
-      "https://i.etsystatic.com/55122258/r/il/add564/8035190061/il_fullxfull.8035190061_s57r.jpg",
-      "https://i.etsystatic.com/55122258/r/il/4a6078/7983715682/il_fullxfull.7983715682_4c9w.jpg",
-      "https://i.etsystatic.com/55122258/r/il/28fdcd/7983723672/il_fullxfull.7983723672_9ub0.jpg",
-      "https://i.etsystatic.com/55122258/r/il/38680f/7983714390/il_fullxfull.7983714390_4x4k.jpg"
-    ],
-    "variantHeroes": {
-      "Gold Tone": "https://i.etsystatic.com/55122258/r/il/98bec6/7983753786/il_fullxfull.7983753786_22ep.jpg",
-      "Silver Tone": "https://i.etsystatic.com/55122258/r/il/add564/8035190061/il_fullxfull.8035190061_s57r.jpg"
-    }
   },
   {
     "id": "butterfly-charm-belly-chain",
@@ -1459,67 +1395,6 @@
     "variantHeroes": {
       "Gold Tone": "https://i.etsystatic.com/55122258/r/il/8d2af9/8020112711/il_fullxfull.8020112711_jbay.jpg",
       "Silver Tone": "/images/products/22079b65-5549-4e99-82a5-03370c656882.png"
-    }
-  },
-  {
-    "id": "bridal-epaulette-shoulder-chain",
-    "name": "Bridal Epaulette Shoulder Chain",
-    "price": 45,
-    "currency": "EUR",
-    "category": "Shoulder & Arm Chains",
-    "description": "Your bridal statement piece. This dainty shoulder chain drapes elegantly from the neck across both shoulders — handcrafted in tarnish-resistant stainless steel in gold or silver for your most important day.",
-    "fullDescription": "Designed to complement strapless gowns, off-the-shoulder dresses, and sweetheart necklines, this shoulder chain adds a sculptural shimmer that photographs beautifully and feels completely weightless to wear.\n\nHandmade in high-quality stainless steel in gold or silver tone. Custom sizing available — message us after ordering and we'll adjust every chain length to your measurements at no extra cost.",
-    "specs": [
-      {
-        "label": "Material",
-        "value": "High-quality stainless steel"
-      },
-      {
-        "label": "Colours",
-        "value": "Gold or Silver"
-      },
-      {
-        "label": "Style",
-        "value": "Bridal epaulette / shoulder drape"
-      },
-      {
-        "label": "Custom fit",
-        "value": "Message us after ordering — we resize at no extra cost"
-      },
-      {
-        "label": "Care",
-        "value": "Wipe gently with soft cloth. Store in an airtight container."
-      },
-      {
-        "label": "Shipping",
-        "value": "Dispatches within 1–2 business days"
-      }
-    ],
-    "featured": false,
-    "active": false,
-    "variants": [
-      "Gold Tone",
-      "Silver Tone"
-    ],
-    "images": [
-      "https://i.etsystatic.com/55122258/r/il/9215ca/8151099245/il_fullxfull.8151099245_ohyn.jpg"
-    ],
-    "altText": "Gold tone stainless steel bridal shoulder chain, elegant handcrafted statement jewelry for weddings",
-    "gallery": [
-      "https://i.etsystatic.com/55122258/r/il/9215ca/8151099245/il_fullxfull.8151099245_ohyn.jpg",
-      "https://i.etsystatic.com/55122258/r/il/caf322/8103179364/il_fullxfull.8103179364_3zp0.jpg",
-      "https://i.etsystatic.com/55122258/r/il/76fac1/8151087369/il_fullxfull.8151087369_8s8r.jpg",
-      "https://i.etsystatic.com/55122258/r/il/0b520a/8031914441/il_fullxfull.8031914441_q8u0.jpg",
-      "https://i.etsystatic.com/55122258/r/il/32aebb/8037205749/il_fullxfull.8037205749_kc07.jpg",
-      "https://i.etsystatic.com/55122258/r/il/63657d/8103191626/il_fullxfull.8103191626_oeiz.jpg",
-      "https://i.etsystatic.com/55122258/r/il/677855/7987546440/il_fullxfull.7987546440_f0j5.jpg",
-      "https://i.etsystatic.com/55122258/r/il/cbd1a6/7803902507/il_fullxfull.7803902507_7i39.jpg",
-      "https://i.etsystatic.com/55122258/r/il/066342/8151089621/il_fullxfull.8151089621_rag7.jpg",
-      "https://i.etsystatic.com/55122258/r/il/49e966/8103215820/il_fullxfull.8103215820_ftc0.jpg"
-    ],
-    "variantHeroes": {
-      "Gold Tone": "https://i.etsystatic.com/55122258/r/il/9215ca/8151099245/il_fullxfull.8151099245_ohyn.jpg",
-      "Silver Tone": "https://i.etsystatic.com/55122258/r/il/49e966/8103215820/il_fullxfull.8103215820_ftc0.jpg"
     }
   },
   {
@@ -2415,67 +2290,6 @@
     ],
     "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/f735a78b88d98e938aa03c1c4316a90a/downloads/default.mp4",
     "altText": "Dainty gold monogram letter necklace in stainless steel, personalized initial charm handmade jewelry"
-  },
-  {
-    "id": "goddess-shoulder-body-chain",
-    "name": "Goddess Shoulder Body Chain",
-    "price": 45,
-    "currency": "EUR",
-    "category": "Shoulder & Arm Chains",
-    "description": "Your goddess moment, made wearable. This handcrafted shoulder chain drapes from neck across both shoulders in a soft, symmetrical silhouette — designed for honeymoons, bridal occasions, and those who don't do ordinary.",
-    "fullDescription": "Inspired by ancient adornment, this shoulder chain wraps the upper body in delicate gold chain, with strands draping across the shoulders and down the arms in a layered, sculptural effect. It photographs beautifully against bare skin, a white dress, or a sheer top.\n\nHandcrafted in gold-tone stainless steel. Adjustable length — message us your measurements after ordering and we'll customise the fit at no extra cost.",
-    "specs": [
-      {
-        "label": "Material",
-        "value": "Gold-tone stainless steel"
-      },
-      {
-        "label": "Style",
-        "value": "Goddess shoulder and body chain"
-      },
-      {
-        "label": "Occasion",
-        "value": "Honeymoon, bridal, prom, editorial"
-      },
-      {
-        "label": "Custom fit",
-        "value": "Message us after ordering — we resize at no extra cost"
-      },
-      {
-        "label": "Care",
-        "value": "Wipe gently with soft cloth. Store in an airtight container."
-      },
-      {
-        "label": "Shipping",
-        "value": "Dispatches within 1–2 business days"
-      }
-    ],
-    "featured": false,
-    "active": false,
-    "variants": [
-      "Gold Tone",
-      "Silver Tone"
-    ],
-    "images": [
-      "https://i.etsystatic.com/55122258/r/il/32aebb/8037205749/il_fullxfull.8037205749_kc07.jpg"
-    ],
-    "altText": "Handmade gold-tone stainless steel shoulder body chain for goddess-inspired evening wear and special occasions",
-    "gallery": [
-      "https://i.etsystatic.com/55122258/r/il/32aebb/8037205749/il_fullxfull.8037205749_kc07.jpg",
-      "https://i.etsystatic.com/55122258/r/il/caf322/8103179364/il_fullxfull.8103179364_3zp0.jpg",
-      "https://i.etsystatic.com/55122258/r/il/76fac1/8151087369/il_fullxfull.8151087369_8s8r.jpg",
-      "https://i.etsystatic.com/55122258/r/il/0b520a/8031914441/il_fullxfull.8031914441_q8u0.jpg",
-      "https://i.etsystatic.com/55122258/r/il/63657d/8103191626/il_fullxfull.8103191626_oeiz.jpg",
-      "https://i.etsystatic.com/55122258/r/il/9215ca/8151099245/il_fullxfull.8151099245_ohyn.jpg",
-      "https://i.etsystatic.com/55122258/r/il/677855/7987546440/il_fullxfull.7987546440_f0j5.jpg",
-      "https://i.etsystatic.com/55122258/r/il/cbd1a6/7803902507/il_fullxfull.7803902507_7i39.jpg",
-      "https://i.etsystatic.com/55122258/r/il/066342/8151089621/il_fullxfull.8151089621_rag7.jpg",
-      "https://i.etsystatic.com/55122258/r/il/14754c/8103179860/il_fullxfull.8103179860_ftc0.jpg"
-    ],
-    "variantHeroes": {
-      "Gold Tone": "https://i.etsystatic.com/55122258/r/il/32aebb/8037205749/il_fullxfull.8037205749_kc07.jpg",
-      "Silver Tone": "https://i.etsystatic.com/55122258/r/il/14754c/8103179860/il_fullxfull.8103179860_ftc0.jpg"
-    }
   },
   {
     "id": "initial-letter-anklet",

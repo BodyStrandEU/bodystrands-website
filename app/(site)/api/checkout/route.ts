@@ -93,7 +93,10 @@ export async function POST(req: NextRequest) {
         : buildAllShippingOptions(totalAmount);
 
       const session = await stripe.checkout.sessions.create({
-        payment_method_types: ["card"],
+        // payment_method_types intentionally omitted: Checkout Sessions manage eligible
+        // methods dynamically (card, Apple Pay, Google Pay, Klarna, Afterpay/Clearpay, etc.
+        // based on currency/amount/country) whenever this field isn't set, using whatever's
+        // enabled in the Stripe Dashboard — no hardcoded list that could be ineligible.
         line_items:  lineItems,
         mode:        "payment",
         metadata:    { productName: productNames.join(", "), price: totalAmount.toFixed(2), currency: "EUR" },
@@ -124,7 +127,10 @@ export async function POST(req: NextRequest) {
       : buildAllShippingOptions(totalAmount);
 
     const session = await stripe.checkout.sessions.create({
-      payment_method_types: ["card"],
+      // payment_method_types intentionally omitted: Checkout Sessions manage eligible
+      // methods dynamically (card, Apple Pay, Google Pay, Klarna, Afterpay/Clearpay, etc.
+      // based on currency/amount/country) whenever this field isn't set, using whatever's
+      // enabled in the Stripe Dashboard — no hardcoded list that could be ineligible.
       line_items: [{
         price_data: {
           currency: product.currency.toLowerCase(),

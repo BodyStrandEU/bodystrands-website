@@ -774,7 +774,7 @@
     "currency": "EUR",
     "category": "Body Chains",
     "description": "Your minimalist body statement. This dainty torso harness wraps the body in delicate gold or silver chain — adjustable, lightweight, and completely waterproof for summer days and beyond.",
-    "fullDescription": "A minimalist silhouette that works over a bikini, under a sheer top, or straight on bare skin. The clean chain lines trace the torso softly, creating a sculptural effect that's anything but heavy.\n\nAvailable in Gold or Silver, with three extender sizes to get the perfect fit: Small (+7 cm), Medium (+14 cm), or Large (+23 cm). Made from hypoallergenic stainless steel — non-tarnish, waterproof, and built for everyday wear.",
+    "fullDescription": "A minimalist silhouette that works over a bikini, under a sheer top, or straight on bare skin. The clean chain lines trace the torso softly, creating a sculptural effect that's anything but heavy.\n\nSize & Dimensions:\nNeck fit: 64cm (easy slip on)\nWaist: Waist/Hip Fit: Adjustable from 79 cm to 102 cm (Select appropriate extension Add on in the drop down menu)\n\nAvailable in Gold or Silver, with three extender sizes to get the perfect fit: Small (+7 cm), Medium (+14 cm), or Large (+23 cm). Made from hypoallergenic stainless steel — non-tarnish, waterproof, and built for everyday wear.",
     "specs": [
       {
         "label": "Material",
@@ -812,7 +812,7 @@
       "Silver Tone"
     ],
     "images": [
-      "/images/products/Untitled-design--1-.png"
+      "/images/products/3e4aeecf-aa9b-434f-8dd4-538b7fc69074.png"
     ],
     "variantGroups": [
       {
@@ -825,26 +825,28 @@
       }
     ],
     "variantVideos": {
-      "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/0a9c8cb1daac134306662200919768a5/downloads/default.mp4",
-      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/0a9c8cb1daac134306662200919768a5/downloads/default.mp4"
+      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/6eb5792063507a6a53835d0bef385e6c/downloads/default.mp4",
+      "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/6eb5792063507a6a53835d0bef385e6c/downloads/default.mp4"
     },
     "altText": "Dainty gold stainless steel body chain harness for festivals and minimalist layering wear",
     "gallery": [
-      "/images/products/Untitled-design--1-.png",
       "/images/products/3e4aeecf-aa9b-434f-8dd4-538b7fc69074.png",
+      "/images/products/Untitled-design--1-.png",
       "https://i.etsystatic.com/55122258/r/il/01cb28/7801900345/il_fullxfull.7801900345_7n0g.jpg",
-      "https://i.etsystatic.com/55122258/r/il/1d08fb/7739339773/il_fullxfull.7739339773_3tb8.jpg",
-      "/images/products/85c77225-f32d-4de3-b3f3-91732290d8d5.png",
       "/images/products/Untitled-design--1--copy-2.png",
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
+      "https://i.etsystatic.com/55122258/r/il/1d08fb/7739339773/il_fullxfull.7739339773_3tb8.jpg",
       "/images/products/a5999a38-d6e5-47aa-b1b3-76c16581b41e.png",
       "https://i.etsystatic.com/55122258/r/il/5aed4c/7691395674/il_fullxfull.7691395674_31gb.jpg",
       "/images/products/AW6C0518-2.jpg",
-      "/images/products/124ba28f-2fa0-4150-a3ed-25d6d7f90841-md.jpg"
+      "/images/products/124ba28f-2fa0-4150-a3ed-25d6d7f90841-md.jpg",
+      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf-copy.jpeg"
     ],
     "variantHeroes": {
       "Gold Tone": "/images/products/Untitled-design--1-.png",
       "Silver Tone": "/images/products/3e4aeecf-aa9b-434f-8dd4-538b7fc69074.png"
-    }
+    },
+    "sizeGuideImage": "/images/products/d75a26d3-2060-44af-befb-398ba171ed16.png"
   },
   {
     "id": "layered-pearl-bracelet",

@@ -5538,7 +5538,7 @@
       "Silver Tone"
     ],
     "images": [
-      "https://i.etsystatic.com/55122258/r/il/341887/7835484089/il_fullxfull.7835484089_5bzk.jpg"
+      "/images/products/2293c415-ee9f-49eb-acd6-066607bd28ff.png"
     ],
     "variantGroups": [
       {
@@ -5551,23 +5551,25 @@
       }
     ],
     "variantVideos": {
-      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/0347c08d1d6ef92eed0b64cd3d100096/downloads/default.mp4",
-      "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/0347c08d1d6ef92eed0b64cd3d100096/downloads/default.mp4"
+      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/2fb4fa2085072f43412fccb84d19eac2/downloads/default.mp4",
+      "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/2fb4fa2085072f43412fccb84d19eac2/downloads/default.mp4"
     },
     "altText": "Pearl bridal back chain in gold tone stainless steel, romantic back body jewelry for wedding day",
     "gallery": [
-      "https://i.etsystatic.com/55122258/r/il/341887/7835484089/il_fullxfull.7835484089_5bzk.jpg",
+      "/images/products/2293c415-ee9f-49eb-acd6-066607bd28ff.png",
       "https://i.etsystatic.com/55122258/r/il/55bd28/7789532126/il_fullxfull.7789532126_93rk.jpg",
-      "https://i.etsystatic.com/55122258/r/il/9b884a/7787337160/il_fullxfull.7787337160_cr8q.jpg",
-      "https://i.etsystatic.com/55122258/r/il/dd6d5b/7835483841/il_fullxfull.7835483841_4hjy.jpg",
       "https://i.etsystatic.com/55122258/r/il/5df657/7787416620/il_fullxfull.7787416620_sqt5.jpg",
       "https://i.etsystatic.com/55122258/r/il/e5831c/7835527797/il_fullxfull.7835527797_hlrk.jpg",
-      "https://i.etsystatic.com/55122258/r/il/3299e8/7787555196/il_fullxfull.7787555196_r96o.jpg"
+      "/images/products/34c9ec09-d27b-4601-85f6-faa1986d47ae.png",
+      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf-copy.jpeg",
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
+      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.jpg"
     ],
     "variantHeroes": {
       "Gold Tone": "https://i.etsystatic.com/55122258/r/il/341887/7835484089/il_fullxfull.7835484089_5bzk.jpg",
-      "Silver Tone": "https://i.etsystatic.com/55122258/r/il/74937c/7835483939/il_fullxfull.7835483939_e54z.jpg"
-    }
+      "Silver Tone": "/images/products/34c9ec09-d27b-4601-85f6-faa1986d47ae.png"
+    },
+    "sizeGuideImage": "/images/products/e7db1006-0b41-4d4d-a4ed-d250c518df35.png"
   },
   {
     "id": "bridal-hair-vine-chain",

@@ -7616,6 +7616,78 @@
     "sizeGuideImage": "/images/products/038c4035-eb5d-4786-95f7-f431025e3970.png"
   },
   {
+    "id": "layered-pearl-choker",
+    "name": "Pearl Bead Double Choker",
+    "category": "Necklaces",
+    "price": 35,
+    "currency": "EUR",
+    "description": "Two chains, one clasp, zero hassle — a dainty pearl bead chain layered with a fine cable chain, made as one seamless double-layer choker that sits right at your collarbone, pre-layered so there's no fussing with two clasps, just clip it on and go.",
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Stainless steel"
+      },
+      {
+        "label": "Finish",
+        "value": "Gold tone or Silver tone"
+      },
+      {
+        "label": "Pearls",
+        "value": "Faux pearl beads (glass)"
+      },
+      {
+        "label": "Design",
+        "value": "Double-layer choker — pearl bead chain + fine cable chain"
+      },
+      {
+        "label": "Chain length",
+        "value": "35 cm + 6 cm extender"
+      },
+      {
+        "label": "Adjustable",
+        "value": "35–41 cm"
+      },
+      {
+        "label": "Closure",
+        "value": "Lobster clasp"
+      },
+      {
+        "label": "Waterproof",
+        "value": "Yes"
+      },
+      {
+        "label": "Care",
+        "value": "Wipe with a soft cloth after wear. Store in an airtight container."
+      },
+      {
+        "label": "Shipping",
+        "value": "Dispatches within 1–2 business days"
+      }
+    ],
+    "variants": ["Gold Tone", "Silver Tone"],
+    "variantHeroes": {
+      "Gold Tone": "/images/products/layered-pearl-choker/eac8d15d-63ba-44d8-ae9e-1c2cd77b208c.png",
+      "Silver Tone": "/images/products/layered-pearl-choker/b095582a-ce2d-4d3e-a909-eb4fe4549e37.png"
+    },
+    "images": [
+      "/images/products/layered-pearl-choker/eac8d15d-63ba-44d8-ae9e-1c2cd77b208c.png"
+    ],
+    "gallery": [
+      "/images/products/layered-pearl-choker/eac8d15d-63ba-44d8-ae9e-1c2cd77b208c.png",
+      "/images/products/layered-pearl-choker/2289a6f4-09e0-4fc8-91e2-0b96c373e028.png",
+      "/images/products/layered-pearl-choker/0bf01f80-ecb6-4bf9-a575-e52bf3b4fc5a.png",
+      "/images/products/layered-pearl-choker/3c9e43df-4d94-4b3c-9094-fd4db87b0b42.png",
+      "/images/products/layered-pearl-choker/ffb79f0b-d4a2-4d87-bf45-9f9745c61370.png",
+      "/images/products/layered-pearl-choker/b095582a-ce2d-4d3e-a909-eb4fe4549e37.png",
+      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg",
+      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.jpg"
+    ],
+    "infographicImages": [
+      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.jpg"
+    ],
+    "altText": "Dainty pearl bead choker necklace layered with a fine gold-tone or silver-tone cable chain in waterproof stainless steel"
+  },
+  {
     "id": "pink-cross-charm-bracelet",
     "name": "Pink Cross Charm Bracelet",
     "price": 30,

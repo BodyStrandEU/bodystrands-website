@@ -7666,7 +7666,10 @@
         "value": "Dispatches within 1–2 business days"
       }
     ],
-    "variants": ["Gold Tone", "Silver Tone"],
+    "variants": [
+      "Gold Tone",
+      "Silver Tone"
+    ],
     "variantHeroes": {
       "Gold Tone": "/images/products/layered-pearl-choker/eac8d15d-63ba-44d8-ae9e-1c2cd77b208c.png",
       "Silver Tone": "/images/products/layered-pearl-choker/b095582a-ce2d-4d3e-a909-eb4fe4549e37.png"
@@ -7687,7 +7690,13 @@
     "infographicImages": [
       "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.jpg"
     ],
-    "altText": "Dainty pearl bead choker necklace layered with a fine gold-tone or silver-tone cable chain in waterproof stainless steel"
+    "altText": "Dainty pearl bead choker necklace layered with a fine gold-tone or silver-tone cable chain in waterproof stainless steel",
+    "fullDescription": "Two chains, already made for each other. One clasp, zero hassle.\n\nI paired a dainty pearl chain with a fine gold-tone cable chain resting right at the collarbone — pre-layered, so there's no fussing with two clasps, just clip it on and go. \n\nProduct Details\nMaterial: Gold-tone stainless steel chain (Silver-tone also available)\nPearls: Faux pearl beads (glass)\nDesign: Double-layer choker — pearl bead chain + fine cable chain\nChain length: 35 cm + 6 cm extender\nClosure: Lobster clasp\nWaterproof & Sweat-Proof: Yes — safe for water, sun, and everyday wear\n\nSize Guide\nAdjustable 35–41 cm, sits snug at the collarbone as a choker\n\nFit Note: Measure around the base of your neck where you'd like the choker to sit, and add 1–2 cm for comfortable movement.\n\nCustom Sizing: Need a specific measurement? Message me before ordering and I'll make it to your exact size at no extra cost.\n\nCare Instructions\nWipe gently with a soft cloth after each wear.\nStore in an airtight container when not in use.\n\nShipping: Dispatches within 1–2 business days.\n\nPlease note that as each piece is handcrafted, no two pieces are identical and slight variations may occur.\n\nThanks for looking! Feel free to message me if you have any questions.",
+    "variantVideos": {
+      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/12118f8b1616454517a2dc789c7e3254/downloads/default.mp4",
+      "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/12118f8b1616454517a2dc789c7e3254/downloads/default.mp4"
+    },
+    "sizeGuideImage": "/images/products/36d05bef-12d8-44a8-9988-4676c96eae51.png"
   },
   {
     "id": "pink-cross-charm-bracelet",

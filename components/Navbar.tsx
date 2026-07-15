@@ -9,6 +9,7 @@ import SearchModal from "@/components/SearchModal";
 import CartIcon from "@/components/CartIcon";
 import { useWishlist } from "@/lib/wishlist";
 import { useCurrency } from "@/lib/currency-context";
+import CountdownTimer from "@/components/CountdownTimer";
 
 function WishlistIcon({ light }: { light?: boolean }) {
   const { ids } = useWishlist();
@@ -72,6 +73,13 @@ export default function Navbar() {
   return (
     <>
     <header className="fixed top-0 left-0 right-0 z-50">
+      {/* Sale countdown — homepage only, always visible, never collapses on scroll */}
+      {isHero && (
+        <div className="bg-[#FDF9F7] border-b border-[#E8B4A8]/30 py-2 flex items-center justify-center">
+          <CountdownTimer />
+        </div>
+      )}
+
       {/* Announcement bar */}
       <div
         className={`bg-[#2C2220] overflow-hidden transition-all duration-300 ${

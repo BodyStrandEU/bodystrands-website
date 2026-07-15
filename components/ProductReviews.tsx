@@ -109,6 +109,16 @@ function PhotoReviewLightbox({
           <Stars rating={review.rating} />
           <p className="text-[0.78rem] font-semibold tracking-wide text-[#2C2220] mt-3 mb-1.5 leading-snug">{review.headline}</p>
           <p className="text-[0.8rem] font-light leading-relaxed text-[#5C4E47]">{review.text}</p>
+          {review.shopResponse && (
+            <div className="mt-3 pl-3 border-l-2 border-[#A0622A]/40">
+              <p className="text-[0.6rem] tracking-[0.1em] uppercase text-[#A0622A] font-medium mb-1">
+                Response from Bodystrands
+              </p>
+              <p className="text-[0.72rem] font-light leading-relaxed text-[#8C7B6E]">
+                {review.shopResponse}
+              </p>
+            </div>
+          )}
         </div>
       </div>
     </div>,
@@ -213,6 +223,17 @@ function ReviewCard({ review, onOpenPhoto }: { review: Review; onOpenPhoto: () =
           </button>
         )}
       </div>
+
+      {review.shopResponse && (
+        <div className="mt-3 pl-3 border-l-2 border-[#A0622A]/40">
+          <p className="text-[0.6rem] tracking-[0.1em] uppercase text-[#A0622A] font-medium mb-1">
+            Response from Bodystrands
+          </p>
+          <p className="text-[0.72rem] font-light leading-relaxed text-[#8C7B6E]">
+            {review.shopResponse}
+          </p>
+        </div>
+      )}
     </div>
   );
 }

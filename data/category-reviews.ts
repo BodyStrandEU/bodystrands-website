@@ -9,6 +9,7 @@ export type Review = {
   sessionId?: string; // present on real customer-submitted reviews, used to prevent duplicate submissions
   productId?: string; // present when the order resolved to one specific product — used to surface
                        // this product's own reviews first on its page as volume builds up
+  shopResponse?: string; // the shop's real reply to this review (e.g. copied from Etsy)
 };
 
 export const CATEGORY_REVIEWS: Record<string, Review[]> = {

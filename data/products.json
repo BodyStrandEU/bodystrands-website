@@ -6514,12 +6514,10 @@
     "featured": false,
     "active": true,
     "images": [
+      "/images/products/f3d2e112-06e4-435a-a2ee-a4f3c70487ae.jpeg",
+      "/images/products/1d05e8b5-b6d8-4c3e-804b-073162423a2b.png",
+      "/images/products/esty-thumnails-new--22--copy.png",
       "https://i.etsystatic.com/55122258/r/il/1878f7/7765732386/il_fullxfull.7765732386_77p7.jpg",
-      "https://i.etsystatic.com/55122258/r/il/76c2d5/7818676027/il_fullxfull.7818676027_93c2.jpg",
-      "https://i.etsystatic.com/55122258/r/il/4f89b1/7763623772/il_fullxfull.7763623772_eskh.jpg",
-      "https://i.etsystatic.com/55122258/r/il/107fb1/7813624529/il_fullxfull.7813624529_6q4l.jpg",
-      "https://i.etsystatic.com/55122258/r/il/c6ea6a/7765663308/il_fullxfull.7765663308_3a19.jpg",
-      "https://i.etsystatic.com/55122258/r/il/1ae9ed/7765869978/il_fullxfull.7765869978_plif.jpg",
       "https://i.etsystatic.com/55122258/r/il/4813fe/7813678257/il_fullxfull.7813678257_7atp.jpg"
     ],
     "variantGroups": [
@@ -6535,7 +6533,8 @@
       }
     ],
     "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/dd8560812f8f60d525d90c037b1f3a67/downloads/default.mp4",
-    "altText": "Delicate gold stainless steel butterfly ankle bracelet, waterproof summer beach anklet with charm detail"
+    "altText": "Delicate gold stainless steel butterfly ankle bracelet, waterproof summer beach anklet with charm detail",
+    "sizeGuideImage": "/images/products/esty-thumnails-new--19-.png"
   },
   {
     "id": "zodiac-yoga-belly-chain",

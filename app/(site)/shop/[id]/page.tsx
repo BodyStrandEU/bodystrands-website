@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { products, INFOGRAPHIC_IMAGES } from "@/lib/products";
+import { getShippingRate, COUNTRY_GROUPS, ALL_COUNTRIES } from "@/lib/shipping";
 import { notFound } from "next/navigation";
 import ProductPageClient from "@/components/ProductPageClient";
 import CompleteTheLook from "@/components/CompleteTheLook";
@@ -94,6 +95,48 @@ export default async function ProductPage({ params }: { params: Promise<{ id: st
 
   const firstImage = product.images?.[0] || allImages[0] || "/images/og-image.jpg";
 
+  // Merchant listing shipping details — one entry per shipping zone, using the same
+  // rate table the checkout route uses (lib/shipping.ts) so this can't drift out of sync.
+  const shippingDetails = COUNTRY_GROUPS.map((group) => {
+    const rate = getShippingRate(group.countries[0].code, 0); // base (non-free) rate for the zone
+    return {
+      "@type": "OfferShippingDetails",
+      shippingRate: {
+        "@type":  "MonetaryAmount",
+        value:    (rate.amount / 100).toFixed(2),
+        currency: "EUR",
+      },
+      shippingDestination: {
+        "@type":        "DefinedRegion",
+        addressCountry: group.countries.map((c) => c.code),
+      },
+      deliveryTime: {
+        "@type": "ShippingDeliveryTime",
+        handlingTime: {
+          "@type":   "QuantitativeValue",
+          minValue:  1,
+          maxValue:  2,
+          unitCode:  "DAY",
+        },
+        transitTime: {
+          "@type":  "QuantitativeValue",
+          minValue: rate.deliveryMin,
+          maxValue: rate.deliveryMax,
+          unitCode: "DAY",
+        },
+      },
+    };
+  });
+
+  const hasMerchantReturnPolicy = {
+    "@type":               "MerchantReturnPolicy",
+    applicableCountry:     ALL_COUNTRIES,
+    returnPolicyCategory:  "https://schema.org/MerchantReturnFiniteReturnWindow",
+    merchantReturnDays:    14,
+    returnMethod:          "https://schema.org/ReturnByMail",
+    returnFees:            "https://schema.org/ReturnShippingFees",
+  };
+
   const productJsonLd = {
     "@context": "https://schema.org",
     "@type": "Product",
@@ -117,7 +160,10 @@ export default async function ProductPage({ params }: { params: Promise<{ id: st
       priceCurrency:    product.currency ?? "EUR",
       availability:     "https://schema.org/InStock",
       itemCondition:    "https://schema.org/NewCondition",
+      validFrom:        new Date().toISOString().slice(0, 10),
       priceValidUntil:  new Date(Date.now() + 365 * 86400 * 1000).toISOString().slice(0, 10),
+      shippingDetails,
+      hasMerchantReturnPolicy,
       seller: {
         "@type": "Organization",
         name:    "Bodystrands",

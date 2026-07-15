@@ -15,6 +15,10 @@ import SizeGuideButton from "@/components/SizeGuideButton";
 import { useCurrency } from "@/lib/currency-context";
 import ProductReviews from "@/components/ProductReviews";
 import { TrustBadgesRow } from "@/components/TrustBadges";
+import { type Review } from "@/data/category-reviews";
+import customerReviewsRaw from "@/data/customer-reviews.json";
+
+const ALL_REAL_REVIEWS: Review[] = Object.values(customerReviewsRaw as Record<string, Review[]>).flat();
 
 const FREE_SHIPPING_THRESHOLD = 50;
 
@@ -122,6 +126,15 @@ export default function ProductPageClient({ product }: { product: Product }) {
 
   const { format } = useCurrency();
 
+  // Real review stats for the header badge — this product's own reviews if it has
+  // any, otherwise the shop-wide average (same "own vs shop-wide" logic as
+  // ProductReviews.tsx, kept in sync by hand since this badge renders above it).
+  const ownReviews = ALL_REAL_REVIEWS.filter((r) => r.productId === product.id);
+  const badgeReviews = ownReviews.length > 0 ? ownReviews : ALL_REAL_REVIEWS;
+  const badgeAvg = badgeReviews.length > 0
+    ? badgeReviews.reduce((s, r) => s + r.rating, 0) / badgeReviews.length
+    : 0;
+
   // Sum price add-ons from selected options
   const priceAdd = (product.variantGroups ?? []).reduce((sum, group) => {
     if (group.type === "text") return sum;
@@ -197,17 +210,20 @@ export default function ProductPageClient({ product }: { product: Product }) {
           {product.name}
         </h1>
 
-        {/* Inline star rating */}
+        {/* Inline star rating — real data: this product's own reviews if it has any,
+            otherwise the shop-wide average. Hidden entirely if there's no real review data yet. */}
+        {badgeReviews.length > 0 && (
         <div className="flex items-center gap-2.5">
           <div className="flex gap-0.5">
-            {[...Array(5)].map((_, i) => (
-              <svg key={i} width="13" height="13" viewBox="0 0 24 24" fill="#A0622A">
+            {[1, 2, 3, 4, 5].map((i) => (
+              <svg key={i} width="13" height="13" viewBox="0 0 24 24" fill={i <= Math.round(badgeAvg) ? "#A0622A" : "none"} stroke={i <= Math.round(badgeAvg) ? "#A0622A" : "#D4B8A8"} strokeWidth="1.5">
                 <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
               </svg>
             ))}
           </div>
-          <span className="text-[0.65rem] tracking-[0.12em] text-[#8C7B6E]">4.9 · 52 reviews</span>
+          <span className="text-[0.65rem] tracking-[0.12em] text-[#8C7B6E]">{badgeAvg.toFixed(1)} · {badgeReviews.length} review{badgeReviews.length !== 1 ? "s" : ""}</span>
         </div>
+        )}
 
         <div className="flex flex-col gap-1.5">
           <div className="flex items-baseline gap-3 flex-wrap">

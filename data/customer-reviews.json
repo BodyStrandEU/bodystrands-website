@@ -1,1 +1,1269 @@
-{}
+{
+  "Head Chains": [
+    {
+      "name": "Naomi",
+      "location": "",
+      "rating": 5,
+      "date": "May 26, 2026",
+      "headline": "Perfect, true to photos",
+      "text": "Perfect!! True to the photos and description!!",
+      "productId": "bridal-forehead-chain",
+      "shopResponse": "Hi Naomi, thank you so much for your nice review. I'm thrilled you like it. 💖💖"
+    },
+    {
+      "name": "Naomi",
+      "location": "",
+      "rating": 5,
+      "date": "May 26, 2026",
+      "headline": "Perfect, true to photos",
+      "text": "Perfect!! True to the photos and description!!",
+      "productId": "pearl-bridal-head-chain",
+      "shopResponse": "Hi Naomi, thank you so much for your nice review. I'm thrilled you like it. 💖💖"
+    },
+    {
+      "name": "Naomi",
+      "location": "",
+      "rating": 5,
+      "date": "May 26, 2026",
+      "headline": "Perfect, true to photos",
+      "text": "Perfect!! True to the photos and description!!",
+      "productId": "boho-hair-chain",
+      "shopResponse": "Hi Naomi, thank you so much for your nice review. I'm thrilled you like it. 💖💖"
+    },
+    {
+      "name": "Naomi",
+      "location": "",
+      "rating": 5,
+      "date": "May 26, 2026",
+      "headline": "Perfect, true to photos",
+      "text": "Perfect!! True to the photos and description!!",
+      "productId": "boho-forehead-chain",
+      "shopResponse": "Hi Naomi, thank you so much for your nice review. I'm thrilled you like it. 💖💖"
+    },
+    {
+      "name": "Naomi",
+      "location": "",
+      "rating": 5,
+      "date": "May 26, 2026",
+      "headline": "Perfect, true to photos",
+      "text": "Perfect!! True to the photos and description!!",
+      "productId": "bridal-hair-vine-chain",
+      "shopResponse": "Hi Naomi, thank you so much for your nice review. I'm thrilled you like it. 💖💖"
+    }
+  ],
+  "Belly Chains": [
+    {
+      "name": "Chloe",
+      "location": "",
+      "rating": 5,
+      "date": "Jul 14, 2026",
+      "headline": "Absolutely beautiful",
+      "text": "Absolutely beautiful, fits perfectly and is so pretty!",
+      "productId": "snake-belly-chain",
+      "shopResponse": "Hi Chloe, I'm glad you like it! 💖"
+    },
+    {
+      "name": "Chloe",
+      "location": "",
+      "rating": 5,
+      "date": "Jul 14, 2026",
+      "headline": "Absolutely beautiful",
+      "text": "Absolutely beautiful, fits perfectly and is so pretty!",
+      "productId": "zodiac-snake-belly-chain",
+      "shopResponse": "Hi Chloe, I'm glad you like it! 💖"
+    },
+    {
+      "name": "Camille",
+      "location": "",
+      "rating": 5,
+      "date": "May 11, 2026",
+      "headline": "Beautiful piece for summer",
+      "text": "Very beautiful piece of jewelry for summer 😍",
+      "productId": "cowrie-shell-belly-chain",
+      "shopResponse": "I'm so glad you like it. 🥰🥰 Enjoy it. 💖"
+    },
+    {
+      "name": "Luka",
+      "location": "",
+      "rating": 5,
+      "date": "Apr 16, 2026",
+      "headline": "Very good quality and service",
+      "text": "Very good quality very good customer service! I am very satisfied! ❤️",
+      "productId": "butterfly-charm-belly-chain",
+      "shopResponse": "Thank you so much! Glad you love it ❤️"
+    },
+    {
+      "name": "Luka",
+      "location": "",
+      "rating": 5,
+      "date": "Apr 16, 2026",
+      "headline": "Very good quality and service",
+      "text": "Very good quality very good customer service! I am very satisfied! ❤️",
+      "productId": "waterproof-belly-chain",
+      "shopResponse": "Thank you so much! Glad you love it ❤️"
+    },
+    {
+      "name": "Luka",
+      "location": "",
+      "rating": 5,
+      "date": "Apr 16, 2026",
+      "headline": "Very good quality and service",
+      "text": "Very good quality very good customer service! I am very satisfied! ❤️",
+      "productId": "layered-hip-chain",
+      "shopResponse": "Thank you so much! Glad you love it ❤️"
+    },
+    {
+      "name": "Luka",
+      "location": "",
+      "rating": 5,
+      "date": "Apr 16, 2026",
+      "headline": "Very good quality and service",
+      "text": "Very good quality very good customer service! I am very satisfied! ❤️",
+      "productId": "silver-waist-chain",
+      "shopResponse": "Thank you so much! Glad you love it ❤️"
+    },
+    {
+      "name": "Luka",
+      "location": "",
+      "rating": 5,
+      "date": "Apr 16, 2026",
+      "headline": "Very good quality and service",
+      "text": "Very good quality very good customer service! I am very satisfied! ❤️",
+      "productId": "turquoise-beaded-belly-chain",
+      "shopResponse": "Thank you so much! Glad you love it ❤️"
+    },
+    {
+      "name": "Luka",
+      "location": "",
+      "rating": 5,
+      "date": "Apr 16, 2026",
+      "headline": "Very good quality and service",
+      "text": "Very good quality very good customer service! I am very satisfied! ❤️",
+      "productId": "coin-disc-belly-chain",
+      "shopResponse": "Thank you so much! Glad you love it ❤️"
+    },
+    {
+      "name": "Luka",
+      "location": "",
+      "rating": 5,
+      "date": "Apr 16, 2026",
+      "headline": "Very good quality and service",
+      "text": "Very good quality very good customer service! I am very satisfied! ❤️",
+      "productId": "chain-waist-belt",
+      "shopResponse": "Thank you so much! Glad you love it ❤️"
+    },
+    {
+      "name": "Luka",
+      "location": "",
+      "rating": 5,
+      "date": "Apr 16, 2026",
+      "headline": "Very good quality and service",
+      "text": "Very good quality very good customer service! I am very satisfied! ❤️",
+      "productId": "pearl-waist-chain",
+      "shopResponse": "Thank you so much! Glad you love it ❤️"
+    },
+    {
+      "name": "Luka",
+      "location": "",
+      "rating": 5,
+      "date": "Apr 16, 2026",
+      "headline": "Very good quality and service",
+      "text": "Very good quality very good customer service! I am very satisfied! ❤️",
+      "productId": "boho-belly-chain",
+      "shopResponse": "Thank you so much! Glad you love it ❤️"
+    },
+    {
+      "name": "Luka",
+      "location": "",
+      "rating": 5,
+      "date": "Apr 16, 2026",
+      "headline": "Very good quality and service",
+      "text": "Very good quality very good customer service! I am very satisfied! ❤️",
+      "productId": "cross-belly-chain",
+      "shopResponse": "Thank you so much! Glad you love it ❤️"
+    },
+    {
+      "name": "Luka",
+      "location": "",
+      "rating": 5,
+      "date": "Apr 16, 2026",
+      "headline": "Very good quality and service",
+      "text": "Very good quality very good customer service! I am very satisfied! ❤️",
+      "productId": "pearl-belly-chain",
+      "shopResponse": "Thank you so much! Glad you love it ❤️"
+    },
+    {
+      "name": "Luka",
+      "location": "",
+      "rating": 5,
+      "date": "Apr 16, 2026",
+      "headline": "Very good quality and service",
+      "text": "Very good quality very good customer service! I am very satisfied! ❤️",
+      "productId": "butterfly-waist-chain",
+      "shopResponse": "Thank you so much! Glad you love it ❤️"
+    },
+    {
+      "name": "Luka",
+      "location": "",
+      "rating": 5,
+      "date": "Apr 16, 2026",
+      "headline": "Very good quality and service",
+      "text": "Very good quality very good customer service! I am very satisfied! ❤️",
+      "productId": "layered-silver-belly-chain",
+      "shopResponse": "Thank you so much! Glad you love it ❤️"
+    },
+    {
+      "name": "Luka",
+      "location": "",
+      "rating": 5,
+      "date": "Apr 16, 2026",
+      "headline": "Very good quality and service",
+      "text": "Very good quality very good customer service! I am very satisfied! ❤️",
+      "productId": "stainless-steel-belly-chain",
+      "shopResponse": "Thank you so much! Glad you love it ❤️"
+    },
+    {
+      "name": "Luka",
+      "location": "",
+      "rating": 5,
+      "date": "Apr 16, 2026",
+      "headline": "Very good quality and service",
+      "text": "Very good quality very good customer service! I am very satisfied! ❤️",
+      "productId": "pearl-beaded-belly-chain",
+      "shopResponse": "Thank you so much! Glad you love it ❤️"
+    },
+    {
+      "name": "Luka",
+      "location": "",
+      "rating": 5,
+      "date": "Apr 16, 2026",
+      "headline": "Very good quality and service",
+      "text": "Very good quality very good customer service! I am very satisfied! ❤️",
+      "productId": "silver-waterproof-belly-chain",
+      "shopResponse": "Thank you so much! Glad you love it ❤️"
+    },
+    {
+      "name": "Luka",
+      "location": "",
+      "rating": 5,
+      "date": "Apr 16, 2026",
+      "headline": "Very good quality and service",
+      "text": "Very good quality very good customer service! I am very satisfied! ❤️",
+      "productId": "dainty-summer-belly-chain",
+      "shopResponse": "Thank you so much! Glad you love it ❤️"
+    },
+    {
+      "name": "Luka",
+      "location": "",
+      "rating": 5,
+      "date": "Apr 16, 2026",
+      "headline": "Very good quality and service",
+      "text": "Very good quality very good customer service! I am very satisfied! ❤️",
+      "productId": "zodiac-yoga-belly-chain",
+      "shopResponse": "Thank you so much! Glad you love it ❤️"
+    },
+    {
+      "name": "Luka",
+      "location": "",
+      "rating": 5,
+      "date": "Apr 16, 2026",
+      "headline": "Very good quality and service",
+      "text": "Very good quality very good customer service! I am very satisfied! ❤️",
+      "productId": "butterfly-layered-belly-chain",
+      "shopResponse": "Thank you so much! Glad you love it ❤️"
+    },
+    {
+      "name": "Luka",
+      "location": "",
+      "rating": 5,
+      "date": "Apr 16, 2026",
+      "headline": "Very good quality and service",
+      "text": "Very good quality very good customer service! I am very satisfied! ❤️",
+      "productId": "beach-belly-chain",
+      "shopResponse": "Thank you so much! Glad you love it ❤️"
+    },
+    {
+      "name": "Greta",
+      "location": "",
+      "rating": 5,
+      "date": "Jun 30, 2026",
+      "headline": "Everything's great",
+      "text": "Everything's great, fast shipping, good product :)",
+      "productId": "snake-belly-chain",
+      "shopResponse": "Hi Greta, 💖 thank you so much for your review. I'm happy you like it. 🥳"
+    },
+    {
+      "name": "Greta",
+      "location": "",
+      "rating": 5,
+      "date": "Jun 30, 2026",
+      "headline": "Everything's great",
+      "text": "Everything's great, fast shipping, good product :)",
+      "productId": "zodiac-snake-belly-chain",
+      "shopResponse": "Hi Greta, 💖 thank you so much for your review. I'm happy you like it. 🥳"
+    },
+    {
+      "name": "Elise",
+      "location": "",
+      "rating": 5,
+      "date": "Mar 14, 2026",
+      "headline": "Truly beautiful belly jewelry",
+      "text": "The belly jewelry is truly beautiful. As a small thank you, I also received a charm with an \"E\" for my first name. Very fast delivery too!",
+      "productId": "snake-belly-chain",
+      "image": "/images/reviews/belly-chains/snake-belly-chain-charm-1.jpg",
+      "shopResponse": "We're glad you love your Bodystrand. 💖"
+    },
+    {
+      "name": "Elise",
+      "location": "",
+      "rating": 5,
+      "date": "Mar 14, 2026",
+      "headline": "Truly beautiful belly jewelry",
+      "text": "The belly jewelry is truly beautiful. As a small thank you, I also received a charm with an \"E\" for my first name. Very fast delivery too!",
+      "productId": "zodiac-snake-belly-chain",
+      "image": "/images/reviews/belly-chains/snake-belly-chain-charm-1.jpg",
+      "shopResponse": "We're glad you love your Bodystrand. 💖"
+    },
+    {
+      "name": "Deniz",
+      "location": "",
+      "rating": 5,
+      "date": "Mar 1, 2026",
+      "headline": "Great for crop tops",
+      "text": "A great accessory for crop tops. Feels very comfortable against the skin.",
+      "productId": "snake-belly-chain",
+      "image": "/images/reviews/belly-chains/snake-belly-chain-croptop-1.jpg",
+      "shopResponse": "Thank you so much. We're thrilled that you like your Bodystrand. 🥳"
+    },
+    {
+      "name": "Deniz",
+      "location": "",
+      "rating": 5,
+      "date": "Mar 1, 2026",
+      "headline": "Great for crop tops",
+      "text": "A great accessory for crop tops. Feels very comfortable against the skin.",
+      "productId": "zodiac-snake-belly-chain",
+      "image": "/images/reviews/belly-chains/snake-belly-chain-croptop-1.jpg",
+      "shopResponse": "Thank you so much. We're thrilled that you like your Bodystrand. 🥳"
+    }
+  ],
+  "Eyeglasses Chains": [
+    {
+      "name": "Sofia",
+      "location": "",
+      "rating": 5,
+      "date": "Jul 4, 2026",
+      "headline": "Well made and stylish",
+      "text": "Well made and very stylish. Would recommend",
+      "productId": "dainty-eyeglasses-chain",
+      "shopResponse": "Thank you so much for your review. I'm glad you like it! 💖"
+    },
+    {
+      "name": "Sofia",
+      "location": "",
+      "rating": 5,
+      "date": "Jul 4, 2026",
+      "headline": "Well made and stylish",
+      "text": "Well made and very stylish. Would recommend",
+      "productId": "silver-eyeglasses-chain",
+      "shopResponse": "Thank you so much for your review. I'm glad you like it! 💖"
+    },
+    {
+      "name": "Sofia",
+      "location": "",
+      "rating": 5,
+      "date": "Jul 4, 2026",
+      "headline": "Well made and stylish",
+      "text": "Well made and very stylish. Would recommend",
+      "productId": "pearl-glasses-chain",
+      "shopResponse": "Thank you so much for your review. I'm glad you like it! 💖"
+    },
+    {
+      "name": "Sofia",
+      "location": "",
+      "rating": 5,
+      "date": "Jul 4, 2026",
+      "headline": "Well made and stylish",
+      "text": "Well made and very stylish. Would recommend",
+      "productId": "beaded-glasses-chain",
+      "shopResponse": "Thank you so much for your review. I'm glad you like it! 💖"
+    },
+    {
+      "name": "Sofia",
+      "location": "",
+      "rating": 5,
+      "date": "Jul 4, 2026",
+      "headline": "Well made and stylish",
+      "text": "Well made and very stylish. Would recommend",
+      "productId": "boho-beaded-eyeglasses-chain",
+      "shopResponse": "Thank you so much for your review. I'm glad you like it! 💖"
+    },
+    {
+      "name": "Sofia",
+      "location": "",
+      "rating": 5,
+      "date": "Jul 4, 2026",
+      "headline": "Well made and stylish",
+      "text": "Well made and very stylish. Would recommend",
+      "productId": "minimalist-glasses-chain",
+      "shopResponse": "Thank you so much for your review. I'm glad you like it! 💖"
+    },
+    {
+      "name": "Marlene",
+      "location": "",
+      "rating": 5,
+      "date": "Jun 20, 2026",
+      "headline": "Elevates my glasses to jewellery",
+      "text": "This is a very nice sparkly chain just what I wanted to elevate my glasses to jewellery",
+      "productId": "dainty-eyeglasses-chain",
+      "shopResponse": "Thank you so much for your review, Marlene! I'm so happy we met your expectations. 😊"
+    },
+    {
+      "name": "Marlene",
+      "location": "",
+      "rating": 5,
+      "date": "Jun 20, 2026",
+      "headline": "Elevates my glasses to jewellery",
+      "text": "This is a very nice sparkly chain just what I wanted to elevate my glasses to jewellery",
+      "productId": "silver-eyeglasses-chain",
+      "shopResponse": "Thank you so much for your review, Marlene! I'm so happy we met your expectations. 😊"
+    },
+    {
+      "name": "Marlene",
+      "location": "",
+      "rating": 5,
+      "date": "Jun 20, 2026",
+      "headline": "Elevates my glasses to jewellery",
+      "text": "This is a very nice sparkly chain just what I wanted to elevate my glasses to jewellery",
+      "productId": "pearl-glasses-chain",
+      "shopResponse": "Thank you so much for your review, Marlene! I'm so happy we met your expectations. 😊"
+    },
+    {
+      "name": "Marlene",
+      "location": "",
+      "rating": 5,
+      "date": "Jun 20, 2026",
+      "headline": "Elevates my glasses to jewellery",
+      "text": "This is a very nice sparkly chain just what I wanted to elevate my glasses to jewellery",
+      "productId": "beaded-glasses-chain",
+      "shopResponse": "Thank you so much for your review, Marlene! I'm so happy we met your expectations. 😊"
+    },
+    {
+      "name": "Marlene",
+      "location": "",
+      "rating": 5,
+      "date": "Jun 20, 2026",
+      "headline": "Elevates my glasses to jewellery",
+      "text": "This is a very nice sparkly chain just what I wanted to elevate my glasses to jewellery",
+      "productId": "boho-beaded-eyeglasses-chain",
+      "shopResponse": "Thank you so much for your review, Marlene! I'm so happy we met your expectations. 😊"
+    },
+    {
+      "name": "Marlene",
+      "location": "",
+      "rating": 5,
+      "date": "Jun 20, 2026",
+      "headline": "Elevates my glasses to jewellery",
+      "text": "This is a very nice sparkly chain just what I wanted to elevate my glasses to jewellery",
+      "productId": "minimalist-glasses-chain",
+      "shopResponse": "Thank you so much for your review, Marlene! I'm so happy we met your expectations. 😊"
+    },
+    {
+      "name": "Anders",
+      "location": "",
+      "rating": 5,
+      "date": "Apr 21, 2026",
+      "headline": "Great product, very chic",
+      "text": "Great product, very chic and sleak",
+      "productId": "dainty-eyeglasses-chain",
+      "shopResponse": "Thank you so much for your review. We're glad you like it. 🥳"
+    },
+    {
+      "name": "Anders",
+      "location": "",
+      "rating": 5,
+      "date": "Apr 21, 2026",
+      "headline": "Great product, very chic",
+      "text": "Great product, very chic and sleak",
+      "productId": "silver-eyeglasses-chain",
+      "shopResponse": "Thank you so much for your review. We're glad you like it. 🥳"
+    },
+    {
+      "name": "Anders",
+      "location": "",
+      "rating": 5,
+      "date": "Apr 21, 2026",
+      "headline": "Great product, very chic",
+      "text": "Great product, very chic and sleak",
+      "productId": "pearl-glasses-chain",
+      "shopResponse": "Thank you so much for your review. We're glad you like it. 🥳"
+    },
+    {
+      "name": "Anders",
+      "location": "",
+      "rating": 5,
+      "date": "Apr 21, 2026",
+      "headline": "Great product, very chic",
+      "text": "Great product, very chic and sleak",
+      "productId": "beaded-glasses-chain",
+      "shopResponse": "Thank you so much for your review. We're glad you like it. 🥳"
+    },
+    {
+      "name": "Anders",
+      "location": "",
+      "rating": 5,
+      "date": "Apr 21, 2026",
+      "headline": "Great product, very chic",
+      "text": "Great product, very chic and sleak",
+      "productId": "boho-beaded-eyeglasses-chain",
+      "shopResponse": "Thank you so much for your review. We're glad you like it. 🥳"
+    },
+    {
+      "name": "Anders",
+      "location": "",
+      "rating": 5,
+      "date": "Apr 21, 2026",
+      "headline": "Great product, very chic",
+      "text": "Great product, very chic and sleak",
+      "productId": "minimalist-glasses-chain",
+      "shopResponse": "Thank you so much for your review. We're glad you like it. 🥳"
+    }
+  ],
+  "Anklets": [
+    {
+      "name": "Elena",
+      "location": "",
+      "rating": 5,
+      "date": "May 17, 2026",
+      "headline": "Beautiful and elegant",
+      "text": "Very beautiful and elegant. Loved it.",
+      "productId": "zodiac-anklet",
+      "shopResponse": "Thank you so much for your review! I'm so happy you love your Bodystrand. I'll hope you will enjoy it! 💖"
+    },
+    {
+      "name": "Elena",
+      "location": "",
+      "rating": 5,
+      "date": "May 17, 2026",
+      "headline": "Beautiful and elegant",
+      "text": "Very beautiful and elegant. Loved it.",
+      "productId": "cowrie-shell-anklet",
+      "shopResponse": "Thank you so much for your review! I'm so happy you love your Bodystrand. I'll hope you will enjoy it! 💖"
+    },
+    {
+      "name": "Elena",
+      "location": "",
+      "rating": 5,
+      "date": "May 17, 2026",
+      "headline": "Beautiful and elegant",
+      "text": "Very beautiful and elegant. Loved it.",
+      "productId": "layered-pearl-anklet",
+      "shopResponse": "Thank you so much for your review! I'm so happy you love your Bodystrand. I'll hope you will enjoy it! 💖"
+    },
+    {
+      "name": "Elena",
+      "location": "",
+      "rating": 5,
+      "date": "May 17, 2026",
+      "headline": "Beautiful and elegant",
+      "text": "Very beautiful and elegant. Loved it.",
+      "productId": "pearl-pendant-anklet",
+      "shopResponse": "Thank you so much for your review! I'm so happy you love your Bodystrand. I'll hope you will enjoy it! 💖"
+    },
+    {
+      "name": "Elena",
+      "location": "",
+      "rating": 5,
+      "date": "May 17, 2026",
+      "headline": "Beautiful and elegant",
+      "text": "Very beautiful and elegant. Loved it.",
+      "productId": "initial-letter-anklet",
+      "shopResponse": "Thank you so much for your review! I'm so happy you love your Bodystrand. I'll hope you will enjoy it! 💖"
+    },
+    {
+      "name": "Elena",
+      "location": "",
+      "rating": 5,
+      "date": "May 17, 2026",
+      "headline": "Beautiful and elegant",
+      "text": "Very beautiful and elegant. Loved it.",
+      "productId": "evil-eye-charm-anklet",
+      "shopResponse": "Thank you so much for your review! I'm so happy you love your Bodystrand. I'll hope you will enjoy it! 💖"
+    },
+    {
+      "name": "Elena",
+      "location": "",
+      "rating": 5,
+      "date": "May 17, 2026",
+      "headline": "Beautiful and elegant",
+      "text": "Very beautiful and elegant. Loved it.",
+      "productId": "pearl-chain-anklet",
+      "shopResponse": "Thank you so much for your review! I'm so happy you love your Bodystrand. I'll hope you will enjoy it! 💖"
+    },
+    {
+      "name": "Elena",
+      "location": "",
+      "rating": 5,
+      "date": "May 17, 2026",
+      "headline": "Beautiful and elegant",
+      "text": "Very beautiful and elegant. Loved it.",
+      "productId": "gemstone-zodiac-anklet",
+      "shopResponse": "Thank you so much for your review! I'm so happy you love your Bodystrand. I'll hope you will enjoy it! 💖"
+    },
+    {
+      "name": "Elena",
+      "location": "",
+      "rating": 5,
+      "date": "May 17, 2026",
+      "headline": "Beautiful and elegant",
+      "text": "Very beautiful and elegant. Loved it.",
+      "productId": "birthstone-gemstone-anklet",
+      "shopResponse": "Thank you so much for your review! I'm so happy you love your Bodystrand. I'll hope you will enjoy it! 💖"
+    },
+    {
+      "name": "Elena",
+      "location": "",
+      "rating": 5,
+      "date": "May 17, 2026",
+      "headline": "Beautiful and elegant",
+      "text": "Very beautiful and elegant. Loved it.",
+      "productId": "butterfly-anklet",
+      "shopResponse": "Thank you so much for your review! I'm so happy you love your Bodystrand. I'll hope you will enjoy it! 💖"
+    },
+    {
+      "name": "Elena",
+      "location": "",
+      "rating": 5,
+      "date": "May 17, 2026",
+      "headline": "Beautiful and elegant",
+      "text": "Very beautiful and elegant. Loved it.",
+      "productId": "birth-flower-anklet",
+      "shopResponse": "Thank you so much for your review! I'm so happy you love your Bodystrand. I'll hope you will enjoy it! 💖"
+    },
+    {
+      "name": "Jonas",
+      "location": "",
+      "rating": 5,
+      "date": "May 10, 2026",
+      "headline": "Arrived quickly, well made",
+      "text": "Arrived quickly, looks well made and adjustable, so definitely recommended!",
+      "productId": "barefoot-sandal-toe-chain",
+      "shopResponse": "Thanks so much! We take a lot of pride in handcrafting our jewelry with quality materials and careful attention to detail. We're so glad it arrived quickly and fits perfectly!"
+    },
+    {
+      "name": "Jonas",
+      "location": "",
+      "rating": 5,
+      "date": "May 10, 2026",
+      "headline": "Arrived quickly, well made",
+      "text": "Arrived quickly, looks well made and adjustable, so definitely recommended!",
+      "productId": "pearl-barefoot-sandal",
+      "shopResponse": "Thanks so much! We take a lot of pride in handcrafting our jewelry with quality materials and careful attention to detail. We're so glad it arrived quickly and fits perfectly!"
+    },
+    {
+      "name": "Jonas",
+      "location": "",
+      "rating": 5,
+      "date": "May 10, 2026",
+      "headline": "Arrived quickly, well made",
+      "text": "Arrived quickly, looks well made and adjustable, so definitely recommended!",
+      "productId": "barefoot-toe-chain-anklet",
+      "shopResponse": "Thanks so much! We take a lot of pride in handcrafting our jewelry with quality materials and careful attention to detail. We're so glad it arrived quickly and fits perfectly!"
+    },
+    {
+      "name": "Priya",
+      "location": "",
+      "rating": 5,
+      "date": "May 6, 2026",
+      "headline": "Lovely, dainty, ultra-fast shipping",
+      "text": "Its lovely on my foot, just like in the product picture. Dainty but doesnt feel fragile. Shipped and delivered ultra-fast (2 days!) I made a mistake in the initial purchase and contacted the seller - she was very prompt to respond and everything was smooth. Many thanks!",
+      "productId": "barefoot-sandal-toe-chain",
+      "shopResponse": "Thank you so much for your lovely review. I'm so happy that you liked it. I hope you'll enjoy it in those coming hot days!! 🥳"
+    },
+    {
+      "name": "Priya",
+      "location": "",
+      "rating": 5,
+      "date": "May 6, 2026",
+      "headline": "Lovely, dainty, ultra-fast shipping",
+      "text": "Its lovely on my foot, just like in the product picture. Dainty but doesnt feel fragile. Shipped and delivered ultra-fast (2 days!) I made a mistake in the initial purchase and contacted the seller - she was very prompt to respond and everything was smooth. Many thanks!",
+      "productId": "pearl-barefoot-sandal",
+      "shopResponse": "Thank you so much for your lovely review. I'm so happy that you liked it. I hope you'll enjoy it in those coming hot days!! 🥳"
+    },
+    {
+      "name": "Priya",
+      "location": "",
+      "rating": 5,
+      "date": "May 6, 2026",
+      "headline": "Lovely, dainty, ultra-fast shipping",
+      "text": "Its lovely on my foot, just like in the product picture. Dainty but doesnt feel fragile. Shipped and delivered ultra-fast (2 days!) I made a mistake in the initial purchase and contacted the seller - she was very prompt to respond and everything was smooth. Many thanks!",
+      "productId": "barefoot-toe-chain-anklet",
+      "shopResponse": "Thank you so much for your lovely review. I'm so happy that you liked it. I hope you'll enjoy it in those coming hot days!! 🥳"
+    },
+    {
+      "name": "Kian",
+      "location": "",
+      "rating": 5,
+      "date": "Jun 16, 2026",
+      "headline": "Cute gift idea",
+      "text": "A cute gift idea for the money.",
+      "productId": "zodiac-anklet",
+      "shopResponse": "Hi Kian, thanks for your feedback! I hope your girlfriend liked the gift."
+    },
+    {
+      "name": "Kian",
+      "location": "",
+      "rating": 5,
+      "date": "Jun 16, 2026",
+      "headline": "Cute gift idea",
+      "text": "A cute gift idea for the money.",
+      "productId": "cowrie-shell-anklet",
+      "shopResponse": "Hi Kian, thanks for your feedback! I hope your girlfriend liked the gift."
+    },
+    {
+      "name": "Kian",
+      "location": "",
+      "rating": 5,
+      "date": "Jun 16, 2026",
+      "headline": "Cute gift idea",
+      "text": "A cute gift idea for the money.",
+      "productId": "layered-pearl-anklet",
+      "shopResponse": "Hi Kian, thanks for your feedback! I hope your girlfriend liked the gift."
+    },
+    {
+      "name": "Kian",
+      "location": "",
+      "rating": 5,
+      "date": "Jun 16, 2026",
+      "headline": "Cute gift idea",
+      "text": "A cute gift idea for the money.",
+      "productId": "pearl-pendant-anklet",
+      "shopResponse": "Hi Kian, thanks for your feedback! I hope your girlfriend liked the gift."
+    },
+    {
+      "name": "Kian",
+      "location": "",
+      "rating": 5,
+      "date": "Jun 16, 2026",
+      "headline": "Cute gift idea",
+      "text": "A cute gift idea for the money.",
+      "productId": "initial-letter-anklet",
+      "shopResponse": "Hi Kian, thanks for your feedback! I hope your girlfriend liked the gift."
+    },
+    {
+      "name": "Kian",
+      "location": "",
+      "rating": 5,
+      "date": "Jun 16, 2026",
+      "headline": "Cute gift idea",
+      "text": "A cute gift idea for the money.",
+      "productId": "evil-eye-charm-anklet",
+      "shopResponse": "Hi Kian, thanks for your feedback! I hope your girlfriend liked the gift."
+    },
+    {
+      "name": "Kian",
+      "location": "",
+      "rating": 5,
+      "date": "Jun 16, 2026",
+      "headline": "Cute gift idea",
+      "text": "A cute gift idea for the money.",
+      "productId": "pearl-chain-anklet",
+      "shopResponse": "Hi Kian, thanks for your feedback! I hope your girlfriend liked the gift."
+    },
+    {
+      "name": "Kian",
+      "location": "",
+      "rating": 5,
+      "date": "Jun 16, 2026",
+      "headline": "Cute gift idea",
+      "text": "A cute gift idea for the money.",
+      "productId": "gemstone-zodiac-anklet",
+      "shopResponse": "Hi Kian, thanks for your feedback! I hope your girlfriend liked the gift."
+    },
+    {
+      "name": "Kian",
+      "location": "",
+      "rating": 5,
+      "date": "Jun 16, 2026",
+      "headline": "Cute gift idea",
+      "text": "A cute gift idea for the money.",
+      "productId": "birthstone-gemstone-anklet",
+      "shopResponse": "Hi Kian, thanks for your feedback! I hope your girlfriend liked the gift."
+    },
+    {
+      "name": "Kian",
+      "location": "",
+      "rating": 5,
+      "date": "Jun 16, 2026",
+      "headline": "Cute gift idea",
+      "text": "A cute gift idea for the money.",
+      "productId": "butterfly-anklet",
+      "shopResponse": "Hi Kian, thanks for your feedback! I hope your girlfriend liked the gift."
+    },
+    {
+      "name": "Kian",
+      "location": "",
+      "rating": 5,
+      "date": "Jun 16, 2026",
+      "headline": "Cute gift idea",
+      "text": "A cute gift idea for the money.",
+      "productId": "birth-flower-anklet",
+      "shopResponse": "Hi Kian, thanks for your feedback! I hope your girlfriend liked the gift."
+    },
+    {
+      "name": "Elise",
+      "location": "",
+      "rating": 5,
+      "date": "Mar 14, 2026",
+      "headline": "Perfect for the beach",
+      "text": "A really beautiful anklet. It's perfect for the beach because it's waterproof. I love it!!",
+      "productId": "zodiac-anklet",
+      "image": "/images/reviews/anklets/charm-anklet-1.jpg",
+      "shopResponse": "Thank you so much. Enjoy it. 🥰"
+    },
+    {
+      "name": "Elise",
+      "location": "",
+      "rating": 5,
+      "date": "Mar 14, 2026",
+      "headline": "Perfect for the beach",
+      "text": "A really beautiful anklet. It's perfect for the beach because it's waterproof. I love it!!",
+      "productId": "cowrie-shell-anklet",
+      "image": "/images/reviews/anklets/charm-anklet-1.jpg",
+      "shopResponse": "Thank you so much. Enjoy it. 🥰"
+    },
+    {
+      "name": "Elise",
+      "location": "",
+      "rating": 5,
+      "date": "Mar 14, 2026",
+      "headline": "Perfect for the beach",
+      "text": "A really beautiful anklet. It's perfect for the beach because it's waterproof. I love it!!",
+      "productId": "layered-pearl-anklet",
+      "image": "/images/reviews/anklets/charm-anklet-1.jpg",
+      "shopResponse": "Thank you so much. Enjoy it. 🥰"
+    },
+    {
+      "name": "Elise",
+      "location": "",
+      "rating": 5,
+      "date": "Mar 14, 2026",
+      "headline": "Perfect for the beach",
+      "text": "A really beautiful anklet. It's perfect for the beach because it's waterproof. I love it!!",
+      "productId": "pearl-pendant-anklet",
+      "image": "/images/reviews/anklets/charm-anklet-1.jpg",
+      "shopResponse": "Thank you so much. Enjoy it. 🥰"
+    },
+    {
+      "name": "Elise",
+      "location": "",
+      "rating": 5,
+      "date": "Mar 14, 2026",
+      "headline": "Perfect for the beach",
+      "text": "A really beautiful anklet. It's perfect for the beach because it's waterproof. I love it!!",
+      "productId": "initial-letter-anklet",
+      "image": "/images/reviews/anklets/charm-anklet-1.jpg",
+      "shopResponse": "Thank you so much. Enjoy it. 🥰"
+    },
+    {
+      "name": "Elise",
+      "location": "",
+      "rating": 5,
+      "date": "Mar 14, 2026",
+      "headline": "Perfect for the beach",
+      "text": "A really beautiful anklet. It's perfect for the beach because it's waterproof. I love it!!",
+      "productId": "evil-eye-charm-anklet",
+      "image": "/images/reviews/anklets/charm-anklet-1.jpg",
+      "shopResponse": "Thank you so much. Enjoy it. 🥰"
+    },
+    {
+      "name": "Elise",
+      "location": "",
+      "rating": 5,
+      "date": "Mar 14, 2026",
+      "headline": "Perfect for the beach",
+      "text": "A really beautiful anklet. It's perfect for the beach because it's waterproof. I love it!!",
+      "productId": "pearl-chain-anklet",
+      "image": "/images/reviews/anklets/charm-anklet-1.jpg",
+      "shopResponse": "Thank you so much. Enjoy it. 🥰"
+    },
+    {
+      "name": "Elise",
+      "location": "",
+      "rating": 5,
+      "date": "Mar 14, 2026",
+      "headline": "Perfect for the beach",
+      "text": "A really beautiful anklet. It's perfect for the beach because it's waterproof. I love it!!",
+      "productId": "gemstone-zodiac-anklet",
+      "image": "/images/reviews/anklets/charm-anklet-1.jpg",
+      "shopResponse": "Thank you so much. Enjoy it. 🥰"
+    },
+    {
+      "name": "Elise",
+      "location": "",
+      "rating": 5,
+      "date": "Mar 14, 2026",
+      "headline": "Perfect for the beach",
+      "text": "A really beautiful anklet. It's perfect for the beach because it's waterproof. I love it!!",
+      "productId": "birthstone-gemstone-anklet",
+      "image": "/images/reviews/anklets/charm-anklet-1.jpg",
+      "shopResponse": "Thank you so much. Enjoy it. 🥰"
+    },
+    {
+      "name": "Elise",
+      "location": "",
+      "rating": 5,
+      "date": "Mar 14, 2026",
+      "headline": "Perfect for the beach",
+      "text": "A really beautiful anklet. It's perfect for the beach because it's waterproof. I love it!!",
+      "productId": "butterfly-anklet",
+      "image": "/images/reviews/anklets/charm-anklet-1.jpg",
+      "shopResponse": "Thank you so much. Enjoy it. 🥰"
+    },
+    {
+      "name": "Elise",
+      "location": "",
+      "rating": 5,
+      "date": "Mar 14, 2026",
+      "headline": "Perfect for the beach",
+      "text": "A really beautiful anklet. It's perfect for the beach because it's waterproof. I love it!!",
+      "productId": "birth-flower-anklet",
+      "image": "/images/reviews/anklets/charm-anklet-1.jpg",
+      "shopResponse": "Thank you so much. Enjoy it. 🥰"
+    },
+    {
+      "name": "Deniz",
+      "location": "",
+      "rating": 5,
+      "date": "Mar 1, 2026",
+      "headline": "Precious pearl eye-catcher",
+      "text": "Beautiful anklet with a precious pearl as an eye-catcher.",
+      "productId": "zodiac-anklet",
+      "image": "/images/reviews/anklets/pearl-anklet-shoe-1.jpg"
+    },
+    {
+      "name": "Deniz",
+      "location": "",
+      "rating": 5,
+      "date": "Mar 1, 2026",
+      "headline": "Precious pearl eye-catcher",
+      "text": "Beautiful anklet with a precious pearl as an eye-catcher.",
+      "productId": "cowrie-shell-anklet",
+      "image": "/images/reviews/anklets/pearl-anklet-shoe-1.jpg"
+    },
+    {
+      "name": "Deniz",
+      "location": "",
+      "rating": 5,
+      "date": "Mar 1, 2026",
+      "headline": "Precious pearl eye-catcher",
+      "text": "Beautiful anklet with a precious pearl as an eye-catcher.",
+      "productId": "layered-pearl-anklet",
+      "image": "/images/reviews/anklets/pearl-anklet-shoe-1.jpg"
+    },
+    {
+      "name": "Deniz",
+      "location": "",
+      "rating": 5,
+      "date": "Mar 1, 2026",
+      "headline": "Precious pearl eye-catcher",
+      "text": "Beautiful anklet with a precious pearl as an eye-catcher.",
+      "productId": "pearl-pendant-anklet",
+      "image": "/images/reviews/anklets/pearl-anklet-shoe-1.jpg"
+    },
+    {
+      "name": "Deniz",
+      "location": "",
+      "rating": 5,
+      "date": "Mar 1, 2026",
+      "headline": "Precious pearl eye-catcher",
+      "text": "Beautiful anklet with a precious pearl as an eye-catcher.",
+      "productId": "initial-letter-anklet",
+      "image": "/images/reviews/anklets/pearl-anklet-shoe-1.jpg"
+    },
+    {
+      "name": "Deniz",
+      "location": "",
+      "rating": 5,
+      "date": "Mar 1, 2026",
+      "headline": "Precious pearl eye-catcher",
+      "text": "Beautiful anklet with a precious pearl as an eye-catcher.",
+      "productId": "evil-eye-charm-anklet",
+      "image": "/images/reviews/anklets/pearl-anklet-shoe-1.jpg"
+    },
+    {
+      "name": "Deniz",
+      "location": "",
+      "rating": 5,
+      "date": "Mar 1, 2026",
+      "headline": "Precious pearl eye-catcher",
+      "text": "Beautiful anklet with a precious pearl as an eye-catcher.",
+      "productId": "pearl-chain-anklet",
+      "image": "/images/reviews/anklets/pearl-anklet-shoe-1.jpg"
+    },
+    {
+      "name": "Deniz",
+      "location": "",
+      "rating": 5,
+      "date": "Mar 1, 2026",
+      "headline": "Precious pearl eye-catcher",
+      "text": "Beautiful anklet with a precious pearl as an eye-catcher.",
+      "productId": "gemstone-zodiac-anklet",
+      "image": "/images/reviews/anklets/pearl-anklet-shoe-1.jpg"
+    },
+    {
+      "name": "Deniz",
+      "location": "",
+      "rating": 5,
+      "date": "Mar 1, 2026",
+      "headline": "Precious pearl eye-catcher",
+      "text": "Beautiful anklet with a precious pearl as an eye-catcher.",
+      "productId": "birthstone-gemstone-anklet",
+      "image": "/images/reviews/anklets/pearl-anklet-shoe-1.jpg"
+    },
+    {
+      "name": "Deniz",
+      "location": "",
+      "rating": 5,
+      "date": "Mar 1, 2026",
+      "headline": "Precious pearl eye-catcher",
+      "text": "Beautiful anklet with a precious pearl as an eye-catcher.",
+      "productId": "butterfly-anklet",
+      "image": "/images/reviews/anklets/pearl-anklet-shoe-1.jpg"
+    },
+    {
+      "name": "Deniz",
+      "location": "",
+      "rating": 5,
+      "date": "Mar 1, 2026",
+      "headline": "Precious pearl eye-catcher",
+      "text": "Beautiful anklet with a precious pearl as an eye-catcher.",
+      "productId": "birth-flower-anklet",
+      "image": "/images/reviews/anklets/pearl-anklet-shoe-1.jpg"
+    }
+  ],
+  "Shoulder & Arm Chains": [
+    {
+      "name": "Freya",
+      "location": "",
+      "rating": 5,
+      "date": "Jul 10, 2026",
+      "headline": "Beautiful, just like the photo",
+      "text": "Very beautiful necklace, just like in the photo!",
+      "productId": "goddess-shoulder-chain",
+      "shopResponse": "Hi Freya, thanks for your feedback. I'm glad you like it. 💖"
+    },
+    {
+      "name": "Freya",
+      "location": "",
+      "rating": 5,
+      "date": "Jul 10, 2026",
+      "headline": "Beautiful, just like the photo",
+      "text": "Very beautiful necklace, just like in the photo!",
+      "productId": "bridal-shoulder-chain",
+      "shopResponse": "Hi Freya, thanks for your feedback. I'm glad you like it. 💖"
+    },
+    {
+      "name": "Freya",
+      "location": "",
+      "rating": 5,
+      "date": "Jul 10, 2026",
+      "headline": "Beautiful, just like the photo",
+      "text": "Very beautiful necklace, just like in the photo!",
+      "productId": "double-shoulder-chest-chain",
+      "shopResponse": "Hi Freya, thanks for your feedback. I'm glad you like it. 💖"
+    },
+    {
+      "name": "Freya",
+      "location": "",
+      "rating": 5,
+      "date": "Jul 10, 2026",
+      "headline": "Beautiful, just like the photo",
+      "text": "Very beautiful necklace, just like in the photo!",
+      "productId": "multi-strand-shoulder-chain",
+      "shopResponse": "Hi Freya, thanks for your feedback. I'm glad you like it. 💖"
+    },
+    {
+      "name": "Freya",
+      "location": "",
+      "rating": 5,
+      "date": "Jul 10, 2026",
+      "headline": "Beautiful, just like the photo",
+      "text": "Very beautiful necklace, just like in the photo!",
+      "productId": "off-shoulder-chain-necklace",
+      "shopResponse": "Hi Freya, thanks for your feedback. I'm glad you like it. 💖"
+    },
+    {
+      "name": "Freya",
+      "location": "",
+      "rating": 5,
+      "date": "Jul 10, 2026",
+      "headline": "Beautiful, just like the photo",
+      "text": "Very beautiful necklace, just like in the photo!",
+      "productId": "2-in-1-body-chain-necklace",
+      "shopResponse": "Hi Freya, thanks for your feedback. I'm glad you like it. 💖"
+    },
+    {
+      "name": "Freya",
+      "location": "",
+      "rating": 5,
+      "date": "Jul 10, 2026",
+      "headline": "Beautiful, just like the photo",
+      "text": "Very beautiful necklace, just like in the photo!",
+      "productId": "silver-shoulder-harness",
+      "shopResponse": "Hi Freya, thanks for your feedback. I'm glad you like it. 💖"
+    },
+    {
+      "name": "Freya",
+      "location": "",
+      "rating": 5,
+      "date": "Jul 10, 2026",
+      "headline": "Beautiful, just like the photo",
+      "text": "Very beautiful necklace, just like in the photo!",
+      "productId": "layered-arm-chain",
+      "shopResponse": "Hi Freya, thanks for your feedback. I'm glad you like it. 💖"
+    },
+    {
+      "name": "Freya",
+      "location": "",
+      "rating": 5,
+      "date": "Jul 10, 2026",
+      "headline": "Beautiful, just like the photo",
+      "text": "Very beautiful necklace, just like in the photo!",
+      "productId": "birthstone-arm-chain",
+      "shopResponse": "Hi Freya, thanks for your feedback. I'm glad you like it. 💖"
+    },
+    {
+      "name": "Freya",
+      "location": "",
+      "rating": 5,
+      "date": "Jul 10, 2026",
+      "headline": "Beautiful, just like the photo",
+      "text": "Very beautiful necklace, just like in the photo!",
+      "productId": "bicep-chain",
+      "shopResponse": "Hi Freya, thanks for your feedback. I'm glad you like it. 💖"
+    },
+    {
+      "name": "Freya",
+      "location": "",
+      "rating": 5,
+      "date": "Jul 10, 2026",
+      "headline": "Beautiful, just like the photo",
+      "text": "Very beautiful necklace, just like in the photo!",
+      "productId": "birthstone-arm-band",
+      "shopResponse": "Hi Freya, thanks for your feedback. I'm glad you like it. 💖"
+    }
+  ],
+  "Necklaces": [
+    {
+      "name": "Nadia",
+      "location": "",
+      "rating": 5,
+      "date": "Jul 9, 2026",
+      "headline": "So in love with this necklace",
+      "text": "I'm so in love with this delicate necklace. Thank you so much and best regards 💗",
+      "productId": "pink-cross-choker",
+      "image": "/images/reviews/necklaces/choker-cross-pendant-1.jpg",
+      "shopResponse": "Hi Nadia, thank you for your feedback. I'm so happy you like it! The necklace looks great on you. 💖"
+    },
+    {
+      "name": "Nadia",
+      "location": "",
+      "rating": 5,
+      "date": "Jul 9, 2026",
+      "headline": "So in love with this necklace",
+      "text": "I'm so in love with this delicate necklace. Thank you so much and best regards 💗",
+      "productId": "boho-shell-choker-necklace",
+      "image": "/images/reviews/necklaces/choker-cross-pendant-1.jpg",
+      "shopResponse": "Hi Nadia, thank you for your feedback. I'm so happy you like it! The necklace looks great on you. 💖"
+    },
+    {
+      "name": "Nadia",
+      "location": "",
+      "rating": 5,
+      "date": "Jul 9, 2026",
+      "headline": "So in love with this necklace",
+      "text": "I'm so in love with this delicate necklace. Thank you so much and best regards 💗",
+      "productId": "birthstone-choker-necklace",
+      "image": "/images/reviews/necklaces/choker-cross-pendant-1.jpg",
+      "shopResponse": "Hi Nadia, thank you for your feedback. I'm so happy you like it! The necklace looks great on you. 💖"
+    },
+    {
+      "name": "Nadia",
+      "location": "",
+      "rating": 5,
+      "date": "Jul 9, 2026",
+      "headline": "So in love with this necklace",
+      "text": "I'm so in love with this delicate necklace. Thank you so much and best regards 💗",
+      "productId": "turquoise-beaded-choker",
+      "image": "/images/reviews/necklaces/choker-cross-pendant-1.jpg",
+      "shopResponse": "Hi Nadia, thank you for your feedback. I'm so happy you like it! The necklace looks great on you. 💖"
+    },
+    {
+      "name": "Nadia",
+      "location": "",
+      "rating": 5,
+      "date": "Jul 9, 2026",
+      "headline": "So in love with this necklace",
+      "text": "I'm so in love with this delicate necklace. Thank you so much and best regards 💗",
+      "productId": "layered-pearl-choker",
+      "image": "/images/reviews/necklaces/choker-cross-pendant-1.jpg",
+      "shopResponse": "Hi Nadia, thank you for your feedback. I'm so happy you like it! The necklace looks great on you. 💖"
+    },
+    {
+      "name": "Nadia",
+      "location": "",
+      "rating": 5,
+      "date": "Jul 9, 2026",
+      "headline": "So in love with this necklace",
+      "text": "I'm so in love with this delicate necklace. Thank you so much and best regards 💗",
+      "productId": "satellite-link-choker",
+      "image": "/images/reviews/necklaces/choker-cross-pendant-1.jpg",
+      "shopResponse": "Hi Nadia, thank you for your feedback. I'm so happy you like it! The necklace looks great on you. 💖"
+    },
+    {
+      "name": "Nadia",
+      "location": "",
+      "rating": 5,
+      "date": "Jul 9, 2026",
+      "headline": "So in love with this necklace",
+      "text": "I'm so in love with this delicate necklace. Thank you so much and best regards 💗",
+      "productId": "stacked-pearl-cross-choker",
+      "image": "/images/reviews/necklaces/choker-cross-pendant-1.jpg",
+      "shopResponse": "Hi Nadia, thank you for your feedback. I'm so happy you like it! The necklace looks great on you. 💖"
+    }
+  ],
+  "Back Chains": [
+    {
+      "name": "Margot",
+      "location": "",
+      "rating": 4,
+      "date": "Apr 20, 2026",
+      "headline": "Nice item, on time",
+      "text": "Nice item received on time",
+      "productId": "butterfly-backdrop-necklace",
+      "shopResponse": "Thank you so much for your feedback! We're delighted that you like our jewelry 😊"
+    },
+    {
+      "name": "Margot",
+      "location": "",
+      "rating": 4,
+      "date": "Apr 20, 2026",
+      "headline": "Nice item, on time",
+      "text": "Nice item received on time",
+      "productId": "butterfly-backdrop-necklace-gold",
+      "shopResponse": "Thank you so much for your feedback! We're delighted that you like our jewelry 😊"
+    },
+    {
+      "name": "Deniz",
+      "location": "",
+      "rating": 5,
+      "date": "Mar 1, 2026",
+      "headline": "More beautiful in person",
+      "text": "The necklace looks even more beautiful and higher quality in real life than described!",
+      "productId": "reversible-pearl-lariat-necklace",
+      "image": "/images/reviews/back-chains/lariat-necklace-1.jpg",
+      "shopResponse": "We're glad you like it. Enjoy! 😄"
+    }
+  ]
+}

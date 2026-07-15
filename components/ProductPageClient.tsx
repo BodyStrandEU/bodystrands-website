@@ -205,7 +205,7 @@ export default function ProductPageClient({ product }: { product: Product }) {
               </svg>
             ))}
           </div>
-          <span className="text-[0.65rem] tracking-[0.12em] text-[#8C7B6E]">4.9 · 847 reviews</span>
+          <span className="text-[0.65rem] tracking-[0.12em] text-[#8C7B6E]">4.9 · 52 reviews</span>
         </div>
 
         <div className="flex flex-col gap-1.5">

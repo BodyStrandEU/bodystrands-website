@@ -11,12 +11,13 @@ import UGCGallery from "@/components/UGCGallery";
 import InstagramSection from "@/components/InstagramSection";
 import { TrustBadgesStrip } from "@/components/TrustBadges";
 import { products } from "@/lib/products";
+import CountdownTimer from "@/components/CountdownTimer";
 
 const MARQUEE_TAGS = [
   "HANDMADE",
   "STAINLESS STEEL",
   "SHIPS IN 1–2 DAYS",
-  "MADE IN PORTUGAL",
+  "MADE IN PORTUGAL & CANADA",
   "TARNISH RESISTANT",
   "ADJUSTABLE FIT",
   "WATERPROOF",
@@ -92,6 +93,11 @@ export default function HomePage() {
 
   return (
     <>
+      {/* ── SALE COUNTDOWN BAR ── */}
+      <div className="bg-[#FDF9F7] border-b border-[#E8B4A8]/30 py-2.5 flex items-center justify-center">
+        <CountdownTimer />
+      </div>
+
       {/* ── HERO — video background ── */}
       <section className="relative min-h-screen flex flex-col">
         <div className="absolute inset-0 overflow-hidden">

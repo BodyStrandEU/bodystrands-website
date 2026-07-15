@@ -1,6 +1,6 @@
 const ITEMS = [
-  "Handmade in Portugal",
-  "Free EU Shipping over €50",
+  "Handmade in Portugal and Canada",
+  "Free Shipping Europe & North America over €50",
   "Ships in 1–2 Business Days",
   "Easy 14-Day Returns",
   "Tarnish-Resistant Stainless Steel",

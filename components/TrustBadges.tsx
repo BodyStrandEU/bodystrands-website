@@ -47,7 +47,7 @@ function TruckIcon() {
 export const BADGES: Badge[] = [
   {
     key: "handmade",
-    label: "Handmade in Portugal",
+    label: "Handmade in Portugal and Canada",
     sublabel: "By El & Gio, piece by piece",
     icon: <PinIcon />,
   },
@@ -65,7 +65,7 @@ export const BADGES: Badge[] = [
   },
   {
     key: "shipping",
-    label: "Fast EU Shipping",
+    label: "Ships Worldwide",
     sublabel: "Dispatched in 1–2 days",
     icon: <TruckIcon />,
   },
@@ -111,7 +111,7 @@ export function TrustBadgesInline() {
   return (
     <p className="flex items-center justify-center gap-1.5 text-[0.52rem] tracking-[0.1em] uppercase text-[#8C7B6E]">
       <LockIcon />
-      <span>Secure checkout · Handmade in Portugal</span>
+      <span>Secure checkout · Ships Worldwide</span>
     </p>
   );
 }

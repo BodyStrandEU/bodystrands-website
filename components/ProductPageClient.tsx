@@ -53,7 +53,7 @@ function ShareButton({ name }: { name: string }) {
   );
 }
 
-// Prices here are always in EUR — this banner specifically describes the EU/UK
+// Prices here are always in EUR — this banner specifically describes the EU/UK/North America
 // shipping threshold (see lib/shipping.ts), independent of the visitor's own currency.
 function ShippingNudge({ price }: { price: number }) {
   const remaining = FREE_SHIPPING_THRESHOLD - price;
@@ -61,7 +61,7 @@ function ShippingNudge({ price }: { price: number }) {
     return (
       <p className="mt-2.5 text-[0.58rem] tracking-[0.12em] uppercase text-[#A0622A] flex items-center gap-1.5">
         <span>✓</span>
-        <span>Free shipping on EU & UK orders — applied at checkout</span>
+        <span>Free shipping on EU, UK & North America orders — applied at checkout</span>
       </p>
     );
   }
@@ -71,7 +71,7 @@ function ShippingNudge({ price }: { price: number }) {
       <span className="text-[#2C2220] font-medium">€{remaining.toFixed(2)}</span>
       {" "}more and save up to{" "}
       <span className="text-[#2C2220] font-medium">€8.00</span>
-      {" "}on shipping for EU & UK orders —{" "}
+      {" "}on shipping for EU, UK & North America orders —{" "}
       <Link href="/shop" className="text-[#A0622A] underline underline-offset-2 hover:text-[#8A5222] transition-colors">
         browse more
       </Link>
@@ -442,7 +442,7 @@ export default function ProductPageClient({ product }: { product: Product }) {
         )}
         {totalPrice < FREE_SHIPPING_THRESHOLD && (
           <p className="text-[0.55rem] tracking-[0.08em] uppercase text-[#8C7B6E] text-center">
-            Add <span className="text-[#2C2220]">€{(FREE_SHIPPING_THRESHOLD - totalPrice).toFixed(2)}</span> more → save up to <span className="text-[#2C2220]">€8</span> shipping (EU & UK)
+            Add <span className="text-[#2C2220]">€{(FREE_SHIPPING_THRESHOLD - totalPrice).toFixed(2)}</span> more → save up to <span className="text-[#2C2220]">€8</span> shipping (Europe & North America)
           </p>
         )}
       </div>

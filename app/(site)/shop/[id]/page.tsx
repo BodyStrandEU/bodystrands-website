@@ -52,7 +52,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
   const priceLabel = `${symbol}${product.price.toFixed(2)}`;
   const suffix = pickSuffix(product.id, product.category);
   const metaDescription = product.altText
-    ? `${product.altText}. Handmade in Portugal from waterproof stainless steel. ${priceLabel}.`
+    ? `${product.altText}. Handmade in Portugal and Canada from waterproof stainless steel. ${priceLabel}.`
     : product.description;
 
   return {

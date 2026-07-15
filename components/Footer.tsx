@@ -105,7 +105,7 @@ export default function Footer() {
             WhatsApp: +351 935 483 918
           </a>
           <p className="text-[0.65rem] font-light tracking-[0.1em] text-[#E8B4A8]/60">
-            Handmade in Portugal
+            Handmade in Portugal & Canada
           </p>
           <p className="text-[0.65rem] font-light tracking-[0.1em] text-[#E8B4A8]/60">
             Ships Worldwide

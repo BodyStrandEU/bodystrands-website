@@ -32,12 +32,12 @@ export function getShippingRate(countryCode: string, cartTotal: number): Shippin
     };
   }
   if (countryCode === "US" || countryCode === "CA") {
-    const free = cartTotal >= 75;
+    const free = cartTotal >= 50;
     return {
       displayName: free ? "Free Shipping — USA & Canada" : "Standard Shipping — USA & Canada",
       amount:      free ? 0 : 800,
       deliveryMin: 7, deliveryMax: 14,
-      freeThreshold: 75,
+      freeThreshold: 50,
     };
   }
   return {

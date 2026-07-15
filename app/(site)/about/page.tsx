@@ -49,7 +49,7 @@ export default function AboutPage() {
           </div>
 
           <div>
-            <p className="text-[0.6rem] tracking-[0.28em] uppercase text-[#A0622A] mb-3">Handmade in Portugal</p>
+            <p className="text-[0.6rem] tracking-[0.28em] uppercase text-[#A0622A] mb-3">Handmade in Portugal and Canada</p>
             <p className="text-sm font-light leading-loose tracking-wide text-[#8C7B6E]">
               While the roots of the brand lie in Canada, the heart of Bodystrands EU beats in Portugal. Every single piece in our shop is 100% handmade by the two of us in our Portuguese studio. From the first idea to the final detail, we pour our love, care, and dedication into every strand.
             </p>

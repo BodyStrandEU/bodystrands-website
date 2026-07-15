@@ -99,7 +99,7 @@ export default async function RootLayout({
             name:    "Bodystrands",
             url:     "https://www.bodystrands.com",
             logo:    "https://www.bodystrands.com/images/logo.png",
-            description: "Handmade body jewelry crafted in high-quality stainless steel. Made in Portugal.",
+            description: "Handmade body jewelry crafted in high-quality stainless steel. Made in Portugal and Canada.",
             sameAs: ["https://www.instagram.com/bodystrands/"],
             contactPoint: { "@type": "ContactPoint", email: "info@bodystrands.com", contactType: "customer service" },
           },

@@ -78,8 +78,8 @@ export default function Navbar() {
       >
         <p className="text-[0.52rem] tracking-[0.22em] uppercase text-[#E8B4A8]/70 text-center py-2.5 px-4">
           Handmade&nbsp;&nbsp;·&nbsp;&nbsp;Ships in 1–2 Days&nbsp;&nbsp;·&nbsp;&nbsp;
-          <span className="hidden sm:inline">Free Shipping in Europe Over €50</span>
-          <span className="sm:hidden">Free EU Shipping Over €50</span>
+          <span className="hidden sm:inline">Free Shipping in Europe & North America Over €50</span>
+          <span className="sm:hidden">Free Shipping Over €50</span>
         </p>
       </div>
 

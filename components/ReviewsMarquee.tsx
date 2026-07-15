@@ -1,24 +1,30 @@
 "use client";
 import { useState, useRef, useEffect } from "react";
+import { type Review } from "@/data/category-reviews";
+import customerReviewsRaw from "@/data/customer-reviews.json";
 
-const AGGREGATE = { score: 4.9, count: 120 };
+// Real, verified-purchase reviews only — same source ProductReviews.tsx reads from.
+// No seeded/placeholder testimonials and no hardcoded aggregate score.
+const CUSTOMER_REVIEWS = customerReviewsRaw as Record<string, Review[]>;
 
-const reviews = [
-  { name: "Jovana M.",   headline: "Absolutely stunning piece",      text: "Beautiful body chain! Came in nice packaging and looks exactly as described. I love wearing mine over a thin cashmere shirt—it adds such a classy touch.", date: "Mar 2026" },
-  { name: "Johanna K.",  headline: "Perfect gift, arrived on time",   text: "Loved the necklace and the cute note with the package. It was packaged nicely and arrived on the expected date.", date: "Feb 2026" },
-  { name: "Yesim A.",    headline: "Even more beautiful in person",   text: "The necklace looks even more beautiful and higher quality in real life than described!", date: "Apr 2026" },
-  { name: "Ferdose L.",  headline: "Great quality, very durable",     text: "Item arrived on time and looked like the image. It also seems durable, and I'm not afraid of it snapping easily, which I appreciate.", date: "Jan 2026" },
-  { name: "Krystal T.",  headline: "Love the packaging too",          text: "Beautiful body chain and good quality! It came in a sturdy storage box that will ensure it's kept well when it's not being worn.", date: "Mar 2026" },
-  { name: "Miranda S.",  headline: "Fast shipping, great seller",     text: "Great quality and the seller is great with communication and fast shipping!", date: "Feb 2026" },
-  { name: "Yesim A.",    headline: "Perfect for everyday wear",       text: "A great accessory for crop tops. Feels very comfortable against the skin.", date: "May 2026" },
-  { name: "Tomislav V.", headline: "Very satisfied with everything",  text: "Very good quality, very good customer service! I am very satisfied!", date: "Apr 2026" },
-];
+function stableShuffleKey(r: Review): number {
+  const s = `${r.name}|${r.date}|${r.headline}`;
+  let hash = 0;
+  for (let i = 0; i < s.length; i++) hash = (hash * 31 + s.charCodeAt(i)) | 0;
+  return hash;
+}
 
-function Stars({ size = 14 }: { size?: number }) {
+const reviews: Review[] = Object.values(CUSTOMER_REVIEWS).flat().sort((a, b) => stableShuffleKey(a) - stableShuffleKey(b));
+const AGGREGATE = {
+  score: reviews.length > 0 ? reviews.reduce((s, r) => s + r.rating, 0) / reviews.length : 0,
+  count: reviews.length,
+};
+
+function Stars({ rating = 5, size = 14 }: { rating?: number; size?: number }) {
   return (
     <div className="flex gap-0.5">
-      {[...Array(5)].map((_, i) => (
-        <svg key={i} width={size} height={size} viewBox="0 0 24 24" fill="#A0622A">
+      {[1, 2, 3, 4, 5].map((i) => (
+        <svg key={i} width={size} height={size} viewBox="0 0 24 24" fill={i <= rating ? "#A0622A" : "none"} stroke={i <= rating ? "#A0622A" : "#D4B8A8"} strokeWidth="1.5">
           <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
         </svg>
       ))}
@@ -26,12 +32,12 @@ function Stars({ size = 14 }: { size?: number }) {
   );
 }
 
-function ReviewCard({ review }: { review: typeof reviews[0] }) {
+function ReviewCard({ review }: { review: Review }) {
   return (
     <div className="flex flex-col h-full bg-[#FDF9F7] border border-[#E8B4A8]/50 p-6 md:p-7">
       {/* Stars */}
       <div className="mb-4">
-        <Stars size={15} />
+        <Stars rating={review.rating} size={15} />
       </div>
 
       {/* Headline */}
@@ -118,6 +124,9 @@ export default function ReviewsMarquee() {
   const cardWidthPct = 100 / cardsPerView;
   const translatePct = current * cardWidthPct;
 
+  // No real reviews yet — hide the section entirely rather than show an empty/fake carousel.
+  if (reviews.length === 0) return null;
+
   return (
     <section className="py-20 md:py-28 bg-[#FDF9F7]">
       <div className="max-w-7xl mx-auto px-6 md:px-10">
@@ -131,9 +140,9 @@ export default function ReviewsMarquee() {
             </h2>
             {/* Aggregate score */}
             <div className="flex items-center gap-4">
-              <span className="font-heading text-5xl font-light text-[#2C2220]">{AGGREGATE.score}</span>
+              <span className="font-heading text-5xl font-light text-[#2C2220]">{AGGREGATE.score.toFixed(1)}</span>
               <div className="flex flex-col gap-1.5">
-                <Stars size={18} />
+                <Stars rating={Math.round(AGGREGATE.score)} size={18} />
                 <span className="text-[0.65rem] tracking-[0.15em] uppercase text-[#8C7B6E]">
                   Based on {AGGREGATE.count.toLocaleString()} reviews
                 </span>

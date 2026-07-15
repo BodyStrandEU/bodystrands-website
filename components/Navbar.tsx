@@ -8,6 +8,7 @@ import { activeCategories } from "@/lib/products";
 import SearchModal from "@/components/SearchModal";
 import CartIcon from "@/components/CartIcon";
 import { useWishlist } from "@/lib/wishlist";
+import { useCurrency } from "@/lib/currency-context";
 
 function WishlistIcon({ light }: { light?: boolean }) {
   const { ids } = useWishlist();
@@ -34,6 +35,7 @@ function WishlistIcon({ light }: { light?: boolean }) {
 export default function Navbar() {
   const pathname = usePathname();
   const isHero = pathname === "/"; // only homepage has a dark full-bleed hero behind the nav
+  const { format } = useCurrency();
 
   const [scrolled,    setScrolled]    = useState(false);
   const [menuOpen,    setMenuOpen]    = useState(false);
@@ -78,8 +80,8 @@ export default function Navbar() {
       >
         <p className="text-[0.52rem] tracking-[0.22em] uppercase text-[#E8B4A8]/70 text-center py-2.5 px-4">
           Handmade&nbsp;&nbsp;·&nbsp;&nbsp;Ships in 1–2 Days&nbsp;&nbsp;·&nbsp;&nbsp;
-          <span className="hidden sm:inline">Free Shipping in Europe & North America Over €50</span>
-          <span className="sm:hidden">Free Shipping Over €50</span>
+          <span className="hidden sm:inline">Free Shipping in Europe & North America Over {format(50)}</span>
+          <span className="sm:hidden">Free Shipping Over {format(50)}</span>
         </p>
       </div>
 

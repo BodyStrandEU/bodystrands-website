@@ -216,7 +216,7 @@ export default function CartIcon({ light }: { light?: boolean }) {
                 {!shippingCountry && remaining > 0 && (
                   <p className="text-[0.52rem] tracking-[0.08em] uppercase text-[#8C7B6E] leading-relaxed">
                     Free shipping on Europe & North America orders over{" "}
-                    <span className="text-[#2C2220]">€{FREE_THRESHOLD}</span>
+                    <span className="text-[#2C2220]">{format(FREE_THRESHOLD)}</span>
                   </p>
                 )}
 

@@ -53,9 +53,10 @@ function ShareButton({ name }: { name: string }) {
   );
 }
 
-// Prices here are always in EUR — this banner specifically describes the EU/UK/North America
-// shipping threshold (see lib/shipping.ts), independent of the visitor's own currency.
+// `price` is always passed in as EUR — format() converts it to the visitor's local
+// currency for display, same as every other price on this page.
 function ShippingNudge({ price }: { price: number }) {
+  const { format } = useCurrency();
   const remaining = FREE_SHIPPING_THRESHOLD - price;
   if (remaining <= 0) {
     return (
@@ -68,9 +69,9 @@ function ShippingNudge({ price }: { price: number }) {
   return (
     <p className="mt-2.5 text-[0.58rem] tracking-[0.1em] uppercase text-[#8C7B6E] leading-relaxed">
       Add{" "}
-      <span className="text-[#2C2220] font-medium">€{remaining.toFixed(2)}</span>
+      <span className="text-[#2C2220] font-medium">{format(remaining)}</span>
       {" "}more and save up to{" "}
-      <span className="text-[#2C2220] font-medium">€8.00</span>
+      <span className="text-[#2C2220] font-medium">{format(8)}</span>
       {" "}on shipping for EU, UK & North America orders —{" "}
       <Link href="/shop" className="text-[#A0622A] underline underline-offset-2 hover:text-[#8A5222] transition-colors">
         browse more
@@ -442,7 +443,7 @@ export default function ProductPageClient({ product }: { product: Product }) {
         )}
         {totalPrice < FREE_SHIPPING_THRESHOLD && (
           <p className="text-[0.55rem] tracking-[0.08em] uppercase text-[#8C7B6E] text-center">
-            Add <span className="text-[#2C2220]">€{(FREE_SHIPPING_THRESHOLD - totalPrice).toFixed(2)}</span> more → save up to <span className="text-[#2C2220]">€8</span> shipping (Europe & North America)
+            Add <span className="text-[#2C2220]">{format(FREE_SHIPPING_THRESHOLD - totalPrice)}</span> more → save up to <span className="text-[#2C2220]">{format(8)}</span> shipping (Europe & North America)
           </p>
         )}
       </div>

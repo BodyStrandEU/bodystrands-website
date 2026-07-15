@@ -1,15 +1,21 @@
-const ITEMS = [
-  "Handmade in Portugal and Canada",
-  "Free Shipping Europe & North America over €50",
-  "Ships in 1–2 Business Days",
-  "Easy 14-Day Returns",
-  "Tarnish-Resistant Stainless Steel",
-  "Worldwide Shipping",
-];
+"use client";
+
+import { useCurrency } from "@/lib/currency-context";
 
 const DOT = <span className="mx-4 text-[#A0622A]/60">✦</span>;
 
 export default function TrustBar() {
+  const { format } = useCurrency();
+
+  const ITEMS = [
+    "Handmade in Portugal and Canada",
+    `Free Shipping Europe & North America over ${format(50)}`,
+    "Ships in 1–2 Business Days",
+    "Easy 14-Day Returns",
+    "Tarnish-Resistant Stainless Steel",
+    "Worldwide Shipping",
+  ];
+
   const items = [...ITEMS, ...ITEMS];
 
   return (

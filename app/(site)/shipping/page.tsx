@@ -1,41 +1,18 @@
 import { Metadata } from "next";
 import Link from "next/link";
+import ShippingRatesTable from "@/components/ShippingRatesTable";
 
 export const metadata: Metadata = {
   title: "Shipping & Returns — Bodystrands",
-  description: "Shipping rates, delivery times, and return policy for Bodystrands. We ship worldwide from Portugal.",
+  description: "Shipping rates, delivery times, and return policy for Bodystrands. We ship worldwide from Portugal and Canada.",
 };
-
-const SHIPPING_ZONES = [
-  {
-    zone: "European Union",
-    rate: "€5.00",
-    freeOver: "Free over €50",
-    delivery: "4–7 business days",
-    countries: "Austria, Belgium, Bulgaria, Croatia, Cyprus, Czech Republic, Denmark, Estonia, Finland, France, Germany, Greece, Hungary, Ireland, Italy, Latvia, Lithuania, Luxembourg, Malta, Netherlands, Poland, Portugal, Romania, Slovakia, Slovenia, Spain, Sweden",
-  },
-  {
-    zone: "United Kingdom & Switzerland",
-    rate: "€8.00",
-    freeOver: "Free over €50",
-    delivery: "4–7 business days",
-    countries: "United Kingdom, Switzerland",
-  },
-  {
-    zone: "USA & Canada",
-    rate: "€8.00",
-    freeOver: "Free over €75",
-    delivery: "7–14 business days",
-    countries: "United States, Canada",
-  },
-];
 
 export default function ShippingPage() {
   return (
     <div className="max-w-3xl mx-auto px-6 py-20">
       <p className="text-[0.6rem] tracking-[0.35em] uppercase text-[#A0622A] mb-3">Bodystrands</p>
       <h1 className="font-heading text-4xl md:text-5xl font-light text-[#2C2220] mb-4">Shipping & Returns</h1>
-      <p className="text-sm font-light tracking-wide text-[#8C7B6E] leading-relaxed mb-12">All orders are handmade and ship from Portugal.</p>
+      <p className="text-sm font-light tracking-wide text-[#8C7B6E] leading-relaxed mb-12">All orders are handmade and ship from Portugal and Canada.</p>
 
       <div className="space-y-12 font-cormorant text-lg leading-relaxed text-[#2C2220]">
 
@@ -52,26 +29,7 @@ export default function ShippingPage() {
         {/* Rates */}
         <section>
           <h2 className="font-josefin text-sm tracking-widest uppercase mb-5">Shipping Rates</h2>
-          <div className="space-y-4">
-            {SHIPPING_ZONES.map((z) => (
-              <div key={z.zone} className="border border-[#E8B4A8]/40 p-5">
-                <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 mb-2">
-                  <span className="font-josefin text-sm tracking-wider uppercase text-[#2C2220]">{z.zone}</span>
-                  <div className="flex items-center gap-3 flex-shrink-0">
-                    <span className="font-josefin text-sm text-[#A0622A]">{z.rate}</span>
-                    {z.freeOver && (
-                      <>
-                        <span className="text-[#8C7B6E] text-base">·</span>
-                        <span className="font-josefin text-xs tracking-wide text-[#A0622A]/70">{z.freeOver}</span>
-                      </>
-                    )}
-                  </div>
-                </div>
-                <p className="text-base text-[#8C7B6E] mb-1">Estimated delivery: {z.delivery}</p>
-                <p className="text-sm text-[#8C7B6E]/70 leading-snug">{z.countries}</p>
-              </div>
-            ))}
-          </div>
+          <ShippingRatesTable />
         </section>
 
         {/* Customs */}
@@ -98,6 +56,11 @@ export default function ShippingPage() {
             <li>It must be returned in the original packaging</li>
             <li>Return shipping costs are covered by the customer</li>
           </ul>
+          <p className="mt-4">
+            Customers in the United States and Canada return their item to our Canadian address —
+            faster and more affordable than shipping back to Portugal. We&apos;ll send you the correct
+            return address for your location once you reach out below.
+          </p>
           <p className="mt-4">
             To initiate a return, email us at{" "}
             <a href="mailto:info@bodystrands.com" className="text-[#A0622A] hover:underline">

@@ -49,7 +49,8 @@ export default function ReturnPolicyPage() {
           <p>
             Return shipping costs are the responsibility of the buyer. We recommend using a tracked
             shipping service, as Bodystrands cannot be held responsible for items lost or damaged
-            in transit on the way back to us.
+            in transit on the way back to us. Customers in the United States and Canada return to
+            our Canadian address rather than shipping internationally back to Portugal.
           </p>
         </section>
 

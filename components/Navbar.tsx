@@ -36,7 +36,20 @@ function WishlistIcon({ light }: { light?: boolean }) {
 export default function Navbar() {
   const pathname = usePathname();
   const isHero = pathname === "/"; // only homepage has a dark full-bleed hero behind the nav
-  const { format } = useCurrency();
+  const { currency, format } = useCurrency();
+
+  // US/CA get their own fixed native-currency thresholds instead of a converted EUR50 —
+  // keep these two figures in sync by hand with lib/shipping.ts's US/CA freeThreshold.
+  const shippingLineFull = currency === "USD"
+    ? "Free Shipping in the USA Over $60.00 USD"
+    : currency === "CAD"
+      ? "Free Shipping in Canada Over $75.00 CAD"
+      : `Free Shipping in Europe & North America Over ${format(50)}`;
+  const shippingLineShort = currency === "USD"
+    ? "Free Shipping Over $60.00 USD"
+    : currency === "CAD"
+      ? "Free Shipping Over $75.00 CAD"
+      : `Free Shipping Over ${format(50)}`;
 
   const [scrolled,    setScrolled]    = useState(false);
   const [menuOpen,    setMenuOpen]    = useState(false);
@@ -88,8 +101,8 @@ export default function Navbar() {
       >
         <p className="text-[0.52rem] tracking-[0.22em] uppercase text-[#E8B4A8]/70 text-center py-2.5 px-4">
           Handmade&nbsp;&nbsp;·&nbsp;&nbsp;Ships in 1–2 Days&nbsp;&nbsp;·&nbsp;&nbsp;
-          <span className="hidden sm:inline">Free Shipping in Europe & North America Over {format(50)}</span>
-          <span className="sm:hidden">Free Shipping Over {format(50)}</span>
+          <span className="hidden sm:inline">{shippingLineFull}</span>
+          <span className="sm:hidden">{shippingLineShort}</span>
         </p>
       </div>
 

@@ -31,13 +31,28 @@ export function getShippingRate(countryCode: string, cartTotal: number): Shippin
       freeThreshold: 50,
     };
   }
-  if (countryCode === "US" || countryCode === "CA") {
-    const free = cartTotal >= 50;
+  if (countryCode === "US") {
+    // $60 USD threshold, converted to EUR using the same approximate rate as
+    // lib/currency.ts's FALLBACK_RATES.USD (1.08) — keep these two in sync by hand.
+    const threshold = 55.56;
+    const free = cartTotal >= threshold;
     return {
-      displayName: free ? "Free Shipping — USA & Canada" : "Standard Shipping — USA & Canada",
+      displayName: free ? "Free Shipping — USA" : "Standard Shipping — USA",
       amount:      free ? 0 : 800,
       deliveryMin: 7, deliveryMax: 14,
-      freeThreshold: 50,
+      freeThreshold: threshold,
+    };
+  }
+  if (countryCode === "CA") {
+    // $75 CAD threshold, converted to EUR using the same approximate rate as
+    // lib/currency.ts's FALLBACK_RATES.CAD (1.47) — keep these two in sync by hand.
+    const threshold = 51.02;
+    const free = cartTotal >= threshold;
+    return {
+      displayName: free ? "Free Shipping — Canada" : "Standard Shipping — Canada",
+      amount:      free ? 0 : 800,
+      deliveryMin: 7, deliveryMax: 14,
+      freeThreshold: threshold,
     };
   }
   return {

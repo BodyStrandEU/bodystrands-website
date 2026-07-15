@@ -6,6 +6,7 @@ type Zone = {
   zone: string;
   rate: number;
   freeOver: number | null;
+  freeOverDisplay?: string; // fixed native-currency label, overrides format(freeOver) when set
   delivery: string;
   countries: string;
 };
@@ -26,11 +27,20 @@ const SHIPPING_ZONES: Zone[] = [
     countries: "United Kingdom, Switzerland",
   },
   {
-    zone: "USA & Canada",
+    zone: "USA",
     rate: 8,
-    freeOver: 50,
+    freeOver: 55.56,
+    freeOverDisplay: "$60.00 USD",
     delivery: "7–14 business days",
-    countries: "United States, Canada",
+    countries: "United States",
+  },
+  {
+    zone: "Canada",
+    rate: 8,
+    freeOver: 51.02,
+    freeOverDisplay: "$75.00 CAD",
+    delivery: "7–14 business days",
+    countries: "Canada",
   },
 ];
 
@@ -48,7 +58,7 @@ export default function ShippingRatesTable() {
               {z.freeOver != null && (
                 <>
                   <span className="text-[#8C7B6E] text-base">·</span>
-                  <span className="font-josefin text-xs tracking-wide text-[#A0622A]/70">Free over {format(z.freeOver)}</span>
+                  <span className="font-josefin text-xs tracking-wide text-[#A0622A]/70">Free over {z.freeOverDisplay ?? format(z.freeOver)}</span>
                 </>
               )}
             </div>

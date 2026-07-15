@@ -25,7 +25,7 @@ export default function CartIcon({ light }: { light?: boolean }) {
     return () => document.removeEventListener("mousedown", onClick);
   }, []);
 
-  const { format } = useCurrency();
+  const { currency, format } = useCurrency();
 
   // Shipping calculation
   const shippingRate    = shippingCountry ? getShippingRate(shippingCountry, subtotal) : null;
@@ -215,8 +215,14 @@ export default function CartIcon({ light }: { light?: boolean }) {
                 )}
                 {!shippingCountry && remaining > 0 && (
                   <p className="text-[0.52rem] tracking-[0.08em] uppercase text-[#8C7B6E] leading-relaxed">
-                    Free shipping on Europe & North America orders over{" "}
-                    <span className="text-[#2C2220]">{format(FREE_THRESHOLD)}</span>
+                    {currency === "USD" ? (
+                      <>Free shipping on USA orders over <span className="text-[#2C2220]">$60.00 USD</span></>
+                    ) : currency === "CAD" ? (
+                      <>Free shipping on Canada orders over <span className="text-[#2C2220]">$75.00 CAD</span></>
+                    ) : (
+                      <>Free shipping on Europe & North America orders over{" "}
+                      <span className="text-[#2C2220]">{format(FREE_THRESHOLD)}</span></>
+                    )}
                   </p>
                 )}
 

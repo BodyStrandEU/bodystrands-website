@@ -29,7 +29,7 @@ function buildSingleShippingOption(country: string, totalAmount: number): Stripe
 function buildAllShippingOptions(totalAmount: number): Stripe.Checkout.SessionCreateParams.ShippingOption[] {
   // One representative country per zone — getShippingRate is the single source of truth
   // for rates/thresholds, so this can't drift out of sync with the per-country path again.
-  const zoneSamples = ["DE", "GB", "US", "AU"];
+  const zoneSamples = ["DE", "GB", "US", "CA", "AU"];
   return zoneSamples.map((code) => {
     const rate = getShippingRate(code, totalAmount);
     return {

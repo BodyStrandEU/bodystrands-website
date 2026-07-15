@@ -5,11 +5,19 @@ import { useCurrency } from "@/lib/currency-context";
 const DOT = <span className="mx-4 text-[#A0622A]/60">✦</span>;
 
 export default function TrustBar() {
-  const { format } = useCurrency();
+  const { currency, format } = useCurrency();
+
+  // US/CA get their own fixed native-currency thresholds instead of a converted EUR50 —
+  // keep these two figures in sync by hand with lib/shipping.ts's US/CA freeThreshold.
+  const shippingLine = currency === "USD"
+    ? "Free Shipping in the USA over $60.00 USD"
+    : currency === "CAD"
+      ? "Free Shipping in Canada over $75.00 CAD"
+      : `Free Shipping Europe & North America over ${format(50)}`;
 
   const ITEMS = [
     "Handmade in Portugal and Canada",
-    `Free Shipping Europe & North America over ${format(50)}`,
+    shippingLine,
     "Ships in 1–2 Business Days",
     "Easy 14-Day Returns",
     "Tarnish-Resistant Stainless Steel",

@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import Stripe from "stripe";
 import { Resend } from "resend";
 import { addToAudience } from "@/lib/audience";
+import { getShippingRate } from "@/lib/shipping";
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!);
 const resend = new Resend(process.env.RESEND_API_KEY);
@@ -100,8 +101,8 @@ export async function POST(req: NextRequest) {
     const FROM = process.env.RESEND_FROM_EMAIL;
     const shippingAddr = session.collected_information?.shipping_details?.address || session.customer_details?.address;
     const shippingName = session.collected_information?.shipping_details?.name || customerName;
-    const isEU = ["AT","BE","BG","HR","CY","CZ","DK","EE","FI","FR","DE","GR","HU","IE","IT","LV","LT","LU","MT","NL","PL","PT","RO","SK","SI","ES","SE"].includes(shippingAddr?.country ?? "");
-    const deliveryEst = isEU ? "4–7 business days" : "7–14 business days";
+    const shippingRateForEmail = getShippingRate(shippingAddr?.country ?? "", 0);
+    const deliveryEst = `${shippingRateForEmail.deliveryMin}–${shippingRateForEmail.deliveryMax} business days`;
 
     if (FROM && customerEmail !== "—") {
       await resend.emails.send({

@@ -5,6 +5,7 @@ import Stripe from "stripe";
 import { Resend } from "resend";
 import { isValidToken, COOKIE_NAME } from "@/lib/auth";
 import { buildTrackingUrl, carrierLabel } from "@/lib/tracking";
+import { getShippingRate } from "@/lib/shipping";
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!);
 const resend = new Resend(process.env.RESEND_API_KEY);
@@ -103,8 +104,8 @@ export async function POST(req: NextRequest) {
   const trackNum = trackingNumber.trim();
   const trackUrl = buildTrackingUrl(carrier, trackNum);
 
-  const isEU = ["AT","BE","BG","HR","CY","CZ","DK","EE","FI","FR","DE","GR","HU","IE","IT","LV","LT","LU","MT","NL","PL","PT","RO","SK","SI","ES","SE"].includes(addr?.country ?? "");
-  const deliveryEst = isEU ? "4–7 business days" : "7–14 business days";
+  const shippingRateForEmail = getShippingRate(addr?.country ?? "", 0);
+  const deliveryEst = `${shippingRateForEmail.deliveryMin}–${shippingRateForEmail.deliveryMax} business days`;
 
   if (!email || !FROM) {
     return NextResponse.json({ error: "No customer email or FROM address configured" }, { status: 400 });

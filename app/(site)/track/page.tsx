@@ -25,7 +25,7 @@ export default function TrackPage() {
 
         <div className="text-center space-y-1.5 pt-2">
           <p className="text-[0.65rem] font-light tracking-wide text-[#8C7B6E]">
-            Orders ship within 1–2 business days. Delivery takes 4–7 days (EU) or 7–14 days (USA / Canada).
+            Orders ship within 1–2 business days. Delivery takes 4–7 days (EU) or 3–10 days (USA / Canada).
           </p>
           <p className="text-[0.65rem] font-light tracking-wide text-[#8C7B6E]">
             No tracking number yet?{" "}

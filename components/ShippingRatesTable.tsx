@@ -31,7 +31,7 @@ const SHIPPING_ZONES: Zone[] = [
     rate: 8,
     freeOver: 55.56,
     freeOverDisplay: "$60.00 USD",
-    delivery: "7–14 business days",
+    delivery: "3–10 business days",
     countries: "United States",
   },
   {
@@ -39,7 +39,7 @@ const SHIPPING_ZONES: Zone[] = [
     rate: 8,
     freeOver: 51.02,
     freeOverDisplay: "$75.00 CAD",
-    delivery: "7–14 business days",
+    delivery: "3–10 business days",
     countries: "Canada",
   },
 ];

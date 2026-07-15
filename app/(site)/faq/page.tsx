@@ -49,7 +49,7 @@ const FAQ_GROUPS: FaqGroup[] = [
     items: [
       {
         question: "Where do you ship from, and how long does it take?",
-        answer: "Every piece is handmade to order in Portugal and Canada. Please allow 1–2 business days for us to prepare your order, then 4–7 business days within the EU/UK, or 7–14 business days to the US and Canada.",
+        answer: "Every piece is handmade to order in Portugal and Canada. Please allow 1–2 business days for us to prepare your order, then 4–7 business days within the EU/UK, or 3–10 business days to the US and Canada.",
       },
       {
         question: "Do you ship internationally?",

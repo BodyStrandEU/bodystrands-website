@@ -39,7 +39,7 @@ export function getShippingRate(countryCode: string, cartTotal: number): Shippin
     return {
       displayName: free ? "Free Shipping — USA" : "Standard Shipping — USA",
       amount:      free ? 0 : 800,
-      deliveryMin: 7, deliveryMax: 14,
+      deliveryMin: 3, deliveryMax: 10,
       freeThreshold: threshold,
     };
   }
@@ -51,7 +51,7 @@ export function getShippingRate(countryCode: string, cartTotal: number): Shippin
     return {
       displayName: free ? "Free Shipping — Canada" : "Standard Shipping — Canada",
       amount:      free ? 0 : 800,
-      deliveryMin: 7, deliveryMax: 14,
+      deliveryMin: 3, deliveryMax: 10,
       freeThreshold: threshold,
     };
   }

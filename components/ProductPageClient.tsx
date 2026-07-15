@@ -15,9 +15,13 @@ import SizeGuideButton from "@/components/SizeGuideButton";
 import { useCurrency } from "@/lib/currency-context";
 import ProductReviews from "@/components/ProductReviews";
 import { TrustBadgesRow } from "@/components/TrustBadges";
-import { type Review } from "@/data/category-reviews";
+import { type Review, dedupeReviews } from "@/data/category-reviews";
 import customerReviewsRaw from "@/data/customer-reviews.json";
 
+// Raw (not deduped) — the same real review is intentionally stored once per product
+// it applies to (e.g. one review duplicated across 14 near-identical anklets), and
+// that per-product productId is exactly what "own reviews for this product" matches
+// against below. Only dedupe when falling back to a shop-wide (not product-specific) count.
 const ALL_REAL_REVIEWS: Review[] = Object.values(customerReviewsRaw as Record<string, Review[]>).flat();
 
 const FREE_SHIPPING_THRESHOLD = 50;
@@ -130,7 +134,7 @@ export default function ProductPageClient({ product }: { product: Product }) {
   // any, otherwise the shop-wide average (same "own vs shop-wide" logic as
   // ProductReviews.tsx, kept in sync by hand since this badge renders above it).
   const ownReviews = ALL_REAL_REVIEWS.filter((r) => r.productId === product.id);
-  const badgeReviews = ownReviews.length > 0 ? ownReviews : ALL_REAL_REVIEWS;
+  const badgeReviews = ownReviews.length > 0 ? ownReviews : dedupeReviews(ALL_REAL_REVIEWS);
   const badgeAvg = badgeReviews.length > 0
     ? badgeReviews.reduce((s, r) => s + r.rating, 0) / badgeReviews.length
     : 0;

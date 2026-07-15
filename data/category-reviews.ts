@@ -12,6 +12,24 @@ export type Review = {
   shopResponse?: string; // the shop's real reply to this review (e.g. copied from Etsy)
 };
 
+// The same real review is stored once per product it genuinely applies to (e.g. one
+// review duplicated across 14 near-identical anklets), so each is a distinct product's
+// "own" review on that product's page. But any shop-wide view (no single product to
+// scope to) must collapse those duplicates back down to one, or the same review/photo
+// shows up N times in a row — this is that collapse, keyed on the review's real content
+// rather than productId.
+export function dedupeReviews(reviews: Review[]): Review[] {
+  const seen = new Set<string>();
+  const out: Review[] = [];
+  for (const r of reviews) {
+    const key = `${r.name}|${r.date}|${r.headline}|${r.text}`;
+    if (seen.has(key)) continue;
+    seen.add(key);
+    out.push(r);
+  }
+  return out;
+}
+
 export const CATEGORY_REVIEWS: Record<string, Review[]> = {
   "Belly Chains": [
     {

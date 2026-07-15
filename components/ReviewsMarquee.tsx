@@ -1,6 +1,6 @@
 "use client";
 import { useState, useRef, useEffect } from "react";
-import { type Review } from "@/data/category-reviews";
+import { type Review, dedupeReviews } from "@/data/category-reviews";
 import customerReviewsRaw from "@/data/customer-reviews.json";
 
 // Real, verified-purchase reviews only — same source ProductReviews.tsx reads from.
@@ -14,7 +14,11 @@ function stableShuffleKey(r: Review): number {
   return hash;
 }
 
-const reviews: Review[] = Object.values(CUSTOMER_REVIEWS).flat().sort((a, b) => stableShuffleKey(a) - stableShuffleKey(b));
+// Deduped: the same real review is stored once per product it applies to (e.g. one
+// review duplicated across 14 near-identical anklets) so it counts as each product's
+// own review — but this homepage carousel is shop-wide, so without this the same
+// review/photo would repeat over and over.
+const reviews: Review[] = dedupeReviews(Object.values(CUSTOMER_REVIEWS).flat()).sort((a, b) => stableShuffleKey(a) - stableShuffleKey(b));
 const AGGREGATE = {
   score: reviews.length > 0 ? reviews.reduce((s, r) => s + r.rating, 0) / reviews.length : 0,
   count: reviews.length,

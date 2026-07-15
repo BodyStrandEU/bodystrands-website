@@ -2,7 +2,7 @@
 import { useRef, useState } from "react";
 import Image from "@/components/SmartImage";
 import { createPortal } from "react-dom";
-import { type Review } from "@/data/category-reviews";
+import { type Review, dedupeReviews } from "@/data/category-reviews";
 import customerReviewsRaw from "@/data/customer-reviews.json";
 
 // Real, verified-purchase reviews approved via /admin/reviews. Committed to this JSON
@@ -251,10 +251,12 @@ export default function ProductReviews({ category, productId, className = "" }: 
 
   // Everything else in the shop, real only — shown as honest shop-wide social proof
   // when this specific product has no reviews of its own yet. Never labeled as if
-  // these reviews are about this piece.
-  const shopWide = ALL_REAL_REVIEWS
-    .filter((r) => !(productId && r.productId === productId))
-    .sort((a, b) => stableShuffleKey(a) - stableShuffleKey(b));
+  // these reviews are about this piece. Deduped: the same real review is stored once
+  // per product it applies to (e.g. one review duplicated across 14 near-identical
+  // anklets), so without this it'd show the same review/photo over and over.
+  const shopWide = dedupeReviews(
+    ALL_REAL_REVIEWS.filter((r) => !(productId && r.productId === productId))
+  ).sort((a, b) => stableShuffleKey(a) - stableShuffleKey(b));
 
   const hasOwn = own.length > 0;
   const reviews = hasOwn ? own : shopWide;

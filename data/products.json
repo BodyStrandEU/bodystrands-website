@@ -8484,7 +8484,7 @@
   {
     "id": "double-drape-thigh-chain",
     "name": "Double Drape Thigh Chain",
-    "price": 35,
+    "price": 31.5,
     "currency": "EUR",
     "category": "Leg Chains",
     "description": "Two layered chain arcs drape across the upper thigh like a modern-day garter — dainty, waterproof stainless steel in gold-tone or silver-tone, with a stretch closure that slips on in seconds.",
@@ -8536,16 +8536,12 @@
     "gallery": [
       "/images/products/double-drape-thigh-chain/1272cd0f-gold-park-hero.png",
       "/images/products/double-drape-thigh-chain/3e6407db-silver-indoor-hero.png",
-      "/images/products/double-drape-thigh-chain/537e9c9a-gold-studio-front.png",
-      "/images/products/double-drape-thigh-chain/77a91ee7-gold-wall-close.png",
-      "/images/products/double-drape-thigh-chain/824ea508-gold-wall-side.png",
-      "/images/products/double-drape-thigh-chain/a5a5e045-gold-studio-side.png",
-      "/images/products/double-drape-thigh-chain/db0bf291-gold-studio-grey.png",
+      "/images/products/double-drape-thigh-chain/db0bf291-gold-ocean.jpeg",
       "/images/products/double-drape-thigh-chain/80bbcc0c-gold-beach-towel.png",
       "/images/products/double-drape-thigh-chain/b7f0fc0f-gold-pool-blue.jpeg",
-      "/images/products/double-drape-thigh-chain/c2e11dd4-gold-stone-wall.png",
-      "/images/products/double-drape-thigh-chain/db0bf291-gold-ocean.jpeg",
-      "/images/products/double-drape-thigh-chain/530dc0d3-size-guide.png"
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
+      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.jpg",
+      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf-copy.jpeg"
     ],
     "variantHeroes": {
       "Gold Tone": "/images/products/double-drape-thigh-chain/1272cd0f-gold-park-hero.png",
@@ -8554,6 +8550,10 @@
     "sizeGuideImage": "/images/products/double-drape-thigh-chain/530dc0d3-size-guide.png",
     "altText": "Gold-tone stainless steel double-drape thigh chain with layered arcs for festival and beach body jewelry styling",
     "featured": false,
-    "active": true
+    "active": true,
+    "variantVideos": {
+      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/1044e580917bb13a7a3278f60a2c717a/downloads/default.mp4",
+      "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/1044e580917bb13a7a3278f60a2c717a/downloads/default.mp4"
+    }
   }
 ]

@@ -8480,5 +8480,80 @@
     "active": true,
     "altText": "Dainty single-strand gold stainless steel birthstone arm band with teardrop gemstone, waterproof upper arm jewelry",
     "sizeGuideImage": "/images/products/birthstone-arm-band/d13632f1-ad9d-4d7c-9e3e-cb575ac49a8a.png"
+  },
+  {
+    "id": "double-drape-thigh-chain",
+    "name": "Double Drape Thigh Chain",
+    "price": 35,
+    "currency": "EUR",
+    "category": "Leg Chains",
+    "description": "Two layered chain arcs drape across the upper thigh like a modern-day garter — dainty, waterproof stainless steel in gold-tone or silver-tone, with a stretch closure that slips on in seconds.",
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Stainless steel, gold-tone or silver-tone finish"
+      },
+      {
+        "label": "Design",
+        "value": "Double layered drape arc with slim thigh band"
+      },
+      {
+        "label": "Closure",
+        "value": "Slip-on with hidden stretch closure — no clasp needed"
+      },
+      {
+        "label": "Waterproof",
+        "value": "Yes — safe for water, sun, and everyday wear"
+      },
+      {
+        "label": "Care",
+        "value": "Wipe with a soft cloth after wear. Store in an airtight container."
+      },
+      {
+        "label": "Shipping",
+        "value": "Dispatches within 1–2 business days"
+      }
+    ],
+    "variantGroups": [
+      {
+        "label": "Size",
+        "type": "options",
+        "options": [
+          "S — 46 to 51 cm (20.1\")",
+          "M — 51 to 56 cm (22\")",
+          "L — 56 to 61 cm (24\")",
+          "XL — 61 to 66 cm (26\")"
+        ]
+      }
+    ],
+    "variants": [
+      "Gold Tone",
+      "Silver Tone"
+    ],
+    "images": [
+      "/images/products/double-drape-thigh-chain/1272cd0f-gold-park-hero.png"
+    ],
+    "gallery": [
+      "/images/products/double-drape-thigh-chain/1272cd0f-gold-park-hero.png",
+      "/images/products/double-drape-thigh-chain/3e6407db-silver-indoor-hero.png",
+      "/images/products/double-drape-thigh-chain/537e9c9a-gold-studio-front.png",
+      "/images/products/double-drape-thigh-chain/77a91ee7-gold-wall-close.png",
+      "/images/products/double-drape-thigh-chain/824ea508-gold-wall-side.png",
+      "/images/products/double-drape-thigh-chain/a5a5e045-gold-studio-side.png",
+      "/images/products/double-drape-thigh-chain/db0bf291-gold-studio-grey.png",
+      "/images/products/double-drape-thigh-chain/80bbcc0c-gold-beach-towel.png",
+      "/images/products/double-drape-thigh-chain/b7f0fc0f-gold-pool-blue.jpeg",
+      "/images/products/double-drape-thigh-chain/c2e11dd4-gold-stone-wall.png",
+      "/images/products/double-drape-thigh-chain/db0bf291-gold-ocean.jpeg",
+      "/images/products/double-drape-thigh-chain/530dc0d3-size-guide.png"
+    ],
+    "variantHeroes": {
+      "Gold Tone": "/images/products/double-drape-thigh-chain/1272cd0f-gold-park-hero.png",
+      "Silver Tone": "/images/products/double-drape-thigh-chain/3e6407db-silver-indoor-hero.png"
+    },
+    "sizeGuideImage": "/images/products/double-drape-thigh-chain/530dc0d3-size-guide.png",
+    "altText": "Gold-tone stainless steel double-drape thigh chain with layered arcs for festival and beach body jewelry styling",
+    "featured": false,
+    "active": true
   }
 ]

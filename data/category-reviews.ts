@@ -10,19 +10,27 @@ export type Review = {
   productId?: string; // present when the order resolved to one specific product — used to surface
                        // this product's own reviews first on its page as volume builds up
   shopResponse?: string; // the shop's real reply to this review (e.g. copied from Etsy)
+  reviewId?: string; // stable id shared by every per-product copy of the same real review
+                      // (see dedupeReviews) — set at import time; falls back to a content
+                      // key for older entries that don't have one
 };
 
 // The same real review is stored once per product it genuinely applies to (e.g. one
 // review duplicated across 14 near-identical anklets), so each is a distinct product's
 // "own" review on that product's page. But any shop-wide view (no single product to
 // scope to) must collapse those duplicates back down to one, or the same review/photo
-// shows up N times in a row — this is that collapse, keyed on the review's real content
-// rather than productId.
+// shows up N times in a row — this is that collapse.
+//
+// Prefer reviewId when present: two genuinely different real reviews can coincidentally
+// share identical short text (e.g. the same customer writing "Looks great, fast shipping,
+// thank you" for two separate orders) — a content-based key would wrongly collapse those
+// into one. reviewId is assigned once per real review at import time, so it doesn't have
+// this false-collision problem; the content key is only a fallback for older entries.
 export function dedupeReviews(reviews: Review[]): Review[] {
   const seen = new Set<string>();
   const out: Review[] = [];
   for (const r of reviews) {
-    const key = `${r.name}|${r.date}|${r.headline}|${r.text}`;
+    const key = r.reviewId ?? `${r.name}|${r.date}|${r.headline}|${r.text}`;
     if (seen.has(key)) continue;
     seen.add(key);
     out.push(r);

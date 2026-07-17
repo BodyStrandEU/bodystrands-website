@@ -48,6 +48,7 @@ export type Product = {
   altText?: string;
   infographicImages?: string[];
   sizeGuideImage?: string;
+  dateAdded?: string; // ISO 8601 — when the product was first introduced; drives homepage "New Pieces" sort
 };
 
 // Images that are infographics across all products — hidden on shop card, shown on product page

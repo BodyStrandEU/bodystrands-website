@@ -88,7 +88,11 @@ export default function HomePage() {
 
   const heroTile     = allTiles.find((t) => t.label === "Back Chains");
   const gridTiles    = allTiles.filter((t) => t.label !== "Back Chains");
-  const featured     = products.filter((p) => p.active !== false).slice(0, 10);
+  const featured     = products
+    .filter((p) => p.active !== false)
+    .slice()
+    .sort((a, b) => new Date(b.dateAdded ?? 0).getTime() - new Date(a.dateAdded ?? 0).getTime())
+    .slice(0, 10);
 
   return (
     <>

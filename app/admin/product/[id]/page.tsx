@@ -894,6 +894,7 @@ export default function ProductEditor({ params }: { params: Promise<{ id: string
       const product: Product = {
         ...form,
         price: Number(form.price),
+        dateAdded: form.dateAdded ?? (isNew ? new Date().toISOString() : undefined),
         fullDescription: form.fullDescription || undefined,
         video: form.video || undefined,
         gallery: (form.gallery ?? []).length > 0 ? form.gallery : undefined,

@@ -50,7 +50,11 @@ export default function LanguageSwitcher({ light }: { light?: boolean }) {
   }, []);
 
   return (
-    <div ref={ref} className="relative">
+    // translate="no" + notranslate: Google Translate must never touch this subtree.
+    // If it rewrites these text nodes (translating "English" -> "Anglais" etc.), it
+    // conflicts with React's own DOM reconciliation and the toggle stops responding
+    // after the first switch — so this isn't cosmetic, it's what keeps it clickable.
+    <div ref={ref} className="relative notranslate" translate="no">
       <button
         onClick={() => setOpen(!open)}
         aria-label="Change language"

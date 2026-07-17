@@ -5,23 +5,7 @@ import { getShippingRate, ALL_COUNTRIES } from "@/lib/shipping";
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!);
 
-const GIFT_WRAP_FEE_EUR = 4;
-
 type CartItemInput = { productId: string; variant?: string; priceAdd?: number; quantity?: number };
-
-function giftWrapLineItem(): Stripe.Checkout.SessionCreateParams.LineItem {
-  return {
-    price_data: {
-      currency: "eur",
-      product_data: {
-        name: "Gift Wrapping",
-        description: "Wrapped in Bodystrands gift packaging with a handwritten note.",
-      },
-      unit_amount: Math.round(GIFT_WRAP_FEE_EUR * 100),
-    },
-    quantity: 1,
-  };
-}
 
 function resolveImage(origin: string, img: string): string {
   return img.startsWith("http") ? img : `${origin}${img}`;
@@ -104,17 +88,9 @@ export async function POST(req: NextRequest) {
         return NextResponse.json({ error: "No valid products in cart" }, { status: 400 });
       }
 
-      // Gift wrap priced/shipped as an add-on service, not merchandise — it must not
-      // count toward the free-shipping threshold, so it's added after shipping_options
-      // are computed from the pure product totalAmount.
-      const giftWrap = body.giftWrap === true;
-      const giftNote = typeof body.giftNote === "string" ? body.giftNote.slice(0, 500) : "";
-
       const shipping_options = country
         ? buildSingleShippingOption(country, totalAmount)
         : buildAllShippingOptions(totalAmount);
-
-      if (giftWrap) lineItems.push(giftWrapLineItem());
 
       const session = await stripe.checkout.sessions.create({
         // payment_method_types intentionally omitted: Checkout Sessions manage eligible
@@ -123,13 +99,7 @@ export async function POST(req: NextRequest) {
         // enabled in the Stripe Dashboard — no hardcoded list that could be ineligible.
         line_items:  lineItems,
         mode:        "payment",
-        metadata:    {
-          productName: productNames.join(", "),
-          price: totalAmount.toFixed(2),
-          currency: "EUR",
-          giftWrap: giftWrap ? "yes" : "no",
-          ...(giftWrap && giftNote ? { giftNote } : {}),
-        },
+        metadata:    { productName: productNames.join(", "), price: totalAmount.toFixed(2), currency: "EUR" },
         shipping_options,
         shipping_address_collection: { allowed_countries: STRIPE_COUNTRIES },
         // Shows and charges the shopper in their local currency (Stripe converts using

@@ -45,8 +45,6 @@ export async function GET(req: NextRequest) {
       paymentIntent: typeof s.payment_intent === "string" ? s.payment_intent : null,
       createdAt:     s.created,
       productName:   s.metadata?.productName ?? "Unknown",
-      giftWrap:      s.metadata?.giftWrap === "yes",
-      giftNote:      s.metadata?.giftNote ?? "",
       amount:        (s.amount_total ?? 0) / 100,
       currency:      (s.currency ?? "eur").toUpperCase(),
       customerName:  sh?.name || cd?.name || "—",

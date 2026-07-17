@@ -7700,7 +7700,7 @@
     "id": "curated-layered-necklace-stack",
     "name": "Cross & Zodiac Necklace Stack",
     "category": "Necklaces",
-    "price": 50,
+    "price": 45,
     "currency": "EUR",
     "description": "Two necklaces, styled as one look — a pre-layered pearl and cable chain choker with a cross pendant, paired with a separate zodiac pendant necklace on a continuous loop, no clasp needed. Wear them stacked together for the full three-layer look, or apart on their own.",
     "specs": [
@@ -7751,24 +7751,20 @@
     ],
     "variantHeroes": {
       "Gold Tone": "/images/products/curated-layered-necklace-stack/94090ac1-gold-studio-hero.png",
-      "Silver Tone": "/images/products/curated-layered-necklace-stack/fbe51e12-silver-studio-hero.png"
+      "Silver Tone": "/images/products/curated-layered-necklace-stack/71de6369-silver-beach-ocean.png"
     },
     "images": [
-      "/images/products/curated-layered-necklace-stack/94090ac1-gold-studio-hero.png"
+      "/images/products/curated-layered-necklace-stack/6e01da85-gold-beach-ocean.png"
     ],
     "gallery": [
-      "/images/products/curated-layered-necklace-stack/94090ac1-gold-studio-hero.png",
-      "/images/products/curated-layered-necklace-stack/fbe51e12-silver-studio-hero.png",
-      "/images/products/curated-layered-necklace-stack/4eac4c84-gold-studio-alt.png",
-      "/images/products/curated-layered-necklace-stack/46c59f4d-gold-rooftop-editorial.png",
-      "/images/products/curated-layered-necklace-stack/f6670144-gold-rooftop-tight.png",
-      "/images/products/curated-layered-necklace-stack/499c7500-gold-garden.png",
-      "/images/products/curated-layered-necklace-stack/6d1c8bf3-gold-terracotta-wall-a.png",
-      "/images/products/curated-layered-necklace-stack/75318b9a-gold-terracotta-wall-b.png",
       "/images/products/curated-layered-necklace-stack/6e01da85-gold-beach-ocean.png",
+      "/images/products/curated-layered-necklace-stack/94090ac1-gold-studio-hero.png",
       "/images/products/curated-layered-necklace-stack/71de6369-silver-beach-ocean.png",
-      "/images/products/curated-layered-necklace-stack/b73eae1c-gold-golden-hour.png",
-      "/images/products/curated-layered-necklace-stack/d649a290-size-guide.png"
+      "/images/products/curated-layered-necklace-stack/4eac4c84-gold-studio-alt.png",
+      "/images/products/curated-layered-necklace-stack/75318b9a-gold-terracotta-wall-b.png",
+      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.jpg",
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
+      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf-copy.jpeg"
     ],
     "variantGroups": [
       {

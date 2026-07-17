@@ -71,6 +71,8 @@ export async function POST(req: NextRequest) {
     const productName   = session.metadata?.productName ?? "Unknown product";
     const amountTotal   = ((session.amount_total ?? 0) / 100).toFixed(2);
     const currency      = (session.currency ?? "eur").toUpperCase();
+    const giftWrap      = session.metadata?.giftWrap === "yes";
+    const giftNote      = session.metadata?.giftNote ?? "";
     const customerEmail = session.customer_details?.email ?? "—";
     const customerName  = session.customer_details?.name ?? "—";
     const address       = session.customer_details?.address;
@@ -130,6 +132,12 @@ export async function POST(req: NextRequest) {
               </table>
             </div>
 
+            ${giftWrap ? `
+            <div style="border:1px solid #E8B4A8;background:#FBF2EC;padding:16px 24px;margin:0 0 28px;">
+              <p style="font-size:13px;color:#2C2220;margin:0;">🎁 &nbsp;Your order will arrive gift-wrapped${giftNote ? " with your note tucked inside" : ""}.</p>
+            </div>
+            ` : ""}
+
             <div style="margin:0 0 32px;">
               <p style="font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:#8C7B6E;margin:0 0 14px;">What happens next</p>
               <p style="font-size:13px;color:#8C7B6E;line-height:1.8;margin:0 0 8px;">📦 &nbsp;We'll ship your order within <strong style="color:#2C2220;">1–2 business days</strong>.</p>
@@ -156,12 +164,18 @@ export async function POST(req: NextRequest) {
     await resend.emails.send({
       from:    "Bodystrands <info@bodystrands.com>",
       to:      "storenavaria@gmail.com",
-      subject: `Cha-Ching! 💰 ${productName} (${currency} ${amountTotal})`,
+      subject: `${giftWrap ? "🎁 " : ""}Cha-Ching! 💰 ${productName} (${currency} ${amountTotal})`,
       html: `
         <div style="font-family:Georgia,serif;max-width:560px;margin:0 auto;color:#2C2220;">
           <h2 style="font-weight:300;letter-spacing:0.05em;border-bottom:1px solid #E8B4A8;padding-bottom:12px;">
             New Order Received
           </h2>
+          ${giftWrap ? `
+          <div style="border:2px solid #A0622A;background:#FBF2EC;padding:16px 20px;margin:16px 0;">
+            <p style="font-size:13px;font-weight:bold;color:#A0622A;margin:0 0 6px;">🎁 GIFT WRAP REQUESTED</p>
+            ${giftNote ? `<p style="font-size:13px;color:#2C2220;margin:0;white-space:pre-wrap;">Note: "${giftNote}"</p>` : `<p style="font-size:13px;color:#8C7B6E;margin:0;">No note left.</p>`}
+          </div>
+          ` : ""}
           <table style="width:100%;border-collapse:collapse;margin:20px 0;">
             <tr>
               <td style="padding:8px 0;font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:#8C7B6E;width:120px;">Product</td>

@@ -8,6 +8,8 @@ type Order = {
   paymentIntent: string | null;
   createdAt: number;
   productName: string;
+  giftWrap: boolean;
+  giftNote: string;
   amount: number;
   currency: string;
   customerName: string;
@@ -160,6 +162,15 @@ export default function OrdersPage() {
 
                       <p style={{ fontSize: "0.75rem", color: "var(--admin-text)", marginBottom: "0.25rem" }} className="truncate">{order.productName}</p>
                       <p style={{ fontSize: "0.65rem", color: "var(--admin-muted)", marginBottom: "0.5rem" }}>{date} · {order.currency} {order.amount.toFixed(2)}</p>
+
+                      {order.giftWrap && (
+                        <div style={{ background: "#FBF2EC", border: "1px solid #E8B4A8", padding: "0.5rem 0.75rem", marginBottom: "0.5rem" }}>
+                          <p style={{ fontSize: "0.65rem", fontWeight: 700, color: "#A0622A", marginBottom: order.giftNote ? "0.2rem" : 0 }}>🎁 Gift wrap requested</p>
+                          {order.giftNote && (
+                            <p style={{ fontSize: "0.65rem", color: "var(--admin-text)", whiteSpace: "pre-wrap" }}>"{order.giftNote}"</p>
+                          )}
+                        </div>
+                      )}
 
                       {order.address && (
                         <p style={{ fontSize: "0.65rem", color: "var(--admin-muted)", lineHeight: 1.6 }}>

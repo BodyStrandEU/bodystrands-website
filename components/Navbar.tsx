@@ -10,6 +10,7 @@ import CartIcon from "@/components/CartIcon";
 import { useWishlist } from "@/lib/wishlist";
 import { useCurrency } from "@/lib/currency-context";
 import CountdownTimer from "@/components/CountdownTimer";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
 
 function WishlistIcon({ light }: { light?: boolean }) {
   const { ids } = useWishlist();
@@ -229,6 +230,7 @@ export default function Navbar() {
                 <circle cx="11" cy="11" r="8" /><path d="m21 21-4.35-4.35" />
               </svg>
             </button>
+            <LanguageSwitcher light={!scrolled && isHero} />
             <WishlistIcon light={!scrolled && isHero} />
             <CartIcon light={!scrolled && isHero} />
           </div>
@@ -294,6 +296,10 @@ export default function Navbar() {
                   {link.label}
                 </Link>
               ))}
+            </div>
+            <div className="mt-6 pt-6 border-t border-[#E8B4A8]/30">
+              <p className="text-[0.52rem] tracking-[0.3em] uppercase text-[#A0622A] mb-3">Language</p>
+              <LanguageSwitcher />
             </div>
           </div>
         </div>

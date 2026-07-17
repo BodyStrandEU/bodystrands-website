@@ -194,3 +194,23 @@ h1, h2, h3, h4 {
 .blog-content a:hover {
   opacity: 0.7;
 }
+
+/* Google Translate widget — keep the engine, hide all of its default chrome.
+   We drive translation entirely through our own LanguageSwitcher toggle. */
+.goog-te-banner-frame,
+.goog-te-gadget-icon,
+.goog-tooltip,
+.goog-tooltip:hover {
+  display: none !important;
+}
+body,
+body.translated-ltr,
+body.translated-rtl {
+  top: 0 !important;
+}
+.skiptranslate iframe {
+  display: none !important;
+}
+#google_translate_element {
+  display: none !important;
+}

@@ -5,6 +5,7 @@ import Script from "next/script";
 import { Analytics } from "@vercel/analytics/next";
 import CustomCursor from "@/components/CustomCursor";
 import AnalyticsPageview from "@/components/AnalyticsPageview";
+import GoogleTranslateLoader from "@/components/GoogleTranslateLoader";
 import { CartProvider } from "@/lib/cart";
 import { CurrencyProvider } from "@/lib/currency-context";
 import { fetchExchangeRates } from "@/lib/currency";
@@ -75,6 +76,7 @@ export default async function RootLayout({
           </CartProvider>
         </CurrencyProvider>
         <CustomCursor />
+        <GoogleTranslateLoader />
 
         {/* Step 2: load GA after page is interactive */}
         <Script

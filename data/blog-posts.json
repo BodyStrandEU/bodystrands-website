@@ -4525,5 +4525,61 @@
         "url": "/shop/boho-back-chain"
       }
     ]
+  },
+  {
+    "slug": "handcrafted-gifts-under-25-for-every-person-on-your-list",
+    "title": "Handcrafted Gifts Under €25 for Every Person on Your List",
+    "excerpt": "Thoughtful doesn't have to mean expensive. Here's a handmade gift under €25 for the friend, the coworker, the beach lover, and the one who's hardest to shop for — you.",
+    "date": "2026-07-18",
+    "category": "Gift Guide",
+    "topic": "handcrafted gifts under 25 euros for different people",
+    "tags": [
+      "gift guide",
+      "gifts under 25 euros",
+      "handmade jewelry",
+      "affordable gifts",
+      "body jewelry"
+    ],
+    "readTime": "3 min read",
+    "content": [
+      "Under €25 doesn't have to mean an afterthought. It's easy to assume a small budget means a generic gift — a candle, a gift card, something you grab on the way to the party. But a handmade piece of jewelry at this price point can actually feel more thoughtful than something twice the cost, because it shows you picked something specific, not just something available.",
+      "Every piece we make comes out of our own studio, handcrafted by El and Gio — not a factory line, not a warehouse. That's true whether someone's spending €15 or €150 with us. So a gift under €25 isn't a compromise here. It's just a smaller, still-real piece of the same care.",
+      "For the best friend who already has everything: try the <a href=\"/shop/zodiac-anklet\">Zodiac Anklet</a> (€24.75). It's personalized to their actual star sign, which is what makes it feel specific instead of generic — the kind of detail that says you thought about them, not just the calendar.",
+      "For the coworker, the Secret Santa, the person you're not sure how well you know yet: the <a href=\"/shop/dainty-chain-bracelet\">Dainty Chain Bracelet</a> (€15.75) is the safest kind of thoughtful. Simple, waterproof stainless steel, genuinely wearable with anything — the gift that works even when you're guessing at someone's taste.",
+      "For the friend who lives for beach days and long summers: the <a href=\"/shop/snake-belly-chain\">Snake Belly Chain</a> (€18) is made for exactly that. It's waterproof and tarnish-resistant, so it's not something they have to take off before they get in the water — it just goes with them.",
+      "Here's the one most gift guides miss: the <a href=\"/shop/dainty-eyeglasses-chain\">Dainty Eyeglasses Chain</a> (€22.50). If someone on your list wears glasses every day, this is the gift they didn't know to ask for — genuinely useful, quietly elegant, and not something they'd typically buy themselves.",
+      "And don't forget the hardest person to shop for is often yourself. The <a href=\"/shop/satellite-link-choker\">Dainty Satellite Link Choker</a> (€22.50) is proof that treating yourself doesn't need a bigger budget than treating anyone else — it's a genuinely elevated piece that happens to also be kind to your wallet.",
+      "None of these need special occasions or careful storage — they're waterproof, tarnish-resistant, and built for actual daily life, not a jewelry box. Browse the <a href=\"/shop\">full collection</a> if none of these feel quite right; there's a whole range under €40 too. Sometimes the best gifts really are the small ones — the point was never the price, it's that you picked something real."
+    ],
+    "featuredProducts": [
+      {
+        "id": "zodiac-anklet",
+        "name": "Zodiac Anklet",
+        "price": "€24.75",
+        "image": "https://i.etsystatic.com/55122258/r/il/d712b9/7824263931/il_fullxfull.7824263931_2tba.jpg",
+        "url": "/shop/zodiac-anklet"
+      },
+      {
+        "id": "dainty-chain-bracelet",
+        "name": "Dainty Chain Bracelet",
+        "price": "€15.75",
+        "image": "https://i.etsystatic.com/55122258/r/il/3f111f/8086665923/il_fullxfull.8086665923_qdr3.jpg",
+        "url": "/shop/dainty-chain-bracelet"
+      },
+      {
+        "id": "snake-belly-chain",
+        "name": "Snake Belly Chain",
+        "price": "€18",
+        "image": "https://i.etsystatic.com/55122258/r/il/214012/7696123770/il_fullxfull.7696123770_7r5h.jpg",
+        "url": "/shop/snake-belly-chain"
+      },
+      {
+        "id": "satellite-link-choker",
+        "name": "Dainty Satellite Link Choker",
+        "price": "€22.5",
+        "image": "/images/products/0c7f0749-c174-442e-9730-590ff7f09eb7.webp",
+        "url": "/shop/satellite-link-choker"
+      }
+    ]
   }
 ]

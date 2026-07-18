@@ -3,8 +3,26 @@ import { Resend } from "resend";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
+// Escapes text before it's interpolated into the email HTML — without this, a submitted
+// name/email/message containing HTML would render as real markup/links in the owner's inbox.
+function escapeHtml(input: string): string {
+  return input
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+}
+
 export async function POST(request: NextRequest) {
-  const { name, email, message } = await request.json();
+  const { name, email, message, company } = await request.json();
+
+  // Honeypot — a hidden field real visitors never see or fill. Any value here means a bot
+  // filled every field blindly. Return success so the bot doesn't learn to look elsewhere,
+  // but skip actually sending the email.
+  if (company?.trim()) {
+    return NextResponse.json({ success: true });
+  }
 
   if (!name?.trim() || !email?.trim() || !message?.trim()) {
     return NextResponse.json({ error: "All fields are required." }, { status: 400 });
@@ -15,11 +33,15 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: "Please enter a valid email address." }, { status: 400 });
   }
 
+  const safeName    = escapeHtml(name);
+  const safeEmail   = escapeHtml(email);
+  const safeMessage = escapeHtml(message);
+
   const { error } = await resend.emails.send({
     from: "Bodystrands Contact <onboarding@resend.dev>",
     to:   "storenavaria@gmail.com",
     replyTo: email,
-    subject: `New message from ${name}`,
+    subject: `New message from ${safeName}`,
     html: `
       <div style="font-family:Georgia,serif;max-width:560px;margin:0 auto;color:#2C2220;">
         <h2 style="font-weight:300;letter-spacing:0.05em;border-bottom:1px solid #E8B4A8;padding-bottom:12px;">
@@ -28,19 +50,19 @@ export async function POST(request: NextRequest) {
         <table style="width:100%;border-collapse:collapse;margin:20px 0;">
           <tr>
             <td style="padding:8px 0;font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:#8C7B6E;width:80px;">Name</td>
-            <td style="padding:8px 0;font-size:14px;">${name}</td>
+            <td style="padding:8px 0;font-size:14px;">${safeName}</td>
           </tr>
           <tr>
             <td style="padding:8px 0;font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:#8C7B6E;">Email</td>
-            <td style="padding:8px 0;font-size:14px;"><a href="mailto:${email}" style="color:#A0622A;">${email}</a></td>
+            <td style="padding:8px 0;font-size:14px;"><a href="mailto:${safeEmail}" style="color:#A0622A;">${safeEmail}</a></td>
           </tr>
         </table>
         <div style="background:#FDF9F7;padding:20px;margin-top:8px;">
           <p style="font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:#8C7B6E;margin:0 0 10px;">Message</p>
-          <p style="font-size:14px;line-height:1.8;margin:0;white-space:pre-wrap;">${message}</p>
+          <p style="font-size:14px;line-height:1.8;margin:0;white-space:pre-wrap;">${safeMessage}</p>
         </div>
         <p style="font-size:11px;color:#8C7B6E;margin-top:24px;">
-          Hit reply to respond directly to ${name}.
+          Hit reply to respond directly to ${safeName}.
         </p>
       </div>
     `,

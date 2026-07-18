@@ -7,6 +7,7 @@ export default function ContactForm() {
   const [name,    setName]    = useState("");
   const [email,   setEmail]   = useState("");
   const [message, setMessage] = useState("");
+  const [company, setCompany] = useState(""); // honeypot — real visitors never see or fill this
   const [status,  setStatus]  = useState<Status>("idle");
   const [errMsg,  setErrMsg]  = useState("");
 
@@ -19,7 +20,7 @@ export default function ContactForm() {
       const res = await fetch("/api/contact", {
         method:  "POST",
         headers: { "Content-Type": "application/json" },
-        body:    JSON.stringify({ name, email, message }),
+        body:    JSON.stringify({ name, email, message, company }),
       });
       const data = await res.json();
       if (!res.ok) {
@@ -54,7 +55,22 @@ export default function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col gap-6">
+    <form onSubmit={handleSubmit} className="relative flex flex-col gap-6">
+      {/* Honeypot — hidden from real visitors via off-screen positioning (not display:none,
+          which some bots know to skip), left empty by anyone who can't see it */}
+      <div className="absolute -left-[9999px]" aria-hidden="true">
+        <label htmlFor="company">Company</label>
+        <input
+          type="text"
+          id="company"
+          name="company"
+          value={company}
+          onChange={(e) => setCompany(e.target.value)}
+          tabIndex={-1}
+          autoComplete="off"
+        />
+      </div>
+
       <div className="flex flex-col gap-2">
         <label className="text-[0.55rem] tracking-[0.25em] uppercase text-[#8C7B6E]">Name</label>
         <input

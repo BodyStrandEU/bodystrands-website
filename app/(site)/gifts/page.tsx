@@ -1,7 +1,8 @@
 import Image from "next/image";
 import type { Metadata } from "next";
 import ProductCard from "@/components/ProductCard";
-import { products, CATEGORIES } from "@/lib/products";
+import GiftCategoryDropdown from "@/components/GiftCategoryDropdown";
+import { products, CATEGORIES, isValidCategory } from "@/lib/products";
 
 export const metadata: Metadata = {
   title: "Gifts — Handmade Jewelry Gifts Under €25 & €40 | Bodystrands",
@@ -12,7 +13,14 @@ export const metadata: Metadata = {
 const UNDER_25_MAX = 25;
 const UNDER_40_MAX = 40;
 
-export default function GiftsPage() {
+export default async function GiftsPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ category?: string }>;
+}) {
+  const { category } = await searchParams;
+  const activeCategory = category && isValidCategory(category) ? category : "all";
+
   const active = products.filter((p) => p.active !== false);
 
   const under25 = active
@@ -23,10 +31,12 @@ export default function GiftsPage() {
     .filter((p) => p.price > UNDER_25_MAX && p.price <= UNDER_40_MAX)
     .sort((a, b) => a.price - b.price);
 
-  const under40ByCategory = CATEGORIES
-    .map((category) => ({
-      category,
-      items: under40.filter((p) => p.category === category),
+  const under40Categories = CATEGORIES.filter((cat) => under40.some((p) => p.category === cat));
+
+  const under40ByCategory = (activeCategory === "all" ? CATEGORIES : [activeCategory])
+    .map((cat) => ({
+      category: cat,
+      items: under40.filter((p) => p.category === cat),
     }))
     .filter((section) => section.items.length > 0);
 
@@ -76,10 +86,13 @@ export default function GiftsPage() {
       </section>
 
       {/* Under €40 — grouped by category, since this tier is much larger */}
-      <section className="max-w-7xl mx-auto px-6 md:px-10">
-        <div className="flex items-center gap-3 mb-10 md:mb-12">
-          <h2 className="font-heading text-2xl md:text-3xl font-light text-[#2C2220]">Under €40</h2>
-          <div className="flex-1 h-px bg-[#E8B4A8]/40" />
+      <section id="under-40" className="max-w-7xl mx-auto px-6 md:px-10 scroll-mt-24">
+        <div className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-3 mb-10 md:mb-12">
+          <div className="flex items-center gap-3 flex-1">
+            <h2 className="font-heading text-2xl md:text-3xl font-light text-[#2C2220]">Under €40</h2>
+            <div className="hidden sm:block flex-1 h-px bg-[#E8B4A8]/40" />
+          </div>
+          <GiftCategoryDropdown categories={under40Categories} active={activeCategory} />
         </div>
         {under40ByCategory.length > 0 ? (
           <div className="flex flex-col gap-14 md:gap-20">

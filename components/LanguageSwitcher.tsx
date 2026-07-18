@@ -18,14 +18,22 @@ function getCookie(name: string): string | null {
 }
 
 function setLanguage(code: string) {
-  const value = code === "en" ? "" : `/en/${code}`;
+  // Switching back to English used to try deleting the cookie, but Google's widget
+  // sets it across domain variants we weren't all clearing, so a stale copy survived
+  // and kept re-translating to the old language. Setting an explicit "/en/en" (translate
+  // English -> English, i.e. a no-op) is unambiguous and sidesteps that entirely.
+  const value = `/en/${code}`;
   const host = window.location.hostname;
-  // clear + set on both bare host and dotted domain so the widget reliably picks it up
-  document.cookie = `googtrans=;path=/;max-age=0`;
-  document.cookie = `googtrans=;path=/;domain=.${host};max-age=0`;
-  if (value) {
-    document.cookie = `googtrans=${value};path=/`;
-    document.cookie = `googtrans=${value};path=/;domain=.${host}`;
+  const bareHost = host.replace(/^www\./, "");
+  const domains = Array.from(new Set(["", host, `.${host}`, bareHost, `.${bareHost}`]));
+
+  for (const d of domains) {
+    const domainAttr = d ? `;domain=${d}` : "";
+    document.cookie = `googtrans=;path=/${domainAttr};max-age=0`;
+  }
+  for (const d of domains) {
+    const domainAttr = d ? `;domain=${d}` : "";
+    document.cookie = `googtrans=${value};path=/${domainAttr}`;
   }
   window.location.reload();
 }

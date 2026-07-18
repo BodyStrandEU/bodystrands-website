@@ -4,6 +4,7 @@ import Link from "next/link";
 export const metadata = {
   title: "About — Bodystrands",
   description: "The story behind Bodystrands — handmade body jewelry crafted with love by El & Gio in Portugal.",
+  alternates: { canonical: "/about" },
 };
 
 export default function AboutPage() {

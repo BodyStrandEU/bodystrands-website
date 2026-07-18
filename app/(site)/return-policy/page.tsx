@@ -3,6 +3,7 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Return Policy — Bodystrands",
   description: "Bodystrands return policy. 14-day returns accepted for any reason. Return shipping is at the buyer's expense.",
+  alternates: { canonical: "/return-policy" },
 };
 
 export default function ReturnPolicyPage() {

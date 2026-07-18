@@ -5,6 +5,7 @@ import ShippingRatesTable from "@/components/ShippingRatesTable";
 export const metadata: Metadata = {
   title: "Shipping & Returns — Bodystrands",
   description: "Shipping rates, delivery times, and return policy for Bodystrands. We ship worldwide from Portugal and Canada.",
+  alternates: { canonical: "/shipping" },
 };
 
 export default function ShippingPage() {

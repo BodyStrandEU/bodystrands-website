@@ -4,6 +4,7 @@ import TrackForm from "@/components/TrackForm";
 export const metadata: Metadata = {
   title: "Track Your Order — Bodystrands",
   description: "Enter your tracking number to follow your Bodystrands parcel in real time.",
+  alternates: { canonical: "/track" },
 };
 
 export default function TrackPage() {

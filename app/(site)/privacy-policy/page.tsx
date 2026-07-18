@@ -3,6 +3,7 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Privacy Policy — Bodystrands",
   description: "Privacy Policy for Bodystrands. Learn how we collect, use, and protect your personal data.",
+  alternates: { canonical: "/privacy-policy" },
 };
 
 export default function PrivacyPolicyPage() {

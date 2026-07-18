@@ -5,6 +5,7 @@ import FaqAccordion, { type FaqItem } from "@/components/FaqAccordion";
 export const metadata: Metadata = {
   title: "FAQ — Bodystrands",
   description: "Answers to common questions about Bodystrands jewelry — sizing, materials, durability, shipping, returns, and more.",
+  alternates: { canonical: "/faq" },
 };
 
 type FaqGroup = { title: string; items: FaqItem[] };

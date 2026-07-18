@@ -3,6 +3,7 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Terms & Conditions — Bodystrands",
   description: "Terms and Conditions for purchasing from Bodystrands.",
+  alternates: { canonical: "/terms" },
 };
 
 export default function TermsPage() {

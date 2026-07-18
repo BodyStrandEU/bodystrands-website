@@ -4,6 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Jewelry Care — Bodystrands",
   description: "How to care for your Bodystrands jewelry. Tips for cleaning, storing, and making your stainless steel pieces last a lifetime.",
+  alternates: { canonical: "/care" },
 };
 
 const CARE_SECTIONS = [

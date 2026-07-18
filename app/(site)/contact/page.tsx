@@ -3,6 +3,7 @@ import ContactForm from "@/components/ContactForm";
 export const metadata = {
   title: "Contact — Bodystrands",
   description: "Get in touch with Bodystrands. We'd love to hear from you.",
+  alternates: { canonical: "/contact" },
 };
 
 export default function ContactPage() {

@@ -38,13 +38,13 @@
       }
     ],
     "images": [
-      "/images/products/1c38c724-056b-4eeb-9d8e-69338dee6535.jpeg",
-      "/images/products/842de9ea-3bcf-4c37-b617-a3a9aebf11e8.jpeg",
-      "/images/products/b7c149e1-4751-41da-9494-b0b4cae10a71.png",
-      "/images/products/2394f642-d0d8-4e4e-af9a-96e01db744ae.png",
-      "/images/products/IMG_1909.jpeg",
-      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg",
-      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png"
+      "/images/products/1c38c724-056b-4eeb-9d8e-69338dee6535.webp",
+      "/images/products/842de9ea-3bcf-4c37-b617-a3a9aebf11e8.webp",
+      "/images/products/b7c149e1-4751-41da-9494-b0b4cae10a71.webp",
+      "/images/products/2394f642-d0d8-4e4e-af9a-96e01db744ae.webp",
+      "/images/products/IMG_1909.webp",
+      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.webp",
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp"
     ],
     "video": "/images/products/0617.mp4",
     "featured": false,
@@ -94,7 +94,7 @@
       }
     ],
     "images": [
-      "/images/products/goddess-shoulder-chain-main.png"
+      "/images/products/goddess-shoulder-chain-main.webp"
     ],
     "variantVideos": {
       "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/992bfe17680bc4fbd83158154a7b1345/downloads/default.mp4",
@@ -108,21 +108,21 @@
     "active": true,
     "altText": "Goddess Shoulder Chain in gold-tone stainless steel, elegant body chain for special occasion dresses",
     "gallery": [
-      "/images/products/goddess-shoulder-chain-main.png",
-      "/images/products/024eee9a-d4b6-4f63-980b-5cecf487705f.png",
-      "/images/products/74457a6f-013f-46bf-a8a1-fa04c63960a9.png",
-      "/images/products/goddess-shoulder-chain-both-5.png",
-      "/images/products/goddess-shoulder-chain-both-4.png",
-      "/images/products/goddess-shoulder-chain-both-3.jpg",
-      "/images/products/goddess-shoulder-chain-both-2.jpg",
-      "/images/products/goddess-shoulder-chain-both-1.jpg",
-      "/images/products/435b9a3b-10b1-4b5d-a535-a4f3786d8057.jpeg",
-      "/images/products/831cc6e5-c83c-435b-afe9-5b28a9d1025e.png",
-      "/images/products/4a3d4343-1df8-4748-9a6e-289541a9de5c.png"
+      "/images/products/goddess-shoulder-chain-main.webp",
+      "/images/products/024eee9a-d4b6-4f63-980b-5cecf487705f.webp",
+      "/images/products/74457a6f-013f-46bf-a8a1-fa04c63960a9.webp",
+      "/images/products/goddess-shoulder-chain-both-5.webp",
+      "/images/products/goddess-shoulder-chain-both-4.webp",
+      "/images/products/goddess-shoulder-chain-both-3.webp",
+      "/images/products/goddess-shoulder-chain-both-2.webp",
+      "/images/products/goddess-shoulder-chain-both-1.webp",
+      "/images/products/435b9a3b-10b1-4b5d-a535-a4f3786d8057.webp",
+      "/images/products/831cc6e5-c83c-435b-afe9-5b28a9d1025e.webp",
+      "/images/products/4a3d4343-1df8-4748-9a6e-289541a9de5c.webp"
     ],
     "variantHeroes": {
-      "Silver Tone": "/images/products/goddess-shoulder-chain-main.png",
-      "Gold Tone": "/images/products/435b9a3b-10b1-4b5d-a535-a4f3786d8057.jpeg"
+      "Silver Tone": "/images/products/goddess-shoulder-chain-main.webp",
+      "Gold Tone": "/images/products/435b9a3b-10b1-4b5d-a535-a4f3786d8057.webp"
     },
     "dateAdded": "2026-06-11T09:19:12-04:00"
   },
@@ -173,7 +173,7 @@
       }
     ],
     "images": [
-      "/images/products/bridal-shoulder-chain-main.png"
+      "/images/products/bridal-shoulder-chain-main.webp"
     ],
     "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/a483b83d4a14a3f88a0687ecf9b92b44/downloads/default.mp4",
     "featured": true,
@@ -197,22 +197,22 @@
     },
     "altText": "Delicate gold tone stainless steel bridal shoulder chain for minimalist wedding jewelry and special occasion wear",
     "gallery": [
-      "/images/products/bridal-shoulder-chain-main.png",
-      "/images/products/bridal-shoulder-chain-silver-5.jpg",
-      "/images/products/bridal-shoulder-chain-gold-1.png",
-      "/images/products/bridal-shoulder-chain-gold-2.png",
-      "/images/products/bridal-shoulder-chain-gold-3.png",
-      "/images/products/bridal-shoulder-chain-both-2.jpg",
-      "/images/products/bridal-shoulder-chain-both-3.png",
-      "/images/products/bridal-shoulder-chain-both-4.png",
-      "/images/products/bridal-shoulder-chain-silver-2.png",
-      "/images/products/bridal-shoulder-chain-silver-3.png",
-      "/images/products/bridal-shoulder-chain-silver-4.png",
-      "/images/products/bridal-shoulder-chain-both-1.jpg"
+      "/images/products/bridal-shoulder-chain-main.webp",
+      "/images/products/bridal-shoulder-chain-silver-5.webp",
+      "/images/products/bridal-shoulder-chain-gold-1.webp",
+      "/images/products/bridal-shoulder-chain-gold-2.webp",
+      "/images/products/bridal-shoulder-chain-gold-3.webp",
+      "/images/products/bridal-shoulder-chain-both-2.webp",
+      "/images/products/bridal-shoulder-chain-both-3.webp",
+      "/images/products/bridal-shoulder-chain-both-4.webp",
+      "/images/products/bridal-shoulder-chain-silver-2.webp",
+      "/images/products/bridal-shoulder-chain-silver-3.webp",
+      "/images/products/bridal-shoulder-chain-silver-4.webp",
+      "/images/products/bridal-shoulder-chain-both-1.webp"
     ],
     "variantHeroes": {
-      "Gold Tone": "/images/products/bridal-shoulder-chain-main.png",
-      "Silver Tone": "/images/products/bridal-shoulder-chain-silver-5.jpg"
+      "Gold Tone": "/images/products/bridal-shoulder-chain-main.webp",
+      "Silver Tone": "/images/products/bridal-shoulder-chain-silver-5.webp"
     },
     "dateAdded": "2026-06-11T17:58:31-04:00"
   },
@@ -267,7 +267,7 @@
       }
     ],
     "images": [
-      "/images/products/bf05115b-938f-437c-9744-78ffa7503f8f.png"
+      "/images/products/bf05115b-938f-437c-9744-78ffa7503f8f.webp"
     ],
     "featured": true,
     "variants": [
@@ -287,23 +287,23 @@
     "active": true,
     "altText": "Delicate gold tone stainless steel shoulder chain draping across collarbone for layered chest jewelry styling",
     "gallery": [
-      "/images/products/bf05115b-938f-437c-9744-78ffa7503f8f.png",
-      "/images/products/0218471e-ca76-4bbd-9590-a8d35236fdc0.jpeg",
-      "/images/products/IMG_2581-2.jpeg",
-      "/images/products/IMG_2587.jpeg",
-      "/images/products/d1285c89-1ff4-407e-bf5b-25ddd1a2e7a7-copy.png",
-      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf-copy.jpeg",
-      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png"
+      "/images/products/bf05115b-938f-437c-9744-78ffa7503f8f.webp",
+      "/images/products/0218471e-ca76-4bbd-9590-a8d35236fdc0.webp",
+      "/images/products/IMG_2581-2.webp",
+      "/images/products/IMG_2587.webp",
+      "/images/products/d1285c89-1ff4-407e-bf5b-25ddd1a2e7a7-copy.webp",
+      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf-copy.webp",
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp"
     ],
     "variantHeroes": {
-      "Gold Tone": "/images/products/double-shoulder-chest-chain-gold-7.png",
-      "Silver Tone": "/images/products/0218471e-ca76-4bbd-9590-a8d35236fdc0.jpeg"
+      "Gold Tone": "/images/products/double-shoulder-chest-chain-gold-7.webp",
+      "Silver Tone": "/images/products/0218471e-ca76-4bbd-9590-a8d35236fdc0.webp"
     },
     "variantVideos": {
       "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/f1c070881c7ef49d3624c7082f9d118a/downloads/default.mp4",
       "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/f1c070881c7ef49d3624c7082f9d118a/downloads/default.mp4"
     },
-    "sizeGuideImage": "/images/products/c3dd0fbe-c4bf-4e40-bdc7-eb8bef0ea431.png",
+    "sizeGuideImage": "/images/products/c3dd0fbe-c4bf-4e40-bdc7-eb8bef0ea431.webp",
     "dateAdded": "2026-06-11T18:55:36-04:00"
   },
   {
@@ -364,9 +364,9 @@
       "https://i.etsystatic.com/55122258/r/il/34bd09/7889662753/il_fullxfull.7889662753_9r33.jpg",
       "https://i.etsystatic.com/55122258/r/il/857d95/7811531149/il_fullxfull.7811531149_g087.jpg",
       "https://i.etsystatic.com/55122258/r/il/08da3d/7841726450/il_fullxfull.7841726450_cqxo.jpg",
-      "/images/products/5374f30e-6ead-469d-b9e8-bcd77c13d349.png",
-      "/images/products/4dd53b29-ab75-4904-8d5a-6c37da39ae33.jpg",
-      "/images/products/9458b715-9745-404d-a115-097a45e9b917.png"
+      "/images/products/5374f30e-6ead-469d-b9e8-bcd77c13d349.webp",
+      "/images/products/4dd53b29-ab75-4904-8d5a-6c37da39ae33.webp",
+      "/images/products/9458b715-9745-404d-a115-097a45e9b917.webp"
     ],
     "variantHeroes": {
       "Gold Tone": "https://i.etsystatic.com/55122258/r/il/f6d416/7889660857/il_fullxfull.7889660857_fijc.jpg",
@@ -417,9 +417,9 @@
       "https://i.etsystatic.com/55122258/r/il/82e431/7824253621/il_fullxfull.7824253621_acsc.jpg",
       "https://i.etsystatic.com/55122258/r/il/4f89b1/7763623772/il_fullxfull.7763623772_eskh.jpg",
       "https://i.etsystatic.com/55122258/r/il/c073cd/7776334440/il_fullxfull.7776334440_jbeo.jpg",
-      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg",
-      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.jpg",
-      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png"
+      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.webp",
+      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.webp",
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp"
     ],
     "featured": false,
     "variantGroups": [
@@ -545,22 +545,22 @@
     "gallery": [
       "https://i.etsystatic.com/55122258/r/il/214012/7696123770/il_fullxfull.7696123770_7r5h.jpg",
       "https://i.etsystatic.com/55122258/r/il/c3ba21/7690292422/il_fullxfull.7690292422_4vju.jpg",
-      "/images/products/f1f33d88-633e-4472-bf35-69b16a308986.png",
-      "/images/products/764ad5f6-99b4-4dd2-b02d-ea7be9c4618c.png",
-      "/images/products/etsy-thumbnails--1--copy-7.png",
-      "/images/products/9cc0b743-3372-437e-954f-f808ab0d296a-2.jpg",
+      "/images/products/f1f33d88-633e-4472-bf35-69b16a308986.webp",
+      "/images/products/764ad5f6-99b4-4dd2-b02d-ea7be9c4618c.webp",
+      "/images/products/etsy-thumbnails--1--copy-7.webp",
+      "/images/products/9cc0b743-3372-437e-954f-f808ab0d296a-2.webp",
       "https://i.etsystatic.com/55122258/r/il/3044d6/7744102609/il_fullxfull.7744102609_yof6.jpg",
-      "/images/products/b737f6ce-566c-4f01-aa20-ef40d07d82ce.png",
-      "/images/products/987a3619-11d9-42a4-bd7d-316d1a4fa2cd.png",
+      "/images/products/b737f6ce-566c-4f01-aa20-ef40d07d82ce.webp",
+      "/images/products/987a3619-11d9-42a4-bd7d-316d1a4fa2cd.webp",
       "https://i.etsystatic.com/55122258/r/il/bd436c/7831325315/il_fullxfull.7831325315_bq5k.jpg",
       "https://i.etsystatic.com/55122258/r/il/3ca3d7/7783400862/il_fullxfull.7783400862_3lw5.jpg",
       "https://i.etsystatic.com/55122258/r/il/bf8477/7759760622/il_fullxfull.7759760622_7bz7.jpg"
     ],
     "variantHeroes": {
       "Gold Tone": "https://i.etsystatic.com/55122258/r/il/214012/7696123770/il_fullxfull.7696123770_7r5h.jpg",
-      "Silver Tone": "/images/products/f1f33d88-633e-4472-bf35-69b16a308986.png"
+      "Silver Tone": "/images/products/f1f33d88-633e-4472-bf35-69b16a308986.webp"
     },
-    "sizeGuideImage": "/images/products/il_fullxfull.8090630842_9i25.jpeg",
+    "sizeGuideImage": "/images/products/il_fullxfull.8090630842_9i25.webp",
     "dateAdded": "2026-06-12T14:11:58-04:00"
   },
   {
@@ -687,7 +687,7 @@
       }
     ],
     "altText": "Gold stainless steel butterfly charm belly chain for summer festivals and beach wear",
-    "sizeGuideImage": "/images/products/il_fullxfull.8090630842_9i25.jpeg",
+    "sizeGuideImage": "/images/products/il_fullxfull.8090630842_9i25.webp",
     "dateAdded": "2026-06-12T15:00:27-04:00"
   },
   {
@@ -773,7 +773,7 @@
       "https://i.etsystatic.com/55122258/r/il/a0512d/7687005568/il_fullxfull.7687005568_6hw9.jpg",
       "https://i.etsystatic.com/55122258/r/il/35de4f/7734947967/il_fullxfull.7734947967_5sxf.jpg",
       "https://i.etsystatic.com/55122258/r/il/26282e/7734979557/il_fullxfull.7734979557_95jd.jpg",
-      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png"
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp"
     ],
     "altText": "Gold-tone cowrie shell ankle bracelet with natural shell charm, perfect beach anklet for boho style",
     "dateAdded": "2026-06-12T15:00:27-04:00"
@@ -823,7 +823,7 @@
       "Silver Tone"
     ],
     "images": [
-      "/images/products/3e4aeecf-aa9b-434f-8dd4-538b7fc69074.png"
+      "/images/products/3e4aeecf-aa9b-434f-8dd4-538b7fc69074.webp"
     ],
     "variantGroups": [
       {
@@ -841,23 +841,23 @@
     },
     "altText": "Dainty gold stainless steel body chain harness for festivals and minimalist layering wear",
     "gallery": [
-      "/images/products/3e4aeecf-aa9b-434f-8dd4-538b7fc69074.png",
-      "/images/products/Untitled-design--1-.png",
+      "/images/products/3e4aeecf-aa9b-434f-8dd4-538b7fc69074.webp",
+      "/images/products/Untitled-design--1-.webp",
       "https://i.etsystatic.com/55122258/r/il/01cb28/7801900345/il_fullxfull.7801900345_7n0g.jpg",
-      "/images/products/Untitled-design--1--copy-2.png",
-      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
+      "/images/products/Untitled-design--1--copy-2.webp",
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp",
       "https://i.etsystatic.com/55122258/r/il/1d08fb/7739339773/il_fullxfull.7739339773_3tb8.jpg",
-      "/images/products/a5999a38-d6e5-47aa-b1b3-76c16581b41e.png",
+      "/images/products/a5999a38-d6e5-47aa-b1b3-76c16581b41e.webp",
       "https://i.etsystatic.com/55122258/r/il/5aed4c/7691395674/il_fullxfull.7691395674_31gb.jpg",
-      "/images/products/AW6C0518-2.jpg",
-      "/images/products/124ba28f-2fa0-4150-a3ed-25d6d7f90841-md.jpg",
-      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf-copy.jpeg"
+      "/images/products/AW6C0518-2.webp",
+      "/images/products/124ba28f-2fa0-4150-a3ed-25d6d7f90841-md.webp",
+      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf-copy.webp"
     ],
     "variantHeroes": {
-      "Gold Tone": "/images/products/Untitled-design--1-.png",
-      "Silver Tone": "/images/products/3e4aeecf-aa9b-434f-8dd4-538b7fc69074.png"
+      "Gold Tone": "/images/products/Untitled-design--1-.webp",
+      "Silver Tone": "/images/products/3e4aeecf-aa9b-434f-8dd4-538b7fc69074.webp"
     },
-    "sizeGuideImage": "/images/products/d75a26d3-2060-44af-befb-398ba171ed16.png",
+    "sizeGuideImage": "/images/products/d75a26d3-2060-44af-befb-398ba171ed16.webp",
     "dateAdded": "2026-06-12T15:00:27-04:00"
   },
   {
@@ -1056,17 +1056,17 @@
     "gallery": [
       "https://i.etsystatic.com/55122258/r/il/3fa024/8161513325/il_fullxfull.8161513325_ixgw.jpg",
       "https://i.etsystatic.com/55122258/r/il/f45154/8161534047/il_fullxfull.8161534047_b57r.jpg",
-      "/images/products/39351d60-5629-47c0-a990-833843da2665.png",
+      "/images/products/39351d60-5629-47c0-a990-833843da2665.webp",
       "https://i.etsystatic.com/55122258/r/il/b1dd84/8113629418/il_fullxfull.8113629418_wlk3.jpg",
       "https://i.etsystatic.com/55122258/r/il/a4f149/8161535103/il_fullxfull.8161535103_opib.jpg",
       "https://i.etsystatic.com/55122258/r/il/cebc61/7811531289/il_fullxfull.7811531289_2g5p.jpg",
-      "/images/products/68bcfa0e-bff6-47d8-a4c7-b75923d83f9c.png",
-      "/images/products/956fdbc9-7d34-4299-a7e5-a33f145f85e5.png",
-      "/images/products/46a68692-2213-49df-87b0-c39e9bea93fa.png"
+      "/images/products/68bcfa0e-bff6-47d8-a4c7-b75923d83f9c.webp",
+      "/images/products/956fdbc9-7d34-4299-a7e5-a33f145f85e5.webp",
+      "/images/products/46a68692-2213-49df-87b0-c39e9bea93fa.webp"
     ],
     "variantHeroes": {
       "Gold Tone": "https://i.etsystatic.com/55122258/r/il/3fa024/8161513325/il_fullxfull.8161513325_ixgw.jpg",
-      "Silver Tone": "/images/products/68bcfa0e-bff6-47d8-a4c7-b75923d83f9c.png"
+      "Silver Tone": "/images/products/68bcfa0e-bff6-47d8-a4c7-b75923d83f9c.webp"
     },
     "dateAdded": "2026-06-12T15:00:27-04:00"
   },
@@ -1263,7 +1263,7 @@
       "Silver Tone"
     ],
     "images": [
-      "/images/products/8f4f0279-4cb9-4be4-8a2b-eb00007c22fd.png"
+      "/images/products/8f4f0279-4cb9-4be4-8a2b-eb00007c22fd.webp"
     ],
     "variantVideos": {
       "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/ea8607590094cfbc7842dd84b42e10fd/downloads/default.mp4",
@@ -1271,16 +1271,16 @@
     },
     "altText": "Gold-tone stainless steel bridal forehead chain draped across hairline for wedding headpiece jewelry",
     "gallery": [
-      "/images/products/8f4f0279-4cb9-4be4-8a2b-eb00007c22fd.png",
-      "/images/products/f2f23b06-f910-420f-97d5-b3bfb939c09f.png",
-      "/images/products/49cfbed0-3ca2-49b7-85b5-938b180c8b79.png",
+      "/images/products/8f4f0279-4cb9-4be4-8a2b-eb00007c22fd.webp",
+      "/images/products/f2f23b06-f910-420f-97d5-b3bfb939c09f.webp",
+      "/images/products/49cfbed0-3ca2-49b7-85b5-938b180c8b79.webp",
       "https://i.etsystatic.com/55122258/r/il/5f745b/7871482945/il_fullxfull.7871482945_9qw5.jpg",
       "https://i.etsystatic.com/55122258/r/il/fd4744/7807979968/il_fullxfull.7807979968_qa8r.jpg",
       "https://i.etsystatic.com/55122258/r/il/3e1b20/7904377486/il_fullxfull.7904377486_3jjc.jpg",
       "https://i.etsystatic.com/55122258/r/il/7a42a6/7904385148/il_fullxfull.7904385148_2lja.jpg"
     ],
     "variantHeroes": {
-      "Gold Tone": "/images/products/8f4f0279-4cb9-4be4-8a2b-eb00007c22fd.png",
+      "Gold Tone": "/images/products/8f4f0279-4cb9-4be4-8a2b-eb00007c22fd.webp",
       "Silver Tone": "https://i.etsystatic.com/55122258/r/il/3e1b20/7904377486/il_fullxfull.7904377486_3jjc.jpg"
     },
     "dateAdded": "2026-06-12T15:00:27-04:00"
@@ -1344,13 +1344,13 @@
       "https://i.etsystatic.com/55122258/r/il/e75240/7847360300/il_fullxfull.7847360300_8hfg.jpg",
       "https://i.etsystatic.com/55122258/r/il/a78dca/7847363182/il_fullxfull.7847363182_6v8v.jpg",
       "https://i.etsystatic.com/55122258/r/il/857d95/7811531149/il_fullxfull.7811531149_g087.jpg",
-      "/images/products/c5c213f0-4a18-4128-80db-53dc2923fe0d.jpeg",
+      "/images/products/c5c213f0-4a18-4128-80db-53dc2923fe0d.webp",
       "https://i.etsystatic.com/55122258/r/il/2a9ec4/7847370486/il_fullxfull.7847370486_zn3k.jpg",
       "https://i.etsystatic.com/55122258/r/il/08979d/7895309513/il_fullxfull.7895309513_psao.jpg"
     ],
     "variantHeroes": {
       "Gold Tone": "https://i.etsystatic.com/55122258/r/il/d5e410/7895318147/il_fullxfull.7895318147_47mv.jpg",
-      "Silver Tone": "/images/products/c5c213f0-4a18-4128-80db-53dc2923fe0d.jpeg"
+      "Silver Tone": "/images/products/c5c213f0-4a18-4128-80db-53dc2923fe0d.webp"
     },
     "dateAdded": "2026-06-12T15:00:27-04:00"
   },
@@ -1407,15 +1407,15 @@
       "https://i.etsystatic.com/55122258/r/il/022eb3/8020124799/il_fullxfull.8020124799_aweh.jpg",
       "https://i.etsystatic.com/55122258/r/il/5f261a/8020152167/il_fullxfull.8020152167_qwjl.jpg",
       "https://i.etsystatic.com/55122258/r/il/fd4744/7807979968/il_fullxfull.7807979968_qa8r.jpg",
-      "/images/products/49cfbed0-3ca2-49b7-85b5-938b180c8b79.png",
-      "/images/products/f2f23b06-f910-420f-97d5-b3bfb939c09f.png",
-      "/images/products/22079b65-5549-4e99-82a5-03370c656882.png",
+      "/images/products/49cfbed0-3ca2-49b7-85b5-938b180c8b79.webp",
+      "/images/products/f2f23b06-f910-420f-97d5-b3bfb939c09f.webp",
+      "/images/products/22079b65-5549-4e99-82a5-03370c656882.webp",
       "https://i.etsystatic.com/55122258/r/il/4e63f4/8020150831/il_fullxfull.8020150831_ckfl.jpg",
-      "/images/products/a84ced35-90fb-4281-8607-cdd6a4c7e087.png"
+      "/images/products/a84ced35-90fb-4281-8607-cdd6a4c7e087.webp"
     ],
     "variantHeroes": {
       "Gold Tone": "https://i.etsystatic.com/55122258/r/il/8d2af9/8020112711/il_fullxfull.8020112711_jbay.jpg",
-      "Silver Tone": "/images/products/22079b65-5549-4e99-82a5-03370c656882.png"
+      "Silver Tone": "/images/products/22079b65-5549-4e99-82a5-03370c656882.webp"
     },
     "dateAdded": "2026-06-12T15:00:27-04:00"
   },
@@ -1470,12 +1470,12 @@
     "gallery": [
       "https://i.etsystatic.com/55122258/r/il/c229ae/7880573979/il_fullxfull.7880573979_6a6u.jpg",
       "https://i.etsystatic.com/55122258/r/il/cda9d8/7880573781/il_fullxfull.7880573781_e23b.jpg",
-      "/images/products/c3ef9edc-68ab-4123-90bc-9d7d6885f700.png",
+      "/images/products/c3ef9edc-68ab-4123-90bc-9d7d6885f700.webp",
       "https://i.etsystatic.com/55122258/r/il/138346/8108785554/il_fullxfull.8108785554_gwv4.jpg",
       "https://i.etsystatic.com/55122258/r/il/2de6c5/8156708781/il_fullxfull.8156708781_jp9u.jpg",
       "https://i.etsystatic.com/55122258/r/il/c2c935/8156708765/il_fullxfull.8156708765_57hq.jpg",
       "https://i.etsystatic.com/55122258/r/il/6c7b5c/8108786334/il_fullxfull.8108786334_ahkn.jpg",
-      "/images/products/900b7026-f8f4-428b-b07f-89d9f6822160.png",
+      "/images/products/900b7026-f8f4-428b-b07f-89d9f6822160.webp",
       "https://i.etsystatic.com/55122258/r/il/26282e/7734979557/il_fullxfull.7734979557_95jd.jpg",
       "https://i.etsystatic.com/55122258/r/il/a302ad/8016631168/il_fullxfull.8016631168_8rj6.jpg",
       "https://i.etsystatic.com/55122258/r/il/ed3c81/8064599869/il_fullxfull.8064599869_ggy2.jpg",
@@ -1530,9 +1530,9 @@
       "https://i.etsystatic.com/55122258/r/il/7d203e/7759169030/il_fullxfull.7759169030_aizv.jpg",
       "https://i.etsystatic.com/55122258/r/il/42a411/8095057756/il_fullxfull.8095057756_knht.jpg",
       "https://i.etsystatic.com/55122258/r/il/255c79/7805113761/il_fullxfull.7805113761_ko80.jpg",
-      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.jpg",
-      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg",
-      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png"
+      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.webp",
+      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.webp",
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp"
     ],
     "variantGroups": [
       {
@@ -1625,19 +1625,19 @@
     "gallery": [
       "https://i.etsystatic.com/55122258/r/il/923445/8142290565/il_fullxfull.8142290565_sk1z.jpg",
       "https://i.etsystatic.com/55122258/r/il/d5f862/8142296869/il_fullxfull.8142296869_rlhx.jpg",
-      "/images/products/9354d21d-3996-4968-b07d-fc929d3bb0b9.png",
+      "/images/products/9354d21d-3996-4968-b07d-fc929d3bb0b9.webp",
       "https://i.etsystatic.com/55122258/r/il/06c46e/8094386568/il_fullxfull.8094386568_883n.jpg",
       "https://i.etsystatic.com/55122258/r/il/92f7ea/8142285949/il_fullxfull.8142285949_fm0e.jpg",
-      "/images/products/IMG_2351.jpeg",
-      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
-      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.jpg",
+      "/images/products/IMG_2351.webp",
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp",
+      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.webp",
       "https://i.etsystatic.com/55122258/r/il/99edab/7794757877/il_fullxfull.7794757877_qxts.jpg"
     ],
     "variantHeroes": {
       "Gold Tone": "https://i.etsystatic.com/55122258/r/il/d5f862/8142296869/il_fullxfull.8142296869_rlhx.jpg",
       "Silver Tone": "https://i.etsystatic.com/55122258/r/il/923445/8142290565/il_fullxfull.8142290565_sk1z.jpg"
     },
-    "sizeGuideImage": "/images/products/efdfd7b7-9b1a-4208-872d-f6b4ab61742f.png",
+    "sizeGuideImage": "/images/products/efdfd7b7-9b1a-4208-872d-f6b4ab61742f.webp",
     "dateAdded": "2026-06-12T15:00:27-04:00"
   },
   {
@@ -1678,9 +1678,9 @@
       "https://i.etsystatic.com/55122258/r/il/606456/8130466079/il_fullxfull.8130466079_pi9i.jpg",
       "https://i.etsystatic.com/55122258/r/il/3a1fba/8082552384/il_fullxfull.8082552384_tr23.jpg",
       "https://i.etsystatic.com/55122258/r/il/b3a795/7943677304/il_fullxfull.7943677304_jmkv.jpg",
-      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.jpg",
-      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg",
-      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png"
+      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.webp",
+      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.webp",
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp"
     ],
     "variantGroups": [
       {
@@ -1764,7 +1764,7 @@
     "altText": "Gold tone multi strand shoulder chain in stainless steel for elegant layered arm jewelry styling",
     "gallery": [
       "https://i.etsystatic.com/55122258/r/il/bef080/8054121082/il_fullxfull.8054121082_g5gb.jpg",
-      "/images/products/d9486dcb-9155-43e9-840e-98bf8ef72b8b.png",
+      "/images/products/d9486dcb-9155-43e9-840e-98bf8ef72b8b.webp",
       "https://i.etsystatic.com/55122258/r/il/7a95a0/8056121460/il_fullxfull.8056121460_bczv.jpg",
       "https://i.etsystatic.com/55122258/r/il/1c9985/8101969895/il_fullxfull.8101969895_4nvq.jpg",
       "https://i.etsystatic.com/55122258/r/il/cbd1a6/7803902507/il_fullxfull.7803902507_7i39.jpg",
@@ -1832,7 +1832,7 @@
       "https://i.etsystatic.com/55122258/r/il/26282e/7734979557/il_fullxfull.7734979557_95jd.jpg",
       "https://i.etsystatic.com/55122258/r/il/dfa9a0/8072832158/il_fullxfull.8072832158_qclw.jpg",
       "https://i.etsystatic.com/55122258/r/il/08a555/8120702523/il_fullxfull.8120702523_kvao.jpg",
-      "/images/products/145fccad-9bc0-4086-a094-a0a8444c88d1.png"
+      "/images/products/145fccad-9bc0-4086-a094-a0a8444c88d1.webp"
     ],
     "variantHeroes": {
       "Gold Tone": "https://i.etsystatic.com/55122258/r/il/72495f/8120735435/il_fullxfull.8120735435_ggod.jpg",
@@ -1881,7 +1881,7 @@
       "Silver Tone"
     ],
     "images": [
-      "/images/products/396178f7-0588-4892-8644-1903a7476417.png"
+      "/images/products/396178f7-0588-4892-8644-1903a7476417.webp"
     ],
     "variantGroups": [
       {
@@ -1899,15 +1899,15 @@
     },
     "altText": "Gold-tone stainless steel layered body chain for festival wear and everyday styling",
     "gallery": [
-      "/images/products/396178f7-0588-4892-8644-1903a7476417.png",
-      "/images/products/5b0f6af8-b435-4c23-8aeb-ce94beb916f5.png",
-      "/images/products/0acaad30-e8d3-4335-8ac0-565cdac6331e.png",
-      "/images/products/05e945bf-3596-4f59-a13a-a56602881897.png",
-      "/images/products/IMG_1346.jpg"
+      "/images/products/396178f7-0588-4892-8644-1903a7476417.webp",
+      "/images/products/5b0f6af8-b435-4c23-8aeb-ce94beb916f5.webp",
+      "/images/products/0acaad30-e8d3-4335-8ac0-565cdac6331e.webp",
+      "/images/products/05e945bf-3596-4f59-a13a-a56602881897.webp",
+      "/images/products/IMG_1346.webp"
     ],
     "variantHeroes": {
-      "Gold Tone": "/images/products/396178f7-0588-4892-8644-1903a7476417.png",
-      "Silver Tone": "/images/products/b6afbc6f-4d0b-40be-9da3-a3ac389540ae.png"
+      "Gold Tone": "/images/products/396178f7-0588-4892-8644-1903a7476417.webp",
+      "Silver Tone": "/images/products/b6afbc6f-4d0b-40be-9da3-a3ac389540ae.webp"
     },
     "dateAdded": "2026-06-12T15:00:27-04:00"
   },
@@ -1971,14 +1971,14 @@
     "altText": "Gold tone stainless steel bikini body chain necklace for festival and beach wear",
     "gallery": [
       "https://i.etsystatic.com/55122258/r/il/c98367/7864103019/il_fullxfull.7864103019_khwe.jpg",
-      "/images/products/IMG_0366.jpg",
-      "/images/products/f6693a6a-3f4b-407d-869f-3f894b84dd5c.jpeg",
+      "/images/products/IMG_0366.webp",
+      "/images/products/f6693a6a-3f4b-407d-869f-3f894b84dd5c.webp",
       "https://i.etsystatic.com/55122258/r/il/fb7ce7/7947817319/il_fullxfull.7947817319_s1sx.jpg",
       "https://i.etsystatic.com/55122258/r/il/f5136d/7816140198/il_fullxfull.7816140198_mqjm.jpg",
       "https://i.etsystatic.com/55122258/r/il/16e637/7817071145/il_fullxfull.7817071145_cog1.jpg",
-      "/images/products/unnamed.jpg",
+      "/images/products/unnamed.webp",
       "https://i.etsystatic.com/55122258/r/il/4e5f30/7816138402/il_fullxfull.7816138402_cf5o.jpg",
-      "/images/products/a7008a93-ea13-4dc1-87e8-7b2db04957e5.png"
+      "/images/products/a7008a93-ea13-4dc1-87e8-7b2db04957e5.webp"
     ],
     "variantHeroes": {
       "Gold Tone": "https://i.etsystatic.com/55122258/r/il/c98367/7864103019/il_fullxfull.7864103019_khwe.jpg",
@@ -2015,16 +2015,16 @@
     "featured": false,
     "active": true,
     "images": [
-      "/images/products/f1a95b9b-e3ca-4323-bd17-525d5ddcd0a6.png",
+      "/images/products/f1a95b9b-e3ca-4323-bd17-525d5ddcd0a6.webp",
       "https://i.etsystatic.com/55122258/r/il/6ee4aa/8065073742/il_fullxfull.8065073742_9b79.jpg",
       "https://i.etsystatic.com/55122258/r/il/1fd40c/8047372098/il_fullxfull.8047372098_8wcr.jpg",
       "https://i.etsystatic.com/55122258/r/il/cd8904/8032758132/il_fullxfull.8032758132_ru5f.jpg",
       "https://i.etsystatic.com/55122258/r/il/93ba8e/8051512336/il_fullxfull.8051512336_2di7.jpg",
       "https://i.etsystatic.com/55122258/r/il/b14ddd/8099427053/il_fullxfull.8099427053_2ou0.jpg",
       "https://i.etsystatic.com/55122258/r/il/b3a795/7943677304/il_fullxfull.7943677304_jmkv.jpg",
-      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.jpg",
-      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg",
-      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png"
+      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.webp",
+      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.webp",
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp"
     ],
     "variantGroups": [
       {
@@ -2154,14 +2154,14 @@
     "active": true,
     "images": [
       "https://i.etsystatic.com/55122258/r/il/00c68e/7783598352/il_fullxfull.7783598352_ord3.jpg",
-      "/images/products/f985b2bb-689d-4d24-90e2-7d6f06d84ae9.png",
+      "/images/products/f985b2bb-689d-4d24-90e2-7d6f06d84ae9.webp",
       "https://i.etsystatic.com/55122258/r/il/3ca3d7/7783400862/il_fullxfull.7783400862_3lw5.jpg",
-      "/images/products/6ff3c5b2-4fa2-4c93-8458-e83dc479cbd8.png",
+      "/images/products/6ff3c5b2-4fa2-4c93-8458-e83dc479cbd8.webp",
       "https://i.etsystatic.com/55122258/r/il/17f798/7787214796/il_fullxfull.7787214796_ampn.jpg",
-      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp",
       "https://i.etsystatic.com/55122258/r/il/d7b84c/7783600598/il_fullxfull.7783600598_op0k.jpg",
       "https://i.etsystatic.com/55122258/r/il/da142d/7783600828/il_fullxfull.7783600828_l2oi.jpg",
-      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg"
+      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.webp"
     ],
     "variantGroups": [
       {
@@ -2182,7 +2182,7 @@
     ],
     "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/6d1bffbe5f4404a422d2bb5e7bd6ee9a/downloads/default.mp4",
     "altText": "Delicate layered belly chain in gold-tone stainless steel, waterproof waist accessory for minimalist body jewelry styling.",
-    "sizeGuideImage": "/images/products/il_fullxfull.8090630842_9i25.jpeg",
+    "sizeGuideImage": "/images/products/il_fullxfull.8090630842_9i25.webp",
     "dateAdded": "2026-06-12T15:00:27-04:00"
   },
   {
@@ -2226,7 +2226,7 @@
       "Silver Tone"
     ],
     "images": [
-      "/images/products/0940847a-f4bf-412c-82ab-c0ca80d3de00.png"
+      "/images/products/0940847a-f4bf-412c-82ab-c0ca80d3de00.webp"
     ],
     "variantGroups": [
       {
@@ -2244,7 +2244,7 @@
     },
     "altText": "Delicate gold tone stainless steel shoulder chain necklace for off-shoulder outfits and elegant décolletage styling",
     "gallery": [
-      "/images/products/0940847a-f4bf-412c-82ab-c0ca80d3de00.png",
+      "/images/products/0940847a-f4bf-412c-82ab-c0ca80d3de00.webp",
       "https://i.etsystatic.com/55122258/r/il/bc4bc3/8099217083/il_fullxfull.8099217083_e5km.jpg",
       "https://i.etsystatic.com/55122258/r/il/cd07a5/8099217085/il_fullxfull.8099217085_eti5.jpg",
       "https://i.etsystatic.com/55122258/r/il/cbd1a6/7803902507/il_fullxfull.7803902507_7i39.jpg",
@@ -2252,7 +2252,7 @@
       "https://i.etsystatic.com/55122258/r/il/9b2511/8103697781/il_fullxfull.8103697781_evgk.jpg"
     ],
     "variantHeroes": {
-      "Gold Tone": "/images/products/0940847a-f4bf-412c-82ab-c0ca80d3de00.png",
+      "Gold Tone": "/images/products/0940847a-f4bf-412c-82ab-c0ca80d3de00.webp",
       "Silver Tone": "https://i.etsystatic.com/55122258/r/il/ee7e54/8099217069/il_fullxfull.8099217069_obyr.jpg"
     },
     "dateAdded": "2026-06-12T15:00:27-04:00"
@@ -2370,9 +2370,9 @@
       "https://i.etsystatic.com/55122258/r/il/5734ae/8092750057/il_fullxfull.8092750057_kycr.jpg",
       "https://i.etsystatic.com/55122258/r/il/0cfcf9/8032913296/il_fullxfull.8032913296_1lye.jpg",
       "https://i.etsystatic.com/55122258/r/il/b3a795/7943677304/il_fullxfull.7943677304_jmkv.jpg",
-      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.jpg",
-      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
-      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg"
+      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.webp",
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp",
+      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.webp"
     ],
     "variantGroups": [
       {
@@ -2452,9 +2452,9 @@
       "https://i.etsystatic.com/55122258/r/il/2a0d88/8020732637/il_fullxfull.8020732637_4dd4.jpg",
       "https://i.etsystatic.com/55122258/r/il/470f52/8020760093/il_fullxfull.8020760093_tq1g.jpg",
       "https://i.etsystatic.com/55122258/r/il/26282e/7734979557/il_fullxfull.7734979557_95jd.jpg",
-      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.jpg",
-      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
-      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg"
+      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.webp",
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp",
+      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.webp"
     ],
     "altText": "Handcrafted gold-tone stainless steel pearl barefoot sandal for beach weddings and special occasions",
     "dateAdded": "2026-06-12T15:00:27-04:00"
@@ -2499,9 +2499,9 @@
       "https://i.etsystatic.com/55122258/r/il/50868c/8086627797/il_fullxfull.8086627797_6yue.jpg",
       "https://i.etsystatic.com/55122258/r/il/cd8904/8032758132/il_fullxfull.8032758132_ru5f.jpg",
       "https://i.etsystatic.com/55122258/r/il/b3a795/7943677304/il_fullxfull.7943677304_jmkv.jpg",
-      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
-      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.jpg",
-      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg"
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp",
+      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.webp",
+      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.webp"
     ],
     "variantGroups": [
       {
@@ -2591,19 +2591,19 @@
     "altText": "Gold stainless steel boho beach body chain for festival wear, waterproof bikini harness accessory",
     "gallery": [
       "https://i.etsystatic.com/55122258/r/il/449e86/8082042627/il_fullxfull.8082042627_ttnm.jpg",
-      "/images/products/5b0f6af8-b435-4c23-8aeb-ce94beb916f5.png",
-      "/images/products/69f0faa3-d43a-44cc-81dd-9e705e36b15d.png",
+      "/images/products/5b0f6af8-b435-4c23-8aeb-ce94beb916f5.webp",
+      "/images/products/69f0faa3-d43a-44cc-81dd-9e705e36b15d.webp",
       "https://i.etsystatic.com/55122258/r/il/436e73/8081527437/il_fullxfull.8081527437_gmwu.jpg",
       "https://i.etsystatic.com/55122258/r/il/4d9618/8033657234/il_fullxfull.8033657234_2q7e.jpg",
       "https://i.etsystatic.com/55122258/r/il/b7c0ce/8033454572/il_fullxfull.8033454572_ibun.jpg",
       "https://i.etsystatic.com/55122258/r/il/226c13/7817073607/il_fullxfull.7817073607_qwhl.jpg",
       "https://i.etsystatic.com/55122258/r/il/a100d0/8033596580/il_fullxfull.8033596580_jyof.jpg",
       "https://i.etsystatic.com/55122258/r/il/d42aba/8081512365/il_fullxfull.8081512365_iz62.jpg",
-      "/images/products/6e602dba-7e1a-4452-8993-835b607084cd.png"
+      "/images/products/6e602dba-7e1a-4452-8993-835b607084cd.webp"
     ],
     "variantHeroes": {
       "Gold Tone": "https://i.etsystatic.com/55122258/r/il/449e86/8082042627/il_fullxfull.8082042627_ttnm.jpg",
-      "Silver Tone": "/images/products/b6afbc6f-4d0b-40be-9da3-a3ac389540ae.png"
+      "Silver Tone": "/images/products/b6afbc6f-4d0b-40be-9da3-a3ac389540ae.webp"
     },
     "dateAdded": "2026-06-12T15:00:27-04:00"
   },
@@ -2685,22 +2685,22 @@
     "altText": "Delicate gold tone stainless steel thigh chain garter for festival fashion and body jewelry styling",
     "gallery": [
       "https://i.etsystatic.com/55122258/r/il/d40760/7983748545/il_fullxfull.7983748545_o5p6.jpg",
-      "/images/products/IMG_2392-copy.jpeg",
+      "/images/products/IMG_2392-copy.webp",
       "https://i.etsystatic.com/55122258/r/il/354af4/7935793534/il_fullxfull.7935793534_b4sw.jpg",
       "https://i.etsystatic.com/55122258/r/il/5b3f84/7985199449/il_fullxfull.7985199449_c7m1.jpg",
       "https://i.etsystatic.com/55122258/r/il/a259e0/7983748989/il_fullxfull.7983748989_tvt7.jpg",
       "https://i.etsystatic.com/55122258/r/il/1da472/7935980726/il_fullxfull.7935980726_jsa6.jpg",
       "https://i.etsystatic.com/55122258/r/il/dd27a1/7983749035/il_fullxfull.7983749035_44la.jpg",
-      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.jpg",
-      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
-      "/images/products/e60f989d-690c-4f66-9816-3c3084cb7fde.png",
-      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg"
+      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.webp",
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp",
+      "/images/products/e60f989d-690c-4f66-9816-3c3084cb7fde.webp",
+      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.webp"
     ],
     "variantHeroes": {
       "Gold Tone": "https://i.etsystatic.com/55122258/r/il/d40760/7983748545/il_fullxfull.7983748545_o5p6.jpg",
-      "Silver Tone": "/images/products/IMG_2392-copy.jpeg"
+      "Silver Tone": "/images/products/IMG_2392-copy.webp"
     },
-    "sizeGuideImage": "/images/products/7bed8d3e-34bd-47c7-b460-e93f19e7eddd.png",
+    "sizeGuideImage": "/images/products/7bed8d3e-34bd-47c7-b460-e93f19e7eddd.webp",
     "dateAdded": "2026-06-12T15:00:27-04:00"
   },
   {
@@ -2767,25 +2767,25 @@
       }
     ],
     "images": [
-      "/images/products/birthstone-thigh-chain/582329d4-blue-beach.jpeg"
+      "/images/products/birthstone-thigh-chain/582329d4-blue-beach.webp"
     ],
     "gallery": [
-      "/images/products/birthstone-thigh-chain/582329d4-blue-beach.jpeg",
-      "/images/products/birthstone-thigh-chain/3a5aca88-ruby-path.png",
-      "/images/products/birthstone-thigh-chain/8c1a99ad-birthstone-chart.jpeg",
-      "/images/products/birthstone-thigh-chain/2fea701c-gemstones.png",
-      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
-      "/images/products/f9ddd93a-310e-4508-ad2a-94dbe54bf2bb.png",
-      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg"
+      "/images/products/birthstone-thigh-chain/582329d4-blue-beach.webp",
+      "/images/products/birthstone-thigh-chain/3a5aca88-ruby-path.webp",
+      "/images/products/birthstone-thigh-chain/8c1a99ad-birthstone-chart.webp",
+      "/images/products/birthstone-thigh-chain/2fea701c-gemstones.webp",
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp",
+      "/images/products/f9ddd93a-310e-4508-ad2a-94dbe54bf2bb.webp",
+      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.webp"
     ],
     "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/498ac5451776050357cd23c15cdbcd65/downloads/default.mp4",
     "infographicImages": [
-      "/images/products/birthstone-thigh-chain/8c1a99ad-birthstone-chart.jpeg",
-      "/images/products/birthstone-thigh-chain/652e239a-sizing-chart.jpeg"
+      "/images/products/birthstone-thigh-chain/8c1a99ad-birthstone-chart.webp",
+      "/images/products/birthstone-thigh-chain/652e239a-sizing-chart.webp"
     ],
     "altText": "Gold-tone stainless steel birthstone thigh chain with delicate gemstone drop for unique leg jewelry",
     "active": true,
-    "sizeGuideImage": "/images/products/652e239a-6f31-44a6-89f2-f6922bf9f84d-copy.jpeg",
+    "sizeGuideImage": "/images/products/652e239a-6f31-44a6-89f2-f6922bf9f84d-copy.webp",
     "dateAdded": "2026-07-08T18:49:38-04:00"
   },
   {
@@ -2893,9 +2893,9 @@
       "https://i.etsystatic.com/55122258/r/il/44fd7d/8078791177/il_fullxfull.8078791177_5ebn.jpg",
       "https://i.etsystatic.com/55122258/r/il/c0c5f0/8030804774/il_fullxfull.8030804774_f18y.jpg",
       "https://i.etsystatic.com/55122258/r/il/26282e/7734979557/il_fullxfull.7734979557_95jd.jpg",
-      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
-      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.jpg",
-      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg"
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp",
+      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.webp",
+      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.webp"
     ],
     "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/a069f95ddbf4d06aa5ebe4d9b588a73f/downloads/default.mp4",
     "altText": "Gold stainless steel evil eye charm anklet for beach wear, handcrafted tarnish-resistant protective ankle bracelet",
@@ -2942,9 +2942,9 @@
       "https://i.etsystatic.com/55122258/r/il/8f4690/8074368205/il_fullxfull.8074368205_jt0q.jpg",
       "https://i.etsystatic.com/55122258/r/il/779bcb/8026430228/il_fullxfull.8026430228_2rnt.jpg",
       "https://i.etsystatic.com/55122258/r/il/99edab/7794757877/il_fullxfull.7794757877_qxts.jpg",
-      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
-      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.jpg",
-      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg"
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp",
+      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.webp",
+      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.webp"
     ],
     "variantGroups": [
       {
@@ -3117,15 +3117,15 @@
       "https://i.etsystatic.com/55122258/r/il/e7b8c3/8099273566/il_fullxfull.8099273566_uybm.jpg",
       "https://i.etsystatic.com/55122258/r/il/88ca45/7769131538/il_fullxfull.7769131538_9erk.jpg",
       "https://i.etsystatic.com/55122258/r/il/99f6c0/8147196789/il_fullxfull.8147196789_eg1l.jpg",
-      "/images/products/0a1b254c-5813-4737-8064-a672c92d0e4a.png",
+      "/images/products/0a1b254c-5813-4737-8064-a672c92d0e4a.webp",
       "https://i.etsystatic.com/55122258/r/il/7487f5/7971888395/il_fullxfull.7971888395_agfr.jpg",
-      "/images/products/80f1d4cb-6a71-4e55-bd7e-923c2435be62.png",
-      "/images/products/90530ab8-ae9b-4ead-9785-9b1690eb1d19.png",
-      "/images/products/69a2a632-913d-42ed-9de2-1646f4a302c9.png"
+      "/images/products/80f1d4cb-6a71-4e55-bd7e-923c2435be62.webp",
+      "/images/products/90530ab8-ae9b-4ead-9785-9b1690eb1d19.webp",
+      "/images/products/69a2a632-913d-42ed-9de2-1646f4a302c9.webp"
     ],
     "variantHeroes": {
       "Gold Tone": "https://i.etsystatic.com/55122258/r/il/b4b794/8099319218/il_fullxfull.8099319218_oykq.jpg",
-      "Silver Tone": "/images/products/0a1b254c-5813-4737-8064-a672c92d0e4a.png"
+      "Silver Tone": "/images/products/0a1b254c-5813-4737-8064-a672c92d0e4a.webp"
     },
     "dateAdded": "2026-06-12T15:00:27-04:00"
   },
@@ -3376,8 +3376,8 @@
       "https://i.etsystatic.com/55122258/r/il/149279/8004640224/il_fullxfull.8004640224_7tp3.jpg",
       "https://i.etsystatic.com/55122258/r/il/5b8ce7/8004366964/il_fullxfull.8004366964_9uf5.jpg",
       "https://i.etsystatic.com/55122258/r/il/a4faea/7774262738/il_fullxfull.7774262738_lktn.jpg",
-      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
-      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg"
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp",
+      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.webp"
     ],
     "variantGroups": [
       {
@@ -3464,8 +3464,8 @@
       "https://i.etsystatic.com/55122258/r/il/fe8a39/7803914369/il_fullxfull.7803914369_86nj.jpg",
       "https://i.etsystatic.com/55122258/r/il/006166/7726395674/il_fullxfull.7726395674_h76x.jpg",
       "https://i.etsystatic.com/55122258/r/il/306f73/7809952647/il_fullxfull.7809952647_33wa.jpg",
-      "/images/products/Untitled-design--1--copy.png",
-      "/images/products/unnamed-3-2.jpg"
+      "/images/products/Untitled-design--1--copy.webp",
+      "/images/products/unnamed-3-2.webp"
     ],
     "variantHeroes": {
       "Gold Tone": "https://i.etsystatic.com/55122258/r/il/bf444a/7761992466/il_fullxfull.7761992466_lrc2.jpg",
@@ -3523,8 +3523,8 @@
       "https://i.etsystatic.com/55122258/r/il/129578/8052215727/il_fullxfull.8052215727_9zz1.jpg",
       "https://i.etsystatic.com/55122258/r/il/78a788/8052276317/il_fullxfull.8052276317_5be9.jpg",
       "https://i.etsystatic.com/55122258/r/il/a4faea/7774262738/il_fullxfull.7774262738_lktn.jpg",
-      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
-      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg"
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp",
+      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.webp"
     ],
     "variantGroups": [
       {
@@ -3580,9 +3580,9 @@
       "https://i.etsystatic.com/55122258/r/il/fed2cd/8003728682/il_fullxfull.8003728682_b0x8.jpg",
       "https://i.etsystatic.com/55122258/r/il/2cb58f/8049907629/il_fullxfull.8049907629_g5jj.jpg",
       "https://i.etsystatic.com/55122258/r/il/26282e/7734979557/il_fullxfull.7734979557_95jd.jpg",
-      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
-      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.jpg",
-      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg"
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp",
+      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.webp",
+      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.webp"
     ],
     "variantGroups": [
       {
@@ -3803,9 +3803,9 @@
       "https://i.etsystatic.com/55122258/r/il/232146/7994937590/il_fullxfull.7994937590_hvgo.jpg",
       "https://i.etsystatic.com/55122258/r/il/30089d/8042924815/il_fullxfull.8042924815_zxz3.jpg",
       "https://i.etsystatic.com/55122258/r/il/cbd1a6/7803902507/il_fullxfull.7803902507_7i39.jpg",
-      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
-      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.jpg",
-      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg"
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp",
+      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.webp",
+      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.webp"
     ],
     "variantGroups": [
       {
@@ -3954,7 +3954,7 @@
       "Silver Tone"
     ],
     "images": [
-      "/images/products/67b40e8a-fd66-4c80-9d83-611f2e8a16ae-copy.png"
+      "/images/products/67b40e8a-fd66-4c80-9d83-611f2e8a16ae-copy.webp"
     ],
     "variantGroups": [
       {
@@ -3973,22 +3973,22 @@
     },
     "altText": "Handcrafted silver stainless steel shoulder harness for evening wear, elegant body chain jewelry accent",
     "gallery": [
-      "/images/products/67b40e8a-fd66-4c80-9d83-611f2e8a16ae-copy.png",
+      "/images/products/67b40e8a-fd66-4c80-9d83-611f2e8a16ae-copy.webp",
       "https://i.etsystatic.com/55122258/r/il/b9181f/7987888140/il_fullxfull.7987888140_9j6g.jpg",
       "https://i.etsystatic.com/55122258/r/il/145235/7987884440/il_fullxfull.7987884440_5ck3.jpg",
-      "/images/products/1ae16d95-0e18-4ce4-aeb3-0c755b4d618c-copy.png",
-      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
+      "/images/products/1ae16d95-0e18-4ce4-aeb3-0c755b4d618c-copy.webp",
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp",
       "https://i.etsystatic.com/55122258/r/il/07c056/7987871718/il_fullxfull.7987871718_fldp.jpg",
       "https://i.etsystatic.com/55122258/r/il/0d1ed3/7987871978/il_fullxfull.7987871978_kq45.jpg",
       "https://i.etsystatic.com/55122258/r/il/cbd1a6/7803902507/il_fullxfull.7803902507_7i39.jpg",
-      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg",
-      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.jpg"
+      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.webp",
+      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.webp"
     ],
     "variantHeroes": {
-      "Gold Tone": "/images/products/67b40e8a-fd66-4c80-9d83-611f2e8a16ae-copy.png",
+      "Gold Tone": "/images/products/67b40e8a-fd66-4c80-9d83-611f2e8a16ae-copy.webp",
       "Silver Tone": "https://i.etsystatic.com/55122258/r/il/b9181f/7987888140/il_fullxfull.7987888140_9j6g.jpg"
     },
-    "sizeGuideImage": "/images/products/25f995a3-cea4-4872-b772-7d62d0e000ec.png",
+    "sizeGuideImage": "/images/products/25f995a3-cea4-4872-b772-7d62d0e000ec.webp",
     "dateAdded": "2026-06-12T15:00:27-04:00"
   },
   {
@@ -4048,9 +4048,9 @@
       "https://i.etsystatic.com/55122258/r/il/698621/7867784241/il_fullxfull.7867784241_oh2z.jpg",
       "https://i.etsystatic.com/55122258/r/il/cbd1a6/7803902507/il_fullxfull.7803902507_7i39.jpg",
       "https://i.etsystatic.com/55122258/r/il/2d76f4/7803902439/il_fullxfull.7803902439_3q4q.jpg",
-      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
-      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.jpg",
-      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg"
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp",
+      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.webp",
+      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.webp"
     ],
     "variantGroups": [
       {
@@ -4118,15 +4118,15 @@
       "https://i.etsystatic.com/55122258/r/il/a1e016/7977296540/il_fullxfull.7977296540_q99j.jpg",
       "https://i.etsystatic.com/55122258/r/il/95609f/7977321226/il_fullxfull.7977321226_4akx.jpg",
       "https://i.etsystatic.com/55122258/r/il/a29dfe/7978804622/il_fullxfull.7978804622_tuwq.jpg",
-      "/images/products/ede51c2e-7b01-48a2-8c36-f65dfb5251a8.png",
-      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
-      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg",
-      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.jpg",
+      "/images/products/ede51c2e-7b01-48a2-8c36-f65dfb5251a8.webp",
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp",
+      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.webp",
+      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.webp",
       "https://i.etsystatic.com/55122258/r/il/26282e/7734979557/il_fullxfull.7734979557_95jd.jpg"
     ],
     "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/6fc8335347ccfd5e332cdf6a30175fa8/downloads/default.mp4",
     "altText": "Delicate gold stainless steel pearl hand chain for weddings, draping wrist to finger with boho elegance",
-    "sizeGuideImage": "/images/products/c213697c-ffba-4e49-826c-5dd871a9be0c.png",
+    "sizeGuideImage": "/images/products/c213697c-ffba-4e49-826c-5dd871a9be0c.webp",
     "variantGroups": [
       {
         "label": "Ring Size",
@@ -4178,7 +4178,7 @@
       "Silver Tone"
     ],
     "images": [
-      "/images/products/ad47d320-fe33-421d-917a-bcc3c014778d.png"
+      "/images/products/ad47d320-fe33-421d-917a-bcc3c014778d.webp"
     ],
     "variantVideos": {
       "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/9c3b4a3522585e848fa1eaf1aa39afba/downloads/default.mp4",
@@ -4186,18 +4186,18 @@
     },
     "altText": "Delicate gold tone stainless steel barefoot toe chain anklet, waterproof beach ankle bracelet for summer wear",
     "gallery": [
-      "/images/products/ad47d320-fe33-421d-917a-bcc3c014778d.png",
-      "/images/products/5a92a4d0-f869-4ad1-bbcb-3cc0609e2fea.png",
+      "/images/products/ad47d320-fe33-421d-917a-bcc3c014778d.webp",
+      "/images/products/5a92a4d0-f869-4ad1-bbcb-3cc0609e2fea.webp",
       "https://i.etsystatic.com/55122258/r/il/35be58/7972448970/il_fullxfull.7972448970_9g7a.jpg",
-      "/images/products/9fea2b1d-a3f3-42c6-8e1a-2159889fcd91.png",
+      "/images/products/9fea2b1d-a3f3-42c6-8e1a-2159889fcd91.webp",
       "https://i.etsystatic.com/55122258/r/il/26282e/7734979557/il_fullxfull.7734979557_95jd.jpg",
       "https://i.etsystatic.com/55122258/r/il/b79a37/7829652332/il_fullxfull.7829652332_e2do.jpg",
-      "/images/products/a76638d8-d72d-4dc7-862a-75bca966322b.png",
+      "/images/products/a76638d8-d72d-4dc7-862a-75bca966322b.webp",
       "https://i.etsystatic.com/55122258/r/il/f03253/8020365835/il_fullxfull.8020365835_hy24.jpg",
       "https://i.etsystatic.com/55122258/r/il/1265a5/7972411312/il_fullxfull.7972411312_f7pn.jpg"
     ],
     "variantHeroes": {
-      "Gold Tone": "/images/products/ad47d320-fe33-421d-917a-bcc3c014778d.png",
+      "Gold Tone": "/images/products/ad47d320-fe33-421d-917a-bcc3c014778d.webp",
       "Silver Tone": "https://i.etsystatic.com/55122258/r/il/b79a37/7829652332/il_fullxfull.7829652332_e2do.jpg"
     },
     "dateAdded": "2026-06-12T15:00:27-04:00"
@@ -4245,9 +4245,9 @@
       "https://i.etsystatic.com/55122258/r/il/f5136d/7816140198/il_fullxfull.7816140198_mqjm.jpg",
       "https://i.etsystatic.com/55122258/r/il/a6450c/7967144502/il_fullxfull.7967144502_77xn.jpg",
       "https://i.etsystatic.com/55122258/r/il/88ca45/7769131538/il_fullxfull.7769131538_9erk.jpg",
-      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
-      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg",
-      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.jpg"
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp",
+      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.webp",
+      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.webp"
     ],
     "altText": "Gold stainless steel pearl body harness chain for festival wear and beach styling",
     "dateAdded": "2026-06-12T15:00:27-04:00"
@@ -4313,12 +4313,12 @@
       "https://i.etsystatic.com/55122258/r/il/3ea628/7926672539/il_fullxfull.7926672539_pfui.jpg",
       "https://i.etsystatic.com/55122258/r/il/d2e12b/7878724206/il_fullxfull.7878724206_pp90.jpg",
       "https://i.etsystatic.com/55122258/r/il/cbd1a6/7803902507/il_fullxfull.7803902507_7i39.jpg",
-      "/images/products/681d8d28-5625-4acd-990a-3d7b9349ff9b.png",
-      "/images/products/d128ab2a-d0c2-4c29-98c3-8fcc437164c7.png"
+      "/images/products/681d8d28-5625-4acd-990a-3d7b9349ff9b.webp",
+      "/images/products/d128ab2a-d0c2-4c29-98c3-8fcc437164c7.webp"
     ],
     "variantHeroes": {
       "Gold Tone": "https://i.etsystatic.com/55122258/r/il/a5abfc/7878575158/il_fullxfull.7878575158_abnv.jpg",
-      "Silver Tone": "/images/products/681d8d28-5625-4acd-990a-3d7b9349ff9b.png"
+      "Silver Tone": "/images/products/681d8d28-5625-4acd-990a-3d7b9349ff9b.webp"
     },
     "dateAdded": "2026-06-12T15:00:27-04:00"
   },
@@ -4397,7 +4397,7 @@
       "https://i.etsystatic.com/55122258/r/il/8cb85b/7867608707/il_fullxfull.7867608707_d0k5.jpg",
       "https://i.etsystatic.com/55122258/r/il/979cd6/7808760694/il_fullxfull.7808760694_936o.jpg",
       "https://i.etsystatic.com/55122258/r/il/698621/7867784241/il_fullxfull.7867784241_oh2z.jpg",
-      "/images/products/IMG_9749.jpeg",
+      "/images/products/IMG_9749.webp",
       "https://i.etsystatic.com/55122258/r/il/d99681/7819703812/il_fullxfull.7819703812_d194.jpg",
       "https://i.etsystatic.com/55122258/r/il/d204ac/7867554645/il_fullxfull.7867554645_gcbi.jpg",
       "https://i.etsystatic.com/55122258/r/il/704e34/7867778489/il_fullxfull.7867778489_hpqz.jpg"
@@ -4456,10 +4456,10 @@
       "https://i.etsystatic.com/55122258/r/il/3552b6/7962950456/il_fullxfull.7962950456_hfid.jpg",
       "https://i.etsystatic.com/55122258/r/il/f9e117/8011001525/il_fullxfull.8011001525_pj8i.jpg",
       "https://i.etsystatic.com/55122258/r/il/4f89b1/7763623772/il_fullxfull.7763623772_eskh.jpg",
-      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp",
       "https://i.etsystatic.com/55122258/r/il/63cc1d/8010906213/il_fullxfull.8010906213_3hkc.jpg",
-      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.jpg",
-      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg"
+      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.webp",
+      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.webp"
     ],
     "variantGroups": [
       {
@@ -4588,15 +4588,15 @@
       "https://i.etsystatic.com/55122258/r/il/32bcb7/7995316377/il_fullxfull.7995316377_7kk0.jpg",
       "https://i.etsystatic.com/55122258/r/il/32f1b2/7947544000/il_fullxfull.7947544000_6fva.jpg",
       "https://i.etsystatic.com/55122258/r/il/96692e/7883966909/il_fullxfull.7883966909_m1l9.jpg",
-      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp",
       "https://i.etsystatic.com/55122258/r/il/ebe5bc/7947619574/il_fullxfull.7947619574_olgy.jpg",
       "https://i.etsystatic.com/55122258/r/il/e998ff/7756532898/il_fullxfull.7756532898_248j.jpg",
       "https://i.etsystatic.com/55122258/r/il/671d65/7883984639/il_fullxfull.7883984639_iztj.jpg",
       "https://i.etsystatic.com/55122258/r/il/9e92eb/7947542360/il_fullxfull.7947542360_cajk.jpg",
       "https://i.etsystatic.com/55122258/r/il/26594f/7947542946/il_fullxfull.7947542946_byee.jpg",
       "https://i.etsystatic.com/55122258/r/il/b78a5c/7947544278/il_fullxfull.7947544278_m5rk.jpg",
-      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.jpg",
-      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg"
+      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.webp",
+      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.webp"
     ],
     "variantGroups": [
       {
@@ -4682,9 +4682,9 @@
       "https://i.etsystatic.com/55122258/r/il/233825/7991458613/il_fullxfull.7991458613_khzo.jpg",
       "https://i.etsystatic.com/55122258/r/il/de28b4/7991451543/il_fullxfull.7991451543_tjce.jpg",
       "https://i.etsystatic.com/55122258/r/il/b0372f/7991451809/il_fullxfull.7991451809_2gd6.jpg",
-      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.jpg",
-      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg",
-      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png"
+      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.webp",
+      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.webp",
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp"
     ],
     "variantGroups": [
       {
@@ -4770,8 +4770,8 @@
       "https://i.etsystatic.com/55122258/r/il/aa40a7/7931836542/il_fullxfull.7931836542_osp8.jpg",
       "https://i.etsystatic.com/55122258/r/il/5db0f6/7979793591/il_fullxfull.7979793591_nxdr.jpg",
       "https://i.etsystatic.com/55122258/r/il/1f73d7/7778067055/il_fullxfull.7778067055_hplq.jpg",
-      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
-      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg"
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp",
+      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.webp"
     ],
     "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/b9473766e8a1a16cdbb12b036d886365/downloads/default.mp4",
     "altText": "Gold-tone stainless steel pearl lariat back chain necklace for elegant bridal jewelry and special occasion wear",
@@ -4825,8 +4825,8 @@
       "https://i.etsystatic.com/55122258/r/il/c54d54/7807712879/il_fullxfull.7807712879_fg0v.jpg",
       "https://i.etsystatic.com/55122258/r/il/a4db4a/7926273142/il_fullxfull.7926273142_rpob.jpg",
       "https://i.etsystatic.com/55122258/r/il/0b7bbb/7807708103/il_fullxfull.7807708103_d3u1.jpg",
-      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
-      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg"
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp",
+      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.webp"
     ],
     "variantGroups": [
       {
@@ -4924,7 +4924,7 @@
       "https://i.etsystatic.com/55122258/r/il/9bb31a/7787172961/il_fullxfull.7787172961_487s.jpg",
       "https://i.etsystatic.com/55122258/r/il/b22b9f/7976800048/il_fullxfull.7976800048_esh6.jpg",
       "https://i.etsystatic.com/55122258/r/il/d76b2b/7779997014/il_fullxfull.7779997014_46jf.jpg",
-      "/images/products/9a0c82e4-a01e-47e0-a2b1-eb146080f383-2.jpg"
+      "/images/products/9a0c82e4-a01e-47e0-a2b1-eb146080f383-2.webp"
     ],
     "variantHeroes": {
       "Gold Tone": "https://i.etsystatic.com/55122258/r/il/5c4932/7780124258/il_fullxfull.7780124258_scos.jpg",
@@ -4974,11 +4974,11 @@
       "https://i.etsystatic.com/55122258/r/il/717acf/7968333275/il_fullxfull.7968333275_3yo0.jpg",
       "https://i.etsystatic.com/55122258/r/il/cd6f4a/7920407798/il_fullxfull.7920407798_3mtj.jpg",
       "https://i.etsystatic.com/55122258/r/il/44f142/7920414208/il_fullxfull.7920414208_ou47.jpg",
-      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp",
       "https://i.etsystatic.com/55122258/r/il/ad75f0/7968377977/il_fullxfull.7968377977_8eig.jpg",
       "https://i.etsystatic.com/55122258/r/il/136ed8/7968330537/il_fullxfull.7968330537_dy07.jpg",
       "https://i.etsystatic.com/55122258/r/il/26282e/7734979557/il_fullxfull.7734979557_95jd.jpg",
-      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg"
+      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.webp"
     ],
     "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/4ba463a5d29c6d98a85d24efea7cb743/downloads/default.mp4",
     "altText": "Delicate gold-tone stainless steel pearl glasses chain for eyeglasses, elegant eyewear accessory with lustrous pearl accents",
@@ -5028,14 +5028,14 @@
       "https://i.etsystatic.com/55122258/r/il/cab98f/7964453381/il_fullxfull.7964453381_9ucg.jpg",
       "https://i.etsystatic.com/55122258/r/il/356032/7964389805/il_fullxfull.7964389805_a7d3.jpg",
       "https://i.etsystatic.com/55122258/r/il/79b01e/7964441161/il_fullxfull.7964441161_om90.jpg",
-      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
-      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.jpg",
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp",
+      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.webp",
       "https://i.etsystatic.com/55122258/r/il/51593e/7916759762/il_fullxfull.7916759762_snb9.jpg",
       "https://i.etsystatic.com/55122258/r/il/9652eb/7964665869/il_fullxfull.7964665869_jkcm.jpg",
       "https://i.etsystatic.com/55122258/r/il/7a8599/7916711658/il_fullxfull.7916711658_ezo3.jpg",
       "https://i.etsystatic.com/55122258/r/il/153b29/7794757793/il_fullxfull.7794757793_f5wn.jpg",
       "https://i.etsystatic.com/55122258/r/il/99edab/7794757877/il_fullxfull.7794757877_qxts.jpg",
-      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg"
+      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.webp"
     ],
     "variantGroups": [
       {
@@ -5096,8 +5096,8 @@
       "https://i.etsystatic.com/55122258/r/il/7bd1c4/7912921376/il_fullxfull.7912921376_e0os.jpg",
       "https://i.etsystatic.com/55122258/r/il/5c619f/7960797121/il_fullxfull.7960797121_ecyh.jpg",
       "https://i.etsystatic.com/55122258/r/il/2dfa84/7912764326/il_fullxfull.7912764326_nszz.jpg",
-      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg",
-      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png"
+      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.webp",
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp"
     ],
     "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/7722a03024f3f2b3142b9ffbca5bf9e4/downloads/default.mp4",
     "altText": "Gold-tone stainless steel beaded glasses chain with decorative boho beads for eyewear",
@@ -5147,9 +5147,9 @@
       "https://i.etsystatic.com/55122258/r/il/c194c8/7957241163/il_fullxfull.7957241163_jpka.jpg",
       "https://i.etsystatic.com/55122258/r/il/eab473/7957001171/il_fullxfull.7957001171_rnhg.jpg",
       "https://i.etsystatic.com/55122258/r/il/26282e/7734979557/il_fullxfull.7734979557_95jd.jpg",
-      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.jpg",
-      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
-      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg"
+      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.webp",
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp",
+      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.webp"
     ],
     "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/121cc58cf49e7ed9a31ffeca8596e7c0/downloads/default.mp4",
     "altText": "Gold-tone stainless steel boho beaded eyeglasses chain with mixed beads for everyday eyewear",
@@ -5342,8 +5342,8 @@
       "https://i.etsystatic.com/55122258/r/il/5c671e/7820732007/il_fullxfull.7820732007_tn8h.jpg",
       "https://i.etsystatic.com/55122258/r/il/8f1422/7772793438/il_fullxfull.7772793438_o0s7.jpg",
       "https://i.etsystatic.com/55122258/r/il/856c38/7820732077/il_fullxfull.7820732077_1nr0.jpg",
-      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
-      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg"
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp",
+      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.webp"
     ],
     "variantGroups": [
       {
@@ -5357,7 +5357,7 @@
     ],
     "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/bb2249f21c3cf9d5de47efd11ee26201/downloads/default.mp4",
     "altText": "Delicate layered silver belly chain in stainless steel, minimalist waist jewelry for body styling",
-    "sizeGuideImage": "/images/products/il_fullxfull.8090630842_9i25.jpeg",
+    "sizeGuideImage": "/images/products/il_fullxfull.8090630842_9i25.webp",
     "dateAdded": "2026-06-12T15:00:27-04:00"
   },
   {
@@ -5467,7 +5467,7 @@
       "Silver Tone"
     ],
     "images": [
-      "/images/products/6a2d67bf-5008-41d9-982e-25bf2b68c444.png"
+      "/images/products/6a2d67bf-5008-41d9-982e-25bf2b68c444.webp"
     ],
     "variantVideos": {
       "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/c885a78de2ff06546f0e804111efaa80/downloads/default.mp4",
@@ -5475,18 +5475,18 @@
     },
     "altText": "Gold tone stainless steel belly chain for layered waist jewelry and bikini styling",
     "gallery": [
-      "/images/products/6a2d67bf-5008-41d9-982e-25bf2b68c444.png",
+      "/images/products/6a2d67bf-5008-41d9-982e-25bf2b68c444.webp",
       "https://i.etsystatic.com/55122258/r/il/c3abc7/7750208352/il_fullxfull.7750208352_j22z.jpg",
       "https://i.etsystatic.com/55122258/r/il/bbf883/7750208394/il_fullxfull.7750208394_5km6.jpg",
       "https://i.etsystatic.com/55122258/r/il/d00793/7746874302/il_fullxfull.7746874302_831y.jpg",
       "https://i.etsystatic.com/55122258/r/il/029399/7798159413/il_fullxfull.7798159413_38c2.jpg",
       "https://i.etsystatic.com/55122258/r/il/60582a/7798159381/il_fullxfull.7798159381_8ayl.jpg",
       "https://i.etsystatic.com/55122258/r/il/153b29/7794757793/il_fullxfull.7794757793_f5wn.jpg",
-      "/images/products/8a35ecec-5a49-4ea7-8f8b-609ac639139b.png"
+      "/images/products/8a35ecec-5a49-4ea7-8f8b-609ac639139b.webp"
     ],
     "variantHeroes": {
-      "Gold Tone": "/images/products/6a2d67bf-5008-41d9-982e-25bf2b68c444.png",
-      "Silver Tone": "/images/products/8a35ecec-5a49-4ea7-8f8b-609ac639139b.png"
+      "Gold Tone": "/images/products/6a2d67bf-5008-41d9-982e-25bf2b68c444.webp",
+      "Silver Tone": "/images/products/8a35ecec-5a49-4ea7-8f8b-609ac639139b.webp"
     },
     "dateAdded": "2026-06-12T15:00:27-04:00"
   },
@@ -5617,7 +5617,7 @@
       "Silver Tone"
     ],
     "images": [
-      "/images/products/2293c415-ee9f-49eb-acd6-066607bd28ff.png"
+      "/images/products/2293c415-ee9f-49eb-acd6-066607bd28ff.webp"
     ],
     "variantGroups": [
       {
@@ -5635,20 +5635,20 @@
     },
     "altText": "Pearl bridal back chain in gold tone stainless steel, romantic back body jewelry for wedding day",
     "gallery": [
-      "/images/products/2293c415-ee9f-49eb-acd6-066607bd28ff.png",
+      "/images/products/2293c415-ee9f-49eb-acd6-066607bd28ff.webp",
       "https://i.etsystatic.com/55122258/r/il/55bd28/7789532126/il_fullxfull.7789532126_93rk.jpg",
       "https://i.etsystatic.com/55122258/r/il/5df657/7787416620/il_fullxfull.7787416620_sqt5.jpg",
       "https://i.etsystatic.com/55122258/r/il/e5831c/7835527797/il_fullxfull.7835527797_hlrk.jpg",
-      "/images/products/34c9ec09-d27b-4601-85f6-faa1986d47ae.png",
-      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf-copy.jpeg",
-      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
-      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.jpg"
+      "/images/products/34c9ec09-d27b-4601-85f6-faa1986d47ae.webp",
+      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf-copy.webp",
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp",
+      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.webp"
     ],
     "variantHeroes": {
       "Gold Tone": "https://i.etsystatic.com/55122258/r/il/341887/7835484089/il_fullxfull.7835484089_5bzk.jpg",
-      "Silver Tone": "/images/products/34c9ec09-d27b-4601-85f6-faa1986d47ae.png"
+      "Silver Tone": "/images/products/34c9ec09-d27b-4601-85f6-faa1986d47ae.webp"
     },
-    "sizeGuideImage": "/images/products/e7db1006-0b41-4d4d-a4ed-d250c518df35.png",
+    "sizeGuideImage": "/images/products/e7db1006-0b41-4d4d-a4ed-d250c518df35.webp",
     "dateAdded": "2026-06-12T15:00:27-04:00"
   },
   {
@@ -5696,28 +5696,28 @@
       "Silver Tone"
     ],
     "images": [
-      "/images/products/0c82c788-c58b-4dc8-b448-f63750bc15e6.png"
+      "/images/products/0c82c788-c58b-4dc8-b448-f63750bc15e6.webp"
     ],
     "altText": "Delicate gold tone stainless steel bridal hair vine chain for wedding updos and loose waves",
     "gallery": [
-      "/images/products/0c82c788-c58b-4dc8-b448-f63750bc15e6.png",
-      "/images/products/b3deb32a-fae4-4005-8751-d36d3e2aec0f.png",
-      "/images/products/IMG_2533-2.jpeg",
-      "/images/products/f227eb4c-343a-43ea-89ec-3d9f6eaed86a.png",
+      "/images/products/0c82c788-c58b-4dc8-b448-f63750bc15e6.webp",
+      "/images/products/b3deb32a-fae4-4005-8751-d36d3e2aec0f.webp",
+      "/images/products/IMG_2533-2.webp",
+      "/images/products/f227eb4c-343a-43ea-89ec-3d9f6eaed86a.webp",
       "https://i.etsystatic.com/55122258/r/il/26282e/7734979557/il_fullxfull.7734979557_95jd.jpg",
-      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.jpg",
-      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf-copy.jpeg",
-      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png"
+      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.webp",
+      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf-copy.webp",
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp"
     ],
     "variantHeroes": {
-      "Gold Tone": "/images/products/0c82c788-c58b-4dc8-b448-f63750bc15e6.png",
-      "Silver Tone": "/images/products/b3deb32a-fae4-4005-8751-d36d3e2aec0f.png"
+      "Gold Tone": "/images/products/0c82c788-c58b-4dc8-b448-f63750bc15e6.webp",
+      "Silver Tone": "/images/products/b3deb32a-fae4-4005-8751-d36d3e2aec0f.webp"
     },
     "variantVideos": {
       "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/6cc3ebaf9e58d8f218cde6d699724327/downloads/default.mp4",
       "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/6cc3ebaf9e58d8f218cde6d699724327/downloads/default.mp4"
     },
-    "sizeGuideImage": "/images/products/esty-thumnails-new--25-.png",
+    "sizeGuideImage": "/images/products/esty-thumnails-new--25-.webp",
     "dateAdded": "2026-06-12T15:00:27-04:00"
   },
   {
@@ -5779,7 +5779,7 @@
     "gallery": [
       "https://i.etsystatic.com/55122258/r/il/621c75/7843366296/il_fullxfull.7843366296_lta6.jpg",
       "https://i.etsystatic.com/55122258/r/il/91c9b6/7891308791/il_fullxfull.7891308791_h2n0.jpg",
-      "/images/products/5e5c85be-a9fa-4d0b-8d77-f88ad40d1d3c.png",
+      "/images/products/5e5c85be-a9fa-4d0b-8d77-f88ad40d1d3c.webp",
       "https://i.etsystatic.com/55122258/r/il/26282e/7734979557/il_fullxfull.7734979557_95jd.jpg",
       "https://i.etsystatic.com/55122258/r/il/bd67bc/7891314561/il_fullxfull.7891314561_n9x2.jpg"
     ],
@@ -5909,9 +5909,9 @@
       "https://i.etsystatic.com/55122258/r/il/0df873/7772615942/il_fullxfull.7772615942_pva0.jpg",
       "https://i.etsystatic.com/55122258/r/il/316511/7772715982/il_fullxfull.7772715982_1mgj.jpg",
       "https://i.etsystatic.com/55122258/r/il/43d38b/7772614736/il_fullxfull.7772614736_nze8.jpg",
-      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp",
       "https://i.etsystatic.com/55122258/r/il/3b2757/7820649577/il_fullxfull.7820649577_p46g.jpg",
-      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg"
+      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.webp"
     ],
     "variantGroups": [
       {
@@ -5925,7 +5925,7 @@
     ],
     "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/0b78741a901616f76cee775175bfebe9/downloads/default.mp4",
     "altText": "Minimalist silver-tone stainless steel belly chain for beach wear, water-resistant waist chain adjustable fit",
-    "sizeGuideImage": "/images/products/il_fullxfull.8090630842_9i25.jpeg",
+    "sizeGuideImage": "/images/products/il_fullxfull.8090630842_9i25.webp",
     "dateAdded": "2026-06-12T15:00:27-04:00"
   },
   {
@@ -5977,9 +5977,9 @@
       "https://i.etsystatic.com/55122258/r/il/104e3e/7756948671/il_fullxfull.7756948671_j1ve.jpg",
       "https://i.etsystatic.com/55122258/r/il/cb1729/7756977863/il_fullxfull.7756977863_jwuo.jpg",
       "https://i.etsystatic.com/55122258/r/il/6cbcfb/7699214094/il_fullxfull.7699214094_mjtq.jpg",
-      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
-      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.jpg",
-      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg"
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp",
+      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.webp",
+      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.webp"
     ],
     "variantGroups": [
       {
@@ -6050,28 +6050,28 @@
       "Silver Tone"
     ],
     "images": [
-      "/images/products/328a2b3d-1c9b-4226-98a0-2f42bca1e90e.png"
+      "/images/products/328a2b3d-1c9b-4226-98a0-2f42bca1e90e.webp"
     ],
     "altText": "Delicate gold tone stainless steel hand chain draping from wrist to finger for elegant hand jewelry styling",
     "gallery": [
-      "/images/products/328a2b3d-1c9b-4226-98a0-2f42bca1e90e.png",
-      "/images/products/dbedd797-f0c3-4fb9-818d-e7291be2809d.jpeg",
-      "/images/products/97e6f7a5-080f-4f41-ab59-ed0b50fc7e2c.jpeg",
-      "/images/products/IMG_2551-2.jpeg",
+      "/images/products/328a2b3d-1c9b-4226-98a0-2f42bca1e90e.webp",
+      "/images/products/dbedd797-f0c3-4fb9-818d-e7291be2809d.webp",
+      "/images/products/97e6f7a5-080f-4f41-ab59-ed0b50fc7e2c.webp",
+      "/images/products/IMG_2551-2.webp",
       "https://i.etsystatic.com/55122258/r/il/31071c/7978948578/il_fullxfull.7978948578_4cnz.jpg",
       "https://i.etsystatic.com/55122258/r/il/26282e/7734979557/il_fullxfull.7734979557_95jd.jpg",
-      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf-copy.jpeg",
-      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png"
+      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf-copy.webp",
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp"
     ],
     "variantHeroes": {
-      "Gold Tone": "/images/products/97e6f7a5-080f-4f41-ab59-ed0b50fc7e2c.jpeg",
-      "Silver Tone": "/images/products/328a2b3d-1c9b-4226-98a0-2f42bca1e90e.png"
+      "Gold Tone": "/images/products/97e6f7a5-080f-4f41-ab59-ed0b50fc7e2c.webp",
+      "Silver Tone": "/images/products/328a2b3d-1c9b-4226-98a0-2f42bca1e90e.webp"
     },
     "variantVideos": {
       "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/0c7ef49c91f64384dc980afcb755cd36/downloads/default.mp4",
       "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/0c7ef49c91f64384dc980afcb755cd36/downloads/default.mp4"
     },
-    "sizeGuideImage": "/images/products/a22af6e6-942a-4263-aa3f-e8072ea80396-copy.png",
+    "sizeGuideImage": "/images/products/a22af6e6-942a-4263-aa3f-e8072ea80396-copy.webp",
     "variantGroups": [
       {
         "label": "Ring Size",
@@ -6606,9 +6606,9 @@
     "featured": false,
     "active": true,
     "images": [
-      "/images/products/f3d2e112-06e4-435a-a2ee-a4f3c70487ae.jpeg",
-      "/images/products/1d05e8b5-b6d8-4c3e-804b-073162423a2b.png",
-      "/images/products/esty-thumnails-new--22--copy.png",
+      "/images/products/f3d2e112-06e4-435a-a2ee-a4f3c70487ae.webp",
+      "/images/products/1d05e8b5-b6d8-4c3e-804b-073162423a2b.webp",
+      "/images/products/esty-thumnails-new--22--copy.webp",
       "https://i.etsystatic.com/55122258/r/il/1878f7/7765732386/il_fullxfull.7765732386_77p7.jpg",
       "https://i.etsystatic.com/55122258/r/il/4813fe/7813678257/il_fullxfull.7813678257_7atp.jpg"
     ],
@@ -6626,7 +6626,7 @@
     ],
     "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/dd8560812f8f60d525d90c037b1f3a67/downloads/default.mp4",
     "altText": "Delicate gold stainless steel butterfly ankle bracelet, waterproof summer beach anklet with charm detail",
-    "sizeGuideImage": "/images/products/esty-thumnails-new--19-.png",
+    "sizeGuideImage": "/images/products/esty-thumnails-new--19-.webp",
     "dateAdded": "2026-06-12T15:00:27-04:00"
   },
   {
@@ -6676,14 +6676,14 @@
     "images": [
       "https://i.etsystatic.com/55122258/r/il/eabb7d/8050343405/il_fullxfull.8050343405_lv0f.jpg",
       "https://i.etsystatic.com/55122258/r/il/b0b278/8002435152/il_fullxfull.8002435152_pewi.jpg",
-      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp",
       "https://i.etsystatic.com/55122258/r/il/0a48b1/8002436328/il_fullxfull.8002436328_jde7.jpg",
       "https://i.etsystatic.com/55122258/r/il/d849dd/7807040209/il_fullxfull.7807040209_88k9.jpg",
       "https://i.etsystatic.com/55122258/r/il/ca5f71/7759089584/il_fullxfull.7759089584_2j0k.jpg",
       "https://i.etsystatic.com/55122258/r/il/be4849/7757121780/il_fullxfull.7757121780_4iz9.jpg",
       "https://i.etsystatic.com/55122258/r/il/7d203e/7759169030/il_fullxfull.7759169030_aizv.jpg",
       "https://i.etsystatic.com/55122258/r/il/6f32de/7805260215/il_fullxfull.7805260215_hpf4.jpg",
-      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg"
+      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.webp"
     ],
     "variantGroups": [
       {
@@ -6760,12 +6760,12 @@
       "https://i.etsystatic.com/55122258/r/il/7adf37/7805069363/il_fullxfull.7805069363_tj3r.jpg",
       "https://i.etsystatic.com/55122258/r/il/2001b9/7698999546/il_fullxfull.7698999546_rxit.jpg",
       "https://i.etsystatic.com/55122258/r/il/4ba5d1/7805068851/il_fullxfull.7805068851_9t6p.jpg",
-      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp",
       "https://i.etsystatic.com/55122258/r/il/6f32de/7805260215/il_fullxfull.7805260215_hpf4.jpg",
       "https://i.etsystatic.com/55122258/r/il/28c0a6/7757181622/il_fullxfull.7757181622_5sue.jpg",
       "https://i.etsystatic.com/55122258/r/il/728a96/7736687519/il_fullxfull.7736687519_os32.jpg",
       "https://i.etsystatic.com/55122258/r/il/be4849/7757121780/il_fullxfull.7757121780_4iz9.jpg",
-      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg"
+      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.webp"
     ],
     "variantGroups": [
       {
@@ -6789,7 +6789,7 @@
     ],
     "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/2095944bcb92da8642a2b58a0451f37d/downloads/default.mp4",
     "altText": "Butterfly layered belly chain in gold stainless steel, adjustable waist accessory for body jewelry enthusiasts.",
-    "sizeGuideImage": "/images/products/il_fullxfull.8090630842_9i25.jpeg",
+    "sizeGuideImage": "/images/products/il_fullxfull.8090630842_9i25.webp",
     "dateAdded": "2026-06-12T15:00:27-04:00"
   },
   {
@@ -6912,17 +6912,17 @@
     "featured": false,
     "active": true,
     "images": [
-      "/images/products/IMG_8906.jpeg",
+      "/images/products/IMG_8906.webp",
       "https://i.etsystatic.com/55122258/r/il/89f510/7787455583/il_fullxfull.7787455583_kuve.jpg",
-      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.jpg",
-      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
+      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.webp",
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp",
       "https://i.etsystatic.com/55122258/r/il/ea68a4/7750355964/il_fullxfull.7750355964_25s6.jpg",
       "https://i.etsystatic.com/55122258/r/il/33e888/7787368067/il_fullxfull.7787368067_8zvi.jpg",
       "https://i.etsystatic.com/55122258/r/il/d31d91/7798307897/il_fullxfull.7798307897_d9b4.jpg",
       "https://i.etsystatic.com/55122258/r/il/372c16/7742861574/il_fullxfull.7742861574_dgsv.jpg",
       "https://i.etsystatic.com/55122258/r/il/9bb31a/7787172961/il_fullxfull.7787172961_487s.jpg",
       "https://i.etsystatic.com/55122258/r/il/1e7c1a/7787375199/il_fullxfull.7787375199_hxs5.jpg",
-      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg"
+      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.webp"
     ],
     "variantGroups": [
       {
@@ -6983,7 +6983,7 @@
       "Silver Tone"
     ],
     "images": [
-      "/images/products/esty-thumnails-new.png"
+      "/images/products/esty-thumnails-new.webp"
     ],
     "variantVideos": {
       "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/8edda5c2b3e8859b34ced794fd2a0635/downloads/default.mp4",
@@ -6991,7 +6991,7 @@
     },
     "altText": "Gold tone stainless steel beach belly chain, minimalist waterproof waist jewelry for summer",
     "gallery": [
-      "/images/products/esty-thumnails-new.png",
+      "/images/products/esty-thumnails-new.webp",
       "https://i.etsystatic.com/55122258/r/il/24618d/7794670199/il_fullxfull.7794670199_76fp.jpg",
       "https://i.etsystatic.com/55122258/r/il/def7cf/7746794110/il_fullxfull.7746794110_4x89.jpg",
       "https://i.etsystatic.com/55122258/r/il/e55b57/7794753467/il_fullxfull.7794753467_mt3a.jpg",
@@ -7000,7 +7000,7 @@
       "https://i.etsystatic.com/55122258/r/il/66c0ca/7746796996/il_fullxfull.7746796996_inug.jpg"
     ],
     "variantHeroes": {
-      "Gold Tone": "/images/products/esty-thumnails-new.png",
+      "Gold Tone": "/images/products/esty-thumnails-new.webp",
       "Silver Tone": "https://i.etsystatic.com/55122258/r/il/927a91/7746778448/il_fullxfull.7746778448_39i8.jpg"
     },
     "dateAdded": "2026-06-12T15:00:27-04:00"
@@ -7057,15 +7057,15 @@
       "https://i.etsystatic.com/55122258/r/il/ae446a/8060401053/il_fullxfull.8060401053_15gk.jpg",
       "https://i.etsystatic.com/55122258/r/il/d363a2/8060489691/il_fullxfull.8060489691_74zq.jpg",
       "https://i.etsystatic.com/55122258/r/il/22c904/7874038194/il_fullxfull.7874038194_iu3b.jpg",
-      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp",
       "https://i.etsystatic.com/55122258/r/il/cc8e98/7742858740/il_fullxfull.7742858740_59xj.jpg",
       "https://i.etsystatic.com/55122258/r/il/6f7a29/8012508612/il_fullxfull.8012508612_4ucd.jpg",
       "https://i.etsystatic.com/55122258/r/il/54e6ae/7790819453/il_fullxfull.7790819453_cxbl.jpg",
       "https://i.etsystatic.com/55122258/r/il/c4f6ca/7790859607/il_fullxfull.7790859607_ljlp.jpg",
       "https://i.etsystatic.com/55122258/r/il/738458/7753862542/il_fullxfull.7753862542_ix8i.jpg",
       "https://i.etsystatic.com/55122258/r/il/1e7c1a/7787375199/il_fullxfull.7787375199_hxs5.jpg",
-      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.jpg",
-      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg"
+      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.webp",
+      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.webp"
     ],
     "variantGroups": [
       {
@@ -7264,13 +7264,13 @@
     "images": [
       "https://i.etsystatic.com/55122258/r/il/e0607c/8094646617/il_fullxfull.8094646617_bgdy.jpg",
       "https://i.etsystatic.com/55122258/r/il/2017a9/7764225047/il_fullxfull.7764225047_acqq.jpg",
-      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp",
       "https://i.etsystatic.com/55122258/r/il/f31f71/7716319856/il_fullxfull.7716319856_7zke.jpg",
       "https://i.etsystatic.com/55122258/r/il/773296/7764224949/il_fullxfull.7764224949_pkt0.jpg",
       "https://i.etsystatic.com/55122258/r/il/5799b2/7764252877/il_fullxfull.7764252877_1yj5.jpg",
       "https://i.etsystatic.com/55122258/r/il/efeaca/7764225059/il_fullxfull.7764225059_4pgs.jpg",
       "https://i.etsystatic.com/55122258/r/il/f70917/7764224955/il_fullxfull.7764224955_spcc.jpg",
-      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg"
+      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.webp"
     ],
     "variantGroups": [
       {
@@ -7301,7 +7301,7 @@
     ],
     "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/d8995bb3c3eb33065f2c1683bf7c75c8/downloads/default.mp4",
     "altText": "Gold-tone stainless steel zodiac snake belly chain with adjustable waist chain design for celestial body jewelry",
-    "sizeGuideImage": "/images/products/il_fullxfull.8090630842_9i25.jpeg",
+    "sizeGuideImage": "/images/products/il_fullxfull.8090630842_9i25.webp",
     "dateAdded": "2026-06-12T15:00:27-04:00"
   },
   {
@@ -7429,11 +7429,11 @@
     "featured": false,
     "active": true,
     "images": [
-      "/images/products/layered-turquoise-bracelet-3.png",
-      "/images/products/layered-turquoise-bracelet-2.png",
-      "/images/products/layered-turquoise-bracelet-5.png",
-      "/images/products/layered-turquoise-bracelet-4.jpg",
-      "/images/products/layered-turquoise-bracelet-1.jpg"
+      "/images/products/layered-turquoise-bracelet-3.webp",
+      "/images/products/layered-turquoise-bracelet-2.webp",
+      "/images/products/layered-turquoise-bracelet-5.webp",
+      "/images/products/layered-turquoise-bracelet-4.webp",
+      "/images/products/layered-turquoise-bracelet-1.webp"
     ],
     "variantGroups": [
       {
@@ -7492,7 +7492,7 @@
       }
     ],
     "images": [
-      "/images/products/birth-flower-charm-bracelet/e0e3896f-5197-4d94-974f-7b14ee305954.png"
+      "/images/products/birth-flower-charm-bracelet/e0e3896f-5197-4d94-974f-7b14ee305954.webp"
     ],
     "video": "/images/products/birth-flower-charm-bracelet/0618.mp4",
     "featured": false,
@@ -7538,26 +7538,26 @@
     ],
     "active": true,
     "infographicImages": [
-      "/images/products/birth-flower-charm-bracelet/035ca701-d84a-49fd-8b8d-196dd1903eb0.png",
-      "/images/products/birth-flower-charm-bracelet/f6314926-4454-4b6d-947b-0b5470742a2e.png"
+      "/images/products/birth-flower-charm-bracelet/035ca701-d84a-49fd-8b8d-196dd1903eb0.webp",
+      "/images/products/birth-flower-charm-bracelet/f6314926-4454-4b6d-947b-0b5470742a2e.webp"
     ],
     "altText": "Dainty stainless steel birth flower charm bracelet in gold tone, handcrafted tarnish-resistant jewelry for everyday wear",
     "gallery": [
-      "/images/products/birth-flower-charm-bracelet/e0e3896f-5197-4d94-974f-7b14ee305954.png",
-      "/images/products/birth-flower-charm-bracelet/25fe1c2f-6f88-4116-9922-23f730900978.png",
-      "/images/products/birth-flower-charm-bracelet/92022e6a-2968-4014-a577-94b76e8bdba8.png",
-      "/images/products/birth-flower-charm-bracelet/1f6f7c1d-1825-4cbe-93f8-4dd53e61cd63.png",
-      "/images/products/birth-flower-charm-bracelet/22f3e739-d337-4777-a775-58d9ad12ee1c.png",
-      "/images/products/birth-flower-charm-bracelet/035ca701-d84a-49fd-8b8d-196dd1903eb0.png",
-      "/images/products/birth-flower-charm-bracelet/f6314926-4454-4b6d-947b-0b5470742a2e.png",
-      "/images/products/birth-flower-charm-bracelet/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
-      "/images/products/birth-flower-charm-bracelet/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg",
-      "/images/products/birth-flower-charm-bracelet/4746a3fe-b2a1-4cef-86cc-181e6f1a189a.png",
-      "/images/products/birth-flower-charm-bracelet/0.jpeg"
+      "/images/products/birth-flower-charm-bracelet/e0e3896f-5197-4d94-974f-7b14ee305954.webp",
+      "/images/products/birth-flower-charm-bracelet/25fe1c2f-6f88-4116-9922-23f730900978.webp",
+      "/images/products/birth-flower-charm-bracelet/92022e6a-2968-4014-a577-94b76e8bdba8.webp",
+      "/images/products/birth-flower-charm-bracelet/1f6f7c1d-1825-4cbe-93f8-4dd53e61cd63.webp",
+      "/images/products/birth-flower-charm-bracelet/22f3e739-d337-4777-a775-58d9ad12ee1c.webp",
+      "/images/products/birth-flower-charm-bracelet/035ca701-d84a-49fd-8b8d-196dd1903eb0.webp",
+      "/images/products/birth-flower-charm-bracelet/f6314926-4454-4b6d-947b-0b5470742a2e.webp",
+      "/images/products/birth-flower-charm-bracelet/55110011-2bba-4572-8dcb-5f9d06f99c32.webp",
+      "/images/products/birth-flower-charm-bracelet/0acc7259-5314-4c79-a09d-8f0f7c724ecf.webp",
+      "/images/products/birth-flower-charm-bracelet/4746a3fe-b2a1-4cef-86cc-181e6f1a189a.webp",
+      "/images/products/birth-flower-charm-bracelet/0.webp"
     ],
     "variantHeroes": {
-      "Gold Tone": "/images/products/birth-flower-charm-bracelet/e0e3896f-5197-4d94-974f-7b14ee305954.png",
-      "Silver Tone": "/images/products/birth-flower-charm-bracelet/4746a3fe-b2a1-4cef-86cc-181e6f1a189a.png"
+      "Gold Tone": "/images/products/birth-flower-charm-bracelet/e0e3896f-5197-4d94-974f-7b14ee305954.webp",
+      "Silver Tone": "/images/products/birth-flower-charm-bracelet/4746a3fe-b2a1-4cef-86cc-181e6f1a189a.webp"
     },
     "dateAdded": "2026-06-18T17:14:08-04:00"
   },
@@ -7592,7 +7592,7 @@
       }
     ],
     "images": [
-      "/images/products/birth-flower-charm-necklace/69ca433e-f2e4-4fb1-924b-e1aecb5f4f70.jpeg"
+      "/images/products/birth-flower-charm-necklace/69ca433e-f2e4-4fb1-924b-e1aecb5f4f70.webp"
     ],
     "video": "/images/products/birth-flower-charm-necklace/0625.mp4",
     "featured": false,
@@ -7637,23 +7637,23 @@
     "active": true,
     "altText": "Delicate gold tone birth flower charm necklace in stainless steel, handcrafted dainty necklace for meaningful everyday wear",
     "gallery": [
-      "/images/products/birth-flower-charm-necklace/69ca433e-f2e4-4fb1-924b-e1aecb5f4f70.jpeg",
-      "/images/products/birth-flower-charm-necklace/1a219f4a-68c8-42d7-b46e-85c90a7f3f1b.jpeg",
-      "/images/products/birth-flower-charm-necklace/aad39965-f4f4-4ecc-b2cb-9de082ceb86f.png",
-      "/images/products/birth-flower-charm-necklace/2ba8ecb3-c756-42a5-9545-76bc67926144-copy.png",
-      "/images/products/birth-flower-charm-necklace/IMG_1908.jpeg",
-      "/images/products/birth-flower-charm-bracelet/035ca701-d84a-49fd-8b8d-196dd1903eb0.png",
-      "/images/products/birth-flower-charm-bracelet/f6314926-4454-4b6d-947b-0b5470742a2e.png",
-      "/images/products/birth-flower-charm-necklace/299dfc8c-83ef-472c-90fb-c24ce7f2290f.jpg",
-      "/images/products/birth-flower-charm-necklace/5184190f-9338-4b57-8214-774497883a64.png"
+      "/images/products/birth-flower-charm-necklace/69ca433e-f2e4-4fb1-924b-e1aecb5f4f70.webp",
+      "/images/products/birth-flower-charm-necklace/1a219f4a-68c8-42d7-b46e-85c90a7f3f1b.webp",
+      "/images/products/birth-flower-charm-necklace/aad39965-f4f4-4ecc-b2cb-9de082ceb86f.webp",
+      "/images/products/birth-flower-charm-necklace/2ba8ecb3-c756-42a5-9545-76bc67926144-copy.webp",
+      "/images/products/birth-flower-charm-necklace/IMG_1908.webp",
+      "/images/products/birth-flower-charm-bracelet/035ca701-d84a-49fd-8b8d-196dd1903eb0.webp",
+      "/images/products/birth-flower-charm-bracelet/f6314926-4454-4b6d-947b-0b5470742a2e.webp",
+      "/images/products/birth-flower-charm-necklace/299dfc8c-83ef-472c-90fb-c24ce7f2290f.webp",
+      "/images/products/birth-flower-charm-necklace/5184190f-9338-4b57-8214-774497883a64.webp"
     ],
     "variantHeroes": {
-      "Gold Tone": "/images/products/birth-flower-charm-necklace/1a219f4a-68c8-42d7-b46e-85c90a7f3f1b.jpeg",
-      "Silver Tone": "/images/products/birth-flower-charm-necklace/69ca433e-f2e4-4fb1-924b-e1aecb5f4f70.jpeg"
+      "Gold Tone": "/images/products/birth-flower-charm-necklace/1a219f4a-68c8-42d7-b46e-85c90a7f3f1b.webp",
+      "Silver Tone": "/images/products/birth-flower-charm-necklace/69ca433e-f2e4-4fb1-924b-e1aecb5f4f70.webp"
     },
     "infographicImages": [
-      "/images/products/birth-flower-charm-bracelet/035ca701-d84a-49fd-8b8d-196dd1903eb0.png",
-      "/images/products/birth-flower-charm-bracelet/f6314926-4454-4b6d-947b-0b5470742a2e.png"
+      "/images/products/birth-flower-charm-bracelet/035ca701-d84a-49fd-8b8d-196dd1903eb0.webp",
+      "/images/products/birth-flower-charm-bracelet/f6314926-4454-4b6d-947b-0b5470742a2e.webp"
     ],
     "dateAdded": "2026-06-25T18:38:01-04:00"
   },
@@ -7703,24 +7703,24 @@
       }
     ],
     "images": [
-      "/images/products/turquoise-beaded-choker/35dc6f27-f6c3-4913-b4bc-6b0554227fd2.jpeg"
+      "/images/products/turquoise-beaded-choker/35dc6f27-f6c3-4913-b4bc-6b0554227fd2.webp"
     ],
     "gallery": [
-      "/images/products/turquoise-beaded-choker/35dc6f27-f6c3-4913-b4bc-6b0554227fd2.jpeg",
-      "/images/products/turquoise-beaded-choker/5bf3f57a-726e-4859-8286-928bebf9108c.png",
-      "/images/products/turquoise-beaded-choker/390e92bb-46a4-4bb6-bba0-47cfaa9bd545.png",
-      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
-      "/images/products/turquoise-beaded-choker/401a7a63-c61a-4e09-82e9-7a6118e8bf21.jpeg",
-      "/images/products/turquoise-beaded-choker/50718202-68fc-4146-99c2-07e9e5844bdc.jpeg",
-      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg"
+      "/images/products/turquoise-beaded-choker/35dc6f27-f6c3-4913-b4bc-6b0554227fd2.webp",
+      "/images/products/turquoise-beaded-choker/5bf3f57a-726e-4859-8286-928bebf9108c.webp",
+      "/images/products/turquoise-beaded-choker/390e92bb-46a4-4bb6-bba0-47cfaa9bd545.webp",
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp",
+      "/images/products/turquoise-beaded-choker/401a7a63-c61a-4e09-82e9-7a6118e8bf21.webp",
+      "/images/products/turquoise-beaded-choker/50718202-68fc-4146-99c2-07e9e5844bdc.webp",
+      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.webp"
     ],
     "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/6192bcefad5e9fa87ae061d35a9b24ae/downloads/default.mp4",
     "infographicImages": [
-      "/images/products/turquoise-beaded-choker/038c4035-eb5d-4786-95f7-f431025e3970.png",
-      "/images/products/turquoise-beaded-choker/9720bcf5-6e80-417a-b3f1-72657037edf8-2.jpeg"
+      "/images/products/turquoise-beaded-choker/038c4035-eb5d-4786-95f7-f431025e3970.webp",
+      "/images/products/turquoise-beaded-choker/9720bcf5-6e80-417a-b3f1-72657037edf8-2.webp"
     ],
     "altText": "Turquoise enamel bead dainty choker necklace in stainless steel with gold mirror-link chain layering",
-    "sizeGuideImage": "/images/products/038c4035-eb5d-4786-95f7-f431025e3970.png",
+    "sizeGuideImage": "/images/products/038c4035-eb5d-4786-95f7-f431025e3970.webp",
     "dateAdded": "2026-07-06T21:34:22-04:00"
   },
   {
@@ -7777,23 +7777,23 @@
       "Silver Tone"
     ],
     "variantHeroes": {
-      "Gold Tone": "/images/products/layered-pearl-choker/eac8d15d-63ba-44d8-ae9e-1c2cd77b208c.png",
-      "Silver Tone": "/images/products/layered-pearl-choker/b095582a-ce2d-4d3e-a909-eb4fe4549e37.png"
+      "Gold Tone": "/images/products/layered-pearl-choker/eac8d15d-63ba-44d8-ae9e-1c2cd77b208c.webp",
+      "Silver Tone": "/images/products/layered-pearl-choker/b095582a-ce2d-4d3e-a909-eb4fe4549e37.webp"
     },
     "images": [
-      "/images/products/layered-pearl-choker/eac8d15d-63ba-44d8-ae9e-1c2cd77b208c.png"
+      "/images/products/layered-pearl-choker/eac8d15d-63ba-44d8-ae9e-1c2cd77b208c.webp"
     ],
     "gallery": [
-      "/images/products/layered-pearl-choker/eac8d15d-63ba-44d8-ae9e-1c2cd77b208c.png",
-      "/images/products/layered-pearl-choker/b095582a-ce2d-4d3e-a909-eb4fe4549e37.png",
-      "/images/products/layered-pearl-choker/2289a6f4-09e0-4fc8-91e2-0b96c373e028.png",
-      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.jpg",
-      "/images/products/layered-pearl-choker/0bf01f80-ecb6-4bf9-a575-e52bf3b4fc5a.png",
-      "/images/products/layered-pearl-choker/3c9e43df-4d94-4b3c-9094-fd4db87b0b42.png",
-      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg"
+      "/images/products/layered-pearl-choker/eac8d15d-63ba-44d8-ae9e-1c2cd77b208c.webp",
+      "/images/products/layered-pearl-choker/b095582a-ce2d-4d3e-a909-eb4fe4549e37.webp",
+      "/images/products/layered-pearl-choker/2289a6f4-09e0-4fc8-91e2-0b96c373e028.webp",
+      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.webp",
+      "/images/products/layered-pearl-choker/0bf01f80-ecb6-4bf9-a575-e52bf3b4fc5a.webp",
+      "/images/products/layered-pearl-choker/3c9e43df-4d94-4b3c-9094-fd4db87b0b42.webp",
+      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.webp"
     ],
     "infographicImages": [
-      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.jpg"
+      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.webp"
     ],
     "altText": "Dainty pearl bead choker necklace layered with a fine gold-tone or silver-tone cable chain in waterproof stainless steel",
     "fullDescription": "Two chains, already made for each other. One clasp, zero hassle.\n\nI paired a dainty pearl chain with a fine gold-tone cable chain resting right at the collarbone — pre-layered, so there's no fussing with two clasps, just clip it on and go. \n\nProduct Details\nMaterial: Gold-tone stainless steel chain (Silver-tone also available)\nPearls: Faux pearl beads (glass)\nDesign: Double-layer choker — pearl bead chain + fine cable chain\nChain length: 35 cm (13.8\") + 6 cm (2.4\") extender\nClosure: Lobster clasp\nWaterproof & Sweat-Proof: Yes — safe for water, sun, and everyday wear\n\nSize Guide\nAdjustable 35–41 cm (13.8\"–16.1\"), sits snug at the collarbone as a choker\n\nFit Note: Measure around the base of your neck where you'd like the choker to sit, and add 1–2 cm (0.4\"–0.8\") for comfortable movement.\n\nCustom Sizing: Need a specific measurement? Message me before ordering and I'll make it to your exact size at no extra cost.\n\nCare Instructions\nWipe gently with a soft cloth after each wear.\nStore in an airtight container when not in use.\n\nShipping: Dispatches within 1–2 business days.\n\nPlease note that as each piece is handcrafted, no two pieces are identical and slight variations may occur.\n\nThanks for looking! Feel free to message me if you have any questions.",
@@ -7801,7 +7801,7 @@
       "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/12118f8b1616454517a2dc789c7e3254/downloads/default.mp4",
       "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/12118f8b1616454517a2dc789c7e3254/downloads/default.mp4"
     },
-    "sizeGuideImage": "/images/products/36d05bef-12d8-44a8-9988-4676c96eae51.png",
+    "sizeGuideImage": "/images/products/36d05bef-12d8-44a8-9988-4676c96eae51.webp",
     "dateAdded": "2026-07-14T13:37:20-04:00"
   },
   {
@@ -7858,21 +7858,21 @@
       "Silver Tone"
     ],
     "variantHeroes": {
-      "Gold Tone": "/images/products/curated-layered-necklace-stack/94090ac1-gold-studio-hero.png",
-      "Silver Tone": "/images/products/curated-layered-necklace-stack/71de6369-silver-beach-ocean.png"
+      "Gold Tone": "/images/products/curated-layered-necklace-stack/94090ac1-gold-studio-hero.webp",
+      "Silver Tone": "/images/products/curated-layered-necklace-stack/71de6369-silver-beach-ocean.webp"
     },
     "images": [
-      "/images/products/curated-layered-necklace-stack/6e01da85-gold-beach-ocean.png"
+      "/images/products/curated-layered-necklace-stack/6e01da85-gold-beach-ocean.webp"
     ],
     "gallery": [
-      "/images/products/curated-layered-necklace-stack/6e01da85-gold-beach-ocean.png",
-      "/images/products/curated-layered-necklace-stack/94090ac1-gold-studio-hero.png",
-      "/images/products/curated-layered-necklace-stack/71de6369-silver-beach-ocean.png",
-      "/images/products/curated-layered-necklace-stack/4eac4c84-gold-studio-alt.png",
-      "/images/products/curated-layered-necklace-stack/75318b9a-gold-terracotta-wall-b.png",
-      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.jpg",
-      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
-      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf-copy.jpeg"
+      "/images/products/curated-layered-necklace-stack/6e01da85-gold-beach-ocean.webp",
+      "/images/products/curated-layered-necklace-stack/94090ac1-gold-studio-hero.webp",
+      "/images/products/curated-layered-necklace-stack/71de6369-silver-beach-ocean.webp",
+      "/images/products/curated-layered-necklace-stack/4eac4c84-gold-studio-alt.webp",
+      "/images/products/curated-layered-necklace-stack/75318b9a-gold-terracotta-wall-b.webp",
+      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.webp",
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp",
+      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf-copy.webp"
     ],
     "variantGroups": [
       {
@@ -7906,7 +7906,7 @@
       "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/2bbb1b931247991d63c503ef4b4d99b2/downloads/default.mp4",
       "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/2bbb1b931247991d63c503ef4b4d99b2/downloads/default.mp4"
     },
-    "sizeGuideImage": "/images/products/curated-layered-necklace-stack/d649a290-size-guide.png",
+    "sizeGuideImage": "/images/products/curated-layered-necklace-stack/d649a290-size-guide.webp",
     "dateAdded": "2026-07-15T10:28:52-04:00"
   },
   {
@@ -7946,15 +7946,15 @@
       }
     ],
     "images": [
-      "/images/products/pink-cross-charm-bracelet/72b7106a-7423-47b8-b131-427b12d83546.png"
+      "/images/products/pink-cross-charm-bracelet/72b7106a-7423-47b8-b131-427b12d83546.webp"
     ],
     "gallery": [
-      "/images/products/pink-cross-charm-bracelet/72b7106a-7423-47b8-b131-427b12d83546.png",
-      "/images/products/pink-cross-charm-bracelet/bc9e6a17-4222-4642-87a4-33d3bb1830e2.png",
-      "/images/products/pink-cross-charm-bracelet/93141b7c-c1b3-49c9-80be-c8d93a031d37.png",
-      "/images/products/pink-cross-charm-bracelet/c79b1023-33a0-4607-a357-ed311593fee0.png",
-      "/images/products/pink-cross-charm-bracelet/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg",
-      "/images/products/pink-cross-charm-bracelet/55110011-2bba-4572-8dcb-5f9d06f99c32.png"
+      "/images/products/pink-cross-charm-bracelet/72b7106a-7423-47b8-b131-427b12d83546.webp",
+      "/images/products/pink-cross-charm-bracelet/bc9e6a17-4222-4642-87a4-33d3bb1830e2.webp",
+      "/images/products/pink-cross-charm-bracelet/93141b7c-c1b3-49c9-80be-c8d93a031d37.webp",
+      "/images/products/pink-cross-charm-bracelet/c79b1023-33a0-4607-a357-ed311593fee0.webp",
+      "/images/products/pink-cross-charm-bracelet/0acc7259-5314-4c79-a09d-8f0f7c724ecf.webp",
+      "/images/products/pink-cross-charm-bracelet/55110011-2bba-4572-8dcb-5f9d06f99c32.webp"
     ],
     "video": "/images/products/pink-cross-charm-bracelet/0627.mp4",
     "altText": "Delicate gold stainless steel bracelet with pink cross charm, dainty faith jewelry for everyday wear",
@@ -8048,21 +8048,21 @@
       "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/a273033ef061fbe09c1f56485f82fd39/downloads/default.mp4"
     },
     "gallery": [
-      "/images/products/birth-flower-anklet/img-8.jpeg",
-      "/images/products/birth-flower-anklet/img-1.png",
-      "/images/products/birth-flower-anklet/img-2.png",
-      "/images/products/birth-flower-anklet/img-6.jpg",
-      "/images/products/birth-flower-anklet/img-4.png",
-      "/images/products/birth-flower-anklet/img-5.png",
-      "/images/products/birth-flower-anklet/img-7.jpeg"
+      "/images/products/birth-flower-anklet/img-8.webp",
+      "/images/products/birth-flower-anklet/img-1.webp",
+      "/images/products/birth-flower-anklet/img-2.webp",
+      "/images/products/birth-flower-anklet/img-6.webp",
+      "/images/products/birth-flower-anklet/img-4.webp",
+      "/images/products/birth-flower-anklet/img-5.webp",
+      "/images/products/birth-flower-anklet/img-7.webp"
     ],
     "images": [
-      "/images/products/birth-flower-anklet/img-8.jpeg"
+      "/images/products/birth-flower-anklet/img-8.webp"
     ],
-    "sizeGuideImage": "/images/products/esty-thumnails-new--19-.png",
+    "sizeGuideImage": "/images/products/esty-thumnails-new--19-.webp",
     "variantHeroes": {
-      "Gold Tone": "/images/products/birth-flower-anklet/img-8.jpeg",
-      "Silver Tone": "/images/products/birth-flower-anklet/img-1.png"
+      "Gold Tone": "/images/products/birth-flower-anklet/img-8.webp",
+      "Silver Tone": "/images/products/birth-flower-anklet/img-1.webp"
     },
     "altText": "Delicate birth flower gold tone stainless steel ankle bracelet for everyday wear and beach occasions",
     "dateAdded": "2026-07-04T11:43:21-04:00"
@@ -8139,9 +8139,9 @@
       "Stainless Steel"
     ],
     "variantHeroes": {
-      "Gold Tone": "/images/products/layered-arm-chain/img-gold.png",
-      "Silver Plated": "/images/products/layered-arm-chain/img-stainless.png",
-      "Stainless Steel": "/images/products/layered-arm-chain/img-silver.png"
+      "Gold Tone": "/images/products/layered-arm-chain/img-gold.webp",
+      "Silver Plated": "/images/products/layered-arm-chain/img-stainless.webp",
+      "Stainless Steel": "/images/products/layered-arm-chain/img-silver.webp"
     },
     "variantVideos": {
       "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/625af9cccd93e10d5d3ce87272a4a101/downloads/default.mp4",
@@ -8149,17 +8149,17 @@
       "Stainless Steel": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/625af9cccd93e10d5d3ce87272a4a101/downloads/default.mp4"
     },
     "gallery": [
-      "/images/products/layered-arm-chain/img-gold.png",
-      "/images/products/layered-arm-chain/img-stainless.png",
-      "/images/products/layered-arm-chain/img-silver.png",
-      "/images/products/layered-arm-chain/img-material.jpg",
-      "/images/products/layered-arm-chain/img-fit.png",
-      "/images/products/layered-arm-chain/img-shipping.jpeg"
+      "/images/products/layered-arm-chain/img-gold.webp",
+      "/images/products/layered-arm-chain/img-stainless.webp",
+      "/images/products/layered-arm-chain/img-silver.webp",
+      "/images/products/layered-arm-chain/img-material.webp",
+      "/images/products/layered-arm-chain/img-fit.webp",
+      "/images/products/layered-arm-chain/img-shipping.webp"
     ],
     "images": [
-      "/images/products/layered-arm-chain/img-gold.png"
+      "/images/products/layered-arm-chain/img-gold.webp"
     ],
-    "sizeGuideImage": "/images/products/4a34f7fe-cab7-4c40-a10f-cff8807d32cf.png",
+    "sizeGuideImage": "/images/products/4a34f7fe-cab7-4c40-a10f-cff8807d32cf.webp",
     "altText": "Gold tone layered arm chain in 316L stainless steel, perfect waterproof body jewelry for summer and beach wear",
     "dateAdded": "2026-07-05T12:49:58-04:00"
   },
@@ -8202,17 +8202,17 @@
       }
     ],
     "gallery": [
-      "/images/products/0c7f0749-c174-442e-9730-590ff7f09eb7.png",
-      "/images/products/910a0c46-cbb4-4354-b945-e9a019f92e48.jpeg",
-      "/images/products/54cc1ca6-cebd-47b1-ad59-85bc939b0294.png",
-      "/images/products/f05bdfd4-bb4e-46e5-9de6-db8d038ec039.png",
-      "/images/products/IMG_1908.jpeg",
-      "/images/products/b045dcb9-2e69-4b7f-832f-03cba5b65b9a.png",
-      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
-      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.jpeg"
+      "/images/products/0c7f0749-c174-442e-9730-590ff7f09eb7.webp",
+      "/images/products/910a0c46-cbb4-4354-b945-e9a019f92e48.webp",
+      "/images/products/54cc1ca6-cebd-47b1-ad59-85bc939b0294.webp",
+      "/images/products/f05bdfd4-bb4e-46e5-9de6-db8d038ec039.webp",
+      "/images/products/IMG_1908.webp",
+      "/images/products/b045dcb9-2e69-4b7f-832f-03cba5b65b9a.webp",
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp",
+      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.webp"
     ],
     "images": [
-      "/images/products/0c7f0749-c174-442e-9730-590ff7f09eb7.png"
+      "/images/products/0c7f0749-c174-442e-9730-590ff7f09eb7.webp"
     ],
     "featured": false,
     "altText": "Gold tone dainty satellite link choker necklace in 316L stainless steel for minimalist everyday wear",
@@ -8221,8 +8221,8 @@
       "Silver Tone"
     ],
     "variantHeroes": {
-      "Gold Tone": "/images/products/0c7f0749-c174-442e-9730-590ff7f09eb7.png",
-      "Silver Tone": "/images/products/54cc1ca6-cebd-47b1-ad59-85bc939b0294.png"
+      "Gold Tone": "/images/products/0c7f0749-c174-442e-9730-590ff7f09eb7.webp",
+      "Silver Tone": "/images/products/54cc1ca6-cebd-47b1-ad59-85bc939b0294.webp"
     },
     "variantVideos": {
       "Gold Tone": "/images/products/minimalist-choker.mp4",
@@ -8305,22 +8305,22 @@
       }
     ],
     "gallery": [
-      "/images/products/birthstone-arm-chain/img-january.png",
-      "/images/products/birthstone-arm-chain/img-7.png",
-      "/images/products/birthstone-arm-chain/img-6.jpeg",
-      "/images/products/birthstone-arm-chain/img-2.png",
-      "/images/products/birthstone-arm-chain/img-4.png",
-      "/images/products/birthstone-arm-chain/img-3.png",
-      "/images/products/birthstone-arm-chain/img-5.png",
-      "/images/products/birthstone-arm-chain/img-1.jpeg"
+      "/images/products/birthstone-arm-chain/img-january.webp",
+      "/images/products/birthstone-arm-chain/img-7.webp",
+      "/images/products/birthstone-arm-chain/img-6.webp",
+      "/images/products/birthstone-arm-chain/img-2.webp",
+      "/images/products/birthstone-arm-chain/img-4.webp",
+      "/images/products/birthstone-arm-chain/img-3.webp",
+      "/images/products/birthstone-arm-chain/img-5.webp",
+      "/images/products/birthstone-arm-chain/img-1.webp"
     ],
     "images": [
-      "/images/products/birthstone-arm-chain/img-january.png"
+      "/images/products/birthstone-arm-chain/img-january.webp"
     ],
     "video": "/images/products/birthstone-arm-chain/video.mp4",
     "featured": false,
     "altText": "Dainty gold stainless steel birthstone arm chain with teardrop gemstone for waterproof shoulder jewelry",
-    "sizeGuideImage": "/images/products/137e8322-36db-4670-afed-c289f61ce7ae.png",
+    "sizeGuideImage": "/images/products/137e8322-36db-4670-afed-c289f61ce7ae.webp",
     "dateAdded": "2026-07-10T22:20:45-04:00"
   },
   {
@@ -8395,25 +8395,25 @@
       "Stainless Steel"
     ],
     "variantHeroes": {
-      "Gold Tone": "/images/products/bicep-chain/img-gold.png",
-      "Silver Plated": "/images/products/bicep-chain/img-lifestyle-casual.png",
-      "Stainless Steel": "/images/products/bicep-chain/img-silver.png"
+      "Gold Tone": "/images/products/bicep-chain/img-gold.webp",
+      "Silver Plated": "/images/products/bicep-chain/img-lifestyle-casual.webp",
+      "Stainless Steel": "/images/products/bicep-chain/img-silver.webp"
     },
     "gallery": [
-      "/images/products/bicep-chain/img-gold.png",
-      "/images/products/bicep-chain/img-lifestyle-casual.png",
-      "/images/products/bicep-chain/img-silver.png",
-      "/images/products/bicep-chain/img-editorial.png",
-      "/images/products/bicep-chain/img-lifestyle-cafe.jpeg",
-      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf-copy.jpeg",
-      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
-      "/images/products/b0803c14-f4b0-469d-9867-b3f7510566e8.png"
+      "/images/products/bicep-chain/img-gold.webp",
+      "/images/products/bicep-chain/img-lifestyle-casual.webp",
+      "/images/products/bicep-chain/img-silver.webp",
+      "/images/products/bicep-chain/img-editorial.webp",
+      "/images/products/bicep-chain/img-lifestyle-cafe.webp",
+      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf-copy.webp",
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp",
+      "/images/products/b0803c14-f4b0-469d-9867-b3f7510566e8.webp"
     ],
     "images": [
-      "/images/products/bicep-chain/img-gold.png"
+      "/images/products/bicep-chain/img-gold.webp"
     ],
     "video": "/images/products/bicep-chain/video.mp4",
-    "sizeGuideImage": "/images/products/bicep-chain/img-sizing.png",
+    "sizeGuideImage": "/images/products/bicep-chain/img-sizing.webp",
     "featured": false,
     "altText": "Gold tone stainless steel bicep chain for summer fashion and beach accessory styling",
     "variantVideos": {
@@ -8474,31 +8474,31 @@
       "Silver Tone"
     ],
     "variantHeroes": {
-      "Gold Tone": "/images/products/stacked-pearl-cross-choker/7478046c-ca3b-4bc1-a41e-4a7c8df4ef58.png",
-      "Silver Tone": "/images/products/stacked-pearl-cross-choker/b3f03ce0-fc74-4b69-be26-f154ab85d0fc.png"
+      "Gold Tone": "/images/products/stacked-pearl-cross-choker/7478046c-ca3b-4bc1-a41e-4a7c8df4ef58.webp",
+      "Silver Tone": "/images/products/stacked-pearl-cross-choker/b3f03ce0-fc74-4b69-be26-f154ab85d0fc.webp"
     },
     "variantVideos": {
       "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/2786312dfc400b5d050125f0ca3f30e6/downloads/default.mp4",
       "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/2786312dfc400b5d050125f0ca3f30e6/downloads/default.mp4"
     },
     "gallery": [
-      "/images/products/stacked-pearl-cross-choker/7478046c-ca3b-4bc1-a41e-4a7c8df4ef58.png",
-      "/images/products/stacked-pearl-cross-choker/b3f03ce0-fc74-4b69-be26-f154ab85d0fc.png",
-      "/images/products/stacked-pearl-cross-choker/2289a6f4-09e0-4fc8-91e2-0b96c373e028.png",
-      "/images/products/stacked-pearl-cross-choker/0e443386-0a68-40ce-a633-e8818b20f8f1.png",
-      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf-copy.jpeg",
-      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png"
+      "/images/products/stacked-pearl-cross-choker/7478046c-ca3b-4bc1-a41e-4a7c8df4ef58.webp",
+      "/images/products/stacked-pearl-cross-choker/b3f03ce0-fc74-4b69-be26-f154ab85d0fc.webp",
+      "/images/products/stacked-pearl-cross-choker/2289a6f4-09e0-4fc8-91e2-0b96c373e028.webp",
+      "/images/products/stacked-pearl-cross-choker/0e443386-0a68-40ce-a633-e8818b20f8f1.webp",
+      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf-copy.webp",
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp"
     ],
     "infographicImages": [
-      "/images/products/stacked-pearl-cross-choker/46ff1ac5-bd04-4706-8c12-2d3cb7fbad68.png"
+      "/images/products/stacked-pearl-cross-choker/46ff1ac5-bd04-4706-8c12-2d3cb7fbad68.webp"
     ],
     "images": [
-      "/images/products/stacked-pearl-cross-choker/7478046c-ca3b-4bc1-a41e-4a7c8df4ef58.png"
+      "/images/products/stacked-pearl-cross-choker/7478046c-ca3b-4bc1-a41e-4a7c8df4ef58.webp"
     ],
     "featured": false,
     "active": true,
     "altText": "Layered pearl bead and gold chain choker necklace with cross pendant, dainty stainless steel design for women",
-    "sizeGuideImage": "/images/products/46ff1ac5-bd04-4706-8c12-2d3cb7fbad68.png",
+    "sizeGuideImage": "/images/products/46ff1ac5-bd04-4706-8c12-2d3cb7fbad68.webp",
     "dateAdded": "2026-07-12T11:25:03-04:00"
   },
   {
@@ -8576,24 +8576,24 @@
       }
     ],
     "gallery": [
-      "/images/products/birthstone-arm-band/7d42276c-6049-49fb-834a-b8ae3e2ad277.png",
-      "/images/products/birthstone-arm-band/4916e4ee-99ad-4012-8131-dc7c8be5665f.png",
-      "/images/products/birthstone-arm-band/8e550763-5dc8-43d9-8c75-0adfb544a12f.png",
-      "/images/products/8c1a99ad-3706-4574-8abc-1f02e90e6a26-copy-2.jpeg",
-      "/images/products/birthstone-arm-band/af0c2021-f688-49fa-9906-f4dc49516ea3.png",
-      "/images/products/birthstone-arm-band/d13632f1-ad9d-4d7c-9e3e-cb575ac49a8a.png",
-      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
-      "/images/products/2fea701c-8c9a-4de0-a202-09e9d7608b12.png",
-      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf-copy.jpeg"
+      "/images/products/birthstone-arm-band/7d42276c-6049-49fb-834a-b8ae3e2ad277.webp",
+      "/images/products/birthstone-arm-band/4916e4ee-99ad-4012-8131-dc7c8be5665f.webp",
+      "/images/products/birthstone-arm-band/8e550763-5dc8-43d9-8c75-0adfb544a12f.webp",
+      "/images/products/8c1a99ad-3706-4574-8abc-1f02e90e6a26-copy-2.webp",
+      "/images/products/birthstone-arm-band/af0c2021-f688-49fa-9906-f4dc49516ea3.webp",
+      "/images/products/birthstone-arm-band/d13632f1-ad9d-4d7c-9e3e-cb575ac49a8a.webp",
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp",
+      "/images/products/2fea701c-8c9a-4de0-a202-09e9d7608b12.webp",
+      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf-copy.webp"
     ],
     "images": [
-      "/images/products/birthstone-arm-band/7d42276c-6049-49fb-834a-b8ae3e2ad277.png"
+      "/images/products/birthstone-arm-band/7d42276c-6049-49fb-834a-b8ae3e2ad277.webp"
     ],
     "video": "/images/products/birthstone-arm-band/video.mp4",
     "featured": false,
     "active": true,
     "altText": "Dainty single-strand gold stainless steel birthstone arm band with teardrop gemstone, waterproof upper arm jewelry",
-    "sizeGuideImage": "/images/products/birthstone-arm-band/d13632f1-ad9d-4d7c-9e3e-cb575ac49a8a.png",
+    "sizeGuideImage": "/images/products/birthstone-arm-band/d13632f1-ad9d-4d7c-9e3e-cb575ac49a8a.webp",
     "dateAdded": "2026-07-13T08:05:47-04:00"
   },
   {
@@ -8646,23 +8646,23 @@
       "Silver Tone"
     ],
     "images": [
-      "/images/products/double-drape-thigh-chain/1272cd0f-gold-park-hero.png"
+      "/images/products/double-drape-thigh-chain/1272cd0f-gold-park-hero.webp"
     ],
     "gallery": [
-      "/images/products/double-drape-thigh-chain/1272cd0f-gold-park-hero.png",
-      "/images/products/double-drape-thigh-chain/3e6407db-silver-indoor-hero.png",
-      "/images/products/double-drape-thigh-chain/db0bf291-gold-ocean.jpeg",
-      "/images/products/double-drape-thigh-chain/80bbcc0c-gold-beach-towel.png",
-      "/images/products/double-drape-thigh-chain/b7f0fc0f-gold-pool-blue.jpeg",
-      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
-      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.jpg",
-      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf-copy.jpeg"
+      "/images/products/double-drape-thigh-chain/1272cd0f-gold-park-hero.webp",
+      "/images/products/double-drape-thigh-chain/3e6407db-silver-indoor-hero.webp",
+      "/images/products/double-drape-thigh-chain/db0bf291-gold-ocean.webp",
+      "/images/products/double-drape-thigh-chain/80bbcc0c-gold-beach-towel.webp",
+      "/images/products/double-drape-thigh-chain/b7f0fc0f-gold-pool-blue.webp",
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp",
+      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.webp",
+      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf-copy.webp"
     ],
     "variantHeroes": {
-      "Gold Tone": "/images/products/double-drape-thigh-chain/1272cd0f-gold-park-hero.png",
-      "Silver Tone": "/images/products/double-drape-thigh-chain/3e6407db-silver-indoor-hero.png"
+      "Gold Tone": "/images/products/double-drape-thigh-chain/1272cd0f-gold-park-hero.webp",
+      "Silver Tone": "/images/products/double-drape-thigh-chain/3e6407db-silver-indoor-hero.webp"
     },
-    "sizeGuideImage": "/images/products/double-drape-thigh-chain/530dc0d3-size-guide.png",
+    "sizeGuideImage": "/images/products/double-drape-thigh-chain/530dc0d3-size-guide.webp",
     "altText": "Gold-tone stainless steel double-drape thigh chain with layered arcs for festival and beach body jewelry styling",
     "featured": false,
     "active": true,

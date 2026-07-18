@@ -4162,5 +4162,28 @@ Select Small (+7 cm (2.8&quot;)), Medium (+14 cm (5.5&quot;)), or Large (+23 cm 
       <g:color>Silver Tone</g:color>
     <g:identifier_exists>false</g:identifier_exists>
   </item>
+  <item>
+    <g:id>birth-month-teardrop-choker</g:id>
+    <g:title>Birth Month Teardrop Choker</g:title>
+    <g:description>Her birth month, her stone, her necklace. A dainty gold-tone choker with a pear-cut gemstone pendant in the color that means something — waterproof, hypoallergenic, and sized to sit close at the collarbone.</g:description>
+    <g:link>https://www.bodystrands.com/shop/birth-month-teardrop-choker</g:link>
+    <g:image_link>https://www.bodystrands.com/images/products/birth-month-teardrop-choker/hero-gray-blue.webp</g:image_link>
+      <g:additional_image_link>https://www.bodystrands.com/images/products/birth-month-teardrop-choker/gray-blue-alt1.webp</g:additional_image_link>
+      <g:additional_image_link>https://www.bodystrands.com/images/products/birth-month-teardrop-choker/gray-blue-alt2.webp</g:additional_image_link>
+      <g:additional_image_link>https://www.bodystrands.com/images/products/birth-month-teardrop-choker/gray-blue-alt3.webp</g:additional_image_link>
+      <g:additional_image_link>https://www.bodystrands.com/images/products/birth-month-teardrop-choker/blazer-city-blue.webp</g:additional_image_link>
+      <g:additional_image_link>https://www.bodystrands.com/images/products/birth-month-teardrop-choker/gray-chin-blue.webp</g:additional_image_link>
+      <g:additional_image_link>https://www.bodystrands.com/images/products/birth-month-teardrop-choker/lip-crop-dark-blue.webp</g:additional_image_link>
+      <g:additional_image_link>https://www.bodystrands.com/images/products/birth-month-teardrop-choker/lip-crop-curtain-blue.webp</g:additional_image_link>
+      <g:additional_image_link>https://www.bodystrands.com/images/products/birth-month-teardrop-choker/lip-crop-curtain-blue2.webp</g:additional_image_link>
+    <g:price>25.00 EUR</g:price>
+    <g:availability>in_stock</g:availability>
+    <g:condition>new</g:condition>
+    <g:brand>Bodystrands</g:brand>
+    <g:mpn>birth-month-teardrop-choker</g:mpn>
+    <g:material>Stainless Steel</g:material>
+    <g:google_product_category>201</g:google_product_category>
+    <g:identifier_exists>false</g:identifier_exists>
+  </item>
   </channel>
 </rss>

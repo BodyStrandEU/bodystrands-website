@@ -9,12 +9,16 @@ import { useCurrency } from "@/lib/currency-context";
 import { TrustBadgesInline } from "@/components/TrustBadges";
 
 const FREE_THRESHOLD = 50;
+// Keep in sync by hand with GIFT_WRAP_FEE_EUR in app/(site)/api/checkout/route.ts
+const GIFT_WRAP_FEE = 4;
 
 export default function CartIcon({ light }: { light?: boolean }) {
   const { items, count, subtotal, remove, updateQty, clear, shippingCountry, setShippingCountry } = useCart();
   const [open, setOpen]       = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError]     = useState("");
+  const [giftWrap, setGiftWrap] = useState(false);
+  const [giftNote, setGiftNote] = useState("");
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -30,7 +34,7 @@ export default function CartIcon({ light }: { light?: boolean }) {
   // Shipping calculation
   const shippingRate    = shippingCountry ? getShippingRate(shippingCountry, subtotal) : null;
   const shippingAmount  = shippingRate ? shippingRate.amount / 100 : null;
-  const orderTotal      = subtotal + (shippingAmount ?? 0);
+  const orderTotal      = subtotal + (shippingAmount ?? 0) + (giftWrap ? GIFT_WRAP_FEE : 0);
   const remaining       = Math.max(0, (shippingRate?.freeThreshold ?? FREE_THRESHOLD) - subtotal);
 
   async function checkout() {
@@ -61,6 +65,8 @@ export default function CartIcon({ light }: { light?: boolean }) {
         body:    JSON.stringify({
           items:   items.map((i) => ({ productId: i.productId, variant: i.variant, priceAdd: i.priceAdd, quantity: i.quantity })),
           country: shippingCountry,
+          giftWrap,
+          giftNote: giftWrap ? giftNote : undefined,
         }),
       });
       const data = await res.json() as { url?: string; error?: string };
@@ -225,6 +231,32 @@ export default function CartIcon({ light }: { light?: boolean }) {
                     )}
                   </p>
                 )}
+
+                {/* Gift wrap add-on */}
+                <div className="border-t border-[#E8B4A8]/30 pt-3">
+                  <label className="flex items-center justify-between gap-2 cursor-pointer">
+                    <span className="flex items-center gap-2 text-[0.58rem] tracking-[0.1em] uppercase text-[#2C2220]">
+                      <input
+                        type="checkbox"
+                        checked={giftWrap}
+                        onChange={(e) => setGiftWrap(e.target.checked)}
+                        className="w-3.5 h-3.5 accent-[#A0622A]"
+                      />
+                      Gift wrap this order
+                    </span>
+                    <span className="text-[0.6rem] text-[#8C7B6E]">+{format(GIFT_WRAP_FEE)}</span>
+                  </label>
+                  {giftWrap && (
+                    <textarea
+                      value={giftNote}
+                      onChange={(e) => setGiftNote(e.target.value.slice(0, 500))}
+                      placeholder="Add a gift note (optional)"
+                      rows={2}
+                      maxLength={500}
+                      className="mt-2 w-full border border-[#E8B4A8]/50 bg-transparent px-3 py-2 text-[0.6rem] tracking-wide text-[#2C2220] placeholder:text-[#8C7B6E]/70 focus:outline-none focus:border-[#2C2220] transition-colors resize-none"
+                    />
+                  )}
+                </div>
 
                 {/* Order total (when country selected) */}
                 {shippingCountry && shippingRate && (

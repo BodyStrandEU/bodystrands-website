@@ -4,6 +4,12 @@ import ProductCard from "@/components/ProductCard";
 import GiftCategoryDropdown from "@/components/GiftCategoryDropdown";
 import { products, CATEGORIES, isValidCategory } from "@/lib/products";
 
+const GIFT_SECTIONS = [
+  { tag: "personalized" as const, id: "personalized", label: "Personalized Gifts" },
+  { tag: "confirmation" as const, id: "confirmation", label: "Confirmation & Communion Gifts" },
+  { tag: "bridal" as const, id: "bridal", label: "For the Bride" },
+];
+
 export const metadata: Metadata = {
   title: "Gifts — Handmade Jewelry Gifts Under €25 & €40 | Bodystrands",
   description: "Shop Bodystrands jewelry by price — thoughtful, handmade gifts under €25 and under €40. Gift wrapping available at checkout. Waterproof stainless steel, handmade in Portugal and Canada.",
@@ -40,6 +46,12 @@ export default async function GiftsPage({
     }))
     .filter((section) => section.items.length > 0);
 
+  const giftTagSections = GIFT_SECTIONS.map(({ tag, id, label }) => ({
+    id,
+    label,
+    items: active.filter((p) => p.giftTags?.includes(tag)),
+  }));
+
   return (
     <div className="pt-20 md:pt-32 pb-24">
 
@@ -69,7 +81,7 @@ export default async function GiftsPage({
       </div>
 
       {/* Under €25 */}
-      <section className="max-w-7xl mx-auto px-6 md:px-10 mb-20 md:mb-28">
+      <section id="under-25" className="max-w-7xl mx-auto px-6 md:px-10 mb-20 md:mb-28 scroll-mt-24">
         <div className="flex items-center gap-3 mb-8">
           <h2 className="font-heading text-2xl md:text-3xl font-light text-[#2C2220]">Under €25</h2>
           <div className="flex-1 h-px bg-[#E8B4A8]/40" />
@@ -114,6 +126,23 @@ export default async function GiftsPage({
           <p className="text-sm font-light text-[#8C7B6E]">New pieces coming soon.</p>
         )}
       </section>
+
+      {/* Occasion sections — Personalized, Confirmation/Communion, Bridal */}
+      {giftTagSections.map(({ id, label, items }) => (
+        items.length > 0 && (
+          <section key={id} id={id} className="max-w-7xl mx-auto px-6 md:px-10 mt-20 md:mt-28 scroll-mt-24">
+            <div className="flex items-center gap-3 mb-8">
+              <h2 className="font-heading text-2xl md:text-3xl font-light text-[#2C2220]">{label}</h2>
+              <div className="flex-1 h-px bg-[#E8B4A8]/40" />
+            </div>
+            <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-x-0.5 gap-y-4 md:gap-x-4 md:gap-y-8">
+              {items.map((p) => (
+                <ProductCard key={p.id} product={p} />
+              ))}
+            </div>
+          </section>
+        )
+      ))}
 
     </div>
   );

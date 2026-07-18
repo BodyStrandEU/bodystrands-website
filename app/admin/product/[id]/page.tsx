@@ -20,7 +20,7 @@ import {
 } from "@dnd-kit/sortable";
 import { arrayMove } from "@dnd-kit/sortable";
 import { CSS } from "@dnd-kit/utilities";
-import { CATEGORIES, type Category, type Product } from "@/lib/products";
+import { CATEGORIES, type Category, type Product, GIFT_TAGS, suggestGiftTags } from "@/lib/products";
 
 // ─── Sortable image item ──────────────────────────────────────────────────────
 
@@ -1265,6 +1265,41 @@ export default function ProductEditor({ params }: { params: Promise<{ id: string
                 Active (visible on site)
               </label>
             </div>
+          </div>
+
+          <div style={{ marginBottom: "1rem" }}>
+            <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: "0.5rem" }}>
+              <label style={labelStyle}>Gift Tags (for the /gifts page — Personalization, Confirmation, Bridal)</label>
+              <button
+                type="button"
+                onClick={() => {
+                  const suggested = suggestGiftTags(form.name);
+                  setForm((f) => ({ ...f, giftTags: Array.from(new Set([...(f.giftTags ?? []), ...suggested])) }));
+                }}
+                style={{ fontSize: "0.7rem", color: "var(--admin-accent)", background: "none", border: "none", cursor: "pointer", textDecoration: "underline" }}
+              >
+                Suggest from name
+              </button>
+            </div>
+            <div style={{ display: "flex", gap: "1.25rem" }}>
+              {GIFT_TAGS.map((tag) => (
+                <label key={tag} style={{ display: "flex", alignItems: "center", gap: "0.4rem", cursor: "pointer", fontSize: "0.82rem", color: "var(--admin-text2)", textTransform: "capitalize" }}>
+                  <input
+                    type="checkbox"
+                    checked={(form.giftTags ?? []).includes(tag)}
+                    onChange={(e) => {
+                      const current = new Set(form.giftTags ?? []);
+                      if (e.target.checked) current.add(tag); else current.delete(tag);
+                      setForm((f) => ({ ...f, giftTags: Array.from(current) }));
+                    }}
+                  />
+                  {tag}
+                </label>
+              ))}
+            </div>
+            <p style={{ fontSize: "0.7rem", color: "var(--admin-muted)", marginTop: "0.35rem" }}>
+              "Suggest" is a starting point based on keywords in the name — always double check it's actually right before saving.
+            </p>
           </div>
 
           <div style={{ marginBottom: "1rem" }}>

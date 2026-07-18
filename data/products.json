@@ -49,7 +49,10 @@
     "video": "/images/products/0617.mp4",
     "featured": false,
     "altText": "Delicate gold chain necklace with pink enamel cross choker, dainty stainless steel design for women",
-    "dateAdded": "2026-06-17T15:24:49-04:00"
+    "dateAdded": "2026-06-17T15:24:49-04:00",
+    "giftTags": [
+      "confirmation"
+    ]
   },
   {
     "id": "goddess-shoulder-chain",
@@ -214,7 +217,10 @@
       "Gold Tone": "/images/products/bridal-shoulder-chain-main.webp",
       "Silver Tone": "/images/products/bridal-shoulder-chain-silver-5.webp"
     },
-    "dateAdded": "2026-06-11T17:58:31-04:00"
+    "dateAdded": "2026-06-11T17:58:31-04:00",
+    "giftTags": [
+      "bridal"
+    ]
   },
   {
     "id": "double-shoulder-chest-chain",
@@ -1216,7 +1222,10 @@
     ],
     "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/046e42fa08aace4dc692deb9f84879c3/downloads/default.mp4",
     "altText": "Gold-tone stainless steel bikini clip chain with personalized birthstone charm for beach jewelry",
-    "dateAdded": "2026-06-12T15:00:27-04:00"
+    "dateAdded": "2026-06-12T15:00:27-04:00",
+    "giftTags": [
+      "personalized"
+    ]
   },
   {
     "id": "bridal-forehead-chain",
@@ -1283,7 +1292,10 @@
       "Gold Tone": "/images/products/8f4f0279-4cb9-4be4-8a2b-eb00007c22fd.webp",
       "Silver Tone": "https://i.etsystatic.com/55122258/r/il/3e1b20/7904377486/il_fullxfull.7904377486_3jjc.jpg"
     },
-    "dateAdded": "2026-06-12T15:00:27-04:00"
+    "dateAdded": "2026-06-12T15:00:27-04:00",
+    "giftTags": [
+      "bridal"
+    ]
   },
   {
     "id": "silver-eyeglasses-chain",
@@ -1417,7 +1429,10 @@
       "Gold Tone": "https://i.etsystatic.com/55122258/r/il/8d2af9/8020112711/il_fullxfull.8020112711_jbay.jpg",
       "Silver Tone": "/images/products/22079b65-5549-4e99-82a5-03370c656882.webp"
     },
-    "dateAdded": "2026-06-12T15:00:27-04:00"
+    "dateAdded": "2026-06-12T15:00:27-04:00",
+    "giftTags": [
+      "bridal"
+    ]
   },
   {
     "id": "barefoot-sandal-toe-chain",
@@ -1562,7 +1577,10 @@
     ],
     "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/9224a2d85c2c115c3ed98769525039a6/downloads/default.mp4",
     "altText": "Dainty gold zodiac necklace with personalized star sign charm on tarnish-resistant stainless steel slip-on chain",
-    "dateAdded": "2026-06-12T15:00:27-04:00"
+    "dateAdded": "2026-06-12T15:00:27-04:00",
+    "giftTags": [
+      "personalized"
+    ]
   },
   {
     "id": "layered-hip-chain",
@@ -1708,7 +1726,10 @@
     ],
     "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/65b1e797433ba1ce472f262a5f0bc4d1/downloads/default.mp4",
     "altText": "Delicate stainless steel pearl bracelet with cross charm for meaningful occasions and faith-inspired jewelry",
-    "dateAdded": "2026-06-12T15:00:27-04:00"
+    "dateAdded": "2026-06-12T15:00:27-04:00",
+    "giftTags": [
+      "confirmation"
+    ]
   },
   {
     "id": "multi-strand-shoulder-chain",
@@ -2324,7 +2345,10 @@
     ],
     "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/f735a78b88d98e938aa03c1c4316a90a/downloads/default.mp4",
     "altText": "Dainty gold monogram letter necklace in stainless steel, personalized initial charm handmade jewelry",
-    "dateAdded": "2026-06-12T15:00:27-04:00"
+    "dateAdded": "2026-06-12T15:00:27-04:00",
+    "giftTags": [
+      "personalized"
+    ]
   },
   {
     "id": "initial-letter-anklet",
@@ -2408,7 +2432,10 @@
       }
     ],
     "altText": "Gold stainless steel initial letter anklet, personalized beach anklet with custom charm detail",
-    "dateAdded": "2026-06-12T15:00:27-04:00"
+    "dateAdded": "2026-06-12T15:00:27-04:00",
+    "giftTags": [
+      "personalized"
+    ]
   },
   {
     "id": "pearl-barefoot-sandal",
@@ -2786,7 +2813,10 @@
     "altText": "Gold-tone stainless steel birthstone thigh chain with delicate gemstone drop for unique leg jewelry",
     "active": true,
     "sizeGuideImage": "/images/products/652e239a-6f31-44a6-89f2-f6922bf9f84d-copy.webp",
-    "dateAdded": "2026-07-08T18:49:38-04:00"
+    "dateAdded": "2026-07-08T18:49:38-04:00",
+    "giftTags": [
+      "personalized"
+    ]
   },
   {
     "id": "script-initial-bracelet",
@@ -2849,7 +2879,10 @@
     ],
     "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/5165e2eacd199a97c3d9ef43e60f92a0/downloads/default.mp4",
     "altText": "Delicate gold stainless steel initial bracelet with personalized cursive letter charm for everyday wear",
-    "dateAdded": "2026-06-12T15:00:27-04:00"
+    "dateAdded": "2026-06-12T15:00:27-04:00",
+    "giftTags": [
+      "personalized"
+    ]
   },
   {
     "id": "evil-eye-charm-anklet",
@@ -3622,7 +3655,10 @@
       }
     ],
     "altText": "Gold stainless steel zodiac charm bracelet, dainty Y2K design for personalized celestial style",
-    "dateAdded": "2026-06-12T15:00:27-04:00"
+    "dateAdded": "2026-06-12T15:00:27-04:00",
+    "giftTags": [
+      "personalized"
+    ]
   },
   {
     "id": "pearl-waist-chain",
@@ -4064,7 +4100,10 @@
     ],
     "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/bce20b573e1e7ea237c3e9a1af2fdb80/downloads/default.mp4",
     "altText": "Gold-tone stainless steel pearl back chain necklace for wedding open back dresses and bridal back jewelry",
-    "dateAdded": "2026-06-12T15:00:27-04:00"
+    "dateAdded": "2026-06-12T15:00:27-04:00",
+    "giftTags": [
+      "bridal"
+    ]
   },
   {
     "id": "pearl-hand-chain",
@@ -4499,7 +4538,10 @@
     ],
     "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/4c8bf590307dc6860b5e9f95c44d8180/downloads/default.mp4",
     "altText": "Gold stainless steel zodiac anklet with birthstone charm, delicate waterproof beach ankle bracelet",
-    "dateAdded": "2026-06-12T15:00:27-04:00"
+    "dateAdded": "2026-06-12T15:00:27-04:00",
+    "giftTags": [
+      "personalized"
+    ]
   },
   {
     "id": "cowrie-shell-belly-chain",
@@ -4634,7 +4676,10 @@
     ],
     "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/55b54d928f426a837667fbc731977fa7/downloads/default.mp4",
     "altText": "Delicate gold stainless steel birthstone bracelet with custom gemstone charm, handcrafted dainty design",
-    "dateAdded": "2026-06-12T15:00:27-04:00"
+    "dateAdded": "2026-06-12T15:00:27-04:00",
+    "giftTags": [
+      "personalized"
+    ]
   },
   {
     "id": "birthstone-choker-necklace",
@@ -4720,7 +4765,10 @@
     ],
     "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/09dd187118446d03239e03066b41073a/downloads/default.mp4",
     "altText": "Delicate gold stainless steel birthstone choker necklace with personalized gemstone pendant for everyday wear",
-    "dateAdded": "2026-06-12T15:00:27-04:00"
+    "dateAdded": "2026-06-12T15:00:27-04:00",
+    "giftTags": [
+      "personalized"
+    ]
   },
   {
     "id": "pearl-lariat-back-necklace",
@@ -5649,7 +5697,10 @@
       "Silver Tone": "/images/products/34c9ec09-d27b-4601-85f6-faa1986d47ae.webp"
     },
     "sizeGuideImage": "/images/products/e7db1006-0b41-4d4d-a4ed-d250c518df35.webp",
-    "dateAdded": "2026-06-12T15:00:27-04:00"
+    "dateAdded": "2026-06-12T15:00:27-04:00",
+    "giftTags": [
+      "bridal"
+    ]
   },
   {
     "id": "bridal-hair-vine-chain",
@@ -5718,7 +5769,10 @@
       "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/6cc3ebaf9e58d8f218cde6d699724327/downloads/default.mp4"
     },
     "sizeGuideImage": "/images/products/esty-thumnails-new--25-.webp",
-    "dateAdded": "2026-06-12T15:00:27-04:00"
+    "dateAdded": "2026-06-12T15:00:27-04:00",
+    "giftTags": [
+      "bridal"
+    ]
   },
   {
     "id": "boho-finger-hand-chain",
@@ -5861,7 +5915,10 @@
     ],
     "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/e26ce55749a02850a5ac70cace90f2af/downloads/default.mp4",
     "altText": "Gold-tone stainless steel back body chain with personalized birthstone charm for bridal jewelry",
-    "dateAdded": "2026-06-12T15:00:27-04:00"
+    "dateAdded": "2026-06-12T15:00:27-04:00",
+    "giftTags": [
+      "personalized"
+    ]
   },
   {
     "id": "silver-waterproof-belly-chain",
@@ -6313,7 +6370,10 @@
       "Gold Tone": "https://i.etsystatic.com/55122258/r/il/5625eb/7843108079/il_fullxfull.7843108079_e0mb.jpg",
       "Silver Tone": "https://i.etsystatic.com/55122258/r/il/1b7cd6/7843214741/il_fullxfull.7843214741_8gxf.jpg"
     },
-    "dateAdded": "2026-06-12T15:00:27-04:00"
+    "dateAdded": "2026-06-12T15:00:27-04:00",
+    "giftTags": [
+      "bridal"
+    ]
   },
   {
     "id": "bridal-pearl-back-necklace",
@@ -6399,7 +6459,10 @@
       "Gold Tone": "https://i.etsystatic.com/55122258/r/il/36300d/7839073581/il_fullxfull.7839073581_hfc9.jpg",
       "Silver Tone": "https://i.etsystatic.com/55122258/r/il/06f8c5/7791135220/il_fullxfull.7791135220_od5j.jpg"
     },
-    "dateAdded": "2026-06-12T15:00:27-04:00"
+    "dateAdded": "2026-06-12T15:00:27-04:00",
+    "giftTags": [
+      "bridal"
+    ]
   },
   {
     "id": "y2k-belly-chain",
@@ -6567,7 +6630,10 @@
       "Gold Tone": "https://i.etsystatic.com/55122258/r/il/f9dcc6/7770664374/il_fullxfull.7770664374_53b2.jpg",
       "Silver Tone": "https://i.etsystatic.com/55122258/r/il/9453e0/7770664378/il_fullxfull.7770664378_b1fy.jpg"
     },
-    "dateAdded": "2026-06-12T15:00:27-04:00"
+    "dateAdded": "2026-06-12T15:00:27-04:00",
+    "giftTags": [
+      "personalized"
+    ]
   },
   {
     "id": "butterfly-anklet",
@@ -6714,7 +6780,10 @@
     ],
     "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/924b3f16f202a2e79b98c3885cb74653/downloads/default.mp4",
     "altText": "Gold-tone zodiac belly chain in waterproof stainless steel, adjustable waist chain for active wear",
-    "dateAdded": "2026-06-12T15:00:27-04:00"
+    "dateAdded": "2026-06-12T15:00:27-04:00",
+    "giftTags": [
+      "personalized"
+    ]
   },
   {
     "id": "butterfly-layered-belly-chain",
@@ -7302,7 +7371,10 @@
     "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/d8995bb3c3eb33065f2c1683bf7c75c8/downloads/default.mp4",
     "altText": "Gold-tone stainless steel zodiac snake belly chain with adjustable waist chain design for celestial body jewelry",
     "sizeGuideImage": "/images/products/il_fullxfull.8090630842_9i25.webp",
-    "dateAdded": "2026-06-12T15:00:27-04:00"
+    "dateAdded": "2026-06-12T15:00:27-04:00",
+    "giftTags": [
+      "personalized"
+    ]
   },
   {
     "id": "gold-body-chain-harness",
@@ -7559,7 +7631,10 @@
       "Gold Tone": "/images/products/birth-flower-charm-bracelet/e0e3896f-5197-4d94-974f-7b14ee305954.webp",
       "Silver Tone": "/images/products/birth-flower-charm-bracelet/4746a3fe-b2a1-4cef-86cc-181e6f1a189a.webp"
     },
-    "dateAdded": "2026-06-18T17:14:08-04:00"
+    "dateAdded": "2026-06-18T17:14:08-04:00",
+    "giftTags": [
+      "personalized"
+    ]
   },
   {
     "id": "birth-flower-charm-necklace",
@@ -7655,7 +7730,10 @@
       "/images/products/birth-flower-charm-bracelet/035ca701-d84a-49fd-8b8d-196dd1903eb0.webp",
       "/images/products/birth-flower-charm-bracelet/f6314926-4454-4b6d-947b-0b5470742a2e.webp"
     ],
-    "dateAdded": "2026-06-25T18:38:01-04:00"
+    "dateAdded": "2026-06-25T18:38:01-04:00",
+    "giftTags": [
+      "personalized"
+    ]
   },
   {
     "id": "turquoise-beaded-choker",
@@ -7907,7 +7985,10 @@
       "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/2bbb1b931247991d63c503ef4b4d99b2/downloads/default.mp4"
     },
     "sizeGuideImage": "/images/products/curated-layered-necklace-stack/d649a290-size-guide.webp",
-    "dateAdded": "2026-07-15T10:28:52-04:00"
+    "dateAdded": "2026-07-15T10:28:52-04:00",
+    "giftTags": [
+      "personalized"
+    ]
   },
   {
     "id": "pink-cross-charm-bracelet",
@@ -7975,7 +8056,10 @@
       "pink enamel jewelry",
       "gift for her"
     ],
-    "dateAdded": "2026-06-27T12:57:57-04:00"
+    "dateAdded": "2026-06-27T12:57:57-04:00",
+    "giftTags": [
+      "confirmation"
+    ]
   },
   {
     "id": "birth-flower-anklet",
@@ -8065,7 +8149,10 @@
       "Silver Tone": "/images/products/birth-flower-anklet/img-1.webp"
     },
     "altText": "Delicate birth flower gold tone stainless steel ankle bracelet for everyday wear and beach occasions",
-    "dateAdded": "2026-07-04T11:43:21-04:00"
+    "dateAdded": "2026-07-04T11:43:21-04:00",
+    "giftTags": [
+      "personalized"
+    ]
   },
   {
     "id": "layered-arm-chain",
@@ -8321,7 +8408,10 @@
     "featured": false,
     "altText": "Dainty gold stainless steel birthstone arm chain with teardrop gemstone for waterproof shoulder jewelry",
     "sizeGuideImage": "/images/products/137e8322-36db-4670-afed-c289f61ce7ae.webp",
-    "dateAdded": "2026-07-10T22:20:45-04:00"
+    "dateAdded": "2026-07-10T22:20:45-04:00",
+    "giftTags": [
+      "personalized"
+    ]
   },
   {
     "id": "bicep-chain",
@@ -8499,7 +8589,10 @@
     "active": true,
     "altText": "Layered pearl bead and gold chain choker necklace with cross pendant, dainty stainless steel design for women",
     "sizeGuideImage": "/images/products/46ff1ac5-bd04-4706-8c12-2d3cb7fbad68.webp",
-    "dateAdded": "2026-07-12T11:25:03-04:00"
+    "dateAdded": "2026-07-12T11:25:03-04:00",
+    "giftTags": [
+      "confirmation"
+    ]
   },
   {
     "id": "birthstone-arm-band",
@@ -8594,7 +8687,10 @@
     "active": true,
     "altText": "Dainty single-strand gold stainless steel birthstone arm band with teardrop gemstone, waterproof upper arm jewelry",
     "sizeGuideImage": "/images/products/birthstone-arm-band/d13632f1-ad9d-4d7c-9e3e-cb575ac49a8a.webp",
-    "dateAdded": "2026-07-13T08:05:47-04:00"
+    "dateAdded": "2026-07-13T08:05:47-04:00",
+    "giftTags": [
+      "personalized"
+    ]
   },
   {
     "id": "double-drape-thigh-chain",

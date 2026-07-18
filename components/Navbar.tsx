@@ -55,8 +55,10 @@ export default function Navbar() {
   const [scrolled,    setScrolled]    = useState(false);
   const [menuOpen,    setMenuOpen]    = useState(false);
   const [shopOpen,    setShopOpen]    = useState(false);
+  const [giftsOpen,   setGiftsOpen]   = useState(false);
   const [searchOpen,  setSearchOpen]  = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const giftsRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -69,13 +71,23 @@ export default function Navbar() {
       if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
         setShopOpen(false);
       }
+      if (giftsRef.current && !giftsRef.current.contains(e.target as Node)) {
+        setGiftsOpen(false);
+      }
     };
     document.addEventListener("mousedown", handleClick);
     return () => document.removeEventListener("mousedown", handleClick);
   }, []);
 
+  const giftLinks = [
+    { href: "/gifts#under-25", label: "Under €25" },
+    { href: "/gifts#under-40", label: "Under €40" },
+    { href: "/gifts#personalized", label: "Personalized Gifts" },
+    { href: "/gifts#confirmation", label: "Confirmation & Communion Gifts" },
+    { href: "/gifts#bridal", label: "For the Bride" },
+  ];
+
   const pages = [
-    { href: "/gifts", label: "Gifts" },
     { href: "/blog", label: "Journal" },
     { href: "/about", label: "About" },
     { href: "/contact", label: "Contact" },
@@ -205,6 +217,48 @@ export default function Navbar() {
               </div>
             </div>
 
+            {/* Gifts with dropdown */}
+            <div ref={giftsRef} className="relative">
+              <button
+                onClick={() => setGiftsOpen(!giftsOpen)}
+                className={`flex items-center gap-1.5 text-[0.65rem] font-light tracking-[0.22em] uppercase transition-colors duration-200 ${
+                  giftsOpen ? "text-[#A0622A]" : (scrolled || !isHero) ? "text-[#2C2220] hover:text-[#A0622A]" : "text-[#FDF9F7] hover:text-white [text-shadow:0_1px_4px_rgba(0,0,0,0.5)]"
+                }`}
+              >
+                Gifts
+                <span className={`text-[0.5rem] transition-transform duration-200 ${giftsOpen ? "rotate-180" : ""}`}>
+                  ▾
+                </span>
+              </button>
+
+              <div
+                className={`absolute top-full left-1/2 -translate-x-1/2 mt-6 w-64 bg-[#FDF9F7] border border-[#E8B4A8]/40 shadow-[0_18px_50px_-12px_rgba(44,34,32,0.25)] transition-all duration-200 ease-out ${
+                  giftsOpen
+                    ? "opacity-100 pointer-events-auto"
+                    : "opacity-0 -translate-y-2 pointer-events-none"
+                }`}
+              >
+                <div className="p-6">
+                  <p className="text-[0.55rem] tracking-[0.3em] uppercase text-[#A0622A] mb-4">Shop by Gift</p>
+                  <div className="flex flex-col">
+                    {giftLinks.map((link) => (
+                      <Link
+                        key={link.href}
+                        href={link.href}
+                        onClick={() => setGiftsOpen(false)}
+                        className="group flex items-center gap-2 py-1.5 -mx-2 px-2 rounded-sm hover:bg-[#F5EDE8]/60 transition-colors duration-150"
+                      >
+                        <span className="w-1 h-1 rounded-full bg-[#A0622A]/50 group-hover:bg-[#A0622A] transition-colors flex-shrink-0" />
+                        <span className="text-[0.6rem] tracking-[0.1em] text-[#8C7B6E] group-hover:text-[#2C2220] transition-colors">
+                          {link.label}
+                        </span>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+
             {pages.map((link) => (
               <Link
                 key={link.href}
@@ -284,6 +338,17 @@ export default function Navbar() {
                 className="block py-2 text-[0.62rem] font-light tracking-[0.18em] uppercase text-[#8C7B6E] hover:text-[#2C2220] transition-colors border-t border-[#E8B4A8]/20"
               >
                 {cat}
+              </Link>
+            ))}
+            <p className="text-[0.52rem] tracking-[0.3em] uppercase text-[#A0622A] mt-6 pt-6 border-t border-[#E8B4A8]/30 mb-4">Gifts</p>
+            {giftLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={() => setMenuOpen(false)}
+                className="block py-2 text-[0.62rem] font-light tracking-[0.18em] uppercase text-[#8C7B6E] hover:text-[#2C2220] transition-colors border-t border-[#E8B4A8]/20 first:border-t-0"
+              >
+                {link.label}
               </Link>
             ))}
             <div className="mt-6 pt-6 border-t border-[#E8B4A8]/30 flex flex-col gap-4">

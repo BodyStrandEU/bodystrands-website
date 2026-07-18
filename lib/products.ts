@@ -17,6 +17,12 @@ export const CATEGORIES = [
 
 export type Category = (typeof CATEGORIES)[number];
 
+// Occasion/recipient tags for the /gifts mega-menu — assigned by human judgment
+// (via the admin panel or the listing process), never inferred automatically.
+// See KEYWORD_TAG_HINTS below for the assisted-suggestion half of that process.
+export const GIFT_TAGS = ["personalized", "confirmation", "bridal"] as const;
+export type GiftTag = (typeof GIFT_TAGS)[number];
+
 export type Spec = { label: string; value: string };
 export type VariantGroup = {
   label: string;
@@ -49,6 +55,7 @@ export type Product = {
   infographicImages?: string[];
   sizeGuideImage?: string;
   dateAdded?: string; // ISO 8601 — when the product was first introduced; drives homepage "New Pieces" sort
+  giftTags?: GiftTag[]; // occasion/recipient tags for the /gifts mega-menu — see GIFT_TAGS above
 };
 
 // Images that are infographics across all products — hidden on shop card, shown on product page
@@ -72,6 +79,21 @@ export const INFOGRAPHIC_IMAGES = new Set([
 
 export function isValidCategory(value: string): value is Category {
   return (CATEGORIES as readonly string[]).includes(value);
+}
+
+// Keyword hints for the admin panel to PRE-CHECK likely gift tags on a new product —
+// a starting suggestion, never applied automatically or trusted on its own. Keywords
+// like "cross" or "wedding" have real false positives (e.g. Cross Belly Chain is not a
+// confirmation gift), so every suggestion still requires a human to actually confirm it.
+const GIFT_TAG_KEYWORDS: Record<GiftTag, string[]> = {
+  personalized: ["birthstone", "zodiac", "monogram", "initial", "birth flower", "gemstone", "personalized"],
+  confirmation: ["pink cross", "faith"],
+  bridal: ["bridal", "wedding"],
+};
+
+export function suggestGiftTags(name: string): GiftTag[] {
+  const lower = name.toLowerCase();
+  return GIFT_TAGS.filter((tag) => GIFT_TAG_KEYWORDS[tag].some((kw) => lower.includes(kw)));
 }
 
 export const products: Product[] = productsData as Product[];

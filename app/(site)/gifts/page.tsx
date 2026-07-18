@@ -6,7 +6,7 @@ import { products, CATEGORIES, isValidCategory } from "@/lib/products";
 
 export const metadata: Metadata = {
   title: "Gifts — Handmade Jewelry Gifts Under €25 & €40 | Bodystrands",
-  description: "Shop Bodystrands jewelry by price — thoughtful, handmade gifts under €25 and under €40. Waterproof stainless steel, handmade in Portugal and Canada.",
+  description: "Shop Bodystrands jewelry by price — thoughtful, handmade gifts under €25 and under €40. Gift wrapping available at checkout. Waterproof stainless steel, handmade in Portugal and Canada.",
   alternates: { canonical: "/gifts" },
 };
 
@@ -53,7 +53,7 @@ export default async function GiftsPage({
             </h1>
             <p className="text-sm font-light tracking-wide text-[#8C7B6E] leading-relaxed max-w-md">
               Handmade, waterproof, and made to last — every piece here is a keepsake first,
-              a gift second. Shop by price below.
+              a gift second. Shop by price below, and add gift wrapping at checkout for €4.
             </p>
           </div>
           <div className="relative aspect-[4/3] w-full overflow-hidden -mx-6 md:mx-0">

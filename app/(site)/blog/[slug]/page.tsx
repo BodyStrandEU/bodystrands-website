@@ -25,8 +25,20 @@ export default async function BlogPostPage({ params }: Props) {
   const post = blogPosts.find((p) => p.slug === slug);
   if (!post) notFound();
 
+  // Related posts — same category weighted heavily, shared tags add relevance,
+  // recency only breaks ties. Previously this just showed the 3 most recent
+  // posts regardless of topic, which meant e.g. a Care & Quality post could
+  // link out to 3 unrelated Style Guide posts.
   const allPosts = [...blogPosts].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
-  const related = allPosts.filter((p) => p.slug !== slug).slice(0, 3);
+  const related = allPosts
+    .filter((p) => p.slug !== slug)
+    .map((p) => ({
+      post: p,
+      score: (p.category === post.category ? 10 : 0) + p.tags.filter((t) => post.tags.includes(t)).length,
+    }))
+    .sort((a, b) => b.score - a.score || new Date(b.post.date).getTime() - new Date(a.post.date).getTime())
+    .slice(0, 3)
+    .map((s) => s.post);
 
   return (
     <div className="pt-32 pb-24">

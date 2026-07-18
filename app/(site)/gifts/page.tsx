@@ -1,13 +1,21 @@
 import Image from "next/image";
+import Link from "next/link";
 import type { Metadata } from "next";
 import ProductCard from "@/components/ProductCard";
 import GiftCategoryDropdown from "@/components/GiftCategoryDropdown";
 import { products, CATEGORIES, isValidCategory } from "@/lib/products";
+import blogPosts from "@/data/blog-posts.json";
 
 const GIFT_SECTIONS = [
   { tag: "personalized" as const, id: "personalized", label: "Personalized Gifts" },
   { tag: "confirmation" as const, id: "confirmation", label: "Confirmation & Communion Gifts" },
   { tag: "bridal" as const, id: "bridal", label: "For the Bride" },
+];
+
+const JOURNAL_LINKS = [
+  "handcrafted-gifts-under-25-for-every-person-on-your-list",
+  "why-personalised-jewelry-makes-the-best-gift",
+  "bridesmaid-gifts-shell-actually-wear-forever",
 ];
 
 export const metadata: Metadata = {
@@ -51,6 +59,10 @@ export default async function GiftsPage({
     label,
     items: active.filter((p) => p.giftTags?.includes(tag)),
   }));
+
+  const journalPosts = JOURNAL_LINKS
+    .map((slug) => blogPosts.find((p) => p.slug === slug))
+    .filter((p): p is (typeof blogPosts)[number] => !!p);
 
   return (
     <div className="pt-20 md:pt-32 pb-24">
@@ -143,6 +155,26 @@ export default async function GiftsPage({
           </section>
         )
       ))}
+
+      {/* From the Journal — cross-links back into gift-relevant blog content */}
+      {journalPosts.length > 0 && (
+        <div className="max-w-7xl mx-auto px-6 md:px-10 mt-24 md:mt-32 pt-16 border-t border-[#E8B4A8]/30">
+          <p className="text-[0.6rem] tracking-[0.35em] uppercase text-[#A0622A] mb-10 text-center">From the Journal</p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+            {journalPosts.map((p) => (
+              <Link key={p.slug} href={`/blog/${p.slug}`} className="group flex flex-col gap-3">
+                <span className="text-[0.52rem] tracking-[0.28em] uppercase text-[#A0622A]">{p.category}</span>
+                <div className="border-t border-[#E8B4A8]/30 pt-4">
+                  <h3 className="font-heading text-xl font-light text-[#2C2220] leading-snug group-hover:text-[#A0622A] transition-colors">
+                    {p.title}
+                  </h3>
+                </div>
+                <span className="text-[0.58rem] tracking-[0.2em] uppercase text-[#A0622A] group-hover:underline underline-offset-4">Read →</span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      )}
 
     </div>
   );

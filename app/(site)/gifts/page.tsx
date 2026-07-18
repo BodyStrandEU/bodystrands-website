@@ -1,7 +1,7 @@
 import Image from "next/image";
 import type { Metadata } from "next";
 import ProductCard from "@/components/ProductCard";
-import { products } from "@/lib/products";
+import { products, CATEGORIES } from "@/lib/products";
 
 export const metadata: Metadata = {
   title: "Gifts — Handmade Jewelry Gifts Under €25 & €40 | Bodystrands",
@@ -22,6 +22,13 @@ export default function GiftsPage() {
   const under40 = active
     .filter((p) => p.price > UNDER_25_MAX && p.price <= UNDER_40_MAX)
     .sort((a, b) => a.price - b.price);
+
+  const under40ByCategory = CATEGORIES
+    .map((category) => ({
+      category,
+      items: under40.filter((p) => p.category === category),
+    }))
+    .filter((section) => section.items.length > 0);
 
   return (
     <div className="pt-20 md:pt-32 pb-24">
@@ -68,16 +75,26 @@ export default function GiftsPage() {
         )}
       </section>
 
-      {/* Under €40 */}
+      {/* Under €40 — grouped by category, since this tier is much larger */}
       <section className="max-w-7xl mx-auto px-6 md:px-10">
-        <div className="flex items-center gap-3 mb-8">
+        <div className="flex items-center gap-3 mb-10 md:mb-12">
           <h2 className="font-heading text-2xl md:text-3xl font-light text-[#2C2220]">Under €40</h2>
           <div className="flex-1 h-px bg-[#E8B4A8]/40" />
         </div>
-        {under40.length > 0 ? (
-          <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-x-0.5 gap-y-4 md:gap-x-4 md:gap-y-8">
-            {under40.map((p) => (
-              <ProductCard key={p.id} product={p} />
+        {under40ByCategory.length > 0 ? (
+          <div className="flex flex-col gap-14 md:gap-20">
+            {under40ByCategory.map(({ category, items }) => (
+              <div key={category}>
+                <div className="flex items-center gap-3 mb-6">
+                  <p className="text-[0.6rem] tracking-[0.3em] uppercase text-[#A0622A]">{category}</p>
+                  <div className="flex-1 h-px bg-[#E8B4A8]/25" />
+                </div>
+                <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-x-0.5 gap-y-4 md:gap-x-4 md:gap-y-8">
+                  {items.map((p) => (
+                    <ProductCard key={p.id} product={p} />
+                  ))}
+                </div>
+              </div>
             ))}
           </div>
         ) : (

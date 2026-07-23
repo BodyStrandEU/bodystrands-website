@@ -124,26 +124,6 @@ export default function HomePage() {
       {/* ── TRUST BADGES ── */}
       <TrustBadgesStrip />
 
-      {/* ── FEATURED STRIP ── */}
-      {featured.length > 0 && (
-        <section className="py-16 md:py-24">
-          <ScrollReveal>
-            <div className="max-w-7xl mx-auto px-6 md:px-10 mb-8 md:mb-12">
-              <div className="flex items-end justify-between">
-                <div>
-                  <p className="text-[0.6rem] tracking-[0.3em] uppercase text-[#A0622A] mb-3">Just Arrived</p>
-                  <h2 className="font-heading text-4xl md:text-5xl font-light text-[#2C2220]">New Pieces</h2>
-                </div>
-                <Link href="/shop" className="hidden md:block text-[0.6rem] tracking-[0.22em] uppercase text-[#A0622A] hover:underline underline-offset-4">
-                  View All →
-                </Link>
-              </div>
-            </div>
-          </ScrollReveal>
-          <NewPiecesRow featured={featured} />
-        </section>
-      )}
-
       {/* ── SHOP BY CATEGORY ── */}
       <section className="max-w-7xl mx-auto px-4 md:px-10 py-16 md:py-24">
         <ScrollReveal>
@@ -160,27 +140,51 @@ export default function HomePage() {
           </div>
         </ScrollReveal>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-3">
-          {heroTile && (
-            <div className="col-span-2 md:row-span-2">
-              <Link href={heroTile.href} className="group block h-full">
-                <div className="relative overflow-hidden aspect-[3/4] md:aspect-auto md:h-full">
-                  <RippleImage src={heroTile.image} alt={heroTile.label} priority />
-                  <div className="absolute bottom-0 left-0 right-0 h-2/5 bg-gradient-to-t from-black/55 to-transparent" />
-                  <div className="absolute bottom-0 left-0 p-4 md:p-7">
-                    <h3 className="font-heading font-light text-white leading-tight text-2xl md:text-3xl">
-                      {heroTile.label}
-                    </h3>
+        <ScrollReveal delay={100}>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-3">
+            {heroTile && (
+              <div className="col-span-2 md:row-span-2">
+                <Link href={heroTile.href} className="group block h-full">
+                  <div className="relative overflow-hidden aspect-[3/4] md:aspect-auto md:h-full">
+                    <RippleImage src={heroTile.image} alt={heroTile.label} priority />
+                    <div className="absolute bottom-0 left-0 right-0 h-2/5 bg-gradient-to-t from-black/55 to-transparent" />
+                    <div className="absolute bottom-0 left-0 p-4 md:p-7">
+                      <h3 className="font-heading font-light text-white leading-tight text-2xl md:text-3xl">
+                        {heroTile.label}
+                      </h3>
+                    </div>
                   </div>
-                </div>
-              </Link>
-            </div>
-          )}
-          {gridTiles.map((tile) => (
-            <CategoryTile key={tile.label} tile={tile} />
-          ))}
-        </div>
+                </Link>
+              </div>
+            )}
+            {gridTiles.map((tile) => (
+              <CategoryTile key={tile.label} tile={tile} />
+            ))}
+          </div>
+        </ScrollReveal>
       </section>
+
+      {/* ── FEATURED STRIP ── */}
+      {featured.length > 0 && (
+        <section className="py-16 md:py-24">
+          <ScrollReveal>
+            <div className="max-w-7xl mx-auto px-6 md:px-10 mb-8 md:mb-12">
+              <div className="flex items-end justify-between">
+                <div>
+                  <p className="text-[0.6rem] tracking-[0.3em] uppercase text-[#A0622A] mb-3">Just Arrived</p>
+                  <h2 className="font-heading text-4xl md:text-5xl font-light text-[#2C2220]">New Pieces</h2>
+                </div>
+                <Link href="/shop" className="hidden md:block text-[0.6rem] tracking-[0.22em] uppercase text-[#A0622A] hover:underline underline-offset-4">
+                  View All →
+                </Link>
+              </div>
+            </div>
+          </ScrollReveal>
+          <ScrollReveal delay={100}>
+            <NewPiecesRow featured={featured} />
+          </ScrollReveal>
+        </section>
+      )}
 
       {/* ── STATEMENT ── */}
       <StatementReveal />
@@ -202,7 +206,9 @@ export default function HomePage() {
       </section>
 
       {/* ── LIFESTYLE SLIDER ── */}
-      <LifestyleSlider images={lifestyleImages} />
+      <ScrollReveal>
+        <LifestyleSlider images={lifestyleImages} />
+      </ScrollReveal>
 
       {/* ── BRAND STORY ── */}
       <section className="max-w-7xl mx-auto px-6 md:px-10 py-20 md:py-28 grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
@@ -229,14 +235,20 @@ export default function HomePage() {
 
       {/* ── REVIEWS ── */}
       <div className="bg-[#FAF7F5]">
-        <ReviewsMarquee />
+        <ScrollReveal>
+          <ReviewsMarquee />
+        </ScrollReveal>
       </div>
 
       {/* ── CUSTOMER PHOTOS (UGC) ── */}
-      <UGCGallery />
+      <ScrollReveal>
+        <UGCGallery />
+      </ScrollReveal>
 
       {/* ── INSTAGRAM ── */}
-      <InstagramSection images={instagramImages} />
+      <ScrollReveal>
+        <InstagramSection images={instagramImages} />
+      </ScrollReveal>
 
       {/* Diamond divider */}
       <div className="max-w-7xl mx-auto px-6 md:px-10 flex items-center gap-6">

@@ -51,18 +51,20 @@ export default function HeroCarousel() {
           Fixed min-height on the text wrapper so 1-line and 2-line headlines
           don't change the panel's total height and push the image down. ── */}
       <div className="relative z-10 bg-[#FDF9F7] pt-20 md:pt-24 pb-6 md:pb-8 px-6 flex-shrink-0 flex flex-col items-center text-center">
-        <p key={`eyebrow-${active}`} className="hero-enter text-[0.58rem] md:text-[0.62rem] tracking-[0.4em] uppercase text-[#A0622A] mb-3">
+        <p key={`eyebrow-${active}`} className="hero-enter text-[0.58rem] md:text-[0.62rem] tracking-[0.4em] uppercase text-[#A0622A] mb-3" style={{ animationDelay: "0.05s" }}>
           {slide.eyebrow}
         </p>
         <div className="min-h-[56px] md:min-h-[130px] flex items-center justify-center">
-          <h1 key={`headline-${active}`} className="hero-enter font-heading text-3xl md:text-5xl lg:text-6xl font-light text-[#2C2220] leading-[1.08] max-w-4xl">
+          <h1 key={`headline-${active}`} className="hero-enter font-heading text-3xl md:text-5xl lg:text-6xl font-light text-[#2C2220] leading-[1.08] max-w-4xl" style={{ animationDelay: "0.2s" }}>
             {slide.headline}
           </h1>
         </div>
       </div>
 
-      {/* ── Image block — fills all remaining viewport height ── */}
-      <div className="relative flex-1 overflow-hidden">
+      {/* ── Image block — fills all remaining viewport height.
+          This wrapper is never re-keyed by `active`, so hero-image-reveal only
+          plays once on initial mount — text appears first, image follows. ── */}
+      <div className="relative flex-1 overflow-hidden hero-image-reveal">
         {SLIDES.map((s, i) => (
           <div
             key={s.image}
@@ -83,7 +85,7 @@ export default function HeroCarousel() {
 
         {/* Subtext + CTA overlaid on the image */}
         <div className="absolute bottom-0 left-0 right-0 z-10 flex flex-col items-center text-center px-6 pb-8 md:pb-12">
-          <p key={`sub-${active}`} className="hero-enter text-sm font-light leading-relaxed tracking-wide text-white/90 mb-6 max-w-sm drop-shadow-md">
+          <p key={`sub-${active}`} className="hero-enter text-sm font-light leading-relaxed tracking-wide text-white/90 mb-6 max-w-sm drop-shadow-md" style={{ animationDelay: active === 0 ? "0.85s" : "0s" }}>
             {slide.sub}
           </p>
           <MagneticButton>
@@ -116,6 +118,13 @@ export default function HeroCarousel() {
         @keyframes heroProgress {
           from { width: 0%; }
           to { width: 100%; }
+        }
+        @keyframes heroImageReveal {
+          from { opacity: 0; transform: scale(1.03); }
+          to   { opacity: 1; transform: scale(1); }
+        }
+        .hero-image-reveal {
+          animation: heroImageReveal 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.45s both;
         }
       `}</style>
     </section>

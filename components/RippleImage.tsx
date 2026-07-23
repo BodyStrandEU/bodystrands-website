@@ -130,7 +130,12 @@ export default function RippleImage({ src, alt, className = "", priority = false
         tex.dispose();
         return;
       }
-      tex.colorSpace = THREE.SRGBColorSpace;
+      // This shader only displaces UV coordinates and writes gl_FragColor directly with
+      // no linear-space lighting math and no re-encode step — so the texture must stay
+      // in its raw sRGB bytes (NoColorSpace), not auto-decoded to linear on sample.
+      // Auto-decoding here (SRGBColorSpace) without a matching re-encode on output is
+      // what caused the washed-out/overexposed "burnt" look on this tile.
+      tex.colorSpace = THREE.NoColorSpace;
       tex.minFilter = THREE.LinearFilter;
       tex.magFilter = THREE.LinearFilter;
       uniforms.uTexture.value = tex;

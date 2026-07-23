@@ -3,6 +3,8 @@ import path from "path";
 import Image from "next/image";
 import Link from "next/link";
 import NewPiecesRow from "@/components/NewPiecesRow";
+import BestSellersCarousel from "@/components/BestSellersCarousel";
+import InfoPillars from "@/components/InfoPillars";
 import StatCounter from "@/components/StatCounter";
 import ScrollReveal from "@/components/ScrollReveal";
 import HeroCarousel from "@/components/HeroCarousel";
@@ -124,6 +126,9 @@ export default function HomePage() {
       {/* ── TRUST BADGES ── */}
       <TrustBadgesStrip />
 
+      {/* ── BEST SELLERS ── */}
+      <BestSellersCarousel />
+
       {/* ── SHOP BY CATEGORY ── */}
       <section className="max-w-7xl mx-auto px-4 md:px-10 py-16 md:py-24">
         <ScrollReveal>
@@ -185,6 +190,11 @@ export default function HomePage() {
           </ScrollReveal>
         </section>
       )}
+
+      {/* ── INFO PILLARS ── */}
+      <ScrollReveal>
+        <InfoPillars />
+      </ScrollReveal>
 
       {/* ── STATEMENT ── */}
       <StatementReveal />

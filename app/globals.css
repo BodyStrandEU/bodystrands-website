@@ -114,6 +114,16 @@ h1, h2, h3, h4 {
   animation-play-state: paused;
 }
 
+/* Best sellers carousel — same seamless-loop technique, slower/wider for product cards */
+.best-sellers-track {
+  animation: marquee 38s linear infinite;
+  will-change: transform;
+}
+
+.best-sellers-track:hover {
+  animation-play-state: paused;
+}
+
 /* Page transition */
 @keyframes page-in {
   from { opacity: 0; transform: translateY(7px); }

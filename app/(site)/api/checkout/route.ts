@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import Stripe from "stripe";
 import { products } from "@/lib/products";
 import { getShippingRate, ALL_COUNTRIES } from "@/lib/shipping";
+import { fetchExchangeRates, type CurrencyCode } from "@/lib/currency";
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!);
 
@@ -27,8 +28,8 @@ function resolveImage(origin: string, img: string): string {
   return img.startsWith("http") ? img : `${origin}${img}`;
 }
 
-function buildSingleShippingOption(country: string, totalAmount: number): Stripe.Checkout.SessionCreateParams.ShippingOption[] {
-  const rate = getShippingRate(country, totalAmount);
+function buildSingleShippingOption(country: string, totalAmount: number, rates: Record<CurrencyCode, number>): Stripe.Checkout.SessionCreateParams.ShippingOption[] {
+  const rate = getShippingRate(country, totalAmount, rates);
   return [{
     shipping_rate_data: {
       type:          "fixed_amount" as const,
@@ -42,12 +43,12 @@ function buildSingleShippingOption(country: string, totalAmount: number): Stripe
   }];
 }
 
-function buildAllShippingOptions(totalAmount: number): Stripe.Checkout.SessionCreateParams.ShippingOption[] {
+function buildAllShippingOptions(totalAmount: number, rates: Record<CurrencyCode, number>): Stripe.Checkout.SessionCreateParams.ShippingOption[] {
   // One representative country per zone — getShippingRate is the single source of truth
   // for rates/thresholds, so this can't drift out of sync with the per-country path again.
   const zoneSamples = ["DE", "GB", "US", "CA", "AU"];
   return zoneSamples.map((code) => {
-    const rate = getShippingRate(code, totalAmount);
+    const rate = getShippingRate(code, totalAmount, rates);
     return {
       shipping_rate_data: {
         type:          "fixed_amount" as const,
@@ -69,6 +70,8 @@ export async function POST(req: NextRequest) {
     const body   = await req.json() as Record<string, unknown>;
     const origin = req.headers.get("origin") ?? "https://bodystrands.com";
     const country = (body.country as string | undefined) ?? "";
+    // Live rates so US/CA free-shipping resolves to an exact $60 USD / $75 CAD at checkout.
+    const rates = await fetchExchangeRates();
 
     // ── Cart checkout (multiple items) ──────────────────────────────────
     if (Array.isArray(body.items)) {
@@ -111,8 +114,8 @@ export async function POST(req: NextRequest) {
       const giftNote = typeof body.giftNote === "string" ? body.giftNote.slice(0, 500) : "";
 
       const shipping_options = country
-        ? buildSingleShippingOption(country, totalAmount)
-        : buildAllShippingOptions(totalAmount);
+        ? buildSingleShippingOption(country, totalAmount, rates)
+        : buildAllShippingOptions(totalAmount, rates);
 
       if (giftWrap) lineItems.push(giftWrapLineItem());
 
@@ -153,8 +156,8 @@ export async function POST(req: NextRequest) {
     const totalAmount = product.price + (priceAdd ?? 0);
 
     const shipping_options = country
-      ? buildSingleShippingOption(country, totalAmount)
-      : buildAllShippingOptions(totalAmount);
+      ? buildSingleShippingOption(country, totalAmount, rates)
+      : buildAllShippingOptions(totalAmount, rates);
 
     const session = await stripe.checkout.sessions.create({
       // payment_method_types intentionally omitted: Checkout Sessions manage eligible

@@ -57,8 +57,10 @@ export default async function RootLayout({
 
   return (
     <html lang="en" className={`${cormorant.variable} ${josefin.variable}`}>
-      <head>
-        {/* Consent defaults: analytics on by default (opt-out), ads always off */}
+      <body>
+        {/* Consent defaults: analytics on by default (opt-out), ads always off.
+            beforeInteractive scripts must be a normal child here, not wrapped in a
+            manual <head> tag — Next.js hoists it into <head> itself. */}
         <Script id="consent-default" strategy="beforeInteractive">{`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
@@ -68,8 +70,6 @@ export default async function RootLayout({
             wait_for_update: 300
           });
         `}</Script>
-      </head>
-      <body>
         <CurrencyProvider rates={rates}>
           <CartProvider>
             {children}
@@ -145,7 +145,7 @@ export default async function RootLayout({
             fbq('track', 'PageView');
           }
         `}</Script>
-        <noscript>{`<img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1921612571995204&ev=PageView&noscript=1"/>`}</noscript>
+        <noscript dangerouslySetInnerHTML={{ __html: `<img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1921612571995204&ev=PageView&noscript=1"/>` }} />
       </body>
     </html>
   );

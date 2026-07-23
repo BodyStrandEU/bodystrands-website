@@ -164,7 +164,7 @@ export default function ProductCard({ product, priority = false }: { product: Pr
             sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
             priority={priority && i === 0}
             loading={priority && i === 0 ? "eager" : "lazy"}
-            className={`object-cover transition-opacity duration-300 ${
+            className={`object-cover transition-[opacity,transform] duration-500 ease-out group-hover:scale-[1.04] ${
               i === slideIndex ? "opacity-100" : "opacity-0"
             }`}
           />

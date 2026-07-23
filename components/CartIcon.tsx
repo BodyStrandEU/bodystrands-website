@@ -29,10 +29,10 @@ export default function CartIcon({ light }: { light?: boolean }) {
     return () => document.removeEventListener("mousedown", onClick);
   }, []);
 
-  const { currency, format } = useCurrency();
+  const { currency, format, rates } = useCurrency();
 
   // Shipping calculation
-  const shippingRate    = shippingCountry ? getShippingRate(shippingCountry, subtotal) : null;
+  const shippingRate    = shippingCountry ? getShippingRate(shippingCountry, subtotal, rates) : null;
   const shippingAmount  = shippingRate ? shippingRate.amount / 100 : null;
   const orderTotal      = subtotal + (shippingAmount ?? 0) + (giftWrap ? GIFT_WRAP_FEE : 0);
   const remaining       = Math.max(0, (shippingRate?.freeThreshold ?? FREE_THRESHOLD) - subtotal);

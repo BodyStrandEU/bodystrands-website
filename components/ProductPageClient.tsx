@@ -128,7 +128,7 @@ export default function ProductPageClient({ product }: { product: Product }) {
     }
   }, [groupSelections, finishGroup?.label]);
 
-  const { format } = useCurrency();
+  const { format, rates } = useCurrency();
 
   // Real review stats for the header badge — this product's own reviews if it has
   // any, otherwise the shop-wide average (same "own vs shop-wide" logic as
@@ -365,7 +365,7 @@ export default function ProductPageClient({ product }: { product: Product }) {
             </select>
           </div>
           {shippingCountry && (() => {
-            const rate = getShippingRate(shippingCountry, totalPrice);
+            const rate = getShippingRate(shippingCountry, totalPrice, rates);
             return (
               <p className="mt-1.5 text-[0.58rem] tracking-[0.1em] uppercase text-[#8C7B6E] flex items-center gap-2">
                 <span className="w-1 h-1 bg-[#A0622A] rounded-full inline-block flex-shrink-0" />

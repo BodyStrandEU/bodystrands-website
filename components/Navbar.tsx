@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import { usePathname } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import { activeCategories } from "@/lib/products";
@@ -9,7 +8,6 @@ import SearchModal from "@/components/SearchModal";
 import CartIcon from "@/components/CartIcon";
 import { useWishlist } from "@/lib/wishlist";
 import { useCurrency } from "@/lib/currency-context";
-import CountdownTimer from "@/components/CountdownTimer";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 
 function WishlistIcon({ light }: { light?: boolean }) {
@@ -35,8 +33,9 @@ function WishlistIcon({ light }: { light?: boolean }) {
 }
 
 export default function Navbar() {
-  const pathname = usePathname();
-  const isHero = pathname === "/"; // only homepage has a dark full-bleed hero behind the nav
+  // The homepage hero is now a light cream panel, not a dark full-bleed image behind the
+  // nav — so nav text/icons should never switch to the light/white variant on this page.
+  const overDarkHero = false;
   const { currency, format } = useCurrency();
 
   // US/CA get their own fixed native-currency thresholds instead of a converted EUR50 —
@@ -100,13 +99,6 @@ export default function Navbar() {
   return (
     <>
     <header className="fixed top-0 left-0 right-0 z-50">
-      {/* Sale countdown — homepage only, always visible, never collapses on scroll */}
-      {isHero && (
-        <div className="bg-[#FDF9F7] border-b border-[#E8B4A8]/30 py-2 flex items-center justify-center">
-          <CountdownTimer />
-        </div>
-      )}
-
       {/* Announcement bar */}
       <div
         className={`bg-[#2C2220] overflow-hidden transition-all duration-300 ${
@@ -146,7 +138,7 @@ export default function Navbar() {
               <button
                 onClick={() => setShopOpen(!shopOpen)}
                 className={`flex items-center gap-1.5 text-[0.65rem] font-light tracking-[0.22em] uppercase transition-colors duration-200 ${
-                  shopOpen ? "text-[#A0622A]" : (scrolled || !isHero) ? "text-[#2C2220] hover:text-[#A0622A]" : "text-[#FDF9F7] hover:text-white [text-shadow:0_1px_4px_rgba(0,0,0,0.5)]"
+                  shopOpen ? "text-[#A0622A]" : (scrolled || !overDarkHero) ? "text-[#2C2220] hover:text-[#A0622A]" : "text-[#FDF9F7] hover:text-white [text-shadow:0_1px_4px_rgba(0,0,0,0.5)]"
                 }`}
               >
                 Shop
@@ -222,7 +214,7 @@ export default function Navbar() {
               <button
                 onClick={() => setGiftsOpen(!giftsOpen)}
                 className={`flex items-center gap-1.5 text-[0.65rem] font-light tracking-[0.22em] uppercase transition-colors duration-200 ${
-                  giftsOpen ? "text-[#A0622A]" : (scrolled || !isHero) ? "text-[#2C2220] hover:text-[#A0622A]" : "text-[#FDF9F7] hover:text-white [text-shadow:0_1px_4px_rgba(0,0,0,0.5)]"
+                  giftsOpen ? "text-[#A0622A]" : (scrolled || !overDarkHero) ? "text-[#2C2220] hover:text-[#A0622A]" : "text-[#FDF9F7] hover:text-white [text-shadow:0_1px_4px_rgba(0,0,0,0.5)]"
                 }`}
               >
                 Gifts
@@ -264,7 +256,7 @@ export default function Navbar() {
                 key={link.href}
                 href={link.href}
                 className={`text-[0.65rem] font-light tracking-[0.22em] uppercase transition-colors duration-200 ${
-                  (scrolled || !isHero) ? "text-[#2C2220] hover:text-[#A0622A]" : "text-[#FDF9F7] hover:text-white [text-shadow:0_1px_4px_rgba(0,0,0,0.5)]"
+                  (scrolled || !overDarkHero) ? "text-[#2C2220] hover:text-[#A0622A]" : "text-[#FDF9F7] hover:text-white [text-shadow:0_1px_4px_rgba(0,0,0,0.5)]"
                 }`}
               >
                 {link.label}
@@ -278,16 +270,16 @@ export default function Navbar() {
               onClick={() => setSearchOpen(true)}
               aria-label="Search"
               className={`flex items-center justify-center w-8 h-8 transition-colors duration-200 ${
-                (scrolled || !isHero) ? "text-[#2C2220] hover:text-[#A0622A]" : "text-[#FDF9F7] hover:text-white"
+                (scrolled || !overDarkHero) ? "text-[#2C2220] hover:text-[#A0622A]" : "text-[#FDF9F7] hover:text-white"
               }`}
             >
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                 <circle cx="11" cy="11" r="8" /><path d="m21 21-4.35-4.35" />
               </svg>
             </button>
-            <LanguageSwitcher light={!scrolled && isHero} />
-            <WishlistIcon light={!scrolled && isHero} />
-            <CartIcon light={!scrolled && isHero} />
+            <LanguageSwitcher light={!scrolled && overDarkHero} />
+            <WishlistIcon light={!scrolled && overDarkHero} />
+            <CartIcon light={!scrolled && overDarkHero} />
           </div>
 
           {/* Mobile: search + wishlist + cart + hamburger */}

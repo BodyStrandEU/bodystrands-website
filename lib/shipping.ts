@@ -1,3 +1,5 @@
+import { FALLBACK_RATES, type CurrencyCode } from "./currency";
+
 export type ShippingRate = {
   displayName: string;
   amount:      number; // cents
@@ -12,7 +14,14 @@ const EU = new Set([
   "PL","PT","RO","SK","SI","ES","SE",
 ]);
 
-export function getShippingRate(countryCode: string, cartTotal: number): ShippingRate {
+export function getShippingRate(
+  countryCode: string,
+  cartTotal: number,
+  // Live USD/CAD rates (from lib/currency.ts's fetchExchangeRates) so the US/CA free-shipping
+  // cutoff always resolves to an exact $60 USD / $75 CAD, not a stale EUR approximation.
+  // Defaults to the static fallback rates for call sites that only need deliveryMin/Max.
+  rates: Record<CurrencyCode, number> = FALLBACK_RATES,
+): ShippingRate {
   if (EU.has(countryCode)) {
     const free = cartTotal >= 50;
     return {
@@ -32,25 +41,25 @@ export function getShippingRate(countryCode: string, cartTotal: number): Shippin
     };
   }
   if (countryCode === "US") {
-    // $60 USD threshold, converted to EUR using the same approximate rate as
-    // lib/currency.ts's FALLBACK_RATES.USD (1.08) — keep these two in sync by hand.
-    const threshold = 55.56;
+    // Exact $60 USD threshold — converted to EUR using the live rate passed in, not a
+    // hardcoded snapshot, so it always resolves to a real $60.00 regardless of FX drift.
+    const threshold = 60 / rates.USD;
     const free = cartTotal >= threshold;
     return {
       displayName: free ? "Free Shipping — USA" : "Standard Shipping — USA",
-      amount:      free ? 0 : 800,
+      amount:      free ? 0 : 500,
       deliveryMin: 3, deliveryMax: 10,
       freeThreshold: threshold,
     };
   }
   if (countryCode === "CA") {
-    // $75 CAD threshold, converted to EUR using the same approximate rate as
-    // lib/currency.ts's FALLBACK_RATES.CAD (1.47) — keep these two in sync by hand.
-    const threshold = 51.02;
+    // Exact $75 CAD threshold — converted to EUR using the live rate passed in, not a
+    // hardcoded snapshot, so it always resolves to a real $75.00 regardless of FX drift.
+    const threshold = 75 / rates.CAD;
     const free = cartTotal >= threshold;
     return {
       displayName: free ? "Free Shipping — Canada" : "Standard Shipping — Canada",
-      amount:      free ? 0 : 800,
+      amount:      free ? 0 : 500,
       deliveryMin: 3, deliveryMax: 10,
       freeThreshold: threshold,
     };

@@ -401,3 +401,9 @@ When scheduling a video on Instagram or Facebook, post the video URL alone as me
 ### Script location
 - Schedule script: scratchpad `new_schedule.py` (rebuild each session from the product catalogue below)
 - Postiz API key: in `.env.local` as `POSTIZ_API_KEY`
+
+### Automated duplicate check — ALWAYS run this, don't rely on memory of the rules
+The no-repeat rules above have been violated multiple times (Jul 12, Jul 13, and again Jul 22/23 — a run of 5-6 consecutive same-product posts slipped through on IG+FB out to Aug 25, undetected until the user found it live). Relying on a session correctly re-implementing the rule from scratch is not reliable enough.
+- `scripts/check-social-duplicates.mjs` — scans the **full** upcoming Postiz queue (60 days out, not just the next few days) for same-product-in-a-row posts on IG/FB and repeated content on Pinterest. Run it with `POSTIZ_API_KEY=... node scripts/check-social-duplicates.mjs` after scheduling ANY new batch, before telling the user it's done. Exits non-zero if anything is found.
+- `.github/workflows/social-duplicate-check.yml` — runs this script daily (06:00 UTC) and opens a GitHub issue if violations are found, so this is caught automatically even if no one runs it manually.
+- If the checker finds violations: delete the repeat posts (state=QUEUE only, never touch PUBLISHED — see the hard rule above) and replace with different products, picked to avoid anything used within ~3 days of the fix window on that platform.

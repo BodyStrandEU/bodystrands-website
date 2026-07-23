@@ -3,7 +3,11 @@ import path from "path";
 import Image from "next/image";
 import Link from "next/link";
 import NewPiecesRow from "@/components/NewPiecesRow";
+import StatCounter from "@/components/StatCounter";
 import ScrollReveal from "@/components/ScrollReveal";
+import HeroCarousel from "@/components/HeroCarousel";
+import StatementReveal from "@/components/StatementReveal";
+import RippleImage from "@/components/RippleImage";
 import ReviewsMarquee from "@/components/ReviewsMarquee";
 import LifestyleSlider from "@/components/LifestyleSlider";
 import BrandVideo from "@/components/BrandVideo";
@@ -96,48 +100,8 @@ export default function HomePage() {
 
   return (
     <>
-      {/* ── HERO — video background ── */}
-      <section className="relative min-h-screen flex flex-col">
-        <div className="absolute inset-0 overflow-hidden">
-          <video
-            autoPlay
-            muted
-            loop
-            playsInline
-            preload="auto"
-            poster="/images/hero-video-poster.jpg"
-            className="absolute inset-0 w-full h-full object-cover object-center"
-          >
-            <source src="/videos/promo.mp4" type="video/mp4" />
-          </video>
-          <div className="absolute inset-0 bg-gradient-to-b from-[#2C2220]/55 via-transparent to-[#2C2220]/70" />
-        </div>
-        <div className="flex-1" />
-        <div className="relative z-10 flex flex-col items-center text-center px-6 pb-20 md:pb-28">
-          <p className="hero-enter text-[0.6rem] tracking-[0.4em] uppercase text-[#E8B4A8] mb-5" style={{ animationDelay: "0.05s" }}>
-            Handmade Body Jewelry
-          </p>
-          <h1 className="hero-enter font-heading text-5xl md:text-7xl font-light text-white leading-[1.05] mb-8 drop-shadow-md" style={{ animationDelay: "0.3s" }}>
-            Wear it.<br />
-            <em className="not-italic text-[#E8B4A8]">Feel it.</em>
-          </h1>
-          <p className="hero-enter text-sm font-light leading-relaxed tracking-wide text-white/80 mb-10 max-w-sm" style={{ animationDelay: "0.52s" }}>
-            Dainty, minimal body chains crafted by hand. Made to move with you.
-          </p>
-          <div className="hero-enter flex flex-col sm:flex-row gap-4" style={{ animationDelay: "0.7s" }}>
-            <Link href="/shop" className="btn-primary-filled text-center">Shop Now</Link>
-            <Link href="/about" className="text-[0.65rem] tracking-[0.22em] uppercase border border-white/50 text-white hover:bg-white/10 transition-colors px-8 py-3 text-center">
-              Our Story
-            </Link>
-          </div>
-          <div className="scroll-cue mt-12 flex flex-col items-center gap-2">
-            <span className="text-[0.42rem] tracking-[0.45em] uppercase text-white">Scroll</span>
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.3" className="text-white">
-              <polyline points="6 9 12 15 18 9" />
-            </svg>
-          </div>
-        </div>
-      </section>
+      {/* ── HERO — image carousel ── */}
+      <HeroCarousel />
 
       {/* ── MARQUEE BELT ── */}
       <div className="bg-[#2C2220] py-4 overflow-hidden select-none">
@@ -201,13 +165,7 @@ export default function HomePage() {
             <div className="col-span-2 md:row-span-2">
               <Link href={heroTile.href} className="group block h-full">
                 <div className="relative overflow-hidden aspect-[3/4] md:aspect-auto md:h-full">
-                  <Image
-                    src={heroTile.image}
-                    alt={heroTile.label}
-                    fill
-                    priority
-                    className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-[1.04]"
-                  />
+                  <RippleImage src={heroTile.image} alt={heroTile.label} priority />
                   <div className="absolute bottom-0 left-0 right-0 h-2/5 bg-gradient-to-t from-black/55 to-transparent" />
                   <div className="absolute bottom-0 left-0 p-4 md:p-7">
                     <h3 className="font-heading font-light text-white leading-tight text-2xl md:text-3xl">
@@ -225,24 +183,7 @@ export default function HomePage() {
       </section>
 
       {/* ── STATEMENT ── */}
-      <ScrollReveal>
-        <section className="bg-[#2C2220] py-24 md:py-36 overflow-hidden">
-          <div className="max-w-7xl mx-auto px-6 md:px-10">
-            <p
-              className="font-heading font-light text-[#E8B4A8] leading-[0.88] tracking-tight"
-              style={{ fontSize: "clamp(3.2rem, 9vw, 7.5rem)" }}
-            >
-              Put it on.
-            </p>
-            <p
-              className="font-heading font-light italic text-white leading-[0.88] tracking-tight text-right"
-              style={{ fontSize: "clamp(3.2rem, 9vw, 7.5rem)" }}
-            >
-              Leave it on.
-            </p>
-          </div>
-        </section>
-      </ScrollReveal>
+      <StatementReveal />
 
       {/* ── STATS ── */}
       <section className="border-y border-[#E8B4A8]/20 py-14 md:py-20">
@@ -250,7 +191,9 @@ export default function HomePage() {
           <div className="max-w-7xl mx-auto px-6 md:px-10 grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-6">
             {STATS.map((stat) => (
               <div key={stat.number} className="flex flex-col items-center text-center gap-2">
-                <span className="font-heading text-4xl md:text-5xl font-light text-[#A0622A]">{stat.number}</span>
+                <span className="font-heading text-4xl md:text-5xl font-light text-[#A0622A]">
+                  <StatCounter value={stat.number} />
+                </span>
                 <span className="text-[0.55rem] tracking-[0.22em] uppercase text-[#8C7B6E]">{stat.label}</span>
               </div>
             ))}

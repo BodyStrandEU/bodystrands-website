@@ -2857,6 +2857,16 @@
       "productId": "cowrie-shell-anklet",
       "reviewId": "batch3-0",
       "shopResponse": "Thank you so much for your feedback! Glad you love your shell anklet :D"
+    },
+    {
+      "name": "Sofia",
+      "location": "",
+      "rating": 5,
+      "date": "Jul 21, 2026",
+      "headline": "Subtle and stylish",
+      "text": "A lovely anklet with a subtle and stylish look. It sits nicely on the ankle, feels comfortable throughout the day, and adds a nice touch without being too noticeable.",
+      "productId": "barefoot-sandal-toe-chain",
+      "reviewId": "batch3-1"
     }
   ],
   "Shoulder & Arm Chains": [
@@ -4938,6 +4948,16 @@
       "productId": "gold-body-chain-harness",
       "reviewId": "batch2-19",
       "shopResponse": "Hi Colette, Thank you so much for supporting my brand new Etsy shop — your feedback means a lot. I'm sorry the body chain didn't meet expectations. Since then, I've reinforced all of our chains to ensure better durability and quality moving forward. I'm constantly improving the materials and construction based on customer input like yours. Every item is backed by a 30-day money-back guarantee, and I stand behind everything I send out. Thanks again for your support — your input helps shape a better experience for future customers! — Maria"
+    },
+    {
+      "name": "Sofia",
+      "location": "",
+      "rating": 5,
+      "date": "Jul 21, 2026",
+      "headline": "Delicate, elegant, and comfortable",
+      "text": "The body chain is very delicate and looks really nice! It fits well and is comfortable to wear. The design is simple but elegant, making it easy to pair with different outfits. Overall, I'm happy with the quality and would recommend it!",
+      "productId": "bikini-body-chain",
+      "reviewId": "batch3-1"
     }
   ]
 }

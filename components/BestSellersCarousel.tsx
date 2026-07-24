@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { products } from "@/lib/products";
@@ -63,14 +64,58 @@ function BestSellerCard({ product }: { product: (typeof products)[number] }) {
   );
 }
 
+// Auto-scroll speed in pixels per frame (~60fps).
+const AUTO_SCROLL_SPEED = 0.6;
+// How long to wait after the user lets go (touch/click) before auto-scroll resumes.
+const RESUME_DELAY_MS = 2200;
+
 export default function BestSellersCarousel() {
+  const trackRef = useRef<HTMLDivElement>(null);
+  const pausedRef = useRef(false);
+  const resumeTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
   const bestSellers = BEST_SELLER_IDS
     .map((id) => products.find((p) => p.id === id))
     .filter((p): p is (typeof products)[number] => !!p);
 
+  // Auto-scroll loop, driven by scrollLeft directly (not a CSS transform) so the
+  // same element can also be freely, natively scrolled/dragged by the user at any time.
+  useEffect(() => {
+    const track = trackRef.current;
+    if (!track) return;
+
+    let rafId: number;
+    function step() {
+      if (track && !pausedRef.current) {
+        track.scrollLeft += AUTO_SCROLL_SPEED;
+        // Content is duplicated once — once we've scrolled past the first copy,
+        // silently rewind by exactly one copy's width so the loop reads as infinite.
+        const half = track.scrollWidth / 2;
+        if (track.scrollLeft >= half) {
+          track.scrollLeft -= half;
+        }
+      }
+      rafId = requestAnimationFrame(step);
+    }
+    rafId = requestAnimationFrame(step);
+    return () => cancelAnimationFrame(rafId);
+  }, []);
+
+  function pause() {
+    if (resumeTimerRef.current) clearTimeout(resumeTimerRef.current);
+    pausedRef.current = true;
+  }
+
+  function scheduleResume() {
+    if (resumeTimerRef.current) clearTimeout(resumeTimerRef.current);
+    resumeTimerRef.current = setTimeout(() => {
+      pausedRef.current = false;
+    }, RESUME_DELAY_MS);
+  }
+
   if (bestSellers.length === 0) return null;
 
-  // Duplicated once so the marquee loop is seamless (translateX 0 -> -50%).
+  // Duplicated once so the auto-scroll rewind above has a seamless loop point.
   const track = [...bestSellers, ...bestSellers];
 
   return (
@@ -80,7 +125,17 @@ export default function BestSellersCarousel() {
         <h2 className="font-heading text-4xl md:text-5xl font-light text-[#2C2220]">Best Sellers</h2>
       </div>
 
-      <div className="best-sellers-track flex gap-4 md:gap-6 w-max px-6 md:px-10">
+      <div
+        ref={trackRef}
+        className="no-scrollbar flex gap-4 md:gap-6 overflow-x-auto px-6 md:px-10"
+        style={{ scrollBehavior: "auto" }}
+        onMouseEnter={pause}
+        onMouseLeave={scheduleResume}
+        onTouchStart={pause}
+        onTouchEnd={scheduleResume}
+        onPointerDown={pause}
+        onPointerUp={scheduleResume}
+      >
         {track.map((product, i) => (
           <BestSellerCard key={`${product.id}-${i}`} product={product} />
         ))}

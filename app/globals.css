@@ -114,14 +114,15 @@ h1, h2, h3, h4 {
   animation-play-state: paused;
 }
 
-/* Best sellers carousel — same seamless-loop technique, slower/wider for product cards */
-.best-sellers-track {
-  animation: marquee 38s linear infinite;
-  will-change: transform;
+/* Best sellers carousel — JS-driven scrollLeft auto-scroll (see BestSellersCarousel.tsx),
+   so the same element stays natively scrollable/draggable when the user touches or
+   hovers it. This just hides the scrollbar without disabling scroll functionality. */
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
-
-.best-sellers-track:hover {
-  animation-play-state: paused;
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
 }
 
 /* Page transition */

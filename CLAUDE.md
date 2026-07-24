@@ -335,8 +335,8 @@ The Anthropic API key is NOT in .env.local — ask the user to paste it (or crea
 ### Daily volume (maximized without flooding)
 - **Instagram**: 2 posts/day — 10:00 UTC + 15:00 UTC
 - **Facebook**: 2 posts/day — 10:00 UTC + 15:00 UTC
-- **Pinterest**: 15 pins/day — spread across: 07:00, 07:30, 08:00, 08:30, 09:00, 09:30, 10:00, 11:00, 12:00, 13:00, 14:00, 15:00, 16:00, 17:00, 18:00
-- **Total**: 19 posts/day, ~133/week
+- **Pinterest**: 5 pins/day (lowered from 15 on Jul 24, 2026, per user request) — spread across the day, e.g. 08:00, 10:00, 12:00, 14:00, 16:00
+- **Total**: 9 posts/day, ~63/week
 
 ### Platform settings
 - IG: `{"post_type":"post"}`

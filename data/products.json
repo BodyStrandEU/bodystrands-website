@@ -8867,7 +8867,7 @@
     "id": "initial-heart-pearl-choker",
     "name": "Initial Heart Pearl Choker",
     "category": "Necklaces",
-    "price": 40,
+    "price": 32,
     "currency": "EUR",
     "description": "A dainty pearl bead chain layered with a fine gold-tone cable chain and a tiny engraved initial heart charm, sitting right at the collarbone — pre-layered so there's no fussing with two clasps, just clip it on and go.",
     "specs": [
@@ -8915,20 +8915,16 @@
     "featured": false,
     "active": true,
     "images": [
-      "/images/products/initial-heart-pearl-choker/hero.webp"
+      "/images/products/initial-heart-pearl-choker/lifestyle-home.webp"
     ],
     "gallery": [
-      "/images/products/initial-heart-pearl-choker/hero.webp",
-      "/images/products/initial-heart-pearl-choker/front-wide.webp",
-      "/images/products/initial-heart-pearl-choker/front-angle.webp",
-      "/images/products/initial-heart-pearl-choker/indoor-alt.webp",
-      "/images/products/initial-heart-pearl-choker/closeup-real.webp",
-      "/images/products/initial-heart-pearl-choker/macro-heart-detail.webp",
-      "/images/products/initial-heart-pearl-choker/back-clasp-detail.webp",
       "/images/products/initial-heart-pearl-choker/lifestyle-home.webp",
       "/images/products/initial-heart-pearl-choker/lifestyle-nightclub.webp",
+      "/images/products/initial-heart-pearl-choker/macro-heart-detail.webp",
       "/images/products/initial-heart-pearl-choker/choose-your-initial-chart.webp",
-      "/images/products/initial-heart-pearl-choker/infographic-sizing.webp"
+      "/images/products/IMG_2754-2.jpg",
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
+      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.jpg"
     ],
     "video": "/images/products/initial-heart-pearl-choker/video.mp4",
     "variantGroups": [
@@ -8974,6 +8970,7 @@
     "giftTags": [
       "personalized"
     ],
-    "dateAdded": "2026-07-24T21:00:26-04:00"
+    "dateAdded": "2026-07-24T21:00:26-04:00",
+    "sizeGuideImage": "/images/products/96157bb8-71ca-41e5-bf15-afbb427fd8f8.png"
   }
 ]

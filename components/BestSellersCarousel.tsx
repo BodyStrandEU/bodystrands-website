@@ -21,13 +21,14 @@ const BEST_SELLER_IDS = [
   "bridal-forehead-chain",
 ];
 
-function BestSellerCard({ product }: { product: (typeof products)[number] }) {
+function BestSellerCard({ product, onClickCapture }: { product: (typeof products)[number]; onClickCapture: (e: React.MouseEvent) => void }) {
   const { format } = useCurrency();
   const image = product.images?.[0];
 
   return (
     <Link
       href={`/shop/${product.id}`}
+      onClickCapture={onClickCapture}
       className="group block w-[220px] md:w-[260px] flex-shrink-0"
     >
       <div className="relative aspect-[3/4] overflow-hidden bg-[#F5EDE8]">
@@ -74,6 +75,14 @@ export default function BestSellersCarousel() {
   const pausedRef = useRef(false);
   const resumeTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
+  // Mouse drag-to-scroll state. overflow-x:auto alone only responds to a visible
+  // scrollbar, a trackpad gesture, or touch — a plain mouse has no native way to
+  // drag-scroll a div, so that has to be implemented by hand.
+  const isDraggingRef = useRef(false);
+  const dragMovedRef  = useRef(false);
+  const dragStartXRef = useRef(0);
+  const dragStartScrollRef = useRef(0);
+
   const bestSellers = BEST_SELLER_IDS
     .map((id) => products.find((p) => p.id === id))
     .filter((p): p is (typeof products)[number] => !!p);
@@ -113,6 +122,40 @@ export default function BestSellersCarousel() {
     }, RESUME_DELAY_MS);
   }
 
+  function onMouseDown(e: React.MouseEvent) {
+    const track = trackRef.current;
+    if (!track) return;
+    isDraggingRef.current = true;
+    dragMovedRef.current = false;
+    dragStartXRef.current = e.clientX;
+    dragStartScrollRef.current = track.scrollLeft;
+    pause();
+  }
+
+  function onMouseMove(e: React.MouseEvent) {
+    if (!isDraggingRef.current) return;
+    const track = trackRef.current;
+    if (!track) return;
+    const delta = e.clientX - dragStartXRef.current;
+    if (Math.abs(delta) > 4) dragMovedRef.current = true;
+    track.scrollLeft = dragStartScrollRef.current - delta;
+  }
+
+  function endDrag() {
+    isDraggingRef.current = false;
+    scheduleResume();
+  }
+
+  // Suppress the product-page navigation click that would otherwise fire right
+  // after a mouse drag — without this, dragging the carousel accidentally opens
+  // whichever product card the cursor lands on.
+  function onCardClickCapture(e: React.MouseEvent) {
+    if (dragMovedRef.current) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
+  }
+
   if (bestSellers.length === 0) return null;
 
   // Duplicated once so the auto-scroll rewind above has a seamless loop point.
@@ -127,17 +170,18 @@ export default function BestSellersCarousel() {
 
       <div
         ref={trackRef}
-        className="no-scrollbar flex gap-4 md:gap-6 overflow-x-auto px-6 md:px-10"
+        className="no-scrollbar flex gap-4 md:gap-6 overflow-x-auto px-6 md:px-10 cursor-grab active:cursor-grabbing select-none"
         style={{ scrollBehavior: "auto" }}
         onMouseEnter={pause}
-        onMouseLeave={scheduleResume}
+        onMouseLeave={() => { endDrag(); }}
+        onMouseDown={onMouseDown}
+        onMouseMove={onMouseMove}
+        onMouseUp={endDrag}
         onTouchStart={pause}
         onTouchEnd={scheduleResume}
-        onPointerDown={pause}
-        onPointerUp={scheduleResume}
       >
         {track.map((product, i) => (
-          <BestSellerCard key={`${product.id}-${i}`} product={product} />
+          <BestSellerCard key={`${product.id}-${i}`} product={product} onClickCapture={onCardClickCapture} />
         ))}
       </div>
     </section>

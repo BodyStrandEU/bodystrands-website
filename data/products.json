@@ -42,22 +42,19 @@
       }
     ],
     "images": [
-      "/images/products/colorful-crystal-bead-anklet-hero.webp"
+      "/images/products/colorful-crystal-bead-anklet-beach-1.webp"
     ],
     "gallery": [
-      "/images/products/colorful-crystal-bead-anklet-hero.webp",
       "/images/products/colorful-crystal-bead-anklet-beach-1.webp",
-      "/images/products/colorful-crystal-bead-anklet-beach-2.webp",
       "/images/products/colorful-crystal-bead-anklet-poolside.webp",
-      "/images/products/colorful-crystal-bead-anklet-street-1.webp",
       "/images/products/colorful-crystal-bead-anklet-street-2.webp",
-      "/images/products/colorful-crystal-bead-anklet-clasp-detail.webp",
-      "/images/products/colorful-crystal-bead-anklet-sizing.webp"
+      "/images/products/colorful-crystal-bead-anklet-clasp-detail.webp"
     ],
     "featured": false,
     "active": true,
     "altText": "Colorful crystal bead beach anklet with gold-tone stainless steel chain, burgundy and coral beads for summer wear",
-    "dateAdded": "2026-07-26T13:56:00-04:00"
+    "dateAdded": "2026-07-26T13:56:00-04:00",
+    "sizeGuideImage": "/images/products/1c864f7f-658d-4b1a-bd86-2c3ceb6950a3-1.png"
   },
   {
     "id": "pink-cross-choker",

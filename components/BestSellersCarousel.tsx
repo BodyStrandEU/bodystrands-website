@@ -146,6 +146,18 @@ export default function BestSellersCarousel() {
     scheduleResume();
   }
 
+  // Desktop prev/next arrows — advance by roughly one card + gap at a time.
+  function scrollByCard(direction: 1 | -1) {
+    const track = trackRef.current;
+    if (!track) return;
+    pause();
+    const firstCard = track.firstElementChild as HTMLElement | null;
+    const cardWidth = firstCard ? firstCard.offsetWidth : 260;
+    const gap = 24; // matches md:gap-6
+    track.scrollBy({ left: direction * (cardWidth + gap), behavior: "smooth" });
+    scheduleResume();
+  }
+
   // Suppress the product-page navigation click that would otherwise fire right
   // after a mouse drag — without this, dragging the carousel accidentally opens
   // whichever product card the cursor lands on.
@@ -168,21 +180,41 @@ export default function BestSellersCarousel() {
         <h2 className="font-heading text-4xl md:text-5xl font-light text-[#2C2220]">Best Sellers</h2>
       </div>
 
-      <div
-        ref={trackRef}
-        className="no-scrollbar flex gap-4 md:gap-6 overflow-x-auto px-6 md:px-10 cursor-grab active:cursor-grabbing select-none"
-        style={{ scrollBehavior: "auto" }}
-        onMouseEnter={pause}
-        onMouseLeave={() => { endDrag(); }}
-        onMouseDown={onMouseDown}
-        onMouseMove={onMouseMove}
-        onMouseUp={endDrag}
-        onTouchStart={pause}
-        onTouchEnd={scheduleResume}
-      >
-        {track.map((product, i) => (
-          <BestSellerCard key={`${product.id}-${i}`} product={product} onClickCapture={onCardClickCapture} />
-        ))}
+      <div className="relative group/carousel">
+        <div
+          ref={trackRef}
+          className="no-scrollbar flex gap-4 md:gap-6 overflow-x-auto px-6 md:px-10 cursor-grab active:cursor-grabbing select-none"
+          style={{ scrollBehavior: "auto" }}
+          onMouseEnter={pause}
+          onMouseLeave={() => { endDrag(); }}
+          onMouseDown={onMouseDown}
+          onMouseMove={onMouseMove}
+          onMouseUp={endDrag}
+          onTouchStart={pause}
+          onTouchEnd={scheduleResume}
+        >
+          {track.map((product, i) => (
+            <BestSellerCard key={`${product.id}-${i}`} product={product} onClickCapture={onCardClickCapture} />
+          ))}
+        </div>
+
+        {/* Desktop click-through arrows — hidden on mobile, where swipe already works natively */}
+        <button
+          type="button"
+          aria-label="Previous"
+          onClick={() => scrollByCard(-1)}
+          className="hidden md:flex absolute left-2 top-1/2 -translate-y-1/2 items-center justify-center w-10 h-10 rounded-full bg-[#FDF9F7]/90 text-[#2C2220] shadow-md opacity-0 group-hover/carousel:opacity-100 transition-opacity duration-300 hover:bg-[#FDF9F7] cursor-pointer"
+        >
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M15 18l-6-6 6-6" /></svg>
+        </button>
+        <button
+          type="button"
+          aria-label="Next"
+          onClick={() => scrollByCard(1)}
+          className="hidden md:flex absolute right-2 top-1/2 -translate-y-1/2 items-center justify-center w-10 h-10 rounded-full bg-[#FDF9F7]/90 text-[#2C2220] shadow-md opacity-0 group-hover/carousel:opacity-100 transition-opacity duration-300 hover:bg-[#FDF9F7] cursor-pointer"
+        >
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M9 18l6-6-6-6" /></svg>
+        </button>
       </div>
     </section>
   );

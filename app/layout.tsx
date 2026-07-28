@@ -3,6 +3,7 @@ import { Cormorant_Garamond, Josefin_Sans } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
 import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import CustomCursor from "@/components/CustomCursor";
 import AnalyticsPageview from "@/components/AnalyticsPageview";
 import GoogleTranslateLoader from "@/components/GoogleTranslateLoader";
@@ -92,6 +93,7 @@ export default async function RootLayout({
         {/* Manual pageview firing (AnalyticsPageview) skips /admin routes so internal usage never pollutes reporting */}
         <AnalyticsPageview />
         <Analytics />
+        <SpeedInsights />
 
         {/* Site-level structured data */}
         <Script id="schema-org" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([

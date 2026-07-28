@@ -21,14 +21,14 @@ const SHIPPING_ZONES: Zone[] = [
   },
   {
     zone: "United Kingdom & Switzerland",
-    rate: 8,
+    rate: 5,
     freeOver: 50,
     delivery: "4–7 business days",
     countries: "United Kingdom, Switzerland",
   },
   {
     zone: "USA",
-    rate: 8,
+    rate: 5,
     freeOver: 55.56,
     freeOverDisplay: "$60.00 USD",
     delivery: "3–10 business days",
@@ -36,7 +36,7 @@ const SHIPPING_ZONES: Zone[] = [
   },
   {
     zone: "Canada",
-    rate: 8,
+    rate: 5,
     freeOver: 51.02,
     freeOverDisplay: "$75.00 CAD",
     delivery: "3–10 business days",

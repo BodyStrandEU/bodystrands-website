@@ -35,7 +35,7 @@ export function getShippingRate(
     const free = cartTotal >= 50;
     return {
       displayName: free ? "Free Shipping — UK & Switzerland" : "Standard Shipping — UK & Switzerland",
-      amount:      free ? 0 : 800,
+      amount:      free ? 0 : 500,
       deliveryMin: 4, deliveryMax: 7,
       freeThreshold: 50,
     };

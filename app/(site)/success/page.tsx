@@ -8,8 +8,17 @@ declare global {
   interface Window {
     fbq?: (...args: unknown[]) => void;
     gtag?: (...args: unknown[]) => void;
+    renderOptIn?: () => void;
+    gapi?: {
+      load: (api: string, callback: () => void) => void;
+      surveyoptin: { render: (opts: Record<string, unknown>) => void };
+    };
   }
 }
+
+// Merchant ID for the Google Customer Reviews opt-in survey — feeds the "store rating"
+// signal in Merchant Center's Store Quality score. Not a secret, safe client-side.
+const GCR_MERCHANT_ID = 5815764017;
 
 function PurchaseTracker() {
   const searchParams = useSearchParams();
@@ -22,7 +31,10 @@ function PurchaseTracker() {
     fired.current = true;
 
     fetch(`/api/session?id=${sessionId}`)
-      .then((r) => r.json() as Promise<{ productName?: string; amount?: number; currency?: string; error?: string }>)
+      .then((r) => r.json() as Promise<{
+        productName?: string; amount?: number; currency?: string; error?: string;
+        orderId?: string; email?: string; country?: string; estimatedDeliveryDate?: string;
+      }>)
       .then((data) => {
         if (data.error || !data.amount) return;
 
@@ -46,6 +58,28 @@ function PurchaseTracker() {
               quantity:  1,
             }],
           });
+        }
+
+        // Google Customer Reviews opt-in survey — only renders once we have every
+        // required field for a real, completed order. No GTINs in the catalog yet,
+        // so the optional "products" field is omitted rather than faked.
+        if (data.orderId && data.email && data.country && data.estimatedDeliveryDate) {
+          window.renderOptIn = function () {
+            window.gapi?.load("surveyoptin", function () {
+              window.gapi?.surveyoptin.render({
+                merchant_id: GCR_MERCHANT_ID,
+                order_id: data.orderId,
+                email: data.email,
+                delivery_country: data.country,
+                estimated_delivery_date: data.estimatedDeliveryDate,
+              });
+            });
+          };
+          const script = document.createElement("script");
+          script.src = "https://apis.google.com/js/platform.js?onload=renderOptIn";
+          script.async = true;
+          script.defer = true;
+          document.body.appendChild(script);
         }
       })
       .catch(() => {});

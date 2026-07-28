@@ -1,0 +1,394 @@
+[
+  {
+    "productId": "birth-flower-anklet",
+    "category": "Anklets",
+    "region": "ankle",
+    "minCm": 21.0,
+    "maxCm": 26.0
+  },
+  {
+    "productId": "birthstone-gemstone-anklet",
+    "category": "Anklets",
+    "region": "ankle",
+    "minCm": 21.0,
+    "maxCm": 26.0
+  },
+  {
+    "productId": "colorful-crystal-bead-anklet",
+    "category": "Anklets",
+    "region": "ankle",
+    "minCm": 21.0,
+    "maxCm": 26.0
+  },
+  {
+    "productId": "zodiac-anklet",
+    "category": "Anklets",
+    "region": "ankle",
+    "minCm": 21.0,
+    "maxCm": 26.0
+  },
+  {
+    "productId": "boho-back-chain",
+    "category": "Back Chains",
+    "region": "waist",
+    "minCm": 79.0,
+    "maxCm": 102.0
+  },
+  {
+    "productId": "boho-belly-chain",
+    "category": "Belly Chains",
+    "region": "waist",
+    "minCm": 81.0,
+    "maxCm": 100.0
+  },
+  {
+    "productId": "butterfly-charm-belly-chain",
+    "category": "Belly Chains",
+    "region": "waist",
+    "minCm": 71.0,
+    "maxCm": 100.0
+  },
+  {
+    "productId": "butterfly-layered-belly-chain",
+    "category": "Belly Chains",
+    "region": "waist",
+    "minCm": 71.0,
+    "maxCm": 100.0
+  },
+  {
+    "productId": "butterfly-waist-chain",
+    "category": "Belly Chains",
+    "region": "waist",
+    "minCm": 81.0,
+    "maxCm": 100.0
+  },
+  {
+    "productId": "chain-waist-belt",
+    "category": "Belly Chains",
+    "region": "waist",
+    "minCm": 71.0,
+    "maxCm": 100.0
+  },
+  {
+    "productId": "coin-disc-belly-chain",
+    "category": "Belly Chains",
+    "region": "waist",
+    "minCm": 71.0,
+    "maxCm": 100.0
+  },
+  {
+    "productId": "cross-belly-chain",
+    "category": "Belly Chains",
+    "region": "waist",
+    "minCm": 71.0,
+    "maxCm": 100.0
+  },
+  {
+    "productId": "layered-hip-chain",
+    "category": "Belly Chains",
+    "region": "waist",
+    "minCm": 71.0,
+    "maxCm": 100.0
+  },
+  {
+    "productId": "layered-silver-belly-chain",
+    "category": "Belly Chains",
+    "region": "waist",
+    "minCm": 71.0,
+    "maxCm": 100.0
+  },
+  {
+    "productId": "pearl-beaded-belly-chain",
+    "category": "Belly Chains",
+    "region": "waist",
+    "minCm": 71.0,
+    "maxCm": 100.0
+  },
+  {
+    "productId": "pearl-belly-chain",
+    "category": "Belly Chains",
+    "region": "waist",
+    "minCm": 77.0,
+    "maxCm": 97.0
+  },
+  {
+    "productId": "pearl-waist-chain",
+    "category": "Belly Chains",
+    "region": "waist",
+    "minCm": 77.0,
+    "maxCm": 97.0
+  },
+  {
+    "productId": "silver-waist-chain",
+    "category": "Belly Chains",
+    "region": "waist",
+    "minCm": 71.0,
+    "maxCm": 100.0
+  },
+  {
+    "productId": "silver-waterproof-belly-chain",
+    "category": "Belly Chains",
+    "region": "waist",
+    "minCm": 71.0,
+    "maxCm": 100.0
+  },
+  {
+    "productId": "snake-belly-chain",
+    "category": "Belly Chains",
+    "region": "waist",
+    "minCm": 81.0,
+    "maxCm": 100.0
+  },
+  {
+    "productId": "turquoise-beaded-belly-chain",
+    "category": "Belly Chains",
+    "region": "waist",
+    "minCm": 77.0,
+    "maxCm": 97.0
+  },
+  {
+    "productId": "waterproof-belly-chain",
+    "category": "Belly Chains",
+    "region": "waist",
+    "minCm": 71.0,
+    "maxCm": 100.0
+  },
+  {
+    "productId": "zodiac-snake-belly-chain",
+    "category": "Belly Chains",
+    "region": "waist",
+    "minCm": 71.0,
+    "maxCm": 100.0
+  },
+  {
+    "productId": "zodiac-yoga-belly-chain",
+    "category": "Belly Chains",
+    "region": "waist",
+    "minCm": 71.0,
+    "maxCm": 100.0
+  },
+  {
+    "productId": "butterfly-body-chain",
+    "category": "Body Chains",
+    "region": "waist",
+    "minCm": 79.0,
+    "maxCm": 102.0
+  },
+  {
+    "productId": "birth-flower-charm-bracelet",
+    "category": "Bracelets",
+    "region": "wrist",
+    "minCm": 14.0,
+    "maxCm": 23.0
+  },
+  {
+    "productId": "birthstone-bracelet",
+    "category": "Bracelets",
+    "region": "wrist",
+    "minCm": 14.0,
+    "maxCm": 23.0
+  },
+  {
+    "productId": "dainty-chain-bracelet",
+    "category": "Bracelets",
+    "region": "wrist",
+    "minCm": 14.0,
+    "maxCm": 23.0
+  },
+  {
+    "productId": "layered-pearl-bracelet",
+    "category": "Bracelets",
+    "region": "wrist",
+    "minCm": 14.0,
+    "maxCm": 23.0
+  },
+  {
+    "productId": "layered-turquoise-bead-bracelet",
+    "category": "Bracelets",
+    "region": "wrist",
+    "minCm": 14.0,
+    "maxCm": 28.0
+  },
+  {
+    "productId": "pearl-charm-bracelet",
+    "category": "Bracelets",
+    "region": "wrist",
+    "minCm": 14.0,
+    "maxCm": 23.0
+  },
+  {
+    "productId": "pearl-cross-faith-bracelet",
+    "category": "Bracelets",
+    "region": "wrist",
+    "minCm": 14.0,
+    "maxCm": 23.0
+  },
+  {
+    "productId": "pink-cross-charm-bracelet",
+    "category": "Bracelets",
+    "region": "wrist",
+    "minCm": 14.0,
+    "maxCm": 23.0
+  },
+  {
+    "productId": "script-initial-bracelet",
+    "category": "Bracelets",
+    "region": "wrist",
+    "minCm": 14.0,
+    "maxCm": 23.0
+  },
+  {
+    "productId": "pearl-hand-chain",
+    "category": "Hand Chains",
+    "region": "finger",
+    "minCm": 5.2,
+    "maxCm": 5.8
+  },
+  {
+    "productId": "silver-finger-hand-chain",
+    "category": "Hand Chains",
+    "region": "finger",
+    "minCm": 5.2,
+    "maxCm": 5.8
+  },
+  {
+    "productId": "bridal-forehead-chain",
+    "category": "Head Chains",
+    "region": "forehead",
+    "minCm": 52.0,
+    "maxCm": 58.0
+  },
+  {
+    "productId": "birthstone-thigh-chain",
+    "category": "Leg Chains",
+    "region": "thigh",
+    "minCm": 51.0,
+    "maxCm": 66.0
+  },
+  {
+    "productId": "double-drape-thigh-chain",
+    "category": "Leg Chains",
+    "region": "thigh",
+    "minCm": 51.0,
+    "maxCm": 66.0
+  },
+  {
+    "productId": "thigh-chain",
+    "category": "Leg Chains",
+    "region": "thigh",
+    "minCm": 50.0,
+    "maxCm": 91.0
+  },
+  {
+    "productId": "birth-flower-charm-necklace",
+    "category": "Necklaces",
+    "region": "chainLength",
+    "minCm": 35.0,
+    "maxCm": 56.0
+  },
+  {
+    "productId": "birth-month-teardrop-choker",
+    "category": "Necklaces",
+    "region": "chainLength",
+    "minCm": 35.0,
+    "maxCm": 41.0
+  },
+  {
+    "productId": "birthstone-choker-necklace",
+    "category": "Necklaces",
+    "region": "chainLength",
+    "minCm": 35.0,
+    "maxCm": 56.0
+  },
+  {
+    "productId": "colorful-crystal-bead-choker",
+    "category": "Necklaces",
+    "region": "chainLength",
+    "minCm": 35.0,
+    "maxCm": 41.0
+  },
+  {
+    "productId": "initial-heart-pearl-choker",
+    "category": "Necklaces",
+    "region": "chainLength",
+    "minCm": 35.0,
+    "maxCm": 41.0
+  },
+  {
+    "productId": "layered-pearl-choker",
+    "category": "Necklaces",
+    "region": "chainLength",
+    "minCm": 35.0,
+    "maxCm": 41.0
+  },
+  {
+    "productId": "monogram-letter-necklace",
+    "category": "Necklaces",
+    "region": "chainLength",
+    "minCm": 35.0,
+    "maxCm": 56.0
+  },
+  {
+    "productId": "pink-cross-choker",
+    "category": "Necklaces",
+    "region": "chainLength",
+    "minCm": 35.0,
+    "maxCm": 41.0
+  },
+  {
+    "productId": "satellite-link-choker",
+    "category": "Necklaces",
+    "region": "chainLength",
+    "minCm": 35.0,
+    "maxCm": 41.0
+  },
+  {
+    "productId": "stacked-pearl-cross-choker",
+    "category": "Necklaces",
+    "region": "chainLength",
+    "minCm": 35.0,
+    "maxCm": 41.0
+  },
+  {
+    "productId": "turquoise-beaded-choker",
+    "category": "Necklaces",
+    "region": "chainLength",
+    "minCm": 35.0,
+    "maxCm": 41.0
+  },
+  {
+    "productId": "zodiac-slip-on-necklace",
+    "category": "Necklaces",
+    "region": "chainLength",
+    "minCm": 30.0,
+    "maxCm": 30.0
+  },
+  {
+    "productId": "bicep-chain",
+    "category": "Shoulder & Arm Chains",
+    "region": "upperArm",
+    "minCm": 25.0,
+    "maxCm": 39.0
+  },
+  {
+    "productId": "birthstone-arm-band",
+    "category": "Shoulder & Arm Chains",
+    "region": "upperArm",
+    "minCm": 25.0,
+    "maxCm": 39.0
+  },
+  {
+    "productId": "birthstone-arm-chain",
+    "category": "Shoulder & Arm Chains",
+    "region": "upperArm",
+    "minCm": 25.0,
+    "maxCm": 39.0
+  },
+  {
+    "productId": "layered-arm-chain",
+    "category": "Shoulder & Arm Chains",
+    "region": "upperArm",
+    "minCm": 25.0,
+    "maxCm": 39.0
+  }
+]

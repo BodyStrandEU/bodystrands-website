@@ -9153,7 +9153,18 @@
         "value": "Dispatches within 1–2 business days"
       }
     ],
-    "images": [],
+    "images": [
+      "/images/products/3ba5160f-d15b-445e-83dd-71b5de728236.png",
+      "/images/products/9d4d8c78-7611-4704-b875-29c3fd72e413.png",
+      "/images/products/96157bb8-71ca-41e5-bf15-afbb427fd8f8.png",
+      "/images/products/10d73090-1294-42e7-986b-8f0b1d1a0fc7.png",
+      "/images/products/c828c481-b3b9-47de-b91f-3db8a4c1948c.jpeg",
+      "/images/products/ec9b9e87-0198-4f99-9adf-b8b93911c09e.png",
+      "/images/products/3c456e1e-1abf-497c-94d7-49de4a3670d5.png",
+      "/images/products/51556245-92a9-4d7e-ba3f-bcb05dce79f1.png",
+      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf-copy.jpeg",
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png"
+    ],
     "variantGroups": [
       {
         "label": "Initial",
@@ -9211,6 +9222,7 @@
     "dateAdded": "2026-07-28T09:00:00-04:00",
     "giftTags": [
       "personalized"
-    ]
+    ],
+    "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/ad3648bf0363b65780699bad978c532e/downloads/default.mp4"
   }
 ]

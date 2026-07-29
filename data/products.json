@@ -9224,5 +9224,74 @@
       "personalized"
     ],
     "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/ad3648bf0363b65780699bad978c532e/downloads/default.mp4"
+  },
+  {
+    "id": "colorful-crystal-bead-bracelet",
+    "name": "Colorful Crystal Bead Bracelet",
+    "category": "Bracelets",
+    "price": 24,
+    "currency": "EUR",
+    "description": "A single-strand bracelet stringing colorful abacus-cut glass crystal beads along a fine gold-tone stainless steel chain — waterproof, adjustable, and just as at home on the beach as it is out for the night.",
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Glass crystal abacus beads, stainless steel chain"
+      },
+      {
+        "label": "Finish",
+        "value": "Gold-tone"
+      },
+      {
+        "label": "Closure",
+        "value": "Lobster clasp"
+      },
+      {
+        "label": "Sizes",
+        "value": "14 cm (5.5\") to 23 cm (9.1\") — select at checkout"
+      },
+      {
+        "label": "Extension",
+        "value": "+5 cm (2\") adjustable extension chain"
+      },
+      {
+        "label": "Waterproof",
+        "value": "Yes"
+      },
+      {
+        "label": "Tarnish-Resistant",
+        "value": "Yes"
+      },
+      {
+        "label": "Care",
+        "value": "Wipe with a soft cloth after wear. Store in an airtight container."
+      },
+      {
+        "label": "Shipping",
+        "value": "Dispatches within 1–2 business days"
+      }
+    ],
+    "images": [],
+    "variantGroups": [
+      {
+        "label": "Size",
+        "options": [
+          "14 CM (5.5\")",
+          "15 CM (5.9\")",
+          "16 CM (6.3\")",
+          "17 CM (6.7\")",
+          "18 CM (7.1\")",
+          "19 CM (7.5\")",
+          "20 CM (7.9\")",
+          "21 CM (8.3\")",
+          "22 CM (8.7\")",
+          "23 CM (9.1\")"
+        ]
+      }
+    ],
+    "featured": false,
+    "active": true,
+    "altText": "Colorful crystal bead bracelet with faceted glass beads and gold-tone stainless steel chain, waterproof and adjustable",
+    "fullDescription": "A rainbow of color, one clasp away from your wrist.\n\nThis single-strand bracelet strings a delicate row of abacus-cut glass crystal beads along a fine gold-tone stainless steel chain — handcrafted so it sits light on the wrist and moves with you from a beach day to a festival night to a pool afternoon without ever coming off. Waterproof and built to last, it's the kind of colorful, trendy little detail that makes a genuinely thoughtful gift — whether you're picking it up for a summer trip of your own, a girls' getaway, or something sweet to send Mom.\n\nProduct Details\nMaterial: Glass crystal abacus beads, stainless steel chain\nFinish: Gold-tone\nClosure: Lobster clasp\nWaterproof & Sweat-Proof: Yes — safe for water, sun, and everyday wear\n\nSize Guide\nAvailable in 14 cm to 23 cm (5.5\"–9.1\")\nIncludes a 5 cm (2\") extension chain for the perfect fit\n\nHow to Order\nSelect your size from the dropdown menu\n\nCustom Sizing: Need a specific size? Message me after purchase and I'll adjust it at no extra cost.\n\nCare Instructions\nWipe gently with a soft cloth after each wear.\nStore in an airtight container when not in use.\n\nShipping: Dispatches within 1–2 business days.\n\nPlease note that as each piece is handcrafted, no two pieces are identical and slight variations may occur.",
+    "dateAdded": "2026-07-29T09:00:00-04:00"
   }
 ]

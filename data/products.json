@@ -9270,7 +9270,12 @@
         "value": "Dispatches within 1–2 business days"
       }
     ],
-    "images": [],
+    "images": [
+      "/images/products/2e6cfc7e-47d3-48df-964a-26e883c706bd.png",
+      "/images/products/8a453447-3649-4a5a-a7c0-5e4e63512060.jpeg",
+      "/images/products/1411cdd1-c3e0-4fee-9095-9462590ef2e1.png",
+      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf-copy.jpeg"
+    ],
     "variantGroups": [
       {
         "label": "Size",
@@ -9292,6 +9297,8 @@
     "active": true,
     "altText": "Colorful crystal bead bracelet with faceted glass beads and gold-tone stainless steel chain, waterproof and adjustable",
     "fullDescription": "A rainbow of color, one clasp away from your wrist.\n\nThis single-strand bracelet strings a delicate row of abacus-cut glass crystal beads along a fine gold-tone stainless steel chain — handcrafted so it sits light on the wrist and moves with you from a beach day to a festival night to a pool afternoon without ever coming off. Waterproof and built to last, it's the kind of colorful, trendy little detail that makes a genuinely thoughtful gift — whether you're picking it up for a summer trip of your own, a girls' getaway, or something sweet to send Mom.\n\nProduct Details\nMaterial: Glass crystal abacus beads, stainless steel chain\nFinish: Gold-tone\nClosure: Lobster clasp\nWaterproof & Sweat-Proof: Yes — safe for water, sun, and everyday wear\n\nSize Guide\nAvailable in 14 cm to 23 cm (5.5\"–9.1\")\nIncludes a 5 cm (2\") extension chain for the perfect fit\n\nHow to Order\nSelect your size from the dropdown menu\n\nCustom Sizing: Need a specific size? Message me after purchase and I'll adjust it at no extra cost.\n\nCare Instructions\nWipe gently with a soft cloth after each wear.\nStore in an airtight container when not in use.\n\nShipping: Dispatches within 1–2 business days.\n\nPlease note that as each piece is handcrafted, no two pieces are identical and slight variations may occur.",
-    "dateAdded": "2026-07-29T09:00:00-04:00"
+    "dateAdded": "2026-07-29T09:00:00-04:00",
+    "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/31cdb5b01c5e2c9a9af5a43ce925596b/downloads/default.mp4",
+    "sizeGuideImage": "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png"
   }
 ]

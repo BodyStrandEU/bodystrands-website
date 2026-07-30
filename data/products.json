@@ -9387,11 +9387,19 @@
         ]
       }
     ],
-    "images": [],
+    "images": [
+      "/images/products/57983aa4-08aa-415b-93c7-064163053722-copy.png",
+      "/images/products/641b4ff4-8201-4bdc-b4e5-771cb626d619.png",
+      "/images/products/4c378c82-b775-44e9-baec-d438987a9f2b-copy.png",
+      "/images/products/3c456e1e-1abf-497c-94d7-49de4a3670d5.png",
+      "/images/products/0f329a06-fbf9-41f8-93dd-856e444501b6.png"
+    ],
     "altText": "Personalized double-strand pearl anklet with gold heart charm engraved initial, layered pearl and cable chain anklet",
     "giftTags": [
       "personalized"
     ],
-    "dateAdded": "2026-07-30T14:00:00-04:00"
+    "dateAdded": "2026-07-30T14:00:00-04:00",
+    "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/0d574b2e8324f15f43af0245d074cc08/downloads/default.mp4",
+    "sizeGuideImage": "/images/products/cd9430c6-fb5a-4a51-8822-6f45077f585f.jpeg"
   }
 ]

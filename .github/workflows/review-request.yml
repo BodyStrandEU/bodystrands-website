@@ -1,0 +1,31 @@
+name: Automated Review Request
+
+on:
+  schedule:
+    - cron: "0 9 * * *"   # 10am Portugal — daily check for orders that turned exactly 7 days old
+  workflow_dispatch:
+
+jobs:
+  send:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Send review requests for orders 7 days old
+        env:
+          STRIPE_SECRET_KEY: ${{ secrets.STRIPE_SECRET_KEY }}
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          RESEND_FROM_EMAIL: ${{ secrets.RESEND_FROM_EMAIL }}
+          REVIEW_TOKEN_SECRET: ${{ secrets.REVIEW_TOKEN_SECRET }}
+        run: node scripts/send-review-requests.mjs --live

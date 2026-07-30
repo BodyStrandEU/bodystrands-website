@@ -9301,5 +9301,101 @@
     "dateAdded": "2026-07-29T09:00:00-04:00",
     "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/31cdb5b01c5e2c9a9af5a43ce925596b/downloads/default.mp4",
     "sizeGuideImage": "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png"
+  },
+  {
+    "id": "pearl-heart-initial-anklet",
+    "name": "Pearl Heart Initial Anklet",
+    "price": 28,
+    "currency": "EUR",
+    "category": "Anklets",
+    "description": "Not just an anklet — a little monogram for your ankle. A dainty pearl chain layered over a fine gold cable link chain, finished with a heart charm engraved with your initial — personalized, layered, and effortlessly yours.",
+    "fullDescription": "Not just an anklet — a little monogram for your ankle. Handmade with a dainty pearl chain layered over a fine cable link chain and finished with a heart charm engraved with your initial, this double-strand piece turns a simple accessory into something that's unmistakably yours. No stacking required — the layered, personalized look is built in.\n\nPerfect for the beach, a poolside afternoon, a summer wedding, or any barefoot moment in between. The pearls add a classic touch that works as well with a linen dress in October as it does with a bikini in July, while your initial heart charm makes it unmistakably you.\n\nAvailable in Gold Stainless or Silver Stainless. Choose your initial at checkout. A thoughtful, personalized gift for bridesmaids, best friends, and anyone who loves dainty foot jewelry that actually lasts — and feels personal.\n\nHandcrafted with slight natural variations — no two pieces are exactly alike.",
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Stainless steel in gold tone or silver tone"
+      },
+      {
+        "label": "Style",
+        "value": "Double-strand — pearl chain and cable link chain with engraved initial heart charm, as one piece"
+      },
+      {
+        "label": "Finish",
+        "value": "Water-resistant and tarnish-resistant"
+      },
+      {
+        "label": "Closure",
+        "value": "Lobster clasp with adjustable extender"
+      },
+      {
+        "label": "Personalization",
+        "value": "Heart charm engraved with the initial of your choice"
+      },
+      {
+        "label": "Length",
+        "value": "21 cm (8.3\") base chain + 5 cm (2\") adjustable extension — 26 cm (10.2\") total"
+      },
+      {
+        "label": "Chain thickness",
+        "value": "1.5 mm"
+      },
+      {
+        "label": "Custom sizing",
+        "value": "Message us after purchase and we will adjust to your exact measurements"
+      },
+      {
+        "label": "Care",
+        "value": "Wipe gently with a soft cloth after each wear. Store in an airtight container."
+      },
+      {
+        "label": "Shipping",
+        "value": "Dispatches within 1–2 business days from Europe"
+      }
+    ],
+    "featured": false,
+    "active": true,
+    "variants": [
+      "Gold Tone",
+      "Silver Tone"
+    ],
+    "variantGroups": [
+      {
+        "label": "Choose your Initial",
+        "options": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F",
+          "G",
+          "H",
+          "I",
+          "J",
+          "K",
+          "L",
+          "M",
+          "N",
+          "O",
+          "P",
+          "Q",
+          "R",
+          "S",
+          "T",
+          "U",
+          "V",
+          "W",
+          "X",
+          "Y",
+          "Z"
+        ]
+      }
+    ],
+    "images": [],
+    "altText": "Personalized double-strand pearl anklet with gold heart charm engraved initial, layered pearl and cable chain anklet",
+    "giftTags": [
+      "personalized"
+    ],
+    "dateAdded": "2026-07-30T14:00:00-04:00"
   }
 ]

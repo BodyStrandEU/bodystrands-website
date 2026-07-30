@@ -9309,11 +9309,11 @@
     "currency": "EUR",
     "category": "Anklets",
     "description": "Not just an anklet — a little monogram for your ankle. A dainty pearl chain layered over a fine gold cable link chain, finished with a heart charm engraved with your initial — personalized, layered, and effortlessly yours.",
-    "fullDescription": "Not just an anklet — a little monogram for your ankle. Handmade with a dainty pearl chain layered over a fine cable link chain and finished with a heart charm engraved with your initial, this double-strand piece turns a simple accessory into something that's unmistakably yours. No stacking required — the layered, personalized look is built in.\n\nPerfect for the beach, a poolside afternoon, a summer wedding, or any barefoot moment in between. The pearls add a classic touch that works as well with a linen dress in October as it does with a bikini in July, while your initial heart charm makes it unmistakably you.\n\nAvailable in Gold Stainless or Silver Stainless. Choose your initial at checkout. A thoughtful, personalized gift for bridesmaids, best friends, and anyone who loves dainty foot jewelry that actually lasts — and feels personal.\n\nHandcrafted with slight natural variations — no two pieces are exactly alike.",
+    "fullDescription": "Not just an anklet — a little monogram for your ankle. Handmade with a dainty pearl chain layered over a fine cable link chain and finished with a heart charm engraved with your initial, this double-strand piece turns a simple accessory into something that's unmistakably yours. No stacking required — the layered, personalized look is built in.\n\nPerfect for the beach, a poolside afternoon, a summer wedding, or any barefoot moment in between. The pearls add a classic touch that works as well with a linen dress in October as it does with a bikini in July, while your initial heart charm makes it unmistakably you.\n\nChoose your initial at checkout. A thoughtful, personalized gift for bridesmaids, best friends, and anyone who loves dainty foot jewelry that actually lasts — and feels personal.\n\nHandcrafted with slight natural variations — no two pieces are exactly alike.",
     "specs": [
       {
         "label": "Material",
-        "value": "Stainless steel in gold tone or silver tone"
+        "value": "Gold-tone stainless steel"
       },
       {
         "label": "Style",
@@ -9354,10 +9354,6 @@
     ],
     "featured": false,
     "active": true,
-    "variants": [
-      "Gold Tone",
-      "Silver Tone"
-    ],
     "variantGroups": [
       {
         "label": "Choose your Initial",

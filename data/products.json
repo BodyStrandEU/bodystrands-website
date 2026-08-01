@@ -9469,11 +9469,19 @@
         ]
       }
     ],
-    "images": [],
+    "images": [
+      "/images/products/c54445d6-f6ba-4667-9e4d-2bdebf9cad66.jpeg",
+      "/images/products/15b8d666-f9d6-419a-b701-2b1c597cce02.png",
+      "/images/products/390e92bb-46a4-4bb6-bba0-47cfaa9bd545.png",
+      "/images/products/c828c481-b3b9-47de-b91f-3db8a4c1948c.jpeg",
+      "/images/products/038c4035-eb5d-4786-95f7-f431025e3970.png",
+      "/images/products/51556245-92a9-4d7e-ba3f-bcb05dce79f1.png"
+    ],
     "altText": "Layered turquoise bead choker and gold zodiac pendant necklace set, personalized star sign necklace stack",
     "giftTags": [
       "personalized"
     ],
-    "dateAdded": "2026-08-01T09:00:00-04:00"
+    "dateAdded": "2026-08-01T09:00:00-04:00",
+    "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/def1205ff0a5b43d0f3debd5b6f1c61b/downloads/default.mp4"
   }
 ]

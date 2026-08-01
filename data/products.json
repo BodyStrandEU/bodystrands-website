@@ -9401,5 +9401,79 @@
     "dateAdded": "2026-07-30T14:00:00-04:00",
     "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/0d574b2e8324f15f43af0245d074cc08/downloads/default.mp4",
     "sizeGuideImage": "/images/products/cd9430c6-fb5a-4a51-8822-6f45077f585f.jpeg"
+  },
+  {
+    "id": "turquoise-zodiac-necklace-stack",
+    "name": "Turquoise & Zodiac Necklace Stack",
+    "price": 36,
+    "currency": "EUR",
+    "category": "Necklaces",
+    "description": "Wear it solo or wear it stacked. A pre-layered turquoise bead and cable chain choker paired with a separate continuous-loop zodiac pendant necklace — worn together for a three-layer stack, or apart on their own.",
+    "fullDescription": "Wear it solo. Wear it stacked. Wear it your way.\n\nThis set pairs two pieces that were designed to stack: a pre-layered double-chain choker (turquoise bead chain + fine cable chain, clipped on with one clasp — no fussing with two), and a separate long zodiac pendant necklace with a continuous loop, no clasp needed, just slip it over your head. Wear the zodiac piece alone for the necklace you never take off — through the gym, the pool, the shower, straight to dinner — or layer it under the choker for the full three-layer stack shown in the photos. Two necklaces, styled as one look, but yours to wear together or apart.\n\nProduct Details\n\nPiece 1 — Double-Layer Choker\nMaterial: Gold-tone stainless steel chain\nDesign: Double-layer choker\nChain length: 35 cm + 6 cm extender\nClosure: Lobster clasp\n\nPiece 2 — Zodiac Pendant Necklace\nMaterial: Gold-tone stainless steel\nStyle: Dainty cable chain with a small engraved zodiac disc pendant\nChain length: 66 cm continuous loop — one size fits all, no clasp\n\nWaterproof & Sweat-Proof: Yes, on both pieces — safe for water, sun, and everyday wear\n\nHow to Order\nSelect your Zodiac Sign (available in all 12 signs)\n\nSize Guide\nChoker: adjustable 35–41 cm, sits snug at the collarbone\nZodiac necklace: fixed 66 cm continuous loop, one size fits all\n\nFit Note: For the choker, measure around the base of your neck where you'd like it to sit, and add 1–2 cm for comfortable movement. The zodiac necklace's continuous loop requires no measuring — it's designed to slip over the head at one universal length.\n\nCustom Sizing: Need the choker in a specific measurement? Message me before ordering and I'll make it to your exact size at no extra cost. (The zodiac necklace's continuous loop is fixed and can't be resized.)\n\nCare Instructions\nWipe gently with a soft cloth after each wear.\nStore in an airtight container when not in use.\n\nShipping: Dispatches within 1–2 business days.\n\nPlease note that as each piece is handcrafted, no two pieces are identical and slight variations may occur.",
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Gold-tone stainless steel"
+      },
+      {
+        "label": "Design",
+        "value": "Two-piece necklace stack — double-layer choker (turquoise bead chain + fine cable chain) + continuous-loop zodiac pendant necklace"
+      },
+      {
+        "label": "Choker chain length",
+        "value": "35 cm (13.8\") + 6 cm (2.4\") extender"
+      },
+      {
+        "label": "Choker closure",
+        "value": "Lobster clasp"
+      },
+      {
+        "label": "Zodiac necklace length",
+        "value": "66 cm (26\") continuous loop, no clasp"
+      },
+      {
+        "label": "Zodiac sign",
+        "value": "Select from all 12 signs at checkout"
+      },
+      {
+        "label": "Waterproof",
+        "value": "Yes, on both pieces"
+      },
+      {
+        "label": "Care",
+        "value": "Wipe gently with a soft cloth after each wear. Store in an airtight container."
+      },
+      {
+        "label": "Shipping",
+        "value": "Dispatches within 1–2 business days"
+      }
+    ],
+    "featured": false,
+    "active": true,
+    "variantGroups": [
+      {
+        "label": "Zodiac Sign",
+        "options": [
+          "Aries (3.21-4.19)",
+          "Taurus (4.20-5.20)",
+          "Gemini (5.21-6.20)",
+          "Cancer (6.21-7.22)",
+          "Leo (7.23-8.22)",
+          "Virgo (8.23-9.22)",
+          "Libra (9.23-10.22)",
+          "Scorpio(10.23-11.21)",
+          "Sagit. (11.22-12.21)",
+          "Capricorn 12.22-1.19",
+          "Aquarius (1.20-2.18)",
+          "Pisces (2.19-3.20)"
+        ]
+      }
+    ],
+    "images": [],
+    "altText": "Layered turquoise bead choker and gold zodiac pendant necklace set, personalized star sign necklace stack",
+    "giftTags": [
+      "personalized"
+    ],
+    "dateAdded": "2026-08-01T09:00:00-04:00"
   }
 ]

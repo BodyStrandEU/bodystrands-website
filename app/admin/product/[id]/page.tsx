@@ -190,23 +190,31 @@ function ImageSection({ title, images, onChange, onUpload }: ImageSectionProps) 
     }));
     // Show blob previews immediately — no waiting for deploy
     setPending((p) => [...p, ...items.map(({ id, previewUrl }) => ({ id, previewUrl }))]);
-    const realUrls: string[] = [];
-    try {
-      for (const item of items) {
+    // Upload the whole batch in parallel instead of one at a time — each thumbnail still
+    // flips from "Uploading…" to done as its own request finishes, but a 5-photo drop no
+    // longer takes 5x as long. Promise.allSettled so one failure doesn't lose the rest.
+    const results = await Promise.allSettled(
+      items.map(async (item) => {
         const url = await onUpload(item.file);
-        realUrls.push(url);
         // Keep blob alive — real path 404s until Vercel deploys (~1 min)
         setLocalPreviews((prev) => ({ ...prev, [url]: item.previewUrl }));
         setPending((p) => p.filter((x) => x.id !== item.id));
+        return url;
+      })
+    );
+    const realUrls: string[] = [];
+    const failures: string[] = [];
+    results.forEach((result, i) => {
+      if (result.status === "fulfilled") {
+        realUrls.push(result.value);
+      } else {
+        failures.push(items[i].file.name);
+        setPending((p) => p.filter((x) => x.id !== items[i].id));
+        URL.revokeObjectURL(items[i].previewUrl);
       }
-      onChange([...images, ...realUrls]);
-    } catch (err) {
-      items.forEach((item) => {
-        setPending((p) => p.filter((x) => x.id !== item.id));
-        URL.revokeObjectURL(item.previewUrl);
-      });
-      alert(`Upload failed: ${err instanceof Error ? err.message : String(err)}`);
-    }
+    });
+    if (realUrls.length > 0) onChange([...images, ...realUrls]);
+    if (failures.length > 0) alert(`Upload failed for: ${failures.join(", ")}`);
   }
 
   const isUploading = pending.length > 0;
@@ -336,17 +344,29 @@ function GallerySection({
       previewUrl: URL.createObjectURL(file),
     }));
     setPending((p) => [...p, ...items.map(({ id, previewUrl }) => ({ id, previewUrl }))]);
-    try {
-      for (const item of items) {
+    // Upload the whole batch in parallel and accumulate results, then reorder once at the
+    // end — calling onReorder per-file inside a loop captured a stale `images` closure and
+    // could silently drop earlier uploads whenever multiple files were added at once.
+    const results = await Promise.allSettled(
+      items.map(async (item) => {
         const url = await onUpload(item.file);
         setLocalPreviews((prev) => ({ ...prev, [url]: item.previewUrl }));
         setPending((p) => p.filter((x) => x.id !== item.id));
-        onReorder([...images, url]);
+        return url;
+      })
+    );
+    const realUrls: string[] = [];
+    const failures: string[] = [];
+    results.forEach((result, i) => {
+      if (result.status === "fulfilled") {
+        realUrls.push(result.value);
+      } else {
+        failures.push(items[i].file.name);
+        setPending((p) => p.filter((x) => x.id !== items[i].id));
       }
-    } catch (err) {
-      items.forEach((item) => { setPending((p) => p.filter((x) => x.id !== item.id)); });
-      alert(`Upload failed: ${err instanceof Error ? err.message : String(err)}`);
-    }
+    });
+    if (realUrls.length > 0) onReorder([...images, ...realUrls]);
+    if (failures.length > 0) alert(`Upload failed for: ${failures.join(", ")}`);
   }
 
   const isUploading = pending.length > 0;
@@ -439,10 +459,23 @@ async function fileToBase64(file: File): Promise<string> {
   return btoa(binary);
 }
 
+// Fetched once and reused for every file in a batch — previously this was re-fetched
+// per file, adding a wasted round-trip to every single upload. Cached as an in-flight
+// promise (not just the resolved value) so concurrent uploads that all fire on mount
+// share one request instead of racing separate fetches.
+let uploadConfigPromise: Promise<{ token: string; repo: string; branch: string }> | null = null;
+function getUploadConfig(): Promise<{ token: string; repo: string; branch: string }> {
+  if (!uploadConfigPromise) {
+    uploadConfigPromise = fetch("/api/admin/upload-config").then((res) => {
+      if (!res.ok) { uploadConfigPromise = null; throw new Error("Not authorised"); }
+      return res.json() as Promise<{ token: string; repo: string; branch: string }>;
+    }).catch((err) => { uploadConfigPromise = null; throw err; });
+  }
+  return uploadConfigPromise;
+}
+
 async function uploadFileDirect(file: File): Promise<string> {
-  const configRes = await fetch("/api/admin/upload-config");
-  if (!configRes.ok) throw new Error("Not authorised");
-  const { token, repo, branch } = await configRes.json() as { token: string; repo: string; branch: string };
+  const { token, repo, branch } = await getUploadConfig();
 
   const filename = file.name.replace(/[^a-zA-Z0-9._-]/g, "-");
   const path = `public/images/products/${filename}`;

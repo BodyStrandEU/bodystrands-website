@@ -9483,5 +9483,125 @@
     ],
     "dateAdded": "2026-08-01T09:00:00-04:00",
     "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/def1205ff0a5b43d0f3debd5b6f1c61b/downloads/default.mp4"
+  },
+  {
+    "id": "cuban-chain-bracelet",
+    "name": "Cuban Chain Bracelet",
+    "price": 20,
+    "currency": "EUR",
+    "category": "Bracelets",
+    "description": "The bracelet that doesn't try too hard. A Cuban curb chain in solid stainless steel, sized to sit right and built to last — no charms, no fuss, just weight and metal doing their job.",
+    "fullDescription": "The bracelet that doesn't try too hard.\n\nA Cuban curb chain in solid stainless steel, sized to sit right and built to last — no charms, no fuss, just weight and metal doing their job. Marketed for men, worn by anyone who wants a bracelet that means it.\n\nProduct Details\n\nMaterial: Stainless steel\nChain Style: Cuban curb chain\nFinish: Gold-tone or Silver-tone\nChain width: 3.5 mm\nLength: 21 cm (8.3\")\nClosure: Lobster clasp\nWaterproof & Tarnish-Resistant: Yes\n\nHow to Order\nSelect your Finish (Gold or Silver)\n\nSize Guide\n21 cm (8.3\") fits most average wrist sizes comfortably. Measure around your wrist where you'd like it to sit — this chain is a fixed length with no extender.\n\nCustom Sizing: Need a different length? Message me before ordering and I'll get you the right fit.\n\nCare Instructions\nWipe gently with a soft cloth after each wear.\nStore in an airtight container when not in use.\n\nShipping: Dispatches within 1–2 business days.\n\nCheck out more jewelry in our shop: bodystrandseu.etsy.com\n\nThanks for looking! Feel free to message me if you have any questions.",
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Stainless steel"
+      },
+      {
+        "label": "Chain Style",
+        "value": "Cuban curb chain"
+      },
+      {
+        "label": "Finish",
+        "value": "Gold-tone or Silver-tone"
+      },
+      {
+        "label": "Chain width",
+        "value": "3.5 mm"
+      },
+      {
+        "label": "Length",
+        "value": "21 cm (8.3\")"
+      },
+      {
+        "label": "Closure",
+        "value": "Lobster clasp"
+      },
+      {
+        "label": "Waterproof & Tarnish-Resistant",
+        "value": "Yes"
+      }
+    ],
+    "featured": false,
+    "active": true,
+    "variantGroups": [
+      {
+        "label": "Finish",
+        "options": [
+          "Gold Tone",
+          "Silver Tone"
+        ]
+      }
+    ],
+    "images": [],
+    "altText": "Cuban curb chain bracelet for men in stainless steel, gold and silver tone, waterproof and tarnish-resistant",
+    "dateAdded": "2026-08-06T14:00:00-04:00"
+  },
+  {
+    "id": "curb-chain-cross-necklace",
+    "name": "Cross Pendant Curb Chain Necklace",
+    "price": 22,
+    "currency": "EUR",
+    "category": "Necklaces",
+    "description": "A solid stainless steel curb chain necklace — available with or without a cross pendant. It won't rust, won't tarnish, and you can keep it on through water and sweat.",
+    "fullDescription": "A solid stainless steel curb chain necklace — available with or without a cross pendant. It won't rust, won't tarnish, and you can keep it on through water and sweat.\n\nProduct Details\n\nMaterial: Stainless steel\nChain Style: Curb chain (Cuban link)\nChain width: 3 mm\nChain length: 55 cm (22\")\nPendant: Optional cross, stainless steel — 20mm width x 35mm height (select \"With Pendant\" at checkout)\nFinish: Gold-tone or Silver-tone\nClosure: Lobster clasp\nWaterproof & Tarnish-Resistant: Yes\n\nHow to Order\nSelect your Finish (Gold or Silver) and your Style (With Pendant or Without Pendant)\n\nSize Guide\n55 cm (22\") fixed length, sits mid-chest on most builds. This chain has no extender, so measure from the base of your neck down to where you'd like it to sit before ordering.\n\nCustom Sizing: Need a different length? Message me before ordering and I'll get you the right fit.\n\nCare Instructions\nWipe gently with a soft cloth after each wear.\nStore in an airtight container when not in use.\n\nShipping: Dispatches within 1–2 business days.\n\nCheck out more jewelry in our shop: bodystrandseu.etsy.com\n\nThanks for looking! Feel free to message me if you have any questions.",
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Stainless steel"
+      },
+      {
+        "label": "Chain Style",
+        "value": "Curb chain (Cuban link)"
+      },
+      {
+        "label": "Chain width",
+        "value": "3 mm"
+      },
+      {
+        "label": "Chain length",
+        "value": "55 cm (22\")"
+      },
+      {
+        "label": "Pendant",
+        "value": "Optional cross pendant, stainless steel — 20mm width x 35mm height"
+      },
+      {
+        "label": "Finish",
+        "value": "Gold-tone or Silver-tone"
+      },
+      {
+        "label": "Closure",
+        "value": "Lobster clasp"
+      },
+      {
+        "label": "Waterproof & Tarnish-Resistant",
+        "value": "Yes"
+      }
+    ],
+    "featured": false,
+    "active": true,
+    "variantGroups": [
+      {
+        "label": "Finish",
+        "options": [
+          "Gold Tone",
+          "Silver Tone"
+        ]
+      },
+      {
+        "label": "Style",
+        "options": [
+          "Without Pendant",
+          "With Pendant"
+        ],
+        "optionPrices": {
+          "With Pendant": 8
+        }
+      }
+    ],
+    "images": [],
+    "altText": "Curb chain cross pendant necklace for men in stainless steel, gold and silver tone, with or without pendant option",
+    "dateAdded": "2026-08-06T14:00:00-04:00"
   }
 ]

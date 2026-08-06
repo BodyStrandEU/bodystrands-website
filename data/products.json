@@ -9565,7 +9565,7 @@
     "currency": "EUR",
     "category": "Necklaces",
     "description": "A solid stainless steel curb chain necklace — available with or without a cross pendant. It won't rust, won't tarnish, and you can keep it on through water and sweat.",
-    "fullDescription": "A solid stainless steel curb chain necklace — available with or without a cross pendant. It won't rust, won't tarnish, and you can keep it on through water and sweat.\n\nProduct Details\n\nMaterial: Stainless steel\nChain Style: Curb chain (Cuban link)\nChain width: 3 mm\nChain length: 55 cm (22\")\nPendant: Optional cross, stainless steel — 20mm width x 35mm height (select \"With Pendant\" at checkout)\nFinish: Gold-tone or Silver-tone\nClosure: Lobster clasp\nWaterproof & Tarnish-Resistant: Yes\n\nHow to Order\nSelect your Finish (Gold or Silver) and your Style (With Pendant or Without Pendant)\n\nSize Guide\n55 cm (22\") fixed length, sits mid-chest on most builds. This chain has no extender, so measure from the base of your neck down to where you'd like it to sit before ordering.\n\nCustom Sizing: Need a different length? Message me before ordering and I'll get you the right fit.\n\nCare Instructions\nWipe gently with a soft cloth after each wear.\nStore in an airtight container when not in use.\n\nShipping: Dispatches within 1–2 business days.\n\nCheck out more jewelry in our shop: bodystrandseu.etsy.com\n\nThanks for looking! Feel free to message me if you have any questions.",
+    "fullDescription": "A solid stainless steel curb chain necklace — available with or without a cross pendant. It won't rust, won't tarnish, and you can keep it on through water and sweat.\n\nProduct Details\n\nMaterial: Stainless steel\nChain Style: Curb chain (Cuban link)\nChain width: 3 mm\nChain length: 55 cm (22\")\nPendant: Optional cross, stainless steel — 20mm width x 35mm height (select \"With Pendant\" at checkout)\nFinish: Gold-tone or Silver-tone\nClosure: Lobster clasp\nWaterproof & Tarnish-Resistant: Yes\n\nHow to Order\nSelect your Finish (Gold or Silver) and your Style (With Pendant or Without Pendant)\n\nSize Guide\n55 cm (22\") fixed length, sits mid-chest on most builds. This chain has no extender, so measure from the base of your neck down to where you'd like it to sit before ordering.\n\nCustom Sizing: Need a different length? Message me before ordering and I'll get you the right fit.\n\nCare Instructions\nWipe gently with a soft cloth after each wear.\nStore in an airtight container when not in use.\n\nShipping: Dispatches within 1–2 business days.\n\nThanks for looking! Feel free to message me if you have any questions.",
     "specs": [
       {
         "label": "Material",
@@ -9621,12 +9621,32 @@
         }
       }
     ],
-    "images": [],
+    "images": [
+      "/images/products/40b43833-6642-470c-a59a-6a5cec97b092.png"
+    ],
     "altText": "Curb chain cross pendant necklace for men in stainless steel, gold and silver tone, with or without pendant option",
     "dateAdded": "2026-08-06T14:00:00-04:00",
     "variants": [
       "Gold Tone",
       "Silver Tone"
-    ]
+    ],
+    "gallery": [
+      "/images/products/40b43833-6642-470c-a59a-6a5cec97b092.png",
+      "/images/products/cbea5807-6d58-413e-9537-eb79db016432.png",
+      "/images/products/49903c7f-afb6-4b86-877b-f9a2599977ae.png",
+      "/images/products/38b9cfee-66db-46ca-a981-60744878c927.png",
+      "/images/products/1224e3af-9937-416b-b5a4-4b832577bbd9.png",
+      "/images/products/IMG_1165.jpeg",
+      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf-copy.jpeg"
+    ],
+    "variantHeroes": {
+      "Gold Tone": "/images/products/40b43833-6642-470c-a59a-6a5cec97b092.png",
+      "Silver Tone": "/images/products/cbea5807-6d58-413e-9537-eb79db016432.png"
+    },
+    "variantVideos": {
+      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/7c10bdc5fd2c60f449d03731e8267b07/downloads/default.mp4",
+      "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/7c10bdc5fd2c60f449d03731e8267b07/downloads/default.mp4"
+    },
+    "sizeGuideImage": "/images/products/Infographic-editor.png"
   }
 ]

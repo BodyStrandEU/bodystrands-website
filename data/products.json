@@ -9491,7 +9491,7 @@
     "currency": "EUR",
     "category": "Bracelets",
     "description": "The bracelet that doesn't try too hard. A Cuban curb chain in solid stainless steel, sized to sit right and built to last — no charms, no fuss, just weight and metal doing their job.",
-    "fullDescription": "The bracelet that doesn't try too hard.\n\nA Cuban curb chain in solid stainless steel, sized to sit right and built to last — no charms, no fuss, just weight and metal doing their job. Marketed for men, worn by anyone who wants a bracelet that means it.\n\nProduct Details\n\nMaterial: Stainless steel\nChain Style: Cuban curb chain\nFinish: Gold-tone or Silver-tone\nChain width: 3.5 mm\nLength: 21 cm (8.3\")\nClosure: Lobster clasp\nWaterproof & Tarnish-Resistant: Yes\n\nHow to Order\nSelect your Finish (Gold or Silver)\n\nSize Guide\n21 cm (8.3\") fits most average wrist sizes comfortably. Measure around your wrist where you'd like it to sit — this chain is a fixed length with no extender.\n\nCustom Sizing: Need a different length? Message me before ordering and I'll get you the right fit.\n\nCare Instructions\nWipe gently with a soft cloth after each wear.\nStore in an airtight container when not in use.\n\nShipping: Dispatches within 1–2 business days.\n\nCheck out more jewelry in our shop: bodystrandseu.etsy.com\n\nThanks for looking! Feel free to message me if you have any questions.",
+    "fullDescription": "The bracelet that doesn't try too hard.\n\nA Cuban curb chain in solid stainless steel, sized to sit right and built to last — no charms, no fuss, just weight and metal doing their job. Marketed for men, worn by anyone who wants a bracelet that means it.\n\nProduct Details\n\nMaterial: Stainless steel\nChain Style: Cuban curb chain\nFinish: Gold-tone or Silver-tone\nChain width: 3.5 mm\nLength: 21 cm (8.3\")\nClosure: Lobster clasp\nWaterproof & Tarnish-Resistant: Yes\n\nHow to Order\nSelect your Finish (Gold or Silver)\n\nSize Guide\n21 cm (8.3\") fits most average wrist sizes comfortably. Measure around your wrist where you'd like it to sit — this chain is a fixed length with no extender.\n\nCustom Sizing: Need a different length? Message me before ordering and I'll get you the right fit.\n\nCare Instructions\nWipe gently with a soft cloth after each wear.\nStore in an airtight container when not in use.\n\nShipping: Dispatches within 1–2 business days.\n\nThanks for looking! Feel free to message me if you have any questions.",
     "specs": [
       {
         "label": "Material",
@@ -9533,14 +9533,30 @@
         ]
       }
     ],
-    "images": [],
+    "images": [
+      "/images/products/e29bba22-0986-434e-bbc8-8d795b25e722.png"
+    ],
     "altText": "Cuban curb chain bracelet for men in stainless steel, gold and silver tone, waterproof and tarnish-resistant",
     "dateAdded": "2026-08-06T14:00:00-04:00",
     "variants": [
       "Gold Tone",
       "Silver Tone"
     ],
-    "audience": "men"
+    "gallery": [
+      "/images/products/e29bba22-0986-434e-bbc8-8d795b25e722.png",
+      "/images/products/cfe167e0-3659-471a-abec-eb409d814240.png",
+      "/images/products/176df181-a4e5-465d-9eb3-03818a3ba0b2.png",
+      "/images/products/IMG_1175-3.jpeg"
+    ],
+    "variantHeroes": {
+      "Gold Tone": "/images/products/e29bba22-0986-434e-bbc8-8d795b25e722.png",
+      "Silver Tone": "/images/products/f6403cb5-62e3-4c78-8a0d-35e3f27a77b2.png"
+    },
+    "variantVideos": {
+      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/fdb71f380488697d1572ac17787b247b/downloads/default.mp4",
+      "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/fdb71f380488697d1572ac17787b247b/downloads/default.mp4"
+    },
+    "sizeGuideImage": "/images/products/bcd4e901-9b25-4163-99dd-831b8b651e69.jpeg"
   },
   {
     "id": "curb-chain-cross-necklace",
@@ -9611,7 +9627,6 @@
     "variants": [
       "Gold Tone",
       "Silver Tone"
-    ],
-    "audience": "men"
+    ]
   }
 ]

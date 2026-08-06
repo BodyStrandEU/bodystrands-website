@@ -9535,7 +9535,11 @@
     ],
     "images": [],
     "altText": "Cuban curb chain bracelet for men in stainless steel, gold and silver tone, waterproof and tarnish-resistant",
-    "dateAdded": "2026-08-06T14:00:00-04:00"
+    "dateAdded": "2026-08-06T14:00:00-04:00",
+    "variants": [
+      "Gold Tone",
+      "Silver Tone"
+    ]
   },
   {
     "id": "curb-chain-cross-necklace",
@@ -9602,6 +9606,10 @@
     ],
     "images": [],
     "altText": "Curb chain cross pendant necklace for men in stainless steel, gold and silver tone, with or without pendant option",
-    "dateAdded": "2026-08-06T14:00:00-04:00"
+    "dateAdded": "2026-08-06T14:00:00-04:00",
+    "variants": [
+      "Gold Tone",
+      "Silver Tone"
+    ]
   }
 ]

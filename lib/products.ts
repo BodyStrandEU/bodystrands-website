@@ -56,6 +56,7 @@ export type Product = {
   sizeGuideImage?: string;
   dateAdded?: string; // ISO 8601 — when the product was first introduced; drives homepage "New Pieces" sort
   giftTags?: GiftTag[]; // occasion/recipient tags for the /gifts mega-menu — see GIFT_TAGS above
+  audience?: "men" | "women" | "unisex"; // who the piece is marketed toward — data-only for now, no UI yet (Phase 1 of the men's line rollout). Omitted = women's (the default, existing catalog).
 };
 
 // Images that are infographics across all products — hidden on shop card, shown on product page

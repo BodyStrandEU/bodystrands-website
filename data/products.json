@@ -9539,7 +9539,8 @@
     "variants": [
       "Gold Tone",
       "Silver Tone"
-    ]
+    ],
+    "audience": "men"
   },
   {
     "id": "curb-chain-cross-necklace",
@@ -9610,6 +9611,7 @@
     "variants": [
       "Gold Tone",
       "Silver Tone"
-    ]
+    ],
+    "audience": "men"
   }
 ]

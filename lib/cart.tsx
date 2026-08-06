@@ -7,8 +7,9 @@ export type CartItem = {
   productId:   string;
   productName: string;
   variant?:    string;
-  priceAdd:    number;
-  unitPrice:   number;   // product.price + priceAdd
+  priceAdd:    number;   // display only — real charge is always recomputed server-side from groupSelections
+  groupSelections?: Record<string, string>; // raw selected options per variant group — the source of truth checkout uses to validate priceAdd server-side
+  unitPrice:   number;   // product.price + priceAdd (display only, see above)
   image?:      string;
   currency:    string;
   quantity:    number;

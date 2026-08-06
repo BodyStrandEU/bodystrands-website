@@ -6,14 +6,14 @@ import { useCart } from "@/lib/cart";
 export default function BuyButton({
   productId,
   variant,
-  priceAdd,
+  groupSelections,
   disabled: externalDisabled,
   disabledMessage,
   secondary,
 }: {
   productId: string;
   variant?: string;
-  priceAdd?: number;
+  groupSelections?: Record<string, string>;
   disabled?: boolean;
   disabledMessage?: string;
   secondary?: boolean;
@@ -38,7 +38,7 @@ export default function BuyButton({
         body: JSON.stringify({
           productId,
           variant,
-          priceAdd: priceAdd ?? 0,
+          groupSelections,
           country:  shippingCountry || undefined,
         }),
       });

@@ -63,7 +63,7 @@ export default function CartIcon({ light }: { light?: boolean }) {
         method:  "POST",
         headers: { "Content-Type": "application/json" },
         body:    JSON.stringify({
-          items:   items.map((i) => ({ productId: i.productId, variant: i.variant, priceAdd: i.priceAdd, quantity: i.quantity })),
+          items:   items.map((i) => ({ productId: i.productId, variant: i.variant, groupSelections: i.groupSelections, quantity: i.quantity })),
           country: shippingCountry,
           giftWrap,
           giftNote: giftWrap ? giftNote : undefined,

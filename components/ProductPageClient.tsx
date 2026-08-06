@@ -179,7 +179,7 @@ export default function ProductPageClient({ product }: { product: Product }) {
       const res = await fetch("/api/checkout", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ productId: product.id, variant: combinedVariant, priceAdd, country: shippingCountry || undefined }),
+        body: JSON.stringify({ productId: product.id, variant: combinedVariant, groupSelections, country: shippingCountry || undefined }),
       });
       const data = await res.json() as { url?: string; error?: string };
       if (data.url) window.location.href = data.url;
@@ -394,6 +394,7 @@ export default function ProductPageClient({ product }: { product: Product }) {
                 productName: product.name,
                 variant:     combinedVariant,
                 priceAdd,
+                groupSelections,
                 unitPrice:   totalPrice,
                 image:       product.images?.[0],
                 currency:    product.currency,
@@ -417,7 +418,7 @@ export default function ProductPageClient({ product }: { product: Product }) {
           <BuyButton
             productId={product.id}
             variant={combinedVariant}
-            priceAdd={priceAdd}
+            groupSelections={groupSelections}
             disabled={!allGroupsSelected}
             secondary
           />

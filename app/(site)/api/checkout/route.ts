@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import Stripe from "stripe";
-import { products } from "@/lib/products";
+import { products, type Product } from "@/lib/products";
 import { getShippingRate, ALL_COUNTRIES } from "@/lib/shipping";
 import { fetchExchangeRates, type CurrencyCode } from "@/lib/currency";
 
@@ -8,7 +8,23 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!);
 
 const GIFT_WRAP_FEE_EUR = 4;
 
-type CartItemInput = { productId: string; variant?: string; priceAdd?: number; quantity?: number };
+type CartItemInput = { productId: string; variant?: string; groupSelections?: Record<string, string>; quantity?: number };
+
+// Security: the price add-on is NEVER taken from the client as a number — that would let
+// a tampered request pay whatever it wants. Instead we're given which *option* was selected
+// per variant group, and we look up that option's price from the product's own server-side
+// data. Worst case a tampered request can only pick a real, seller-defined price for a real
+// option — never an arbitrary or negative amount.
+function computeValidatedPriceAdd(product: Product, groupSelections: unknown): number {
+  if (!groupSelections || typeof groupSelections !== "object" || !product.variantGroups) return 0;
+  const selections = groupSelections as Record<string, string>;
+  return product.variantGroups.reduce((sum, group) => {
+    if (group.type === "text" || !group.optionPrices) return sum;
+    const selected = selections[group.label];
+    if (typeof selected !== "string" || !group.options?.includes(selected)) return sum;
+    return sum + (group.optionPrices[selected] ?? 0);
+  }, 0);
+}
 
 function giftWrapLineItem(): Stripe.Checkout.SessionCreateParams.LineItem {
   return {
@@ -85,7 +101,7 @@ export async function POST(req: NextRequest) {
         const product = products.find((p) => p.id === item.productId);
         if (!product) continue;
         const qty       = item.quantity ?? 1;
-        const unitPrice = product.price + (item.priceAdd ?? 0);
+        const unitPrice = product.price + computeValidatedPriceAdd(product, item.groupSelections);
         const name      = item.variant ? `${product.name} — ${item.variant}` : product.name;
         totalAmount    += unitPrice * qty;
         productNames.push(name);
@@ -148,12 +164,12 @@ export async function POST(req: NextRequest) {
     }
 
     // ── Single-item / Buy Now checkout ──────────────────────────────────
-    const { productId, variant, priceAdd } = body as { productId: string; variant?: string; priceAdd?: number };
+    const { productId, variant, groupSelections } = body as { productId: string; variant?: string; groupSelections?: Record<string, string> };
     const product = products.find((p) => p.id === productId);
     if (!product) return NextResponse.json({ error: "Product not found" }, { status: 404 });
 
     const productName = variant ? `${product.name} — ${variant}` : product.name;
-    const totalAmount = product.price + (priceAdd ?? 0);
+    const totalAmount = product.price + computeValidatedPriceAdd(product, groupSelections);
 
     const shipping_options = country
       ? buildSingleShippingOption(country, totalAmount, rates)

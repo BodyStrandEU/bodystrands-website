@@ -9648,5 +9648,62 @@
       "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/7c10bdc5fd2c60f449d03731e8267b07/downloads/default.mp4"
     },
     "sizeGuideImage": "/images/products/Infographic-editor.png"
+  },
+  {
+    "id": "coin-disc-chain-choker",
+    "name": "Coin Disc Chain Choker",
+    "price": 24,
+    "currency": "EUR",
+    "category": "Necklaces",
+    "description": "This minimalist choker necklace is for the girl who keeps things simple. A dainty coin disc chain sits right at the collarbone — no pendant, no fuss, just clean lines and quiet confidence.",
+    "fullDescription": "This minimalist choker necklace is for the girl who keeps things simple. A dainty coin disc chain sits right at the collarbone — no pendant, no fuss, just clean lines and quiet confidence. Handmade from stainless steel, it's built to stack, layer, or wear solo every day without fading, tarnishing, or asking for attention it didn't earn.\n\nMaterials: Stainless steel\nFinish: Gold tone / Silver tone\nStyle: Coin disc link chain\nSize: Chain 35cm + 6cm extender (Need a different size? Dm us after purchase and we'll adjust for free)\nWaterproof: Yes\nTarnish-resistant: Yes\n\nCare Instructions\nTo maintain the integrity and shine of your jewelry:\n\nWipe gently with a soft cloth after each wear.\nStore in an airtight container when not in use.\n\nShipping Time: Dispatches within 1-2 business days\n\nPlease note that as each piece is handcrafted, no two pieces are identical and slight variations may occur.\n\nCheck out more jewelry here in our shop: bodystrandseu.etsy.com\n\nThanks for looking! Feel free to message me if you have any questions.",
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Stainless steel"
+      },
+      {
+        "label": "Finish",
+        "value": "Gold tone / Silver tone"
+      },
+      {
+        "label": "Style",
+        "value": "Coin disc link chain"
+      },
+      {
+        "label": "Chain length",
+        "value": "35 cm + 6 cm extender"
+      },
+      {
+        "label": "Closure",
+        "value": "Lobster clasp"
+      },
+      {
+        "label": "Waterproof",
+        "value": "Yes"
+      },
+      {
+        "label": "Tarnish-Resistant",
+        "value": "Yes"
+      }
+    ],
+    "featured": false,
+    "active": true,
+    "variants": [
+      "Gold Tone",
+      "Silver Tone"
+    ],
+    "variantGroups": [
+      {
+        "label": "Finish",
+        "options": [
+          "Gold Tone",
+          "Silver Tone"
+        ]
+      }
+    ],
+    "images": [],
+    "altText": "Coin disc chain choker necklace in gold and silver tone stainless steel, waterproof and tarnish-resistant minimalist layering necklace",
+    "dateAdded": "2026-08-08T10:00:00-04:00"
   }
 ]

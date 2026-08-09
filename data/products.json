@@ -9720,5 +9720,72 @@
       "Silver Tone": "/images/products/aaaca860-3464-4cb6-bef2-8e5301b83913.png"
     },
     "sizeGuideImage": "/images/products/Infographic-editor.png"
+  },
+  {
+    "id": "coin-disc-chain-anklet",
+    "name": "Coin Disc Chain Anklet",
+    "price": 24,
+    "currency": "EUR",
+    "category": "Anklets",
+    "description": "Barefoot on the sand or dressed up with heels, this coin disc anklet doesn't care where you take it. Tiny stainless steel discs catch the light with every step, sitting light and easy right above the ankle bone.",
+    "fullDescription": "Barefoot on the sand or dressed up with heels, this coin disc anklet doesn't care where you take it. Tiny stainless steel discs catch the light with every step, sitting light and easy right above the ankle bone — nothing dangling, nothing extra. Handmade from stainless steel that won't fade, tarnish, or need babying, it's the kind of piece you forget you're wearing until someone asks where you got it.\n\nMaterials: Stainless steel\nFinish: Gold tone / Silver tone\nStyle: Coin disc link chain\nSize: Chain 21cm + 5cm extender (Need a different size? Dm us after purchase and we'll adjust for free)\nWaterproof: Yes\nTarnish-resistant: Yes\n\nCare Instructions\nTo maintain the integrity and shine of your jewelry:\n\nWipe gently with a soft cloth after each wear.\nStore in an airtight container when not in use.\n\nShipping Time: Dispatches within 1-2 business days\n\nPlease note that as each piece is handcrafted, no two pieces are identical and slight variations may occur.\n\nThanks for looking! Feel free to message me if you have any questions.",
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Stainless steel"
+      },
+      {
+        "label": "Finish",
+        "value": "Gold tone / Silver tone"
+      },
+      {
+        "label": "Style",
+        "value": "Coin disc link chain"
+      },
+      {
+        "label": "Chain length",
+        "value": "21 cm + 5 cm extender"
+      },
+      {
+        "label": "Closure",
+        "value": "Lobster clasp"
+      },
+      {
+        "label": "Waterproof",
+        "value": "Yes"
+      },
+      {
+        "label": "Tarnish-Resistant",
+        "value": "Yes"
+      }
+    ],
+    "featured": false,
+    "active": true,
+    "variants": [
+      "Gold Tone",
+      "Silver Tone"
+    ],
+    "variantGroups": [
+      {
+        "label": "Finish",
+        "options": [
+          "Gold Tone",
+          "Silver Tone"
+        ]
+      }
+    ],
+    "images": [
+      "/images/products/coin-disc-chain-anklet-gold.jpg"
+    ],
+    "gallery": [
+      "/images/products/coin-disc-chain-anklet-gold.jpg",
+      "/images/products/coin-disc-chain-anklet-silver.jpg"
+    ],
+    "variantHeroes": {
+      "Gold Tone": "/images/products/coin-disc-chain-anklet-gold.jpg",
+      "Silver Tone": "/images/products/coin-disc-chain-anklet-silver.jpg"
+    },
+    "altText": "Coin disc chain anklet in gold and silver tone stainless steel, waterproof and tarnish-resistant dainty ankle jewelry",
+    "dateAdded": "2026-08-09T12:00:00-04:00"
   }
 ]

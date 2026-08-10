@@ -31,7 +31,7 @@ const MARQUEE_TAGS = [
 
 const STATS = [
   { number: "50+",    label: "Handmade styles"  },
-  { number: "3,000+", label: "Happy customers"  },
+  { number: "300+",   label: "Happy customers"  },
   { number: "1–2",    label: "Days to dispatch" },
   { number: "100%",   label: "Waterproof"        },
 ];

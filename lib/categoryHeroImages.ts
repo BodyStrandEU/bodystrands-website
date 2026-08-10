@@ -12,4 +12,5 @@ export const CATEGORY_HERO_IMAGES: Partial<Record<Category, string>> = {
   "Head Chains":           "/images/category-head.jpg",
   "Eyeglasses Chains":     "/images/category-glasses.jpg",
   "Bikini Clip Chains":    "/images/category-bikini.jpg",
+  "Rings":                 "/images/category-rings.jpg",
 };

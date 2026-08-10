@@ -13,6 +13,7 @@ export const CATEGORIES = [
   "Head Chains",
   "Eyeglasses Chains",
   "Bikini Clip Chains",
+  "Rings",
 ] as const;
 
 export type Category = (typeof CATEGORIES)[number];

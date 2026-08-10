@@ -9796,5 +9796,80 @@
       "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/e773ba07d087a52fb256fb4c3cfe9114/downloads/default.mp4"
     },
     "sizeGuideImage": "/images/products/Infographic-editor.png"
+  },
+  {
+    "id": "birthstone-ring",
+    "name": "Birthstone Ring",
+    "price": 19.2,
+    "currency": "EUR",
+    "category": "Rings",
+    "description": "Twelve birthstones, one tiny ring — pick the color that's actually yours. This dainty gold stacking ring is set with a single round cubic zirconia stone in your birth month color, simple enough to wear every day and personal enough to mean something.",
+    "fullDescription": "Twelve birthstones, one tiny ring — pick the color that's actually yours. This dainty gold stacking ring is set with a single round cubic zirconia stone in your birth month color, simple enough to wear every day and personal enough to mean something.\n\nMaterials: Stainless steel\nFinish: Gold tone\nGemstone: Cubic zirconia, available in 12 birthstone colors — choose yours at checkout\nStyle: Dainty bezel-set stacking ring\nSize: US 6 (EU 51) only — this listing is not available in other sizes\nWaterproof: Yes\nTarnish-resistant: Yes\n\nCare Instructions\nTo maintain the integrity and shine of your jewelry:\n\nWipe gently with a soft cloth after each wear.\nStore in an airtight container when not in use.\n\nShipping Time: Dispatches within 1-2 business days\n\nPlease note that as each piece is handcrafted, no two pieces are identical and slight variations may occur.\n\nThanks for looking! Feel free to message me if you have any questions.",
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Stainless steel"
+      },
+      {
+        "label": "Finish",
+        "value": "Gold tone"
+      },
+      {
+        "label": "Gemstone",
+        "value": "Cubic zirconia, available in 12 birthstone colors"
+      },
+      {
+        "label": "Style",
+        "value": "Dainty bezel-set stacking ring"
+      },
+      {
+        "label": "Size",
+        "value": "US 6 (EU 51) only — not available in other sizes"
+      },
+      {
+        "label": "Waterproof",
+        "value": "Yes"
+      },
+      {
+        "label": "Tarnish-Resistant",
+        "value": "Yes"
+      }
+    ],
+    "featured": false,
+    "active": true,
+    "variantGroups": [
+      {
+        "label": "Choose your Birthstone",
+        "options": [
+          "January – Garnet",
+          "February – Amethyst",
+          "March – Aquamarine",
+          "April – Diamond",
+          "May – Emerald",
+          "June – Alexandrite",
+          "July – Ruby",
+          "August – Peridot",
+          "September – Sapphire",
+          "October – Tourmaline",
+          "November – Citrine",
+          "December – Turquoise"
+        ]
+      }
+    ],
+    "images": [
+      "/images/products/birthstone-ring-thumbnail.jpg"
+    ],
+    "gallery": [
+      "/images/products/birthstone-ring-thumbnail.jpg",
+      "/images/products/birthstone-ring-stack-alt.jpg",
+      "/images/products/birthstone-ring-green-1.jpg",
+      "/images/products/birthstone-ring-green-2.jpg",
+      "/images/products/birthstone-ring-red-1.jpg",
+      "/images/products/birthstone-ring-red-2.jpg",
+      "/images/products/birthstone-ring-rainbow-1.jpg",
+      "/images/products/birthstone-ring-rainbow-2.jpg"
+    ],
+    "altText": "Dainty gold birthstone ring with cubic zirconia stone, stainless steel stacking ring available in 12 birthstone colors, US size 6",
+    "dateAdded": "2026-08-10T12:00:00-04:00"
   }
 ]

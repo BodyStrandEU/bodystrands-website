@@ -48,6 +48,7 @@ const allTiles = [
   { label: "Head Chains",        href: "/shop?category=Head+Chains",         image: "/images/category-head.jpg"     },
   { label: "Eyeglasses Chains",  href: "/shop?category=Eyeglasses+Chains",  image: "/images/category-glasses.jpg"  },
   { label: "Bikini Clip Chains", href: "/shop?category=Bikini+Clip+Chains", image: "/images/category-bikini.jpg"   },
+  { label: "Leg Chains",         href: "/shop?category=Leg+Chains",         image: "/images/category-leg.jpg"      },
   { label: "Rings",              href: "/shop?category=Rings",              image: "/images/category-rings.jpg"    },
 ];
 

@@ -37,6 +37,8 @@ const SECTIONS: Section[] = [
       { label: "Head Chains", path: "images/category-head.jpg" },
       { label: "Eyeglasses Chains", path: "images/category-glasses.jpg" },
       { label: "Bikini Clip Chains", path: "images/category-bikini.jpg" },
+      { label: "Leg Chains", path: "images/category-leg.jpg" },
+      { label: "Rings", path: "images/category-rings.jpg" },
     ],
   },
   {

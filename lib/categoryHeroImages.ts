@@ -2,6 +2,7 @@ import type { Category } from "@/lib/products";
 
 export const CATEGORY_HERO_IMAGES: Partial<Record<Category, string>> = {
   "Belly Chains":          "/images/category-belly.png",
+  "Leg Chains":            "/images/category-leg.jpg",
   "Back Chains":           "/images/elvan-back-full.jpg",
   "Body Chains":           "/images/category-body.jpg",
   "Shoulder & Arm Chains": "/images/category-shoulder.jpg",

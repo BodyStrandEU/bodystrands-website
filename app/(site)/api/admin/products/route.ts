@@ -3,6 +3,10 @@ import { getFile, putFile } from "@/lib/github";
 import { isValidToken, COOKIE_NAME } from "@/lib/auth";
 import type { Product } from "@/lib/products";
 
+export const dynamic = "force-dynamic";
+
+const NO_STORE_HEADERS = { "Cache-Control": "no-store, must-revalidate" };
+
 function checkAuth(request: NextRequest): boolean {
   const token = request.cookies.get(COOKIE_NAME)?.value;
   if (!token) return false;
@@ -11,16 +15,16 @@ function checkAuth(request: NextRequest): boolean {
 
 export async function GET(request: NextRequest) {
   if (!checkAuth(request)) {
-    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+    return NextResponse.json({ error: "Unauthorized" }, { status: 401, headers: NO_STORE_HEADERS });
   }
 
   try {
     const { content } = await getFile("data/products.json");
     const products = JSON.parse(content) as Product[];
-    return NextResponse.json(products);
+    return NextResponse.json(products, { headers: NO_STORE_HEADERS });
   } catch (err) {
     const message = err instanceof Error ? err.message : "Unknown error";
-    return NextResponse.json({ error: message }, { status: 500 });
+    return NextResponse.json({ error: message }, { status: 500, headers: NO_STORE_HEADERS });
   }
 }
 

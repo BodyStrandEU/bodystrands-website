@@ -352,6 +352,7 @@ The Anthropic API key is NOT in .env.local — ask the user to paste it (or crea
 - Belly/Waist: `1122663082051406606`
 - Body/Bracelet: `1122663082051403313`
 - Choker/Necklace: `1122663082051417775`
+- Rings: `1122663082052035923`
 
 ### New product rule — REVISED Jul 2026, supersedes the old "3-day solo priority window"
 **Never cluster the same product together — always mix products within the same day.** User feedback (verbatim): "I feel like my viewers are getting annoyed by seeing the same product several times a day like it's gotta be mixed up... I'm not asking you to change the amount of posting per day, I'm not asking you to change the platform rules. The only thing I'm telling you is the mix and match all the products."

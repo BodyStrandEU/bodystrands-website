@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import type { Product } from "@/lib/products";
 
 const CATEGORY_ORDER = [
+  "Rings",
   "Belly Chains",
   "Leg Chains",
   "Back Chains",

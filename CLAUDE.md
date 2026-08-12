@@ -387,6 +387,9 @@ The same caption/image must never be scheduled more than once on the *same* plat
 When scheduling a video on Instagram or Facebook, post the video URL alone as media — no cover image, no thumbnail paired with it: `-m "video_url"` only.
 **Pinterest is the exception** — its API rejects a video-only pin with `"If posting a video you have to also include a cover image as second media"`. For Pinterest video pins, always pass a cover image as the second media item: `-m "video_url,cover_image_url"`.
 
+### Video audio — always mute unless told otherwise (confirmed Aug 12, 2026)
+Any video posted to social (IG, FB, Pinterest, TikTok) must have its audio track muted by default before scheduling — strip/mute the audio (e.g. `ffmpeg -i input.mp4 -an ...` or equivalent) prior to upload. Only post with sound if the user explicitly asks for audio on for that batch/video.
+
 ### API rate limiting — CRITICAL
 - Always add `time.sleep(0.5)` between every `postiz posts:create` call
 - After bulk deletes (100+ posts), wait 2–3 minutes before starting new creates

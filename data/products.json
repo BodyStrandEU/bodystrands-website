@@ -9958,17 +9958,14 @@
     "featured": false,
     "active": true,
     "images": [
-      "/images/products/rhodochrosite-ring-flatlay-hero.jpg"
+      "/images/products/rhodochrosite-ring-poolside-1.jpg"
     ],
     "gallery": [
+      "/images/products/rhodochrosite-ring-poolside-1.jpg",
       "/images/products/rhodochrosite-ring-flatlay-hero.jpg",
-      "/images/products/rhodochrosite-ring-finger-macro.jpg",
       "/images/products/rhodochrosite-ring-cheek.jpg",
       "/images/products/rhodochrosite-ring-denim.jpg",
-      "/images/products/rhodochrosite-ring-coffee.jpg",
-      "/images/products/rhodochrosite-ring-poolside-1.jpg",
-      "/images/products/rhodochrosite-ring-poolside-2.jpg",
-      "/images/products/rhodochrosite-ring-woodtable.jpeg"
+      "/images/products/rhodochrosite-ring-coffee.jpg"
     ],
     "video": "/images/products/rhodochrosite-ring-video.mp4",
     "sizeGuideImage": "/images/products/rhodochrosite-ring-infographic.png",

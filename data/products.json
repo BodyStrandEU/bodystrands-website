@@ -9869,5 +9869,113 @@
     "altText": "Dainty gold birthstone ring with cubic zirconia stone, stainless steel stacking ring available in 12 birthstone colors, US size 6",
     "dateAdded": "2026-08-10T12:00:00-04:00",
     "sizeGuideImage": "/images/products/2009acb1-ca23-46f8-a64e-63304404e2be.png"
+  },
+  {
+    "id": "evil-eye-ring",
+    "name": "Evil Eye Ring",
+    "price": 19.2,
+    "currency": "EUR",
+    "category": "Rings",
+    "description": "Superstitious or not, this one's hard to put down. A row of tiny green-stone eyes woven into a gold band, open at the back so it slides on and adjusts without any guesswork — no sizing chart required.",
+    "fullDescription": "Superstitious or not, this one's hard to put down. A row of tiny green-stone eyes woven into a gold band, open at the back so it slides on and adjusts without any guesswork — no sizing chart required.\n\nMaterials: Stainless steel\nFinish: Gold tone\nGemstone: Green cubic zirconia\nStyle: Evil eye woven band ring\nFit: Fully adjustable open band, inner diameter 20mm — one size fits most\nWaterproof: Yes\nTarnish-resistant: Yes\n\nCare Instructions\nTo maintain the integrity and shine of your jewelry:\n\nWipe gently with a soft cloth after each wear.\nStore in an airtight container when not in use.\n\nShipping Time: Dispatches within 1-2 business days\n\nPlease note that as each piece is handcrafted, no two pieces are identical and slight variations may occur.\n\nThanks for looking! Feel free to message me if you have any questions.",
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Stainless steel"
+      },
+      {
+        "label": "Finish",
+        "value": "Gold tone"
+      },
+      {
+        "label": "Gemstone",
+        "value": "Green cubic zirconia"
+      },
+      {
+        "label": "Style",
+        "value": "Evil eye woven band ring"
+      },
+      {
+        "label": "Fit",
+        "value": "Fully adjustable open band, inner diameter 20mm — one size fits most"
+      },
+      {
+        "label": "Waterproof",
+        "value": "Yes"
+      },
+      {
+        "label": "Tarnish-Resistant",
+        "value": "Yes"
+      }
+    ],
+    "featured": false,
+    "active": true,
+    "images": [
+      "/images/products/evil-eye-ring-flatlay-hero.png"
+    ],
+    "gallery": [
+      "/images/products/evil-eye-ring-flatlay-hero.png",
+      "/images/products/evil-eye-ring-finger-closeup.png",
+      "/images/products/evil-eye-ring-cheek.png",
+      "/images/products/evil-eye-ring-hair-1.jpg",
+      "/images/products/evil-eye-ring-hair-2.jpg",
+      "/images/products/evil-eye-ring-chin.jpg",
+      "/images/products/evil-eye-ring-flatlay-2.jpg",
+      "/images/products/evil-eye-ring-fabric.png"
+    ],
+    "video": "/images/products/evil-eye-ring-video.mp4",
+    "sizeGuideImage": "/images/products/evil-eye-ring-infographic.png",
+    "altText": "Gold evil eye woven band ring with green cubic zirconia gemstones, adjustable stainless steel ring",
+    "dateAdded": "2026-08-12T12:00:00-04:00"
+  },
+  {
+    "id": "rhodochrosite-ring",
+    "name": "Rhodochrosite Ring",
+    "price": 19.2,
+    "currency": "EUR",
+    "category": "Rings",
+    "description": "Tiny stones, big mood. This rhodochrosite beaded ring stretches to fit almost any finger, with a single gold stainless steel bead breaking up the natural stone pattern — no two rings look exactly alike.",
+    "fullDescription": "Tiny stones, big mood. This rhodochrosite beaded ring stretches to fit almost any finger, with a single gold stainless steel bead breaking up the natural stone pattern — no two rings look exactly alike.\n\nMaterials: Natural rhodochrosite stone, stainless steel accent bead\nFinish: Gold-tone stainless steel spacer\nStyle: 3mm beaded stretch ring\nFit: Adjustable elastic cord — one size fits most\nStone: Rhodochrosite, natural variations in color and pattern from piece to piece\n\nCare Instructions\nTo maintain the integrity and shine of your jewelry:\n\nWipe gently with a soft cloth after each wear.\nStore in an airtight container when not in use.\nAvoid contact with water, lotion, or perfume to protect the natural stone.\n\nShipping Time: Dispatches within 1-2 business days\n\nPlease note that as each piece is handcrafted from natural stone, no two pieces are identical and slight variations in color and pattern may occur.\n\nThanks for looking! Feel free to message me if you have any questions.",
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Natural rhodochrosite stone, stainless steel accent bead"
+      },
+      {
+        "label": "Finish",
+        "value": "Gold-tone stainless steel spacer"
+      },
+      {
+        "label": "Style",
+        "value": "3mm beaded stretch ring"
+      },
+      {
+        "label": "Fit",
+        "value": "Adjustable elastic cord — one size fits most"
+      },
+      {
+        "label": "Stone",
+        "value": "Rhodochrosite, natural variations in color and pattern"
+      }
+    ],
+    "featured": false,
+    "active": true,
+    "images": [
+      "/images/products/rhodochrosite-ring-flatlay-hero.jpg"
+    ],
+    "gallery": [
+      "/images/products/rhodochrosite-ring-flatlay-hero.jpg",
+      "/images/products/rhodochrosite-ring-finger-macro.jpg",
+      "/images/products/rhodochrosite-ring-cheek.jpg",
+      "/images/products/rhodochrosite-ring-denim.jpg",
+      "/images/products/rhodochrosite-ring-coffee.jpg",
+      "/images/products/rhodochrosite-ring-poolside-1.jpg",
+      "/images/products/rhodochrosite-ring-poolside-2.jpg",
+      "/images/products/rhodochrosite-ring-woodtable.jpeg"
+    ],
+    "video": "/images/products/rhodochrosite-ring-video.mp4",
+    "sizeGuideImage": "/images/products/rhodochrosite-ring-infographic.png",
+    "altText": "Rhodochrosite natural stone beaded stretch ring with gold stainless steel accent bead",
+    "dateAdded": "2026-08-12T12:05:00-04:00"
   }
 ]

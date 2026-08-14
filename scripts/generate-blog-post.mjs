@@ -172,13 +172,15 @@ function getRelevantCategories(topic) {
   return matched.slice(0, 3);
 }
 
-function pickTopic(existingPosts) {
+function pickTopic(existingPosts, exclude = new Set()) {
   const allTopics = TOPIC_POOLS.flatMap((pool) =>
     pool.topics.map((t) => ({ topic: t, category: pool.category }))
-  );
+  ).filter(({ topic }) => !exclude.has(topic));
 
   // Exact-match against the literal topic string used to generate each past post
   // (not the LLM-rewritten title, which rarely shares wording with the topic).
+  // Note: ~68 legacy posts predate topic-tracking and have no `topic` field, so
+  // this can still hand out a topic that collides on slug — the caller retries.
   const usedTopics = new Set(existingPosts.map((p) => p.topic).filter(Boolean));
   const neverUsed = allTopics.filter(({ topic }) => !usedTopics.has(topic));
 
@@ -196,6 +198,7 @@ function pickTopic(existingPosts) {
   );
   const cooledDown = allTopics.filter(({ topic }) => !recentTopics.has(topic));
   const pool = cooledDown.length > 0 ? cooledDown : allTopics;
+  if (pool.length === 0) return null;
   return pool[Math.floor(Math.random() * pool.length)];
 }
 
@@ -208,16 +211,7 @@ function slugify(title) {
     .slice(0, 80);
 }
 
-async function main() {
-  if (!process.env.ANTHROPIC_API_KEY) {
-    console.log("ANTHROPIC_API_KEY not set — skipping blog generation.");
-    return;
-  }
-  const client   = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
-  const posts    = JSON.parse(readFileSync(BLOG_FILE, "utf-8"));
-  const products = JSON.parse(readFileSync(PRODUCTS_FILE, "utf-8"));
-
-  const { topic, category } = pickTopic(posts);
+async function generateAttempt(client, topic, category, posts, products) {
   const relevantProducts    = getRelevantProducts(topic, products);
   const relevantCategories  = getRelevantCategories(topic);
 
@@ -309,11 +303,11 @@ Rules:
   const slug  = slugify(parsed.title);
 
   if (posts.find((p) => p.slug === slug)) {
-    console.log("Slug already exists, skipping.");
-    return;
+    console.log(`Slug "${slug}" already exists — will retry with a different topic.`);
+    return null;
   }
 
-  const newPost = {
+  return {
     slug,
     title:    parsed.title,
     excerpt:  parsed.excerpt,
@@ -331,6 +325,39 @@ Rules:
       url:   p.url,
     })),
   };
+}
+
+async function main() {
+  if (!process.env.ANTHROPIC_API_KEY) {
+    console.log("ANTHROPIC_API_KEY not set — skipping blog generation.");
+    return;
+  }
+  const client   = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
+  const posts    = JSON.parse(readFileSync(BLOG_FILE, "utf-8"));
+  const products = JSON.parse(readFileSync(PRODUCTS_FILE, "utf-8"));
+
+  const MAX_ATTEMPTS = 5;
+  const tried = new Set();
+  let newPost = null;
+
+  for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
+    const picked = pickTopic(posts, tried);
+    if (!picked) {
+      console.log("No untried topics left in the pool — stopping.");
+      break;
+    }
+    const { topic, category } = picked;
+    tried.add(topic);
+
+    newPost = await generateAttempt(client, topic, category, posts, products);
+    if (newPost) break;
+    console.log(`Attempt ${attempt}/${MAX_ATTEMPTS} collided, trying another topic...`);
+  }
+
+  if (!newPost) {
+    console.log(`No unique post generated after ${MAX_ATTEMPTS} attempts — skipping this run.`);
+    return;
+  }
 
   posts.unshift(newPost);
   writeFileSync(BLOG_FILE, JSON.stringify(posts, null, 2));

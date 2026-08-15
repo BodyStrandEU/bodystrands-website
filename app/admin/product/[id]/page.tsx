@@ -1336,6 +1336,20 @@ export default function ProductEditor({ params }: { params: Promise<{ id: string
           </div>
 
           <div style={{ marginBottom: "1rem" }}>
+            <label style={{ display: "flex", alignItems: "center", gap: "0.4rem", cursor: "pointer", fontSize: "0.82rem", color: "var(--admin-text2)" }}>
+              <input
+                type="checkbox"
+                checked={form.plusSize ?? false}
+                onChange={(e) => setForm((f) => ({ ...f, plusSize: e.target.checked }))}
+              />
+              Plus Size (also shows on the /plus-size page)
+            </label>
+            <p style={{ fontSize: "0.7rem", color: "var(--admin-muted)", marginTop: "0.35rem" }}>
+              Keeps the product in its regular category too — this just adds it to the dedicated collection page as well.
+            </p>
+          </div>
+
+          <div style={{ marginBottom: "1rem" }}>
             <label style={labelStyle}>Short Description</label>
             <textarea
               style={{ ...inputStyle, minHeight: "80px", resize: "vertical" }}

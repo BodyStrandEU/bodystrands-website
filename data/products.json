@@ -115,10 +115,27 @@
       "Gold Tone",
       "Silver Tone"
     ],
-    "variantHeroes": {},
-    "variantVideos": {},
-    "gallery": [],
-    "images": [],
+    "variantHeroes": {
+      "Gold Tone": "/images/products/29b29196-0d5c-4585-b67a-309a930e9a1e.png",
+      "Silver Tone": "/images/products/4d15bb80-a57b-4d23-bee3-5f3bde2a19d4.jpg"
+    },
+    "variantVideos": {
+      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/f333f448e727fd0b32222527e45b459f/downloads/default.mp4",
+      "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/f333f448e727fd0b32222527e45b459f/downloads/default.mp4"
+    },
+    "gallery": [
+      "/images/products/29b29196-0d5c-4585-b67a-309a930e9a1e.png",
+      "/images/products/4d15bb80-a57b-4d23-bee3-5f3bde2a19d4.jpg",
+      "/images/products/68810628-5cd6-4861-afa2-96b1a160173e.jpg",
+      "/images/products/fa1cbece-a2ea-4231-9172-996efad85c10.jpg",
+      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.jpg",
+      "/images/products/9f176bb4-a6ad-488d-a95b-bed228fcb4b0.jpg",
+      "/images/products/etsy-thumbnails--2--copy-3.png",
+      "/images/products/5b76dd09-5a4a-4c65-880b-bfff650c62e8.png"
+    ],
+    "images": [
+      "/images/products/29b29196-0d5c-4585-b67a-309a930e9a1e.png"
+    ],
     "variantGroups": [
       {
         "label": "Size",
@@ -132,7 +149,8 @@
       }
     ],
     "altText": "Plus size gold and silver stainless steel body chain, waterproof bikini accessory for curvy women, four fitted sizes",
-    "dateAdded": "2026-08-14T12:05:00-04:00"
+    "dateAdded": "2026-08-14T12:05:00-04:00",
+    "sizeGuideImage": "/images/products/23820309-c4d7-4101-88c8-e89a8b2f574c.png"
   },
   {
     "id": "colorful-crystal-bead-anklet",

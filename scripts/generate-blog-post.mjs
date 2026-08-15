@@ -108,6 +108,18 @@ const TOPIC_POOLS = [
     "why handmade jewelry from small brands just hits different",
     "jewelry trends that are actually wearable not just runway",
   ]},
+  { category: "Plus Size", keywords: ["plus size", "curvy", "curvaceous"], topics: [
+    "plus size body jewelry that actually fits",
+    "how to size a plus size belly chain",
+    "why plus size body jewelry is so hard to find",
+    "the truth about adjustable jewelry and plus size bodies",
+    "plus size jewelry gift ideas for curvy women",
+    "how to measure yourself for a plus size body chain",
+    "plus size beach jewelry that stays comfortable all day",
+    "curvy body positive jewelry styling tips",
+    "why we built body jewelry for real plus size measurements",
+    "plus size jewelry brands that actually deliver on sizing",
+  ]},
 ];
 
 // Map topic text to product categories
@@ -137,9 +149,17 @@ function getRelevantProducts(topic, allProducts) {
   }
 
   // If no specific category matched, use all
-  const pool = allProducts.filter((p) =>
+  let pool = allProducts.filter((p) =>
     p.active !== false && (matched.size === 0 || matched.has(p.category))
   );
+
+  // Plus-size topics should link to the actual plus-size products, not just
+  // any random item from the matched category (e.g. Belly Chains) — falls
+  // back to the general pool if there aren't enough plus-size products yet.
+  if (topicLower.includes("plus size") || topicLower.includes("curvy") || topicLower.includes("curvaceous")) {
+    const plusSizePool = pool.filter((p) => p.plusSize);
+    if (plusSizePool.length > 0) pool = plusSizePool;
+  }
 
   // Shuffle and pick up to 4 products
   const shuffled = pool.sort(() => Math.random() - 0.5).slice(0, 4);
@@ -156,6 +176,10 @@ function getRelevantProducts(topic, allProducts) {
 function getRelevantCategories(topic) {
   const topicLower = topic.toLowerCase();
   const matched = [];
+
+  if (topicLower.includes("plus size") || topicLower.includes("curvy") || topicLower.includes("curvaceous")) {
+    matched.push({ name: "Plus Size", url: "/plus-size" });
+  }
 
   for (const [cat, keywords] of Object.entries(CATEGORY_KEYWORDS)) {
     if (keywords.some((kw) => topicLower.includes(kw))) {

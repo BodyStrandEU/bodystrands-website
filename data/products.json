@@ -10126,5 +10126,49 @@
     "sizeGuideImage": "/images/products/rhodochrosite-ring-infographic.png",
     "altText": "Rhodochrosite natural stone beaded stretch ring with gold stainless steel accent bead",
     "dateAdded": "2026-08-12T12:05:00-04:00"
+  },
+  {
+    "id": "rosary-pearl-cross-choker",
+    "name": "Rosary Pearl Cross Choker",
+    "price": 28,
+    "currency": "EUR",
+    "category": "Necklaces",
+    "description": "A dainty rosary-style pearl bead chain with a small cross charm made of its own tiny pearls, resting right at the collarbone.",
+    "fullDescription": "A dainty pearl chain with tiny beads threaded individually along a fine stainless steel chain, finished with a small cross charm made of its own tiny pearls. It sits right at the collarbone, simple and delicate. Handmade from stainless steel underneath every pearl and every link, so it stays bright and doesn't fade, tarnish, or need to come off before you shower. Wear it with a white dress for New Year's, under a sweater in the colder months, or as a first communion, christening, or confirmation gift that still gets worn once the day is over. A good gift for a daughter, goddaughter, or granddaughter for their communion or confirmation, or for a bride or bridesmaid who wants something delicate that still means something.",
+    "specs": [
+      { "label": "Material", "value": "Gold-tone stainless steel chain (Silver-tone also available)" },
+      { "label": "Pearls", "value": "Pearl beads (glass)" },
+      { "label": "Pendant", "value": "Cross charm with pearl detail" },
+      { "label": "Design", "value": "Single-strand rosary-style beaded pearl chain" },
+      { "label": "Chain length", "value": "35 cm (13.8\") + 6 cm (2.4\") extender" },
+      { "label": "Closure", "value": "Lobster clasp" },
+      { "label": "Waterproof", "value": "Yes" },
+      { "label": "Care", "value": "Wipe with a soft cloth after wear. Store in an airtight container." },
+      { "label": "Shipping", "value": "Dispatches within 1–2 business days" }
+    ],
+    "variants": ["Gold Tone", "Silver Tone"],
+    "variantHeroes": {},
+    "variantVideos": {},
+    "gallery": [],
+    "images": [],
+    "featured": false,
+    "active": true,
+    "altText": "Dainty gold-tone stainless steel rosary pearl chain choker with cross pendant, waterproof necklace for women",
+    "dateAdded": "2026-08-17T12:00:00-04:00",
+    "giftTags": ["confirmation", "bridal"],
+    "tags": [
+      "rosary necklace",
+      "pearl cross necklace",
+      "gold cross choker",
+      "silver cross necklace",
+      "beaded pearl necklace",
+      "dainty pearl choker",
+      "confirmation necklace",
+      "communion gift necklace",
+      "bridal pearl necklace",
+      "stainless steel necklace",
+      "waterproof necklace",
+      "religious necklace women"
+    ]
   }
 ]

@@ -10229,31 +10229,79 @@
     "description": "A foot chain built for bigger ankles, not just an added extender. Available in two fitted plus sizes, gold or silver stainless steel.",
     "fullDescription": "Made for plus-size ankles, not just adjusted for them. This foot chain comes in two plus sizes with a longer base chain built in from the start, so you're not stuck with an anklet that won't quite close or one that digs in after a few hours in the heat.\n\nThere is something about being barefoot on the sand or by the pool that just feels like freedom, and this piece is made so you can actually enjoy that without thinking about the fit. It's handmade from stainless steel, so it's tough enough for your beach trips while staying lightweight and comfortable against your skin. Whether you're heading to a destination wedding or just want a little shimmer with your favorite summer sandals, this piece adjusts easily to your foot for a secure fit that stays put while you move.\n\nMaterials: Stainless steel\nFinish: Gold tone or Silver tone\nDesign: Layered double-chain anklet with connecting toe loop\nToe Chain Length: 8 cm (same on both sizes)\nWaterproof: Yes\nTarnish-Resistant: Yes\n\nSize Guide\nPlus Size — Fits ankles approx. 27–34 cm. Base length 27 cm, plus a 7 cm adjustable extender.\nPlus Size 2X — Fits ankles approx. 32–40 cm. Base length 32 cm, plus an 8 cm adjustable extender.\n\nFit Note: Not sure which to pick? Wrap a measuring tape or piece of string snugly around your ankle where you'd wear the chain, then match that number to the ranges above.\n\nCare Instructions\nWipe gently with a soft cloth after each wear.\nStore in an airtight container when not in use.\n\nPlease note that as each piece is handcrafted, no two pieces are identical and slight variations may occur.",
     "specs": [
-      { "label": "Material", "value": "Stainless steel" },
-      { "label": "Finish", "value": "Gold tone or Silver tone" },
-      { "label": "Design", "value": "Layered double-chain anklet with connecting toe loop" },
-      { "label": "Toe Chain Length", "value": "8 cm (same on both sizes)" },
-      { "label": "Chain Thickness", "value": "1.5 mm" },
-      { "label": "Sizing", "value": "2 fitted plus sizes — see size guide" },
-      { "label": "Waterproof", "value": "Yes" },
-      { "label": "Tarnish-Resistant", "value": "Yes" }
+      {
+        "label": "Material",
+        "value": "Stainless steel"
+      },
+      {
+        "label": "Finish",
+        "value": "Gold tone or Silver tone"
+      },
+      {
+        "label": "Design",
+        "value": "Layered double-chain anklet with connecting toe loop"
+      },
+      {
+        "label": "Toe Chain Length",
+        "value": "8 cm (same on both sizes)"
+      },
+      {
+        "label": "Chain Thickness",
+        "value": "1.5 mm"
+      },
+      {
+        "label": "Sizing",
+        "value": "2 fitted plus sizes — see size guide"
+      },
+      {
+        "label": "Waterproof",
+        "value": "Yes"
+      },
+      {
+        "label": "Tarnish-Resistant",
+        "value": "Yes"
+      }
     ],
-    "variants": ["Gold Tone", "Silver Tone"],
-    "variantHeroes": {},
-    "variantVideos": {},
-    "gallery": [],
-    "images": [],
+    "variants": [
+      "Gold Tone",
+      "Silver Tone"
+    ],
+    "variantHeroes": {
+      "Gold Tone": "/images/products/9c8db621-171a-4e8d-917f-5442e834fdc8.png",
+      "Silver Tone": "/images/products/37a9d045-cfbf-4fa9-9ca2-3edb5caa8c91.png"
+    },
+    "variantVideos": {
+      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/fcaa8ac158b0e277e722ef11ff141276/downloads/default.mp4",
+      "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/fcaa8ac158b0e277e722ef11ff141276/downloads/default.mp4"
+    },
+    "gallery": [
+      "/images/products/9c8db621-171a-4e8d-917f-5442e834fdc8.png",
+      "/images/products/37a9d045-cfbf-4fa9-9ca2-3edb5caa8c91.png",
+      "/images/products/il_fullxfull.8108786334_ahkn.jpeg",
+      "/images/products/900b7026-f8f4-428b-b07f-89d9f6822160.png",
+      "/images/products/0305ca9b-3238-4f2a-ae6b-2cbd0345514f.png",
+      "/images/products/0972ca21-3f87-4d07-b05e-7942821d45aa.png",
+      "/images/products/0b3c5dab-17f6-42df-b4b8-14f9bf503b70.png",
+      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.jpg"
+    ],
+    "images": [
+      "/images/products/9c8db621-171a-4e8d-917f-5442e834fdc8.png"
+    ],
     "variantGroups": [
       {
         "label": "Size",
         "type": "options",
-        "options": ["Plus Size", "Plus Size 2X"]
+        "options": [
+          "Plus Size",
+          "Plus Size 2X"
+        ]
       }
     ],
     "featured": false,
     "active": true,
     "altText": "Plus size gold and silver stainless steel toe chain anklet, adjustable barefoot sandal for wide ankles, two fitted sizes",
     "dateAdded": "2026-08-18T09:00:00-04:00",
-    "plusSize": true
+    "plusSize": true,
+    "sizeGuideImage": "/images/products/059371aa-4066-4f05-87c6-57026cc0f124.png"
   }
 ]

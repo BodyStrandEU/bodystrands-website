@@ -69,6 +69,10 @@ export async function POST(req: NextRequest) {
     }
 
     const productName   = session.metadata?.productName ?? "Unknown product";
+    const productId     = session.metadata?.productId;
+    const productUrl    = productId
+      ? `https://www.bodystrands.com/shop/${productId}`
+      : "https://www.bodystrands.com/shop";
     const amountTotal   = ((session.amount_total ?? 0) / 100).toFixed(2);
     const currency      = (session.currency ?? "eur").toUpperCase();
     const giftWrap      = session.metadata?.giftWrap === "yes";
@@ -170,6 +174,14 @@ export async function POST(req: NextRequest) {
           <h2 style="font-weight:300;letter-spacing:0.05em;border-bottom:1px solid #E8B4A8;padding-bottom:12px;">
             New Order Received
           </h2>
+          ${productImages.length > 0 ? `
+          <div style="text-align:center;margin:16px 0;">
+            ${productImages.map((img) => `<img src="${img}" alt="${productName}" width="140" height="140" style="width:140px;height:140px;object-fit:cover;border:1px solid #E8B4A8;margin:0 4px;" />`).join("")}
+          </div>
+          ` : ""}
+          <p style="text-align:center;margin:0 0 16px;">
+            <a href="${productUrl}" style="display:inline-block;background:#2C2220;color:#FDF9F7;padding:10px 24px;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;text-decoration:none;">View Product</a>
+          </p>
           ${giftWrap ? `
           <div style="border:2px solid #A0622A;background:#FBF2EC;padding:16px 20px;margin:16px 0;">
             <p style="font-size:13px;font-weight:bold;color:#A0622A;margin:0 0 6px;">🎁 GIFT WRAP REQUESTED</p>

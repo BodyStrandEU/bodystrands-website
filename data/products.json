@@ -10313,24 +10313,70 @@
     "description": "A hand chain that drapes from your wrist across the back of your hand, with a small pearl cross pendant that hangs right at the wrist and catches the light as you move.",
     "fullDescription": "This hand chain drapes from your wrist across the back of your hand, with a small pearl cross pendant that hangs right at the wrist and catches the light as you move. It's handmade and made to actually be worn every day, not just looked at.\n\nWear it by the pool, pack it for vacation, or dress it up for a festival look — it layers well with rings and stacks easily with other pieces. It's made from stainless steel, so it holds up against water and everyday wear without tarnishing or losing its shine.",
     "specs": [
-      { "label": "Material", "value": "Stainless steel chain with pearl beads" },
-      { "label": "Finish", "value": "Gold tone or Silver tone" },
-      { "label": "Design", "value": "Beaded pearl hand chain with dangling pearl cross pendant" },
-      { "label": "Bracelet Length", "value": "16.5 cm (6.5\") + 4 cm (1.6\") extender (16.5–20.5 cm (6.5\"–8.1\") total)" },
-      { "label": "Waterproof", "value": "Yes" },
-      { "label": "Tarnish-Resistant", "value": "Yes" },
-      { "label": "Care", "value": "Wipe gently with a soft cloth after each wear. Store in an airtight container." },
-      { "label": "Shipping", "value": "Dispatches within 1–2 business days" }
+      {
+        "label": "Material",
+        "value": "Stainless steel chain with pearl beads"
+      },
+      {
+        "label": "Finish",
+        "value": "Gold tone or Silver tone"
+      },
+      {
+        "label": "Design",
+        "value": "Beaded pearl hand chain with dangling pearl cross pendant"
+      },
+      {
+        "label": "Bracelet Length",
+        "value": "16.5 cm (6.5\") + 4 cm (1.6\") extender (16.5–20.5 cm (6.5\"–8.1\") total)"
+      },
+      {
+        "label": "Waterproof",
+        "value": "Yes"
+      },
+      {
+        "label": "Tarnish-Resistant",
+        "value": "Yes"
+      },
+      {
+        "label": "Care",
+        "value": "Wipe gently with a soft cloth after each wear. Store in an airtight container."
+      },
+      {
+        "label": "Shipping",
+        "value": "Dispatches within 1–2 business days"
+      }
     ],
-    "variants": ["Gold Tone", "Silver Tone"],
-    "variantHeroes": {},
-    "variantVideos": {},
-    "gallery": [],
-    "images": [],
+    "variants": [
+      "Gold Tone",
+      "Silver Tone"
+    ],
+    "variantHeroes": {
+      "Gold Tone": "/images/products/767c2b97-63e2-4e4c-8f6e-f0d9c814528f.png",
+      "Silver Tone": "/images/products/b68ae73f-b17b-4eb5-8446-48d6cf9a99b7.png"
+    },
+    "variantVideos": {
+      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/c56680341e3e7fccb53a9594f97516b7/downloads/default.mp4",
+      "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/c56680341e3e7fccb53a9594f97516b7/downloads/default.mp4"
+    },
+    "gallery": [
+      "/images/products/767c2b97-63e2-4e4c-8f6e-f0d9c814528f.png",
+      "/images/products/IMG_3021.jpg",
+      "/images/products/de821753-5001-4742-973d-ca5eea3424e7.jpeg",
+      "/images/products/b68ae73f-b17b-4eb5-8446-48d6cf9a99b7.png",
+      "/images/products/044f009b-b4c4-476f-b719-2d12caf1f79e.png",
+      "/images/products/9e723d85-1223-4afa-ae7f-409c5b9df0ab.png",
+      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.jpg",
+      "/images/products/IMG_3018.jpg"
+    ],
+    "images": [
+      "/images/products/767c2b97-63e2-4e4c-8f6e-f0d9c814528f.png"
+    ],
     "featured": false,
     "active": true,
     "altText": "Gold and silver stainless steel pearl hand chain with dangling cross pendant, waterproof faith jewelry for confirmation and communion gifts",
     "dateAdded": "2026-08-19T09:00:00-04:00",
-    "giftTags": ["confirmation"]
+    "giftTags": [
+      "confirmation"
+    ]
   }
 ]

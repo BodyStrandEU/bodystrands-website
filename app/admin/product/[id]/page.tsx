@@ -536,13 +536,27 @@ function VideoDropZone({ value, onChange }: VideoDropZoneProps) {
       const cfRes = await fetch(uploadURL, { method: "POST", body: form });
       if (!cfRes.ok) throw new Error(`Cloudflare rejected upload (${cfRes.status})`);
 
-      // Step 3: Enable MP4 downloads so /downloads/default.mp4 URL works on the product page
-      setProgress("Enabling MP4 playback…");
-      await fetch("/api/admin/stream-enable-mp4", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ uid }),
-      });
+      // Step 3: Enable MP4 downloads so /downloads/default.mp4 URL works on the product page.
+      // Cloudflare hasn't necessarily finished processing the video the instant the upload POST
+      // returns, so this call can fail if the video isn't "ready" yet — retry with backoff instead
+      // of firing once and silently moving on (that's how prior uploads ended up with dead videos).
+      let enabled = false;
+      for (let attempt = 1; attempt <= 8 && !enabled; attempt++) {
+        setProgress(`Enabling MP4 playback… (attempt ${attempt}/8)`);
+        const enableRes = await fetch("/api/admin/stream-enable-mp4", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ uid }),
+        });
+        if (enableRes.ok) {
+          enabled = true;
+        } else if (attempt < 8) {
+          await new Promise((r) => setTimeout(r, attempt * 3000));
+        }
+      }
+      if (!enabled) {
+        throw new Error("Video uploaded but Cloudflare hasn't finished processing it yet — MP4 playback could not be enabled. Try re-saving this field in a minute.");
+      }
 
       onChange(streamUrl);
       setProgress("");

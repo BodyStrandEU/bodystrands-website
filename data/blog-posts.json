@@ -1,5 +1,115 @@
 [
   {
+    "slug": "handmade-vs-mass-produced-jewelry-what-youre-actually-getting",
+    "title": "Handmade vs. Mass-Produced Jewelry: What You're Actually Getting",
+    "excerpt": "The difference isn't just sentimental. Here's what changes when someone makes your jewelry by hand.",
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "There's a reason handmade jewelry feels different. It's not nostalgia or marketing. When you buy a piece made by actual hands—not machines in a factory—you're getting something that was checked, adjusted, and cared for at every stage. Here's what that means for you."
+      },
+      {
+        "type": "paragraph",
+        "text": "Mass production is built for volume and speed. Handmade jewelry is built for durability and detail. The difference shows up in ways you'll notice over months and years of wearing your piece."
+      },
+      {
+        "type": "heading",
+        "text": "Quality control that actually exists"
+      },
+      {
+        "type": "paragraph",
+        "text": "When a machine produces hundreds of identical pieces, it catches defects at scale—maybe. When two people handmake every single item in their studio, every weak point gets spotted before it leaves. There's nowhere to hide. A clasp that doesn't close smoothly? Fixed. A connection that feels fragile? Reinforced. You can't rush past these things when you're personally handing the piece to someone."
+      },
+      {
+        "type": "paragraph",
+        "text": "This is especially true with body jewelry, which takes more stress than a necklace you wear once a week. An <a href=\"/shop/gemstone-zodiac-anklet\">anklet</a> gets sand, salt water, and friction every day. If it's not built solid from the start, it won't last. Handmade pieces made from 316L stainless steel—waterproof, tarnish-resistant—are designed for that life, not just the box it ships in."
+      },
+      {
+        "type": "heading",
+        "text": "You can actually customize it"
+      },
+      {
+        "type": "paragraph",
+        "text": "Mass-produced jewelry comes as-is. Pre-made. Final. Handmade jewelry? You get to be part of the process. Want your birthstone instead of generic crystals? Done. Need a specific initial or zodiac sign? Built to order, just for you. This isn't a upsell feature—it's how handmade actually works."
+      },
+      {
+        "type": "paragraph",
+        "text": "When the person making your piece knows exactly what you want—your birth month, your sign, your letter—they're making it *for* you, not just making another one. Pieces like the <a href=\"/shop/pearl-evening-backdrop-necklace\">Pearl Evening Backdrop Necklace</a> or <a href=\"/shop/pearl-bridal-back-chain\">Pearl Bridal Back Chain</a> aren't templates. They're made to your choice. That matters."
+      },
+      {
+        "type": "heading",
+        "text": "Real materials, real durability"
+      },
+      {
+        "type": "paragraph",
+        "text": "Handmade doesn't mean fragile. Every piece from <a href=\"/shop\">our studio</a> is made from 316L stainless steel because we use them ourselves and we know what lasts. No plating that flakes off after a summer. No tarnish after a week. This is the same steel used in medical implants. It's waterproof. It's durable. It's made for the jewelry you actually wear, not jewelry you put on for special occasions and store in a drawer."
+      },
+      {
+        "type": "paragraph",
+        "text": "Mass production cuts costs by cutting material quality. Handmade pieces cut nowhere. The time investment is already there—the maker has already chosen the best material because skimping would show in their work."
+      },
+      {
+        "type": "paragraph",
+        "text": "You're not buying a story when you choose handmade. You're buying a piece that was made to survive—not just sit pretty. That's the real difference."
+      }
+    ],
+    "faq": [
+      {
+        "question": "Is handmade jewelry more expensive than factory-made?",
+        "answer": "Usually yes, but not always dramatically. Handmade pieces reflect actual labor and better materials—you're paying for time and skill, not just manufacturing overhead. A handmade piece at €28 costs more than a factory piece at €8, but it also typically lasts years longer and works better under daily wear."
+      },
+      {
+        "question": "Can handmade jewelry handle everyday wear like beach trips and swimming?",
+        "answer": "It depends on the materials. Handmade jewelry made from high-quality stainless steel, like 316L, is waterproof and tarnish-resistant and actually designed for everyday life—including salt water and chlorine. It's more durable for daily wear than many factory pieces because durability was built in from the start, not added as an afterthought."
+      },
+      {
+        "question": "Does handmade mean each piece is different?",
+        "answer": "Not necessarily different in design—you can have two identical bracelets that are both handmade. What's different is the care taken in each one. Every handmade piece is individually inspected, adjusted, and finished. Twins, not clones. You also often get customization options (like birthstones or initials) that mass production doesn't offer."
+      }
+    ],
+    "date": "2026-08-22",
+    "category": "Care & Quality",
+    "topic": "what makes handmade jewelry different from mass produced",
+    "tags": [
+      "handmade jewelry",
+      "quality body jewelry",
+      "sustainable fashion",
+      "316L stainless steel",
+      "custom jewelry"
+    ],
+    "readTime": "4 min read",
+    "featuredProducts": [
+      {
+        "id": "pearl-evening-backdrop-necklace",
+        "name": "Pearl Evening Backdrop Necklace",
+        "price": "€36",
+        "image": "https://i.etsystatic.com/55122258/r/il/6d7dfb/8042848779/il_fullxfull.8042848779_1peb.jpg",
+        "url": "/shop/pearl-evening-backdrop-necklace"
+      },
+      {
+        "id": "boho-forehead-chain",
+        "name": "Boho Forehead Chain",
+        "price": "€24",
+        "image": "https://i.etsystatic.com/55122258/r/il/a79035/7808044518/il_fullxfull.7808044518_ll38.jpg",
+        "url": "/shop/boho-forehead-chain"
+      },
+      {
+        "id": "gemstone-zodiac-anklet",
+        "name": "Gemstone Zodiac Anklet",
+        "price": "€28",
+        "image": "https://i.etsystatic.com/55122258/r/il/8c60b0/8037681678/il_fullxfull.8037681678_sihl.jpg",
+        "url": "/shop/gemstone-zodiac-anklet"
+      },
+      {
+        "id": "pearl-bridal-back-chain",
+        "name": "Pearl Bridal Back Chain",
+        "price": "€32",
+        "image": "/images/products/2293c415-ee9f-49eb-acd6-066607bd28ff.webp",
+        "url": "/shop/pearl-bridal-back-chain"
+      }
+    ]
+  },
+  {
     "slug": "jewelry-gifts-for-teens-young-women-that-actually-work",
     "title": "Jewelry Gifts for Teens & Young Women That Actually Work",
     "excerpt": "Forget generic gifts. Here's what teenagers and young women actually want to wear—and why.",

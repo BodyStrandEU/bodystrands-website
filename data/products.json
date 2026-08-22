@@ -10419,10 +10419,21 @@
       "Gold Tone",
       "Silver Tone"
     ],
-    "variantHeroes": {},
-    "variantVideos": {},
-    "gallery": [],
-    "images": [],
+    "variantHeroes": {
+      "Gold Tone": "/images/products/e11ec17f-4db6-4b28-b3a3-c75449db275c-copy.png",
+      "Silver Tone": "/images/products/a19f572e-fe47-4695-a3b4-8450be30f245.png"
+    },
+    "gallery": [
+      "/images/products/e11ec17f-4db6-4b28-b3a3-c75449db275c-copy.png",
+      "/images/products/a19f572e-fe47-4695-a3b4-8450be30f245.png",
+      "/images/products/be902336-752d-4489-9dd0-6b3f5c845cf9.png",
+      "/images/products/92821837-f642-4334-b46b-0c6c7eaa3283.png",
+      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.jpg",
+      "/images/products/a5f67786-25ef-4361-9a4d-9ff3b2bd7a1e.png"
+    ],
+    "images": [
+      "/images/products/e11ec17f-4db6-4b28-b3a3-c75449db275c-copy.png"
+    ],
     "variantGroups": [
       {
         "label": "Size",
@@ -10439,6 +10450,7 @@
     ],
     "altText": "Plus size gold and silver stainless steel faux pearl bracelet, adjustable double-strand wrist chain for curvy women, six fitted sizes",
     "dateAdded": "2026-08-22T16:09:31.591Z",
-    "plusSize": true
+    "plusSize": true,
+    "sizeGuideImage": "/images/products/a5f67786-25ef-4361-9a4d-9ff3b2bd7a1e.png"
   }
 ]

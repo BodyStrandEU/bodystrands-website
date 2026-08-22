@@ -277,22 +277,32 @@ Return ONLY valid JSON in this exact format (no markdown, no code blocks, just r
   "title": "catchy, specific title under 70 characters",
   "excerpt": "one sentence that makes someone want to read more, under 150 characters",
   "content": [
-    "paragraph 1 text",
-    "paragraph 2 text",
-    "paragraph 3 text",
-    "paragraph 4 text",
-    "paragraph 5 text",
-    "paragraph 6 text",
-    "paragraph 7 text",
-    "paragraph 8 text"
+    { "type": "paragraph", "text": "intro paragraph, 2-4 sentences" },
+    { "type": "paragraph", "text": "second paragraph" },
+    { "type": "heading", "text": "a specific, scannable subheading — often phrased as a mini-question or the exact thing someone would search" },
+    { "type": "paragraph", "text": "paragraph under that heading" },
+    { "type": "paragraph", "text": "paragraph under that heading" },
+    { "type": "heading", "text": "second subheading" },
+    { "type": "paragraph", "text": "paragraph under that heading" },
+    { "type": "paragraph", "text": "paragraph under that heading" },
+    { "type": "heading", "text": "third subheading" },
+    { "type": "paragraph", "text": "closing paragraph" }
+  ],
+  "faq": [
+    { "question": "a real question someone would type into Google about this exact topic", "answer": "a direct, complete answer in 1-3 sentences — self-contained, doesn't require reading the rest of the post to make sense" },
+    { "question": "second question", "answer": "second answer" },
+    { "question": "third question", "answer": "third answer" }
   ],
   "tags": ["tag1", "tag2", "tag3", "tag4", "tag5"]
 }
 
 Rules:
-- 8 paragraphs, each 2-4 sentences
-- Paragraphs may contain HTML anchor tags — use them naturally to link to 1-2 real products AND 1-2 category pages where they fit in context. Don't force it. Example: "The <a href="/shop/goddess-shoulder-chain">Goddess Shoulder Chain</a> is one of our most-worn pieces for exactly this reason." or "Browse our full <a href="/shop?category=Shoulder%20Chains">shoulder chains collection</a> to find your fit."
-- No other HTML or markdown — only <a href="..."> tags are allowed
+- 2-3 "heading" blocks total, each a short scannable phrase (not a full sentence, not clickbait) — these break the post into sections a reader (or an AI summarizer) can jump straight to
+- 2-4 "paragraph" blocks under each heading, each 2-4 sentences, plus the intro paragraph(s) before the first heading
+- Paragraph text may contain HTML anchor tags — use them naturally to link to 1-2 real products AND 1-2 category pages where they fit in context. Don't force it. Example: "The <a href="/shop/goddess-shoulder-chain">Goddess Shoulder Chain</a> is one of our most-worn pieces for exactly this reason." or "Browse our full <a href="/shop?category=Shoulder%20Chains">shoulder chains collection</a> to find your fit."
+- No HTML in heading text or in the faq question/answer text — plain text only there
+- No other HTML or markdown anywhere — only <a href="..."> tags inside paragraph text are allowed
+- The 3 FAQ questions must be genuinely distinct real questions a reader would search (not just the topic reworded three times) and each answer must stand alone — someone should get the full answer just from reading the FAQ, without needing the article above it
 - Never use AI jargon or corporate language (no "elevate", "curated", "testament to", "journey", "delve", "game-changer", "transformative")
 - Don't start with "I" or the brand name
 - Focus on the reader and what's useful or real to them — not on selling
@@ -331,16 +341,20 @@ Rules:
     return null;
   }
 
+  const wordCount = parsed.content.map((b) => b.text).join(" ").split(" ").length
+    + (parsed.faq ?? []).map((f) => `${f.question} ${f.answer}`).join(" ").split(" ").length;
+
   return {
     slug,
     title:    parsed.title,
     excerpt:  parsed.excerpt,
     content:  parsed.content,
+    faq:      parsed.faq ?? [],
     date:     today,
     category,
     topic,
     tags:     parsed.tags,
-    readTime: `${Math.max(2, Math.ceil(parsed.content.join(" ").split(" ").length / 200))} min read`,
+    readTime: `${Math.max(2, Math.ceil(wordCount / 200))} min read`,
     featuredProducts: relevantProducts.map((p) => ({
       id:    p.id,
       name:  p.name,

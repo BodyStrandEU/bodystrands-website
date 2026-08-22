@@ -20,10 +20,27 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
+type ContentBlock = { type: "paragraph" | "heading"; text: string };
+type FaqItem = { question: string; answer: string };
+
+// Older posts stored `content` as a flat string[] (one <p> per entry, no subheadings).
+// Newer posts use ContentBlock[] with "heading" blocks mixed in for scannability and
+// AEO structure. Normalize both to ContentBlock[] so the renderer only handles one shape.
+function normalizeContent(content: unknown): ContentBlock[] {
+  if (!Array.isArray(content)) return [];
+  if (content.length > 0 && typeof content[0] === "string") {
+    return (content as string[]).map((text) => ({ type: "paragraph" as const, text }));
+  }
+  return content as ContentBlock[];
+}
+
 export default async function BlogPostPage({ params }: Props) {
   const { slug } = await params;
   const post = blogPosts.find((p) => p.slug === slug);
   if (!post) notFound();
+
+  const blocks: ContentBlock[] = normalizeContent(post.content);
+  const faq: FaqItem[] = Array.isArray((post as { faq?: FaqItem[] }).faq) ? (post as { faq?: FaqItem[] }).faq! : [];
 
   // Related posts — same category weighted heavily, shared tags add relevance,
   // recency only breaks ties. Previously this just showed the 3 most recent
@@ -72,12 +89,35 @@ export default async function BlogPostPage({ params }: Props) {
       {/* Post body */}
       <div className="max-w-3xl mx-auto px-6 md:px-10 mb-16">
         <div className="flex flex-col gap-6 blog-content">
-          {post.content.map((paragraph, i) => (
-            <p key={i} className="text-sm font-light leading-loose tracking-wide text-[#2C2220]/80"
-              dangerouslySetInnerHTML={{ __html: paragraph }}
-            />
-          ))}
+          {blocks.map((block, i) =>
+            block.type === "heading" ? (
+              <h2 key={i} className="font-heading text-2xl md:text-3xl font-light text-[#2C2220] mt-4">
+                {block.text}
+              </h2>
+            ) : (
+              <p key={i} className="text-sm font-light leading-loose tracking-wide text-[#2C2220]/80"
+                dangerouslySetInnerHTML={{ __html: block.text }}
+              />
+            )
+          )}
         </div>
+
+        {/* FAQ — direct question/answer pairs, self-contained so they can be pulled into
+            AI answer boxes and zero-click search results on their own (see matching
+            FAQPage JSON-LD below). */}
+        {faq.length > 0 && (
+          <div className="mt-14 pt-10 border-t border-[#E8B4A8]/30">
+            <p className="text-[0.6rem] tracking-[0.35em] uppercase text-[#A0622A] mb-6">Frequently Asked Questions</p>
+            <div className="flex flex-col gap-6">
+              {faq.map((item, i) => (
+                <div key={i}>
+                  <h3 className="font-heading text-lg font-light text-[#2C2220] mb-2">{item.question}</h3>
+                  <p className="text-sm font-light leading-loose tracking-wide text-[#2C2220]/80">{item.answer}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
 
         {/* Tags */}
         <div className="mt-12 flex flex-wrap gap-2">
@@ -88,6 +128,23 @@ export default async function BlogPostPage({ params }: Props) {
           ))}
         </div>
       </div>
+
+      {faq.length > 0 && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              mainEntity: faq.map((item) => ({
+                "@type": "Question",
+                name: item.question,
+                acceptedAnswer: { "@type": "Answer", text: item.answer },
+              })),
+            }),
+          }}
+        />
+      )}
 
       {/* CTA */}
       <div className="bg-[#2C2220] py-16 md:py-20 mb-20">

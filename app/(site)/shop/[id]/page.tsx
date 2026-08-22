@@ -32,6 +32,23 @@ function pickSuffix(productId: string, category: string): string {
   return pool[hash % pool.length];
 }
 
+// Google truncates SERP snippets around 155-160 chars. The old version appended a fixed
+// 66-char boilerplate sentence to every product's altText, regularly pushing the total to
+// 170-190 chars and reading as padding rather than a unique clickable snippet. This keeps
+// the per-product altText as the dominant content and appends only a short price+trust tag,
+// truncating on a word boundary if the altText alone is already near the limit.
+function buildMetaDescription(altText: string | undefined, description: string, priceLabel: string): string {
+  const base = (altText ?? description).trim();
+  const suffix = ` ${priceLabel} · Waterproof, handmade.`;
+  const maxLen = 155;
+  const budget = maxLen - suffix.length;
+  if (base.length <= budget) return `${base}${suffix}`;
+  const cut = base.slice(0, budget);
+  const lastSpace = cut.lastIndexOf(" ");
+  const trimmed = (lastSpace > 40 ? cut.slice(0, lastSpace) : cut).trimEnd();
+  return `${trimmed}…${suffix}`;
+}
+
 export async function generateStaticParams() {
   return products.map((p) => ({ id: p.id }));
 }
@@ -51,9 +68,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
   const symbol = product.currency === "EUR" ? "€" : product.currency === "GBP" ? "£" : "$";
   const priceLabel = `${symbol}${product.price.toFixed(2)}`;
   const suffix = pickSuffix(product.id, product.category);
-  const metaDescription = product.altText
-    ? `${product.altText}. Handmade in Portugal and Canada from waterproof stainless steel. ${priceLabel}.`
-    : product.description;
+  const metaDescription = buildMetaDescription(product.altText, product.description, priceLabel);
 
   return {
     title: `${product.name} | ${suffix} | Bodystrands`,

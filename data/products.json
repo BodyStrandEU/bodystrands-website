@@ -10378,5 +10378,67 @@
     "giftTags": [
       "confirmation"
     ]
+  },
+  {
+    "id": "plus-size-bracelet",
+    "name": "Plus Size Bracelet",
+    "price": 28,
+    "currency": "EUR",
+    "category": "Bracelets",
+    "description": "A double-strand faux pearl and gold cable chain bracelet, handmade in six fitted sizes so it actually closes comfortably on a fuller wrist — not just stretched to fit.",
+    "fullDescription": "Two strands. One piece. Finally, a fit that's actually yours.\n\nThis handmade bracelet pairs a faux pearl chain with a delicate gold cable chain, worn together as one piece so the layered look is already done for you. We built this one for wrists that never quite matched the standard size chart — six fitted sizes with room to adjust, so you're not choosing between too tight and three inches of extra chain swinging around.\n\nWear it to brunch, to the beach, to a wedding, or on a Tuesday when you just want your wrist to feel finished. The pearls keep it classic. The gold keeps it light. Together they just work, at any size.\n\nMaterials: Stainless steel with faux pearl\nFinish: Gold tone or Silver tone\nWaterproof: Yes\nTarnish-Resistant: Yes\nHypoallergenic: Yes\nClosure: Lobster clasp with adjustable extender\n\nSize Guide\nPlus 1 — 18cm (7.1\") base, +4cm (1.6\") extender. Fits 18–22cm (7.1\"–8.7\").\nPlus 2 — 20cm (7.9\") base, +4cm (1.6\") extender. Fits 20–24cm (7.9\"–9.4\").\nPlus 3 — 22cm (8.7\") base, +4cm (1.6\") extender. Fits 22–26cm (8.7\"–10.2\").\nPlus 4 — 24cm (9.4\") base, +4cm (1.6\") extender. Fits 24–28cm (9.4\"–11.0\").\nPlus 5 — 26cm (10.2\") base, +4cm (1.6\") extender. Fits 26–30cm (10.2\"–11.8\").\nPlus 6 — 28cm (11.0\") base, +4cm (1.6\") extender. Fits 28–32cm (11.0\"–12.6\").\nChain thickness: 1.5 mm\n\nFit Note: Not sure which to pick? Wrap a measuring tape or piece of string snugly around your wrist, then match that number to the ranges above.\n\nCare Instructions\nWipe gently with a soft cloth after each wear.\nStore in an airtight container when not in use.\n\nA beautiful gift for anyone who appreciates jewelry that looks expensive but feels effortless — and actually closes comfortably on the first try.\n\nPlease note that as each piece is handcrafted, no two pieces are identical and slight variations may occur.",
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Stainless steel with faux pearl"
+      },
+      {
+        "label": "Finish",
+        "value": "Gold tone or Silver tone"
+      },
+      {
+        "label": "Sizing",
+        "value": "6 fitted plus sizes — see size guide"
+      },
+      {
+        "label": "Waterproof",
+        "value": "Yes"
+      },
+      {
+        "label": "Tarnish-Resistant",
+        "value": "Yes"
+      },
+      {
+        "label": "Hypoallergenic",
+        "value": "Yes"
+      }
+    ],
+    "featured": false,
+    "active": true,
+    "variants": [
+      "Gold Tone",
+      "Silver Tone"
+    ],
+    "variantHeroes": {},
+    "variantVideos": {},
+    "gallery": [],
+    "images": [],
+    "variantGroups": [
+      {
+        "label": "Size",
+        "type": "options",
+        "options": [
+          "Plus 1",
+          "Plus 2",
+          "Plus 3",
+          "Plus 4",
+          "Plus 5",
+          "Plus 6"
+        ]
+      }
+    ],
+    "altText": "Plus size gold and silver stainless steel faux pearl bracelet, adjustable double-strand wrist chain for curvy women, six fitted sizes",
+    "dateAdded": "2026-08-22T16:09:31.591Z",
+    "plusSize": true
   }
 ]

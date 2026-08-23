@@ -10485,7 +10485,9 @@
     ],
     "featured": false,
     "active": true,
-    "images": [],
+    "images": [
+      "/images/products/55b58355-c2a2-4232-b564-abdc4b678558-copy.png"
+    ],
     "variants": [
       "Gold Tone",
       "Silver Tone"
@@ -10511,6 +10513,22 @@
     "dateAdded": "2026-08-23T09:00:00-04:00",
     "giftTags": [
       "confirmation"
-    ]
+    ],
+    "gallery": [
+      "/images/products/55b58355-c2a2-4232-b564-abdc4b678558-copy.png",
+      "/images/products/d0ad017d-2c15-40e1-814f-674f3e4b171b.png",
+      "/images/products/IMG_3025-2.jpg",
+      "/images/products/c032cdd4-269d-4a51-b47e-abed6784093d.png",
+      "/images/products/e9c87cec-d284-49a5-8a32-4889a0973618.png"
+    ],
+    "variantHeroes": {
+      "Gold Tone": "/images/products/55b58355-c2a2-4232-b564-abdc4b678558-copy.png",
+      "Silver Tone": "/images/products/d0ad017d-2c15-40e1-814f-674f3e4b171b.png"
+    },
+    "variantVideos": {
+      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/1e70a9c5cd10b877a6ce1f4f32992706/downloads/default.mp4",
+      "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/1e70a9c5cd10b877a6ce1f4f32992706/downloads/default.mp4"
+    },
+    "sizeGuideImage": "/images/products/e9c87cec-d284-49a5-8a32-4889a0973618.png"
   }
 ]

@@ -10452,5 +10452,65 @@
     "dateAdded": "2026-08-22T16:09:31.591Z",
     "plusSize": true,
     "sizeGuideImage": "/images/products/a5f67786-25ef-4361-9a4d-9ff3b2bd7a1e.png"
+  },
+  {
+    "id": "pearl-rosary-cross-bracelet",
+    "name": "Pearl Rosary Cross Bracelet",
+    "price": 28,
+    "currency": "EUR",
+    "category": "Bracelets",
+    "description": "A delicate pearl rosary bracelet finished with a pearl-detailed cross charm — a meaningful communion, confirmation, or baptism gift in gold or silver stainless steel.",
+    "fullDescription": "There's something about a strand of pearls meeting a cross charm on the wrist that just works. I string a delicate row of pearl beads into one dainty piece, finished with a cross pendant that carries its own tiny pearls to match. Handcrafted in gold-tone or silver-tone stainless steel, it moves effortlessly between a first communion, a confirmation, and everyday wear.\n\nMaterials: Stainless steel (gold-tone or silver-tone) with pearl bead accents\nClosure: Lobster clasp with a 5 cm (2\") extension chain\nWaterproof & Tarnish-Resistant: Yes — safe for water, sun, and everyday wear\n\nSize Guide\nAvailable in 14–23 cm (5.5\"–9\"), plus a 5 cm (2\") extension chain for the perfect fit.\n\nFit Note: Measure your wrist and compare to the sizes above. Need a custom measurement? Message me after ordering and I'll adjust it at no extra cost.\n\nCare Instructions\nWipe gently with a soft cloth after each wear.\nStore in an airtight container when not in use.\n\nPlease note that as each piece is handcrafted, no two pieces are identical and slight variations may occur.",
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Stainless steel with pearl bead accents"
+      },
+      {
+        "label": "Style",
+        "value": "Beaded rosary bracelet with pearl cross charm"
+      },
+      {
+        "label": "Occasion",
+        "value": "Communion, confirmation, baptism, everyday"
+      },
+      {
+        "label": "Care",
+        "value": "Wipe gently with soft cloth. Store in an airtight container."
+      },
+      {
+        "label": "Shipping",
+        "value": "Dispatches within 1–2 business days"
+      }
+    ],
+    "featured": false,
+    "active": true,
+    "images": [],
+    "variants": [
+      "Gold Tone",
+      "Silver Tone"
+    ],
+    "variantGroups": [
+      {
+        "label": "Size",
+        "options": [
+          "14 CM (5.5\")",
+          "15 CM (5.9\")",
+          "16 CM (6.3\")",
+          "17 CM (6.7\")",
+          "18 CM (7.1\")",
+          "19 CM (7.5\")",
+          "20 CM (7.9\")",
+          "21 CM (8.3\")",
+          "22 CM (8.7\")",
+          "23 CM (9.1\")"
+        ]
+      }
+    ],
+    "altText": "Gold and silver stainless steel pearl rosary bracelet with cross charm, confirmation and baptism gift",
+    "dateAdded": "2026-08-23T09:00:00-04:00",
+    "giftTags": [
+      "confirmation"
+    ]
   }
 ]

@@ -77,6 +77,10 @@ const TOPIC_POOLS = [
     "last minute jewelry gift ideas that still feel thoughtful",
     "jewelry gifts for teenagers and young women",
     "the best jewelry gifts for a sister",
+    "confirmation and communion bracelet gifts under 30 euros",
+    "meaningful baptism bracelet gifts for a goddaughter",
+    "catholic bracelet gifts for first communion and confirmation",
+    "baptism gift ideas under 30 euros she will actually wear",
     "honeymoon gift ideas jewelry she will wear every day",
   ]},
   { category: "Care & Quality", keywords: ["stainless steel", "waterproof", "jewelry care", "tarnish"], topics: [

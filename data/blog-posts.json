@@ -1,5 +1,115 @@
 [
   {
+    "slug": "whats-your-zodiac-signs-best-jewelry-style",
+    "title": "What's Your Zodiac Sign's Best Jewelry Style?",
+    "excerpt": "Every zodiac sign has a vibe. Here's which jewelry style actually matches yours.",
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "You probably know your zodiac sign. But have you thought about what it means for how you actually wear jewelry? The truth is, your sign says something real about your style — not because the stars dictate your taste, but because zodiac archetypes tend to cluster around actual personality traits. Fire signs go bold. Water signs go romantic. It's worth paying attention to."
+      },
+      {
+        "type": "paragraph",
+        "text": "The best part? Personalizing a piece with your zodiac means you're wearing something that genuinely reflects who you are. Whether that's confidence, mystery, playfulness, or grounding energy — your jewelry can say it without you having to explain yourself."
+      },
+      {
+        "type": "heading",
+        "text": "Fire signs: bold, statement pieces"
+      },
+      {
+        "type": "paragraph",
+        "text": "Aries, Leo, and Sagittarius don't do understated. You're drawn to pieces that make an impression — chunky chains, bright stones, anything with visual weight. You're not wearing jewelry to blend in; you're wearing it to be seen. The good news is that doesn't mean complicated. Clean lines, strong geometry, high-shine finishes. That's your language."
+      },
+      {
+        "type": "paragraph",
+        "text": "Look for layered pieces or anything with crystals that catch light. The <a href=\"/shop/colorful-crystal-bead-bracelet\">Colorful Crystal Bead Bracelet</a> works because it's eye-catching without being fussy. Chain weight matters to you — thicker strands, more presence. You wear jewelry the way you live: with intention and zero apology."
+      },
+      {
+        "type": "heading",
+        "text": "Water signs: delicate, sentimental details"
+      },
+      {
+        "type": "paragraph",
+        "text": "Cancer, Scorpio, and Pisces connect to meaning. You're the ones actually thinking about what your jewelry represents, not just how it looks. You want pieces that feel personal — birthstones, birthflowers, symbols that matter. Delicate doesn't mean weak for you; it means intentional. You prefer silver tones, pearls, softer finishes. Things that feel touchable and intimate."
+      },
+      {
+        "type": "paragraph",
+        "text": "A <a href=\"/shop/birth-flower-charm-bracelet\">Birth Flower Charm Bracelet</a> is basically made for your energy. So is the <a href=\"/shop/pearl-rosary-cross-bracelet\">Pearl Rosary Cross Bracelet</a> if you lean into spirituality. You'll wear a piece for years and it becomes part of you. Quality matters because you're not replacing it. Every detail has to feel right."
+      },
+      {
+        "type": "heading",
+        "text": "Air and earth signs: versatile pieces you actually wear"
+      },
+      {
+        "type": "paragraph",
+        "text": "Gemini, Libra, Aquarius, Taurus, Virgo, Capricorn — you're the people wearing jewelry every single day, in every single context. You need pieces that work with literally everything. That means neutral metals, simple designs, nothing that requires coordination. You're not overthinking it. You want something reliable that looks good whether you're at work or at the beach or at a party."
+      },
+      {
+        "type": "paragraph",
+        "text": "The <a href=\"/shop/layered-pearl-bracelet\">Layered Pearl Bracelet</a> is built for this. It's interesting enough to be its own thing, but neutral enough to disappear into any outfit. You're also likely to stack pieces — air signs especially love options for customizing your look. Browse our full <a href=\"/shop?category=Bracelets\">bracelet collection</a> and mix pieces. You'll naturally find what works because you actually know yourself."
+      },
+      {
+        "type": "paragraph",
+        "text": "Here's what matters: wear what feels right to you, zodiac or not. Your sign is just a language for understanding why you're drawn to certain things. All our pieces are handmade from 316L stainless steel — waterproof, tarnish-resistant, made to go everywhere with you. That part doesn't change whether you're fire, water, air, or earth."
+      }
+    ],
+    "faq": [
+      {
+        "question": "What zodiac sign wears what kind of jewelry?",
+        "answer": "Fire signs (Aries, Leo, Sagittarius) go for bold, statement pieces with impact. Water signs (Cancer, Scorpio, Pisces) prefer delicate, meaningful details like birthstones and birthflowers. Air signs (Gemini, Libra, Aquarius) and earth signs (Taurus, Virgo, Capricorn) tend toward versatile, neutral pieces they can wear every day in any context."
+      },
+      {
+        "question": "Can you get personalized zodiac jewelry?",
+        "answer": "Yes. Many brands, including ours, offer zodiac charm bracelets and other pieces you can customize with your sign at checkout. You can also pair zodiac jewelry with other personalizations like your birthstone or birth flower to layer the meaning."
+      },
+      {
+        "question": "Is zodiac jewelry actually a thing or just marketing?",
+        "answer": "Zodiac archetypes reflect real personality patterns — fire signs tend to be bolder, water signs more emotional, air signs more intellectual, earth signs more grounded. Personalizing your jewelry with your sign is less about fate and more about wearing something that genuinely reflects how you move through the world."
+      }
+    ],
+    "date": "2026-08-25",
+    "category": "Personalized Jewelry",
+    "topic": "zodiac jewelry which sign wears which style best",
+    "tags": [
+      "zodiac jewelry",
+      "personalized bracelets",
+      "birthstone jewelry",
+      "zodiac signs style",
+      "body jewelry"
+    ],
+    "readTime": "4 min read",
+    "featuredProducts": [
+      {
+        "id": "pearl-rosary-cross-bracelet",
+        "name": "Pearl Rosary Cross Bracelet",
+        "price": "€28",
+        "image": "/images/products/55b58355-c2a2-4232-b564-abdc4b678558-copy.png",
+        "url": "/shop/pearl-rosary-cross-bracelet"
+      },
+      {
+        "id": "colorful-crystal-bead-bracelet",
+        "name": "Colorful Crystal Bead Bracelet",
+        "price": "€24",
+        "image": "/images/products/2e6cfc7e-47d3-48df-964a-26e883c706bd.png",
+        "url": "/shop/colorful-crystal-bead-bracelet"
+      },
+      {
+        "id": "layered-pearl-bracelet",
+        "name": "Layered Pearl Bracelet",
+        "price": "€24",
+        "image": "https://i.etsystatic.com/55122258/r/il/dc4e2f/8165749301/il_fullxfull.8165749301_9lkm.jpg",
+        "url": "/shop/layered-pearl-bracelet"
+      },
+      {
+        "id": "birth-flower-charm-bracelet",
+        "name": "Birth Flower Charm Bracelet",
+        "price": "€28",
+        "image": "/images/products/birth-flower-charm-bracelet/e0e3896f-5197-4d94-974f-7b14ee305954.webp",
+        "url": "/shop/birth-flower-charm-bracelet"
+      }
+    ]
+  },
+  {
     "slug": "body-jewelry-for-brides-bridesmaids-beyond-the-dress",
     "title": "Body Jewelry for Brides & Bridesmaids: Beyond the Dress",
     "excerpt": "Body chains and personalized pieces that let you shine on your wedding day — without competing with the dress.",

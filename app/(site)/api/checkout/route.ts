@@ -40,8 +40,17 @@ function giftWrapLineItem(): Stripe.Checkout.SessionCreateParams.LineItem {
   };
 }
 
-function resolveImage(origin: string, img: string): string {
-  return img.startsWith("http") ? img : `${origin}${img}`;
+// Hardcoded, not derived from the request's Origin header — this URL gets baked into the
+// Stripe Product and read back later by the confirmation email, the shipping email, and the
+// owner-notification email, all outside the original browser request's context. An
+// Origin-derived value can be a Vercel preview URL, a bare non-www domain, or missing
+// entirely, silently breaking the image in every email downstream. Every other absolute URL
+// in this codebase already points at this same canonical domain (see layout.tsx, sitemap.ts,
+// stripe/route.ts, admin/orders/route.ts) — this was the one place still relying on Origin.
+const CANONICAL_DOMAIN = "https://www.bodystrands.com";
+
+function resolveImage(img: string): string {
+  return img.startsWith("http") ? img : `${CANONICAL_DOMAIN}${img}`;
 }
 
 function buildSingleShippingOption(country: string, totalAmount: number, rates: Record<CurrencyCode, number>): Stripe.Checkout.SessionCreateParams.ShippingOption[] {
@@ -111,7 +120,7 @@ export async function POST(req: NextRequest) {
             product_data: {
               name,
               description: product.description,
-              images: product.images[0] ? [resolveImage(origin, product.images[0])] : [],
+              images: product.images[0] ? [resolveImage(product.images[0])] : [],
             },
             unit_amount: Math.round(unitPrice * 100),
           },
@@ -186,7 +195,7 @@ export async function POST(req: NextRequest) {
           product_data: {
             name: productName,
             description: product.description,
-            images: product.images[0] ? [resolveImage(origin, product.images[0])] : [],
+            images: product.images[0] ? [resolveImage(product.images[0])] : [],
           },
           unit_amount: Math.round(totalAmount * 100),
         },

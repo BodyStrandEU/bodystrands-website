@@ -10617,12 +10617,30 @@
     ],
     "featured": false,
     "active": true,
-    "images": [],
+    "images": [
+      "/images/products/1c5ecb3c-486f-41af-a7df-cfe77abc69ae.png"
+    ],
     "variants": [
       "Gold Tone",
       "Silver Tone"
     ],
     "altText": "Gold and silver stainless steel mirror link barefoot sandal, adjustable ankle to toe foot chain",
-    "dateAdded": "2026-08-26T09:00:00-04:00"
+    "dateAdded": "2026-08-26T09:00:00-04:00",
+    "gallery": [
+      "/images/products/1c5ecb3c-486f-41af-a7df-cfe77abc69ae.png",
+      "/images/products/c4633294-11a2-4344-b2c1-ab7754b9773d.png",
+      "/images/products/watermarked_img_5216291070479054344.jpg",
+      "/images/products/6873d90f-a64e-45c5-97c2-ccbfa09c432d.png",
+      "/images/products/be89b88a-4550-4ad4-ba5b-3275a6414c91.png"
+    ],
+    "variantHeroes": {
+      "Gold Tone": "/images/products/1c5ecb3c-486f-41af-a7df-cfe77abc69ae.png",
+      "Silver Tone": "/images/products/c4633294-11a2-4344-b2c1-ab7754b9773d.png"
+    },
+    "variantVideos": {
+      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/98444c0ee9bbab872e540cc432c1f3f2/downloads/default.mp4",
+      "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/98444c0ee9bbab872e540cc432c1f3f2/downloads/default.mp4"
+    },
+    "sizeGuideImage": "/images/products/be89b88a-4550-4ad4-ba5b-3275a6414c91.png"
   }
 ]

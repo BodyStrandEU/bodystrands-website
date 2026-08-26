@@ -10530,5 +10530,99 @@
       "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/1e70a9c5cd10b877a6ce1f4f32992706/downloads/default.mp4"
     },
     "sizeGuideImage": "/images/products/e9c87cec-d284-49a5-8a32-4889a0973618.png"
+  },
+  {
+    "id": "mirror-link-hand-chain",
+    "name": "Mirror Link Hand Chain",
+    "price": 24,
+    "currency": "EUR",
+    "category": "Hand Chains",
+    "description": "A delicate mirror-link hand chain that wraps from finger to wrist — dainty, minimalist, and adjustable, in gold-tone or silver-tone stainless steel.",
+    "fullDescription": "Add a touch of elegant boho charm to your everyday look with this handmade stainless steel hand chain. Perfect for layering with your favorite rings, dressing up a night out, or wearing solo for effortless everyday elegance, this delicate hand jewelry gracefully wraps from your finger to your wrist for a stunning, minimalist look. Crafted to be lightweight and comfortable, it features an easily adjustable chain to ensure a secure, custom fit for all-day wear. Whether you choose the sleek silver-tone or warm gold-tone finish, this versatile piece brings effortless, dainty style to any outfit, year-round.\n\nMaterials: Stainless steel (gold-tone or silver-tone)\nChain Width: 2mm — delicate, lightweight, and comfortable\nExtension Chain: +4cm (1.6\") adjustable\nFit: Adjustable design to suit various hand sizes securely\n\nCare Instructions\nWipe gently with a soft cloth after each wear.\nStore in an airtight container when not in use.\n\nPlease note that as each piece is handcrafted, no two pieces are identical and slight variations may occur.",
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Stainless steel, gold-tone or silver-tone"
+      },
+      {
+        "label": "Style",
+        "value": "Flat mirror-link finger-to-wrist hand chain"
+      },
+      {
+        "label": "Chain Width",
+        "value": "2mm"
+      },
+      {
+        "label": "Care",
+        "value": "Wipe gently with soft cloth. Store in an airtight container."
+      },
+      {
+        "label": "Shipping",
+        "value": "Dispatches within 1–2 business days"
+      }
+    ],
+    "featured": false,
+    "active": true,
+    "images": [],
+    "variants": [
+      "Gold Tone",
+      "Silver Tone"
+    ],
+    "variantGroups": [
+      {
+        "label": "Size",
+        "options": [
+          "16.5 CM (6.5\")",
+          "17.8 CM (7\")",
+          "19.1 CM (7.5\")"
+        ]
+      }
+    ],
+    "altText": "Dainty gold and silver stainless steel mirror link hand chain, adjustable finger to wrist bracelet",
+    "dateAdded": "2026-08-26T09:00:00-04:00"
+  },
+  {
+    "id": "mirror-link-foot-chain",
+    "name": "Mirror Link Foot Chain",
+    "price": 24,
+    "currency": "EUR",
+    "category": "Anklets",
+    "description": "A delicate mirror-link barefoot sandal that wraps from ankle to toe — adjustable, lightweight, and effortless, in gold-tone or silver-tone stainless steel.",
+    "fullDescription": "Add a touch of elegant boho charm to your wardrobe with this handmade stainless steel barefoot sandal. Perfect for beach days, destination weddings, or simply pairing with your favorite sandals, this delicate foot jewelry gracefully wraps from your ankle to your toe for a stunning, minimalist look. Crafted to be lightweight and comfortable, it features an easily adjustable chain to ensure a secure, custom fit for all-day wear. Whether you choose the sleek silver-tone or warm gold-tone finish, this versatile piece brings an effortless, sun-kissed style to any warm-weather outfit.\n\nMaterials: Stainless steel (gold-tone or silver-tone)\nAnklet Chain Length: 21cm, with a 6cm adjustable extender tail\nToe Chain Length: 8cm\nChain Thickness: 2mm — delicate, lightweight, and comfortable\nFit: Adjustable design to suit various foot sizes securely\n\nCare Instructions\nWipe gently with a soft cloth after each wear.\nStore in an airtight container when not in use.\n\nPlease note that as each piece is handcrafted, no two pieces are identical and slight variations may occur.",
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Stainless steel, gold-tone or silver-tone"
+      },
+      {
+        "label": "Style",
+        "value": "Flat mirror-link barefoot sandal, ankle to toe"
+      },
+      {
+        "label": "Anklet Length",
+        "value": "21cm + 6cm extender"
+      },
+      {
+        "label": "Toe Chain Length",
+        "value": "8cm"
+      },
+      {
+        "label": "Care",
+        "value": "Wipe gently with soft cloth. Store in an airtight container."
+      },
+      {
+        "label": "Shipping",
+        "value": "Dispatches within 1–2 business days"
+      }
+    ],
+    "featured": false,
+    "active": true,
+    "images": [],
+    "variants": [
+      "Gold Tone",
+      "Silver Tone"
+    ],
+    "altText": "Gold and silver stainless steel mirror link barefoot sandal, adjustable ankle to toe foot chain",
+    "dateAdded": "2026-08-26T09:00:00-04:00"
   }
 ]

@@ -10657,5 +10657,63 @@
       "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/98444c0ee9bbab872e540cc432c1f3f2/downloads/default.mp4"
     },
     "sizeGuideImage": "/images/products/be89b88a-4550-4ad4-ba5b-3275a6414c91.png"
+  },
+  {
+    "id": "coin-disc-bracelet",
+    "name": "Coin Disc Bracelet",
+    "price": 20,
+    "currency": "EUR",
+    "category": "Bracelets",
+    "description": "A dainty gold disc chain bracelet — flat coin-shaped links in lightweight, waterproof, tarnish-resistant stainless steel.",
+    "fullDescription": "A dainty gold disc chain bracelet made for everyday wear — lightweight, minimalist, and effortless to layer or wear alone. Each flat gold disc links into a delicate chain that catches the light beautifully on its own.\n\nMaterials: Gold stainless steel\nClosure: Lobster clasp with 3 adjustable loop options\nWaterproof & Tarnish-Resistant: Yes — hypoallergenic, safe for water, sun, and everyday wear\n\nSize Guide\nAvailable in 15.5 cm, 16.5 cm, or 18 cm — choose your size at checkout.\n\nCare Instructions\nWipe gently with a soft cloth after each wear.\nStore in an airtight container when not in use.\n\nPlease note that as each piece is handcrafted, no two pieces are identical and slight variations may occur.",
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Gold Stainless Steel"
+      },
+      {
+        "label": "Style",
+        "value": "Dainty coin disc-link chain"
+      },
+      {
+        "label": "Bracelet Length",
+        "value": "15.5 cm / 16.5 cm / 18 cm (3 adjustable sizes)"
+      },
+      {
+        "label": "Clasp",
+        "value": "Secure lobster clasp closure"
+      },
+      {
+        "label": "Waterproof",
+        "value": "Yes"
+      },
+      {
+        "label": "Tarnish-Resistant",
+        "value": "Yes"
+      },
+      {
+        "label": "Care",
+        "value": "Wipe gently with a soft cloth. Store in an airtight container."
+      },
+      {
+        "label": "Shipping",
+        "value": "Dispatches within 1–2 business days"
+      }
+    ],
+    "images": [],
+    "variantGroups": [
+      {
+        "label": "Size",
+        "options": [
+          "15.5 CM (6.1\")",
+          "16.5 CM (6.5\")",
+          "18 CM (7.1\")"
+        ]
+      }
+    ],
+    "featured": false,
+    "active": false,
+    "altText": "Gold stainless steel dainty coin disc-link chain bracelet, minimalist waterproof jewelry",
+    "dateAdded": "2026-08-28T09:00:00-04:00"
   }
 ]

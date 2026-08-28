@@ -1529,9 +1529,10 @@ export default function ProductEditor({ params }: { params: Promise<{ id: string
           />
         </div>
 
-        {/* Card thumbnail images — only shown when there are no variants,
-            otherwise the shop card uses the first variant's images automatically */}
-        {(form.variants ?? []).length === 0 && (
+        {/* Card thumbnail images — only shown when there are no variants and no unified
+            gallery; otherwise the shop card thumbnail is derived automatically (first
+            variant's images, or gallery[0] in Unified Gallery mode — see save logic below) */}
+        {(form.variants ?? []).length === 0 && !form.gallery && (
           <div style={sectionStyle}>
             <h2 style={{ margin: "0 0 0.75rem", fontSize: "0.9rem", fontWeight: 700, color: "var(--admin-text)", textTransform: "uppercase", letterSpacing: "0.08em" }}>
               Card Thumbnail Images

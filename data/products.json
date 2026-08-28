@@ -10700,7 +10700,9 @@
         "value": "Dispatches within 1–2 business days"
       }
     ],
-    "images": [],
+    "images": [
+      "/images/products/b9cf31fb-b638-4305-969d-2e678356ee1d.png"
+    ],
     "variantGroups": [
       {
         "label": "Size",
@@ -10714,6 +10716,15 @@
     "featured": false,
     "active": false,
     "altText": "Gold stainless steel dainty coin disc-link chain bracelet, minimalist waterproof jewelry",
-    "dateAdded": "2026-08-28T09:00:00-04:00"
+    "dateAdded": "2026-08-28T09:00:00-04:00",
+    "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/aaa9150ae2d05427a9e23c665f6177ee/downloads/default.mp4",
+    "gallery": [
+      "/images/products/b9cf31fb-b638-4305-969d-2e678356ee1d.png",
+      "/images/products/58de484b-2b7c-4b20-92f5-00f31828e47f.png",
+      "/images/products/6e7eed3d-c7a6-48d7-9adf-a2f9ba14279f.png",
+      "/images/products/062ae184-f8de-4a9d-a63f-5fc13bb93279.png",
+      "/images/products/0cad7396-ab9a-4ed6-8b7a-da8a7f43e99e.jpg"
+    ],
+    "sizeGuideImage": "/images/products/0cad7396-ab9a-4ed6-8b7a-da8a7f43e99e.jpg"
   }
 ]

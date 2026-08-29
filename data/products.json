@@ -10864,7 +10864,9 @@
         "value": "Dispatches within 1–2 business days"
       }
     ],
-    "images": [],
+    "images": [
+      "/images/products/4d504a36-4e96-4261-96c9-2d9782d4bbfc.png"
+    ],
     "variants": [
       "Gold Tone",
       "Silver Tone"
@@ -10885,8 +10887,25 @@
       }
     ],
     "featured": false,
-    "active": false,
+    "active": true,
     "altText": "Gold and silver stainless steel snake chain belly chain with detailed dragonfly charm, adjustable waist chain",
-    "dateAdded": "2026-08-29T09:00:00-04:00"
+    "dateAdded": "2026-08-29T09:00:00-04:00",
+    "gallery": [
+      "/images/products/4d504a36-4e96-4261-96c9-2d9782d4bbfc.png",
+      "/images/products/32e765a7-cd65-41a7-8843-c7dd477a1ce8.png",
+      "/images/products/4e23b98a-8ebf-498b-b561-310f7d33ed0b.png",
+      "/images/products/10599202-a414-4b0e-ac00-fe3eec0dae30.jpg",
+      "/images/products/f8d20943-4690-4557-94ba-97f34bc89e2a.png",
+      "/images/products/IMG_3143-2.jpg",
+      "/images/products/b89c880f-d6c5-45db-9f29-1349a34cd654.png"
+    ],
+    "variantHeroes": {
+      "Gold Tone": "/images/products/4d504a36-4e96-4261-96c9-2d9782d4bbfc.png"
+    },
+    "variantVideos": {
+      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/7f04ab7564ab8709f0d279926565a491/downloads/default.mp4",
+      "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/7f04ab7564ab8709f0d279926565a491/downloads/default.mp4"
+    },
+    "sizeGuideImage": "/images/products/b89c880f-d6c5-45db-9f29-1349a34cd654.png"
   }
 ]

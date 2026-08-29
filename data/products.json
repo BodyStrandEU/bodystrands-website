@@ -10773,7 +10773,9 @@
         "value": "Dispatches within 1–2 business days from Europe"
       }
     ],
-    "images": [],
+    "images": [
+      "/images/products/81c42c09-7e3d-4bab-ad14-bbf68af14404.png"
+    ],
     "variantGroups": [
       {
         "label": "Choose your Initial",
@@ -10813,6 +10815,15 @@
     "giftTags": [
       "personalized"
     ],
-    "dateAdded": "2026-08-28T09:00:00-04:00"
+    "dateAdded": "2026-08-28T09:00:00-04:00",
+    "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/b69d656281327765128292a07d4575b4/downloads/default.mp4",
+    "gallery": [
+      "/images/products/81c42c09-7e3d-4bab-ad14-bbf68af14404.png",
+      "/images/products/1b0246c7-46c2-4906-ad65-8143ea9b4c68.png",
+      "/images/products/3c456e1e-1abf-497c-94d7-49de4a3670d5.png",
+      "/images/products/0351d2a0-9e2d-4016-8492-a473e29379d3.png",
+      "/images/products/84cd0cb4-ba1b-4720-a643-320d032707d4.png"
+    ],
+    "sizeGuideImage": "/images/products/84cd0cb4-ba1b-4720-a643-320d032707d4.png"
   }
 ]

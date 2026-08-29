@@ -1,5 +1,115 @@
 [
   {
+    "slug": "wedding-jewelry-beyond-necklaces-earrings",
+    "title": "Wedding Jewelry Beyond Necklaces & Earrings",
+    "excerpt": "Skip the expected. Layer your wedding look with belly chains, hand chains, and body jewelry that actually feel like you.",
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "Wedding jewelry doesn't have to follow the script. You know the one: necklace, earrings, done. But what if you wanted something that feels more like you? Body jewelry gives you room to layer, personalize, and show up as yourself on your big day — without the stiffness of traditional bridal pieces."
+      },
+      {
+        "type": "paragraph",
+        "text": "The beauty of pieces like belly chains, back chains, and hand chains is that they work with almost any dress. They add dimension without competing with your neckline or face. And they're built to last — 316L stainless steel means they won't tarnish, won't turn your skin green, and won't need replacing after the wedding."
+      },
+      {
+        "type": "heading",
+        "text": "Belly chains and back chains for a modern bridal moment"
+      },
+      {
+        "type": "paragraph",
+        "text": "If your dress has an open back or a high slit, a back chain or belly chain is your secret weapon. It's unexpected enough to feel personal, but elegant enough for photos. You can wear it alone or layer it with a delicate waist-length necklace for more drama."
+      },
+      {
+        "type": "paragraph",
+        "text": "The magic here is that it draws attention to your silhouette without screaming for it. A simple chain does the work. No need for anything heavy or ornate — that's not your style anyway."
+      },
+      {
+        "type": "heading",
+        "text": "Hand chains and shoulder chains to complement your dress"
+      },
+      {
+        "type": "paragraph",
+        "text": "Hand chains bridge the gap between wrist jewelry and body jewelry. If you're wearing long sleeves or a dress without straps, a hand chain adds just enough detail to your hands and wrists without competing with your dress. Same with shoulder chains — they sit naturally against bare shoulders and add movement without weight."
+      },
+      {
+        "type": "paragraph",
+        "text": "These pieces work especially well if you want something you can move in. You won't feel weighed down, and you'll actually forget you're wearing them — until you catch yourself in a photo and smile."
+      },
+      {
+        "type": "heading",
+        "text": "Personalized touches that feel like heirlooms"
+      },
+      {
+        "type": "paragraph",
+        "text": "Consider a piece that's just for you. A birthstone choker, your zodiac sign woven into a delicate chain, or your initials on a bracelet. These aren't costume jewelry moments — they're quiet details that only you and people close to you will know about. That's the real luxury."
+      },
+      {
+        "type": "paragraph",
+        "text": "You could even wear a piece from your everyday life. If you have a favorite bracelet or chain you wear constantly, there's no rule saying it can't be your wedding jewelry. Authenticity beats tradition every time. The <a href=\"/shop/birthstone-choker-necklace\">Birthstone Choker Necklace</a> works beautifully as a solo statement or layered under a dress neckline, and you get to choose your stone at checkout. Or browse the full <a href=\"/shop?category=Necklaces\">necklace collection</a> if you want something that bridges traditional and unexpected."
+      },
+      {
+        "type": "paragraph",
+        "text": "Every piece here is handmade by El and Gio in their Portuguese studio. No factories, no mass production. That means your wedding jewelry is made with actual care — not just assembled. And it's built to survive beyond the wedding day. Waterproof, tarnish-resistant 316L stainless steel means you can wear it to the beach, the gym, or just living your life. That's jewelry that earns its place in your rotation."
+      }
+    ],
+    "faq": [
+      {
+        "question": "Can you wear body chains under a wedding dress?",
+        "answer": "Yes. Belly chains, back chains, and hand chains all sit under or alongside your dress without creating bulk or visible lines. A belly chain sits at your waist or hips, a back chain runs down your spine or sits across your shoulder blades, and hand chains rest on your wrists and hands — none of these compete with your dress silhouette."
+      },
+      {
+        "question": "What's the best body jewelry for a backless wedding dress?",
+        "answer": "A back chain is perfect for a backless dress because it becomes part of your look rather than hidden. It adds visual interest to an open back without needing to cover anything up. Shoulder chains work beautifully too if your dress is sleeveless or has thin straps."
+      },
+      {
+        "question": "Will stainless steel jewelry tarnish or damage my skin on my wedding day?",
+        "answer": "No. 316L stainless steel is waterproof, tarnish-resistant, and hypoallergenic, so it won't discolor, rust, or irritate your skin — even if you're sweating or dancing all day. It's designed for everyday wear, so a wedding day is nothing."
+      }
+    ],
+    "date": "2026-08-29",
+    "category": "Inspiration",
+    "topic": "wedding jewelry ideas that arent the usual necklace and earrings",
+    "tags": [
+      "wedding jewelry",
+      "body chains",
+      "bridal jewelry",
+      "non-traditional",
+      "stainless steel"
+    ],
+    "readTime": "4 min read",
+    "featuredProducts": [
+      {
+        "id": "satellite-link-choker",
+        "name": "Dainty Satellite Link Choker",
+        "price": "€20",
+        "image": "/images/products/0c7f0749-c174-442e-9730-590ff7f09eb7.webp",
+        "url": "/shop/satellite-link-choker"
+      },
+      {
+        "id": "birthstone-choker-necklace",
+        "name": "Birthstone Choker Necklace",
+        "price": "€28",
+        "image": "https://i.etsystatic.com/55122258/r/il/c5efdf/7943496806/il_fullxfull.7943496806_o0e0.jpg",
+        "url": "/shop/birthstone-choker-necklace"
+      },
+      {
+        "id": "coin-disc-chain-choker",
+        "name": "Coin Disc Chain Choker",
+        "price": "€24",
+        "image": "/images/products/RESULT_nanobanana_choker_1.png",
+        "url": "/shop/coin-disc-chain-choker"
+      },
+      {
+        "id": "pink-cross-choker",
+        "name": "Pink Cross Choker Necklace",
+        "price": "€28",
+        "image": "/images/products/1c38c724-056b-4eeb-9d8e-69338dee6535.webp",
+        "url": "/shop/pink-cross-choker"
+      }
+    ]
+  },
+  {
     "slug": "how-to-clean-stainless-steel-jewelry-at-home",
     "title": "How to Clean Stainless Steel Jewelry at Home",
     "excerpt": "Your handmade chains deserve care. Here's exactly how to keep them shining without damage.",

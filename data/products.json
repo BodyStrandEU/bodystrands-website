@@ -10726,5 +10726,93 @@
       "/images/products/0cad7396-ab9a-4ed6-8b7a-da8a7f43e99e.jpg"
     ],
     "sizeGuideImage": "/images/products/0cad7396-ab9a-4ed6-8b7a-da8a7f43e99e.jpg"
+  },
+  {
+    "id": "pearl-heart-initial-bracelet",
+    "name": "Pearl Heart Initial Bracelet",
+    "price": 28,
+    "currency": "EUR",
+    "category": "Bracelets",
+    "description": "Not just a bracelet — a little monogram for your wrist. A dainty pearl chain layered over a fine gold cable link chain, finished with a heart charm engraved with your initial — personalized, layered, and effortlessly yours.",
+    "fullDescription": "Not just a bracelet — a little monogram for your wrist. Handmade with a dainty pearl chain layered over a fine cable link chain and finished with a heart charm engraved with your initial, this double-strand piece turns a simple accessory into something that's unmistakably yours. No stacking required — the layered, personalized look is built in.\n\nWears beautifully every day, dressed up or down — with a t-shirt and jeans, over a sweater cuff, or stacked with your other favorites. The pearls add a classic touch while your initial heart charm makes it unmistakably you.\n\nChoose your initial at checkout. A thoughtful, personalized gift for bridesmaids, best friends, and anyone who loves dainty jewelry that actually lasts — and feels personal.\n\nHandcrafted with slight natural variations — no two pieces are exactly alike.",
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Gold-tone stainless steel"
+      },
+      {
+        "label": "Style",
+        "value": "Double-strand — pearl chain and cable link chain with engraved initial heart charm, as one piece"
+      },
+      {
+        "label": "Finish",
+        "value": "Water-resistant and tarnish-resistant"
+      },
+      {
+        "label": "Closure",
+        "value": "Lobster clasp with adjustable extender"
+      },
+      {
+        "label": "Personalization",
+        "value": "Heart charm engraved with the initial of your choice"
+      },
+      {
+        "label": "Length",
+        "value": "14 cm (5.5\") to 23 cm (9.1\") — includes a 4 cm (1.6\") adjustable extension"
+      },
+      {
+        "label": "Custom sizing",
+        "value": "Message us after purchase and we will adjust to your exact measurements"
+      },
+      {
+        "label": "Care",
+        "value": "Wipe gently with a soft cloth after each wear. Store in an airtight container."
+      },
+      {
+        "label": "Shipping",
+        "value": "Dispatches within 1–2 business days from Europe"
+      }
+    ],
+    "images": [],
+    "variantGroups": [
+      {
+        "label": "Choose your Initial",
+        "options": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F",
+          "G",
+          "H",
+          "I",
+          "J",
+          "K",
+          "L",
+          "M",
+          "N",
+          "O",
+          "P",
+          "Q",
+          "R",
+          "S",
+          "T",
+          "U",
+          "V",
+          "W",
+          "X",
+          "Y",
+          "Z"
+        ]
+      }
+    ],
+    "featured": false,
+    "active": false,
+    "altText": "Personalized double-strand pearl bracelet with gold heart charm engraved initial, layered pearl and cable chain bracelet",
+    "giftTags": [
+      "personalized"
+    ],
+    "dateAdded": "2026-08-28T09:00:00-04:00"
   }
 ]

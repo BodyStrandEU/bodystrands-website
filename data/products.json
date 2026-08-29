@@ -10825,5 +10825,68 @@
       "/images/products/84cd0cb4-ba1b-4720-a643-320d032707d4.png"
     ],
     "sizeGuideImage": "/images/products/84cd0cb4-ba1b-4720-a643-320d032707d4.png"
+  },
+  {
+    "id": "dragonfly-charm-belly-chain",
+    "name": "Dragonfly Charm Belly Chain",
+    "price": 28,
+    "currency": "EUR",
+    "category": "Belly Chains",
+    "description": "A fine snake chain that sits low on the waist, finished with a detailed dragonfly charm — slide it to the front, back, or hip for however you want to wear it.",
+    "fullDescription": "A fine snake chain that sits low on the waist, finished with a detailed dragonfly charm. Wear it over jeans and a crop top, layered under an open jacket, or on its own over a swimsuit. Slide the charm anywhere along the chain to wear it at your hip, on your back, or centered in front. Made from stainless steel, so it holds up to water and everyday wear without tarnishing.\n\nChoose gold or silver tone, and your size at checkout — the 71 cm (28\") base chain with a Small, Medium, or Large open-link extender for a precise fit.\n\nFit Note: The extender uses an open-link chain, so you can secure the clasp at any point for a precise fit.\n\nCustom Size: Need it longer or shorter? Message me after ordering and I'll adjust it for you.\n\nCare Instructions\nWipe gently with a soft cloth after each wear.\nStore in an airtight container when not in use.",
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Stainless Steel (Gold or Silver Tone)"
+      },
+      {
+        "label": "Dragonfly Charm",
+        "value": "35mm high x 50mm wide (wingspan), 4.5g"
+      },
+      {
+        "label": "Base Chain",
+        "value": "71 cm (28\") solid snake chain"
+      },
+      {
+        "label": "Closure",
+        "value": "Lobster clasp with open-link extender"
+      },
+      {
+        "label": "Finish",
+        "value": "Water-resistant and tarnish-resistant"
+      },
+      {
+        "label": "Care",
+        "value": "Wipe gently with a soft cloth. Store in an airtight container."
+      },
+      {
+        "label": "Shipping",
+        "value": "Dispatches within 1–2 business days"
+      }
+    ],
+    "images": [],
+    "variants": [
+      "Gold Tone",
+      "Silver Tone"
+    ],
+    "variantGroups": [
+      {
+        "label": "Size",
+        "options": [
+          "Small — 71-81 cm (28\"-32\")",
+          "Medium — 71-91 cm (28\"-36\")",
+          "Large — 71-100 cm (28\"-39.5\")"
+        ],
+        "optionPrices": {
+          "Small — 71-81 cm (28\"-32\")": 0,
+          "Medium — 71-91 cm (28\"-36\")": 1.5,
+          "Large — 71-100 cm (28\"-39.5\")": 4
+        }
+      }
+    ],
+    "featured": false,
+    "active": false,
+    "altText": "Gold and silver stainless steel snake chain belly chain with detailed dragonfly charm, adjustable waist chain",
+    "dateAdded": "2026-08-29T09:00:00-04:00"
   }
 ]

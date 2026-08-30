@@ -10888,5 +10888,53 @@
     "active": false,
     "altText": "Gold and silver stainless steel snake chain belly chain with detailed dragonfly charm, adjustable waist chain",
     "dateAdded": "2026-08-29T09:00:00-04:00"
+  },
+  {
+    "id": "dragonfly-pendant-necklace",
+    "name": "Dragonfly Pendant Necklace",
+    "price": 28,
+    "currency": "EUR",
+    "category": "Necklaces",
+    "description": "A mirror-link chain necklace finished with a detailed dragonfly charm — wear it solo for everyday, or layer it with your other pieces.",
+    "fullDescription": "A mirror-link chain necklace finished with a detailed dragonfly charm. Wear it solo for an everyday look, or layer it with your other necklaces. Made from stainless steel, so it holds up to water and everyday wear without tarnishing.\n\nChoose gold or silver tone at checkout — a 55 cm (21.7\") base chain with a 6 cm (2.4\") extender, adjustable from 55 cm to 61 cm (21.7\" to 24\").\n\nCustom Size: Need it longer or shorter? Message me after ordering and I'll adjust it for you.\n\nCare Instructions\nWipe gently with a soft cloth after each wear.\nStore in an airtight container when not in use.",
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Stainless Steel (Gold or Silver Tone)"
+      },
+      {
+        "label": "Chain",
+        "value": "2mm mirror-link chain"
+      },
+      {
+        "label": "Dragonfly Charm",
+        "value": "35mm high x 50mm wide (wingspan)"
+      },
+      {
+        "label": "Necklace Length",
+        "value": "55 cm (21.7\") + 6 cm (2.4\") extender, adjustable 55-61 cm (21.7\"-24\")"
+      },
+      {
+        "label": "Finish",
+        "value": "Water-resistant and tarnish-resistant"
+      },
+      {
+        "label": "Care",
+        "value": "Wipe gently with a soft cloth. Store in an airtight container."
+      },
+      {
+        "label": "Shipping",
+        "value": "Dispatches within 1–2 business days"
+      }
+    ],
+    "images": [],
+    "variants": [
+      "Gold Tone",
+      "Silver Tone"
+    ],
+    "featured": false,
+    "active": false,
+    "altText": "Gold and silver stainless steel mirror-link chain necklace with detailed dragonfly charm pendant",
+    "dateAdded": "2026-08-30T09:00:00-04:00"
   }
 ]

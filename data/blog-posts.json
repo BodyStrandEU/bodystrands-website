@@ -1,5 +1,111 @@
 [
   {
+    "slug": "luxury-body-jewelry-gifts-under-35-all-handmade",
+    "title": "Luxury Body Jewelry Gifts Under €35 — All Handmade",
+    "excerpt": "Real gold-quality pieces that won't break the bank. Here's what to give when you want something special.",
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "Luxury doesn't have to cost a fortune. If you're looking for a gift that feels expensive but won't drain your wallet, handmade body jewelry is where it's at. Every piece from Bodystrands is made by hand in our Portuguese studio — no factories, no shortcuts — and prices start at €17.50."
+      },
+      {
+        "type": "paragraph",
+        "text": "The trick is finding pieces that look timeless and feel good to wear every day. That's what we build. 316L stainless steel won't tarnish, won't turn your skin green, and won't fall apart after three months. These are gifts people actually keep."
+      },
+      {
+        "type": "heading",
+        "text": "Personalized gifts that feel custom-made"
+      },
+      {
+        "type": "paragraph",
+        "text": "Personalization makes any gift feel more thoughtful — and it doesn't add to the price. Our birthstone bracelets, zodiac charm bracelets, and birth flower bracelets let the person wearing it add their own meaning. You pick their month, sign, or initial at checkout, and it arrives ready to wear."
+      },
+      {
+        "type": "paragraph",
+        "text": "The <a href=\"/shop/pearl-cross-faith-bracelet\">Pearl Cross Faith Bracelet</a> (€28) is simple and works for almost anyone — it reads as classic without trying too hard. If you're shopping for someone more into sparkle, our birthstone collections let you match their birth month with a genuine stone."
+      },
+      {
+        "type": "heading",
+        "text": "Body chains and anklets for everyday luxury"
+      },
+      {
+        "type": "paragraph",
+        "text": "Body jewelry has moved past special occasions. People wear these pieces every single day now — to the beach, to work, while sleeping. That's why we use materials that don't quit. The <a href=\"/shop/layered-hip-chain\">Layered Hip Chain</a> (€32) is delicate but visible, and it pairs with basically any outfit. The <a href=\"/shop/colorful-crystal-bead-anklet\">Colorful Crystal Bead Anklet</a> (€24) adds color without being loud."
+      },
+      {
+        "type": "paragraph",
+        "text": "If the person you're buying for loves jewelry they can actually wear — not just display — these are it. They won't need babying, and they won't fade or break under normal use."
+      },
+      {
+        "type": "heading",
+        "text": "Why handmade matters for gifts"
+      },
+      {
+        "type": "paragraph",
+        "text": "When you buy handmade, you're giving someone something that wasn't mass-produced in a factory. El and Gio literally made it. That story — a couple in Portugal pouring care into each piece — is part of what makes it special. It's the difference between a gift and something that actually means something."
+      },
+      {
+        "type": "paragraph",
+        "text": "Every item <a href=\"/shop\">in our collection</a> comes with that same care. Whether you're spending €17.50 or €55, you're getting something real. That's the kind of luxury that actually lasts."
+      }
+    ],
+    "faq": [
+      {
+        "question": "What's the best affordable jewelry gift for someone who wears jewelry every day?",
+        "answer": "Body jewelry in 316L stainless steel is ideal — it won't tarnish, discolor skin, or break under everyday wear. Anklets, bracelets, and body chains are all affordable at €17-€35 and designed to be worn constantly."
+      },
+      {
+        "question": "Can I personalize jewelry gifts under €35?",
+        "answer": "Yes. Birthstone bracelets, zodiac charm bracelets, birth flower bracelets, and initial bracelets are all under €35 and let you add a personal touch at checkout — no extra cost."
+      },
+      {
+        "question": "Is handmade jewelry durable enough for daily wear?",
+        "answer": "If it's made from quality materials, absolutely. 316L stainless steel is waterproof and tarnish-resistant, so handmade pieces made from it will handle daily wear just as well as factory-made jewelry — and usually better, because they're made with actual care."
+      }
+    ],
+    "date": "2026-08-31",
+    "category": "Gift Guide",
+    "topic": "affordable luxury jewelry gifts under 35 euros",
+    "tags": [
+      "affordable luxury",
+      "handmade jewelry",
+      "body jewelry gifts",
+      "gift guide under 35 euros",
+      "personalized jewelry"
+    ],
+    "readTime": "3 min read",
+    "featuredProducts": [
+      {
+        "id": "pearl-cross-faith-bracelet",
+        "name": "Pearl Cross Faith Bracelet",
+        "price": "€28",
+        "image": "https://i.etsystatic.com/55122258/r/il/051bc4/8082550652/il_fullxfull.8082550652_7jbm.jpg",
+        "url": "/shop/pearl-cross-faith-bracelet"
+      },
+      {
+        "id": "layered-hip-chain",
+        "name": "Layered Hip Chain",
+        "price": "€32",
+        "image": "https://i.etsystatic.com/55122258/r/il/923445/8142290565/il_fullxfull.8142290565_sk1z.jpg",
+        "url": "/shop/layered-hip-chain"
+      },
+      {
+        "id": "colorful-crystal-bead-anklet",
+        "name": "Colorful Crystal Bead Anklet",
+        "price": "€24",
+        "image": "/images/products/colorful-crystal-bead-anklet-beach-1.webp",
+        "url": "/shop/colorful-crystal-bead-anklet"
+      },
+      {
+        "id": "rhodochrosite-ring",
+        "name": "Rhodochrosite Ring",
+        "price": "€19.2",
+        "image": "/images/products/rhodochrosite-ring-poolside-1.jpg",
+        "url": "/shop/rhodochrosite-ring"
+      }
+    ]
+  },
+  {
     "slug": "christmas-jewelry-gifts-that-feel-personal-not-generic",
     "title": "Christmas Jewelry Gifts That Feel Personal, Not Generic",
     "excerpt": "Skip the mass-produced stuff. Here's how to give jewelry that actually means something.",

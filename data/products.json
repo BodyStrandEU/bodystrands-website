@@ -11022,13 +11022,27 @@
         "value": "Dispatches within 1–2 business days"
       }
     ],
-    "images": [],
+    "images": [
+      "/images/products/6699ee73-83af-4724-8e32-5a8af8af2feb.png"
+    ],
     "variants": [
       "Gold Tone"
     ],
     "featured": false,
-    "active": false,
+    "active": true,
     "altText": "Gold-tone stainless steel double-layer choker necklace with evil eye charm and natural tiger's eye stone",
-    "dateAdded": "2026-08-31T09:00:00-04:00"
+    "dateAdded": "2026-08-31T09:00:00-04:00",
+    "gallery": [
+      "/images/products/6699ee73-83af-4724-8e32-5a8af8af2feb.png",
+      "/images/products/4a7196f8-0859-4407-aaa4-3ee1794d8574.png",
+      "/images/products/5284b048-6e7d-4caa-83da-aaf65b0af9f3.png",
+      "/images/products/69edc47e-495f-4d0b-a455-fb14c9f47fd0.png",
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
+      "/images/products/3f5580cc-5931-4867-a8b9-4b18ac296af9.png"
+    ],
+    "variantVideos": {
+      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/5f01f57149c45ddc1eea943ad6656053/downloads/default.mp4"
+    },
+    "sizeGuideImage": "/images/products/69edc47e-495f-4d0b-a455-fb14c9f47fd0.png"
   }
 ]

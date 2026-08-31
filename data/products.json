@@ -10975,5 +10975,60 @@
       "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/8d536dadb05c4aa1dfb649c3c07bcc86/downloads/default.mp4"
     },
     "sizeGuideImage": "/images/products/96030b94-dbdc-408a-878e-104f949bd54e.png"
+  },
+  {
+    "id": "evil-eye-choker-necklace",
+    "name": "Evil Eye Choker Necklace",
+    "price": 32,
+    "currency": "EUR",
+    "category": "Necklaces",
+    "description": "A double-layer choker pairing a fine disc-link chain with a cable chain and an evil eye charm set with a natural tiger's eye stone — a protective piece worn every day.",
+    "fullDescription": "The evil eye is one of the oldest protective symbols out there — worn to ward off negative energy, bad luck, and envy, and to bring good fortune to whoever's wearing it.\n\nI paired a fine disc-link chain with a delicate cable chain and an evil eye charm set with a natural tiger's eye stone, resting right at the collarbone — pre-layered, so there's no fussing with two clasps, just clip it on and go. Wear it every day, gift it to someone who could use a little extra luck, or stack it into your everyday gold jewelry rotation.\n\nCustom Size: Need it longer or shorter? Message me after ordering and I'll adjust it for you.\n\nCare Instructions\nWipe gently with a soft cloth after each wear.\nStore in an airtight container when not in use.",
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Gold-tone stainless steel chain"
+      },
+      {
+        "label": "Stone",
+        "value": "Natural tiger's eye"
+      },
+      {
+        "label": "Pendant",
+        "value": "Evil eye charm, 20mm across x 16.5mm high"
+      },
+      {
+        "label": "Design",
+        "value": "Double-layer choker — disc-link chain + fine cable chain"
+      },
+      {
+        "label": "Chain Length",
+        "value": "35 cm + 6 cm extender, adjustable 35-41 cm"
+      },
+      {
+        "label": "Closure",
+        "value": "Lobster clasp"
+      },
+      {
+        "label": "Finish",
+        "value": "Waterproof and sweat-proof"
+      },
+      {
+        "label": "Care",
+        "value": "Wipe gently with a soft cloth. Store in an airtight container."
+      },
+      {
+        "label": "Shipping",
+        "value": "Dispatches within 1–2 business days"
+      }
+    ],
+    "images": [],
+    "variants": [
+      "Gold Tone"
+    ],
+    "featured": false,
+    "active": false,
+    "altText": "Gold-tone stainless steel double-layer choker necklace with evil eye charm and natural tiger's eye stone",
+    "dateAdded": "2026-08-31T09:00:00-04:00"
   }
 ]

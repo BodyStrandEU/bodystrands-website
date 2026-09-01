@@ -11064,7 +11064,7 @@
       },
       {
         "label": "Color",
-        "value": "Gold Tone or Silver Tone"
+        "value": "Gold Tone"
       },
       {
         "label": "Size",
@@ -11085,8 +11085,7 @@
     ],
     "images": [],
     "variants": [
-      "Gold Tone",
-      "Silver Tone"
+      "Gold Tone"
     ],
     "variantGroups": [
       {
@@ -11105,7 +11104,7 @@
     ],
     "featured": false,
     "active": false,
-    "altText": "Gold and silver stainless steel disc-link chain belt, waterproof and adjustable waist belt",
+    "altText": "Gold-tone stainless steel disc-link chain belt, waterproof and adjustable waist belt",
     "dateAdded": "2026-09-01T09:00:00-04:00"
   }
 ]

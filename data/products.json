@@ -11083,7 +11083,9 @@
         "value": "Dispatches within 1–2 business days"
       }
     ],
-    "images": [],
+    "images": [
+      "/images/products/1c3128ea-573e-4eb1-bd2f-2bd1dcc46674.png"
+    ],
     "variants": [
       "Gold Tone"
     ],
@@ -11103,8 +11105,25 @@
       }
     ],
     "featured": false,
-    "active": false,
+    "active": true,
     "altText": "Gold-tone stainless steel disc-link chain belt, waterproof and adjustable waist belt",
-    "dateAdded": "2026-09-01T09:00:00-04:00"
+    "dateAdded": "2026-09-01T09:00:00-04:00",
+    "gallery": [
+      "/images/products/1c3128ea-573e-4eb1-bd2f-2bd1dcc46674.png",
+      "/images/products/e0b75e2c-8a25-42e0-80fc-af53ea3fb5fb.png",
+      "/images/products/f0782c4d-84da-48cf-9ca9-9b00053f61eb.png",
+      "/images/products/e92da0fa-604c-4b70-9d15-ba366f43c848.png",
+      "/images/products/df8be7dc-4e6f-4554-9c60-d1d0e37c1eed.png",
+      "/images/products/4055fcd3-127b-41d6-b5a3-997a1bb8762d.png",
+      "/images/products/b6b14869-6fad-46fc-adc3-fb0e0ab020a3.png",
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png"
+    ],
+    "variantHeroes": {
+      "Gold Tone": "/images/products/1c3128ea-573e-4eb1-bd2f-2bd1dcc46674.png"
+    },
+    "variantVideos": {
+      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/b5c1ca1665534755bfa8d6f053d4bdc9/downloads/default.mp4"
+    },
+    "sizeGuideImage": "/images/products/b6b14869-6fad-46fc-adc3-fb0e0ab020a3.png"
   }
 ]

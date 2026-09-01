@@ -11044,5 +11044,70 @@
       "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/5f01f57149c45ddc1eea943ad6656053/downloads/default.mp4"
     },
     "sizeGuideImage": "/images/products/69edc47e-495f-4d0b-a455-fb14c9f47fd0.png"
+  },
+  {
+    "id": "coin-link-chain-belt",
+    "name": "Coin Link Chain Belt",
+    "price": 32,
+    "currency": "EUR",
+    "category": "Belly Chains",
+    "description": "A handmade stainless steel disc-link chain belt that pairs with a slip dress, jeans, a ribbed knit, or office trousers — same belt, endless outfits.",
+    "fullDescription": "A good belt changes everything. I made this handmade stainless steel chain belt for those moments when your outfit needs a little extra intention — whether you're styling a sleek slip dress, throwing it over your favorite ribbed knit, or looking for a versatile fashion accessory to break up your office trousers. Crafted from durable, waterproof disc chain, it's designed to be that reliable piece you don't have to worry about tarnishing or taking off before it rains. It sits beautifully, catches the light just right, and thanks to the fully adjustable extender, you get a comfortable, perfectly tailored fit every single time you put it on.\n\nThat's really where the value is — this isn't a one-outfit piece. Wear it over a bikini at the beach, with jeans and a plain top, over a slip dress for a night out, or with tailored trousers at the office. Same belt, endless outfits.\n\nNeed a different size? Message me after ordering and I'll adjust it for free.\n\nCare Instructions\nWipe gently with a soft cloth after each wear.\nStore in an airtight container when not in use.",
+    "specs": [
+      {
+        "label": "Material",
+        "value": "High-quality stainless steel (waterproof and anti-tarnish)"
+      },
+      {
+        "label": "Style",
+        "value": "Sleek disc-link chain"
+      },
+      {
+        "label": "Color",
+        "value": "Gold Tone or Silver Tone"
+      },
+      {
+        "label": "Size",
+        "value": "Each size is a solid connected disc chain base plus a 10 cm (4\") open-link extender"
+      },
+      {
+        "label": "Finish",
+        "value": "Waterproof and anti-tarnish"
+      },
+      {
+        "label": "Care",
+        "value": "Wipe gently with a soft cloth. Store in an airtight container."
+      },
+      {
+        "label": "Shipping",
+        "value": "Dispatches within 1–2 business days"
+      }
+    ],
+    "images": [],
+    "variants": [
+      "Gold Tone",
+      "Silver Tone"
+    ],
+    "variantGroups": [
+      {
+        "label": "Size",
+        "options": [
+          "Small — 81 cm (31.9\")",
+          "Medium — 91 cm (35.8\")",
+          "Large — 101 cm (39.8\")",
+          "XL — 115 cm (45.3\")"
+        ],
+        "optionPrices": {
+          "Small — 81 cm (31.9\")": 0,
+          "Medium — 91 cm (35.8\")": 1.2,
+          "Large — 101 cm (39.8\")": 2.4,
+          "XL — 115 cm (45.3\")": 4
+        }
+      }
+    ],
+    "featured": false,
+    "active": false,
+    "altText": "Gold and silver stainless steel disc-link chain belt, waterproof and adjustable waist belt",
+    "dateAdded": "2026-09-01T09:00:00-04:00"
   }
 ]

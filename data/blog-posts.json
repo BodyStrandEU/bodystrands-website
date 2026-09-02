@@ -1,5 +1,123 @@
 [
   {
+    "slug": "best-handmade-jewelry-gifts-from-europe",
+    "title": "Best Handmade Jewelry Gifts From Europe",
+    "excerpt": "Skip the mass-produced stuff. Here's where to find real, personal jewelry gifts actually made by hand.",
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "Handmade jewelry gifts hit different. There's something about wearing something that was actually made by a real person — not stamped out in a factory somewhere. If you're looking for European jewelry that feels personal, lasts forever, and comes with an actual story behind it, you're in the right place."
+      },
+      {
+        "type": "paragraph",
+        "text": "The best gift jewelry does two things: it looks good, and it makes the person wearing it feel seen. That means personalisation matters. That means durability matters. And that means knowing the hands that made it actually cared about the work."
+      },
+      {
+        "type": "heading",
+        "text": "Why handmade jewelry is worth the gift"
+      },
+      {
+        "type": "paragraph",
+        "text": "Handmade means no two pieces are exactly identical. When someone wears your gift, they're wearing something with actual variation — something that reflects the reality of human hands at work. That's the opposite of fast fashion jewelry that snaps in a month."
+      },
+      {
+        "type": "paragraph",
+        "text": "Portugal has become a quiet hub for quality handmade jewelry. Small makers there focus on stainless steel pieces that are built to last — waterproof, tarnish-resistant, the kind of thing you can wear every single day without worrying. No precious metals that need constant care. Just solid work."
+      },
+      {
+        "type": "paragraph",
+        "text": "When you give handmade jewelry from a real maker, you're not just giving an accessory. You're giving something that took time, skill, and attention. That feeling matters to the person who receives it."
+      },
+      {
+        "type": "heading",
+        "text": "The gift pieces that actually work"
+      },
+      {
+        "type": "paragraph",
+        "text": "Personalised pieces are where handmade jewelry really shines as a gift. Birthstone bracelets let you encode meaning — her birth month becomes part of the piece she wears. The <a href=\"/shop/birthstone-arm-chain\">Birthstone Arm Chain</a> works the same way: it's personal without being obvious, elegant without trying too hard."
+      },
+      {
+        "type": "paragraph",
+        "text": "For someone who loves layering or wants something they can wear every day, <a href=\"/shop/gold-hand-chain\">hand chains</a> sit in that perfect zone between bold and wearable. They catch light, they move with your hand, and they're interesting enough that she'll actually reach for them."
+      },
+      {
+        "type": "paragraph",
+        "text": "Body chains and <a href=\"/shop/gold-body-necklace\">body necklaces</a> are the gift for someone who wants to stand out. These aren't quiet pieces — they're intentional. If she's someone who likes jewelry to be part of her whole look, this is your move."
+      },
+      {
+        "type": "paragraph",
+        "text": "And if she's more experimental? A <a href=\"/shop/boho-hair-chain\">hair chain</a> or eyeglasses chain is something she probably wouldn't buy for herself but will absolutely love once she has it. That's the sweet spot for gift-giving."
+      },
+      {
+        "type": "heading",
+        "text": "What makes European handmade different"
+      },
+      {
+        "type": "paragraph",
+        "text": "European makers tend to obsess over materials. Portuguese handmade brands use 316L stainless steel — the same grade used in medical equipment. It doesn't tarnish, it doesn't rust, it just works. That's the kind of detail that matters when you're making something by hand."
+      },
+      {
+        "type": "paragraph",
+        "text": "There's also a philosophy difference. When two people are making every single piece in their studio, they can't cut corners. There are no factories, no middlemen. Every strand gets the same care. That's why handmade jewelry from real makers in Europe tends to outlast anything mass-produced — and why it makes such a good gift. You're giving something that was actually made with intention."
+      }
+    ],
+    "faq": [
+      {
+        "question": "Is handmade jewelry actually more durable than factory-made?",
+        "answer": "It depends on the material and maker. Handmade pieces made from 316L stainless steel are extremely durable — they won't tarnish or rust and hold up to daily wear just fine. Factory jewelry is often made from cheaper metals that break down faster. Handmade doesn't always mean fragile; it means someone was paying attention to every detail."
+      },
+      {
+        "question": "How much should I spend on a handmade jewelry gift?",
+        "answer": "Good handmade jewelry starts around €17.50 and goes up to €55 depending on the complexity and materials. A solid gift piece — something personalised with a birthstone or charm — typically runs €28-€40. That's the sweet spot where you're getting real quality without overspending."
+      },
+      {
+        "question": "Can I customise handmade jewelry as a gift?",
+        "answer": "Yes. Most handmade pieces offer personalisation options — you choose the birthstone, birth flower month, zodiac sign, or initial at checkout. That's what makes handmade jewelry so good as a gift; it becomes something specific to the person receiving it."
+      }
+    ],
+    "date": "2026-09-02",
+    "category": "Gift Guide",
+    "topic": "the best handmade jewelry gifts from Europe",
+    "tags": [
+      "handmade jewelry",
+      "european jewelry gifts",
+      "personalised jewelry",
+      "body jewelry",
+      "gift guide"
+    ],
+    "readTime": "4 min read",
+    "featuredProducts": [
+      {
+        "id": "birthstone-arm-chain",
+        "name": "Birthstone Arm Chain",
+        "price": "€28",
+        "image": "/images/products/birthstone-arm-chain/img-january.webp",
+        "url": "/shop/birthstone-arm-chain"
+      },
+      {
+        "id": "boho-hair-chain",
+        "name": "Boho Hair Chain",
+        "price": "€28",
+        "image": "https://i.etsystatic.com/55122258/r/il/e3caa7/7904567178/il_fullxfull.7904567178_dqhq.jpg",
+        "url": "/shop/boho-hair-chain"
+      },
+      {
+        "id": "gold-body-necklace",
+        "name": "Bikini Body Necklace",
+        "price": "€36",
+        "image": "https://i.etsystatic.com/55122258/r/il/c98367/7864103019/il_fullxfull.7864103019_khwe.jpg",
+        "url": "/shop/gold-body-necklace"
+      },
+      {
+        "id": "gold-hand-chain",
+        "name": "Multi-Strand Hand Chain",
+        "price": "€40",
+        "image": "https://i.etsystatic.com/55122258/r/il/72495f/8120735435/il_fullxfull.8120735435_ggod.jpg",
+        "url": "/shop/gold-hand-chain"
+      }
+    ]
+  },
+  {
     "slug": "why-body-jewelry-is-having-a-major-moment-right-now",
     "title": "Why Body Jewelry Is Having a Major Moment Right Now",
     "excerpt": "Body chains aren't niche anymore. Here's why everyone's suddenly wearing them.",

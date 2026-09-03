@@ -34,6 +34,12 @@ const TOPIC_POOLS = [
     "the best jewelry for a backless wedding dress",
     "how to choose between gold and silver jewelry",
     "how to wear a head chain without it looking costume-y",
+    "how to layer a body chain over a dress for fall",
+    "the best jewelry to layer over sweaters and knitwear",
+    "how to style shoulder chains for autumn outfits",
+    "layering jewelry over long sleeves without it disappearing",
+    "transitional jewelry styling from summer into fall",
+    "how to make body jewelry work with jackets and layers",
   ]},
   { category: "Personalized Jewelry", keywords: ["personalised", "personalized", "customized", "birthstone", "birth flower", "zodiac", "initial", "charm", "custom"], topics: [
     "personalised bracelet gift ideas for every occasion",
@@ -111,6 +117,8 @@ const TOPIC_POOLS = [
     "the jewelry pieces worth investing in this year",
     "why handmade jewelry from small brands just hits different",
     "jewelry trends that are actually wearable not just runway",
+    "the best jewelry for a winter sun getaway",
+    "packing jewelry for a tropical winter escape",
   ]},
   { category: "Plus Size", keywords: ["plus size", "curvy", "curvaceous"], topics: [
     "plus size body jewelry that actually fits",
@@ -200,10 +208,49 @@ function getRelevantCategories(topic) {
   return matched.slice(0, 3);
 }
 
-function pickTopic(existingPosts, exclude = new Set()) {
+// Topics that read as summer/beach/warm-vacation specific — these should sit out
+// during autumn (Sep-Nov) so the blog doesn't tell people to go to the beach
+// while everyone's buying sweaters. They're allowed again Dec-Aug.
+const SUMMER_ONLY_TOPICS = new Set([
+  "how to style a shoulder chain for summer",
+  "best jewelry for a beach wedding guest",
+  "how to wear a back chain to the beach",
+  "the best shoulder chain outfits for summer",
+  "the best anklet and bracelet combinations for summer",
+  "bikini jewelry the pieces that actually stay on",
+  "the best jewelry trends for summer 2026",
+  "jewelry ideas for your honeymoon packing list",
+  "the most wearable jewelry for summer holidays",
+  "jewelry styling inspiration from the Mediterranean",
+  "the best jewelry for a beach vacation",
+  "what jewelry to pack for a holiday in the sun",
+  "plus size beach jewelry that stays comfortable all day",
+]);
+
+// The reverse: winter-getaway framing (tropical escape, winter sun) — only
+// makes sense once it's actually cold at home, so restrict to Dec-Feb rather
+// than letting it get picked in the middle of summer.
+const WINTER_GETAWAY_TOPICS = new Set([
+  "the best jewelry for a winter sun getaway",
+  "packing jewelry for a tropical winter escape",
+]);
+
+function seasonallyAppropriate(topic, month) {
+  // month is 1-12. Summer-worded topics only make sense Mar-Aug; the rest of
+  // the year (autumn + winter) the vacation/beach need is covered by the
+  // dedicated winter-getaway topics instead, restricted to Dec-Feb.
+  const isSpringSummer = month >= 3 && month <= 8;
+  const isWinter = month === 12 || month <= 2;
+  if (SUMMER_ONLY_TOPICS.has(topic) && !isSpringSummer) return false;
+  if (WINTER_GETAWAY_TOPICS.has(topic) && !isWinter) return false;
+  return true;
+}
+
+function pickTopic(existingPosts, exclude = new Set(), now = new Date()) {
+  const currentMonth = now.getMonth() + 1;
   const allTopics = TOPIC_POOLS.flatMap((pool) =>
     pool.topics.map((t) => ({ topic: t, category: pool.category }))
-  ).filter(({ topic }) => !exclude.has(topic));
+  ).filter(({ topic }) => !exclude.has(topic) && seasonallyAppropriate(topic, currentMonth));
 
   // Exact-match against the literal topic string used to generate each past post
   // (not the LLM-rewritten title, which rarely shares wording with the topic).
@@ -216,9 +263,13 @@ function pickTopic(existingPosts, exclude = new Set()) {
     return neverUsed[Math.floor(Math.random() * neverUsed.length)];
   }
 
-  // Full pool has cycled at least once — still avoid anything used in the last 21 days
-  const cutoff = new Date();
-  cutoff.setDate(cutoff.getDate() - 21);
+  // Full pool has cycled at least once — still avoid anything used in the last
+  // 180 days. At ~104 topics and 3 posts/day the pool cycles in ~5 weeks, so a
+  // short cooldown (the old value was 21 days) let the same topic reappear
+  // almost immediately after first exhaustion — that's how Valentine's Day
+  // ended up published 4 times in under 3 months. 180 days makes real repeats rare.
+  const cutoff = new Date(now);
+  cutoff.setDate(cutoff.getDate() - 180);
   const recentTopics = new Set(
     existingPosts
       .filter((p) => p.topic && new Date(p.date) >= cutoff)
@@ -264,7 +315,7 @@ async function generateAttempt(client, topic, category, posts, products) {
 
 The brand story: El and Gio are a couple who fell in love with the original Canadian Bodystrands brand and brought it to Europe. Every single piece is handmade by the two of them in their Portuguese studio — no factories, no middlemen. They pour their care into every strand.
 
-Products: belly chains, back chains, body chains, shoulder chains, anklets, bracelets (including birthstone bracelets, birth flower charm bracelets, zodiac charm bracelets, initial bracelets, pearl bracelets), necklaces, hand chains, head chains, eyeglasses chains, bikini clip chains. All made from 316L stainless steel — waterproof, tarnish-resistant, built for everyday wear. Prices range from €17.50 to €55. Many pieces are personalised — customers choose their birthstone, birth flower month, zodiac sign, or initial at checkout.
+Products: belly chains, back chains, body chains, shoulder chains, anklets, bracelets (including birthstone bracelets, birth flower charm bracelets, zodiac charm bracelets, initial bracelets, pearl bracelets), necklaces, hand chains, head chains, eyeglasses chains, bikini clip chains. All made from high-quality stainless steel — waterproof, tarnish-resistant, built for everyday wear. Never claim a specific technical grade (no "316L", "marine-grade", "medical-grade", or "surgical-grade" — these have not been verified for our material and must never appear). Prices range from €17.50 to €55. Many pieces are personalised — customers choose their birthstone, birth flower month, zodiac sign, or initial at checkout.
 ${productContext}${categoryContext}
 Brand voice:
 - Warm, real, and direct — like a close friend who genuinely knows jewelry

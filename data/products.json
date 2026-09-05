@@ -11125,5 +11125,87 @@
       "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/b5c1ca1665534755bfa8d6f053d4bdc9/downloads/default.mp4"
     },
     "sizeGuideImage": "/images/products/b6b14869-6fad-46fc-adc3-fb0e0ab020a3.png"
+  },
+  {
+    "id": "bridal-shoulder-necklace",
+    "name": "Bridal Shoulder Necklace",
+    "price": 50,
+    "currency": "EUR",
+    "category": "Shoulder & Arm Chains",
+    "description": "A dainty three-layer shoulder chain that drapes from a delicate choker across your upper arm — the finishing detail for any strapless wedding dress or top.",
+    "fullDescription": "Add a unique detail to your outfit with this dainty shoulder chain. It's built in three parts: a delicate choker sits at your neck, a pair of fine connector strands run down to your shoulder, and from there three soft strands cascade across your upper arm — so it drapes with real movement instead of sitting flat. I handcraft each one to pair perfectly with any strapless dress or top.\n\nMade from lightweight, waterproof, and anti-tarnish gold-tone or silver-tone stainless steel — no shine loss, no green marks, no fuss. A comfortable, high-quality piece you can wear all day and forget you have on.",
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Waterproof and anti-tarnish gold-tone or silver-tone stainless steel"
+      },
+      {
+        "label": "Colours",
+        "value": "Gold or Silver finish"
+      },
+      {
+        "label": "Closure",
+        "value": "Lobster clasp"
+      },
+      {
+        "label": "Choker",
+        "value": "35 cm (13.8\") base — 35–41 cm (13.8\"–16.1\") with extension, one size fits all"
+      },
+      {
+        "label": "Connector Strands",
+        "value": "16 cm (6.3\") ×4, one size fits all"
+      },
+      {
+        "label": "Shoulder Drape — Size S",
+        "value": "Top 26 cm / Mid 30 cm / Bottom 34 cm"
+      },
+      {
+        "label": "Shoulder Drape — Size M",
+        "value": "Top 28 cm / Mid 32 cm / Bottom 36 cm"
+      },
+      {
+        "label": "Shoulder Drape — Size L",
+        "value": "Top 30 cm / Mid 34 cm / Bottom 38 cm"
+      },
+      {
+        "label": "Shoulder Drape — Size XL",
+        "value": "Top 32 cm / Mid 36 cm / Bottom 40 cm"
+      },
+      {
+        "label": "Custom fit",
+        "value": "Message us after ordering — we resize to your exact measurements at no extra cost"
+      },
+      {
+        "label": "Care",
+        "value": "Wipe gently with a soft cloth after each wear. Store in an airtight container."
+      },
+      {
+        "label": "Shipping",
+        "value": "Dispatches within 1–2 business days"
+      }
+    ],
+    "images": [],
+    "featured": true,
+    "variants": [
+      "Gold Tone",
+      "Silver Tone"
+    ],
+    "variantGroups": [
+      {
+        "label": "Size",
+        "options": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
+      }
+    ],
+    "active": false,
+    "dateAdded": "2026-09-05T15:07:00-04:00",
+    "giftTags": [
+      "bridal"
+    ],
+    "altText": "Delicate gold-tone stainless steel bridal shoulder chain for wedding dresses, waterproof shoulder jewelry design"
   }
 ]

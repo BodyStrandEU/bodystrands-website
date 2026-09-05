@@ -11137,7 +11137,7 @@
     "specs": [
       {
         "label": "Material",
-        "value": "Waterproof and anti-tarnish gold-tone or silver-tone stainless steel"
+        "value": "Stainless steel - Waterproof and anti-tarnish "
       },
       {
         "label": "Colours",
@@ -11184,7 +11184,9 @@
         "value": "Dispatches within 1–2 business days"
       }
     ],
-    "images": [],
+    "images": [
+      "/images/products/01f32250-0f15-492d-b2c3-39bba7cb97c7.png"
+    ],
     "featured": true,
     "variants": [
       "Gold Tone",
@@ -11206,6 +11208,21 @@
     "giftTags": [
       "bridal"
     ],
-    "altText": "Delicate gold-tone stainless steel bridal shoulder chain for wedding dresses, waterproof shoulder jewelry design"
+    "altText": "Delicate gold-tone stainless steel bridal shoulder chain for wedding dresses, waterproof shoulder jewelry design",
+    "gallery": [
+      "/images/products/01f32250-0f15-492d-b2c3-39bba7cb97c7.png",
+      "/images/products/7790b960-fae7-483e-9d6b-a85cf916ec4a.png",
+      "/images/products/3422e6f2-ba73-4025-9ff6-42d07849b750.png",
+      "/images/products/c5062f52-b2de-4104-bbe6-c5a0938b1e0f.png",
+      "/images/products/1eae86bc-f39d-4406-9622-b4c784421685.png",
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
+      "/images/products/53dfa5e2-edda-4990-85ed-aa8cf90d41ed.png",
+      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.jpg"
+    ],
+    "variantHeroes": {
+      "Silver Tone": "/images/products/01f32250-0f15-492d-b2c3-39bba7cb97c7.png",
+      "Gold Tone": "/images/products/7790b960-fae7-483e-9d6b-a85cf916ec4a.png"
+    },
+    "sizeGuideImage": "/images/products/1eae86bc-f39d-4406-9622-b4c784421685.png"
   }
 ]

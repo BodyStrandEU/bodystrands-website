@@ -28,9 +28,8 @@ const SHIPPING_ZONES: Zone[] = [
   },
   {
     zone: "USA",
-    rate: 5,
-    freeOver: 55.56,
-    freeOverDisplay: "$60.00 USD",
+    rate: 20,
+    freeOver: 75,
     delivery: "3–10 business days",
     countries: "United States",
   },

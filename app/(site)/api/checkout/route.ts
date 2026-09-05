@@ -95,7 +95,7 @@ export async function POST(req: NextRequest) {
     const body   = await req.json() as Record<string, unknown>;
     const origin = req.headers.get("origin") ?? "https://bodystrands.com";
     const country = (body.country as string | undefined) ?? "";
-    // Live rates so US/CA free-shipping resolves to an exact $60 USD / $75 CAD at checkout.
+    // Live rates so CA free-shipping resolves to an exact $75 CAD at checkout (US is a flat EUR threshold).
     const rates = await fetchExchangeRates();
 
     // ── Cart checkout (multiple items) ──────────────────────────────────

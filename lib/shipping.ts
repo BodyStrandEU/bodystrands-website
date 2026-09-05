@@ -17,8 +17,8 @@ const EU = new Set([
 export function getShippingRate(
   countryCode: string,
   cartTotal: number,
-  // Live USD/CAD rates (from lib/currency.ts's fetchExchangeRates) so the US/CA free-shipping
-  // cutoff always resolves to an exact $60 USD / $75 CAD, not a stale EUR approximation.
+  // Live CAD rate (from lib/currency.ts's fetchExchangeRates) so Canada's free-shipping
+  // cutoff always resolves to an exact $75 CAD, not a stale EUR approximation. US is a flat EUR threshold.
   // Defaults to the static fallback rates for call sites that only need deliveryMin/Max.
   rates: Record<CurrencyCode, number> = FALLBACK_RATES,
 ): ShippingRate {
@@ -41,15 +41,13 @@ export function getShippingRate(
     };
   }
   if (countryCode === "US") {
-    // Exact $60 USD threshold — converted to EUR using the live rate passed in, not a
-    // hardcoded snapshot, so it always resolves to a real $60.00 regardless of FX drift.
-    const threshold = 60 / rates.USD;
-    const free = cartTotal >= threshold;
+    // Flat EUR pricing — actual carrier cost runs ~€28/shipment, so €5 was underpriced.
+    const free = cartTotal >= 75;
     return {
       displayName: free ? "Free Shipping — USA" : "Standard Shipping — USA",
-      amount:      free ? 0 : 500,
+      amount:      free ? 0 : 2000,
       deliveryMin: 3, deliveryMax: 10,
-      freeThreshold: threshold,
+      freeThreshold: 75,
     };
   }
   if (countryCode === "CA") {

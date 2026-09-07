@@ -11228,7 +11228,7 @@
   {
     "id": "double-thigh-belly-chain",
     "name": "Double Thigh Belly Chain",
-    "price": 76.5,
+    "price": 75,
     "currency": "EUR",
     "category": "Leg Chains",
     "description": "Catch the sun at the beach or add a hidden, alluring detail under your favorite dress for date night. I handcraft this waist and double thigh chain to drape symmetrically down both legs, so it moves with you instead of sitting stiff.",
@@ -11283,7 +11283,9 @@
         "value": "Dispatches within 1–2 business days"
       }
     ],
-    "images": [],
+    "images": [
+      "/images/products/fb5d9d2f-730f-4fae-95e5-c4f52987e9aa.png"
+    ],
     "featured": true,
     "variants": [
       "Gold Tone",
@@ -11300,8 +11302,17 @@
         ]
       }
     ],
-    "active": false,
+    "active": true,
     "dateAdded": "2026-09-07T16:26:30-04:00",
-    "altText": "Gold-tone stainless steel double thigh chain and belly chain for beach and festival wear"
+    "altText": "Gold-tone stainless steel double thigh chain and belly chain for beach and festival wear",
+    "gallery": [
+      "/images/products/fb5d9d2f-730f-4fae-95e5-c4f52987e9aa.png",
+      "/images/products/1709d33e-5303-451f-9949-3df64e5fcac7.png",
+      "/images/products/3be5ed11-13fd-4fd4-a863-7c57c0ea51d3.png",
+      "/images/products/1c19f2af-3366-4a36-b808-846d69060418.jpeg",
+      "/images/products/ba069f13-aaca-45e4-8e51-900c3b6ad8e3.png",
+      "/images/products/c292115a-833c-4e85-adcc-3d6b6daa6969.png"
+    ],
+    "sizeGuideImage": "/images/products/ba069f13-aaca-45e4-8e51-900c3b6ad8e3.png"
   }
 ]

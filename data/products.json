@@ -11224,5 +11224,84 @@
       "Gold Tone": "/images/products/7790b960-fae7-483e-9d6b-a85cf916ec4a.png"
     },
     "sizeGuideImage": "/images/products/1eae86bc-f39d-4406-9622-b4c784421685.png"
+  },
+  {
+    "id": "double-thigh-belly-chain",
+    "name": "Double Thigh Belly Chain",
+    "price": 76.5,
+    "currency": "EUR",
+    "category": "Leg Chains",
+    "description": "Catch the sun at the beach or add a hidden, alluring detail under your favorite dress for date night. I handcraft this waist and double thigh chain to drape symmetrically down both legs, so it moves with you instead of sitting stiff.",
+    "fullDescription": "Catch the sun at the beach or add a hidden, alluring detail under your favorite dress for date night. I handcraft this waist and double thigh chain to drape symmetrically down both legs, so it moves with you instead of sitting stiff — a piece designed to accentuate your natural curves with real elegance.\n\nMade from lightweight, waterproof, and anti-tarnish gold-tone or silver-tone stainless steel — swim in it, lounge by the pool, or dance the night away without a second thought. Wear it around your waist to cinch a dress, over your hips for a beach look, or under a skirt as a hidden detail.",
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Waterproof and anti-tarnish gold-tone or silver-tone stainless steel"
+      },
+      {
+        "label": "Colours",
+        "value": "Gold or Silver finish"
+      },
+      {
+        "label": "Closure",
+        "value": "Adjustable extender chain"
+      },
+      {
+        "label": "Waterproof & Sweat-Proof",
+        "value": "Yes — safe for water, sun, and everyday wear"
+      },
+      {
+        "label": "Size S",
+        "value": "Waist/High Hip: 71cm base + 12cm extender (fits 71-83cm) · Thigh: 48cm base + 10cm extender (fits 48-58cm) · Drop Chain: 20cm"
+      },
+      {
+        "label": "Size M",
+        "value": "Waist/High Hip: 81cm base + 12cm extender (fits 81-93cm) · Thigh: 58cm base + 10cm extender (fits 58-68cm) · Drop Chain: 21.5cm"
+      },
+      {
+        "label": "Size L",
+        "value": "Waist/High Hip: 93cm base + 12cm extender (fits 93-105cm) · Thigh: 68cm base + 10cm extender (fits 68-78cm) · Drop Chain: 23cm"
+      },
+      {
+        "label": "Size XL",
+        "value": "Waist/High Hip: 105cm base + 12cm extender (fits 105-117cm) · Thigh: 78cm base + 10cm extender (fits 78-88cm) · Drop Chain: 24.5cm"
+      },
+      {
+        "label": "Fit note",
+        "value": "Each size applies to both thighs symmetrically — the same measurements repeat on the left and right side"
+      },
+      {
+        "label": "Custom fit",
+        "value": "Message us after ordering — we resize to your exact measurements at no extra cost"
+      },
+      {
+        "label": "Care",
+        "value": "Wipe gently with a soft cloth after each wear. Store in an airtight container."
+      },
+      {
+        "label": "Shipping",
+        "value": "Dispatches within 1–2 business days"
+      }
+    ],
+    "images": [],
+    "featured": true,
+    "variants": [
+      "Gold Tone",
+      "Silver Tone"
+    ],
+    "variantGroups": [
+      {
+        "label": "Size",
+        "options": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
+      }
+    ],
+    "active": false,
+    "dateAdded": "2026-09-07T16:26:30-04:00",
+    "altText": "Gold-tone stainless steel double thigh chain and belly chain for beach and festival wear"
   }
 ]

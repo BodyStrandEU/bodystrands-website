@@ -1,5 +1,123 @@
 [
   {
+    "slug": "luxury-body-jewelry-gifts-under-35-handmade-real",
+    "title": "Luxury Body Jewelry Gifts Under €35 — Handmade & Real",
+    "excerpt": "Beautiful, personal gifts that feel expensive but won't break the bank. All handmade in Portugal, designed to last.",
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "You want to give something that feels special. Not basic. Not mass-produced. But you also don't want to spend €100 on a gift. The good news? Real luxury doesn't have to cost that much — especially when you're buying handmade jewelry made by actual humans, not factories."
+      },
+      {
+        "type": "paragraph",
+        "text": "Every piece we make in our Portuguese studio is built to last. High-quality stainless steel that won't tarnish, won't rust, and won't turn green on your skin. It's the kind of gift someone will actually wear every day, not shove in a drawer."
+      },
+      {
+        "type": "heading",
+        "text": "Personalized gifts that feel like you really know them"
+      },
+      {
+        "type": "paragraph",
+        "text": "The fastest way to make a gift feel thoughtful? Make it personal. Our birthstone bracelets, birth flower charm bracelets, and zodiac bracelets let you customize something that actually matches who they are. You pick their birth month, sign, or initial at checkout — it's that simple."
+      },
+      {
+        "type": "paragraph",
+        "text": "The <a href=\"/shop/layered-pearl-bracelet\">Layered Pearl Bracelet</a> is €24 and works with virtually any birthstone. It's delicate enough to wear alone, but pairs beautifully with other bracelets if they like stacking. Or try one of our initial bracelets if you want something with their name or initials woven in."
+      },
+      {
+        "type": "paragraph",
+        "text": "These aren't those cheap personalized pieces that tarnish after three months. We use the same quality materials for custom work as we do for everything else. The personalization is just the story on top."
+      },
+      {
+        "type": "heading",
+        "text": "Statement pieces that look more expensive than they are"
+      },
+      {
+        "type": "paragraph",
+        "text": "Sometimes a gift just needs to look beautiful. Body chains, belly chains, and head chains are having a moment because they actually make you feel different when you wear them. They're a little bit more. A little bit intentional."
+      },
+      {
+        "type": "paragraph",
+        "text": "The <a href=\"/shop/pearl-bridal-head-chain\">Pearl Bridal Head Chain</a> is €34. Yes, it's technically called bridal, but honestly? It works for anyone who wants to feel like the best version of themselves. Wedding season, festivals, nights out, just because. Browse our full <a href=\"/shop\">shop all body jewelry</a> if you want to see what else we have — everything under €35 hits different when it's handmade."
+      },
+      {
+        "type": "paragraph",
+        "text": "The thing about body jewelry is it's unexpected. Most people don't think to buy it for themselves. That's what makes it such a solid gift. It shows you actually thought about it."
+      },
+      {
+        "type": "heading",
+        "text": "Gifts for people who already have everything"
+      },
+      {
+        "type": "paragraph",
+        "text": "If they're hard to shop for, they probably already own standard bracelets and necklaces. But do they own a barefoot sandal? An eyeglasses chain? A hand chain? These are the kinds of pieces that feel fresh because they're not just \"another bracelet.\""
+      },
+      {
+        "type": "paragraph",
+        "text": "The <a href=\"/shop/pearl-barefoot-sandal\">Pearl Barefoot Sandal</a> is €32 and genuinely stunning. It's beach season, festival season, or just-because jewelry that works with almost any outfit. The <a href=\"/shop/colorful-crystal-bead-anklet\">Colorful Crystal Bead Anklet</a> at €24 brings color in a way that feels intentional, not random."
+      },
+      {
+        "type": "paragraph",
+        "text": "These are the gifts people talk about. They're not expensive enough to stress over, but thoughtful enough that the person wearing them knows you put actual care into picking something they'd love."
+      }
+    ],
+    "faq": [
+      {
+        "question": "What makes handmade jewelry better than mass-produced?",
+        "answer": "Handmade pieces are made by real people who care about quality — not machines optimizing for speed and profit margins. You get better materials, better attention to detail, and something that actually lasts. Plus, you're supporting small makers instead of huge factories."
+      },
+      {
+        "question": "Will stainless steel body jewelry tarnish or cause skin irritation?",
+        "answer": "No — our stainless steel is waterproof and tarnish-resistant, so it's built for everyday wear without the worry. It won't turn your skin green or react badly. You can wear it to the beach, in the shower, or sleeping without issues."
+      },
+      {
+        "question": "Can I return personalized jewelry if it's not quite right?",
+        "answer": "Reach out to us directly — we're a small couple-run brand and we genuinely want you to be happy with what you get. Because everything is handmade, we can discuss options with you personally rather than hiding behind a corporate return policy."
+      }
+    ],
+    "date": "2026-09-09",
+    "category": "Gift Guide",
+    "topic": "affordable luxury jewelry gifts under 35 euros",
+    "tags": [
+      "gift guide",
+      "affordable luxury",
+      "handmade jewelry",
+      "body jewelry",
+      "personalized gifts"
+    ],
+    "readTime": "4 min read",
+    "featuredProducts": [
+      {
+        "id": "pearl-barefoot-sandal",
+        "name": "Pearl Barefoot Sandal",
+        "price": "€32",
+        "image": "https://i.etsystatic.com/55122258/r/il/d28f80/8021007999/il_fullxfull.8021007999_6e1h.jpg",
+        "url": "/shop/pearl-barefoot-sandal"
+      },
+      {
+        "id": "colorful-crystal-bead-anklet",
+        "name": "Colorful Crystal Bead Anklet",
+        "price": "€24",
+        "image": "/images/products/colorful-crystal-bead-anklet-beach-1.webp",
+        "url": "/shop/colorful-crystal-bead-anklet"
+      },
+      {
+        "id": "layered-pearl-bracelet",
+        "name": "Layered Pearl Bracelet",
+        "price": "€24",
+        "image": "https://i.etsystatic.com/55122258/r/il/dc4e2f/8165749301/il_fullxfull.8165749301_9lkm.jpg",
+        "url": "/shop/layered-pearl-bracelet"
+      },
+      {
+        "id": "pearl-bridal-head-chain",
+        "name": "Pearl Bridal Head Chain",
+        "price": "€34",
+        "image": "https://i.etsystatic.com/55122258/r/il/8d2af9/8020112711/il_fullxfull.8020112711_jbay.jpg",
+        "url": "/shop/pearl-bridal-head-chain"
+      }
+    ]
+  },
+  {
     "slug": "birthstone-vs-birth-flower-jewelry-which-fits-you",
     "title": "Birthstone vs Birth Flower Jewelry: Which Fits You?",
     "excerpt": "Two ways to wear your birth month—and they're actually pretty different. Here's how to choose.",

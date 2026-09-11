@@ -1,8 +1,13 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  // Caps static-generation worker parallelism — this dev machine is heavily loaded
+  // (VS Code, browser, other background processes), and full parallelism was causing
+  // page renders to exceed Next's 60s per-page timeout and corrupt the Turbopack cache.
+  experimental: {
+    cpus: 2,
+  },
   images: {
-    unoptimized: true,
     remotePatterns: [
       {
         protocol: "https",
@@ -22,3 +27,5 @@ const nextConfig: NextConfig = {
 };
 
 export default nextConfig;
+
+import('@opennextjs/cloudflare').then(m => m.initOpenNextCloudflareForDev());

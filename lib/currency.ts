@@ -84,11 +84,15 @@ export function convert(eurAmount: number, currency: CurrencyCode, rates: Record
 }
 
 export function formatMoney(eurAmount: number, currency: CurrencyCode, rates: Record<CurrencyCode, number>): string {
-  const converted = convert(eurAmount, currency, rates);
-  // No fraction-digit override — Intl already knows JPY/KRW/VND have zero decimal places
-  // and applies the correct precision per currency automatically.
+  // Rounded to the nearest whole unit for a clean display price — an exact EUR->local
+  // conversion lands on odd cents (e.g. $41.12) that look unintentional. This is display-only:
+  // checkout always charges the exact EUR price and Stripe's own adaptive_pricing (a separate,
+  // independently-rounded conversion) handles what the shopper actually pays at checkout.
+  const converted = Math.round(convert(eurAmount, currency, rates));
   return new Intl.NumberFormat(CURRENCY_LOCALE[currency], {
     style: "currency",
     currency,
+    minimumFractionDigits: 0,
+    maximumFractionDigits: 0,
   }).format(converted);
 }

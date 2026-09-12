@@ -2,3 +2,12 @@
 # https://opennext.js.org/cloudflare/caching#static-assets-caching
 /_next/static/*
   Cache-Control: public,max-age=31536000,immutable
+
+# Product photos are uploaded once per listing under a unique filename (never overwritten
+# in place), unlike site images (hero/logo/category tiles) which admins DO overwrite at the
+# same path — so only these are safe to mark immutable. Without this, /_next/image's
+# transform response inherits no Cache-Control (OpenNext only marks it immutable when the
+# source asset's own header says so), so Cloudflare's edge never caches the resized output
+# and every visitor re-triggers a full resize of the multi-MB source PNG/JPG.
+/images/products/*
+  Cache-Control: public,max-age=31536000,immutable

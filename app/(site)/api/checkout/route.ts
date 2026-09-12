@@ -4,7 +4,13 @@ import { products, type Product } from "@/lib/products";
 import { getShippingRate, ALL_COUNTRIES } from "@/lib/shipping";
 import { fetchExchangeRates, type CurrencyCode } from "@/lib/currency";
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!);
+// Explicit fetch-based HTTP client — required for Stripe's SDK to work under the
+// Cloudflare Workers runtime. Without this it silently hangs instead of erroring,
+// since it otherwise falls back to a Node-specific transport that doesn't function
+// under Workers' nodejs_compat polyfills.
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
+  httpClient: Stripe.createFetchHttpClient(),
+});
 
 const GIFT_WRAP_FEE_EUR = 4;
 

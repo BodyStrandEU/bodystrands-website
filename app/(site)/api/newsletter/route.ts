@@ -55,7 +55,7 @@ export async function POST(request: NextRequest) {
     // Notification to admin
     resend.emails.send({
       from:    "Bodystrands <info@bodystrands.com>",
-      to:      "storenavaria@gmail.com",
+      to:      "info@bodystrands.com",
       subject: `New subscriber: ${email}`,
       html: `<p style="font-family:sans-serif;">New newsletter signup: <strong>${email}</strong></p>`,
     }),

@@ -9,7 +9,10 @@ import { uploadImageToDir } from "@/lib/github";
 import { COUNTRY_GROUPS } from "@/lib/shipping";
 import { optimizeImageBuffer } from "@/lib/image-optimize";
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!);
+// Explicit fetch-based HTTP client — required for Stripe's SDK under the Cloudflare Workers runtime.
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
+  httpClient: Stripe.createFetchHttpClient(),
+});
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 const COUNTRY_NAME: Record<string, string> = Object.fromEntries(
@@ -88,7 +91,7 @@ export async function POST(req: NextRequest) {
     if (FROM) {
       await resend.emails.send({
         from:    `Bodystrands <${FROM}>`,
-        to:      "storenavaria@gmail.com",
+        to:      "info@bodystrands.com",
         subject: `New review awaiting approval — ${payload.category}`,
         html: `
           <div style="font-family:Georgia,serif;max-width:520px;margin:0 auto;color:#2C2220;">

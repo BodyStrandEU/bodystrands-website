@@ -1,0 +1,7 @@
+# Orphaned local video files (leftover from before the site moved to Cloudflare Stream
+# for video hosting). Confirmed zero references in data/products.json — nothing on the
+# live site actually serves these paths, and several exceed Workers' 25MB per-asset limit.
+# Excluded from the Cloudflare Workers static assets upload; left in place in the repo
+# rather than deleted, since removing them is a broader cleanup decision.
+images/products/**/*.mp4
+images/products/**/*.mov

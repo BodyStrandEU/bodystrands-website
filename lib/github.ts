@@ -10,6 +10,9 @@ function getHeaders(): HeadersInit {
     Accept: "application/vnd.github+json",
     "Content-Type": "application/json",
     "X-GitHub-Api-Version": "2022-11-28",
+    // GitHub's API rejects any request without one. Node's fetch implementations set a
+    // default automatically; Cloudflare Workers' native fetch does not, so it must be explicit.
+    "User-Agent": "bodystrands-website-admin",
   };
 }
 

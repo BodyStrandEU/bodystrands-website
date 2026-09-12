@@ -1,5 +1,3 @@
-import sharp from "sharp";
-
 // Generous ceiling — no product image on the site is ever rendered anywhere near this large,
 // even in a lightbox/zoom view, so shrinking down to this only removes pixels no one can see.
 const MAX_DIMENSION = 2400;
@@ -17,6 +15,18 @@ const IMAGE_EXTENSIONS = new Set(["png", "jpg", "jpeg"]);
 export async function optimizeImageBuffer(input: Buffer, filename: string): Promise<Buffer> {
   const ext = filename.split(".").pop()?.toLowerCase();
   if (!ext || !IMAGE_EXTENSIONS.has(ext)) {
+    return input;
+  }
+
+  // Loaded lazily (not as a top-level import) because sharp is a native module that
+  // doesn't exist on Cloudflare Workers — a static import crashes the whole route at
+  // load time, even on requests that never touch this function. Loading it inside the
+  // call lets Workers catch the failure here and ship the original file untouched,
+  // while Node/Vercel still loads it fine and optimizes as before.
+  let sharp;
+  try {
+    sharp = (await import("sharp")).default;
+  } catch {
     return input;
   }
 

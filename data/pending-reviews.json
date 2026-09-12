@@ -1,1 +1,14 @@
-[]
+[
+  {
+    "id": "cs_test_claude_final_1789211943506-1789211945699",
+    "sessionId": "cs_test_claude_final_1789211943506",
+    "category": "Necklaces",
+    "productName": "Claude Test Product",
+    "name": "Claude Test - please delete",
+    "location": "Verified Buyer",
+    "rating": 5,
+    "headline": "Final verification",
+    "text": "Confirming reviews work end to end. Please reject/delete this test entry.",
+    "submittedAt": "2026-09-12T11:19:05.699Z"
+  }
+]

@@ -11447,11 +11447,34 @@
       "Green",
       "White"
     ],
-    "images": [],
-    "gallery": [],
+    "images": [
+      "/images/products/672f3420-04a7-4668-85cc-bcffbe74e1d2.jpeg"
+    ],
+    "gallery": [
+      "/images/products/672f3420-04a7-4668-85cc-bcffbe74e1d2.jpeg",
+      "/images/products/1d905726-9dca-4850-b298-160cabf6d3df.png",
+      "/images/products/1742121b-ed56-4b35-b9fb-daae1412bf23.png",
+      "/images/products/5bb4863e-8297-4c9c-899b-1d9b09afc222.png",
+      "/images/products/9a8c42f2-fc05-4248-8969-127c22dd97b8.png",
+      "/images/products/73869963-e1b4-4b7a-89f5-5820e67bc0b9.png",
+      "/images/products/a9f4629e-0b2f-417f-9daf-17a0d482c2b4.png",
+      "/images/products/fadd97cd-08e1-4959-89c2-9a00e7aaad2f.png",
+      "/images/products/2c9187ac-70ac-4c52-b041-451f4135cbeb.png"
+    ],
     "featured": false,
-    "active": false,
+    "active": true,
     "christmas": true,
-    "dateAdded": "2026-09-13T13:44:11.838Z"
+    "dateAdded": "2026-09-13T13:44:11.838Z",
+    "variantHeroes": {
+      "Red": "/images/products/672f3420-04a7-4668-85cc-bcffbe74e1d2.jpeg",
+      "Green": "/images/products/1d905726-9dca-4850-b298-160cabf6d3df.png",
+      "White": "/images/products/1742121b-ed56-4b35-b9fb-daae1412bf23.png"
+    },
+    "variantVideos": {
+      "Red": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/83d7521be17e70da9381e530c8e1c67b/downloads/default.mp4",
+      "Green": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/83d7521be17e70da9381e530c8e1c67b/downloads/default.mp4",
+      "White": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/83d7521be17e70da9381e530c8e1c67b/downloads/default.mp4"
+    },
+    "sizeGuideImage": "/images/products/2c9187ac-70ac-4c52-b041-451f4135cbeb.png"
   }
 ]

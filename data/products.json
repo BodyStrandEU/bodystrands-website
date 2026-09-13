@@ -11318,7 +11318,7 @@
   {
     "id": "layered-body-chain-double-choker",
     "name": "Layered Double Choker Body Chain",
-    "price": 50,
+    "price": 51,
     "currency": "EUR",
     "category": "Body Chains",
     "description": "Wear it over a bikini at the beach, or layer it over a top or dress the rest of the year — this dainty body chain works either way. I handcraft it with a double-layer choker at the neck that drops down into a layered waist chain, so it reads as a necklace and a belly chain in one piece, with real depth instead of a single flat strand.",
@@ -11373,10 +11373,28 @@
       "Gold Tone",
       "Silver Tone"
     ],
-    "images": [],
-    "gallery": [],
+    "images": [
+      "/images/products/c122afbc-105e-47e1-b39c-33fbf65e73de.png"
+    ],
+    "gallery": [
+      "/images/products/c122afbc-105e-47e1-b39c-33fbf65e73de.png",
+      "/images/products/81f9c47d-dace-4445-b77f-5000d9fe973e.jpeg",
+      "/images/products/37c75025-ed72-4866-a6fc-f8b072d1ad46.png",
+      "/images/products/29170a2b-01fb-4bd2-810d-6743fa4c2b2e.png",
+      "/images/products/486d0a5b-1fc0-4f72-848d-da3411cc9b58.png",
+      "/images/products/watermarked_img_5216291070479054344.jpg"
+    ],
     "featured": false,
-    "active": false,
-    "dateAdded": "2026-09-13T08:51:32-04:00"
+    "active": true,
+    "dateAdded": "2026-09-13T08:51:32-04:00",
+    "variantHeroes": {
+      "Gold Tone": "/images/products/c122afbc-105e-47e1-b39c-33fbf65e73de.png",
+      "Silver Tone": "/images/products/81f9c47d-dace-4445-b77f-5000d9fe973e.jpeg"
+    },
+    "variantVideos": {
+      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/20aadde57b9911284d1aaed63997041e/downloads/default.mp4",
+      "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/20aadde57b9911284d1aaed63997041e/downloads/default.mp4"
+    },
+    "sizeGuideImage": "/images/products/901f6258-21fa-4d42-93c0-dfcda4f3eac1.png"
   }
 ]

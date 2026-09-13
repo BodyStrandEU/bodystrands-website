@@ -4,7 +4,10 @@ import { Resend } from "resend";
 import { addToAudience } from "@/lib/audience";
 import { getShippingRate } from "@/lib/shipping";
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!);
+// Explicit fetch-based HTTP client — required for Stripe's SDK under the Cloudflare Workers runtime.
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
+  httpClient: Stripe.createFetchHttpClient(),
+});
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(req: NextRequest) {
@@ -167,7 +170,7 @@ export async function POST(req: NextRequest) {
     // Owner notification
     await resend.emails.send({
       from:    "Bodystrands <info@bodystrands.com>",
-      to:      "storenavaria@gmail.com",
+      to:      "info@bodystrands.com",
       subject: `${giftWrap ? "🎁 " : ""}Cha-Ching! 💰 ${productName} (${currency} ${amountTotal})`,
       html: `
         <div style="font-family:Georgia,serif;max-width:560px;margin:0 auto;color:#2C2220;">

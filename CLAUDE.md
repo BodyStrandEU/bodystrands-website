@@ -2,6 +2,44 @@
 
 # Bodystrands — Project Rules & Context
 
+## Cloudflare Migration Status — updated Sep 10, 2026
+Migrating the site from Vercel to Cloudflare Workers (OpenNext adapter) because Vercel's ISR Writes limit (200K/mo) was exceeded. All work is on the `cloudflare-migration` git branch — `main`/Vercel is untouched and kept live as a fallback insurance policy. **DNS/domain has NOT been touched and must not be, without explicit user confirmation each time.**
+
+**Done and verified on the deployed Worker** (`https://bodystrands-website.bodystrands-website.workers.dev`):
+- Full build/deploy pipeline works (R2 incremental cache, `.assetsignore` for oversized video assets, `experimental: { cpus: 2 }` to cap build parallelism)
+- Stripe SDK fixed for Workers runtime — added `httpClient: Stripe.createFetchHttpClient()` to all 7 init sites (6 API routes + checkout route); this was the root cause of checkout hanging/timing out
+- Checkout flow confirmed working live (tested twice with real products)
+- Stripe webhook confirmed working live (signature verification, line-items lookup, Resend email send all succeed — tested with a signed test event)
+- Fixed 4 admin-notification emails that were hardcoded to the personal gmail — now correctly send to `info@bodystrands.com` (see "Admin Notification Emails" section below)
+
+**Still untested** (per explicit user instruction: don't consider migration verified, and don't discuss DNS cutover, until ALL of this is confirmed working):
+- Admin panel UI (dashboard, product editor, image upload)
+- Review submission flow
+- Contact form
+- Newsletter signup
+- `proxy.ts` Node.js middleware behavior — Cloudflare/OpenNext flags this as experimental/not officially supported for this adapter, worth extra scrutiny
+
+**Known flaky-but-harmless build issues** (root-caused, not real bugs — just retry):
+- Transient `ETIMEDOUT` during the "Bundling cache assets" step of `opennextjs-cloudflare build` — happens intermittently, resolved by re-running the same `npm run deploy` command
+- Static page generation sometimes logs "took more than 60 seconds, retrying" under system resource contention — self-heals on retry, not a code bug
+- `wrangler deploy`'s cache-population step gets stuck in an infinite retry loop — worked around via a **local-only, not-git-committed** patch to `node_modules/@opennextjs/cloudflare/dist/cli/commands/deploy.js` gating `populateCache` behind a `SKIP_CACHE_POPULATE` env var. Always deploy with `SKIP_CACHE_POPULATE=1 npm run deploy`. If `node_modules` ever gets reinstalled fresh, this patch is lost and must be reapplied (grep the file for `SKIP_CACHE_POPULATE` to check if it's still there).
+
+**Machine resource pressure**: Builds on this Mac have been slow/flaky due to low disk space and CPU contention (internal SSD often near-full). `TMPDIR` is redirected to the external HDD via `~/.zshenv` (`/Volumes/jordan 2tb/Vscode  bodystrandseu/claude-tmp/`) to relieve pressure — keep this in place. Check `df -H /System/Volumes/Data` if the user reports slowness; if free space drops critically low again, pause heavy builds and investigate before continuing.
+
+**CRITICAL — secrets get wiped on every `wrangler deploy`**: `wrangler.jsonc` does not declare a `vars`/secrets block, and any env vars that were ever set only via the Cloudflare dashboard UI get silently dropped the next time `wrangler deploy` runs (a full deploy replaces the worker's whole binding set with exactly what's declared/pushed via CLI). This caused a real outage of the contact form mid-session (Sep 10, 2026) — `RESEND_API_KEY` and friends vanished after a routine redeploy. **After every deploy to this Worker, always verify secrets are present** (`npx wrangler secret list` — should show all ~14 keys from `.env.local` except `NEXT_PUBLIC_*`/`ANTHROPIC_API_KEY`) and if empty/incomplete, restore them:
+```bash
+bash -c '
+set -a && source .env.local && set +a
+for key in NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY STRIPE_SECRET_KEY ADMIN_PASSWORD GITHUB_TOKEN GITHUB_REPO CF_STREAM_TOKEN CF_ACCOUNT_ID CF_CUSTOMER_SUBDOMAIN RESEND_API_KEY STRIPE_WEBHOOK_SECRET REVIEW_TOKEN_SECRET POSTIZ_API_KEY RESEND_NEWSLETTER_SEGMENT_ID RESEND_CUSTOMER_SEGMENT_ID RESEND_FROM_EMAIL; do
+  val="${!key}"
+  [ -n "$val" ] && printf "%s" "$val" | npx wrangler secret put "$key"
+done
+'
+```
+(Note: `${!key}` indirect expansion requires real `bash`, not `sh`/`dash` — the Bash tool's default shell can silently be the wrong one, always wrap in `bash -c '...'` for this.)
+
+**Resend sandbox-sender restriction**: `onboarding@resend.dev` (Resend's shared test sender, no domain verification needed) can only send TO the Resend account's own registered/verified email — it 403s on any other recipient. `bodystrands.com` is a verified sending domain on this account, so every outgoing email in this app must use `from: "... <info@bodystrands.com>"` (or `process.env.RESEND_FROM_EMAIL`), never `onboarding@resend.dev`, or it'll break the moment the `to` address isn't the account owner's inbox. Fixed in `app/(site)/api/contact/route.ts` Sep 10, 2026 — grep the codebase for `resend.dev` if this ever resurfaces.
+
 ## Brand
 - Site: bodystrands.com — handmade body jewelry, made in Portugal by El & Gio
 - Brand name is ONE word: **Bodystrands** (never "Body Strands")
@@ -416,3 +454,9 @@ The no-repeat rules above have been violated multiple times (Jul 12, Jul 13, and
 - `scripts/check-social-duplicates.mjs` — scans the **full** upcoming Postiz queue (60 days out, not just the next few days) for same-product-in-a-row posts on IG/FB and repeated content on Pinterest. Run it with `POSTIZ_API_KEY=... node scripts/check-social-duplicates.mjs` after scheduling ANY new batch, before telling the user it's done. Exits non-zero if anything is found.
 - `.github/workflows/social-duplicate-check.yml` — runs this script daily (06:00 UTC) and opens a GitHub issue if violations are found, so this is caught automatically even if no one runs it manually.
 - If the checker finds violations: delete the repeat posts (state=QUEUE only, never touch PUBLISHED — see the hard rule above) and replace with different products, picked to avoid anything used within ~3 days of the fix window on that platform.
+
+## Admin Notification Emails — confirmed Sep 10, 2026
+All internal/owner notification emails (new order, new newsletter subscriber, new contact form message, new review awaiting approval) must send `to: "info@bodystrands.com"` — NOT the personal `storenavaria@gmail.com` address. Fixed across: `app/(site)/api/webhooks/stripe/route.ts` (owner order notification), `app/(site)/api/newsletter/route.ts`, `app/(site)/api/contact/route.ts`, `app/(site)/api/reviews/submit/route.ts`. (`lib/github.ts`'s `storenavaria@gmail.com` fallback is the git committer identity for admin-panel commits, unrelated — leave that one alone.)
+
+## Cloudflare Billing Alert — confirmed Sep 9, 2026
+User wants to be proactively alerted (not just told if they ask) as soon as Cloudflare Workers Paid usage-based overage reaches $10/month (total bill approaching ~$15 for that cycle: $5 base + $10 overage). Verbatim: "I do not want surprises." Check current Cloudflare usage against this threshold whenever working in this project during/after the Cloudflare migration, and flag it unprompted if crossed. Also recommend the user set up Cloudflare's own native dashboard billing/usage alert for this same threshold — that's the only truly durable mechanism, since Claude session-based reminders (cron) are session-scoped and expire after 7 days.

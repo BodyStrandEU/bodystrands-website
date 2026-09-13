@@ -4,7 +4,10 @@ import { NextRequest, NextResponse } from "next/server";
 import Stripe from "stripe";
 import { isValidToken, COOKIE_NAME } from "@/lib/auth";
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY ?? "");
+// Explicit fetch-based HTTP client — required for Stripe's SDK under the Cloudflare Workers runtime.
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY ?? "", {
+  httpClient: Stripe.createFetchHttpClient(),
+});
 
 function checkAuth(request: NextRequest): boolean {
   const token = request.cookies.get(COOKIE_NAME)?.value;

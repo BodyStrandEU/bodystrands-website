@@ -7,7 +7,10 @@ import { isValidToken, COOKIE_NAME } from "@/lib/auth";
 import { buildTrackingUrl, carrierLabel } from "@/lib/tracking";
 import { getShippingRate } from "@/lib/shipping";
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!);
+// Explicit fetch-based HTTP client — required for Stripe's SDK under the Cloudflare Workers runtime.
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
+  httpClient: Stripe.createFetchHttpClient(),
+});
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 function checkAuth(req: NextRequest) {

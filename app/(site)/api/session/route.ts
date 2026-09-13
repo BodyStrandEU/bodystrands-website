@@ -2,7 +2,10 @@ import { NextRequest, NextResponse } from "next/server";
 import Stripe from "stripe";
 import { getShippingRate } from "@/lib/shipping";
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!);
+// Explicit fetch-based HTTP client — required for Stripe's SDK under the Cloudflare Workers runtime.
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
+  httpClient: Stripe.createFetchHttpClient(),
+});
 
 // Conservative (upper-bound) delivery estimate for the Google Customer Reviews opt-in —
 // same "state the realistic worst case, not the optimistic best case" approach used

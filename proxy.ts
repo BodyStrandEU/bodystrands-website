@@ -28,10 +28,11 @@ export function proxy(request: NextRequest) {
     return NextResponse.next();
   }
 
-  // Detect shopper's local currency from Vercel's geo-IP header, once per browser
+  // Detect shopper's local currency from the edge's geo-IP header, once per browser.
+  // Vercel sends this as x-vercel-ip-country; Cloudflare's equivalent is cf-ipcountry.
   const response = NextResponse.next();
   if (!request.cookies.get(CURRENCY_COOKIE)) {
-    const country  = request.headers.get("x-vercel-ip-country") ?? "";
+    const country  = request.headers.get("cf-ipcountry") ?? request.headers.get("x-vercel-ip-country") ?? "";
     const currency = currencyForCountry(country);
     response.cookies.set(CURRENCY_COOKIE, currency, { path: "/", maxAge: 60 * 60 * 24 * 30 });
   }

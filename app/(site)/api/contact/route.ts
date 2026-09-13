@@ -38,8 +38,8 @@ export async function POST(request: NextRequest) {
   const safeMessage = escapeHtml(message);
 
   const { error } = await resend.emails.send({
-    from: "Bodystrands Contact <onboarding@resend.dev>",
-    to:   "storenavaria@gmail.com",
+    from: "Bodystrands Contact <info@bodystrands.com>",
+    to:   "info@bodystrands.com",
     replyTo: email,
     subject: `New message from ${safeName}`,
     html: `

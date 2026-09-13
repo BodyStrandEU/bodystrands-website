@@ -11507,10 +11507,18 @@
         "value": "Yes"
       }
     ],
-    "images": [],
-    "gallery": [],
+    "images": [
+      "/images/products/41ec5af2-be6f-4f29-8a6c-6645f2da30c3.png"
+    ],
+    "gallery": [
+      "/images/products/41ec5af2-be6f-4f29-8a6c-6645f2da30c3.png",
+      "/images/products/d0d59134-7b3a-49c4-b6a9-031bbd4b8293.png",
+      "/images/products/7a31c166-0782-4b93-a8ab-6b683bc3824c.png",
+      "/images/products/5c6f726d-2f27-4d36-b7ef-acf2909249de.png"
+    ],
     "featured": false,
-    "active": false,
-    "dateAdded": "2026-09-13T14:58:56.241Z"
+    "active": true,
+    "dateAdded": "2026-09-13T14:58:56.241Z",
+    "sizeGuideImage": "/images/products/5c6f726d-2f27-4d36-b7ef-acf2909249de.png"
   }
 ]

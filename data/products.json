@@ -11396,5 +11396,62 @@
       "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/20aadde57b9911284d1aaed63997041e/downloads/default.mp4"
     },
     "sizeGuideImage": "/images/products/901f6258-21fa-4d42-93c0-dfcda4f3eac1.png"
+  },
+  {
+    "id": "star-pendant-rhinestone-choker",
+    "name": "Star Pendant Rhinestone Choker",
+    "price": 29,
+    "currency": "EUR",
+    "category": "Necklaces",
+    "description": "A little sparkle that doesn't try too hard. A single 11mm rhinestone star charm hangs from a delicate gold mirror-link chain, sitting right at the collarbone — playful, a little festive, and easy to wear all season long, from holiday parties straight through the new year.",
+    "fullDescription": "Handmade from stainless steel, it's built to wear every day without fading, tarnishing, or giving you grief.\n\nSize: Chain 35cm + 6cm extender\n\nNeed a different size? Message us after your purchase and we'll adjust the size for you!\n\nCare Instructions: Wipe gently with a soft cloth after each wear. Store in an airtight container when not in use.\n\nShipping: Dispatches within 1–2 business days.\n\nPlease note that as each piece is handcrafted, no two pieces are identical and slight variations may occur.",
+    "specs": [
+      {
+        "label": "Materials",
+        "value": "Stainless steel"
+      },
+      {
+        "label": "Finish",
+        "value": "Gold tone"
+      },
+      {
+        "label": "Pendant",
+        "value": "11mm rhinestone star charm"
+      },
+      {
+        "label": "Size",
+        "value": "Chain 35cm + 6cm extender"
+      },
+      {
+        "label": "Waterproof",
+        "value": "Yes"
+      },
+      {
+        "label": "Tarnish-resistant",
+        "value": "Yes"
+      }
+    ],
+    "variantGroups": [
+      {
+        "label": "Rhinestone Color",
+        "type": "options",
+        "options": [
+          "Red",
+          "Green",
+          "White"
+        ]
+      }
+    ],
+    "variants": [
+      "Red",
+      "Green",
+      "White"
+    ],
+    "images": [],
+    "gallery": [],
+    "featured": false,
+    "active": false,
+    "christmas": true,
+    "dateAdded": "2026-09-13T13:44:11.838Z"
   }
 ]

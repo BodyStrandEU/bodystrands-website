@@ -87,6 +87,7 @@ export default function Navbar() {
   ];
 
   const pages = [
+    { href: "/christmas", label: "Christmas" },
     { href: "/plus-size", label: "Plus Size" },
     { href: "/blog", label: "Journal" },
     { href: "/about", label: "About" },

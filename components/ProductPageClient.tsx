@@ -257,6 +257,16 @@ export default function ProductPageClient({ product }: { product: Product }) {
 
         <div className="h-px bg-[#E8B4A8]/40" />
 
+        {/* Size guide for fixed-size products (no selectable Size variantGroup to attach
+            the button to) — e.g. a necklace with one fixed chain length. Products that DO
+            have a "Size" variantGroup get the button attached to that selector instead,
+            below, so it isn't shown twice. */}
+        {product.sizeGuideImage && !product.variantGroups?.some((g) => (g.label ?? "").toLowerCase().includes("size")) && (
+          <div className="flex justify-end">
+            <SizeGuideButton image={product.sizeGuideImage} />
+          </div>
+        )}
+
         {/* Finish selector — hidden when a variantGroup already covers the same options */}
         {product.variants && product.variants.length > 1 && !finishGroup && (
           <div>

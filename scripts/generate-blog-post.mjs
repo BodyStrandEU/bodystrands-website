@@ -281,6 +281,44 @@ function pickTopic(existingPosts, exclude = new Set(), now = new Date()) {
   return pool[Math.floor(Math.random() * pool.length)];
 }
 
+// Catches near-duplicate titles that the topic-tracking in pickTopic() can't
+// (either two different topics converging on similar LLM phrasing, or the
+// ~68 legacy posts that predate topic-tracking entirely and carry no `topic`
+// field to exclude against). Jaccard word-overlap after stripping common
+// template words ("jewelry", "gift", "actually", "wear", etc.) that make
+// genuinely different topics look similar by sharing boilerplate phrasing —
+// see the Sep 2026 cleanup that found 57 real duplicates hiding this way.
+const TITLE_SIMILARITY_STOPWORDS = new Set([
+  "that", "with", "your", "from", "this", "have", "what", "actually", "feel",
+  "gifts", "gift", "jewelry", "wear", "wearing", "every", "day", "she", "shell",
+  "the", "for", "and", "best", "real", "style", "styling", "guide", "body",
+  "chain", "chains",
+]);
+
+function titleWords(title) {
+  return new Set(
+    title
+      .toLowerCase()
+      .replace(/[^a-z0-9\s]/g, "")
+      .split(/\s+/)
+      .filter((w) => w.length > 2 && !TITLE_SIMILARITY_STOPWORDS.has(w))
+  );
+}
+
+function findSimilarTitle(candidateTitle, existingPosts, threshold = 0.55) {
+  const candidate = titleWords(candidateTitle);
+  if (candidate.size === 0) return null;
+  for (const post of existingPosts) {
+    const other = titleWords(post.title);
+    if (other.size === 0) continue;
+    const intersection = [...candidate].filter((w) => other.has(w)).length;
+    if (intersection < 2) continue;
+    const union = new Set([...candidate, ...other]).size;
+    if (intersection / union >= threshold) return post.title;
+  }
+  return null;
+}
+
 function slugify(title) {
   return title
     .toLowerCase()
@@ -393,6 +431,12 @@ Rules:
 
   if (posts.find((p) => p.slug === slug)) {
     console.log(`Slug "${slug}" already exists — will retry with a different topic.`);
+    return null;
+  }
+
+  const similarTitle = findSimilarTitle(parsed.title, posts);
+  if (similarTitle) {
+    console.log(`Title "${parsed.title}" is too similar to existing post "${similarTitle}" — will retry with a different topic.`);
     return null;
   }
 

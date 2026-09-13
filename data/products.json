@@ -11314,5 +11314,69 @@
       "/images/products/c292115a-833c-4e85-adcc-3d6b6daa6969.png"
     ],
     "sizeGuideImage": "/images/products/ba069f13-aaca-45e4-8e51-900c3b6ad8e3.png"
+  },
+  {
+    "id": "layered-body-chain-double-choker",
+    "name": "Layered Double Choker Body Chain",
+    "price": 50,
+    "currency": "EUR",
+    "category": "Body Chains",
+    "description": "Wear it over a bikini at the beach, or layer it over a top or dress the rest of the year — this dainty body chain works either way. I handcraft it with a double-layer choker at the neck that drops down into a layered waist chain, so it reads as a necklace and a belly chain in one piece, with real depth instead of a single flat strand.",
+    "fullDescription": "Made from waterproof, anti-tarnish gold-tone or silver-tone stainless steel — swim in it, wear it out, no tarnishing, no fuss.\n\nSizing Guide\nNeck: Fixed size, 38cm + 8cm extension\nWaist: Fixed size + extension — size varies by extension length:\nS — +10cm extension\nM — +14cm extension\nL — +18cm extension\nXL — +23cm extension\n\nFit Note: The neck chain fits most necks as-is. For the waist, measure where you would like it to sit and pick the closest size — the extension is what adjusts the fit.\n\nCustom Sizing: Need a specific measurement? Message me after ordering and I will make it to your exact size at no extra cost.\n\nCare Instructions: Wipe gently with a soft cloth after each wear. Store in an airtight container when not in use.\n\nShipping: Dispatches within 1–2 business days.\n\nPlease note that as each piece is handcrafted, no two pieces are identical and slight variations may occur.",
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Waterproof and anti-tarnish gold-tone or silver-tone stainless steel, 2mm mirror link chain"
+      },
+      {
+        "label": "Colors",
+        "value": "Gold, Silver"
+      },
+      {
+        "label": "Closure",
+        "value": "Lobster clasp + extension chain, both at the neck and the waist"
+      },
+      {
+        "label": "Waterproof & Sweat-Proof",
+        "value": "Yes — safe for water, sun, and everyday wear"
+      },
+      {
+        "label": "Care",
+        "value": "Wipe gently with a soft cloth after each wear. Store in an airtight container when not in use."
+      },
+      {
+        "label": "Shipping",
+        "value": "Dispatches within 1–2 business days"
+      }
+    ],
+    "variantGroups": [
+      {
+        "label": "Finish",
+        "type": "options",
+        "options": [
+          "Gold Tone",
+          "Silver Tone"
+        ]
+      },
+      {
+        "label": "Waist Size",
+        "type": "options",
+        "options": [
+          "S — +10cm extension",
+          "M — +14cm extension",
+          "L — +18cm extension",
+          "XL — +23cm extension"
+        ]
+      }
+    ],
+    "variants": [
+      "Gold Tone",
+      "Silver Tone"
+    ],
+    "images": [],
+    "gallery": [],
+    "featured": false,
+    "active": false,
+    "dateAdded": "2026-09-13T08:51:32-04:00"
   }
 ]

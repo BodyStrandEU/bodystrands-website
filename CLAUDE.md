@@ -371,10 +371,11 @@ The Anthropic API key is NOT in .env.local — ask the user to paste it (or crea
 - TikTok: `cmqlbc5bg0em0mm0ysygo2yvi` — **SUSPENDED, do not schedule until user confirms appeal resolved**
 
 ### Daily volume (maximized without flooding)
-- **Instagram**: 2 posts/day — 10:00 UTC + 15:00 UTC
-- **Facebook**: 2 posts/day — 10:00 UTC + 15:00 UTC
+- **Instagram**: 1 post/day (lowered from 2 on Sep 13, 2026, per user request)
+- **Facebook**: 1 post/day (lowered from 2 on Sep 13, 2026, per user request — kept symmetric with Instagram)
 - **Pinterest**: 5 pins/day (lowered from 15 on Jul 24, 2026, per user request) — spread across the day, e.g. 08:00, 10:00, 12:00, 14:00, 16:00
-- **Total**: 9 posts/day, ~63/week
+- **Total**: 7 posts/day, ~49/week
+- **Backlog note:** posts already scheduled before Sep 13, 2026 under the old 2/day IG+FB rule were left as-is (Postiz can't recover an existing post's image to safely reshuffle it — see the known limitation below) — the 1/day rule applies only to newly-scheduled posts from that date forward. Check the live queue before assuming any given day is already at 1/day.
 
 ### Platform settings
 - IG: `{"post_type":"post"}`
@@ -394,8 +395,8 @@ The Anthropic API key is NOT in .env.local — ask the user to paste it (or crea
 
 ### New product rule — REVISED Jul 2026, supersedes the old "3-day solo priority window"
 **Never cluster the same product together — always mix products within the same day.** User feedback (verbatim): "I feel like my viewers are getting annoyed by seeing the same product several times a day like it's gotta be mixed up... I'm not asking you to change the amount of posting per day, I'm not asking you to change the platform rules. The only thing I'm telling you is the mix and match all the products."
-- IG + FB: still 2 posts/day, but **the two daily slots must feature two different products** — never both slots the same day for one new launch.
-- When adding a new product's launch posts, interleave with 2-3 other real catalog products (pull their actual images from `products.json`) across the new days so each day reads as a mix, not a dedicated block for the new item.
+- IG + FB: now 1 post/day each (see Daily volume above) — **never schedule the same product on consecutive days**, since there's only one slot to work with.
+- When adding a new product's launch posts, interleave with 2-3 other real catalog products (pull their actual images from `products.json`) across the new days so the rotation reads as a mix, not a dedicated block for the new item.
 - Pinterest: spread a new product's pins across multiple different days (2-3/day) mixed with other products' pins that same day — never dump all of a product's pins into one single day/burst.
 - **Known limitation:** Postiz's public API (`posts:list`) does not return the media/images attached to an already-scheduled post — only `id`, `content`, `publishDate`, `state`, `integration`. There is no "get single post" or "update date" endpoint, only create/delete. This means the *already-scheduled* backlog cannot be safely reshuffled after the fact (no way to recover what image a past post used without guessing). Apply the mixing rule going forward on every new addition instead of retroactively — don't attempt a full historical reshuffle without flagging this constraint to the user first.
 

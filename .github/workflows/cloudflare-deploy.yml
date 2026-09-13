@@ -31,6 +31,13 @@ jobs:
           # Publishable (not secret) key — safe to expose client-side by design, needed
           # at build time because Next.js inlines NEXT_PUBLIC_* vars into the JS bundle.
           NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY: pk_live_51TgUlv9M6IuufpzLNhYwOIFTCsJb4fyja2kY4smsWq8JtKjnPcao2vclvCfWDNYyRfmpFBKkNPEnq6NGq15HFssH00DFFX1OcU
+          # These are genuinely server-only secrets (already set as Worker secrets for
+          # runtime use), but `next build` still imports every route module to collect
+          # page metadata — and the Resend/Stripe SDKs both throw immediately if their
+          # constructor gets an undefined key, so the build itself needs *some* value
+          # present even though it never executes these routes.
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          STRIPE_SECRET_KEY: ${{ secrets.STRIPE_SECRET_KEY }}
           SKIP_CACHE_POPULATE: "1"
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: fb66e07a3042ed9c075af09c3e823f67

@@ -11476,5 +11476,41 @@
       "White": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/83d7521be17e70da9381e530c8e1c67b/downloads/default.mp4"
     },
     "sizeGuideImage": "/images/products/2c9187ac-70ac-4c52-b041-451f4135cbeb.png"
+  },
+  {
+    "id": "turquoise-beaded-cable-chain-necklace",
+    "name": "Turquoise Beaded Cable Chain Necklace",
+    "price": 25,
+    "currency": "EUR",
+    "category": "Necklaces",
+    "description": "One dainty gold chain with turquoise enamel beads woven through a stainless steel cable link chain. Sweet, effortless, and a little unexpected. Wear it to the beach, a wedding, or just because. It works every time.",
+    "fullDescription": "Handmade from stainless steel with a tarnish-resistant gold finish — built for everyday wear, water included.\n\nSize: Chain 35cm + 6cm extender\n\nNeed a different size? Once you've placed your order, send us a message with your preferred length and we'll tailor it for you at no extra cost.\n\nCare Instructions: Wipe gently with a soft cloth after each wear. Store in an airtight container when not in use.\n\nShipping: Dispatches within 1–2 business days.\n\nPlease note that as each piece is handcrafted, no two pieces are identical and slight variations may occur.",
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Stainless steel"
+      },
+      {
+        "label": "Finish",
+        "value": "Gold tone"
+      },
+      {
+        "label": "Size",
+        "value": "Chain 35cm + 6cm extender"
+      },
+      {
+        "label": "Waterproof",
+        "value": "Yes"
+      },
+      {
+        "label": "Tarnish-resistant",
+        "value": "Yes"
+      }
+    ],
+    "images": [],
+    "gallery": [],
+    "featured": false,
+    "active": false,
+    "dateAdded": "2026-09-13T14:58:56.241Z"
   }
 ]

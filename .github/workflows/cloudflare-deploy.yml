@@ -1,0 +1,37 @@
+name: Deploy to Cloudflare Workers
+
+on:
+  push:
+    branches:
+      - main
+
+# Same reasoning as deploy.yml (Vercel): admin-panel saves and blog posts can push in quick
+# succession, and overlapping `wrangler deploy` runs against the same Worker step on each
+# other. A new push cancels whatever deploy is still in flight.
+concurrency:
+  group: cloudflare-production-deploy
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Deploy to Cloudflare Workers
+        env:
+          # Publishable (not secret) key — safe to expose client-side by design, needed
+          # at build time because Next.js inlines NEXT_PUBLIC_* vars into the JS bundle.
+          NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY: pk_live_51TgUlv9M6IuufpzLNhYwOIFTCsJb4fyja2kY4smsWq8JtKjnPcao2vclvCfWDNYyRfmpFBKkNPEnq6NGq15HFssH00DFFX1OcU
+          SKIP_CACHE_POPULATE: "1"
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: fb66e07a3042ed9c075af09c3e823f67
+        run: npm run deploy

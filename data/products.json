@@ -11520,5 +11520,80 @@
     "active": true,
     "dateAdded": "2026-09-13T14:58:56.241Z",
     "sizeGuideImage": "/images/products/5c6f726d-2f27-4d36-b7ef-acf2909249de.png"
+  },
+  {
+    "id": "initial-letter-rhinestone-choker",
+    "name": "Diamond Initial Necklace Gold Letter Choker Rhinestone Alphabet Pendant Personalized Layered Name Necklace for Women Stainless Steel Gifts",
+    "price": 30,
+    "currency": "EUR",
+    "category": "Necklaces",
+    "description": "A personalized rhinestone initial charm layered over a dainty gold mirror-link chain — simple, sentimental, and unmistakably yours.",
+    "fullDescription": "This necklace is for the girl who likes her jewelry a little personal. A dainty gold mirror-link chain layers over a cable chain holding your initial in sparkling rhinestones — simple, sentimental, and unmistakably yours. Handmade from stainless steel, it's built to wear every day without fading, tarnishing, or giving you grief.\n\nMaterials: Stainless steel\nFinish: Gold tone\nPendant: Rhinestone initial letter charm — choose your letter, A to Z\nSize: Chain 35cm + 6cm extender\nWaterproof: Yes\nTarnish-resistant: Yes\n\nCare Instructions\nWipe gently with a soft cloth after each wear.\nStore in an airtight container when not in use.\n\nShipping: Dispatches within 1–2 business days.\n\nPlease note that as each piece is handcrafted, no two pieces are identical and slight variations may occur.",
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Stainless steel"
+      },
+      {
+        "label": "Finish",
+        "value": "Gold tone"
+      },
+      {
+        "label": "Pendant",
+        "value": "Rhinestone initial letter charm (A–Z)"
+      },
+      {
+        "label": "Size",
+        "value": "Chain 35cm + 6cm extender"
+      },
+      {
+        "label": "Waterproof",
+        "value": "Yes"
+      },
+      {
+        "label": "Tarnish-Resistant",
+        "value": "Yes"
+      }
+    ],
+    "variantGroups": [
+      {
+        "label": "Letter",
+        "type": "options",
+        "options": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F",
+          "G",
+          "H",
+          "I",
+          "J",
+          "K",
+          "L",
+          "M",
+          "N",
+          "O",
+          "P",
+          "Q",
+          "R",
+          "S",
+          "T",
+          "U",
+          "V",
+          "W",
+          "X",
+          "Y",
+          "Z"
+        ]
+      }
+    ],
+    "images": [],
+    "gallery": [],
+    "featured": false,
+    "active": false,
+    "altText": "Personalized gold initial necklace with rhinestone letter charm, layered mirror-link and cable chain choker, stainless steel alphabet pendant necklace",
+    "dateAdded": "2026-09-14T13:35:00-04:00"
   }
 ]

@@ -11523,7 +11523,7 @@
   },
   {
     "id": "initial-letter-rhinestone-choker",
-    "name": "Diamond Initial Necklace Gold Letter Choker Rhinestone Alphabet Pendant Personalized Layered Name Necklace for Women Stainless Steel Gifts",
+    "name": "Diamond Initial Necklace ",
     "price": 30,
     "currency": "EUR",
     "category": "Necklaces",
@@ -11589,11 +11589,25 @@
         ]
       }
     ],
-    "images": [],
-    "gallery": [],
+    "images": [
+      "/images/products/0e84cd44-c1be-45e5-826e-ad5d9021bf69.png"
+    ],
+    "gallery": [
+      "/images/products/0e84cd44-c1be-45e5-826e-ad5d9021bf69.png",
+      "/images/products/a2fb0528-56ac-4720-8bfe-5452cab23df4.png",
+      "/images/products/ee08496c-de0c-4e6f-a6a6-1c31a9ead9af.png",
+      "/images/products/53165426-64d8-4bb3-b7a6-f685893d381f.png",
+      "/images/products/2ba8ecb3-c756-42a5-9545-76bc67926144-copy-2.png",
+      "/images/products/b90bf192-e71e-4da4-b360-ce6bdcefcc11.png"
+    ],
     "featured": false,
-    "active": false,
+    "active": true,
     "altText": "Personalized gold initial necklace with rhinestone letter charm, layered mirror-link and cable chain choker, stainless steel alphabet pendant necklace",
-    "dateAdded": "2026-09-14T13:35:00-04:00"
+    "dateAdded": "2026-09-14T13:35:00-04:00",
+    "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/80730744eb4857ab0a3520b0a32f179e/downloads/default.mp4",
+    "giftTags": [
+      "personalized"
+    ],
+    "sizeGuideImage": "/images/products/b90bf192-e71e-4da4-b360-ce6bdcefcc11.png"
   }
 ]

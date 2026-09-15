@@ -11609,5 +11609,38 @@
       "personalized"
     ],
     "sizeGuideImage": "/images/products/b90bf192-e71e-4da4-b360-ce6bdcefcc11.png"
+  },
+  {
+    "id": "christmas-snowflake-necklace",
+    "name": "Christmas Snowflake Necklace",
+    "price": 30,
+    "currency": "EUR",
+    "category": "Necklaces",
+    "description": "A small gold snowflake pendant on a dainty mirror-link chain. Simple, wintery, and easy to wear well past the holidays.",
+    "fullDescription": "Handmade from stainless steel, it's built to wear every day without fading, tarnishing, or giving you grief.\n\nSize: Chain 35cm + 6cm extender\n\nNeed a different length? Message us after checkout and we'll adjust the size for free!\n\nCare Instructions: Wipe gently with a soft cloth after each wear. Store in an airtight container when not in use.\n\nShipping: Dispatches within 1–2 business days.\n\nPlease note that as each piece is handcrafted, no two pieces are identical and slight variations may occur.",
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Stainless steel necklace, 18k gold plated brass snowflake pendant"
+      },
+      {
+        "label": "Finish",
+        "value": "Gold tone"
+      },
+      {
+        "label": "Pendant",
+        "value": "Rhinestone snowflake charm"
+      },
+      {
+        "label": "Size",
+        "value": "Chain 35cm + 6cm extender"
+      }
+    ],
+    "images": [],
+    "gallery": [],
+    "featured": false,
+    "active": false,
+    "christmas": true,
+    "dateAdded": "2026-09-15T20:16:25.689Z"
   }
 ]

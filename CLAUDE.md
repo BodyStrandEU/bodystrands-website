@@ -87,6 +87,21 @@ All thumbnail prompts must specify **square format, 1:1 aspect ratio**. Etsy thu
 - **Portrait / editorial**: 85mm f/1.4 or 85mm f/1.2
 - **Lifestyle / environmental**: 70–200mm f/2.8 at 135mm (compresses background)
 
+### Infographic-style prompts (sizing/feature diagrams) — APPROVED format, confirmed Sep 13, 2026
+User's exact words on the layout: *"i love how you made this infographic.. the integrated photo in the image looks high end.. incredible.. save that please"* — layout below is locked. **But** the first version's typography and color read off-brand (generic bold serif, flat muted brown, plain black body text) — every prompt must now spell out the exact brand look in words, since the model can't read hex codes or font names directly:
+- Whole image on a soft cream background (`#FDF9F7`-style, warm ivory, not stark white), the product photo bleeding directly into the cream (no hard rectangular photo frame/border — the photo fades/blends into the infographic background at the top)
+- Label callouts are rounded-rectangle cream boxes with a thin warm-gold outline, connected to the exact point on the jewelry via a **dotted line ending in a small solid dot** at the jewelry
+- **Typography**: an elegant, high-contrast, slightly delicate serif with refined thin-and-thick stroke contrast (like Cormorant Garamond or Didot) for all headings/titles — explicitly NOT a generic bold slab serif, NOT Times New Roman, NOT a heavy/blocky serif
+- **Title color**: warm antique gold (like `#A0622A` — a rich warm brownish-gold, not flat muted brown, not orange)
+- **Body/description text color**: warm dark brown-black (like `#2C2220`, a warm near-black), never pure flat black
+- Label box text: warm-gold elegant serif title (e.g. "MIRROR LINK CHAIN"), a thin gold rule underneath, then 2-line warm dark brown description underneath the rule
+- Below the photo: a thin horizontal rule on each side flanking "SIZE GUIDE" in large elegant serif caps (same refined serif, warm gold or warm dark), centered
+- Under that: "LENGTH — X cm base" then "ADJUSTABLE RANGE — X–Y cm with extender", centered, normal weight, warm dark brown-black
+- Bottom row: 3 evenly-spaced hexagon-outline icons in warm gold (hand+heart for Handmade, droplet for Waterproof & Sweat-Proof, sparkle/stars for Stainless Steel or Tarnish-Resistant Gold), each with a bold caps label underneath in warm dark brown-black, thin vertical divider rules between each icon group
+- Always include **"Square format, 1:1 aspect ratio."** — this rule applies to every image type, not just photography prompts
+- For single-chain products, use one label; for layered/multi-component products, use one label per chain/element
+- Always include the Size Guide block with real product measurements
+
 ### Prompt set structure (when asked for a full set)
 Generate 6 prompts minimum:
 1. **Gray background studio** — pure product focus, chin-to-chest crop, 105mm, gray seamless backdrop (always include this one)
@@ -213,6 +228,9 @@ That combination shows TWO video slots in admin. Admin bug is permanently patche
 - Always read the SEO copy file/screenshot to extract: title, price, description, measurements, variant options
 - Use the copy's description verbatim (lightly adapted for tone) — do NOT invent specs or measurements
 - If a Size variant group is listed in the copy, add it as a `variantGroup` (mandatory selector, same as Attachment)
+
+## Images — user handles them, don't block on missing photos (confirmed Sep 14, 2026)
+User's exact words: *"i take care of the images always... just push the listing ill add photos and videos."* When the user gives title/description/price/variants for a new product but no images exist yet (shared folder empty, no files handed over), don't wait — add the full product entry to `data/products.json` immediately with `"images": []`, `"gallery": []`, and `"active": false` (so it doesn't render as a broken/empty listing on the live shop, per the `active !== false` gating in `shop/page.tsx` and `page.tsx`). The user will add the actual photos/videos themselves via the admin panel and flip it active — that's their workflow, not something to prompt them for or wait on.
 
 ## Etsy Description Format — ALWAYS use this structure, no exceptions
 

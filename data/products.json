@@ -11636,11 +11636,22 @@
         "value": "Chain 35cm + 6cm extender"
       }
     ],
-    "images": [],
-    "gallery": [],
+    "images": [
+      "/images/products/af1a1431-0e0f-4459-92ec-7ab80b0ac22f.png"
+    ],
+    "gallery": [
+      "/images/products/af1a1431-0e0f-4459-92ec-7ab80b0ac22f.png",
+      "/images/products/f5cc2b92-3d35-49a5-ba5e-9acfdf130aab.png",
+      "/images/products/b0b1382e-92c9-41cb-bd4f-7584fb3992f1.png",
+      "/images/products/9e116bf1-2feb-4c3c-bf07-d07fdb261c10.png",
+      "/images/products/2ba8ecb3-c756-42a5-9545-76bc67926144-copy-2.png",
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png"
+    ],
     "featured": false,
     "active": false,
     "christmas": true,
-    "dateAdded": "2026-09-15T20:16:25.689Z"
+    "dateAdded": "2026-09-15T20:16:25.689Z",
+    "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/4b080d4a7b8522c8f7464349330c5b32/downloads/default.mp4",
+    "sizeGuideImage": "/images/products/9e116bf1-2feb-4c3c-bf07-d07fdb261c10.png"
   }
 ]

@@ -11648,7 +11648,7 @@
       "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png"
     ],
     "featured": false,
-    "active": false,
+    "active": true,
     "christmas": true,
     "dateAdded": "2026-09-15T20:16:25.689Z",
     "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/4b080d4a7b8522c8f7464349330c5b32/downloads/default.mp4",

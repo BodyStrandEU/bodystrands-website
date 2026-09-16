@@ -1,15 +1,25 @@
 "use client";
-import { useRef, useState } from "react";
+import { useRef, useState, type ReactNode } from "react";
 import Image from "@/components/SmartImage";
 import { createPortal } from "react-dom";
 import { type Review, dedupeReviews } from "@/data/category-reviews";
 import customerReviewsRaw from "@/data/customer-reviews.json";
+import { products } from "@/lib/products";
 
 // Real, verified-purchase reviews approved via /admin/reviews. Committed to this JSON
 // file on approval, so a new one goes live on the next deploy just like any other content edit.
 // This is the ONLY source this component reads from — no seeded/placeholder testimonials.
 const CUSTOMER_REVIEWS = customerReviewsRaw as Record<string, Review[]>;
 const ALL_REAL_REVIEWS: Review[] = Object.values(CUSTOMER_REVIEWS).flat();
+
+// Each review is assigned to exactly one real product it was actually left for (fixed
+// Sep 2026 — previously the same review was copy-pasted across many near-identical
+// products, which is both dishonest and against Google's review-markup guidelines).
+// This maps a review's productId to that product's category, so we can build the
+// "other X in this category" tier without duplicating reviews across products ourselves.
+const CATEGORY_BY_PRODUCT_ID: Record<string, string> = Object.fromEntries(
+  products.map((p) => [p.id, p.category])
+);
 
 // Deterministic "random-looking" order — a stable hash of each review's own content, not
 // Math.random(). Using real randomness here would render a different order on the server
@@ -240,121 +250,137 @@ function ReviewCard({ review, onOpenPhoto }: { review: Review; onOpenPhoto: () =
 
 const INITIAL_VISIBLE = 4;
 
-export default function ProductReviews({ category, productId, className = "" }: { category: string; productId?: string; className?: string }) {
+// One tier's worth of reviews: heading, optional score/breakdown summary (only the
+// "this product" tier gets one — the other two are honest social proof, not this
+// product's own rating), a photo strip, cards, show-more, and its own lightbox.
+function ReviewGroup({
+  heading, reviews, showSummary, emptyState,
+}: {
+  heading: string; reviews: Review[]; showSummary: boolean; emptyState?: ReactNode;
+}) {
   const [showAll, setShowAll] = useState(false);
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
 
-  // This product's own real reviews, most recent first.
-  const own = ALL_REAL_REVIEWS
-    .filter((r) => productId && r.productId === productId)
-    .sort((a, b) => parseDate(b.date) - parseDate(a.date));
-
-  // Everything else in the shop, real only — shown as honest shop-wide social proof
-  // when this specific product has no reviews of its own yet. Never labeled as if
-  // these reviews are about this piece. Deduped: the same real review is stored once
-  // per product it applies to (e.g. one review duplicated across 14 near-identical
-  // anklets), so without this it'd show the same review/photo over and over.
-  const shopWide = dedupeReviews(
-    ALL_REAL_REVIEWS.filter((r) => !(productId && r.productId === productId))
-  ).sort((a, b) => stableShuffleKey(a) - stableShuffleKey(b));
-
-  const hasOwn = own.length > 0;
-  const reviews = hasOwn ? own : shopWide;
-  const heading = hasOwn
-    ? "What customers are saying about this piece"
-    : "Real reviews from our shop";
+  if (reviews.length === 0) {
+    return emptyState ? <div>{emptyState}</div> : null;
+  }
 
   const visibleReviews = showAll ? reviews : reviews.slice(0, INITIAL_VISIBLE);
-  // "Be the first" sits as an extra card in the list (not counted in stats/rating) —
-  // only when this product has no reviews of its own, so the real shop reviews stay
-  // just as prominent as before instead of being pushed aside by an empty state.
-  const visible: (Review | "be-first")[] = hasOwn ? visibleReviews : ["be-first", ...visibleReviews];
-  const avgRating = reviews.length > 0 ? reviews.reduce((s, r) => s + r.rating, 0) / reviews.length : 0;
-
+  const avgRating = reviews.reduce((s, r) => s + r.rating, 0) / reviews.length;
   const breakdown = [5, 4, 3, 2, 1].map((star) => {
     const count = reviews.filter((r) => Math.round(r.rating) === star).length;
-    return { star, pct: reviews.length > 0 ? Math.round((count / reviews.length) * 100) : 0 };
+    return { star, pct: Math.round((count / reviews.length) * 100) };
   });
 
   // Single shared pool of photo reviews — the strip and every inline thumbnail all open
   // the same lightbox instance, just at a different starting index, so prev/next cycles
-  // through every photo review in the current list rather than being scoped to one card.
+  // through every photo review in this tier rather than being scoped to one card.
   const photoReviews = reviews.filter((r) => r.image);
 
   return (
-    <section className={`pt-8 mt-2 border-t border-[#E8B4A8]/40 ${className}`}>
-      <h2 className="font-heading text-xl md:text-2xl font-light text-[#2C2220] mb-4">
-        {reviews.length > 0 ? heading : "Be the first to review this item"}
-      </h2>
+    <div>
+      <h3 className="font-heading text-lg md:text-xl font-light text-[#2C2220] mb-4">{heading}</h3>
 
-      {reviews.length === 0 ? (
-        <BeFirstCard />
-      ) : (
-        <>
-          {/* Summary: score + star breakdown bars */}
-          <div className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-8 mb-6">
-            <div className="flex items-center gap-3 flex-shrink-0">
-              <span className="font-heading text-3xl font-light text-[#2C2220]">{avgRating.toFixed(1)}</span>
-              <div className="flex flex-col gap-1">
-                <Stars rating={Math.round(avgRating)} size={14} />
-                <span className="text-[0.55rem] tracking-[0.1em] uppercase text-[#8C7B6E] whitespace-nowrap">
-                  {reviews.length} review{reviews.length !== 1 ? "s" : ""}
-                </span>
-              </div>
+      {showSummary && (
+        <div className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-8 mb-6">
+          <div className="flex items-center gap-3 flex-shrink-0">
+            <span className="font-heading text-3xl font-light text-[#2C2220]">{avgRating.toFixed(1)}</span>
+            <div className="flex flex-col gap-1">
+              <Stars rating={Math.round(avgRating)} size={14} />
+              <span className="text-[0.55rem] tracking-[0.1em] uppercase text-[#8C7B6E] whitespace-nowrap">
+                {reviews.length} review{reviews.length !== 1 ? "s" : ""}
+              </span>
             </div>
-            <div className="flex flex-col gap-1 w-full sm:max-w-[200px]">
-              {breakdown.map(({ star, pct }) => (
-                <div key={star} className="flex items-center gap-2">
-                  <span className="text-[0.55rem] text-[#8C7B6E] w-2.5 flex-shrink-0">{star}</span>
-                  <div className="flex-1 h-1 bg-[#E8B4A8]/25 rounded-full overflow-hidden">
-                    <div className="h-full bg-[#A0622A] rounded-full" style={{ width: `${pct}%` }} />
-                  </div>
-                  <span className="text-[0.55rem] text-[#8C7B6E] w-6 flex-shrink-0 text-right">{pct}%</span>
+          </div>
+          <div className="flex flex-col gap-1 w-full sm:max-w-[200px]">
+            {breakdown.map(({ star, pct }) => (
+              <div key={star} className="flex items-center gap-2">
+                <span className="text-[0.55rem] text-[#8C7B6E] w-2.5 flex-shrink-0">{star}</span>
+                <div className="flex-1 h-1 bg-[#E8B4A8]/25 rounded-full overflow-hidden">
+                  <div className="h-full bg-[#A0622A] rounded-full" style={{ width: `${pct}%` }} />
                 </div>
-              ))}
-            </div>
+                <span className="text-[0.55rem] text-[#8C7B6E] w-6 flex-shrink-0 text-right">{pct}%</span>
+              </div>
+            ))}
           </div>
-
-          {/* Photo strip */}
-          <PhotoStrip photoReviews={photoReviews} onOpen={setLightboxIndex} />
-
-          {/* List */}
-          <div className="flex flex-col gap-3">
-            {visible.map((review, i) =>
-              review === "be-first" ? (
-                <BeFirstCard key="be-first" />
-              ) : (
-                <ReviewCard
-                  key={i}
-                  review={review}
-                  onOpenPhoto={() => setLightboxIndex(photoReviews.indexOf(review))}
-                />
-              )
-            )}
-          </div>
-
-          {!showAll && reviews.length > INITIAL_VISIBLE && (
-            <button
-              onClick={() => setShowAll(true)}
-              className="mt-4 w-full inline-flex items-center justify-center gap-2 px-6 py-3 border border-[#2C2220]/25 text-[0.58rem] tracking-[0.2em] uppercase text-[#2C2220] hover:bg-[#2C2220] hover:text-[#FDF9F7] transition-colors duration-200"
-            >
-              Show all {reviews.length} reviews
-              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
-              </svg>
-            </button>
-          )}
-
-          {lightboxIndex !== null && (
-            <PhotoReviewLightbox
-              reviews={photoReviews}
-              index={lightboxIndex}
-              onIndexChange={setLightboxIndex}
-              onClose={() => setLightboxIndex(null)}
-            />
-          )}
-        </>
+        </div>
       )}
+
+      <PhotoStrip photoReviews={photoReviews} onOpen={setLightboxIndex} />
+
+      <div className="flex flex-col gap-3">
+        {visibleReviews.map((review, i) => (
+          <ReviewCard
+            key={i}
+            review={review}
+            onOpenPhoto={() => setLightboxIndex(photoReviews.indexOf(review))}
+          />
+        ))}
+      </div>
+
+      {!showAll && reviews.length > INITIAL_VISIBLE && (
+        <button
+          onClick={() => setShowAll(true)}
+          className="mt-4 w-full inline-flex items-center justify-center gap-2 px-6 py-3 border border-[#2C2220]/25 text-[0.58rem] tracking-[0.2em] uppercase text-[#2C2220] hover:bg-[#2C2220] hover:text-[#FDF9F7] transition-colors duration-200"
+        >
+          Show all {reviews.length} reviews
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+          </svg>
+        </button>
+      )}
+
+      {lightboxIndex !== null && (
+        <PhotoReviewLightbox
+          reviews={photoReviews}
+          index={lightboxIndex}
+          onIndexChange={setLightboxIndex}
+          onClose={() => setLightboxIndex(null)}
+        />
+      )}
+    </div>
+  );
+}
+
+export default function ProductReviews({ category, productId, className = "" }: { category: string; productId?: string; className?: string }) {
+  // This product's own real reviews, most recent first. This is the ONLY tier that
+  // ever feeds the page's aggregateRating/Review schema markup (see shop/[id]/page.tsx)
+  // since it's the only one genuinely about this exact product.
+  const own = ALL_REAL_REVIEWS
+    .filter((r) => productId && r.productId === productId)
+    .sort((a, b) => parseDate(b.date) - parseDate(a.date));
+
+  // Other real products in the same category — its own honest tier ("reviews of
+  // other X"), never folded into this product's own rating/schema.
+  const sameCategory = productId
+    ? dedupeReviews(
+        ALL_REAL_REVIEWS.filter(
+          (r) => r.productId !== productId && CATEGORY_BY_PRODUCT_ID[r.productId ?? ""] === category
+        )
+      ).sort((a, b) => stableShuffleKey(a) - stableShuffleKey(b))
+    : [];
+
+  // Every other real review in the shop, outside this product's own category — the
+  // widest tier of social proof. Deduped: the rare still-duplicated review collapses
+  // to one copy so it doesn't repeat in the list.
+  const shopWide = dedupeReviews(
+    ALL_REAL_REVIEWS.filter(
+      (r) => r.productId !== productId && CATEGORY_BY_PRODUCT_ID[r.productId ?? ""] !== category
+    )
+  ).sort((a, b) => stableShuffleKey(a) - stableShuffleKey(b));
+
+  return (
+    <section className={`pt-8 mt-2 border-t border-[#E8B4A8]/40 ${className}`}>
+      <div className="flex flex-col gap-10">
+        <ReviewGroup
+          heading={own.length > 0 ? "What customers are saying about this piece" : "Be the first to review this item"}
+          reviews={own}
+          showSummary
+          emptyState={<BeFirstCard />}
+        />
+        <ReviewGroup heading={`Reviews of other ${category}`} reviews={sameCategory} showSummary={false} />
+        <ReviewGroup heading="More reviews from our shop" reviews={shopWide} showSummary={false} />
+      </div>
     </section>
   );
 }

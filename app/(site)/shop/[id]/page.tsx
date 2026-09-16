@@ -6,30 +6,140 @@ import ProductPageClient from "@/components/ProductPageClient";
 import CompleteTheLook from "@/components/CompleteTheLook";
 import YouMayAlsoLike from "@/components/YouMayAlsoLike";
 import RecentlyViewed from "@/components/RecentlyViewed";
+import { type Review } from "@/data/category-reviews";
+import customerReviewsRaw from "@/data/customer-reviews.json";
 
-// Multiple long-tail, occasion/utility-driven suffixes per category — a stable hash of the
-// product id picks one, so products in the same category don't all share an identical,
-// repetitive suffix (and don't restate a noun the product name already contains).
+const CUSTOMER_REVIEWS = customerReviewsRaw as Record<string, Review[]>;
+const ALL_REAL_REVIEWS: Review[] = Object.values(CUSTOMER_REVIEWS).flat();
+
+// Long-tail, occasion/utility-driven suffixes per category. Each pool has AT LEAST as many
+// distinct phrases as that category has products — this is load-bearing, not decorative:
+// with fewer phrases than products, any hash-based assignment mathematically guarantees
+// repeats (pigeonhole principle), which is exactly what caused every category on the site
+// to have multiple products sharing an identical SEO title suffix (found via audit, Sep 2026).
+// Sharing a suffix means those product pages compete against each other for the same
+// long-tail search phrase instead of each owning a distinct one — keyword cannibalization.
+// See buildSuffixAssignments() below for the zero-collision assignment logic.
+// Mix of two real search styles on purpose: product/occasion phrasing ("belly chain for
+// beach vacations") for people searching the item itself, and plain colloquial gift
+// phrasing ("gift for girlfriend", "christmas present idea") for people searching by
+// recipient/occasion instead of product type — both are genuinely how people type these
+// queries, not just one or the other.
 const CATEGORY_SUFFIXES: Record<string, string[]> = {
-  "Belly Chains":          ["Belly Chain for Beach Days", "Waist Chain for Festival Season", "Belly Chain for Bikini Season", "Waist Jewelry Gift for Her"],
-  "Leg Chains":            ["Leg Chain for Beach Days", "Thigh Chain for Festival Season", "Leg Jewelry for Summer Outfits"],
-  "Back Chains":           ["Back Chain for Backless Dresses", "Back Chain for Wedding Guest Looks", "Back Jewelry for Evening Occasions"],
-  "Body Chains":           ["Body Chain for Festival Outfits", "Body Jewelry for Beach Vacations", "Body Chain for Going Out Looks"],
-  "Shoulder & Arm Chains": ["Shoulder Chain for Summer Dresses", "Arm Chain for Festival Outfits", "Shoulder Jewelry for Prom Night"],
-  "Anklets":               ["Anklet for Beach Vacations", "Ankle Bracelet for Summer Outfits", "Dainty Anklet for Everyday Wear"],
-  "Bracelets":             ["Bracelet Gift for Her", "Stacking Bracelet for Everyday Wear", "Bracelet for Birthday Gifting"],
-  "Necklaces":             ["Necklace for Prom Night", "Necklace for Dress Up Looks", "Choker for Everyday Wear", "Necklace for Wedding Guest Style", "Layered Necklace Gift for Her"],
-  "Hand Chains":           ["Hand Chain for Festival Looks", "Hand Chain for Beach Days", "Hand Jewelry for Wedding Guest Style"],
-  "Head Chains":           ["Head Chain for Bridal Hair Styling", "Hair Chain for Wedding Guest Looks", "Head Jewelry for Festival Season"],
-  "Eyeglasses Chains":     ["Eyeglasses Chain for Everyday Wear", "Glasses Chain as a Stylish Accessory", "Sunglasses Chain for Summer Days"],
-  "Bikini Clip Chains":    ["Bikini Belly Chain for Beach", "Bikini Body Chain for Pool Days", "Bikini Jewelry for Summer Vacation"],
+  "Belly Chains": [
+    "Belly Chain for Beach Vacations", "Waist Chain for Festival Season", "Belly Chain for Bikini Season",
+    "Gift for Beach-Loving Girlfriend", "Belly Chain for Backless Outfits", "Waist Chain for Summer Dresses",
+    "Belly Chain for Crop Top Styling", "Waist Chain for Pool Days", "Belly Chain for Beach Weddings",
+    "Christmas Gift Idea for Her", "Belly Chain for Spring Break", "Waist Chain for Everyday Layering",
+    "Belly Chain for Bachelorette Parties", "Gift for Girlfriend Who Loves the Beach", "Belly Chain for Honeymoon Packing",
+    "Waist Chain for Boho Style", "Birthday Gift Idea for Her", "Waist Jewelry for Date Night",
+    "Belly Chain for Plus Size Curves", "Waist Chain for Minimalist Style", "Belly Chain for Summer Vacation",
+    "Gift for Wife Who Loves the Beach", "Belly Chain for Yoga and Beach Days", "Waist Chain for Layered Looks",
+    "Belly Chain for Vacation Photos", "Vacation Gift Idea for Her",
+  ],
+  "Leg Chains": [
+    "Leg Chain for Beach Days", "Thigh Chain for Festival Season",
+    "Christmas Gift Idea for Her", "Thigh Chain for Beach Vacations",
+  ],
+  "Back Chains": [
+    "Back Chain for Backless Dresses", "Back Chain for Wedding Guest Looks", "Gift for the Bride to Be",
+    "Back Necklace for Bridal Styling", "Back Chain for Prom Night", "Backdrop Necklace for Formal Events",
+    "Back Chain for Open-Back Gowns", "Gift for Bridesmaids", "Back Necklace for Date Night",
+    "Back Chain for Summer Wedding Guests", "Christmas Gift Idea for Her", "Back Jewelry for Cocktail Parties",
+    "Back Chain for Backless Jumpsuits", "Back Necklace for Elegant Evening Wear", "Wedding Guest Gift Idea",
+    "Back Jewelry for Reversible Styling",
+  ],
+  "Body Chains": [
+    "Body Chain for Festival Outfits", "Body Jewelry for Beach Vacations", "Body Chain for Going Out Looks",
+    "Body Chain for Bikini Season", "Gift for Girlfriend Who Loves the Beach", "Body Chain for Summer Nights Out",
+    "Body Jewelry for Plus Size Curves", "Body Chain for Layered Waist Styling", "Bachelorette Party Gift Idea",
+    "Body Chain for Resort Wear", "Body Jewelry for Beach Photoshoots", "Body Chain for Date Night Outfits",
+    "Christmas Gift Idea for Her", "Body Chain for Festival Season", "Body Jewelry for Y2K Style",
+  ],
+  "Shoulder & Arm Chains": [
+    "Shoulder Chain for Summer Dresses", "Arm Chain for Festival Outfits", "Shoulder Jewelry for Prom Night",
+    "Gift for Girlfriend Who Loves Jewelry", "Shoulder Chain for Bridal Styling", "Arm Chain for Beach Vacations",
+    "Shoulder Jewelry for Evening Wear", "Christmas Gift Idea for Her", "Shoulder Chain for Wedding Guest Style",
+    "Arm Jewelry for Statement Outfits", "Shoulder Harness for Festival Season", "Gift for Wife Who Loves Jewelry",
+  ],
+  "Anklets": [
+    "Anklet for Beach Vacations", "Ankle Bracelet for Summer Outfits", "Dainty Anklet for Everyday Wear",
+    "Gift for Beach-Loving Girlfriend", "Ankle Jewelry for Barefoot Sandals", "Anklet Gift for Beach Lovers",
+    "Ankle Bracelet for Festival Season", "Anklet for Poolside Styling", "Christmas Gift Idea for Her",
+    "Anklet for Boho Style", "Gift for Mom Who Loves the Beach", "Anklet for Layered Ankle Stacks",
+    "Ankle Jewelry Gift for Her", "Anklet for Resort Wear", "Birthday Gift Idea for Her",
+    "Anklet for Waterproof Beach Days", "Ankle Jewelry for Birthstone Gifting", "Anklet for Zodiac Lovers",
+    "Gift for Sister Who Loves the Beach",
+  ],
+  "Bracelets": [
+    "Gift for Mom", "Stacking Bracelet for Everyday Wear", "Christmas Present Idea for Her",
+    "Bracelet for Layered Wrist Stacks", "Gift for Girlfriend", "Bracelet for Bridesmaid Gifting",
+    "Chain Bracelet for Minimalist Style", "Gift for Wife", "Bracelet Gift for New Moms",
+    "Charm Bracelet for Everyday Layering", "Gift for Best Friend", "Bracelet for Graduation Gifts",
+    "Chain Bracelet for Festival Style", "Gift for Sister", "Charm Bracelet for Birthstone Gifting",
+    "Mother's Day Gift Idea",
+  ],
+  "Necklaces": [
+    "Necklace for Prom Night", "Gift for Girlfriend", "Choker for Everyday Wear",
+    "Necklace for Wedding Guest Style", "Gift for Mom", "Choker for Festival Outfits",
+    "Necklace for Bridesmaid Gifting", "Christmas Present Idea for Her", "Necklace for Personalized Gifting",
+    "Choker for Boho Style", "Gift for Wife", "Choker for Layered Stacking",
+    "Necklace for Faith-Based Gifting", "Choker for Minimalist Style", "Gift for Best Friend",
+    "Choker for Summer Outfits", "Necklace for Holiday Gifting", "Choker for Statement Styling",
+    "Necklace for Everyday Layering", "Choker for Beach Vacations", "Gift for Sister",
+    "Choker for Backless Dress Pairing", "Necklace for Initial Gifting", "Choker for Pearl Lovers",
+    "Valentine's Day Gift for Girlfriend",
+  ],
+  "Hand Chains": [
+    "Hand Chain for Festival Looks", "Hand Chain for Beach Days", "Gift for Girlfriend",
+    "Hand Chain for Boho Outfits", "Finger Bracelet for Festival Season", "Christmas Present Idea for Her",
+  ],
+  "Head Chains": [
+    "Head Chain for Bridal Hair Styling", "Gift for the Bride to Be", "Head Jewelry for Festival Season",
+    "Forehead Chain for Boho Style", "Hair Vine for Bridal Accessories",
+  ],
+  "Eyeglasses Chains": [
+    "Eyeglasses Chain for Everyday Wear", "Gift for Mom", "Sunglasses Chain for Summer Days",
+    "Eyeglasses Chain for Reading Glasses", "Christmas Present Idea for Mom", "Eyeglasses Chain for Minimalist Style",
+  ],
+  "Bikini Clip Chains": [
+    "Bikini Clip Chain for Beach Days", "Gift for Beach-Loving Girlfriend",
+  ],
+  "Rings": [
+    "Ring for Everyday Stacking", "Gift for Girlfriend", "Christmas Present Idea for Her",
+  ],
 };
 
-function pickSuffix(productId: string, category: string): string {
-  const pool = CATEGORY_SUFFIXES[category] ?? ["Handmade Body Jewelry"];
+// Deterministic, collision-free assignment: for every category, rank its products by a
+// stable hash and assign the pool's phrases in that order — since each pool is sized to
+// at least the category's product count, every product gets a distinct phrase (the `%`
+// is only a safety net if a category ever outgrows its pool before this file is updated).
+function stableHash(s: string): number {
   let hash = 0;
-  for (let i = 0; i < productId.length; i++) hash = (hash * 31 + productId.charCodeAt(i)) >>> 0;
-  return pool[hash % pool.length];
+  for (let i = 0; i < s.length; i++) hash = (hash * 31 + s.charCodeAt(i)) >>> 0;
+  return hash;
+}
+
+function buildSuffixAssignments(): Record<string, string> {
+  const idsByCategory: Record<string, string[]> = {};
+  for (const p of products) {
+    (idsByCategory[p.category] ??= []).push(p.id);
+  }
+  const assignments: Record<string, string> = {};
+  for (const [category, ids] of Object.entries(idsByCategory)) {
+    const pool = CATEGORY_SUFFIXES[category] ?? ["Handmade Body Jewelry"];
+    const ranked = [...ids].sort((a, b) => stableHash(a) - stableHash(b));
+    ranked.forEach((id, i) => {
+      assignments[id] = pool[i % pool.length];
+    });
+  }
+  return assignments;
+}
+
+const SUFFIX_ASSIGNMENTS = buildSuffixAssignments();
+
+function pickSuffix(productId: string): string {
+  return SUFFIX_ASSIGNMENTS[productId] ?? "Handmade Body Jewelry";
 }
 
 // Google truncates SERP snippets around 155-160 chars. The old version appended a fixed
@@ -67,7 +177,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
   const url = `https://www.bodystrands.com/shop/${product.id}`;
   const symbol = product.currency === "EUR" ? "€" : product.currency === "GBP" ? "£" : "$";
   const priceLabel = `${symbol}${product.price.toFixed(2)}`;
-  const suffix = pickSuffix(product.id, product.category);
+  const suffix = pickSuffix(product.id);
   const metaDescription = buildMetaDescription(product.altText, product.description, priceLabel);
 
   return {
@@ -143,6 +253,24 @@ export default async function ProductPage({ params }: { params: Promise<{ id: st
     };
   });
 
+  // Only this product's OWN reviews (exact productId match) ever feed rating/review
+  // schema — never the "other X in this category" or shop-wide tiers shown on the page,
+  // since those aren't genuinely about this product and Google's review-markup
+  // guidelines require the review to be about the specific item being marked up.
+  const ownReviews = ALL_REAL_REVIEWS.filter((r) => r.productId === product.id);
+  const aggregateRating = ownReviews.length > 0 ? {
+    "@type":     "AggregateRating",
+    ratingValue: (ownReviews.reduce((s, r) => s + r.rating, 0) / ownReviews.length).toFixed(1),
+    reviewCount: ownReviews.length,
+  } : undefined;
+  const reviewSchema = ownReviews.map((r) => ({
+    "@type": "Review",
+    author: { "@type": "Person", name: r.name },
+    datePublished: new Date(r.date).toISOString().slice(0, 10),
+    reviewRating: { "@type": "Rating", ratingValue: r.rating, bestRating: 5, worstRating: 1 },
+    reviewBody: r.text,
+  }));
+
   const hasMerchantReturnPolicy = {
     "@type":               "MerchantReturnPolicy",
     applicableCountry:     ALL_COUNTRIES,
@@ -165,9 +293,12 @@ export default async function ProductPage({ params }: { params: Promise<{ id: st
       "@type": "Brand",
       name:    "Bodystrands",
     },
+    category:      product.category,
     ...(product.variants?.length ? {
       color: product.variants.join(", "),
     } : {}),
+    ...(aggregateRating ? { aggregateRating } : {}),
+    ...(reviewSchema.length > 0 ? { review: reviewSchema } : {}),
     offers: {
       "@type":          "Offer",
       url:              `https://www.bodystrands.com/shop/${product.id}`,

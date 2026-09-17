@@ -195,17 +195,16 @@ function BeFirstCard() {
 
 // When a card is shown outside the context of its own product (the "other X from our
 // shop" and "more reviews from our shop" tiers), it needs to say which product it was
-// actually left for — an Etsy-style "Purchased: <product>" link — since otherwise a
+// actually left for — an Etsy-style "Purchased: <product>" label — since otherwise a
 // review with no visible product context reads as if it's about the page you're on.
-function PurchasedLink({ productId }: { productId?: string }) {
+// It's plain text, not its own link: the whole card below is already one big link to
+// that product (Etsy-style), and a link can't be nested inside another link.
+function PurchasedLabel({ productId }: { productId?: string }) {
   const name = productId ? PRODUCT_NAME_BY_ID[productId] : undefined;
   if (!productId || !name) return null;
   return (
     <p className="text-[0.6rem] text-[#8C7B6E] mb-2">
-      Purchased:{" "}
-      <Link href={`/shop/${productId}`} className="underline decoration-[#E8B4A8] hover:text-[#A0622A]">
-        {name}
-      </Link>
+      Purchased: <span className="underline decoration-[#E8B4A8]">{name}</span>
     </p>
   );
 }
@@ -215,8 +214,14 @@ function ReviewCard({
 }: {
   review: Review; onOpenPhoto: () => void; showPurchasedLink?: boolean;
 }) {
-  return (
-    <div className="flex flex-col bg-white border border-[#E8B4A8]/40 p-4 md:p-5">
+  // Whole-card click-through to the product it was left for (Etsy-style), only in the
+  // cross-product tiers — clicking anywhere on the card except the photo thumbnail
+  // navigates there. The photo thumbnail stops propagation so it opens the lightbox
+  // instead of following the card's link.
+  const linkedProductId = showPurchasedLink ? review.productId : undefined;
+
+  const content = (
+    <>
       <div className="flex items-center gap-2.5 mb-3">
         <Avatar name={review.name} />
         <div className="min-w-0">
@@ -232,7 +237,7 @@ function ReviewCard({
         </span>
       </div>
 
-      {showPurchasedLink && <PurchasedLink productId={review.productId} />}
+      {showPurchasedLink && <PurchasedLabel productId={review.productId} />}
 
       <Stars rating={review.rating} />
 
@@ -246,7 +251,7 @@ function ReviewCard({
         </p>
         {review.image && (
           <button
-            onClick={onOpenPhoto}
+            onClick={(e) => { e.preventDefault(); e.stopPropagation(); onOpenPhoto(); }}
             aria-label={`View ${review.name}'s photo`}
             className="relative w-14 h-14 flex-shrink-0 overflow-hidden"
           >
@@ -271,6 +276,23 @@ function ReviewCard({
           </p>
         </div>
       )}
+    </>
+  );
+
+  if (linkedProductId) {
+    return (
+      <Link
+        href={`/shop/${linkedProductId}`}
+        className="flex flex-col bg-white border border-[#E8B4A8]/40 p-4 md:p-5 hover:border-[#A0622A]/50 hover:shadow-sm transition-all"
+      >
+        {content}
+      </Link>
+    );
+  }
+
+  return (
+    <div className="flex flex-col bg-white border border-[#E8B4A8]/40 p-4 md:p-5">
+      {content}
     </div>
   );
 }

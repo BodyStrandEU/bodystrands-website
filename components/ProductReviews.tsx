@@ -378,7 +378,7 @@ export default function ProductReviews({ category, productId, className = "" }: 
           showSummary
           emptyState={<BeFirstCard />}
         />
-        <ReviewGroup heading={`Reviews of other ${category}`} reviews={sameCategory} showSummary={false} />
+        <ReviewGroup heading={`Reviews of other ${category} from our shop`} reviews={sameCategory} showSummary={false} />
         <ReviewGroup heading="More reviews from our shop" reviews={shopWide} showSummary={false} />
       </div>
     </section>

@@ -24,6 +24,9 @@ const CATEGORY_BY_PRODUCT_ID: Record<string, string> = Object.fromEntries(
 const PRODUCT_NAME_BY_ID: Record<string, string> = Object.fromEntries(
   products.map((p) => [p.id, p.name])
 );
+const PRODUCT_IMAGE_BY_ID: Record<string, string | undefined> = Object.fromEntries(
+  products.map((p) => [p.id, p.images?.[0] ?? p.gallery?.[0]])
+);
 
 // Deterministic "random-looking" order — a stable hash of each review's own content, not
 // Math.random(). Using real randomness here would render a different order on the server
@@ -201,11 +204,23 @@ function BeFirstCard() {
 // that product (Etsy-style), and a link can't be nested inside another link.
 function PurchasedLabel({ productId }: { productId?: string }) {
   const name = productId ? PRODUCT_NAME_BY_ID[productId] : undefined;
+  const image = productId ? PRODUCT_IMAGE_BY_ID[productId] : undefined;
   if (!productId || !name) return null;
   return (
-    <p className="text-[0.6rem] text-[#8C7B6E] mb-2">
-      Purchased: <span className="underline decoration-[#E8B4A8]">{name}</span>
-    </p>
+    <div className="flex items-center gap-2 mb-2">
+      {image && (
+        <Image
+          src={image}
+          alt={name}
+          width={34}
+          height={34}
+          className="w-[34px] h-[34px] object-cover rounded-sm border border-[#E8B4A8]/60 flex-shrink-0"
+        />
+      )}
+      <p className="text-[0.6rem] text-[#8C7B6E]">
+        Purchased: <span className="underline decoration-[#E8B4A8]">{name}</span>
+      </p>
+    </div>
   );
 }
 

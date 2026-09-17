@@ -1,5 +1,6 @@
 "use client";
 import { useRef, useState, type ReactNode } from "react";
+import Link from "next/link";
 import Image from "@/components/SmartImage";
 import { createPortal } from "react-dom";
 import { type Review, dedupeReviews } from "@/data/category-reviews";
@@ -19,6 +20,9 @@ const ALL_REAL_REVIEWS: Review[] = Object.values(CUSTOMER_REVIEWS).flat();
 // "other X in this category" tier without duplicating reviews across products ourselves.
 const CATEGORY_BY_PRODUCT_ID: Record<string, string> = Object.fromEntries(
   products.map((p) => [p.id, p.category])
+);
+const PRODUCT_NAME_BY_ID: Record<string, string> = Object.fromEntries(
+  products.map((p) => [p.id, p.name])
 );
 
 // Deterministic "random-looking" order — a stable hash of each review's own content, not
@@ -189,7 +193,28 @@ function BeFirstCard() {
   );
 }
 
-function ReviewCard({ review, onOpenPhoto }: { review: Review; onOpenPhoto: () => void }) {
+// When a card is shown outside the context of its own product (the "other X from our
+// shop" and "more reviews from our shop" tiers), it needs to say which product it was
+// actually left for — an Etsy-style "Purchased: <product>" link — since otherwise a
+// review with no visible product context reads as if it's about the page you're on.
+function PurchasedLink({ productId }: { productId?: string }) {
+  const name = productId ? PRODUCT_NAME_BY_ID[productId] : undefined;
+  if (!productId || !name) return null;
+  return (
+    <p className="text-[0.6rem] text-[#8C7B6E] mb-2">
+      Purchased:{" "}
+      <Link href={`/shop/${productId}`} className="underline decoration-[#E8B4A8] hover:text-[#A0622A]">
+        {name}
+      </Link>
+    </p>
+  );
+}
+
+function ReviewCard({
+  review, onOpenPhoto, showPurchasedLink = false,
+}: {
+  review: Review; onOpenPhoto: () => void; showPurchasedLink?: boolean;
+}) {
   return (
     <div className="flex flex-col bg-white border border-[#E8B4A8]/40 p-4 md:p-5">
       <div className="flex items-center gap-2.5 mb-3">
@@ -206,6 +231,8 @@ function ReviewCard({ review, onOpenPhoto }: { review: Review; onOpenPhoto: () =
           {review.date}
         </span>
       </div>
+
+      {showPurchasedLink && <PurchasedLink productId={review.productId} />}
 
       <Stars rating={review.rating} />
 
@@ -254,9 +281,9 @@ const INITIAL_VISIBLE = 4;
 // "this product" tier gets one — the other two are honest social proof, not this
 // product's own rating), a photo strip, cards, show-more, and its own lightbox.
 function ReviewGroup({
-  heading, reviews, showSummary, emptyState,
+  heading, reviews, showSummary, emptyState, showPurchasedLink = false,
 }: {
-  heading: string; reviews: Review[]; showSummary: boolean; emptyState?: ReactNode;
+  heading: string; reviews: Review[]; showSummary: boolean; emptyState?: ReactNode; showPurchasedLink?: boolean;
 }) {
   const [showAll, setShowAll] = useState(false);
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
@@ -314,6 +341,7 @@ function ReviewGroup({
             key={i}
             review={review}
             onOpenPhoto={() => setLightboxIndex(photoReviews.indexOf(review))}
+            showPurchasedLink={showPurchasedLink}
           />
         ))}
       </div>
@@ -378,8 +406,8 @@ export default function ProductReviews({ category, productId, className = "" }: 
           showSummary
           emptyState={<BeFirstCard />}
         />
-        <ReviewGroup heading={`Reviews of other ${category} from our shop`} reviews={sameCategory} showSummary={false} />
-        <ReviewGroup heading="More reviews from our shop" reviews={shopWide} showSummary={false} />
+        <ReviewGroup heading={`Reviews of other ${category} from our shop`} reviews={sameCategory} showSummary={false} showPurchasedLink />
+        <ReviewGroup heading="More reviews from our shop" reviews={shopWide} showSummary={false} showPurchasedLink />
       </div>
     </section>
   );

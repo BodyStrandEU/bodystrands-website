@@ -1,5 +1,115 @@
 [
   {
+    "slug": "gold-plated-vs-gold-tone-what-actually-lasts-longer",
+    "title": "Gold Plated vs Gold Tone: What Actually Lasts Longer",
+    "excerpt": "One sounds fancier, but they're completely different. Here's what you need to know before buying.",
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "You've probably seen both terms thrown around when shopping for jewelry. Gold plated. Gold tone. They sound similar enough that you might think they're the same thing with different marketing. They're not. Understanding the difference matters because it directly affects how long your jewelry lasts and how it ages."
+      },
+      {
+        "type": "paragraph",
+        "text": "Let's cut through the confusion. We make body jewelry that's meant to be worn every day — in the shower, at the beach, through life. So we've thought a lot about durability. Here's what actually separates these two."
+      },
+      {
+        "type": "heading",
+        "text": "What gold plated actually means"
+      },
+      {
+        "type": "paragraph",
+        "text": "Gold plating is a real process. A thin layer of actual gold is bonded to a base metal underneath — usually stainless steel or brass. That gold layer is typically between 0.5 to 2.5 microns thick. It's real gold sitting on top of something else."
+      },
+      {
+        "type": "paragraph",
+        "text": "The catch? That thin gold layer wears away over time. Friction, sweat, soap, chlorine — they all speed up the process. You might get 6-18 months of regular wear before the plating starts to fade or chip. After that, you're seeing the base metal underneath, and the magic is gone. Gold plating isn't repairable on handmade pieces like ours, so once it wears, it's done."
+      },
+      {
+        "type": "heading",
+        "text": "What gold tone actually is"
+      },
+      {
+        "type": "paragraph",
+        "text": "Gold tone is just stainless steel (or another metal) that's been colored or finished to look gold. No actual gold involved. It's painted on, basically. Think of it like the difference between a gold-painted wall and a wall covered in gold leaf."
+      },
+      {
+        "type": "paragraph",
+        "text": "Here's the real advantage: gold tone doesn't chip or peel the way plating does. The color is part of the metal itself. It can fade or dull slightly over years of wear, but it doesn't suddenly reveal a completely different metal underneath. You get more consistent wear, even if the shine dulls eventually."
+      },
+      {
+        "type": "paragraph",
+        "text": "We work exclusively with high-quality stainless steel that's waterproof and tarnish-resistant. It's built to handle daily life — showers, sweat, salt water, everything. Browse our full <a href=\"/shop\">shop all body jewelry</a> collection and you'll notice we don't do gold plating. We chose durability over that initial gleam."
+      },
+      {
+        "type": "heading",
+        "text": "Which one should you actually choose"
+      },
+      {
+        "type": "paragraph",
+        "text": "If you love the look of gold and want something you can wear constantly without thinking about maintenance, gold tone is the smarter choice. It lasts longer without the heartbreak of watching it peel. If you want actual gold on your skin and don't mind replacing a piece every year or so, gold plating works — just go in knowing the timeline."
+      },
+      {
+        "type": "paragraph",
+        "text": "The pieces we make — like our <a href=\"/shop/birthstone-ring\">Birthstone Ring</a> — are designed to be part of your everyday. You wear them to the beach. You shower in them. You sleep in them. That's why we built them to last without the fuss of gold plating wearing away. Real materials, real durability, no surprises."
+      }
+    ],
+    "faq": [
+      {
+        "question": "Is gold plated jewelry real gold?",
+        "answer": "Yes, the outer layer is real gold, but it's extremely thin (less than 3 microns). The base underneath is a different metal, usually stainless steel or brass. Over time with regular wear, that thin gold layer wears away and exposes the base metal beneath it."
+      },
+      {
+        "question": "How long does gold plated jewelry last?",
+        "answer": "With regular wear, gold plating typically lasts 6-18 months before you start seeing fading or chipping. The timeline depends on how often you wear it, whether you expose it to water and sweat, and the thickness of the plating. Heavy daily wear speeds up the process significantly."
+      },
+      {
+        "question": "Does gold tone jewelry fade?",
+        "answer": "Gold tone can fade or dull slightly over years of heavy wear because the color is a surface finish, not the material itself. However, it won't chip or peel the way plating does — it degrades gradually rather than suddenly revealing a different metal underneath."
+      }
+    ],
+    "date": "2026-09-17",
+    "category": "Care & Quality",
+    "topic": "the real difference between gold plated and gold tone jewelry",
+    "tags": [
+      "gold plated",
+      "gold tone",
+      "jewelry care",
+      "body jewelry durability",
+      "stainless steel"
+    ],
+    "readTime": "4 min read",
+    "featuredProducts": [
+      {
+        "id": "birthstone-ring",
+        "name": "Birthstone Ring",
+        "price": "€19.2",
+        "image": "/images/products/8d3af138-7661-425b-8a98-192313d68502.png",
+        "url": "/shop/birthstone-ring"
+      },
+      {
+        "id": "birthstone-thigh-chain",
+        "name": "Birthstone Thigh Chain",
+        "price": "€28",
+        "image": "/images/products/birthstone-thigh-chain/582329d4-blue-beach.webp",
+        "url": "/shop/birthstone-thigh-chain"
+      },
+      {
+        "id": "bridal-forehead-chain",
+        "name": "Bridal Forehead Chain",
+        "price": "€32",
+        "image": "/images/products/8f4f0279-4cb9-4be4-8a2b-eb00007c22fd.webp",
+        "url": "/shop/bridal-forehead-chain"
+      },
+      {
+        "id": "bridal-shoulder-chain",
+        "name": "Bridal Shoulder Chain",
+        "price": "€28",
+        "image": "/images/products/bridal-shoulder-chain-main.webp",
+        "url": "/shop/bridal-shoulder-chain"
+      }
+    ]
+  },
+  {
     "slug": "how-to-style-head-chains-for-weddings-special-events",
     "title": "How to Style Head Chains for Weddings & Special Events",
     "excerpt": "Head chains are the secret to looking effortlessly elegant. Here's exactly how to wear them right.",

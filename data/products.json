@@ -11395,7 +11395,8 @@
       "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/20aadde57b9911284d1aaed63997041e/downloads/default.mp4",
       "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/20aadde57b9911284d1aaed63997041e/downloads/default.mp4"
     },
-    "sizeGuideImage": "/images/products/901f6258-21fa-4d42-93c0-dfcda4f3eac1.png"
+    "sizeGuideImage": "/images/products/901f6258-21fa-4d42-93c0-dfcda4f3eac1.png",
+    "altText": "Delicate gold-tone stainless steel layered double choker body chain for festival wear and beach outfits"
   },
   {
     "id": "star-pendant-rhinestone-choker",
@@ -11475,7 +11476,8 @@
       "Green": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/83d7521be17e70da9381e530c8e1c67b/downloads/default.mp4",
       "White": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/83d7521be17e70da9381e530c8e1c67b/downloads/default.mp4"
     },
-    "sizeGuideImage": "/images/products/2c9187ac-70ac-4c52-b041-451f4135cbeb.png"
+    "sizeGuideImage": "/images/products/2c9187ac-70ac-4c52-b041-451f4135cbeb.png",
+    "altText": "Delicate gold stainless steel star pendant choker with rhinestone charm for everyday sparkle"
   },
   {
     "id": "turquoise-beaded-cable-chain-necklace",
@@ -11519,7 +11521,8 @@
     "featured": false,
     "active": true,
     "dateAdded": "2026-09-13T14:58:56.241Z",
-    "sizeGuideImage": "/images/products/5c6f726d-2f27-4d36-b7ef-acf2909249de.png"
+    "sizeGuideImage": "/images/products/5c6f726d-2f27-4d36-b7ef-acf2909249de.png",
+    "altText": "Dainty turquoise beaded cable chain necklace in gold stainless steel for everyday wear"
   },
   {
     "id": "initial-letter-rhinestone-choker",
@@ -11652,6 +11655,79 @@
     "christmas": true,
     "dateAdded": "2026-09-15T20:16:25.689Z",
     "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/4b080d4a7b8522c8f7464349330c5b32/downloads/default.mp4",
-    "sizeGuideImage": "/images/products/9e116bf1-2feb-4c3c-bf07-d07fdb261c10.png"
+    "sizeGuideImage": "/images/products/9e116bf1-2feb-4c3c-bf07-d07fdb261c10.png",
+    "altText": "Gold-plated stainless steel dainty Christmas necklace with delicate snowflake pendant for holiday wear"
+  },
+  {
+    "id": "chunky-toggle-cross-necklace",
+    "name": "Chunky Toggle Cross Necklace",
+    "price": 30,
+    "currency": "EUR",
+    "category": "Necklaces",
+    "description": "A bold rolo chain necklace with a cross pendant hanging straight off the front toggle clasp — unisex stainless steel that never fades or tarnishes.",
+    "fullDescription": "A chunky chain with a cross that hangs from the clasp.\n\nThe toggle clasp sits right at the front, with the cross dangling straight off it — a small design detail that makes this one stand out from a typical chain necklace. Unisex, lightweight, and built from stainless steel, so it holds up to daily wear without fading or tarnishing.\n\nPlease note that as each piece is handcrafted, no two pieces are identical and slight variations may occur.",
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Stainless steel"
+      },
+      {
+        "label": "Finish",
+        "value": "Gold tone or Silver tone"
+      },
+      {
+        "label": "Pendant",
+        "value": "Cross charm, 3.5cm x 2cm"
+      },
+      {
+        "label": "Chain",
+        "value": "Bold rolo link, 40cm"
+      },
+      {
+        "label": "Closure",
+        "value": "Front toggle (OT) clasp"
+      },
+      {
+        "label": "Weight",
+        "value": "~10g"
+      },
+      {
+        "label": "Tarnish-resistant",
+        "value": "Yes"
+      },
+      {
+        "label": "Care",
+        "value": "Wipe gently with a soft cloth after each wear. Store in an airtight container when not in use."
+      },
+      {
+        "label": "Shipping",
+        "value": "Dispatches within 1-2 business days"
+      }
+    ],
+    "tags": [
+      "toggle coin necklace",
+      "gold chunky choker",
+      "chokerkette",
+      "gold schmuck damen",
+      "thick rolo chain",
+      "14k rolo chain",
+      "10k ladies chain",
+      "thick gold chain",
+      "rolo belcher chain",
+      "toggle clasp necklace",
+      "chunky silver chain",
+      "silver toggle chain",
+      "elevated basics"
+    ],
+    "images": [],
+    "gallery": [],
+    "variants": [
+      "Gold Tone",
+      "Silver Tone"
+    ],
+    "featured": false,
+    "active": false,
+    "dateAdded": "2026-09-22T00:00:00.000Z",
+    "altText": "Gold tone chunky toggle cross necklace in stainless steel, bold unisex chain necklace design"
   }
 ]

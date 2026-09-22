@@ -88,7 +88,7 @@ const CATEGORY_SUFFIXES: Record<string, string[]> = {
     "Choker for Summer Outfits", "Necklace for Holiday Gifting", "Choker for Statement Styling",
     "Necklace for Everyday Layering", "Choker for Beach Vacations", "Gift for Sister",
     "Choker for Backless Dress Pairing", "Necklace for Initial Gifting", "Choker for Pearl Lovers",
-    "Valentine's Day Gift for Girlfriend",
+    "Valentine's Day Gift for Girlfriend", "Necklace for Unisex Layering",
   ],
   "Hand Chains": [
     "Hand Chain for Festival Looks", "Hand Chain for Beach Days", "Gift for Girlfriend",

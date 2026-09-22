@@ -11719,15 +11719,32 @@
       "silver toggle chain",
       "elevated basics"
     ],
-    "images": [],
-    "gallery": [],
+    "images": [
+      "/images/products/1cb96475-ddb5-4579-a11f-15a0684428f5.png"
+    ],
+    "gallery": [
+      "/images/products/1cb96475-ddb5-4579-a11f-15a0684428f5.png",
+      "/images/products/c161317e-321c-4443-a6dc-675e1d7ecfbe.png",
+      "/images/products/6a665764-53bf-49f0-baec-91b5d51ca86b.png",
+      "/images/products/26dc8a79-8ea9-4356-a365-9c150aeaee66.png",
+      "/images/products/SaveClip.App_94009087_3737129469692488_4504472029461009842_n.jpg"
+    ],
     "variants": [
       "Gold Tone",
       "Silver Tone"
     ],
     "featured": false,
-    "active": false,
+    "active": true,
     "dateAdded": "2026-09-22T00:00:00.000Z",
-    "altText": "Gold tone chunky toggle cross necklace in stainless steel, bold unisex chain necklace design"
+    "altText": "Gold tone chunky toggle cross necklace in stainless steel, bold unisex chain necklace design",
+    "variantHeroes": {
+      "Gold Tone": "/images/products/1cb96475-ddb5-4579-a11f-15a0684428f5.png",
+      "Silver Tone": "/images/products/c161317e-321c-4443-a6dc-675e1d7ecfbe.png"
+    },
+    "variantVideos": {
+      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/a268c974f816d96e08d33284f9632501/downloads/default.mp4",
+      "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/a268c974f816d96e08d33284f9632501/downloads/default.mp4"
+    },
+    "sizeGuideImage": "/images/products/26dc8a79-8ea9-4356-a365-9c150aeaee66.png"
   }
 ]

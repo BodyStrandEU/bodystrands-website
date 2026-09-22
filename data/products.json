@@ -11808,11 +11808,24 @@
       "waterproof bracelet",
       "bracelet femme"
     ],
-    "images": [],
-    "gallery": [],
+    "images": [
+      "/images/products/55bac0b1-7356-4e74-97a8-f585287d5664.png"
+    ],
+    "gallery": [
+      "/images/products/55bac0b1-7356-4e74-97a8-f585287d5664.png",
+      "/images/products/IMG_3309.jpg",
+      "/images/products/1db351dc-3972-4a31-a79b-cae5959ea9da.png",
+      "/images/products/badf8700-5f63-4324-88e1-b381d421b7a6.png",
+      "/images/products/SaveClip.App_94009087_3737129469692488_4504472029461009842_n.jpg"
+    ],
     "featured": false,
-    "active": false,
+    "active": true,
     "dateAdded": "2026-09-22T00:00:00.000Z",
-    "altText": "Gold beaded cross bracelet with medallion charm, stainless steel faith jewelry for women and men"
+    "altText": "Gold beaded cross bracelet with medallion charm, stainless steel faith jewelry for women and men",
+    "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/4724f1732c17b637fb95f1ae0085cd41/downloads/default.mp4",
+    "giftTags": [
+      "confirmation"
+    ],
+    "sizeGuideImage": "/images/products/1db351dc-3972-4a31-a79b-cae5959ea9da.png"
   }
 ]

@@ -29,7 +29,8 @@
     ],
     "source": "research",
     "addedAt": "2026-09-25",
-    "why": "Pearls lead every autumn/winter 2026 trend round-up, from Vogue Adria to King Jewelers' Fall 2026 list."
+    "why": "Pearls lead every autumn/winter 2026 trend round-up, from Vogue Adria to King Jewelers' Fall 2026 list.",
+    "researchModel": "claude-opus-5"
   },
   {
     "query": "what jewellery to wear with a strapless dress",
@@ -64,7 +65,8 @@
     ],
     "source": "research",
     "addedAt": "2026-09-25",
-    "why": "Who What Wear's autumn 2026 round-up puts the neck and shoulder at the focal point just as strapless party dresses peak."
+    "why": "Who What Wear's autumn 2026 round-up puts the neck and shoulder at the focal point just as strapless party dresses peak.",
+    "researchModel": "claude-opus-5"
   },
   {
     "query": "how to style a cross necklace",
@@ -96,7 +98,8 @@
     ],
     "source": "research",
     "addedAt": "2026-09-25",
-    "why": "Oh Clementine and Gabriel & Co both flag symbol- and meaning-driven jewellery as a defining 2026 trend."
+    "why": "Oh Clementine and Gabriel & Co both flag symbol- and meaning-driven jewellery as a defining 2026 trend.",
+    "researchModel": "claude-opus-5"
   },
   {
     "query": "how to stop layered necklaces from tangling",
@@ -133,7 +136,8 @@
     ],
     "source": "research",
     "addedAt": "2026-09-25",
-    "why": "Pinterest maximalist accessory searches are up 105% per chocianaite.com's Autumn 2026 guide, with Blue Nile naming curated stacks a defining behaviour."
+    "why": "Pinterest maximalist accessory searches are up 105% per chocianaite.com's Autumn 2026 guide, with Blue Nile naming curated stacks a defining behaviour.",
+    "researchModel": "claude-opus-5"
   },
   {
     "query": "what size belly chain do i need",
@@ -170,7 +174,8 @@
     ],
     "source": "research",
     "addedAt": "2026-09-25",
-    "why": "Sizing is the top pre-purchase blocker and return driver for body jewellery bought online, and no existing post answers it."
+    "why": "Sizing is the top pre-purchase blocker and return driver for body jewellery bought online, and no existing post answers it.",
+    "researchModel": "claude-opus-5"
   },
   {
     "query": "how to wear a belly chain with low rise jeans",
@@ -191,7 +196,8 @@
     ],
     "source": "research",
     "addedAt": "2026-09-25",
-    "why": "Low-rise denim has returned to the mainstream (Fast Company, Feb 2026) and belly chains are being styled with it in coverage like Hola's Kylie Jenner piece, right as denim season peaks."
+    "why": "Low-rise denim has returned to the mainstream (Fast Company, Feb 2026) and belly chains are being styled with it in coverage like Hola's Kylie Jenner piece, right as denim season peaks.",
+    "researchModel": "claude-opus-5"
   },
   {
     "query": "how to wear a chain belt",
@@ -210,7 +216,8 @@
     ],
     "source": "research",
     "addedAt": "2026-09-25",
-    "why": "Chain belts are resurfacing in 2026 trend round-ups from Gabriel & Co and Beltley, and the jewellery angle is an open gap versus belt retailers."
+    "why": "Chain belts are resurfacing in 2026 trend round-ups from Gabriel & Co and Beltley, and the jewellery angle is an open gap versus belt retailers.",
+    "researchModel": "claude-opus-5"
   },
   {
     "query": "halloween costume jewellery ideas",
@@ -228,7 +235,8 @@
     ],
     "source": "research",
     "addedAt": "2026-09-25",
-    "why": "Halloween content is publishing now (CraftGossip, 22 Sep 2026) and costume-jewellery searches spike sharply through October."
+    "why": "Halloween content is publishing now (CraftGossip, 22 Sep 2026) and costume-jewellery searches spike sharply through October.",
+    "researchModel": "claude-opus-5"
   },
   {
     "query": "what jewellery to wear with a backless dress",
@@ -251,7 +259,8 @@
     ],
     "source": "research",
     "addedAt": "2026-09-25",
-    "why": "Party dress season starts mid-October and backless styling has strong product demand but almost no editorial coverage beyond one 2025 blog."
+    "why": "Party dress season starts mid-October and backless styling has strong product demand but almost no editorial coverage beyond one 2025 blog.",
+    "researchModel": "claude-opus-5"
   },
   {
     "query": "what jewellery to wear with a sheer dress",
@@ -273,7 +282,8 @@
     ],
     "source": "research",
     "addedAt": "2026-09-25",
-    "why": "Sheer 'naked' party dressing is a running 2025–26 trend per Who What Wear's party fashion round-up, timed to festive dress buying from late October."
+    "why": "Sheer 'naked' party dressing is a running 2025–26 trend per Who What Wear's party fashion round-up, timed to festive dress buying from late October.",
+    "researchModel": "claude-opus-5"
   },
   {
     "query": "gifts for a libra woman",
@@ -290,7 +300,8 @@
     ],
     "source": "research",
     "addedAt": "2026-09-25",
-    "why": "Libra season runs 23 Sep–22 Oct and zodiac gift guides are live now from HELLO! and Pedestrian."
+    "why": "Libra season runs 23 Sep–22 Oct and zodiac gift guides are live now from HELLO! and Pedestrian.",
+    "researchModel": "claude-opus-5"
   },
   {
     "query": "christmas gifts for her under 50 euros",

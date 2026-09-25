@@ -16,14 +16,20 @@ const QUEUE_FILE    = join(__dirname, "../data/blog-queue.json");
 const BLOG_FILE     = join(__dirname, "../data/blog-posts.json");
 const PRODUCTS_FILE = join(__dirname, "../data/products.json");
 
-const MODEL = "claude-opus-5";
-// Rough spend per call, logged so the GitHub run logs show what the blog costs.
-// claude-opus-5: $5 / $25 per million input / output tokens; web search $10 per 1,000.
+// Model A/B test (started Sep 25, 2026): Monday runs research with Opus,
+// Thursday runs with Sonnet. Entries and the posts built from them carry
+// `researchModel`, so scripts/compare-research-models.mjs can compare them.
+// RESEARCH_MODEL overrides (e.g. for manual runs).
+const PRICES = { "claude-opus-5": [5, 25], "claude-sonnet-5": [2, 10] }; // $ per million in / out
+const MODEL = process.env.RESEARCH_MODEL || (new Date().getUTCDay() === 4 ? "claude-sonnet-5" : "claude-opus-5");
+// Rough spend per call, logged so the GitHub run logs show what research costs.
+// Web search is $10 per 1,000 searches on top of tokens.
 function logCost(label, usage) {
+  const [inPrice, outPrice] = PRICES[MODEL];
   const input = (usage.input_tokens ?? 0) + (usage.cache_creation_input_tokens ?? 0) + (usage.cache_read_input_tokens ?? 0);
   const searches = usage.server_tool_use?.web_search_requests ?? 0;
-  const usd = (input * 5 + (usage.output_tokens ?? 0) * 25) / 1e6 + searches * 0.01;
-  console.log(`[cost] ${label}: ${input} in / ${usage.output_tokens ?? 0} out tokens${searches ? `, ${searches} searches` : ""} ≈ $${usd.toFixed(3)}`);
+  const usd = (input * inPrice + (usage.output_tokens ?? 0) * outPrice) / 1e6 + searches * 0.01;
+  console.log(`[cost] ${MODEL} ${label}: ${input} in / ${usage.output_tokens ?? 0} out tokens${searches ? `, ${searches} searches` : ""} ≈ $${usd.toFixed(3)}`);
 }
 
 const MAX_NEW_ENTRIES = 5; // 2 runs/week ≈ 10 ideas; ~4-5 research posts/week are consumed
@@ -55,8 +61,7 @@ Report back the 8 strongest ideas, each with: the main search phrase (exactly as
       .stream({
         model: MODEL,
         max_tokens: 32000,
-        betas: ["server-side-fallback-2026-07-01"],
-        fallbacks: "default",
+        ...(MODEL === "claude-opus-5" ? { betas: ["server-side-fallback-2026-07-01"], fallbacks: "default" } : {}),
         thinking: { type: "adaptive" },
         output_config: { effort: "high" },
         tools: [{ type: "web_search_20260209", name: "web_search", max_uses: 10 }],
@@ -156,12 +161,14 @@ async function main() {
       months,
       productCategories: e.productCategories.filter((c) => productCategories.includes(c)),
       source: "research",
+      researchModel: MODEL,
       addedAt: now.toISOString().slice(0, 10),
       why: e.why,
     });
     if (added.length >= MAX_NEW_ENTRIES) break;
   }
 
+  console.log(`Research model: ${MODEL}`);
   if (added.length === 0) {
     console.log("No new trending queries this week.");
     return;

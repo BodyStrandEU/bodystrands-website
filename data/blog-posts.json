@@ -184,7 +184,8 @@
         "image": "/images/products/birthstone-arm-band/7d42276c-6049-49fb-834a-b8ae3e2ad277.webp",
         "url": "/shop/birthstone-arm-band"
       }
-    ]
+    ],
+    "researchModel": "claude-opus-5"
   },
   {
     "slug": "how-to-wear-a-toggle-necklace-front-clasp-styling-tips",

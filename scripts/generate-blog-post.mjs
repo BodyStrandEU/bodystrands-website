@@ -309,6 +309,7 @@ async function generate(client, subject, posts, products, now) {
         category: subject.entry ? subject.entry.category : parsed.category,
         topic:    subject.entry ? subject.entry.query : parsed.targetQuery,
         source:   subject.kind,
+        ...(subject.entry?.researchModel ? { researchModel: subject.entry.researchModel } : {}),
         ...(subject.kind === "product" ? { sourceProductId: subject.product.id } : {}),
         tags:     parsed.tags.map((t) => t.toLowerCase()),
         readTime: `${Math.max(3, Math.ceil(countWords(blocks) / 200))} min read`,

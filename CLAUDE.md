@@ -5,6 +5,8 @@
 ## Hosting: Cloudflare Workers — Vercel dropped Sep 25, 2026
 The site moved from Vercel to Cloudflare Workers (OpenNext adapter) because Vercel's ISR Writes limit (200K/mo) was exceeded. The Worker was bound to the bodystrands.com custom domain on Sep 12 and the migration merged into `main` on Sep 13; every push to `main` deploys via `.github/workflows/cloudflare-deploy.yml`. On Sep 25, 2026 the Vercel deploy workflow (`deploy.yml`) and `@vercel/analytics` / `@vercel/speed-insights` were removed — those scripts 404 on Cloudflare, so the Vercel Analytics dashboard stopped recording on Sep 12. Visitor analytics = Google Analytics 4 (`G-8ZSFBD94RN`, in `app/layout.tsx`) + Cloudflare Web Analytics (dashboard toggle) + Google Search Console. The Vercel project itself may still exist in the Vercel dashboard, paused as a fallback — deleting it is the user's call. **DNS changes still need explicit user confirmation each time.**
 
+Admin analytics dashboard (`/admin/analytics`) pulls GA4 data via `lib/ga4.ts` — a fetch + Web Crypto client for the GA4 Data REST API. Do NOT reintroduce `@google-analytics/data`: it uses gRPC, which can't run on Workers (it failed silently after the move). Needs Worker secrets `GA4_PROPERTY_ID` (numeric property id, not the G- measurement id) and `GA4_SERVICE_ACCOUNT_JSON` (service account key JSON; the account must be a Viewer on the GA4 property). Connection errors show on the dashboard.
+
 The notes below are from the migration period (Sep 10-13) and are kept for their operational gotchas.
 
 **Done and verified on the deployed Worker** (`https://bodystrands-website.bodystrands-website.workers.dev`):
@@ -32,7 +34,7 @@ The notes below are from the migration period (Sep 10-13) and are kept for their
 ```bash
 bash -c '
 set -a && source .env.local && set +a
-for key in NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY STRIPE_SECRET_KEY ADMIN_PASSWORD GITHUB_TOKEN GITHUB_REPO CF_STREAM_TOKEN CF_ACCOUNT_ID CF_CUSTOMER_SUBDOMAIN RESEND_API_KEY STRIPE_WEBHOOK_SECRET REVIEW_TOKEN_SECRET POSTIZ_API_KEY RESEND_NEWSLETTER_SEGMENT_ID RESEND_CUSTOMER_SEGMENT_ID RESEND_FROM_EMAIL; do
+for key in NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY STRIPE_SECRET_KEY ADMIN_PASSWORD GITHUB_TOKEN GITHUB_REPO CF_STREAM_TOKEN CF_ACCOUNT_ID CF_CUSTOMER_SUBDOMAIN RESEND_API_KEY STRIPE_WEBHOOK_SECRET REVIEW_TOKEN_SECRET POSTIZ_API_KEY RESEND_NEWSLETTER_SEGMENT_ID RESEND_CUSTOMER_SEGMENT_ID RESEND_FROM_EMAIL GA4_PROPERTY_ID GA4_SERVICE_ACCOUNT_JSON; do
   val="${!key}"
   [ -n "$val" ] && printf "%s" "$val" | npx wrangler secret put "$key"
 done

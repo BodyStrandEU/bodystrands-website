@@ -58,6 +58,7 @@ type AnalyticsData = {
   topCountries:    { country: string; count: number }[];
   ga4:             GA4Data | null;
   ga4Ready:        boolean;
+  ga4Error?:       string | null;
 };
 
 function fmt(n: number, currency = "EUR") {
@@ -481,6 +482,14 @@ export default function AnalyticsPage() {
                 <div style={{ ...sh, color: "#A0622A" }}><span>Connect Google Analytics — Unlock Visitor Data</span></div>
                 <div style={{ padding: "1.25rem", fontSize: "0.78rem", lineHeight: 1.8, color: "var(--admin-muted)" }}>
                   <p style={{ marginTop: 0 }}>Once connected you&apos;ll see: <strong style={{ color: "var(--admin-text)" }}>sessions, traffic sources, devices, visitor countries, top pages,</strong> and conversion rate — all filtered by the same time period.</p>
+                </div>
+              </div>
+            )}
+            {data.ga4Ready && data.ga4Error && (
+              <div style={{ ...sec, border: "1px solid #A0622A33" }}>
+                <div style={{ ...sh, color: "#A0622A" }}><span>Google Analytics — Connection Error</span></div>
+                <div style={{ padding: "1.25rem", fontSize: "0.72rem", lineHeight: 1.7, color: "var(--admin-muted)", wordBreak: "break-word" }}>
+                  {data.ga4Error}
                 </div>
               </div>
             )}

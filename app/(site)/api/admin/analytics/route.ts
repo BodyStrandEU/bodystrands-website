@@ -3,6 +3,7 @@ export const dynamic = "force-dynamic";
 import { NextRequest, NextResponse } from "next/server";
 import Stripe from "stripe";
 import { isValidToken, COOKIE_NAME } from "@/lib/auth";
+import { ga4Client } from "@/lib/ga4";
 
 // Explicit fetch-based HTTP client — required for Stripe's SDK under the Cloudflare Workers runtime.
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY ?? "", {
@@ -70,24 +71,21 @@ function sessionToChartKey(ts: number, unit: "hour" | "day" | "week"): string {
 }
 
 async function fetchGA4(propertyId: string, credJson: string, ga4Start: string, ga4End: string) {
-  const { BetaAnalyticsDataClient } = await import("@google-analytics/data");
-  const creds  = JSON.parse(credJson) as Record<string, string>;
-  const client = new BetaAnalyticsDataClient({ credentials: creds });
-  const property   = `properties/${propertyId}`;
+  const runReport  = await ga4Client(propertyId, credJson);
   const dateRanges = [{ startDate: ga4Start, endDate: ga4End }];
 
   const [overview, channelRes, sourceMedium, devices, countries, topPages, addToCartByProduct, orderAttribution] = await Promise.all([
-    client.runReport({ property, dateRanges, metrics: [{ name: "sessions" }, { name: "activeUsers" }, { name: "engagementRate" }, { name: "newUsers" }] }),
-    client.runReport({ property, dateRanges, dimensions: [{ name: "sessionDefaultChannelGroup" }], metrics: [{ name: "sessions" }], orderBys: [{ metric: { metricName: "sessions" }, desc: true }], limit: "8" }),
-    client.runReport({ property, dateRanges, dimensions: [{ name: "sessionSource" }, { name: "sessionMedium" }], metrics: [{ name: "sessions" }], orderBys: [{ metric: { metricName: "sessions" }, desc: true }], limit: "10" }),
-    client.runReport({ property, dateRanges, dimensions: [{ name: "deviceCategory" }], metrics: [{ name: "sessions" }] }),
-    client.runReport({ property, dateRanges, dimensions: [{ name: "country" }], metrics: [{ name: "sessions" }], orderBys: [{ metric: { metricName: "sessions" }, desc: true }], limit: "8" }),
-    client.runReport({ property, dateRanges, dimensions: [{ name: "pagePath" }], metrics: [{ name: "screenPageViews" }], orderBys: [{ metric: { metricName: "screenPageViews" }, desc: true }], limit: "10" }),
-    client.runReport({ property, dateRanges, dimensions: [{ name: "itemName" }], metrics: [{ name: "itemsAddedToCart" }], orderBys: [{ metric: { metricName: "itemsAddedToCart" }, desc: true }], limit: "10" }),
+    runReport({ dateRanges, metrics: [{ name: "sessions" }, { name: "activeUsers" }, { name: "engagementRate" }, { name: "newUsers" }] }),
+    runReport({ dateRanges, dimensions: [{ name: "sessionDefaultChannelGroup" }], metrics: [{ name: "sessions" }], orderBys: [{ metric: { metricName: "sessions" }, desc: true }], limit: "8" }),
+    runReport({ dateRanges, dimensions: [{ name: "sessionSource" }, { name: "sessionMedium" }], metrics: [{ name: "sessions" }], orderBys: [{ metric: { metricName: "sessions" }, desc: true }], limit: "10" }),
+    runReport({ dateRanges, dimensions: [{ name: "deviceCategory" }], metrics: [{ name: "sessions" }] }),
+    runReport({ dateRanges, dimensions: [{ name: "country" }], metrics: [{ name: "sessions" }], orderBys: [{ metric: { metricName: "sessions" }, desc: true }], limit: "8" }),
+    runReport({ dateRanges, dimensions: [{ name: "pagePath" }], metrics: [{ name: "screenPageViews" }], orderBys: [{ metric: { metricName: "screenPageViews" }, desc: true }], limit: "10" }),
+    runReport({ dateRanges, dimensions: [{ name: "itemName" }], metrics: [{ name: "itemsAddedToCart" }], orderBys: [{ metric: { metricName: "itemsAddedToCart" }, desc: true }], limit: "10" }),
     // Definitive per-order attribution: transactionId is set to the Stripe checkout session id
     // (see SuccessPage.tsx's gtag purchase event), so this joins 1:1 to a specific Stripe order.
-    client.runReport({
-      property, dateRanges,
+    runReport({
+      dateRanges,
       dimensions: [{ name: "transactionId" }, { name: "sessionSource" }, { name: "sessionMedium" }, { name: "sessionDefaultChannelGroup" }, { name: "landingPagePlusQueryString" }],
       metrics: [{ name: "eventCount" }],
       dimensionFilter: { filter: { fieldName: "eventName", stringFilter: { value: "purchase" } } },
@@ -95,21 +93,21 @@ async function fetchGA4(propertyId: string, credJson: string, ga4Start: string, 
     }),
   ]);
 
-  const row0 = overview[0]?.rows?.[0]?.metricValues ?? [];
-  const atcRows = addToCartByProduct[0]?.rows ?? [];
+  const row0 = overview.rows?.[0]?.metricValues ?? [];
+  const atcRows = addToCartByProduct.rows ?? [];
   return {
     sessions:       parseInt(row0[0]?.value ?? "0"),
     users:          parseInt(row0[1]?.value ?? "0"),
     engagementRate: parseFloat(row0[2]?.value ?? "0"),
     newUsers:       parseInt(row0[3]?.value ?? "0"),
-    channels:  (channelRes[0]?.rows  ?? []).map((r) => ({ channel:  r.dimensionValues?.[0]?.value ?? "", sessions: parseInt(r.metricValues?.[0]?.value ?? "0") })),
-    sources:   (sourceMedium[0]?.rows ?? []).map((r) => ({ source: r.dimensionValues?.[0]?.value ?? "", medium: r.dimensionValues?.[1]?.value ?? "", sessions: parseInt(r.metricValues?.[0]?.value ?? "0") })),
-    devices:   (devices[0]?.rows  ?? []).map((r) => ({ device:   r.dimensionValues?.[0]?.value ?? "", sessions: parseInt(r.metricValues?.[0]?.value ?? "0") })),
-    countries: (countries[0]?.rows ?? []).map((r) => ({ country:  r.dimensionValues?.[0]?.value ?? "", sessions: parseInt(r.metricValues?.[0]?.value ?? "0") })),
-    topPages:  (topPages[0]?.rows  ?? []).map((r) => ({ path:     r.dimensionValues?.[0]?.value ?? "", views:    parseInt(r.metricValues?.[0]?.value ?? "0") })),
+    channels:  (channelRes.rows  ?? []).map((r) => ({ channel:  r.dimensionValues?.[0]?.value ?? "", sessions: parseInt(r.metricValues?.[0]?.value ?? "0") })),
+    sources:   (sourceMedium.rows ?? []).map((r) => ({ source: r.dimensionValues?.[0]?.value ?? "", medium: r.dimensionValues?.[1]?.value ?? "", sessions: parseInt(r.metricValues?.[0]?.value ?? "0") })),
+    devices:   (devices.rows  ?? []).map((r) => ({ device:   r.dimensionValues?.[0]?.value ?? "", sessions: parseInt(r.metricValues?.[0]?.value ?? "0") })),
+    countries: (countries.rows ?? []).map((r) => ({ country:  r.dimensionValues?.[0]?.value ?? "", sessions: parseInt(r.metricValues?.[0]?.value ?? "0") })),
+    topPages:  (topPages.rows  ?? []).map((r) => ({ path:     r.dimensionValues?.[0]?.value ?? "", views:    parseInt(r.metricValues?.[0]?.value ?? "0") })),
     addToCartProducts: atcRows.map((r) => ({ name: r.dimensionValues?.[0]?.value ?? "", count: parseInt(r.metricValues?.[0]?.value ?? "0") })),
     totalAddToCarts: atcRows.reduce((sum, r) => sum + parseInt(r.metricValues?.[0]?.value ?? "0"), 0),
-    orderAttribution: (orderAttribution[0]?.rows ?? []).map((r) => ({
+    orderAttribution: (orderAttribution.rows ?? []).map((r) => ({
       transactionId: r.dimensionValues?.[0]?.value ?? "",
       source:        r.dimensionValues?.[1]?.value ?? "",
       medium:        r.dimensionValues?.[2]?.value ?? "",
@@ -184,11 +182,12 @@ export async function GET(request: NextRequest) {
     const aov = orderCount > 0 ? revenue / orderCount : 0;
 
     let ga4: Awaited<ReturnType<typeof fetchGA4>> | null = null;
+    let ga4Error: string | null = null;
     const ga4PropertyId = process.env.GA4_PROPERTY_ID;
     const ga4Creds      = process.env.GA4_SERVICE_ACCOUNT_JSON;
     if (ga4PropertyId && ga4Creds) {
       try { ga4 = await fetchGA4(ga4PropertyId, ga4Creds, ga4Start, ga4End); }
-      catch (e) { console.error("GA4 error:", e); }
+      catch (e) { console.error("GA4 error:", e); ga4Error = e instanceof Error ? e.message : String(e); }
     }
 
     // transactionId in GA4's purchase event is set to the Stripe checkout session id, so this
@@ -219,6 +218,7 @@ export async function GET(request: NextRequest) {
       topCountries,
       ga4,
       ga4Ready: !!(ga4PropertyId && ga4Creds),
+      ga4Error,
     });
   } catch (err) {
     return NextResponse.json({ error: err instanceof Error ? err.message : "Error" }, { status: 500 });

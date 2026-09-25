@@ -1,0 +1,50 @@
+name: Weekly Blog Keyword Research
+
+on:
+  schedule:
+    - cron: "0 6 * * 1"    # Mondays, 7am Portugal
+  workflow_dispatch:
+
+concurrency:
+  group: blog-generator
+  cancel-in-progress: false
+
+jobs:
+  research:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Configure git
+        run: |
+          git config user.name "Bodystrands Blog Bot"
+          git config user.email "storenavaria@gmail.com"
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Research trending search queries
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: node scripts/research-blog-keywords.mjs
+
+      # The queue isn't rendered on the site, so no deploy is needed for this commit.
+      - name: Commit and push
+        run: |
+          git add data/blog-queue.json
+          if git diff --staged --quiet; then
+            echo "Queue unchanged."
+            exit 0
+          fi
+          git commit -m "Add trending blog queries [skip ci]"
+          git push || (git pull --rebase origin main && git push)

@@ -1,11 +1,17 @@
 name: Daily Blog Post Generator
 
 on:
+  # The script itself enforces the cadence (one post every 2 days), so a daily
+  # check is enough. cron-job.org also triggers workflow_dispatch; extra runs
+  # just exit early.
   schedule:
     - cron: "0 7 * * *"    # 8am Portugal
-    - cron: "0 12 * * *"   # 1pm Portugal
-    - cron: "0 17 * * *"   # 6pm Portugal
-  workflow_dispatch:        # cron-job.org backup trigger
+  workflow_dispatch:
+    inputs:
+      force:
+        description: "Write a post now, even if one went out in the last 2 days"
+        type: boolean
+        default: false
 
 concurrency:
   group: blog-generator
@@ -43,6 +49,7 @@ jobs:
       - name: Generate blog post
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          FORCE: ${{ inputs.force && '1' || '0' }}
         run: node scripts/generate-blog-post.mjs
 
       - name: Commit and push
@@ -52,5 +59,7 @@ jobs:
             echo "No new post generated, skipping."
             exit 0
           fi
-          git commit -m "Add blog post [skip ci]"
+          # No [skip ci]: the post has to trigger the Vercel/Cloudflare deploys to go live.
+          # (With [skip ci], posts only went live when some other change happened to be pushed.)
+          git commit -m "Add blog post"
           git push || (git pull --rebase origin main && git push)

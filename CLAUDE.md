@@ -371,9 +371,13 @@ The Anthropic API key is NOT in .env.local — ask the user to paste it (or crea
 ## SEO Infrastructure (set up June 2026)
 - Google Search Console: verified, sitemap submitted (113+ pages indexed)
 - Bing Webmaster Tools: set up via GSC import
-- Blog auto-generation: 3x/day via cron-job.org → GitHub Actions (workflow ID: 297904761)
-  - Trigger times: 7:00, 12:00, 17:00 UTC (8am, 1pm, 6pm Portugal)
-  - cron-job.org job IDs: 7854981 (7am), 7854984 (12pm), 7854985 (5pm)
+- Blog auto-generation (revamped Sep 25, 2026 — "fewer, stronger posts that answer search questions"):
+  - `scripts/generate-blog-post.mjs` writes at most ONE post every 2 days (~3-4/week), enforced in the script because cron-job.org still triggers the workflow (ID 297904761) 3x/day (job IDs 7854981, 7854984, 7854985) — extra runs just exit. Manual run with the "force" checkbox bypasses the gap.
+  - Subject alternates between (1) a newly added live product no post covers yet (`sourceProductId`) — the post targets what people search about that TYPE of piece — and (2) the next in-season entry in `data/blog-queue.json` (fresh `source: "research"` entries first, then the static seasonal calendar; `months` gates seasonality).
+  - `scripts/research-blog-keywords.mjs` (workflow `blog-research.yml`, Mondays 06:00 UTC) web-searches trending jewelry/gifting queries and prepends up to 6 new entries to the queue. Add or reorder queries in `blog-queue.json` by hand any time.
+  - Model: claude-opus-5 with structured output; quality gate (≥800 words, no banned words, no near-duplicate titles, links only to real product ids) with one retry.
+  - Blog commits must NOT use `[skip ci]` — before Sep 25, 2026 they did, so posts only went live when some other push happened to trigger a deploy (Sep 22-24 posts sat unpublished).
+  - Post content blocks: `paragraph`, `heading`, `list` (`items: string[]`).
 - All 111 products have long-tail `altText` for Google Images SEO
 - All 11 category pages have unique meta titles/descriptions
 - All product pages have keyword-rich titles via CATEGORY_SUFFIX mapping

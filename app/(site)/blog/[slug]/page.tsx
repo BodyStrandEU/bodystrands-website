@@ -20,7 +20,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-type ContentBlock = { type: "paragraph" | "heading"; text: string };
+type ContentBlock =
+  | { type: "paragraph" | "heading"; text: string }
+  | { type: "list"; text?: string; items: string[] };
 type FaqItem = { question: string; answer: string };
 
 // Older posts stored `content` as a flat string[] (one <p> per entry, no subheadings).
@@ -31,7 +33,9 @@ function normalizeContent(content: unknown): ContentBlock[] {
   if (content.length > 0 && typeof content[0] === "string") {
     return (content as string[]).map((text) => ({ type: "paragraph" as const, text }));
   }
-  return content as ContentBlock[];
+  return (content as ContentBlock[]).map((b) =>
+    b.type === "list" ? b : { type: b.type, text: b.text }
+  );
 }
 
 export default async function BlogPostPage({ params }: Props) {
@@ -90,7 +94,22 @@ export default async function BlogPostPage({ params }: Props) {
       <div className="max-w-3xl mx-auto px-6 md:px-10 mb-16">
         <div className="flex flex-col gap-6 blog-content">
           {blocks.map((block, i) =>
-            block.type === "heading" ? (
+            block.type === "list" ? (
+              <div key={i}>
+                {block.text && (
+                  <p className="text-sm font-light leading-loose tracking-wide text-[#2C2220]/80 mb-3"
+                    dangerouslySetInnerHTML={{ __html: block.text }}
+                  />
+                )}
+                <ul className="list-disc pl-5 flex flex-col gap-2 marker:text-[#A0622A]">
+                  {block.items.map((item, j) => (
+                    <li key={j} className="text-sm font-light leading-loose tracking-wide text-[#2C2220]/80"
+                      dangerouslySetInnerHTML={{ __html: item }}
+                    />
+                  ))}
+                </ul>
+              </div>
+            ) : block.type === "heading" ? (
               <h2 key={i} className="font-heading text-2xl md:text-3xl font-light text-[#2C2220] mt-4">
                 {block.text}
               </h2>

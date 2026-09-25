@@ -6,293 +6,308 @@ import { dirname, join } from "path";
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const BLOG_FILE     = join(__dirname, "../data/blog-posts.json");
 const PRODUCTS_FILE = join(__dirname, "../data/products.json");
+const QUEUE_FILE    = join(__dirname, "../data/blog-queue.json");
 
-const TOPIC_POOLS = [
-  { category: "Style Guide", keywords: ["shoulder chain", "back chain", "belly chain", "body chain", "anklet", "head chain", "hand chain", "eyeglasses chain", "bikini", "bracelet", "necklace"], topics: [
-    "how to style a shoulder chain for summer",
-    "how to layer body jewelry without overdoing it",
-    "best jewelry for a beach wedding guest",
-    "how to wear a belly chain with every outfit",
-    "the effortless way to style an anklet",
-    "how to wear body chains to a festival",
-    "jewelry styling tips for backless dresses",
-    "how to mix gold and silver jewelry confidently",
-    "styling head chains for weddings and special occasions",
-    "how to wear hand chains for everyday looks",
-    "the minimalist guide to body jewelry",
-    "how to style eyeglasses chains as a fashion statement",
-    "how to wear a back chain to the beach",
-    "the best shoulder chain outfits for summer",
-    "how to stack bracelets without it looking too busy",
-    "the best anklet and bracelet combinations for summer",
-    "how to wear a dainty necklace every single day",
-    "the right way to layer necklaces at different lengths",
-    "how to style a hand chain with any outfit",
-    "bikini jewelry the pieces that actually stay on",
-    "how to wear an eyeglasses chain and make it look intentional",
-    "belly chain styling tips for every body type",
-    "the best jewelry for a backless wedding dress",
-    "how to choose between gold and silver jewelry",
-    "how to wear a head chain without it looking costume-y",
-    "how to layer a body chain over a dress for fall",
-    "the best jewelry to layer over sweaters and knitwear",
-    "how to style shoulder chains for autumn outfits",
-    "layering jewelry over long sleeves without it disappearing",
-    "transitional jewelry styling from summer into fall",
-    "how to make body jewelry work with jackets and layers",
-  ]},
-  { category: "Personalized Jewelry", keywords: ["personalised", "personalized", "customized", "birthstone", "birth flower", "zodiac", "initial", "charm", "custom"], topics: [
-    "personalised bracelet gift ideas for every occasion",
-    "what is a birthstone bracelet and which one should you choose",
-    "birth flower jewelry the meaningful gift everyone actually wants",
-    "why personalised jewelry makes the best gift",
-    "zodiac charm bracelet the gift that matches their personality",
-    "initial bracelet who to buy it for and why",
-    "customized jewelry vs off the shelf why personal always wins",
-    "the best personalized jewelry gifts for her under 50 euros",
-    "how to choose the right birthstone for a gift",
-    "birth flower bracelet meaning and symbolism for all 12 months",
-    "why customized bracelets and necklaces are the most searched gifts right now",
-    "the most meaningful personalized jewelry for bridesmaids",
-    "personalised bracelet ideas that dont look cheap",
-    "zodiac jewelry which sign wears which style best",
-    "birthstone jewelry a complete guide to every month",
-    "how to personalise jewelry as a gift without overthinking it",
-    "charm bracelet meaning why every charm tells a story",
-    "the difference between birthstone and birth flower jewelry",
-  ]},
-  { category: "Gift Guide", keywords: ["gift", "birthday", "anniversary", "bridesmaid", "christmas", "mother", "valentine", "graduation", "friend"], topics: [
-    "best jewelry gifts for her under 50 euros",
-    "jewelry gift ideas for a birthday she will actually wear",
-    "what to buy a woman who has everything",
-    "the best handmade jewelry gifts from Europe",
-    "jewelry gift ideas for bridesmaids she will keep forever",
-    "anniversary jewelry gift ideas she will actually love",
-    "christmas jewelry gifts that feel personal not generic",
-    "mothers day jewelry gift ideas that arent boring",
-    "valentines day jewelry gifts beyond the usual",
-    "the best gift for a friend who loves jewelry",
-    "graduation gift ideas jewelry she will wear for years",
-    "jewelry gifts for the woman who has everything",
-    "affordable luxury jewelry gifts under 35 euros",
-    "the best jewelry gifts for a new girlfriend",
-    "handmade jewelry gifts that feel more personal than store bought",
-    "best friend jewelry gifts that arent cheesy",
-    "jewelry gift guide for every type of woman",
-    "what jewelry to buy someone who already has a lot",
-    "last minute jewelry gift ideas that still feel thoughtful",
-    "jewelry gifts for teenagers and young women",
-    "the best jewelry gifts for a sister",
-    "confirmation and communion bracelet gifts under 30 euros",
-    "meaningful baptism bracelet gifts for a goddaughter",
-    "catholic bracelet gifts for first communion and confirmation",
-    "baptism gift ideas under 30 euros she will actually wear",
-    "honeymoon gift ideas jewelry she will wear every day",
-  ]},
-  { category: "Care & Quality", keywords: ["stainless steel", "waterproof", "jewelry care", "tarnish"], topics: [
-    "how to clean your stainless steel jewelry at home",
-    "why 316L stainless steel is the best material for everyday jewelry",
-    "how to store jewelry so it lasts longer",
-    "the truth about tarnish-resistant jewelry",
-    "can you really shower with your jewelry on",
-    "what makes handmade jewelry different from mass produced",
-    "how to tell if your jewelry is truly waterproof",
-    "why stainless steel jewelry is better than gold plated",
-    "how long does stainless steel jewelry last",
-    "the real difference between gold plated and gold tone jewelry",
-  ]},
-  { category: "Inspiration", keywords: ["summer", "wedding", "beach", "holiday", "bride", "bridal", "festival", "travel"], topics: [
-    "the best jewelry trends for summer 2026",
-    "wedding jewelry ideas that arent the usual necklace and earrings",
-    "body jewelry for brides and bridesmaids",
-    "why body jewelry is having a major moment right now",
-    "jewelry ideas for your honeymoon packing list",
-    "the most wearable jewelry for summer holidays",
-    "how to build a jewelry wardrobe that works year round",
-    "jewelry styling inspiration from the Mediterranean",
-    "the best jewelry for a beach vacation",
-    "festival jewelry what to wear and how to style it",
-    "bridal jewelry beyond the veil and earrings",
-    "what jewelry to pack for a holiday in the sun",
-    "the jewelry pieces worth investing in this year",
-    "why handmade jewelry from small brands just hits different",
-    "jewelry trends that are actually wearable not just runway",
-    "the best jewelry for a winter sun getaway",
-    "packing jewelry for a tropical winter escape",
-  ]},
-  { category: "Plus Size", keywords: ["plus size", "curvy", "curvaceous"], topics: [
-    "plus size body jewelry that actually fits",
-    "how to size a plus size belly chain",
-    "why plus size body jewelry is so hard to find",
-    "the truth about adjustable jewelry and plus size bodies",
-    "plus size jewelry gift ideas for curvy women",
-    "how to measure yourself for a plus size body chain",
-    "plus size beach jewelry that stays comfortable all day",
-    "curvy body positive jewelry styling tips",
-    "why we built body jewelry for real plus size measurements",
-    "plus size jewelry brands that actually deliver on sizing",
-  ]},
-];
+// Fewer, stronger posts (Sep 2026 revamp). The old setup published 2-3 thin
+// ~600-word posts a day from a random topic pool, which exhausted itself and
+// kept producing near-duplicates and off-season topics (Valentine's Day in
+// September). cron-job.org still fires the workflow 3x/day, so the cadence is
+// enforced here rather than in the workflow schedule: at most one post every
+// MIN_DAYS_BETWEEN_POSTS days (~3-4/week). FORCE=1 bypasses it for manual runs.
+const MIN_DAYS_BETWEEN_POSTS = 2;
 
-// Map topic text to product categories
-const CATEGORY_KEYWORDS = {
-  "Shoulder Chains":    ["shoulder chain"],
-  "Back Chains":        ["back chain", "backless dress"],
-  "Belly Chains":       ["belly chain", "belly", "waist chain"],
-  "Body Chains":        ["body chain", "festival"],
-  "Anklets":            ["anklet", "ankle bracelet"],
-  "Head Chains":        ["head chain", "hair chain", "headpiece", "bridal headpiece", "wedding headpiece"],
-  "Hand Chains":        ["hand chain"],
-  "Necklaces":          ["necklace", "choker", "lariat", "pendant necklace"],
-  "Bracelets":          ["bracelet", "birthstone", "birth flower", "zodiac", "initial", "personalised", "personalized", "customized", "charm bracelet", "layered bracelet", "stacking bracelet"],
-  "Eyeglasses Chains":  ["eyeglasses", "glasses chain", "sunglasses chain"],
-  "Leg Chains":         ["leg chain", "thigh chain"],
-  "Bikini Clip Chains": ["bikini"],
+// Products added within this window that no post has covered yet get a post of
+// their own (targeting what people search about that type of piece).
+const NEW_PRODUCT_WINDOW_DAYS = 45;
+
+// Research-sourced queue entries (scripts/research-blog-keywords.mjs) are
+// time-sensitive trends, so they jump ahead of the static calendar while fresh.
+const FRESH_RESEARCH_DAYS = 21;
+
+const MODEL = "claude-opus-5";
+const MIN_WORDS = 800;
+const BLOG_CATEGORIES = ["Style Guide", "Gift Guide", "Personalized Jewelry", "Care & Quality", "Inspiration", "Plus Size"];
+const BANNED_WORDS = ["elevate", "curated", "testament", "journey", "delve", "game-changer", "transformative", "effortless", "quiet confidence", "316l", "marine-grade", "medical-grade", "surgical-grade"];
+
+// ─── Selection ──────────────────────────────────────────────────────────────
+
+const daysBetween = (a, b) => Math.floor((b.getTime() - a.getTime()) / 86_400_000);
+
+function isLive(product) {
+  return product.active !== false && Array.isArray(product.images) && product.images.length > 0;
+}
+
+function pickNewProduct(posts, products, now) {
+  const covered = new Set(posts.map((p) => p.sourceProductId).filter(Boolean));
+  return products
+    .filter((p) => isLive(p) && !covered.has(p.id))
+    .filter((p) => daysBetween(new Date(p.dateAdded), now) <= NEW_PRODUCT_WINDOW_DAYS)
+    .sort((a, b) => new Date(b.dateAdded) - new Date(a.dateAdded))[0] ?? null;
+}
+
+function pickQueueEntry(posts, queue, now) {
+  const month = now.getMonth() + 1;
+  const used = new Set(posts.map((p) => p.topic).filter(Boolean));
+  const candidates = queue.filter((q) =>
+    q.months.includes(month) &&
+    !used.has(q.query) &&
+    // Cheap pre-check (no API call) so a query we've effectively already
+    // covered under an older post title doesn't get regenerated every run.
+    !findSimilarTitle(q.query, posts)
+  );
+  const isFresh = (q) => q.source === "research" && q.addedAt && daysBetween(new Date(q.addedAt), now) <= FRESH_RESEARCH_DAYS;
+  return candidates.find(isFresh) ?? candidates[0] ?? null;
+}
+
+// Alternate new-product posts with calendar/trend posts so a burst of new
+// listings doesn't crowd out seasonal content (and vice versa).
+function pickSubject(posts, products, queue, now) {
+  const newProduct = pickNewProduct(posts, products, now);
+  const queueEntry = pickQueueEntry(posts, queue, now);
+  const lastWasProduct = posts[0]?.source === "product";
+  if (newProduct && (!lastWasProduct || !queueEntry)) return { kind: "product", product: newProduct };
+  if (queueEntry) return { kind: "queue", entry: queueEntry };
+  return null;
+}
+
+// ─── Product context ────────────────────────────────────────────────────────
+
+function shuffle(arr) {
+  return [...arr].sort(() => Math.random() - 0.5);
+}
+
+function productsForEntry(entry, products) {
+  let pool = products.filter(isLive);
+  if (entry.productCategories?.length) pool = pool.filter((p) => entry.productCategories.includes(p.category));
+  if (entry.maxPrice) pool = pool.filter((p) => Number(p.price) <= entry.maxPrice);
+  const preferred = pool.filter((p) =>
+    (entry.christmas && p.christmas) || (entry.giftTag && p.giftTags?.includes(entry.giftTag))
+  );
+  const rest = pool.filter((p) => !preferred.includes(p));
+  return [...shuffle(preferred), ...shuffle(rest)].slice(0, 6);
+}
+
+function relatedProducts(product, products) {
+  return shuffle(products.filter((p) => isLive(p) && p.id !== product.id && p.category === product.category)).slice(0, 3);
+}
+
+function describeProduct(p, detailed = false) {
+  const line = `- "${p.name}" (${p.category}, €${p.price}) → /shop/${p.id}`;
+  if (!detailed) return line;
+  const specs = p.specs ? `\n  Specs: ${JSON.stringify(p.specs)}` : "";
+  const variants = p.variants?.length ? `\n  Finishes: ${p.variants.join(", ")}` : "";
+  const desc = String(p.fullDescription || p.description || "").slice(0, 1500);
+  return `${line}${variants}${specs}\n  Description: ${desc}`;
+}
+
+// ─── Prompt ─────────────────────────────────────────────────────────────────
+
+const BRAND = `Bodystrands is a small, couple-run handmade body jewelry brand based in Portugal, run by El & Gio. Every piece is made by the two of them in their studio. Products: belly chains, back chains, body chains, shoulder chains, leg chains, anklets, bracelets (birthstone, birth flower, zodiac, initial, pearl), necklaces, hand chains, head chains, eyeglasses chains, bikini clip chains. Stainless steel — waterproof, tarnish-resistant, made for everyday wear. Never claim a specific steel grade ("316L", "marine-grade", "medical-grade", "surgical-grade") — it hasn't been verified. Never call anything solid gold — say "gold-tone". Prices range from about €17.50 to €55. The brand name is one word: Bodystrands.`;
+
+const VOICE = `Voice: warm, plain and direct, like a friend who knows jewelry. Talk to "you". Short sentences, no filler. Never use: ${BANNED_WORDS.slice(0, 8).join(", ")}, "actually", "quiet confidence", or any influencer-style phrasing.`;
+
+function buildPrompt(subject, featured, now) {
+  const monthName = now.toLocaleString("en-GB", { month: "long" });
+  const common = `${BRAND}
+
+${VOICE}
+
+Today is ${now.toISOString().slice(0, 10)} (${monthName}). Readers are mostly in Europe, reading on their phones. Write for what they need right now.`;
+
+  const rules = `How to write it:
+- Answer the search question directly in the first paragraph (2-3 sentences) so the post could be quoted as a search snippet. No warm-up.
+- Then go deeper: 3-5 "heading" sections, each phrased like a follow-up question or the exact thing someone would search next.
+- Use "list" blocks where a reader would scan: steps, options at different budgets, what to pair with what. 1-3 lists total.
+- 1000-1500 words of body text. Every section must add real, specific help — concrete details, sizes, lengths, pairings, occasions. If a section would be generic, cut it.
+- Title: under 65 characters, contains the search phrase (or a natural close variant), no clickbait.
+- Link products with <a href="/shop/ID">Name</a> inside paragraph or list text, only from the products given below, 2-4 links total, where they truly fit. You may link a category as <a href="/shop?category=Necklaces">necklaces</a>. No other HTML.
+- FAQ: 3 distinct questions people also search around this topic, each answer self-contained in 1-3 sentences, plain text.
+- Tags: 5 lowercase search terms.`;
+
+  if (subject.kind === "product") {
+    const p = subject.product;
+    return `${common}
+
+We just added a new piece to the shop:
+${describeProduct(p, true)}
+
+Other pieces you may link to:
+${featured.filter((f) => f.id !== p.id).map((f) => describeProduct(f)).join("\n") || "(none)"}
+
+Write a blog post that ranks for what people search about THIS TYPE of piece — not the product name (nobody searches that). Choose the single most useful search question for it (e.g. "how to wear a toggle necklace", "what does a cross bracelet mean", "how to layer a choker"), fitting the season where it makes sense. Put that question in "targetQuery". The new piece should be featured naturally as a strong example, using only the facts given above — do not invent measurements or materials.
+
+${rules}`;
+  }
+
+  const e = subject.entry;
+  return `${common}
+
+Search question to answer: "${e.query}"${e.why ? `\nWhy it's timely: ${e.why}` : ""}
+
+Products you may link to:
+${featured.map((f) => describeProduct(f)).join("\n") || "(none — link to /shop instead)"}
+
+Write a blog post that is the best answer on the web for that search. Put the search question in "targetQuery".
+
+${rules}`;
+}
+
+const POST_SCHEMA = {
+  type: "object",
+  additionalProperties: false,
+  required: ["targetQuery", "title", "excerpt", "category", "content", "faq", "tags"],
+  properties: {
+    targetQuery: { type: "string" },
+    title:       { type: "string" },
+    excerpt:     { type: "string", description: "Meta description: under 155 characters, answers the question and makes someone click." },
+    category:    { type: "string", enum: BLOG_CATEGORIES },
+    content: {
+      type: "array",
+      items: {
+        type: "object",
+        additionalProperties: false,
+        required: ["type", "text", "items"],
+        properties: {
+          type:  { type: "string", enum: ["paragraph", "heading", "list"] },
+          text:  { type: "string", description: "Paragraph or heading text. For a list, an optional short lead-in (or empty string)." },
+          items: { type: "array", items: { type: "string" }, description: "List items for type=list; empty array otherwise." },
+        },
+      },
+    },
+    faq: {
+      type: "array",
+      items: {
+        type: "object",
+        additionalProperties: false,
+        required: ["question", "answer"],
+        properties: { question: { type: "string" }, answer: { type: "string" } },
+      },
+    },
+    tags: { type: "array", items: { type: "string" } },
+  },
 };
 
-function getRelevantProducts(topic, allProducts) {
-  const topicLower = topic.toLowerCase();
-  const matched = new Set();
+// ─── Generation + quality gate ──────────────────────────────────────────────
 
-  for (const [cat, keywords] of Object.entries(CATEGORY_KEYWORDS)) {
-    if (keywords.some((kw) => topicLower.includes(kw))) {
-      matched.add(cat);
+async function callModel(client, prompt) {
+  const response = await client.beta.messages
+    .stream({
+      model: MODEL,
+      max_tokens: 32000,
+      betas: ["server-side-fallback-2026-07-01"],
+      fallbacks: "default",
+      thinking: { type: "adaptive" },
+      output_config: { effort: "high", format: { type: "json_schema", schema: POST_SCHEMA } },
+      messages: [{ role: "user", content: prompt }],
+    })
+    .finalMessage();
+
+  if (response.stop_reason === "refusal") throw new Error("Model declined the request.");
+  if (response.stop_reason === "max_tokens") throw new Error("Response hit max_tokens.");
+  const text = response.content.find((b) => b.type === "text")?.text;
+  if (!text) throw new Error("No text in response.");
+  return JSON.parse(text);
+}
+
+// Only allow links the site can serve: known product ids and category pages.
+// Anything else (a hallucinated product slug, an external URL) is unwrapped to
+// plain text instead of shipping a broken link.
+function sanitizeLinks(html, productIds) {
+  return html.replace(/<a\s+href=["']([^"']+)["'][^>]*>(.*?)<\/a>/gi, (whole, href, label) => {
+    const productMatch = href.match(/^\/shop\/([^/?#]+)$/);
+    if (productMatch && productIds.has(productMatch[1])) return `<a href="${href}">${label}</a>`;
+    if (/^\/shop(\?category=[^"'<>]+)?$/.test(href) || href === "/gifts" || href === "/plus-size") return `<a href="${href}">${label}</a>`;
+    return label;
+  });
+}
+
+function normalizeBlocks(blocks, productIds) {
+  return blocks
+    .map((b) => {
+      if (b.type === "list") {
+        const items = b.items.map((i) => sanitizeLinks(i, productIds)).filter((i) => i.trim());
+        return items.length ? { type: "list", ...(b.text.trim() ? { text: sanitizeLinks(b.text, productIds) } : {}), items } : null;
+      }
+      if (!b.text.trim()) return null;
+      return { type: b.type, text: b.type === "heading" ? b.text.replace(/<[^>]+>/g, "") : sanitizeLinks(b.text, productIds) };
+    })
+    .filter(Boolean);
+}
+
+// Plain text for FAQ fields: no HTML, and no stray brackets left dangling at the end.
+const plainText = (s) => s.replace(/<[^>]+>/g, "").replace(/[\s\[\]{}]+$/, "").trim();
+
+function countWords(blocks) {
+  return blocks
+    .flatMap((b) => [b.text ?? "", ...(b.items ?? [])])
+    .join(" ")
+    .replace(/<[^>]+>/g, "")
+    .split(/\s+/)
+    .filter(Boolean).length;
+}
+
+function qualityProblems(parsed, blocks, posts) {
+  const problems = [];
+  const words = countWords(blocks);
+  if (words < MIN_WORDS) problems.push(`only ${words} words (min ${MIN_WORDS})`);
+  if (parsed.title.length > 70) problems.push(`title is ${parsed.title.length} chars`);
+  if (!blocks.some((b) => b.type === "heading")) problems.push("no section headings");
+  const allText = JSON.stringify([parsed.title, parsed.excerpt, blocks, parsed.faq]).toLowerCase();
+  const banned = BANNED_WORDS.filter((w) => allText.includes(w));
+  if (banned.length) problems.push(`banned words: ${banned.join(", ")}`);
+  if (posts.some((p) => p.slug === slugify(parsed.title))) problems.push("slug already exists");
+  const similar = findSimilarTitle(parsed.title, posts);
+  if (similar) problems.push(`too similar to existing post "${similar}"`);
+  return problems;
+}
+
+async function generate(client, subject, posts, products, now) {
+  const featured = subject.kind === "product"
+    ? [subject.product, ...relatedProducts(subject.product, products)]
+    : productsForEntry(subject.entry, products);
+  const productIds = new Set(products.filter(isLive).map((p) => p.id));
+  const basePrompt = buildPrompt(subject, featured, now);
+
+  let prompt = basePrompt;
+  for (let attempt = 1; attempt <= 2; attempt++) {
+    const parsed = await callModel(client, prompt);
+    const blocks = normalizeBlocks(parsed.content, productIds);
+    const problems = qualityProblems(parsed, blocks, posts);
+    if (problems.length === 0) {
+      const today = now.toISOString().slice(0, 10);
+      return {
+        slug:     slugify(parsed.title),
+        title:    parsed.title,
+        excerpt:  parsed.excerpt,
+        content:  blocks,
+        faq:      parsed.faq.map((f) => ({ question: plainText(f.question), answer: plainText(f.answer) })),
+        date:     today,
+        category: subject.kind === "queue" ? subject.entry.category : parsed.category,
+        topic:    subject.kind === "queue" ? subject.entry.query : parsed.targetQuery,
+        source:   subject.kind,
+        ...(subject.kind === "product" ? { sourceProductId: subject.product.id } : {}),
+        tags:     parsed.tags.map((t) => t.toLowerCase()),
+        readTime: `${Math.max(3, Math.ceil(countWords(blocks) / 200))} min read`,
+        featuredProducts: featured.slice(0, 4).map((p) => ({
+          id: p.id, name: p.name, price: `€${p.price}`, image: p.images?.[0] ?? null, url: `/shop/${p.id}`,
+        })),
+      };
     }
+    console.log(`Attempt ${attempt} failed quality check: ${problems.join("; ")}`);
+    prompt = `${basePrompt}\n\nA previous draft was rejected for: ${problems.join("; ")}. Fix these.`;
   }
-
-  // If no specific category matched, use all
-  let pool = allProducts.filter((p) =>
-    p.active !== false && (matched.size === 0 || matched.has(p.category))
-  );
-
-  // Plus-size topics should link to the actual plus-size products, not just
-  // any random item from the matched category (e.g. Belly Chains) — falls
-  // back to the general pool if there aren't enough plus-size products yet.
-  if (topicLower.includes("plus size") || topicLower.includes("curvy") || topicLower.includes("curvaceous")) {
-    const plusSizePool = pool.filter((p) => p.plusSize);
-    if (plusSizePool.length > 0) pool = plusSizePool;
-  }
-
-  // Shuffle and pick up to 4 products
-  const shuffled = pool.sort(() => Math.random() - 0.5).slice(0, 4);
-  return shuffled.map((p) => ({
-    name: p.name,
-    id: p.id,
-    url: `/shop/${p.id}`,
-    price: `€${p.price}`,
-    category: p.category,
-    image: p.images?.[0] ?? null,
-  }));
+  return null;
 }
 
-function getRelevantCategories(topic) {
-  const topicLower = topic.toLowerCase();
-  const matched = [];
+// ─── Similarity helpers ─────────────────────────────────────────────────────
 
-  if (topicLower.includes("plus size") || topicLower.includes("curvy") || topicLower.includes("curvaceous")) {
-    matched.push({ name: "Plus Size", url: "/plus-size" });
-  }
-
-  for (const [cat, keywords] of Object.entries(CATEGORY_KEYWORDS)) {
-    if (keywords.some((kw) => topicLower.includes(kw))) {
-      const encoded = encodeURIComponent(cat);
-      matched.push({ name: cat, url: `/shop?category=${encoded}` });
-    }
-  }
-
-  // Always include the main shop as a fallback
-  if (matched.length === 0) {
-    matched.push({ name: "Body Jewelry", url: "/shop" });
-  }
-
-  return matched.slice(0, 3);
-}
-
-// Topics that read as summer/beach/warm-vacation specific — these should sit out
-// during autumn (Sep-Nov) so the blog doesn't tell people to go to the beach
-// while everyone's buying sweaters. They're allowed again Dec-Aug.
-const SUMMER_ONLY_TOPICS = new Set([
-  "how to style a shoulder chain for summer",
-  "best jewelry for a beach wedding guest",
-  "how to wear a back chain to the beach",
-  "the best shoulder chain outfits for summer",
-  "the best anklet and bracelet combinations for summer",
-  "bikini jewelry the pieces that actually stay on",
-  "the best jewelry trends for summer 2026",
-  "jewelry ideas for your honeymoon packing list",
-  "the most wearable jewelry for summer holidays",
-  "jewelry styling inspiration from the Mediterranean",
-  "the best jewelry for a beach vacation",
-  "what jewelry to pack for a holiday in the sun",
-  "plus size beach jewelry that stays comfortable all day",
-]);
-
-// The reverse: winter-getaway framing (tropical escape, winter sun) — only
-// makes sense once it's actually cold at home, so restrict to Dec-Feb rather
-// than letting it get picked in the middle of summer.
-const WINTER_GETAWAY_TOPICS = new Set([
-  "the best jewelry for a winter sun getaway",
-  "packing jewelry for a tropical winter escape",
-]);
-
-function seasonallyAppropriate(topic, month) {
-  // month is 1-12. Summer-worded topics only make sense Mar-Aug; the rest of
-  // the year (autumn + winter) the vacation/beach need is covered by the
-  // dedicated winter-getaway topics instead, restricted to Dec-Feb.
-  const isSpringSummer = month >= 3 && month <= 8;
-  const isWinter = month === 12 || month <= 2;
-  if (SUMMER_ONLY_TOPICS.has(topic) && !isSpringSummer) return false;
-  if (WINTER_GETAWAY_TOPICS.has(topic) && !isWinter) return false;
-  return true;
-}
-
-function pickTopic(existingPosts, exclude = new Set(), now = new Date()) {
-  const currentMonth = now.getMonth() + 1;
-  const allTopics = TOPIC_POOLS.flatMap((pool) =>
-    pool.topics.map((t) => ({ topic: t, category: pool.category }))
-  ).filter(({ topic }) => !exclude.has(topic) && seasonallyAppropriate(topic, currentMonth));
-
-  // Exact-match against the literal topic string used to generate each past post
-  // (not the LLM-rewritten title, which rarely shares wording with the topic).
-  // Note: ~68 legacy posts predate topic-tracking and have no `topic` field, so
-  // this can still hand out a topic that collides on slug — the caller retries.
-  const usedTopics = new Set(existingPosts.map((p) => p.topic).filter(Boolean));
-  const neverUsed = allTopics.filter(({ topic }) => !usedTopics.has(topic));
-
-  if (neverUsed.length > 0) {
-    return neverUsed[Math.floor(Math.random() * neverUsed.length)];
-  }
-
-  // Full pool has cycled at least once — still avoid anything used in the last
-  // 180 days. At ~104 topics and 3 posts/day the pool cycles in ~5 weeks, so a
-  // short cooldown (the old value was 21 days) let the same topic reappear
-  // almost immediately after first exhaustion — that's how Valentine's Day
-  // ended up published 4 times in under 3 months. 180 days makes real repeats rare.
-  const cutoff = new Date(now);
-  cutoff.setDate(cutoff.getDate() - 180);
-  const recentTopics = new Set(
-    existingPosts
-      .filter((p) => p.topic && new Date(p.date) >= cutoff)
-      .map((p) => p.topic)
-  );
-  const cooledDown = allTopics.filter(({ topic }) => !recentTopics.has(topic));
-  const pool = cooledDown.length > 0 ? cooledDown : allTopics;
-  if (pool.length === 0) return null;
-  return pool[Math.floor(Math.random() * pool.length)];
-}
-
-// Catches near-duplicate titles that the topic-tracking in pickTopic() can't
-// (either two different topics converging on similar LLM phrasing, or the
-// ~68 legacy posts that predate topic-tracking entirely and carry no `topic`
-// field to exclude against). Jaccard word-overlap after stripping common
-// template words ("jewelry", "gift", "actually", "wear", etc.) that make
-// genuinely different topics look similar by sharing boilerplate phrasing —
-// see the Sep 2026 cleanup that found 57 real duplicates hiding this way.
+// Jaccard word-overlap after stripping template words that make genuinely
+// different topics look alike (see the Sep 2026 cleanup of 57 near-duplicates).
 const TITLE_SIMILARITY_STOPWORDS = new Set([
   "that", "with", "your", "from", "this", "have", "what", "actually", "feel",
   "gifts", "gift", "jewelry", "wear", "wearing", "every", "day", "she", "shell",
   "the", "for", "and", "best", "real", "style", "styling", "guide", "body",
-  "chain", "chains",
+  "chain", "chains", "how", "ideas",
 ]);
 
 function titleWords(title) {
@@ -328,177 +343,49 @@ function slugify(title) {
     .slice(0, 80);
 }
 
-async function generateAttempt(client, topic, category, posts, products) {
-  const relevantProducts    = getRelevantProducts(topic, products);
-  const relevantCategories  = getRelevantCategories(topic);
-
-  console.log(`Generating post about: "${topic}" (${category})`);
-  console.log(`Linking products: ${relevantProducts.map((p) => p.name).join(", ")}`);
-  console.log(`Linking categories: ${relevantCategories.map((c) => c.name).join(", ")}`);
-
-  const productContext = relevantProducts.length > 0
-    ? `\nReal products from the Bodystrands shop you can link to naturally in the content:\n${relevantProducts.map((p) => `- "${p.name}" (${p.price}) → <a href="${p.url}">${p.name}</a>`).join("\n")}\n`
-    : "";
-
-  const categoryContext = relevantCategories.length > 0
-    ? `\nCategory pages you can link to when mentioning a collection broadly (use 1-2 times max):\n${relevantCategories.map((c) => `- ${c.name} collection → <a href="${c.url}">shop all ${c.name.toLowerCase()}</a>`).join("\n")}\n`
-    : "";
-
-  const message = await client.messages.create({
-    model: "claude-haiku-4-5-20251001",
-    max_tokens: 1800,
-    messages: [{
-      role: "user",
-      content: `You are writing a blog post for Bodystrands EU — a small, couple-run handmade body jewelry brand based in Portugal, run by El & Gio.
-
-The brand story: El and Gio are a couple who fell in love with the original Canadian Bodystrands brand and brought it to Europe. Every single piece is handmade by the two of them in their Portuguese studio — no factories, no middlemen. They pour their care into every strand.
-
-Products: belly chains, back chains, body chains, shoulder chains, anklets, bracelets (including birthstone bracelets, birth flower charm bracelets, zodiac charm bracelets, initial bracelets, pearl bracelets), necklaces, hand chains, head chains, eyeglasses chains, bikini clip chains. All made from high-quality stainless steel — waterproof, tarnish-resistant, built for everyday wear. Never claim a specific technical grade (no "316L", "marine-grade", "medical-grade", or "surgical-grade" — these have not been verified for our material and must never appear). Prices range from €17.50 to €55. Many pieces are personalised — customers choose their birthstone, birth flower month, zodiac sign, or initial at checkout.
-${productContext}${categoryContext}
-Brand voice:
-- Warm, real, and direct — like a close friend who genuinely knows jewelry
-- Speaks TO the reader, not at them — always "you", never preaching
-- Confident but never arrogant
-- Human first — this is a real couple making things by hand, not a corporation
-- Short sentences. No fluff. No filler.
-
-Write a blog post about: "${topic}"
-Category: ${category}
-
-Return ONLY valid JSON in this exact format (no markdown, no code blocks, just raw JSON):
-{
-  "title": "catchy, specific title under 70 characters",
-  "excerpt": "one sentence that makes someone want to read more, under 150 characters",
-  "content": [
-    { "type": "paragraph", "text": "intro paragraph, 2-4 sentences" },
-    { "type": "paragraph", "text": "second paragraph" },
-    { "type": "heading", "text": "a specific, scannable subheading — often phrased as a mini-question or the exact thing someone would search" },
-    { "type": "paragraph", "text": "paragraph under that heading" },
-    { "type": "paragraph", "text": "paragraph under that heading" },
-    { "type": "heading", "text": "second subheading" },
-    { "type": "paragraph", "text": "paragraph under that heading" },
-    { "type": "paragraph", "text": "paragraph under that heading" },
-    { "type": "heading", "text": "third subheading" },
-    { "type": "paragraph", "text": "closing paragraph" }
-  ],
-  "faq": [
-    { "question": "a real question someone would type into Google about this exact topic", "answer": "a direct, complete answer in 1-3 sentences — self-contained, doesn't require reading the rest of the post to make sense" },
-    { "question": "second question", "answer": "second answer" },
-    { "question": "third question", "answer": "third answer" }
-  ],
-  "tags": ["tag1", "tag2", "tag3", "tag4", "tag5"]
-}
-
-Rules:
-- 2-3 "heading" blocks total, each a short scannable phrase (not a full sentence, not clickbait) — these break the post into sections a reader (or an AI summarizer) can jump straight to
-- 2-4 "paragraph" blocks under each heading, each 2-4 sentences, plus the intro paragraph(s) before the first heading
-- Paragraph text may contain HTML anchor tags — use them naturally to link to 1-2 real products AND 1-2 category pages where they fit in context. Don't force it. Example: "The <a href="/shop/goddess-shoulder-chain">Goddess Shoulder Chain</a> is one of our most-worn pieces for exactly this reason." or "Browse our full <a href="/shop?category=Shoulder%20Chains">shoulder chains collection</a> to find your fit."
-- No HTML in heading text or in the faq question/answer text — plain text only there
-- No other HTML or markdown anywhere — only <a href="..."> tags inside paragraph text are allowed
-- The 3 FAQ questions must be genuinely distinct real questions a reader would search (not just the topic reworded three times) and each answer must stand alone — someone should get the full answer just from reading the FAQ, without needing the article above it
-- Never use AI jargon or corporate language (no "elevate", "curated", "testament to", "journey", "delve", "game-changer", "transformative")
-- Don't start with "I" or the brand name
-- Focus on the reader and what's useful or real to them — not on selling
-- Write like a human, not a content machine
-- Tags should be lowercase, relevant search terms`,
-    }],
-  });
-
-  let raw = message.content[0].text.trim()
-    .replace(/^```json\s*/i, "").replace(/^```\s*\n?/i, "").replace(/\n?```\s*$/i, "");
-
-  // Fix unescaped " inside href="..." attributes (common Claude JSON mistake)
-  raw = raw.replace(/href="([^"]*)"/g, (_, url) => `href='${url}'`);
-  // Fix trailing commas before } or ]
-  const cleaned = raw.replace(/,(\s*[}\]])/g, "$1");
-
-  let parsed;
-  try {
-    parsed = JSON.parse(cleaned);
-  } catch (e) {
-    // Last resort: extract outermost {} and retry
-    const start = cleaned.indexOf("{");
-    const end   = cleaned.lastIndexOf("}");
-    if (start !== -1 && end !== -1) {
-      parsed = JSON.parse(cleaned.slice(start, end + 1));
-    } else {
-      throw e;
-    }
-  }
-
-  const today = new Date().toISOString().split("T")[0];
-  const slug  = slugify(parsed.title);
-
-  if (posts.find((p) => p.slug === slug)) {
-    console.log(`Slug "${slug}" already exists — will retry with a different topic.`);
-    return null;
-  }
-
-  const similarTitle = findSimilarTitle(parsed.title, posts);
-  if (similarTitle) {
-    console.log(`Title "${parsed.title}" is too similar to existing post "${similarTitle}" — will retry with a different topic.`);
-    return null;
-  }
-
-  const wordCount = parsed.content.map((b) => b.text).join(" ").split(" ").length
-    + (parsed.faq ?? []).map((f) => `${f.question} ${f.answer}`).join(" ").split(" ").length;
-
-  return {
-    slug,
-    title:    parsed.title,
-    excerpt:  parsed.excerpt,
-    content:  parsed.content,
-    faq:      parsed.faq ?? [],
-    date:     today,
-    category,
-    topic,
-    tags:     parsed.tags,
-    readTime: `${Math.max(2, Math.ceil(wordCount / 200))} min read`,
-    featuredProducts: relevantProducts.map((p) => ({
-      id:    p.id,
-      name:  p.name,
-      price: p.price,
-      image: p.image,
-      url:   p.url,
-    })),
-  };
-}
+// ─── Main ───────────────────────────────────────────────────────────────────
 
 async function main() {
+  const now      = new Date();
+  const posts    = JSON.parse(readFileSync(BLOG_FILE, "utf-8"));
+  const products = JSON.parse(readFileSync(PRODUCTS_FILE, "utf-8"));
+  const queue    = JSON.parse(readFileSync(QUEUE_FILE, "utf-8"));
+
+  const lastDate = posts.map((p) => p.date).sort().at(-1);
+  const gap = lastDate ? daysBetween(new Date(lastDate), new Date(now.toISOString().slice(0, 10))) : Infinity;
+  if (gap < MIN_DAYS_BETWEEN_POSTS && process.env.FORCE !== "1") {
+    console.log(`Last post was ${gap} day(s) ago (${lastDate}) — next one is due after ${MIN_DAYS_BETWEEN_POSTS} days. Skipping.`);
+    return;
+  }
+
+  const subject = pickSubject(posts, products, queue, now);
+  if (process.env.DRY_RUN === "1") {
+    console.log("Would write:", subject?.kind === "product" ? `new-product post for ${subject.product.id}` : subject?.entry.query ?? "nothing");
+    return;
+  }
+  if (!subject) {
+    console.log("Nothing to write: no uncovered new products and no in-season queue entries. Add queries to data/blog-queue.json.");
+    return;
+  }
   if (!process.env.ANTHROPIC_API_KEY) {
     console.log("ANTHROPIC_API_KEY not set — skipping blog generation.");
     return;
   }
-  const client   = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
-  const posts    = JSON.parse(readFileSync(BLOG_FILE, "utf-8"));
-  const products = JSON.parse(readFileSync(PRODUCTS_FILE, "utf-8"));
 
-  const MAX_ATTEMPTS = 5;
-  const tried = new Set();
-  let newPost = null;
+  console.log(subject.kind === "product"
+    ? `Writing a new-product post for "${subject.product.name}"`
+    : `Writing a post for search query "${subject.entry.query}"`);
 
-  for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
-    const picked = pickTopic(posts, tried);
-    if (!picked) {
-      console.log("No untried topics left in the pool — stopping.");
-      break;
-    }
-    const { topic, category } = picked;
-    tried.add(topic);
-
-    newPost = await generateAttempt(client, topic, category, posts, products);
-    if (newPost) break;
-    console.log(`Attempt ${attempt}/${MAX_ATTEMPTS} collided, trying another topic...`);
-  }
-
+  const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
+  const newPost = await generate(client, subject, posts, products, now);
   if (!newPost) {
-    console.log(`No unique post generated after ${MAX_ATTEMPTS} attempts — skipping this run.`);
+    console.log("No post passed the quality check — skipping this run.");
     return;
   }
 
   posts.unshift(newPost);
   writeFileSync(BLOG_FILE, JSON.stringify(posts, null, 2));
-  console.log(`Done! Added: "${newPost.title}"`);
+  console.log(`Done! Added: "${newPost.title}" (${newPost.readTime})`);
 }
 
 main().catch((e) => {

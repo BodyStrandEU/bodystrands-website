@@ -3,7 +3,7 @@ import { readFileSync, writeFileSync } from "fs";
 import { fileURLToPath } from "url";
 import { dirname, join } from "path";
 
-// Daily keyword research for the blog queue. Claude searches the web for
+// Twice-weekly (Mon + Thu) keyword research for the blog queue. Claude searches the web for
 // trending and long-tail searches around jewelry, gifting and styling, ties each
 // one to specific products in the catalog, and the findings become
 // data/blog-queue.json entries tagged source: "research" (with long-tail
@@ -17,13 +17,13 @@ const BLOG_FILE     = join(__dirname, "../data/blog-posts.json");
 const PRODUCTS_FILE = join(__dirname, "../data/products.json");
 
 const MODEL = "claude-opus-5";
-const MAX_NEW_ENTRIES = 4; // ~2 posts/day are consumed across three sources
+const MAX_NEW_ENTRIES = 5; // 2 runs/week ≈ 10 ideas; ~4-5 research posts/week are consumed
 const BLOG_CATEGORIES = ["Style Guide", "Gift Guide", "Personalized Jewelry", "Care & Quality", "Inspiration", "Plus Size"];
 
 async function research(client, now, catalog, recentTopics) {
   const messages = [{
     role: "user",
-    content: `You're doing today's keyword research for the blog of Bodystrands, a small handmade body jewelry shop in Portugal selling to customers across Europe (mostly women 20-45, on mobile). Prices €17.50-€55.
+    content: `You're doing this week's keyword research for the blog of Bodystrands, a small handmade body jewelry shop in Portugal selling to customers across Europe (mostly women 20-45, on mobile). Prices €17.50-€55.
 
 Our live catalog (id | name | category | price):
 ${catalog}

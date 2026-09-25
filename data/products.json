@@ -11830,11 +11830,11 @@
   },
   {
     "id": "pearl-heart-toggle-necklace",
-    "name": "Pearl Heart Toggle Necklace",
+    "name": "Chunky Pearl Heart Toggle Necklace",
     "price": 30,
     "currency": "EUR",
     "category": "Necklaces",
-    "description": "Imitation pearl beads with a gold rope-trim heart hanging from the front toggle clasp — stainless steel, gold plated, and hypoallergenic.",
+    "description": "Imitation pearl beads with a gold rope-trim heart hanging from the front toggle clasp — stainless steel, 18k gold plated, and hypoallergenic.",
     "fullDescription": "Imitation pearl beads with a gold rope-trim heart hanging from the front toggle clasp.\n\nClassic pearls with a bit more character. Made from stainless steel with a gold plated finish, so it holds its color and won't tarnish or fade. Free of lead, nickel, and cadmium, so it's safe for sensitive skin.\n\nPlease note that as each piece is handcrafted, no two pieces are identical and slight variations may occur.",
     "specs": [
       {
@@ -11886,11 +11886,21 @@
         "value": "Dispatches within 1-2 business days"
       }
     ],
-    "images": [],
-    "gallery": [],
+    "images": [
+      "/images/products/3a025548-6c92-429b-aacd-08ce252d0023.jpeg"
+    ],
+    "gallery": [
+      "/images/products/3a025548-6c92-429b-aacd-08ce252d0023.jpeg",
+      "/images/products/223f770f-c847-4101-a23b-97873e895828.png",
+      "/images/products/90578acb-0f63-48ac-80b2-6d3a01495fe3.png",
+      "/images/products/8db4052c-3a41-4d8f-9e20-241b1e0f1f67.png",
+      "/images/products/SaveClip.App_94009087_3737129469692488_4504472029461009842_n.jpg"
+    ],
     "featured": false,
-    "active": false,
+    "active": true,
     "dateAdded": "2026-09-25T07:52:04.641Z",
-    "altText": "Pearl beaded necklace with gold rope-trim heart pendant and toggle clasp, hypoallergenic stainless steel gold plated jewelry"
+    "altText": "Pearl beaded necklace with gold rope-trim heart pendant and toggle clasp, hypoallergenic stainless steel gold plated jewelry",
+    "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/e52da977c679cfcb2f3f49c83afd2eb0/downloads/default.mp4",
+    "sizeGuideImage": "/images/products/8db4052c-3a41-4d8f-9e20-241b1e0f1f67.png"
   }
 ]

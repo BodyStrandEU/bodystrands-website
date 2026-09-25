@@ -11827,5 +11827,70 @@
       "confirmation"
     ],
     "sizeGuideImage": "/images/products/1db351dc-3972-4a31-a79b-cae5959ea9da.png"
+  },
+  {
+    "id": "pearl-heart-toggle-necklace",
+    "name": "Pearl Heart Toggle Necklace",
+    "price": 30,
+    "currency": "EUR",
+    "category": "Necklaces",
+    "description": "Imitation pearl beads with a gold rope-trim heart hanging from the front toggle clasp — stainless steel, gold plated, and hypoallergenic.",
+    "fullDescription": "Imitation pearl beads with a gold rope-trim heart hanging from the front toggle clasp.\n\nClassic pearls with a bit more character. Made from stainless steel with a gold plated finish, so it holds its color and won't tarnish or fade. Free of lead, nickel, and cadmium, so it's safe for sensitive skin.\n\nPlease note that as each piece is handcrafted, no two pieces are identical and slight variations may occur.",
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Stainless steel, imitation pearl"
+      },
+      {
+        "label": "Finish",
+        "value": "Gold plated"
+      },
+      {
+        "label": "Pendant",
+        "value": "Rope-trim heart charm"
+      },
+      {
+        "label": "Length",
+        "value": "44cm"
+      },
+      {
+        "label": "Pearl size",
+        "value": "0.8cm"
+      },
+      {
+        "label": "Closure",
+        "value": "Front toggle (OT) clasp"
+      },
+      {
+        "label": "Weight",
+        "value": "25g"
+      },
+      {
+        "label": "Hypoallergenic",
+        "value": "Yes (lead, nickel, and cadmium free)"
+      },
+      {
+        "label": "Waterproof",
+        "value": "Yes"
+      },
+      {
+        "label": "Tarnish-resistant",
+        "value": "Yes"
+      },
+      {
+        "label": "Care",
+        "value": "Wipe gently with a soft cloth after each wear. Store in an airtight container when not in use."
+      },
+      {
+        "label": "Shipping",
+        "value": "Dispatches within 1-2 business days"
+      }
+    ],
+    "images": [],
+    "gallery": [],
+    "featured": false,
+    "active": false,
+    "dateAdded": "2026-09-25T07:52:04.641Z",
+    "altText": "Pearl beaded necklace with gold rope-trim heart pendant and toggle clasp, hypoallergenic stainless steel gold plated jewelry"
   }
 ]

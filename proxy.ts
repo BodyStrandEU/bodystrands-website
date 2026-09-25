@@ -8,6 +8,15 @@ const CURRENCY_COOKIE = "bs_currency";
 export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
+  // Bare domain → www (Vercel did this at the edge; the Cloudflare Worker serves
+  // both hostnames, which split carts/cookies between two origins). Page loads
+  // only — API routes and non-GET requests are left alone so a webhook or form
+  // POST configured against the bare domain never gets bounced by a redirect.
+  const host = request.headers.get("host");
+  if (host === "bodystrands.com" && (request.method === "GET" || request.method === "HEAD") && !pathname.startsWith("/api")) {
+    return NextResponse.redirect(`https://www.bodystrands.com${pathname}${request.nextUrl.search}`, 301);
+  }
+
   // Allow login page and login API through (no cookie yet)
   if (pathname === "/admin/login" || pathname === "/api/admin/login") {
     return NextResponse.next();
@@ -29,10 +38,9 @@ export function proxy(request: NextRequest) {
   }
 
   // Detect shopper's local currency from the edge's geo-IP header, once per browser.
-  // Vercel sends this as x-vercel-ip-country; Cloudflare's equivalent is cf-ipcountry.
   const response = NextResponse.next();
   if (!request.cookies.get(CURRENCY_COOKIE)) {
-    const country  = request.headers.get("cf-ipcountry") ?? request.headers.get("x-vercel-ip-country") ?? "";
+    const country  = request.headers.get("cf-ipcountry") ?? "";
     const currency = currencyForCountry(country);
     response.cookies.set(CURRENCY_COOKIE, currency, { path: "/", maxAge: 60 * 60 * 24 * 30 });
   }

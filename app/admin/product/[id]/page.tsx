@@ -51,7 +51,7 @@ function SortableImage({ id, url, onDelete, localPreview, heroBadges }: Sortable
     cursor: "grab",
   };
 
-  // localPreview = blob URL kept alive for just-uploaded files (real URL 404s until Vercel deploys)
+  // localPreview = blob URL kept alive for just-uploaded files (real URL 404s until the site redeploys)
   // Etsy CDN images use /_next/image proxy (domain is in remotePatterns)
   // Local paths served directly
   const displaySrc = localPreview
@@ -160,7 +160,7 @@ function ImageSection({ title, images, onChange, onUpload }: ImageSectionProps) 
   const [dragOver, setDragOver] = useState(false);
   // pending: blob preview URLs shown while GitHub upload is in flight
   const [pending, setPending] = useState<{ id: string; previewUrl: string }[]>([]);
-  // localPreviews: blob URLs kept alive after upload — real path 404s until Vercel deploys
+  // localPreviews: blob URLs kept alive after upload — real path 404s until the site redeploys
   const [localPreviews, setLocalPreviews] = useState<Record<string, string>>({});
 
   const sensors = useSensors(
@@ -196,7 +196,7 @@ function ImageSection({ title, images, onChange, onUpload }: ImageSectionProps) 
     const results = await Promise.allSettled(
       items.map(async (item) => {
         const url = await onUpload(item.file);
-        // Keep blob alive — real path 404s until Vercel deploys (~1 min)
+        // Keep blob alive — real path 404s until the site redeploys (~1 min)
         setLocalPreviews((prev) => ({ ...prev, [url]: item.previewUrl }));
         setPending((p) => p.filter((x) => x.id !== item.id));
         return url;

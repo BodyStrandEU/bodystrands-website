@@ -13,11 +13,27 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const post = blogPosts.find((p) => p.slug === slug);
   if (!post) return {};
+  const image = postImage(post);
   return {
     title: `${post.title} — Bodystrands Journal`,
     description: post.excerpt,
     alternates: { canonical: `/blog/${slug}` },
+    openGraph: {
+      type: "article",
+      title: post.title,
+      description: post.excerpt,
+      url: `/blog/${slug}`,
+      publishedTime: post.date,
+      ...(image ? { images: [{ url: image }] } : {}),
+    },
   };
+}
+
+// Posts carry no hero image of their own; the first featured product's photo is
+// the most relevant image for social previews and article rich results.
+function postImage(post: (typeof blogPosts)[number]): string | null {
+  const featured = (post as { featuredProducts?: { image?: string | null }[] }).featuredProducts;
+  return featured?.find((p) => p.image)?.image ?? null;
 }
 
 type ContentBlock =
@@ -147,6 +163,23 @@ export default async function BlogPostPage({ params }: Props) {
           ))}
         </div>
       </div>
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            headline: post.title,
+            description: post.excerpt,
+            datePublished: post.date,
+            mainEntityOfPage: `https://www.bodystrands.com/blog/${slug}`,
+            ...(postImage(post) ? { image: new URL(postImage(post)!, "https://www.bodystrands.com").href } : {}),
+            author: { "@type": "Organization", name: "Bodystrands", url: "https://www.bodystrands.com" },
+            publisher: { "@type": "Organization", name: "Bodystrands", url: "https://www.bodystrands.com" },
+          }),
+        }}
+      />
 
       {faq.length > 0 && (
         <script

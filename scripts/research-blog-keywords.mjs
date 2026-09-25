@@ -3,11 +3,13 @@ import { readFileSync, writeFileSync } from "fs";
 import { fileURLToPath } from "url";
 import { dirname, join } from "path";
 
-// Weekly trend research for the blog queue. Claude searches the web for what
-// people are searching right now (and in the next few weeks) around jewelry,
-// gifting and styling, then the findings are turned into data/blog-queue.json
-// entries tagged source: "research". generate-blog-post.mjs prefers fresh
-// research entries over the static calendar.
+// Daily keyword research for the blog queue. Claude searches the web for
+// trending and long-tail searches around jewelry, gifting and styling, ties each
+// one to specific products in the catalog, and the findings become
+// data/blog-queue.json entries tagged source: "research" (with long-tail
+// `keywords` to work into the post and `productIds` to feature).
+// generate-blog-post.mjs rotates research entries with new-product and
+// seasonal-calendar posts.
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const QUEUE_FILE    = join(__dirname, "../data/blog-queue.json");
@@ -15,20 +17,27 @@ const BLOG_FILE     = join(__dirname, "../data/blog-posts.json");
 const PRODUCTS_FILE = join(__dirname, "../data/products.json");
 
 const MODEL = "claude-opus-5";
-const MAX_NEW_ENTRIES = 6;
+const MAX_NEW_ENTRIES = 4; // ~2 posts/day are consumed across three sources
 const BLOG_CATEGORIES = ["Style Guide", "Gift Guide", "Personalized Jewelry", "Care & Quality", "Inspiration", "Plus Size"];
 
-async function research(client, now, productCategories, recentTopics) {
+async function research(client, now, catalog, recentTopics) {
   const messages = [{
     role: "user",
-    content: `You're doing weekly keyword research for the blog of Bodystrands, a small handmade body jewelry shop in Portugal selling to customers across Europe (mostly women 20-45, on mobile). Products: ${productCategories.join(", ")}. Prices €17.50-€55.
+    content: `You're doing today's keyword research for the blog of Bodystrands, a small handmade body jewelry shop in Portugal selling to customers across Europe (mostly women 20-45, on mobile). Prices €17.50-€55.
 
-Today is ${now.toISOString().slice(0, 10)}. Use web search to find what people are searching for now and over the next 3-6 weeks around jewelry, jewelry gifts and styling — seasonal events, holidays, gifting occasions, fashion trends, viral styles, and "people also ask" style questions. Prioritise searches where a small jewelry brand's blog post could realistically rank and lead to a sale of the products above.
+Our live catalog (id | name | category | price):
+${catalog}
 
-Topics we've already covered recently (skip these and close variants):
+Today is ${now.toISOString().slice(0, 10)}. Use web search to find:
+1. Trending searches — what people search now and over the next 3-6 weeks around jewelry, jewelry gifts and styling: seasonal events, holidays, gifting occasions, fashion trends, viral styles, "people also ask" questions.
+2. Long-tail keywords — specific 4-8 word searches with clear intent that a small brand can realistically rank for (e.g. "gold heart pearl necklace with toggle clasp", "waterproof belly chain for swimming", "dainty body chain for backless dress"), especially ones that match our specific products.
+
+Every idea must tie to specific products in the catalog above that a reader would want to buy after reading. Skip ideas with no good product match.
+
+Topics already covered or queued (skip these and close variants):
 ${recentTopics.map((t) => `- ${t}`).join("\n")}
 
-Report back a list of the 10 strongest search phrases, each with: the exact phrase as people type it, why it's trending or timely now (with the source), which months it stays relevant, and which of our product categories fit.`,
+Report back the 8 strongest ideas, each with: the main search phrase (exactly as people type it), 3-6 related long-tail keywords to work into the same post, why it's timely or worth targeting (with the source), which months it stays relevant, and the ids of the 1-4 best-matching products.`,
   }];
 
   // Server-side web search can pause long turns; resume until it finishes.
@@ -41,7 +50,7 @@ Report back a list of the 10 strongest search phrases, each with: the exact phra
         fallbacks: "default",
         thinking: { type: "adaptive" },
         output_config: { effort: "high" },
-        tools: [{ type: "web_search_20260209", name: "web_search", max_uses: 12 }],
+        tools: [{ type: "web_search_20260209", name: "web_search", max_uses: 10 }],
         messages,
       })
       .finalMessage();
@@ -66,9 +75,11 @@ const EXTRACT_SCHEMA = {
       items: {
         type: "object",
         additionalProperties: false,
-        required: ["query", "why", "category", "months", "productCategories"],
+        required: ["query", "keywords", "productIds", "why", "category", "months", "productCategories"],
         properties: {
-          query:             { type: "string", description: "The search phrase, lowercase, as people type it." },
+          query:             { type: "string", description: "The main search phrase, lowercase, as people type it." },
+          keywords:          { type: "array", items: { type: "string" }, description: "3-6 related long-tail keywords, lowercase." },
+          productIds:        { type: "array", items: { type: "string" }, description: "Ids of the 1-4 best-matching catalog products." },
           why:               { type: "string", description: "One sentence: why it's timely, naming the source." },
           category:          { type: "string", enum: BLOG_CATEGORIES },
           months:            { type: "array", items: { type: "integer" }, description: "Months (1-12) the topic stays relevant." },
@@ -79,14 +90,14 @@ const EXTRACT_SCHEMA = {
   },
 };
 
-async function extract(client, findings, productCategories) {
+async function extract(client, findings, productCategories, productIds) {
   const response = await client.messages.create({
     model: MODEL,
     max_tokens: 16000,
     output_config: { effort: "low", format: { type: "json_schema", schema: EXTRACT_SCHEMA } },
     messages: [{
       role: "user",
-      content: `Turn these keyword research findings into blog queue entries. Keep only phrases a jewelry blog post could genuinely answer. productCategories must only use names from: ${productCategories.join(", ")} (empty array if the post should link the whole shop).
+      content: `Turn these keyword research findings into blog queue entries. Keep only phrases a jewelry blog post could genuinely answer. productCategories must only use names from: ${productCategories.join(", ")} (empty array if the post should link the whole shop). productIds must only use these ids: ${productIds.join(", ")}.
 
 ${findings}`,
     }],
@@ -108,12 +119,15 @@ async function main() {
   const posts    = JSON.parse(readFileSync(BLOG_FILE, "utf-8"));
   const products = JSON.parse(readFileSync(PRODUCTS_FILE, "utf-8"));
 
-  const productCategories = [...new Set(products.filter((p) => p.active !== false).map((p) => p.category))];
+  const live = products.filter((p) => p.active !== false && p.images?.length);
+  const productCategories = [...new Set(live.map((p) => p.category))];
+  const liveIds = new Set(live.map((p) => p.id));
+  const catalog = live.map((p) => `${p.id} | ${p.name} | ${p.category} | €${p.price}`).join("\n");
   const recentTopics = [...new Set([...queue.map((q) => q.query), ...posts.slice(0, 60).map((p) => p.topic || p.title)])];
 
   const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
-  const findings = await research(client, now, productCategories, recentTopics);
-  const entries = await extract(client, findings, productCategories);
+  const findings = await research(client, now, catalog, recentTopics);
+  const entries = await extract(client, findings, productCategories, [...liveIds]);
 
   const known = new Set([...queue.map((q) => norm(q.query)), ...posts.map((p) => norm(p.topic || ""))]);
   const added = [];
@@ -121,8 +135,12 @@ async function main() {
     const months = [...new Set(e.months.filter((m) => m >= 1 && m <= 12))];
     if (!e.query.trim() || months.length === 0 || known.has(norm(e.query))) continue;
     known.add(norm(e.query));
+    const productIds = e.productIds.filter((id) => liveIds.has(id)).slice(0, 4);
+    if (productIds.length === 0) continue; // every post must sell something real
     added.push({
       query: e.query.trim(),
+      keywords: [...new Set(e.keywords.map((k) => k.trim().toLowerCase()).filter(Boolean))].slice(0, 6),
+      productIds,
       category: e.category,
       months,
       productCategories: e.productCategories.filter((c) => productCategories.includes(c)),

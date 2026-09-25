@@ -375,11 +375,11 @@ The Anthropic API key is NOT in .env.local — ask the user to paste it (or crea
 ## SEO Infrastructure (set up June 2026)
 - Google Search Console: verified, sitemap submitted (113+ pages indexed)
 - Bing Webmaster Tools: set up via GSC import
-- Blog auto-generation (revamped Sep 25, 2026 — "fewer, stronger posts that answer search questions"):
-  - `scripts/generate-blog-post.mjs` writes at most ONE post every 2 days (~3-4/week), enforced in the script because cron-job.org still triggers the workflow (ID 297904761) 3x/day (job IDs 7854981, 7854984, 7854985) — extra runs just exit. Manual run with the "force" checkbox bypasses the gap.
-  - Subject alternates between (1) a newly added live product no post covers yet (`sourceProductId`) — the post targets what people search about that TYPE of piece — and (2) the next in-season entry in `data/blog-queue.json` (fresh `source: "research"` entries first, then the static seasonal calendar; `months` gates seasonality).
-  - `scripts/research-blog-keywords.mjs` (workflow `blog-research.yml`, Mondays 06:00 UTC) web-searches trending jewelry/gifting queries and prepends up to 6 new entries to the queue. Add or reorder queries in `blog-queue.json` by hand any time.
-  - Model: claude-opus-5 with structured output; quality gate (≥800 words, no banned words, no near-duplicate titles, links only to real product ids) with one retry.
+- Blog auto-generation (revamped Sep 25, 2026 — research-driven, long-form posts tied to products):
+  - `scripts/generate-blog-post.mjs` writes at most 2 posts per UTC day (`MAX_POSTS_PER_DAY`), enforced in the script because cron-job.org triggers the workflow (ID 297904761) 3x/day (job IDs 7854981, 7854984, 7854985) — the third run just exits. Manual run with the "force" checkbox bypasses the cap.
+  - Subjects rotate product → research → calendar (skipping empty buckets): (1) a newly added live product no post covers yet (`sourceProductId`), targeting what people search about that TYPE of piece; (2) the newest `source: "research"` entry in `data/blog-queue.json`; (3) the next in-season static calendar entry in the same file (`months` gates seasonality). Each post's `source` field records which.
+  - `scripts/research-blog-keywords.mjs` (workflow `blog-research.yml`, daily 05:00 UTC) web-searches trending + long-tail keywords and prepends up to 4 entries with `keywords` (long-tail phrases to work into the post) and `productIds` (catalog products the post must feature). Entries with no real product match are dropped.
+  - Model: claude-opus-5 with structured output; quality gate (≥800 words, no banned words, no near-duplicate titles, links only to real product ids) with one retry. Runs on the ANTHROPIC_API_KEY GitHub secret — if the account's credit runs out, both workflows fail ("credit balance is too low"). Expected cost ~$35-50/month.
   - Blog commits must NOT use `[skip ci]` — before Sep 25, 2026 they did, so posts only went live when some other push happened to trigger a deploy (Sep 22-24 posts sat unpublished).
   - Post content blocks: `paragraph`, `heading`, `list` (`items: string[]`).
 - All 111 products have long-tail `altText` for Google Images SEO

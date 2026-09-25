@@ -8,21 +8,17 @@ const BLOG_FILE     = join(__dirname, "../data/blog-posts.json");
 const PRODUCTS_FILE = join(__dirname, "../data/products.json");
 const QUEUE_FILE    = join(__dirname, "../data/blog-queue.json");
 
-// Fewer, stronger posts (Sep 2026 revamp). The old setup published 2-3 thin
-// ~600-word posts a day from a random topic pool, which exhausted itself and
-// kept producing near-duplicates and off-season topics (Valentine's Day in
-// September). cron-job.org still fires the workflow 3x/day, so the cadence is
-// enforced here rather than in the workflow schedule: at most one post every
-// MIN_DAYS_BETWEEN_POSTS days (~3-4/week). FORCE=1 bypasses it for manual runs.
-const MIN_DAYS_BETWEEN_POSTS = 2;
+// Sep 2026 revamp: research-driven, long-form posts instead of the old random
+// topic pool (which exhausted itself into near-duplicates and off-season topics
+// like Valentine's Day in September). cron-job.org fires the workflow 3x/day,
+// so the cadence is enforced here: at most MAX_POSTS_PER_DAY posts per UTC day.
+// FORCE=1 bypasses it for manual runs.
+const MAX_POSTS_PER_DAY = 2;
 
 // Products added within this window that no post has covered yet get a post of
 // their own (targeting what people search about that type of piece).
 const NEW_PRODUCT_WINDOW_DAYS = 45;
 
-// Research-sourced queue entries (scripts/research-blog-keywords.mjs) are
-// time-sensitive trends, so they jump ahead of the static calendar while fresh.
-const FRESH_RESEARCH_DAYS = 21;
 
 const MODEL = "claude-opus-5";
 const MIN_WORDS = 800;
@@ -45,28 +41,40 @@ function pickNewProduct(posts, products, now) {
     .sort((a, b) => new Date(b.dateAdded) - new Date(a.dateAdded))[0] ?? null;
 }
 
-function pickQueueEntry(posts, queue, now) {
+function pickQueueEntry(posts, queue, now, fromResearch) {
   const month = now.getMonth() + 1;
   const used = new Set(posts.map((p) => p.topic).filter(Boolean));
   const candidates = queue.filter((q) =>
+    (q.source === "research") === fromResearch &&
     q.months.includes(month) &&
     !used.has(q.query) &&
     // Cheap pre-check (no API call) so a query we've effectively already
     // covered under an older post title doesn't get regenerated every run.
     !findSimilarTitle(q.query, posts)
   );
-  const isFresh = (q) => q.source === "research" && q.addedAt && daysBetween(new Date(q.addedAt), now) <= FRESH_RESEARCH_DAYS;
-  return candidates.find(isFresh) ?? candidates[0] ?? null;
+  // Research entries: newest findings first (trends go stale). Calendar: file order.
+  if (fromResearch) candidates.sort((a, b) => String(b.addedAt).localeCompare(String(a.addedAt)));
+  return candidates[0] ?? null;
 }
 
-// Alternate new-product posts with calendar/trend posts so a burst of new
-// listings doesn't crowd out seasonal content (and vice versa).
+// Rotate new product → trending research → seasonal calendar, skipping empty
+// buckets, so daily research doesn't starve the Q4 calendar (and a burst of
+// new listings doesn't crowd out either).
+const ROTATION = ["product", "research", "calendar"];
+
 function pickSubject(posts, products, queue, now) {
-  const newProduct = pickNewProduct(posts, products, now);
-  const queueEntry = pickQueueEntry(posts, queue, now);
-  const lastWasProduct = posts[0]?.source === "product";
-  if (newProduct && (!lastWasProduct || !queueEntry)) return { kind: "product", product: newProduct };
-  if (queueEntry) return { kind: "queue", entry: queueEntry };
+  const available = {
+    product:  pickNewProduct(posts, products, now),
+    research: pickQueueEntry(posts, queue, now, true),
+    calendar: pickQueueEntry(posts, queue, now, false),
+  };
+  const last = posts[0]?.source === "queue" ? "calendar" : posts[0]?.source;
+  const start = (ROTATION.indexOf(last) + 1) % ROTATION.length;
+  for (let i = 0; i < ROTATION.length; i++) {
+    const kind = ROTATION[(start + i) % ROTATION.length];
+    if (!available[kind]) continue;
+    return kind === "product" ? { kind, product: available[kind] } : { kind, entry: available[kind] };
+  }
   return null;
 }
 
@@ -77,14 +85,18 @@ function shuffle(arr) {
 }
 
 function productsForEntry(entry, products) {
-  let pool = products.filter(isLive);
+  // Research ties each query to specific products — those lead.
+  const pinned = (entry.productIds ?? [])
+    .map((id) => products.find((p) => p.id === id))
+    .filter((p) => p && isLive(p));
+  let pool = products.filter((p) => isLive(p) && !pinned.includes(p));
   if (entry.productCategories?.length) pool = pool.filter((p) => entry.productCategories.includes(p.category));
   if (entry.maxPrice) pool = pool.filter((p) => Number(p.price) <= entry.maxPrice);
   const preferred = pool.filter((p) =>
     (entry.christmas && p.christmas) || (entry.giftTag && p.giftTags?.includes(entry.giftTag))
   );
   const rest = pool.filter((p) => !preferred.includes(p));
-  return [...shuffle(preferred), ...shuffle(rest)].slice(0, 6);
+  return [...pinned, ...shuffle(preferred), ...shuffle(rest)].slice(0, 6);
 }
 
 function relatedProducts(product, products) {
@@ -120,6 +132,7 @@ Today is ${now.toISOString().slice(0, 10)} (${monthName}). Readers are mostly in
 - Use "list" blocks where a reader would scan: steps, options at different budgets, what to pair with what. 1-3 lists total.
 - 1000-1500 words of body text. Every section must add real, specific help — concrete details, sizes, lengths, pairings, occasions. If a section would be generic, cut it.
 - Title: under 65 characters, contains the search phrase (or a natural close variant), no clickbait.
+- Work the long-tail keywords (listed below, or ones you choose) into headings, list items and sentences where they read naturally — each once or twice at most. Never stuff keywords or repeat a phrase awkwardly; readability comes first.
 - Link products with <a href="/shop/ID">Name</a> inside paragraph or list text, only from the products given below, 2-4 links total, where they truly fit. You may link a category as <a href="/shop?category=Necklaces">necklaces</a>. No other HTML.
 - FAQ: 3 distinct questions people also search around this topic, each answer self-contained in 1-3 sentences, plain text.
 - Tags: 5 lowercase search terms.`;
@@ -134,7 +147,7 @@ ${describeProduct(p, true)}
 Other pieces you may link to:
 ${featured.filter((f) => f.id !== p.id).map((f) => describeProduct(f)).join("\n") || "(none)"}
 
-Write a blog post that ranks for what people search about THIS TYPE of piece — not the product name (nobody searches that). Choose the single most useful search question for it (e.g. "how to wear a toggle necklace", "what does a cross bracelet mean", "how to layer a choker"), fitting the season where it makes sense. Put that question in "targetQuery". The new piece should be featured naturally as a strong example, using only the facts given above — do not invent measurements or materials.
+Write a blog post that ranks for what people search about THIS TYPE of piece — not the product name (nobody searches that). Choose the single most useful search question for it (e.g. "how to wear a toggle necklace", "what does a cross bracelet mean", "how to layer a choker"), fitting the season where it makes sense. Put that question in "targetQuery". Also pick 3-5 long-tail variations people search around it (materials, occasions, pairings, gifting, sizing) and work them in. The new piece should be featured naturally as a strong example, using only the facts given above — do not invent measurements or materials.
 
 ${rules}`;
   }
@@ -142,10 +155,10 @@ ${rules}`;
   const e = subject.entry;
   return `${common}
 
-Search question to answer: "${e.query}"${e.why ? `\nWhy it's timely: ${e.why}` : ""}
+Search question to answer: "${e.query}"${e.why ? `\nWhy it's timely: ${e.why}` : ""}${e.keywords?.length ? `\nLong-tail keywords to work in: ${e.keywords.map((k) => `"${k}"`).join(", ")}` : ""}
 
-Products you may link to:
-${featured.map((f) => describeProduct(f)).join("\n") || "(none — link to /shop instead)"}
+Products you may link to${e.productIds?.length ? " (the first ones were matched to this search — feature them)" : ""}:
+${featured.map((f, i) => describeProduct(f, i < (e.productIds?.length ?? 0))).join("\n") || "(none — link to /shop instead)"}
 
 Write a blog post that is the best answer on the web for that search. Put the search question in "targetQuery".
 
@@ -282,8 +295,8 @@ async function generate(client, subject, posts, products, now) {
         content:  blocks,
         faq:      parsed.faq.map((f) => ({ question: plainText(f.question), answer: plainText(f.answer) })),
         date:     today,
-        category: subject.kind === "queue" ? subject.entry.category : parsed.category,
-        topic:    subject.kind === "queue" ? subject.entry.query : parsed.targetQuery,
+        category: subject.entry ? subject.entry.category : parsed.category,
+        topic:    subject.entry ? subject.entry.query : parsed.targetQuery,
         source:   subject.kind,
         ...(subject.kind === "product" ? { sourceProductId: subject.product.id } : {}),
         tags:     parsed.tags.map((t) => t.toLowerCase()),
@@ -351,16 +364,16 @@ async function main() {
   const products = JSON.parse(readFileSync(PRODUCTS_FILE, "utf-8"));
   const queue    = JSON.parse(readFileSync(QUEUE_FILE, "utf-8"));
 
-  const lastDate = posts.map((p) => p.date).sort().at(-1);
-  const gap = lastDate ? daysBetween(new Date(lastDate), new Date(now.toISOString().slice(0, 10))) : Infinity;
-  if (gap < MIN_DAYS_BETWEEN_POSTS && process.env.FORCE !== "1") {
-    console.log(`Last post was ${gap} day(s) ago (${lastDate}) — next one is due after ${MIN_DAYS_BETWEEN_POSTS} days. Skipping.`);
+  const today = now.toISOString().slice(0, 10);
+  const postedToday = posts.filter((p) => p.date === today).length;
+  if (postedToday >= MAX_POSTS_PER_DAY && process.env.FORCE !== "1") {
+    console.log(`Already ${postedToday} post(s) today (max ${MAX_POSTS_PER_DAY}). Skipping.`);
     return;
   }
 
   const subject = pickSubject(posts, products, queue, now);
   if (process.env.DRY_RUN === "1") {
-    console.log("Would write:", subject?.kind === "product" ? `new-product post for ${subject.product.id}` : subject?.entry.query ?? "nothing");
+    console.log("Would write:", subject ? `[${subject.kind}] ${subject.product?.id ?? subject.entry.query}` : "nothing");
     return;
   }
   if (!subject) {
@@ -374,7 +387,7 @@ async function main() {
 
   console.log(subject.kind === "product"
     ? `Writing a new-product post for "${subject.product.name}"`
-    : `Writing a post for search query "${subject.entry.query}"`);
+    : `Writing a ${subject.kind} post for search query "${subject.entry.query}"`);
 
   const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
   const newPost = await generate(client, subject, posts, products, now);

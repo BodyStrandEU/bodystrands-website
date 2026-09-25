@@ -59,7 +59,7 @@ jobs:
             echo "No new post generated, skipping."
             exit 0
           fi
-          # No [skip ci]: the post has to trigger the Vercel/Cloudflare deploys to go live.
+          # No [skip ci]: the post has to trigger the Cloudflare deploy to go live.
           # (With [skip ci], posts only went live when some other change happened to be pushed.)
           git commit -m "Add blog post"
           git push || (git pull --rebase origin main && git push)

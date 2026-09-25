@@ -2,8 +2,10 @@
 
 # Bodystrands — Project Rules & Context
 
-## Cloudflare Migration Status — updated Sep 10, 2026
-Migrating the site from Vercel to Cloudflare Workers (OpenNext adapter) because Vercel's ISR Writes limit (200K/mo) was exceeded. All work is on the `cloudflare-migration` git branch — `main`/Vercel is untouched and kept live as a fallback insurance policy. **DNS/domain has NOT been touched and must not be, without explicit user confirmation each time.**
+## Hosting: Cloudflare Workers — Vercel dropped Sep 25, 2026
+The site moved from Vercel to Cloudflare Workers (OpenNext adapter) because Vercel's ISR Writes limit (200K/mo) was exceeded. The Worker was bound to the bodystrands.com custom domain on Sep 12 and the migration merged into `main` on Sep 13; every push to `main` deploys via `.github/workflows/cloudflare-deploy.yml`. On Sep 25, 2026 the Vercel deploy workflow (`deploy.yml`) and `@vercel/analytics` / `@vercel/speed-insights` were removed — those scripts 404 on Cloudflare, so the Vercel Analytics dashboard stopped recording on Sep 12. Visitor analytics = Google Analytics 4 (`G-8ZSFBD94RN`, in `app/layout.tsx`) + Cloudflare Web Analytics (dashboard toggle) + Google Search Console. The Vercel project itself may still exist in the Vercel dashboard, paused as a fallback — deleting it is the user's call. **DNS changes still need explicit user confirmation each time.**
+
+The notes below are from the migration period (Sep 10-13) and are kept for their operational gotchas.
 
 **Done and verified on the deployed Worker** (`https://bodystrands-website.bodystrands-website.workers.dev`):
 - Full build/deploy pipeline works (R2 incremental cache, `.assetsignore` for oversized video assets, `experimental: { cpus: 2 }` to cap build parallelism)
@@ -307,7 +309,7 @@ Belly Chains, Back Chains, Body Chains, Shoulder Chains, Anklets, Bracelets, Nec
 
 ## Admin Panel
 - URL: bodystrands.com/admin (password protected)
-- Every save commits directly to GitHub → Vercel auto-deploys in ~1 min
+- Every save commits directly to GitHub → Cloudflare auto-deploys (a few minutes)
 - Image uploads go directly to `public/images/products/` via GitHub API
 - Drag-to-reorder images in the product editor
 - Dashboard: products grouped by category with red ✕ delete button (top-left of thumbnail, requires confirm)
@@ -346,7 +348,7 @@ Belly Chains, Back Chains, Body Chains, Shoulder Chains, Anklets, Bracelets, Nec
 - **Next.js 16 uses `proxy.ts` for middleware, NOT `middleware.ts`** — this is a breaking change
 - Tailwind CSS v4 — uses `@import "tailwindcss"` and `@theme inline {}` syntax
 - TypeScript strict
-- Deployed on Vercel via GitHub (BodyStrandEU/bodystrands-website)
+- Deployed on Cloudflare Workers via GitHub Actions (BodyStrandEU/bodystrands-website)
 - Stripe checkout in `/api/checkout` — secret key in `.env.local` only, never commit
 
 ## New Product Listing Checklist (MANDATORY — do this every time)
@@ -382,7 +384,6 @@ The Anthropic API key is NOT in .env.local — ask the user to paste it (or crea
 - All 11 category pages have unique meta titles/descriptions
 - All product pages have keyword-rich titles via CATEGORY_SUFFIX mapping
 - Blog posts auto-link to products + category pages for internal linking
-- `unoptimized: true` in next.config.ts is a TEMPORARY fix for Vercel free tier image quota — revert when upgrading to Vercel Pro
 
 ## Social Media Scheduling Rules (Postiz) — ALWAYS follow these
 

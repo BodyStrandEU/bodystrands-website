@@ -5,7 +5,7 @@ on:
     branches:
       - main
 
-# Same reasoning as deploy.yml (Vercel): admin-panel saves and blog posts can push in quick
+# Admin-panel saves and blog posts can push in quick
 # succession, and overlapping `wrangler deploy` runs against the same Worker step on each
 # other. A new push cancels whatever deploy is still in flight.
 concurrency:

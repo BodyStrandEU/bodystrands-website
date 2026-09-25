@@ -17,6 +17,15 @@ const BLOG_FILE     = join(__dirname, "../data/blog-posts.json");
 const PRODUCTS_FILE = join(__dirname, "../data/products.json");
 
 const MODEL = "claude-opus-5";
+// Rough spend per call, logged so the GitHub run logs show what the blog costs.
+// claude-opus-5: $5 / $25 per million input / output tokens; web search $10 per 1,000.
+function logCost(label, usage) {
+  const input = (usage.input_tokens ?? 0) + (usage.cache_creation_input_tokens ?? 0) + (usage.cache_read_input_tokens ?? 0);
+  const searches = usage.server_tool_use?.web_search_requests ?? 0;
+  const usd = (input * 5 + (usage.output_tokens ?? 0) * 25) / 1e6 + searches * 0.01;
+  console.log(`[cost] ${label}: ${input} in / ${usage.output_tokens ?? 0} out tokens${searches ? `, ${searches} searches` : ""} ≈ $${usd.toFixed(3)}`);
+}
+
 const MAX_NEW_ENTRIES = 5; // 2 runs/week ≈ 10 ideas; ~4-5 research posts/week are consumed
 const BLOG_CATEGORIES = ["Style Guide", "Gift Guide", "Personalized Jewelry", "Care & Quality", "Inspiration", "Plus Size"];
 
@@ -54,6 +63,7 @@ Report back the 8 strongest ideas, each with: the main search phrase (exactly as
         messages,
       })
       .finalMessage();
+    logCost("research", response.usage);
 
     if (response.stop_reason === "refusal") throw new Error("Model declined the research request.");
     if (response.stop_reason === "pause_turn") {
@@ -102,6 +112,7 @@ async function extract(client, findings, productCategories, productIds) {
 ${findings}`,
     }],
   });
+  logCost("extract", response.usage);
   const text = response.content.find((b) => b.type === "text")?.text;
   if (!text) throw new Error("No extraction output.");
   return JSON.parse(text).entries;

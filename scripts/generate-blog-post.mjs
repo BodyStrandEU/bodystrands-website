@@ -22,6 +22,16 @@ const NEW_PRODUCT_WINDOW_DAYS = 45;
 
 const MODEL = "claude-opus-5";
 const MIN_WORDS = 800;
+
+// Rough spend per call, logged so the GitHub run logs show what the blog costs.
+// claude-opus-5: $5 / $25 per million input / output tokens; web search $10 per 1,000.
+function logCost(label, usage) {
+  const input = (usage.input_tokens ?? 0) + (usage.cache_creation_input_tokens ?? 0) + (usage.cache_read_input_tokens ?? 0);
+  const searches = usage.server_tool_use?.web_search_requests ?? 0;
+  const usd = (input * 5 + (usage.output_tokens ?? 0) * 25) / 1e6 + searches * 0.01;
+  console.log(`[cost] ${label}: ${input} in / ${usage.output_tokens ?? 0} out tokens${searches ? `, ${searches} searches` : ""} ≈ $${usd.toFixed(3)}`);
+}
+
 const BLOG_CATEGORIES = ["Style Guide", "Gift Guide", "Personalized Jewelry", "Care & Quality", "Inspiration", "Plus Size"];
 const BANNED_WORDS = ["elevate", "curated", "testament", "journey", "delve", "game-changer", "transformative", "effortless", "quiet confidence", "316l", "marine-grade", "medical-grade", "surgical-grade"];
 
@@ -214,6 +224,7 @@ async function callModel(client, prompt) {
       messages: [{ role: "user", content: prompt }],
     })
     .finalMessage();
+  logCost("post", response.usage);
 
   if (response.stop_reason === "refusal") throw new Error("Model declined the request.");
   if (response.stop_reason === "max_tokens") throw new Error("Response hit max_tokens.");

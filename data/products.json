@@ -635,7 +635,6 @@
       "https://i.etsystatic.com/55122258/r/il/82e431/7824253621/il_fullxfull.7824253621_acsc.jpg",
       "https://i.etsystatic.com/55122258/r/il/4f89b1/7763623772/il_fullxfull.7763623772_eskh.jpg",
       "https://i.etsystatic.com/55122258/r/il/c073cd/7776334440/il_fullxfull.7776334440_jbeo.jpg",
-      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.webp",
       "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.webp",
       "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp"
     ],
@@ -688,7 +687,10 @@
     "active": true,
     "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/ba52149ce1569ec1f2515434fa8981f6/downloads/default.mp4",
     "altText": "Delicate gold stainless steel zodiac ankle bracelet with personalized birth year charm for everyday wear",
-    "dateAdded": "2026-06-12T14:11:58-04:00"
+    "dateAdded": "2026-06-12T14:11:58-04:00",
+    "giftTags": [
+      "personalized"
+    ]
   },
   {
     "id": "snake-belly-chain",

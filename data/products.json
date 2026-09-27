@@ -11902,5 +11902,92 @@
     "altText": "Pearl beaded necklace with gold rope-trim heart pendant and toggle clasp, hypoallergenic stainless steel gold plated jewelry",
     "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/e52da977c679cfcb2f3f49c83afd2eb0/downloads/default.mp4",
     "sizeGuideImage": "/images/products/8db4052c-3a41-4d8f-9e20-241b1e0f1f67.png"
+  },
+  {
+    "id": "diamond-initial-anklet",
+    "name": "Diamond Initial Anklet",
+    "price": 30,
+    "currency": "EUR",
+    "category": "Anklets",
+    "description": "A double-layered gold anklet with a rhinestone letter charm — a flat mirror-link chain over a fine cable chain, stainless steel and waterproof.",
+    "fullDescription": "A double-layered gold anklet with a rhinestone letter charm.\n\nTwo chains, one letter. A flat mirror-link chain sits above a fine cable chain, with your initial in rhinestones hanging from the lower one. Made from stainless steel, so it's waterproof and won't fade or tarnish, whether you're at the pool, at the beach, or just wearing it every day.\n\nNeed a different size? Message us after checkout and we'll adjust it.\n\nPlease note that as each piece is handcrafted, no two pieces are identical and slight variations may occur.",
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Stainless steel"
+      },
+      {
+        "label": "Finish",
+        "value": "Gold tone"
+      },
+      {
+        "label": "Design",
+        "value": "Double-layered chain"
+      },
+      {
+        "label": "Charm",
+        "value": "Rhinestone letter, choose your letter"
+      },
+      {
+        "label": "Size",
+        "value": "21cm + 5cm extender"
+      },
+      {
+        "label": "Waterproof",
+        "value": "Yes"
+      },
+      {
+        "label": "Tarnish-resistant",
+        "value": "Yes"
+      },
+      {
+        "label": "Care",
+        "value": "Wipe gently with a soft cloth after each wear. Store in an airtight container when not in use."
+      },
+      {
+        "label": "Shipping",
+        "value": "Dispatches within 1-2 business days"
+      }
+    ],
+    "variantGroups": [
+      {
+        "label": "Letter",
+        "type": "options",
+        "options": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F",
+          "G",
+          "H",
+          "I",
+          "J",
+          "K",
+          "L",
+          "M",
+          "N",
+          "O",
+          "P",
+          "Q",
+          "R",
+          "S",
+          "T",
+          "U",
+          "V",
+          "W",
+          "X",
+          "Y",
+          "Z"
+        ]
+      }
+    ],
+    "images": [],
+    "gallery": [],
+    "featured": false,
+    "active": false,
+    "dateAdded": "2026-09-27T17:02:21.801Z",
+    "altText": "Double-layered gold anklet with rhinestone letter charm, stainless steel waterproof mirror-link and cable chain anklet"
   }
 ]

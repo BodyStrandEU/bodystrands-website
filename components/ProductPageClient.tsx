@@ -248,7 +248,7 @@ export default function ProductPageClient({ product }: { product: Product }) {
           <div className="flex items-center gap-2.5">
             <div className="w-1 h-1 rounded-full bg-[#A0622A] animate-pulse" />
             <p className="text-[0.55rem] tracking-[0.18em] uppercase text-[#8C7B6E]">
-              Limited time promo
+              Limited time sale
             </p>
           </div>
         </div>

@@ -11983,11 +11983,28 @@
         ]
       }
     ],
-    "images": [],
-    "gallery": [],
+    "images": [
+      "/images/products/436e2ac0-1a75-4238-939f-9e6647631d41.png"
+    ],
+    "gallery": [
+      "/images/products/436e2ac0-1a75-4238-939f-9e6647631d41.png",
+      "/images/products/981f76e4-5bcf-4bf9-8f04-294e51414f27.png",
+      "/images/products/9aef8f37-3c11-419c-ba3b-46bfaaf2d565.png",
+      "/images/products/3cbda98a-8eef-4017-a019-ee14429a4f05.png",
+      "/images/products/36d545cb-8c90-4a03-a238-1e47267572f7.png",
+      "/images/products/8dc3f1a7-ca44-45c5-b23d-e958f4b5ceca-2.jpeg",
+      "/images/products/53165426-64d8-4bb3-b7a6-f685893d381f.png",
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
+      "/images/products/SaveClip.App_94009087_3737129469692488_4504472029461009842_n.jpg"
+    ],
     "featured": false,
-    "active": false,
+    "active": true,
     "dateAdded": "2026-09-27T17:02:21.801Z",
-    "altText": "Double-layered gold anklet with rhinestone letter charm, stainless steel waterproof mirror-link and cable chain anklet"
+    "altText": "Double-layered gold anklet with rhinestone letter charm, stainless steel waterproof mirror-link and cable chain anklet",
+    "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/efd0c8b49cabcca5dba486646d809e26/downloads/default.mp4",
+    "giftTags": [
+      "personalized"
+    ],
+    "sizeGuideImage": "/images/products/36d545cb-8c90-4a03-a238-1e47267572f7.png"
   }
 ]

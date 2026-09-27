@@ -6,7 +6,6 @@ import BuyButton from "@/components/BuyButton";
 import ProductDetails from "@/components/ProductDetails";
 import type { Product } from "@/lib/products";
 import { getOriginalPrice } from "@/lib/pricing";
-import CountdownTimer from "@/components/CountdownTimer";
 import { useCart } from "@/lib/cart";
 import { COUNTRY_GROUPS, getShippingRate } from "@/lib/shipping";
 import WishlistButton from "@/components/WishlistButton";
@@ -246,7 +245,12 @@ export default function ProductPageClient({ product }: { product: Product }) {
               −25%
             </span>
           </div>
-          <CountdownTimer />
+          <div className="flex items-center gap-2.5">
+            <div className="w-1 h-1 rounded-full bg-[#A0622A] animate-pulse" />
+            <p className="text-[0.55rem] tracking-[0.18em] uppercase text-[#8C7B6E]">
+              Limited time promo
+            </p>
+          </div>
         </div>
 
         <div className="h-px bg-[#E8B4A8]/40" />

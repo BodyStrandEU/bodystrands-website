@@ -91,6 +91,9 @@ All thumbnail prompts must specify **square format, 1:1 aspect ratio**. Etsy thu
 - **Portrait / editorial**: 85mm f/1.4 or 85mm f/1.2
 - **Lifestyle / environmental**: 70–200mm f/2.8 at 135mm (compresses background)
 
+### Prompts must be fully self-contained — confirmed Sep 26, 2026
+The image/video LLM has zero memory of earlier generations or this conversation. Never write "the locked brand style," "same as before," "the approved format," "used across the catalog," or any reference to prior outputs. Every prompt must spell out the full style from scratch (layout, hex-like colors, typeface look, icon style, label/callout construction, aspect ratio). User's words: "you cant tell the llm about previous generations, it doesnt know like you do so we have to explain from scratch."
+
 ### Infographic-style prompts (sizing/feature diagrams) — APPROVED format, confirmed Sep 13, 2026
 User's exact words on the layout: *"i love how you made this infographic.. the integrated photo in the image looks high end.. incredible.. save that please"* — layout below is locked. **But** the first version's typography and color read off-brand (generic bold serif, flat muted brown, plain black body text) — every prompt must now spell out the exact brand look in words, since the model can't read hex codes or font names directly:
 - Whole image on a soft cream background (`#FDF9F7`-style, warm ivory, not stark white), the product photo bleeding directly into the cream (no hard rectangular photo frame/border — the photo fades/blends into the infographic background at the top)

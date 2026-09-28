@@ -1,5 +1,176 @@
 [
   {
+    "query": "what necklace to wear with a black dress",
+    "keywords": [
+      "backless black dress necklace ideas",
+      "pearl backdrop necklace for black dress",
+      "layered necklace stack for black dress",
+      "choker for black velvet dress",
+      "silver or gold necklace with black dress"
+    ],
+    "productIds": [
+      "pearl-evening-backdrop-necklace",
+      "maximalist-layered-necklace-stack",
+      "stacked-pearl-cross-choker",
+      "star-pendant-rhinestone-choker"
+    ],
+    "category": "Style Guide",
+    "months": [
+      10,
+      11,
+      12,
+      1,
+      2
+    ],
+    "productCategories": [
+      "Necklaces",
+      "Back Chains"
+    ],
+    "source": "research",
+    "researchModel": "claude-opus-5",
+    "addedAt": "2026-09-28",
+    "why": "The black dress dominates party season from late October, and Kherish's Christmas 2026 necklace trends piece plus Net-a-Porter's PORTER 2026 report both frame festive necklaces as re-wearable with silk and black dresses."
+  },
+  {
+    "query": "gift ideas for someone who wears glasses",
+    "keywords": [
+      "eyeglasses chain gift for mum",
+      "pearl glasses chain for reading glasses",
+      "gift for someone who always loses their glasses",
+      "beaded eyeglasses chain gift under 35 euros",
+      "practical christmas gift for grandma"
+    ],
+    "productIds": [
+      "pearl-glasses-chain",
+      "dainty-eyeglasses-chain",
+      "boho-beaded-eyeglasses-chain",
+      "silver-eyeglasses-chain"
+    ],
+    "category": "Gift Guide",
+    "months": [
+      10,
+      11,
+      12,
+      5
+    ],
+    "productCategories": [
+      "Eyeglasses Chains"
+    ],
+    "source": "research",
+    "researchModel": "claude-opus-5",
+    "addedAt": "2026-09-28",
+    "why": "Christmas gift-guide searches ramp from October and Angara's 2026 holiday wishlist emphasises versatile, meaningful gifts, matching this low-competition recipient-type gap."
+  },
+  {
+    "query": "how to wear a thigh chain",
+    "keywords": [
+      "thigh chain over tights outfit",
+      "how to stop a thigh chain sliding down",
+      "thigh chain with a slip dress",
+      "plus size thigh chain outfit ideas",
+      "double thigh chain for a party"
+    ],
+    "productIds": [
+      "thigh-chain",
+      "double-drape-thigh-chain",
+      "birthstone-thigh-chain",
+      "double-thigh-belly-chain"
+    ],
+    "category": "Style Guide",
+    "months": [
+      10,
+      11,
+      12,
+      1,
+      5,
+      6,
+      7,
+      8
+    ],
+    "productCategories": [
+      "Leg Chains",
+      "Belly Chains"
+    ],
+    "source": "research",
+    "researchModel": "claude-opus-5",
+    "addedAt": "2026-09-28",
+    "why": "Who What Wear's 2026 jewellery trends cite fluid body-aware design and FreshTrends' 2026 body-jewellery outlook confirms continued momentum, while leg chains remain uncovered content."
+  },
+  {
+    "query": "silver body chain outfit ideas",
+    "keywords": [
+      "silver belly chain with jeans",
+      "layered silver belly chain outfit",
+      "waterproof silver belly chain for everyday",
+      "silver shoulder harness party outfit",
+      "silver body jewellery winter styling"
+    ],
+    "productIds": [
+      "layered-silver-belly-chain",
+      "silver-waterproof-belly-chain",
+      "silver-shoulder-harness",
+      "silver-finger-hand-chain"
+    ],
+    "category": "Style Guide",
+    "months": [
+      9,
+      10,
+      11,
+      12,
+      1,
+      2,
+      3
+    ],
+    "productCategories": [
+      "Body Chains",
+      "Belly Chains",
+      "Shoulder & Arm Chains",
+      "Hand Chains"
+    ],
+    "source": "research",
+    "researchModel": "claude-opus-5",
+    "addedAt": "2026-09-28",
+    "why": "Net-a-Porter's PORTER 2026 report states cool-toned silver jewellery is back and set to be huge for fall/winter 2026."
+  },
+  {
+    "query": "how to stack charm bracelets",
+    "keywords": [
+      "charm bracelet stack with birth flower charm",
+      "zodiac charm bracelet stack ideas",
+      "how many bracelets to stack on one wrist",
+      "meaningful charm bracelet gift for her",
+      "pearl and charm bracelet stack"
+    ],
+    "productIds": [
+      "birth-flower-charm-bracelet",
+      "zodiac-charm-bracelet",
+      "pearl-charm-bracelet",
+      "layered-pearl-bracelet"
+    ],
+    "category": "Style Guide",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "productCategories": [
+      "Bracelets"
+    ],
+    "source": "research",
+    "researchModel": "claude-opus-5",
+    "addedAt": "2026-09-28",
+    "why": "Perles & Co names charms a key AW25/26 category and Gabriel & Co's 2026 report lists meaningful charms among the year's defining trends, with King Jewelers flagging mixed-metal bracelet stacking."
+  },
+  {
     "query": "how to wear pearls without looking old fashioned",
     "keywords": [
       "modern way to wear pearls 2026",

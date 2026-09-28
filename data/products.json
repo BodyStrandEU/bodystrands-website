@@ -12008,5 +12008,100 @@
       "personalized"
     ],
     "sizeGuideImage": "/images/products/36d545cb-8c90-4a03-a238-1e47267572f7.png"
+  },
+  {
+    "id": "diamond-initial-foot-chain",
+    "name": "Diamond Initial Foot Chain",
+    "price": 38,
+    "currency": "EUR",
+    "category": "Anklets",
+    "description": "A double-wrap ankle chain connected to a single toe chain, with your initial in rhinestones — stainless steel, gold plated, and waterproof.",
+    "fullDescription": "A double-wrap ankle chain connected to a single toe chain — two pieces in one.\n\nTwo chains circle the ankle, with your initial in rhinestones hanging from them, and a single connected chain runs down and loops around the toe. Made from stainless steel, so it’s waterproof and won’t fade or tarnish, whether you’re at the beach or just wearing it every day.\n\nPlease note that as each piece is handcrafted, no two pieces are identical and slight variations may occur.",
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Stainless steel"
+      },
+      {
+        "label": "Finish",
+        "value": "Gold tone"
+      },
+      {
+        "label": "Design",
+        "value": "Double-wrap anklet + connected toe chain"
+      },
+      {
+        "label": "Charm",
+        "value": "Rhinestone letter, choose your letter A-Z"
+      },
+      {
+        "label": "Anklet Length",
+        "value": "21cm + 6cm adjustable extender"
+      },
+      {
+        "label": "Toe Chain Length",
+        "value": "8cm"
+      },
+      {
+        "label": "Chain Thickness",
+        "value": "1.5mm & 2mm (mirror-link)"
+      },
+      {
+        "label": "Waterproof",
+        "value": "Yes"
+      },
+      {
+        "label": "Tarnish-resistant",
+        "value": "Yes"
+      },
+      {
+        "label": "Care",
+        "value": "Wipe gently with a soft cloth after each wear. Store in an airtight container when not in use."
+      },
+      {
+        "label": "Shipping",
+        "value": "Dispatches within 1-2 business days"
+      }
+    ],
+    "variantGroups": [
+      {
+        "label": "Letter",
+        "type": "options",
+        "options": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F",
+          "G",
+          "H",
+          "I",
+          "J",
+          "K",
+          "L",
+          "M",
+          "N",
+          "O",
+          "P",
+          "Q",
+          "R",
+          "S",
+          "T",
+          "U",
+          "V",
+          "W",
+          "X",
+          "Y",
+          "Z"
+        ]
+      }
+    ],
+    "images": [],
+    "gallery": [],
+    "featured": false,
+    "active": false,
+    "dateAdded": "2026-09-28T11:48:32.109Z",
+    "altText": "Double-wrap gold ankle chain connected to a single toe chain with rhinestone letter charm, stainless steel waterproof barefoot sandal jewelry"
   }
 ]

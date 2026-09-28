@@ -12015,7 +12015,7 @@
     "price": 38,
     "currency": "EUR",
     "category": "Anklets",
-    "description": "A double-wrap ankle chain connected to a single toe chain, with your initial in rhinestones — stainless steel, gold plated, and waterproof.",
+    "description": "A double-wrap ankle chain connected to a single toe chain, with your initial in rhinestones — stainless steel, 18K gold plated, and waterproof.",
     "fullDescription": "A double-wrap ankle chain connected to a single toe chain — two pieces in one.\n\nTwo chains circle the ankle, with your initial in rhinestones hanging from them, and a single connected chain runs down and loops around the toe. Made from stainless steel, so it’s waterproof and won’t fade or tarnish, whether you’re at the beach or just wearing it every day.\n\nPlease note that as each piece is handcrafted, no two pieces are identical and slight variations may occur.",
     "specs": [
       {
@@ -12097,11 +12097,27 @@
         ]
       }
     ],
-    "images": [],
-    "gallery": [],
+    "images": [
+      "/images/products/83af3317-98a6-4463-9334-79af46e6d69d.png"
+    ],
+    "gallery": [
+      "/images/products/83af3317-98a6-4463-9334-79af46e6d69d.png",
+      "/images/products/9aef8f37-3c11-419c-ba3b-46bfaaf2d565-copy-2.png",
+      "/images/products/ec83fa7b-841d-43e5-a1c0-8953cd2270a4.png",
+      "/images/products/53165426-64d8-4bb3-b7a6-f685893d381f.png",
+      "/images/products/8dc3f1a7-ca44-45c5-b23d-e958f4b5ceca-2.jpeg",
+      "/images/products/404f30c7-07d3-4920-85aa-54590a974058.png",
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
+      "/images/products/SaveClip.App_94009087_3737129469692488_4504472029461009842_n.jpg"
+    ],
     "featured": false,
-    "active": false,
+    "active": true,
     "dateAdded": "2026-09-28T11:48:32.109Z",
-    "altText": "Double-wrap gold ankle chain connected to a single toe chain with rhinestone letter charm, stainless steel waterproof barefoot sandal jewelry"
+    "altText": "Double-wrap gold ankle chain connected to a single toe chain with rhinestone letter charm, stainless steel waterproof barefoot sandal jewelry",
+    "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/f51e680638a5643f8784e0ab40eea28f/downloads/default.mp4",
+    "giftTags": [
+      "personalized"
+    ],
+    "sizeGuideImage": "/images/products/404f30c7-07d3-4920-85aa-54590a974058.png"
   }
 ]

@@ -112,6 +112,9 @@ export async function POST(req: NextRequest) {
     const shippingName = session.collected_information?.shipping_details?.name || customerName;
     const shippingRateForEmail = getShippingRate(shippingAddr?.country ?? "", 0);
     const deliveryEst = `${shippingRateForEmail.deliveryMin}–${shippingRateForEmail.deliveryMax} business days`;
+    // Short customer-facing reference — there's no sequential order-number system, so this
+    // is derived from the Stripe session id (stable, unique, and short enough to quote in an email).
+    const orderRef = `BS-${session.id.slice(-8).toUpperCase()}`;
 
     if (FROM && customerEmail !== "—") {
       await resend.emails.send({
@@ -133,6 +136,7 @@ export async function POST(req: NextRequest) {
             <div style="border:1px solid #E8B4A8;padding:24px;margin:0 0 28px;">
               <p style="font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:#8C7B6E;margin:0 0 14px;">Order Summary</p>
               <table style="width:100%;border-collapse:collapse;">
+                <tr><td style="font-size:13px;padding:6px 0;color:#8C7B6E;width:110px;">Order #</td><td style="font-size:13px;padding:6px 0;color:#2C2220;">${orderRef}</td></tr>
                 <tr><td style="font-size:13px;padding:6px 0;color:#8C7B6E;width:110px;">Item</td><td style="font-size:13px;padding:6px 0;color:#2C2220;">${productName}</td></tr>
                 <tr><td style="font-size:13px;padding:6px 0;color:#8C7B6E;">Total</td><td style="font-size:14px;padding:6px 0;color:#A0622A;font-weight:bold;">${currency} ${amountTotal}</td></tr>
                 <tr><td style="font-size:13px;padding:6px 0;color:#8C7B6E;">Ship to</td><td style="font-size:13px;padding:6px 0;color:#2C2220;">${[shippingAddr?.line1, shippingAddr?.city, shippingAddr?.country].filter(Boolean).join(", ")}</td></tr>
@@ -215,6 +219,10 @@ export async function POST(req: NextRequest) {
             <tr>
               <td style="padding:8px 0;font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:#8C7B6E;">Date</td>
               <td style="padding:8px 0;font-size:14px;">${orderDate}</td>
+            </tr>
+            <tr>
+              <td style="padding:8px 0;font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:#8C7B6E;">Order #</td>
+              <td style="padding:8px 0;font-size:14px;font-weight:bold;">${orderRef}</td>
             </tr>
             <tr>
               <td style="padding:8px 0;font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:#8C7B6E;">Session ID</td>

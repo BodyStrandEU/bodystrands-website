@@ -52,9 +52,12 @@ function pickNewProduct(posts, products, now) {
     .sort((a, b) => new Date(b.dateAdded) - new Date(a.dateAdded))[0] ?? null;
 }
 
+// A post's own search query plus the queries of duplicates merged into it.
+const coveredTopics = (posts) => posts.flatMap((p) => [p.topic, ...(p.mergedTopics ?? [])]).filter(Boolean);
+
 function pickQueueEntry(posts, queue, now, fromResearch) {
   const month = now.getMonth() + 1;
-  const used = new Set(posts.map((p) => p.topic).filter(Boolean));
+  const used = new Set(coveredTopics(posts));
   const candidates = queue.filter((q) =>
     (q.source === "research") === fromResearch &&
     q.months.includes(month) &&
@@ -162,7 +165,7 @@ Other pieces you may link to:
 ${featured.filter((f) => f.id !== p.id).map((f) => describeProduct(f)).join("\n") || "(none)"}
 
 Searches we already have posts for — do NOT target these or close variants; pick a different angle that fits this piece (its motif, material, occasion, gifting, pairing):
-${[...new Set(posts.map((x) => x.topic).filter(Boolean))].slice(0, 80).map((t) => `- ${t}`).join("\n")}
+${[...new Set(coveredTopics(posts))].slice(0, 120).map((t) => `- ${t}`).join("\n")}
 
 Write a blog post that ranks for what people search about THIS TYPE of piece — not the product name (nobody searches that). Choose the single most useful search question for it (e.g. "how to wear a toggle necklace", "what does a cross bracelet mean", "how to layer a choker"), fitting the season where it makes sense. Put that question in "targetQuery". Also pick 3-5 long-tail variations people search around it (materials, occasions, pairings, gifting, sizing) and work them in. The new piece should be featured naturally as a strong example, using only the facts given above — do not invent measurements or materials.
 
@@ -292,7 +295,7 @@ function qualityProblems(parsed, blocks, posts) {
   // Two posts on the same search compete with each other in Google — the
   // Sep 27, 2026 toggle-necklace duplicate had a different title but the
   // exact same target query, which the title check alone missed.
-  const sameQuery = posts.find((p) => p.topic && normQuery(p.topic) === normQuery(parsed.targetQuery));
+  const sameQuery = posts.find((p) => [p.topic, ...(p.mergedTopics ?? [])].some((t) => t && normQuery(t) === normQuery(parsed.targetQuery)));
   if (sameQuery) problems.push(`targets the same search as existing post "${sameQuery.title}" — choose a different search question`);
   return problems;
 }

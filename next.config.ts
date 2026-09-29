@@ -1,4 +1,6 @@
 import type { NextConfig } from "next";
+// Duplicate blog posts merged into their strongest version (Sep 29, 2026).
+import blogRedirects from "./data/blog-redirects.json";
 
 const nextConfig: NextConfig = {
   // Caps static-generation worker parallelism — this dev machine is heavily loaded
@@ -17,6 +19,7 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
+      ...blogRedirects,
       {
         // Duplicate of the same search ("how to wear a toggle necklace"), merged Sep 29, 2026.
         source: "/blog/how-to-wear-a-toggle-necklace-6-simple-ways",
@@ -25,7 +28,7 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/blog/head-chains-for-weddings-the-styling-guide",
-        destination: "/blog/head-chains-for-weddings-your-guide-to-getting-it-right",
+        destination: "/blog/head-chains-for-weddings-how-to-wear-them-right",
         permanent: true,
       },
       {
@@ -245,7 +248,7 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/blog/valentines-day-jewelry-beyond-red-roses-diamonds",
-        destination: "/blog/valentines-jewelry-beyond-red-roses-diamond-rings",
+        destination: "/blog/valentines-day-jewelry-gifts-beyond-the-box",
         permanent: true,
       },
       {
@@ -270,7 +273,7 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/blog/festival-jewelry-what-to-wear-and-how-to-style-it",
-        destination: "/blog/how-to-wear-body-chains-to-a-festival",
+        destination: "/blog/how-to-wear-body-chains-to-a-festival-without-looking-uncomfortable",
         permanent: true,
       },
       {

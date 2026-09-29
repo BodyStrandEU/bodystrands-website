@@ -410,30 +410,6 @@
     "researchModel": "claude-opus-5"
   },
   {
-    "query": "what jewellery to wear with a backless dress",
-    "category": "Style Guide",
-    "months": [
-      10,
-      11,
-      12,
-      1,
-      4,
-      5,
-      6,
-      7
-    ],
-    "productCategories": [
-      "Back Chains",
-      "Body Chains",
-      "Necklaces",
-      "Shoulder & Arm Chains"
-    ],
-    "source": "research",
-    "addedAt": "2026-09-25",
-    "why": "Party dress season starts mid-October and backless styling has strong product demand but almost no editorial coverage beyond one 2025 blog.",
-    "researchModel": "claude-opus-5"
-  },
-  {
     "query": "what jewellery to wear with a sheer dress",
     "category": "Style Guide",
     "months": [

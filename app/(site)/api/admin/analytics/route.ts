@@ -128,7 +128,7 @@ async function fetchGSC(credJson: string, start: string, end: string) {
   const [totals, queries, pages] = await Promise.all([
     gsc.query(site, { ...range }),
     gsc.query(site, { ...range, dimensions: ["query"], rowLimit: 10 }),
-    gsc.query(site, { ...range, dimensions: ["page"], rowLimit: 250 }),
+    gsc.query(site, { ...range, dimensions: ["page"], rowLimit: 1000 }),
   ]);
   const t = totals[0];
   const path = (url: string) => { try { return new URL(url).pathname; } catch { return url; } };
@@ -143,6 +143,8 @@ async function fetchGSC(credJson: string, start: string, end: string) {
     pages:   pages.slice(0, 10).map((r) => ({ path: path(r.keys?.[0] ?? ""), clicks: r.clicks, impressions: r.impressions })),
     blogPagesSeen: blogPages.length,
     blogImpressions: blogPages.reduce((sum, r) => sum + r.impressions, 0),
+    // Per-post search data (used for blog reviews: keep/merge decisions).
+    blogPages: blogPages.map((r) => ({ path: path(r.keys?.[0] ?? ""), clicks: r.clicks, impressions: r.impressions, position: r.position })),
   };
 }
 

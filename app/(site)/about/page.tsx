@@ -26,8 +26,8 @@ export default function AboutPage() {
       <div className="max-w-7xl mx-auto px-6 md:px-10 grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center mb-20 md:mb-28">
         <div className="relative aspect-[4/5] overflow-hidden">
           <Image
-            src="/images/lifestyle-pearl-back.jpg"
-            alt="Bodystrands handmade jewelry"
+            src="/images/about-el-and-gio.jpg"
+            alt="El and Gio, the couple who make Bodystrands jewelry"
             fill
             className="object-cover object-center"
           />

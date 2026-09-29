@@ -65,7 +65,7 @@ const SECTIONS: Section[] = [
     title: "About Page",
     description: "Photos on the /about page",
     slots: [
-      { label: "Main Photo", path: "images/lifestyle-pearl-back.jpg" },
+      { label: "Main Photo", path: "images/about-el-and-gio.jpg" },
     ],
   },
   {

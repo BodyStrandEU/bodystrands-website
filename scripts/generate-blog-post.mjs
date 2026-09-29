@@ -13,7 +13,7 @@ const QUEUE_FILE    = join(__dirname, "../data/blog-queue.json");
 // like Valentine's Day in September). cron-job.org fires the workflow 3x/day,
 // so the cadence is enforced here: at most MAX_POSTS_PER_DAY posts per UTC day.
 // FORCE=1 bypasses it for manual runs.
-const MAX_POSTS_PER_DAY = 2;
+const MAX_POSTS_PER_DAY = 1; // user decision Sep 29, 2026 — steady pace, avoids looking like scaled content
 
 // Products added within this window that no post has covered yet get a post of
 // their own (targeting what people search about that type of piece).
@@ -148,7 +148,8 @@ Today is ${now.toISOString().slice(0, 10)} (${monthName}). Readers are mostly in
 - Work the long-tail keywords (listed below, or ones you choose) into headings, list items and sentences where they read naturally — each once or twice at most. Never stuff keywords or repeat a phrase awkwardly; readability comes first.
 - Link products with <a href="/shop/ID">Name</a> inside paragraph or list text, only from the products given below, 2-4 links total, where they truly fit. You may link a category as <a href="/shop?category=Necklaces">necklaces</a>. No other HTML.
 - FAQ: 3 distinct questions people also search around this topic, each answer self-contained in 1-3 sentences, plain text.
-- Tags: 5 lowercase search terms.`;
+- Tags: 5 lowercase search terms.
+- No statistics, percentages, survey results or named sources unless they appear in the product facts above — never invent or repeat unverified numbers (including anything in "Why it's timely").`;
 
   if (subject.kind === "product") {
     const p = subject.product;

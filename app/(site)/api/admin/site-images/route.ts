@@ -14,6 +14,9 @@ function githubHeaders(): HeadersInit {
     Accept: "application/vnd.github+json",
     "Content-Type": "application/json",
     "X-GitHub-Api-Version": "2022-11-28",
+    // GitHub rejects requests without a User-Agent (403 "administrative rules").
+    // Node's fetch sent one implicitly on Vercel; the Workers runtime doesn't.
+    "User-Agent": "bodystrands-website-admin",
   };
 }
 

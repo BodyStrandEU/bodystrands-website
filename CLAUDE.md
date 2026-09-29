@@ -323,7 +323,7 @@ Belly Chains, Back Chains, Body Chains, Shoulder Chains, Anklets, Bracelets, Nec
   2. Homepage — Category Tiles (11 slots)
   3. Homepage — Lifestyle Slider (7 slots → images/lifestyle/XX-name.jpg)
   4. Homepage — Brand Story
-  5. About Page (single slot: lifestyle-pearl-back.jpg)
+  5. About Page (single slot: about-el-and-gio.jpg)
   6. Logo
 
 ## Key Files
@@ -379,12 +379,14 @@ The Anthropic API key is NOT in .env.local — ask the user to paste it (or crea
 - Google Search Console: verified, sitemap submitted (113+ pages indexed)
 - Bing Webmaster Tools: set up via GSC import
 - Blog auto-generation (revamped Sep 25, 2026 — research-driven, long-form posts tied to products):
-  - `scripts/generate-blog-post.mjs` writes at most 2 posts per UTC day (`MAX_POSTS_PER_DAY`), enforced in the script because cron-job.org triggers the workflow (ID 297904761) 3x/day (job IDs 7854981, 7854984, 7854985) — the third run just exits. Manual run with the "force" checkbox bypasses the cap.
+  - `scripts/generate-blog-post.mjs` writes at most 1 post per UTC day (`MAX_POSTS_PER_DAY`; user chose 1/day on Sep 29, 2026 to avoid looking like scaled content). The workflow runs once daily on its own schedule (cron-job.org dispatch triggers were never observed firing). Manual run with the "force" checkbox bypasses the cap.
   - Subjects rotate product → research → calendar (skipping empty buckets): (1) a newly added live product no post covers yet (`sourceProductId`), targeting what people search about that TYPE of piece; (2) the newest `source: "research"` entry in `data/blog-queue.json`; (3) the next in-season static calendar entry in the same file (`months` gates seasonality). Each post's `source` field records which.
   - `scripts/research-blog-keywords.mjs` (workflow `blog-research.yml`, Mon + Thu 05:00 UTC) web-searches trending + long-tail keywords and prepends up to 5 entries with `keywords` (long-tail phrases to work into the post) and `productIds` (catalog products the post must feature). Entries with no real product match are dropped.
-  - Model: claude-opus-5 with structured output; quality gate (≥800 words, no banned words, no near-duplicate titles, links only to real product ids) with one retry. Runs on the ANTHROPIC_API_KEY GitHub secret — if the account's credit runs out, both workflows fail ("credit balance is too low"). Expected cost ~$35-50/month.
+  - Model: claude-opus-5 with structured output; quality gate (≥800 words, no banned words, no near-duplicate titles, links only to real product ids) with one retry. Runs on the ANTHROPIC_API_KEY GitHub secret — if the account's credit runs out, both workflows fail ("credit balance is too low"). Expected cost ~$10/month (≈$0.12/post + ≈$1/Opus research run, ≈$0.45/Sonnet run).
   - **Research-model A/B test (started Sep 25, 2026, review ~Oct 25):** Monday research runs on claude-opus-5, Thursday on claude-sonnet-5 (`RESEARCH_MODEL` env overrides). Queue entries and posts carry `researchModel`; posts are always written by Opus so research is the only variable. Compare via `GET /api/admin/blog-ab?start=2026-09-25` (admin cookie; logs in with ADMIN_PASSWORD via `/api/admin/login`) — GA4 views, views/post and engaged seconds/view per research model. Also judge idea quality directly (queue `why` + keywords). Caveat: new posts take 2-3 months to rank, so a 1-month read is an early signal only. Measured cost: Opus research ≈ $1.16/run, Opus post ≈ $0.12.
   - Blog commits must NOT use `[skip ci]` — before Sep 25, 2026 they did, so posts only went live when some other push happened to trigger a deploy (Sep 22-24 posts sat unpublished).
+  - Duplicate protection: a post whose target query matches an existing post's `topic` is rejected (the Sep 27, 2026 toggle-necklace duplicate was merged into the Sep 25 post with a 301 in next.config.ts). Products folded into another post are listed in that post's `coveredProductIds`.
+  - Spam-risk plan (agreed Sep 29, 2026): merge only true duplicates (same question) now; review June–July legacy posts ~late Oct with Search Console data; review Aug–Sep posts in Dec/Jan. Don't judge posts younger than ~3 months on traffic.
   - Post content blocks: `paragraph`, `heading`, `list` (`items: string[]`).
 - All 111 products have long-tail `altText` for Google Images SEO
 - All 11 category pages have unique meta titles/descriptions

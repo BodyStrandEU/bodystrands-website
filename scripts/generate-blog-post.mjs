@@ -44,7 +44,8 @@ function isLive(product) {
 }
 
 function pickNewProduct(posts, products, now) {
-  const covered = new Set(posts.map((p) => p.sourceProductId).filter(Boolean));
+  // coveredProductIds: products folded into another post (e.g. after merging duplicates).
+  const covered = new Set(posts.flatMap((p) => [p.sourceProductId, ...(p.coveredProductIds ?? [])]).filter(Boolean));
   return products
     .filter((p) => isLive(p) && !covered.has(p.id))
     .filter((p) => daysBetween(new Date(p.dateAdded), now) <= NEW_PRODUCT_WINDOW_DAYS)
@@ -128,7 +129,9 @@ const BRAND = `Bodystrands is a small, couple-run handmade body jewelry brand ba
 
 const VOICE = `Voice: warm, plain and direct, like a friend who knows jewelry. Talk to "you". Short sentences, no filler. Never use: ${BANNED_WORDS.slice(0, 8).join(", ")}, "actually", "quiet confidence", or any influencer-style phrasing.`;
 
-function buildPrompt(subject, featured, now) {
+const normQuery = (q) => String(q ?? "").toLowerCase().replace(/[^a-z0-9 ]/g, "").replace(/\s+/g, " ").trim();
+
+function buildPrompt(subject, featured, now, posts) {
   const monthName = now.toLocaleString("en-GB", { month: "long" });
   const common = `${BRAND}
 
@@ -156,6 +159,9 @@ ${describeProduct(p, true)}
 
 Other pieces you may link to:
 ${featured.filter((f) => f.id !== p.id).map((f) => describeProduct(f)).join("\n") || "(none)"}
+
+Searches we already have posts for — do NOT target these or close variants; pick a different angle that fits this piece (its motif, material, occasion, gifting, pairing):
+${[...new Set(posts.map((x) => x.topic).filter(Boolean))].slice(0, 80).map((t) => `- ${t}`).join("\n")}
 
 Write a blog post that ranks for what people search about THIS TYPE of piece — not the product name (nobody searches that). Choose the single most useful search question for it (e.g. "how to wear a toggle necklace", "what does a cross bracelet mean", "how to layer a choker"), fitting the season where it makes sense. Put that question in "targetQuery". Also pick 3-5 long-tail variations people search around it (materials, occasions, pairings, gifting, sizing) and work them in. The new piece should be featured naturally as a strong example, using only the facts given above — do not invent measurements or materials.
 
@@ -282,6 +288,11 @@ function qualityProblems(parsed, blocks, posts) {
   if (posts.some((p) => p.slug === slugify(parsed.title))) problems.push("slug already exists");
   const similar = findSimilarTitle(parsed.title, posts);
   if (similar) problems.push(`too similar to existing post "${similar}"`);
+  // Two posts on the same search compete with each other in Google — the
+  // Sep 27, 2026 toggle-necklace duplicate had a different title but the
+  // exact same target query, which the title check alone missed.
+  const sameQuery = posts.find((p) => p.topic && normQuery(p.topic) === normQuery(parsed.targetQuery));
+  if (sameQuery) problems.push(`targets the same search as existing post "${sameQuery.title}" — choose a different search question`);
   return problems;
 }
 
@@ -290,7 +301,7 @@ async function generate(client, subject, posts, products, now) {
     ? [subject.product, ...relatedProducts(subject.product, products)]
     : productsForEntry(subject.entry, products);
   const productIds = new Set(products.filter(isLive).map((p) => p.id));
-  const basePrompt = buildPrompt(subject, featured, now);
+  const basePrompt = buildPrompt(subject, featured, now, posts);
 
   let prompt = basePrompt;
   for (let attempt = 1; attempt <= 2; attempt++) {

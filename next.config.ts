@@ -18,6 +18,12 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       {
+        // Duplicate of the same search ("how to wear a toggle necklace"), merged Sep 29, 2026.
+        source: "/blog/how-to-wear-a-toggle-necklace-6-simple-ways",
+        destination: "/blog/how-to-wear-a-toggle-necklace-front-clasp-styling-tips",
+        permanent: true,
+      },
+      {
         source: "/blog/head-chains-for-weddings-the-styling-guide",
         destination: "/blog/head-chains-for-weddings-your-guide-to-getting-it-right",
         permanent: true,

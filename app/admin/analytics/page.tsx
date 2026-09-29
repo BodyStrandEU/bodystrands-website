@@ -59,6 +59,14 @@ type AnalyticsData = {
   ga4:             GA4Data | null;
   ga4Ready:        boolean;
   ga4Error?:       string | null;
+  gsc?: {
+    site: string;
+    clicks: number; impressions: number; ctr: number; position: number;
+    queries: { query: string; clicks: number; impressions: number; position: number }[];
+    pages:   { path: string; clicks: number; impressions: number }[];
+    blogPagesSeen: number; blogImpressions: number;
+  } | null;
+  gscError?: string | null;
 };
 
 function fmt(n: number, currency = "EUR") {
@@ -399,6 +407,55 @@ export default function AnalyticsPage() {
                     ))}
                   </div>
                 </div>
+              </div>
+            )}
+
+            {/* ── Google Search (Search Console) — impressions show up weeks before clicks ── */}
+            {data.gsc && (
+              <>
+                <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(160px, 1fr))", gap: "1.25rem", marginBottom: "1.25rem" }}>
+                  <div style={card}><p style={lbl}>Google Impressions</p><p style={big}>{data.gsc.impressions.toLocaleString()}</p><p style={sub}>times shown in search results</p></div>
+                  <div style={card}><p style={lbl}>Google Clicks</p><p style={big}>{data.gsc.clicks.toLocaleString()}</p><p style={sub}>{pct(data.gsc.ctr)} click-through</p></div>
+                  <div style={card}><p style={lbl}>Avg. Position</p><p style={big}>{data.gsc.position ? data.gsc.position.toFixed(1) : "—"}</p><p style={sub}>lower is better · page 1 = 1–10</p></div>
+                  <div style={card}><p style={lbl}>Blog Posts Seen by Google</p><p style={big}>{data.gsc.blogPagesSeen}</p><p style={sub}>{data.gsc.blogImpressions.toLocaleString()} blog impressions</p></div>
+                </div>
+                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1.25rem", marginBottom: "1.25rem" }}>
+                  <div style={sec}>
+                    <div style={sh}><span>Top Google Searches</span><span>clicks · shown</span></div>
+                    <div style={{ padding: "0.75rem 1.25rem", display: "flex", flexDirection: "column", gap: "0.8rem" }}>
+                      {data.gsc.queries.length === 0 && <span style={{ fontSize: "0.72rem", color: "var(--admin-muted)" }}>No search data for this period yet.</span>}
+                      {data.gsc.queries.map((q) => (
+                        <div key={q.query}>
+                          <div style={{ display: "flex", justifyContent: "space-between", gap: 8, marginBottom: 4 }}>
+                            <span style={{ fontSize: "0.7rem", color: "var(--admin-text)", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }} title={`avg position ${q.position.toFixed(1)}`}>{q.query}</span>
+                            <span style={{ fontSize: "0.72rem", color: "var(--admin-muted)", whiteSpace: "nowrap" }}>{q.clicks} · {q.impressions.toLocaleString()}</span>
+                          </div>
+                          <MiniBar value={q.impressions} max={Math.max(...data.gsc!.queries.map((x) => x.impressions), 1)} color="#6B8E6B" />
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                  <div style={sec}>
+                    <div style={sh}><span>Top Pages in Google</span><span>clicks · shown</span></div>
+                    <div style={{ padding: "0.75rem 1.25rem", display: "flex", flexDirection: "column", gap: "0.8rem" }}>
+                      {data.gsc.pages.map((pg) => (
+                        <div key={pg.path}>
+                          <div style={{ display: "flex", justifyContent: "space-between", gap: 8, marginBottom: 4 }}>
+                            <span style={{ fontSize: "0.68rem", color: "var(--admin-text)", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }} title={pg.path}>{pg.path}</span>
+                            <span style={{ fontSize: "0.72rem", color: "var(--admin-muted)", whiteSpace: "nowrap" }}>{pg.clicks} · {pg.impressions.toLocaleString()}</span>
+                          </div>
+                          <MiniBar value={pg.impressions} max={data.gsc!.pages[0]?.impressions ?? 1} color="#A0622A" />
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </>
+            )}
+            {data.gsc === null && data.gscError && data.ga4Ready && (
+              <div style={{ ...sec, border: "1px solid #A0622A33" }}>
+                <div style={{ ...sh, color: "#A0622A" }}><span>Search Console — Connection Error</span></div>
+                <div style={{ padding: "1.25rem", fontSize: "0.72rem", lineHeight: 1.7, color: "var(--admin-muted)", wordBreak: "break-word" }}>{data.gscError}</div>
               </div>
             )}
 

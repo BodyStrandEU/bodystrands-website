@@ -13,7 +13,7 @@ export type ReportRow = {
 };
 export type Report = { rows?: ReportRow[] };
 
-const SCOPE = "https://www.googleapis.com/auth/analytics.readonly";
+const GA4_SCOPE = "https://www.googleapis.com/auth/analytics.readonly";
 const TOKEN_URL = "https://oauth2.googleapis.com/token";
 
 const base64url = (bytes: ArrayBuffer | Uint8Array) =>
@@ -30,10 +30,12 @@ async function importPrivateKey(pem: string): Promise<CryptoKey> {
   return crypto.subtle.importKey("pkcs8", der, { name: "RSASSA-PKCS1-v1_5", hash: "SHA-256" }, false, ["sign"]);
 }
 
-async function getAccessToken(sa: ServiceAccount): Promise<string> {
+/** Service-account access token for a Google API scope (also used by lib/gsc.ts). */
+export async function getAccessToken(credJson: string, scope: string): Promise<string> {
+  const sa = JSON.parse(credJson) as ServiceAccount;
   const now = Math.floor(Date.now() / 1000);
   const unsigned = `${encodeJson({ alg: "RS256", typ: "JWT" })}.${encodeJson({
-    iss: sa.client_email, scope: SCOPE, aud: TOKEN_URL, iat: now, exp: now + 3600,
+    iss: sa.client_email, scope, aud: TOKEN_URL, iat: now, exp: now + 3600,
   })}`;
   const key = await importPrivateKey(sa.private_key);
   const signature = await crypto.subtle.sign("RSASSA-PKCS1-v1_5", key, new TextEncoder().encode(unsigned));
@@ -46,13 +48,13 @@ async function getAccessToken(sa: ServiceAccount): Promise<string> {
       assertion: `${unsigned}.${base64url(signature)}`,
     }),
   });
-  if (!res.ok) throw new Error(`GA4 token exchange failed: ${res.status} ${await res.text()}`);
+  if (!res.ok) throw new Error(`Google token exchange failed: ${res.status} ${await res.text()}`);
   return ((await res.json()) as { access_token: string }).access_token;
 }
 
 /** Returns a runReport function bound to one property and one access token. */
 export async function ga4Client(propertyId: string, credJson: string) {
-  const token = await getAccessToken(JSON.parse(credJson) as ServiceAccount);
+  const token = await getAccessToken(credJson, GA4_SCOPE);
   return async function runReport(body: Record<string, unknown>): Promise<Report> {
     const res = await fetch(`https://analyticsdata.googleapis.com/v1beta/properties/${propertyId}:runReport`, {
       method: "POST",

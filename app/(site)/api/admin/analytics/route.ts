@@ -4,6 +4,7 @@ import { NextRequest, NextResponse } from "next/server";
 import Stripe from "stripe";
 import { isValidToken, COOKIE_NAME } from "@/lib/auth";
 import { ga4Client } from "@/lib/ga4";
+import { gscClient, pickSite } from "@/lib/gsc";
 
 // Explicit fetch-based HTTP client — required for Stripe's SDK under the Cloudflare Workers runtime.
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY ?? "", {
@@ -117,6 +118,44 @@ async function fetchGA4(propertyId: string, credJson: string, ga4Start: string, 
   };
 }
 
+// Search Console: how often Google shows the site (impressions) and for what —
+// the early signal for new pages, long before they earn clicks.
+async function fetchGSC(credJson: string, start: string, end: string) {
+  const gsc  = await gscClient(credJson);
+  const site = pickSite(await gsc.sites());
+  if (!site) throw new Error("The service account has no Search Console property — add it under Settings → Users and permissions.");
+  const range = { startDate: start, endDate: end };
+  const [totals, queries, pages] = await Promise.all([
+    gsc.query(site, { ...range }),
+    gsc.query(site, { ...range, dimensions: ["query"], rowLimit: 10 }),
+    gsc.query(site, { ...range, dimensions: ["page"], rowLimit: 250 }),
+  ]);
+  const t = totals[0];
+  const path = (url: string) => { try { return new URL(url).pathname; } catch { return url; } };
+  const blogPages = pages.filter((r) => path(r.keys?.[0] ?? "").startsWith("/blog/"));
+  return {
+    site,
+    clicks:      t?.clicks ?? 0,
+    impressions: t?.impressions ?? 0,
+    ctr:         t?.ctr ?? 0,
+    position:    t?.position ?? 0,
+    queries: queries.map((r) => ({ query: r.keys?.[0] ?? "", clicks: r.clicks, impressions: r.impressions, position: r.position })),
+    pages:   pages.slice(0, 10).map((r) => ({ path: path(r.keys?.[0] ?? ""), clicks: r.clicks, impressions: r.impressions })),
+    blogPagesSeen: blogPages.length,
+    blogImpressions: blogPages.reduce((sum, r) => sum + r.impressions, 0),
+  };
+}
+
+// GA4 date strings can be relative ("30daysAgo", "today"); Search Console needs YYYY-MM-DD.
+function toIsoDate(d: string): string {
+  if (/^\d{4}-\d{2}-\d{2}$/.test(d)) return d;
+  const date = new Date();
+  if (d === "yesterday") date.setDate(date.getDate() - 1);
+  const m = d.match(/^(\d+)daysAgo$/);
+  if (m) date.setDate(date.getDate() - Number(m[1]));
+  return date.toISOString().slice(0, 10);
+}
+
 export async function GET(request: NextRequest) {
   if (!checkAuth(request)) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
 
@@ -183,11 +222,15 @@ export async function GET(request: NextRequest) {
 
     let ga4: Awaited<ReturnType<typeof fetchGA4>> | null = null;
     let ga4Error: string | null = null;
+    let gsc: Awaited<ReturnType<typeof fetchGSC>> | null = null;
+    let gscError: string | null = null;
     const ga4PropertyId = process.env.GA4_PROPERTY_ID;
     const ga4Creds      = process.env.GA4_SERVICE_ACCOUNT_JSON;
     if (ga4PropertyId && ga4Creds) {
       try { ga4 = await fetchGA4(ga4PropertyId, ga4Creds, ga4Start, ga4End); }
       catch (e) { console.error("GA4 error:", e); ga4Error = e instanceof Error ? e.message : String(e); }
+      try { gsc = await fetchGSC(ga4Creds, toIsoDate(ga4Start), toIsoDate(ga4End)); }
+      catch (e) { console.error("Search Console error:", e); gscError = e instanceof Error ? e.message : String(e); }
     }
 
     // transactionId in GA4's purchase event is set to the Stripe checkout session id, so this
@@ -219,6 +262,8 @@ export async function GET(request: NextRequest) {
       ga4,
       ga4Ready: !!(ga4PropertyId && ga4Creds),
       ga4Error,
+      gsc,
+      gscError,
     });
   } catch (err) {
     return NextResponse.json({ error: err instanceof Error ? err.message : "Error" }, { status: 500 });

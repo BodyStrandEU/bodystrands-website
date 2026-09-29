@@ -12119,5 +12119,111 @@
       "personalized"
     ],
     "sizeGuideImage": "/images/products/404f30c7-07d3-4920-85aa-54590a974058.png"
+  },
+  {
+    "id": "paperclip-initial-necklace",
+    "name": "Paperclip Initial Necklace",
+    "price": 30,
+    "currency": "EUR",
+    "category": "Necklaces",
+    "description": "A chunky gold paperclip chain with your initial in rhinestones, hanging right from the clasp — stainless steel, hypoallergenic, and waterproof.",
+    "fullDescription": "A chunky gold paperclip chain with your initial in rhinestones, hanging right from the clasp.\n\nSimple and bold at the same time. The toggle clasp sits at the front with the letter charm dangling straight off it, unisex and easy to layer or wear alone. Made from stainless steel with a PVD real gold plated finish, so it’s hypoallergenic and holds its color without fading or tarnishing.\n\nPlease note that as each piece is handcrafted, no two pieces are identical and slight variations may occur.",
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Stainless steel"
+      },
+      {
+        "label": "Finish",
+        "value": "PVD real gold plated"
+      },
+      {
+        "label": "Charm",
+        "value": "Rhinestone initial letter, choose your letter A-Z"
+      },
+      {
+        "label": "Length",
+        "value": "48cm"
+      },
+      {
+        "label": "Closure",
+        "value": "Front toggle (OT) clasp"
+      },
+      {
+        "label": "Hypoallergenic",
+        "value": "Yes"
+      },
+      {
+        "label": "Waterproof",
+        "value": "Yes"
+      },
+      {
+        "label": "Tarnish-resistant",
+        "value": "Yes"
+      },
+      {
+        "label": "Care",
+        "value": "Wipe gently with a soft cloth after each wear. Store in an airtight container when not in use."
+      },
+      {
+        "label": "Shipping",
+        "value": "Dispatches within 1-2 business days"
+      }
+    ],
+    "tags": [
+      "namenskette",
+      "kette mit namen",
+      "dainty name necklace",
+      "custom letter choker",
+      "initials choker",
+      "initialnecklace",
+      "spaced necklace",
+      "mom initial necklace",
+      "balloon initial",
+      "name logo necklace",
+      "monogramnecklace",
+      "paperclip necklace",
+      "big letter necklace"
+    ],
+    "variantGroups": [
+      {
+        "label": "Letter",
+        "type": "options",
+        "options": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F",
+          "G",
+          "H",
+          "I",
+          "J",
+          "K",
+          "L",
+          "M",
+          "N",
+          "O",
+          "P",
+          "Q",
+          "R",
+          "S",
+          "T",
+          "U",
+          "V",
+          "W",
+          "X",
+          "Y",
+          "Z"
+        ]
+      }
+    ],
+    "images": [],
+    "gallery": [],
+    "featured": false,
+    "active": false,
+    "dateAdded": "2026-09-29T12:23:20.389Z",
+    "altText": "Gold paperclip chain necklace with rhinestone initial letter charm, chunky unisex hypoallergenic stainless steel necklace"
   }
 ]

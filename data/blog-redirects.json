@@ -30,11 +30,6 @@
     "permanent": true
   },
   {
-    "source": "/blog/birthstone-bracelets-what-they-mean-how-to-pick-yours",
-    "destination": "/blog/what-is-a-birthstone-bracelet-and-which-one-should-you-choose",
-    "permanent": true
-  },
-  {
     "source": "/blog/bridal-jewelry-beyond-the-veil-and-earrings",
     "destination": "/blog/wedding-jewelry-beyond-necklaces-earrings",
     "permanent": true
@@ -85,6 +80,11 @@
     "permanent": true
   },
   {
+    "source": "/blog/hand-chain-styling-5-ways-to-wear-one-every-day",
+    "destination": "/blog/how-to-wear-hand-chains-for-everyday-looks",
+    "permanent": true
+  },
+  {
     "source": "/blog/handmade-vs-mass-produced-jewelry-what-you-actually-get",
     "destination": "/blog/handmade-vs-mass-produced-jewelry-what-youre-actually-getting",
     "permanent": true
@@ -110,11 +110,6 @@
     "permanent": true
   },
   {
-    "source": "/blog/how-to-layer-necklaces-the-length-rule-that-actually-works",
-    "destination": "/blog/layer-necklaces-like-you-mean-it-a-length-guide",
-    "permanent": true
-  },
-  {
     "source": "/blog/how-to-mix-gold-and-silver-jewelry-without-it-looking-chaotic",
     "destination": "/blog/mix-gold-and-silver-jewelry-without-the-doubt",
     "permanent": true
@@ -126,7 +121,7 @@
   },
   {
     "source": "/blog/how-to-style-a-hand-chain-with-any-outfit",
-    "destination": "/blog/hand-chain-styling-5-ways-to-wear-one-every-day",
+    "destination": "/blog/how-to-wear-hand-chains-for-everyday-looks",
     "permanent": true
   },
   {
@@ -160,11 +155,6 @@
     "permanent": true
   },
   {
-    "source": "/blog/how-to-wear-hand-chains-for-everyday-looks",
-    "destination": "/blog/hand-chain-styling-5-ways-to-wear-one-every-day",
-    "permanent": true
-  },
-  {
     "source": "/blog/jewelry-gifts-for-teenagers-young-women-what-actually-works",
     "destination": "/blog/body-jewelry-gifts-that-actually-hit-for-teens-young-women",
     "permanent": true
@@ -177,6 +167,11 @@
   {
     "source": "/blog/last-minute-gifts-that-dont-feel-like-last-minute-gifts",
     "destination": "/blog/last-minute-jewelry-gifts-that-still-feel-thoughtful",
+    "permanent": true
+  },
+  {
+    "source": "/blog/layer-necklaces-like-you-mean-it-a-length-guide",
+    "destination": "/blog/how-to-layer-necklaces-the-length-rule-that-actually-works",
     "permanent": true
   },
   {
@@ -196,7 +191,7 @@
   },
   {
     "source": "/blog/layering-necklaces-at-different-lengths-the-right-way",
-    "destination": "/blog/layer-necklaces-like-you-mean-it-a-length-guide",
+    "destination": "/blog/how-to-layer-necklaces-the-length-rule-that-actually-works",
     "permanent": true
   },
   {
@@ -240,8 +235,8 @@
     "permanent": true
   },
   {
-    "source": "/blog/plus-size-jewelry-brands-that-actually-deliver-on-sizing",
-    "destination": "/blog/plus-size-jewelry-brands-that-actually-fit",
+    "source": "/blog/plus-size-jewelry-brands-that-actually-fit",
+    "destination": "/blog/plus-size-jewelry-brands-that-actually-deliver-on-sizing",
     "permanent": true
   },
   {
@@ -297,6 +292,11 @@
   {
     "source": "/blog/valentines-jewelry-beyond-red-roses-diamond-rings",
     "destination": "/blog/valentines-day-jewelry-gifts-beyond-the-box",
+    "permanent": true
+  },
+  {
+    "source": "/blog/what-is-a-birthstone-bracelet-and-which-one-should-you-choose",
+    "destination": "/blog/birthstone-bracelets-what-they-mean-how-to-pick-yours",
     "permanent": true
   },
   {

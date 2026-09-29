@@ -12122,12 +12122,12 @@
   },
   {
     "id": "paperclip-initial-necklace",
-    "name": "Paperclip Initial Necklace",
+    "name": "Paperclip Chain Diamond Initial Necklace",
     "price": 30,
     "currency": "EUR",
     "category": "Necklaces",
     "description": "A chunky gold paperclip chain with your initial in rhinestones, hanging right from the clasp — stainless steel, hypoallergenic, and waterproof.",
-    "fullDescription": "A chunky gold paperclip chain with your initial in rhinestones, hanging right from the clasp.\n\nSimple and bold at the same time. The toggle clasp sits at the front with the letter charm dangling straight off it, unisex and easy to layer or wear alone. Made from stainless steel with a PVD real gold plated finish, so it’s hypoallergenic and holds its color without fading or tarnishing.\n\nPlease note that as each piece is handcrafted, no two pieces are identical and slight variations may occur.",
+    "fullDescription": "A chunky gold paperclip chain with your initial in rhinestones, hanging right from the clasp.\n\nSimple and bold at the same time. The toggle clasp sits at the front with the letter charm dangling straight off it, unisex and easy to layer or wear alone. Made from stainless steel with an 18K PVD real gold plated finish, so it’s hypoallergenic and holds its color without fading or tarnishing.\n\nPlease note that as each piece is handcrafted, no two pieces are identical and slight variations may occur.",
     "specs": [
       {
         "label": "Material",
@@ -12135,7 +12135,7 @@
       },
       {
         "label": "Finish",
-        "value": "PVD real gold plated"
+        "value": "18K PVD real gold plated"
       },
       {
         "label": "Charm",
@@ -12219,11 +12219,27 @@
         ]
       }
     ],
-    "images": [],
-    "gallery": [],
+    "images": [
+      "/images/products/a1256d7a-79ec-4f78-8b49-19649a23176b.png"
+    ],
+    "gallery": [
+      "/images/products/a1256d7a-79ec-4f78-8b49-19649a23176b.png",
+      "/images/products/b8fb5de6-c3f4-4835-a312-0dc5093aa112.png",
+      "/images/products/73014336-037b-4a25-b503-63f67d11ef24.png",
+      "/images/products/51953be0-2a5b-465c-89dd-48404d3701fc.png",
+      "/images/products/4c154510-a4d9-4055-9d01-e62e1f7cc15b.png",
+      "/images/products/b993eb49-d4e6-44a0-a8ae-49186b4c3bb8.png",
+      "/images/products/53165426-64d8-4bb3-b7a6-f685893d381f.png",
+      "/images/products/SaveClip.App_94009087_3737129469692488_4504472029461009842_n.jpg"
+    ],
     "featured": false,
-    "active": false,
+    "active": true,
     "dateAdded": "2026-09-29T12:23:20.389Z",
-    "altText": "Gold paperclip chain necklace with rhinestone initial letter charm, chunky unisex hypoallergenic stainless steel necklace"
+    "altText": "Gold paperclip chain necklace with rhinestone initial letter charm, chunky unisex hypoallergenic stainless steel necklace",
+    "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/b6b48a210e884d07191f2d0bef234b7c/downloads/default.mp4",
+    "giftTags": [
+      "personalized"
+    ],
+    "sizeGuideImage": "/images/products/4c154510-a4d9-4055-9d01-e62e1f7cc15b.png"
   }
 ]

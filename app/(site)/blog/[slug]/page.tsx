@@ -1,6 +1,8 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import blogPosts from "@/data/blog-posts.json";
+import { products } from "@/lib/products";
 import type { Metadata } from "next";
 
 type Props = { params: Promise<{ slug: string }> };
@@ -60,6 +62,14 @@ export default async function BlogPostPage({ params }: Props) {
   if (!post) notFound();
 
   const blocks: ContentBlock[] = normalizeContent(post.content);
+
+  // Featured products, resolved against the live catalog (names, prices and photos
+  // change after a post is written; inactive products are dropped).
+  const featured = ((post as { featuredProducts?: { id: string }[] }).featuredProducts ?? [])
+    .map((f) => products.find((p) => p.id === f.id && p.active !== false && p.images?.length))
+    .filter((p): p is (typeof products)[number] => !!p)
+    .slice(0, 4);
+  const featuredCategories = [...new Set(featured.map((p) => p.category))];
   const faq: FaqItem[] = Array.isArray((post as { faq?: FaqItem[] }).faq) ? (post as { faq?: FaqItem[] }).faq! : [];
 
   // Related posts — same category weighted heavily, shared tags add relevance,
@@ -149,6 +159,31 @@ export default async function BlogPostPage({ params }: Props) {
                   <h3 className="font-heading text-lg font-light text-[#2C2220] mb-2">{item.question}</h3>
                   <p className="text-sm font-light leading-loose tracking-wide text-[#2C2220]/80">{item.answer}</p>
                 </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Shop the pieces — every post links to real products and their category pages */}
+        {featured.length > 0 && (
+          <div className="mt-14 pt-10 border-t border-[#E8B4A8]/30">
+            <p className="text-[0.6rem] tracking-[0.35em] uppercase text-[#A0622A] mb-6">Shop the Pieces</p>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {featured.map((p) => (
+                <Link key={p.id} href={`/shop/${p.id}`} className="group flex flex-col gap-2">
+                  <div className="relative aspect-[4/5] overflow-hidden bg-[#F5EDE8]">
+                    <Image src={p.images[0]} alt={p.name} fill sizes="(max-width: 768px) 50vw, 180px" className="object-cover transition-transform duration-500 group-hover:scale-105" />
+                  </div>
+                  <span className="text-xs font-light text-[#2C2220] leading-snug group-hover:text-[#A0622A] transition-colors">{p.name}</span>
+                  <span className="text-[0.65rem] tracking-wide text-[#8C7B6E]">€{p.price}</span>
+                </Link>
+              ))}
+            </div>
+            <div className="mt-6 flex flex-wrap gap-x-6 gap-y-2">
+              {featuredCategories.map((c) => (
+                <Link key={c} href={`/shop?category=${encodeURIComponent(c)}`} className="text-[0.6rem] tracking-[0.2em] uppercase text-[#A0622A] hover:underline underline-offset-4">
+                  Shop all {c} →
+                </Link>
               ))}
             </div>
           </div>

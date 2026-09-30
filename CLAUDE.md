@@ -481,6 +481,9 @@ Any video posted to social (IG, FB, Pinterest, TikTok) must have its audio track
 - Schedule script: scratchpad `new_schedule.py` (rebuild each session from the product catalogue below)
 - Postiz API key: in `.env.local` as `POSTIZ_API_KEY`
 
+### Every Facebook post MUST carry settings.url and every Pinterest pin settings.link + board — confirmed Sep 30, 2026
+A batch scheduled with bare settings (`{"__type":"facebook"}`, or Pinterest-style `board` on Facebook) went out Sep 21 – Oct 10, 2026 with NO shop link. Postiz still showed them as PUBLISHED, but Facebook referral traffic (nearly all social visits, ~25/week) fell to zero — this was the Sep 2026 "traffic tanked" cause. The queued ones were recreated with links on Sep 30; `scripts/check-social-duplicates.mjs` now fails on any queued FB post without `url` or pin without `link`/`board`. Always pass the full platform settings listed above on every `posts:create`.
+
 ### Automated duplicate check — ALWAYS run this, don't rely on memory of the rules
 The no-repeat rules above have been violated multiple times (Jul 12, Jul 13, and again Jul 22/23 — a run of 5-6 consecutive same-product posts slipped through on IG+FB out to Aug 25, undetected until the user found it live). Relying on a session correctly re-implementing the rule from scratch is not reliable enough.
 - `scripts/check-social-duplicates.mjs` — scans the **full** upcoming Postiz queue (60 days out, not just the next few days) for same-product-in-a-row posts on IG/FB and repeated content on Pinterest. Run it with `POSTIZ_API_KEY=... node scripts/check-social-duplicates.mjs` after scheduling ANY new batch, before telling the user it's done. Exits non-zero if anything is found.

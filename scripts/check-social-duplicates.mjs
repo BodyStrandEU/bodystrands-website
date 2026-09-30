@@ -85,10 +85,31 @@ async function main() {
     }
   }
 
-  if (violations.length === 0) {
-    console.log(`✅ No duplicate/consecutive-repeat violations found across ${posts.length} scheduled posts (${fmt(start)} to ${fmt(end)}).`);
+  // Every queued Facebook post needs settings.url and every Pinterest pin settings.link —
+  // without them the post can't send anyone to the shop. A batch scheduled without
+  // settings (Sep 21 – Oct 10, 2026) took Facebook referral traffic from ~25/week to zero
+  // while every post still showed as PUBLISHED.
+  const settingsOf = (p) => {
+    try { return typeof p.settings === "string" ? JSON.parse(p.settings) : (p.settings ?? {}); } catch { return {}; }
+  };
+  const missingLinks = posts
+    .filter((p) => p.state === "QUEUE")
+    .filter((p) => {
+      const platform = p.integration?.providerIdentifier, s = settingsOf(p);
+      return (platform === "facebook" && !s.url) || (platform === "pinterest" && (!s.link || !s.board));
+    });
+
+  if (violations.length === 0 && missingLinks.length === 0) {
+    console.log(`✅ No duplicate/consecutive-repeat violations or missing shop links across ${posts.length} scheduled posts (${fmt(start)} to ${fmt(end)}).`);
     process.exit(0);
   }
+
+  if (missingLinks.length > 0) {
+    console.log(`❌ ${missingLinks.length} queued post(s) have no shop link (Facebook settings.url / Pinterest settings.link+board):\n`);
+    for (const p of missingLinks) console.log(`[${p.integration?.providerIdentifier}] ${p.publishDate} (${p.id}) — ${p.content.slice(0, 60)}`);
+    console.log("");
+  }
+  if (violations.length === 0) process.exit(1);
 
   console.log(`❌ Found ${violations.length} violation(s):\n`);
   for (const v of violations) {

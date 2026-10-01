@@ -1,7 +1,15 @@
 #!/usr/bin/env node
 // Guarded `postiz posts:create`. ALWAYS schedule social posts through this script, never
 // the raw CLI: it refuses Facebook posts without settings.url and Pinterest pins without
-// settings.link + settings.board, then passes everything through to Postiz unchanged.
+// settings.link + settings.board, enforces the search basics below, then passes
+// everything through to Postiz unchanged.
+//
+// Search basics (Oct 1, 2026 audit: 70/118 queued pins had <100-char descriptions,
+// 34/60 Instagram posts had no hashtags, 18 posts said "link in bio"):
+//   - Pinterest: description 150–500 chars (Pinterest search reads it like a web page),
+//     title "Product Name | search phrase", 25–100 chars
+//   - Instagram: 2–5 hashtags
+//   - No "link in bio" anywhere (banned by the posting rules; Facebook/Pinterest carry the link)
 //
 // Why: Postiz accepts link-less posts and still reports them PUBLISHED. A batch scheduled
 // without settings went out Sep 21 – Oct 10, 2026 and took Facebook referral traffic
@@ -14,6 +22,7 @@ import { spawnSync } from "child_process";
 
 const FACEBOOK  = "cmqmpm92f01uzmm0ysb6fbid0";
 const PINTEREST = "cmqlao2zv0efwmm0y5cq6miuu";
+const INSTAGRAM = "cmqlb4q1h01plp40y69rmv5ml";
 const SHOP_URL  = /^https:\/\/www\.bodystrands\.com\/shop\/[a-z0-9-]+$/;
 
 const args = process.argv.slice(2);
@@ -47,6 +56,16 @@ if (integrations.includes(PINTEREST)) {
   if (!settings.title) fail("Pinterest pin needs settings.title.");
 }
 const caption = valueOf("-c", "--content") ?? "";
+if (/link in (bio|description)|shop via link/i.test(caption)) fail('caption says "link in bio" — banned by the posting rules (Facebook/Pinterest carry the link).');
+if (integrations.includes(PINTEREST)) {
+  if (caption.length < 150 || caption.length > 500) fail(`Pinterest description is ${caption.length} chars — write 150–500 so Pinterest search has something to match.`);
+  const title = String(settings.title);
+  if (!title.includes(" | ") || title.length < 25 || title.length > 100) fail(`Pinterest title "${title}" should be "Product Name | search phrase", 25–100 chars.`);
+}
+if (integrations.includes(INSTAGRAM)) {
+  const tags = (caption.match(/#[\p{L}\p{N}_]+/gu) ?? []).length;
+  if (tags < 2 || tags > 5) fail(`Instagram caption has ${tags} hashtags — use 2–5.`);
+}
 if (/etsy/i.test(caption + JSON.stringify(settings))) fail("post mentions Etsy — the shop links to bodystrands.com only.");
 
 const result = spawnSync("postiz", ["posts:create", ...args], { stdio: "inherit" });

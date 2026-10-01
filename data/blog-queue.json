@@ -1,5 +1,162 @@
 [
   {
+    "query": "choker necklace trend 2026",
+    "keywords": [
+      "chunky choker necklace 2026",
+      "are chokers back in style",
+      "90s choker necklace outfit",
+      "pearl double choker necklace",
+      "turquoise bead choker outfit"
+    ],
+    "productIds": [
+      "turquoise-beaded-choker",
+      "stacked-pearl-cross-choker",
+      "rosary-pearl-cross-choker",
+      "layered-pearl-choker"
+    ],
+    "category": "Style Guide",
+    "months": [
+      10,
+      11,
+      12,
+      1
+    ],
+    "productCategories": [
+      "Necklaces"
+    ],
+    "source": "research",
+    "researchModel": "claude-sonnet-5",
+    "addedAt": "2026-10-01",
+    "why": "Artizan Joyeria and WhoWhatWear both report chokers, especially chunky and 90s-inspired styles, dominating fall 2026 runways and trend roundups."
+  },
+  {
+    "query": "snake chain jewelry trend 2026",
+    "keywords": [
+      "snake chain belly chain gold",
+      "90s snake chain comeback",
+      "snake chain body jewelry",
+      "zodiac snake chain necklace",
+      "chunky snake chain trend"
+    ],
+    "productIds": [
+      "snake-belly-chain",
+      "zodiac-snake-belly-chain"
+    ],
+    "category": "Style Guide",
+    "months": [
+      10,
+      11,
+      12,
+      1,
+      2
+    ],
+    "productCategories": [
+      "Belly Chains"
+    ],
+    "source": "research",
+    "researchModel": "claude-sonnet-5",
+    "addedAt": "2026-10-01",
+    "why": "A fall 2026 trend roundup highlights snake chains as part of a nostalgic revival alongside chokers and jewel tones."
+  },
+  {
+    "query": "ring stacking trend 2026",
+    "keywords": [
+      "how to stack rings 2026",
+      "birthstone ring stack ideas",
+      "evil eye ring meaning stack",
+      "mixed metal ring stack",
+      "dainty everyday ring stack"
+    ],
+    "productIds": [
+      "birthstone-ring",
+      "evil-eye-ring",
+      "rhodochrosite-ring"
+    ],
+    "category": "Style Guide",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "productCategories": [
+      "Rings"
+    ],
+    "source": "research",
+    "researchModel": "claude-sonnet-5",
+    "addedAt": "2026-10-01",
+    "why": "Ring stacking is named the top viral jewelry trend by Artizan Joyeria and confirmed in multiple fall 2026 trend forecasts."
+  },
+  {
+    "query": "long pendant necklace trend 2026",
+    "keywords": [
+      "long pendant necklace with crewneck sweater",
+      "oversized pendant necklace outfit",
+      "cross pendant necklace layered",
+      "long chain necklace fall 2026"
+    ],
+    "productIds": [
+      "dragonfly-pendant-necklace",
+      "curb-chain-cross-necklace"
+    ],
+    "category": "Style Guide",
+    "months": [
+      10,
+      11,
+      12,
+      1,
+      2
+    ],
+    "productCategories": [
+      "Necklaces"
+    ],
+    "source": "research",
+    "researchModel": "claude-sonnet-5",
+    "addedAt": "2026-10-01",
+    "why": "JoLynne Shane and Net-a-Porter report long pendant necklaces and sautoirs making a comeback for fall 2026 sweater season."
+  },
+  {
+    "query": "colorful bead jewelry trend 2026",
+    "keywords": [
+      "colorful bead jewelry trend",
+      "chunky beaded bracelet 2026",
+      "statement bead choker necklace",
+      "oversized bead necklace outfit"
+    ],
+    "productIds": [
+      "colorful-crystal-bead-choker",
+      "colorful-crystal-bead-bracelet",
+      "colorful-crystal-bead-anklet",
+      "turquoise-beaded-cable-chain-necklace"
+    ],
+    "category": "Style Guide",
+    "months": [
+      10,
+      11,
+      12,
+      3,
+      4,
+      5
+    ],
+    "productCategories": [
+      "Necklaces",
+      "Bracelets",
+      "Anklets"
+    ],
+    "source": "research",
+    "researchModel": "claude-sonnet-5",
+    "addedAt": "2026-10-01",
+    "why": "King Jewelers and JoLynne Shane both spotlight bold beaded necklaces and bracelets as a must-try fall 2026 direction."
+  },
+  {
     "query": "what necklace to wear with a black dress",
     "keywords": [
       "backless black dress necklace ideas",

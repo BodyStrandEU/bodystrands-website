@@ -17,7 +17,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!post) return {};
   const image = postImage(post);
   return {
-    title: `${post.title} — Bodystrands Journal`,
+    // Short brand suffix: " — Bodystrands Journal" pushed 111 of 117 titles past the ~60
+    // characters Google shows, so the end of the post title was being cut off.
+    title: `${post.title} | Bodystrands`,
     description: post.excerpt,
     alternates: { canonical: `/blog/${slug}` },
     openGraph: {
@@ -26,17 +28,30 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: post.excerpt,
       url: `/blog/${slug}`,
       publishedTime: post.date,
+      authors: ["El & Gio"],
       ...(image ? { images: [{ url: image }] } : {}),
     },
   };
 }
 
 // Posts carry no hero image of their own; the first featured product's photo is
-// the most relevant image for social previews and article rich results.
+// the most relevant image for social previews and article rich results. Resolved
+// against the live catalog and limited to photos hosted on bodystrands.com — older
+// posts stored Etsy CDN URLs, which put Etsy-hosted images in previews.
 function postImage(post: (typeof blogPosts)[number]): string | null {
-  const featured = (post as { featuredProducts?: { image?: string | null }[] }).featuredProducts;
-  return featured?.find((p) => p.image)?.image ?? null;
+  const featured = (post as { featuredProducts?: { id: string }[] }).featuredProducts ?? [];
+  for (const f of featured) {
+    const product = products.find((p) => p.id === f.id && p.active !== false);
+    const local = [...(product?.images ?? []), ...((product as { gallery?: string[] } | undefined)?.gallery ?? [])]
+      .find((src) => src.startsWith("/images/"));
+    if (local) return local;
+  }
+  return null;
 }
+
+// The people behind the brand — articles by real makers carry more weight with
+// Google than ones attributed to a company name.
+const AUTHOR = { "@type": "Person", name: "El & Gio", url: "https://www.bodystrands.com/about" } as const;
 
 type ContentBlock =
   | { type: "paragraph" | "heading"; text: string }
@@ -98,8 +113,10 @@ export default async function BlogPostPage({ params }: Props) {
 
       {/* Post header */}
       <div className="max-w-3xl mx-auto px-6 md:px-10 mb-12">
-        <div className="flex items-center gap-4 mb-6">
+        <div className="flex flex-wrap items-center gap-x-4 gap-y-2 mb-6">
           <span className="text-[0.52rem] tracking-[0.28em] uppercase text-[#A0622A]">{post.category}</span>
+          <span className="text-[#E8B4A8]/40">·</span>
+          <Link href="/about" className="text-[0.52rem] tracking-[0.15em] text-[#8C7B6E] hover:text-[#A0622A]">By El &amp; Gio</Link>
           <span className="text-[#E8B4A8]/40">·</span>
           <span className="text-[0.52rem] tracking-[0.15em] text-[#8C7B6E]">{post.readTime}</span>
           <span className="text-[#E8B4A8]/40">·</span>
@@ -208,9 +225,10 @@ export default async function BlogPostPage({ params }: Props) {
             headline: post.title,
             description: post.excerpt,
             datePublished: post.date,
+            dateModified: post.date,
             mainEntityOfPage: `https://www.bodystrands.com/blog/${slug}`,
             ...(postImage(post) ? { image: new URL(postImage(post)!, "https://www.bodystrands.com").href } : {}),
-            author: { "@type": "Organization", name: "Bodystrands", url: "https://www.bodystrands.com" },
+            author: AUTHOR,
             publisher: { "@type": "Organization", name: "Bodystrands", url: "https://www.bodystrands.com" },
           }),
         }}

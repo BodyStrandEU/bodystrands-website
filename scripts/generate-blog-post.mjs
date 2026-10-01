@@ -147,7 +147,7 @@ Today is ${now.toISOString().slice(0, 10)} (${monthName}). Readers are mostly in
 - Then go deeper: 3-5 "heading" sections, each phrased like a follow-up question or the exact thing someone would search next.
 - Use "list" blocks where a reader would scan: steps, options at different budgets, what to pair with what. 1-3 lists total.
 - 1000-1500 words of body text. Every section must add real, specific help — concrete details, sizes, lengths, pairings, occasions. If a section would be generic, cut it.
-- Title: under 65 characters, contains the search phrase (or a natural close variant), no clickbait.
+- Title: under 50 characters (the site adds " | Bodystrands"), contains the search phrase (or a natural close variant), no clickbait.
 - Work the long-tail keywords (listed below, or ones you choose) into headings, list items and sentences where they read naturally — each once or twice at most. Never stuff keywords or repeat a phrase awkwardly; readability comes first.
 - Link products with <a href="/shop/ID">Name</a> inside paragraph or list text, only from the products given below, 2-4 links total, where they truly fit. You may link a category as <a href="/shop?category=Necklaces">necklaces</a>. No other HTML.
 - FAQ: 3 distinct questions people also search around this topic, each answer self-contained in 1-3 sentences, plain text.
@@ -192,7 +192,7 @@ const POST_SCHEMA = {
   properties: {
     targetQuery: { type: "string" },
     title:       { type: "string" },
-    excerpt:     { type: "string", description: "Meta description: under 155 characters, answers the question and makes someone click." },
+    excerpt:     { type: "string", description: "Meta description, 140-155 characters: answers the question, includes the search phrase, and makes someone click." },
     category:    { type: "string", enum: BLOG_CATEGORIES },
     content: {
       type: "array",
@@ -284,7 +284,9 @@ function qualityProblems(parsed, blocks, posts) {
   const problems = [];
   const words = countWords(blocks);
   if (words < MIN_WORDS) problems.push(`only ${words} words (min ${MIN_WORDS})`);
-  if (parsed.title.length > 70) problems.push(`title is ${parsed.title.length} chars`);
+  // Page titles get " | Bodystrands" (14 chars) appended; Google shows ~60 characters.
+  if (parsed.title.length > 50) problems.push(`title is ${parsed.title.length} chars (max 50 so it isn't cut off in Google)`);
+  if (parsed.excerpt.length < 120 || parsed.excerpt.length > 160) problems.push(`meta description is ${parsed.excerpt.length} chars (aim for 140-155)`);
   if (!blocks.some((b) => b.type === "heading")) problems.push("no section headings");
   const allText = JSON.stringify([parsed.title, parsed.excerpt, blocks, parsed.faq]).toLowerCase();
   const banned = BANNED_WORDS.filter((w) => allText.includes(w));

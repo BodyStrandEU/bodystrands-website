@@ -467,7 +467,7 @@ When scheduling a video on Instagram or Facebook, post the video URL alone as me
 Any video posted to social (IG, FB, Pinterest, TikTok) must have its audio track muted by default before scheduling — strip/mute the audio (e.g. `ffmpeg -i input.mp4 -an ...` or equivalent) prior to upload. Only post with sound if the user explicitly asks for audio on for that batch/video.
 
 ### API rate limiting — CRITICAL
-- Always add `time.sleep(0.5)` between every `postiz posts:create` call
+- Always add `time.sleep(0.5)` between every post-creation call (via `scripts/postiz-create.mjs`)
 - After bulk deletes (100+ posts), wait 2–3 minutes before starting new creates
 - 429 ThrottlerException = too many requests too fast; increase sleep to 1s if it persists
 
@@ -480,6 +480,9 @@ Any video posted to social (IG, FB, Pinterest, TikTok) must have its audio track
 ### Script location
 - Schedule script: scratchpad `new_schedule.py` (rebuild each session from the product catalogue below)
 - Postiz API key: in `.env.local` as `POSTIZ_API_KEY`
+
+### ALWAYS schedule through `node scripts/postiz-create.mjs`, NEVER raw `postiz posts:create` — user rule, Oct 1, 2026
+User, verbatim: "going forward make sure links are always there." The wrapper takes the exact same flags as `postiz posts:create` but refuses a Facebook post without `settings.url`, a Pinterest pin without `settings.link` + numeric `settings.board` + `title`, Facebook+Pinterest mixed in one call, links that aren't `https://www.bodystrands.com/shop/<id>`, and any Etsy mention. Instagram has no clickable links, so it needs no URL. If the wrapper refuses, fix the settings — never bypass it.
 
 ### Every Facebook post MUST carry settings.url and every Pinterest pin settings.link + board — confirmed Sep 30, 2026
 A batch scheduled with bare settings (`{"__type":"facebook"}`, or Pinterest-style `board` on Facebook) went out Sep 21 – Oct 10, 2026 with NO shop link. Postiz still showed them as PUBLISHED, but Facebook referral traffic (nearly all social visits, ~25/week) fell to zero — this was the Sep 2026 "traffic tanked" cause. The queued ones were recreated with links on Sep 30; `scripts/check-social-duplicates.mjs` now fails on any queued FB post without `url` or pin without `link`/`board`. Always pass the full platform settings listed above on every `posts:create`.

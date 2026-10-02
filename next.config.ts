@@ -17,6 +17,13 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  // Merchant Center fetches /merchant-feed.xml daily. It used to be a static file written
+  // at build time by a separate script whose logic had drifted from the API route (it
+  // still sent every product as category 201 = Watches, without age group or gender).
+  // One source now: the route.
+  async rewrites() {
+    return [{ source: "/merchant-feed.xml", destination: "/api/merchant-feed" }];
+  },
   async redirects() {
     return [
       ...blogRedirects,

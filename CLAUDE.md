@@ -369,7 +369,7 @@ This writes a long-tail SEO `altText` field to every product in products.json.
 The Anthropic API key is NOT in .env.local — ask the user to paste it (or create a new key at console.anthropic.com). Model: claude-haiku-4-5-20251001.
 
 ### 2–6. Everything else is AUTOMATIC
-- **SEO title**: `CATEGORY_SUFFIX` map in `app/(site)/shop/[id]/page.tsx` — format: `Name | Category Suffix | Bodystrands`
+- **SEO title**: `Name | <phrase> | Bodystrands`, phrase from `data/product-title-phrases.json` (permanent, evergreen, grounded in Search Console + research — see `scripts/product-title-phrases.mjs`). For a new product run `node scripts/product-title-phrases.mjs <gsc-grouped.json> --only <id>` (build the JSON from `/api/admin/google-report` page+query data); until then the title falls back to the category name. Never put seasons/holidays in product titles — occasion searches belong on /gifts, /christmas, blog posts and pins (user agreed Oct 2, 2026).
 - **Meta description**: uses `product.altText` automatically in `generateMetadata`
 - **Sitemap**: `app/sitemap.ts` reads `data/products.json` automatically
 - **Blog links**: `scripts/generate-blog-post.mjs` reads `data/products.json` on every run

@@ -12,6 +12,39 @@ function escapeXml(str: string): string {
     .replace(/'/g, "&apos;");
 }
 
+// Google product categories (official taxonomy IDs). Until Oct 2, 2026 every item was
+// sent as 201, which is "Jewelry > Watches" — so Google matched the whole catalog to
+// watch searches.
+const GOOGLE_CATEGORY: Record<string, number> = {
+  Anklets: 189,
+  Bracelets: 191,
+  Necklaces: 196,
+  Rings: 200,
+  "Eyeglasses Chains": 2521, // Health & Beauty > Vision Care > Eyewear Accessories
+};
+const BODY_JEWELRY = 190; // belly, back, body, shoulder/arm, leg, hand, head, bikini chains
+
+// Variant names are usually finishes ("Gold Tone", "Silver Plated") but can be sizes.
+function variantColor(variant: string): string | null {
+  const v = variant.toLowerCase();
+  if (v.includes("gold")) return "Gold";
+  if (v.includes("silver") || v.includes("stainless")) return "Silver";
+  if (/^(red|green|white|black|pink|blue|turquoise)$/.test(v)) return variant;
+  return null;
+}
+const isSizeVariant = (variant: string) => /\d\s*(cm|mm|in|")|^(xs|s|m|l|xl|xxl)$/i.test(variant.trim());
+
+// Single-option products: read the finish from the listing text; leave blank if unclear.
+function textColor(text: string): string | null {
+  const t = text.toLowerCase();
+  const gold = t.includes("gold"), silver = t.includes("silver");
+  return gold && silver ? "Gold/Silver" : gold ? "Gold" : silver ? "Silver" : null;
+}
+
+// Images hosted on bodystrands.com first — older listings point at Etsy's CDN, which
+// the shop never links to; Etsy URLs are only kept when a product has no own photos.
+const isOwn = (src: string) => !src.startsWith("http") || src.startsWith("https://www.bodystrands.com");
+
 export async function GET() {
   const activeProducts = products.filter((p) => p.active !== false);
 
@@ -29,8 +62,13 @@ export async function GET() {
           : product.images ?? []
     ).filter((src) => !isInfographic(src));
 
-    const mainImage = product.images?.[0] ?? allImages[0];
-    const additionalImages = allImages.filter((src) => src !== mainImage).slice(0, 9);
+    const ownImages = [...new Set([...(product.images ?? []), ...allImages])].filter(isOwn);
+    const mainImage = [product.images?.[0], ...allImages].find((src) => src && isOwn(src)) ?? product.images?.[0] ?? allImages[0];
+    const additionalImages = (ownImages.length > 1 ? ownImages : allImages).filter((src) => src !== mainImage).slice(0, 9);
+
+    const listingText = `${product.name} ${product.description ?? ""} ${JSON.stringify(product.specs ?? "")}`;
+    const gender = /unisex/i.test(`${product.name} ${product.description ?? ""}`) ? "unisex" : "female";
+    const category = GOOGLE_CATEGORY[product.category] ?? BODY_JEWELRY;
 
     const productUrl = `${BASE_URL}/shop/${product.id}`;
     const price = `${product.price.toFixed(2)} ${product.currency ?? "EUR"}`;
@@ -43,9 +81,8 @@ export async function GET() {
       const title = variant ? `${product.name} — ${variant}` : product.name;
 
       // Hero image for this variant
-      const heroSrc = variant && product.variantHeroes?.[variant]
-        ? product.variantHeroes[variant]
-        : mainImage;
+      const variantHero = variant ? product.variantHeroes?.[variant] ?? product.variantImages?.[variant]?.find(isOwn) : undefined;
+      const heroSrc = variantHero && isOwn(variantHero) ? variantHero : mainImage;
 
       const absoluteHero = heroSrc?.startsWith("http")
         ? heroSrc
@@ -62,7 +99,11 @@ export async function GET() {
         })
         .join("\n        ");
 
-      const colorAttr = variant ? `<g:color>${escapeXml(variant)}</g:color>` : "";
+      const color = (variant && variantColor(variant)) ?? textColor(listingText);
+      const colorAttr = color ? `<g:color>${escapeXml(color)}</g:color>` : "";
+      const sizeAttr = variant && isSizeVariant(variant) ? `<g:size>${escapeXml(variant)}</g:size>` : "";
+      // Variants of one product must share an item group so Google treats them as one product.
+      const groupAttr = variants.length > 1 ? `<g:item_group_id>${escapeXml(product.id)}</g:item_group_id>` : "";
 
       return `    <item>
       <g:id>${escapeXml(variantId)}</g:id>
@@ -77,8 +118,12 @@ export async function GET() {
       <g:brand>Bodystrands</g:brand>
       <g:mpn>${escapeXml(variantId)}</g:mpn>
       <g:material>Stainless Steel</g:material>
-      <g:google_product_category>201</g:google_product_category>
+      <g:google_product_category>${category}</g:google_product_category>
+      <g:age_group>adult</g:age_group>
+      <g:gender>${gender}</g:gender>
       ${colorAttr}
+      ${sizeAttr}
+      ${groupAttr}
       <g:identifier_exists>false</g:identifier_exists>
     </item>`;
     }).filter(Boolean);

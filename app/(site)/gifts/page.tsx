@@ -5,6 +5,8 @@ import ProductCard from "@/components/ProductCard";
 import GiftCategoryDropdown from "@/components/GiftCategoryDropdown";
 import { products, CATEGORIES, isValidCategory } from "@/lib/products";
 import blogPosts from "@/data/blog-posts.json";
+import BuyingGuide from "@/components/BuyingGuide";
+import { GIFTS_CONTENT } from "@/lib/gift-content";
 
 const GIFT_SECTIONS = [
   { tag: "personalized" as const, id: "personalized", label: "Personalized Gifts" },
@@ -12,15 +14,10 @@ const GIFT_SECTIONS = [
   { tag: "bridal" as const, id: "bridal", label: "For the Bride" },
 ];
 
-const JOURNAL_LINKS = [
-  "handcrafted-gifts-under-25-for-every-person-on-your-list",
-  "why-personalised-jewelry-makes-the-best-gift",
-  "bridesmaid-gifts-shell-actually-wear-forever",
-];
 
 export const metadata: Metadata = {
-  title: "Gifts — Handmade Jewelry Gifts Under €25 & €40 | Bodystrands",
-  description: "Shop Bodystrands jewelry by price — thoughtful, handmade gifts under €25 and under €40. Gift wrapping available at checkout. Waterproof stainless steel, handmade in Portugal and Canada.",
+  title: "Jewelry Gifts for Her — Personalised, Under €40 | Bodystrands",
+  description: "Personalised jewelry gifts for her — initial, birthstone and birth flower pieces, pearls and charm bracelets, most €14–€40. Gift wrap at checkout, free sizing.",
   alternates: { canonical: "/gifts" },
 };
 
@@ -60,9 +57,13 @@ export default async function GiftsPage({
     items: active.filter((p) => p.giftTags?.includes(tag)),
   }));
 
-  const journalPosts = JOURNAL_LINKS
-    .map((slug) => blogPosts.find((p) => p.slug === slug))
-    .filter((p): p is (typeof blogPosts)[number] => !!p);
+  // Newest gift posts — the blog is fed by the twice-weekly keyword research, so this
+  // section refreshes itself as research finds new gift searches. (Replaced a hard-coded
+  // slug list that pointed at posts merged away in the Sep 29, 2026 cleanup.)
+  const journalPosts = [...blogPosts]
+    .filter((p) => p.category === "Gift Guide" || /gift/i.test(`${p.title} ${(p as { topic?: string }).topic ?? ""}`))
+    .sort((a, b) => b.date.localeCompare(a.date))
+    .slice(0, 6);
 
   return (
     <div className="pt-20 md:pt-32 pb-24">
@@ -73,11 +74,10 @@ export default async function GiftsPage({
           <div>
             <p className="text-[0.6rem] tracking-[0.35em] uppercase text-[#A0622A] mb-3">Bodystrands</p>
             <h1 className="font-heading text-4xl md:text-5xl font-light tracking-wide text-[#2C2220] mb-5 leading-tight">
-              Gifts They'll Actually Wear
+              Jewelry Gifts She'll Actually Wear
             </h1>
             <p className="text-sm font-light tracking-wide text-[#8C7B6E] leading-relaxed max-w-md">
-              Handmade, waterproof, and made to last — every piece here is a keepsake first,
-              a gift second. Shop by price below, and add gift wrapping at checkout for €4.
+              {GIFTS_CONTENT.intro}
             </p>
           </div>
           <div className="relative aspect-[4/3] w-full overflow-hidden -mx-6 md:mx-0">
@@ -155,6 +155,8 @@ export default async function GiftsPage({
           </section>
         )
       ))}
+
+      <BuyingGuide label="Gift Guide" content={GIFTS_CONTENT} />
 
       {/* From the Journal — cross-links back into gift-relevant blog content */}
       {journalPosts.length > 0 && (

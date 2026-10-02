@@ -7,17 +7,19 @@ import type { Category } from "@/lib/products";
 import type { Metadata } from "next";
 
 const CATEGORY_META: Record<string, { title: string; description: string }> = {
+  "Rings": { title: "Birthstone Rings & Evil Eye Rings | Bodystrands", description: "Dainty birthstone stacking rings in all 12 birth month colours, an adjustable evil eye ring and a natural rhodochrosite ring, €19.20." },
+  "Leg Chains": { title: "Thigh Chains & Leg Chains — Gold & Silver | Bodystrands", description: "Slip-on thigh chains, a birthstone thigh chain and a waist-to-thigh chain in gold and silver stainless steel. From €28." },
   "Belly Chains":       { title: "Belly Chains & Waist Chains — Waterproof Body Jewelry | Bodystrands", description: "Shop belly chains and waist chains in waterproof stainless steel. Gold and silver, adjustable and plus size fits. Handcrafted in Portugal and Canada from €17.50." },
   "Back Chains":        { title: "Back Necklaces & Back Chain Jewelry for Backless Dresses | Bodystrands", description: "Dainty back chain necklaces and backdrop jewelry for backless dresses and wedding gowns. Tarnish-resistant stainless steel, handmade in Portugal and Canada." },
   "Body Chains":        { title: "Body Chains — Festival & Beach Body Jewelry | Bodystrands", description: "Handmade body chains for festivals, beach days, and everyday wear. Waterproof stainless steel in gold and silver. Made in Portugal and Canada." },
   "Shoulder & Arm Chains":    { title: "Arm Chains & Shoulder Chains — Gold & Silver | Bodystrands", description: "Shop shoulder chains, arm chains, and off-shoulder necklaces for weddings, festivals, and everyday wear. Handcrafted stainless steel, made in Portugal and Canada." },
-  "Anklets":            { title: "Anklets — Handmade Beach Ankle Bracelets | Bodystrands", description: "Dainty gold and silver anklets for summer, beach, and everyday wear. Waterproof stainless steel, handmade in Portugal and Canada from €17.50." },
-  "Bracelets":          { title: "Bracelets — Dainty Handmade Bracelets | Bodystrands", description: "Handmade dainty bracelets in tarnish-resistant stainless steel. Pearl, charm, and chain styles. Crafted in Portugal and Canada." },
-  "Necklaces":          { title: "Necklaces — Handmade Chain Necklaces | Bodystrands", description: "Dainty handmade necklaces in gold and silver stainless steel. Chokers, lariats, and pendant styles. Made in Portugal and Canada." },
-  "Hand Chains":        { title: "Hand Chains — Boho Slave Bracelets | Bodystrands", description: "Handmade hand chains connecting wrist to finger. Boho and bridal styles in waterproof stainless steel, made in Portugal and Canada." },
-  "Head Chains":        { title: "Head Chains — Bridal Hair Jewelry | Bodystrands", description: "Delicate head chains and hair jewelry for brides, weddings, and festivals. Handcrafted stainless steel, made in Portugal and Canada." },
-  "Eyeglasses Chains":  { title: "Eyeglasses Chains — Stylish Glasses Holders | Bodystrands", description: "Dainty gold and silver eyeglasses chains in stainless steel. Beaded, pearl, and minimalist styles. Handmade in Portugal and Canada." },
-  "Bikini Clip Chains": { title: "Bikini Clip Chains — Beach Body Jewelry | Bodystrands", description: "Handmade bikini clip chains and beach body jewelry in stainless steel. Perfect for summer holidays and festivals. Made in Portugal and Canada." },
+  "Anklets": { title: "Anklets & Barefoot Foot Chains — Gold & Silver | Bodystrands", description: "Dainty anklets, barefoot foot chains and toe chain anklets in gold and silver stainless steel — initial, birthstone, pearl and beach styles from €22." },
+  "Bracelets": { title: "Charm Bracelets — Birth Flower, Zodiac & Initial | Bodystrands", description: "Personalised charm bracelets — birth flower, zodiac, birthstone and initial — plus pearl, cross and dainty chain bracelets, with plus size options. From €14." },
+  "Necklaces": { title: "Initial Necklaces, Chokers & Layered Necklaces | Bodystrands", description: "Initial and monogram necklaces, cross and pearl chokers, dragonfly and evil eye pendants, and ready-layered necklace stacks in gold and silver. From €20." },
+  "Hand Chains": { title: "Hand Chains — Boho, Pearl & Finger Chains | Bodystrands", description: "Hand chains that join a bracelet to a ring — boho, pearl and minimal styles in gold and silver stainless steel, with adjustable fit. From €24." },
+  "Head Chains": { title: "Forehead Chains & Bridal Head Chains | Bodystrands", description: "Forehead chains, bridal head chains and hair vine chains for weddings and festivals — pearl and fine chain styles in gold and silver. From €24." },
+  "Eyeglasses Chains": { title: "Eyeglasses Chains — Stainless Steel Glasses Chains | Bodystrands", description: "Stainless steel eyeglasses and sunglasses chains with rubber grips — minimal, pearl and beaded styles in gold and silver. From €16." },
+  "Bikini Clip Chains": { title: "Bikini Chains — Clip-On Beach Body Jewelry | Bodystrands", description: "Clip-on bikini chains that attach to straps, waistbands or bras — beaded and birthstone styles in stainless steel, €24." },
 };
 
 export async function generateMetadata({

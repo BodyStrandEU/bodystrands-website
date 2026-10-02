@@ -44,7 +44,11 @@ export const metadata: Metadata = {
     images: ["/images/og-image.jpg"],
   },
   robots: { index: true, follow: true },
-  verification: { google: "4wuuduuIvTMEvYh_KsNjBGLGBYV3B5yyXhA-jSURoUQ" },
+  verification: {
+    google: "4wuuduuIvTMEvYh_KsNjBGLGBYV3B5yyXhA-jSURoUQ",
+    // Pinterest website claim (Oct 2, 2026) — renders <meta name="p:domain_verify">.
+    other: { "p:domain_verify": "07fab5b91327a4c64fcf7dd7387df72d" },
+  },
 };
 
 export default async function RootLayout({

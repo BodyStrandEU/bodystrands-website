@@ -26,7 +26,7 @@ const SLIDES: Slide[] = [
     sub: "Every chain shaped, linked, and finished by hand in our studio.",
   },
   {
-    image: "/images/hero-packaging.jpg",
+    image: "/images/hero-packaging-boxes.jpg",
     eyebrow: "Thoughtfully Packaged",
     headline: <>Arrives <em className="not-italic text-[#A0622A]">Beautifully.</em></>,
     sub: "Every piece ships in signature Bodystrands packaging, ready to gift or keep.",

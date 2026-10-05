@@ -1,5 +1,172 @@
 [
   {
+    "query": "what jewelry to wear with a backless dress",
+    "keywords": [
+      "backdrop necklace for backless dress",
+      "back chain for open back dress",
+      "how to wear a back necklace",
+      "pearl back necklace for wedding dress",
+      "jewellery for open-back party dress"
+    ],
+    "productIds": [
+      "pearl-backdrop-necklace",
+      "dainty-backdrop-back-necklace",
+      "pearl-lariat-back-necklace",
+      "butterfly-backdrop-necklace-gold"
+    ],
+    "category": "Style Guide",
+    "months": [
+      10,
+      11,
+      12,
+      1,
+      5,
+      6,
+      7,
+      8
+    ],
+    "productCategories": [
+      "Back Chains",
+      "Necklaces"
+    ],
+    "source": "research",
+    "researchModel": "claude-opus-5",
+    "addedAt": "2026-10-05",
+    "why": "Aureus Boutique's backless-dress guide and Mark Schneider Design's Fall/Winter 2026 trends report both point to bold backdrop chains and pearls for party season, and the category has no existing post."
+  },
+  {
+    "query": "what jewellery to wear to a winter wedding",
+    "keywords": [
+      "wedding guest jewellery for a velvet dress",
+      "what jewellery to wear with a satin dress",
+      "pearl jewellery for winter wedding guest",
+      "wedding guest necklace for long sleeve dress",
+      "gold or silver jewellery for winter wedding"
+    ],
+    "productIds": [
+      "pearl-evening-backdrop-necklace",
+      "layered-pearl-choker",
+      "stacked-pearl-cross-choker",
+      "maximalist-layered-necklace-stack"
+    ],
+    "category": "Style Guide",
+    "months": [
+      9,
+      10,
+      11,
+      12,
+      1,
+      2,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "productCategories": [
+      "Necklaces",
+      "Back Chains"
+    ],
+    "source": "research",
+    "researchModel": "claude-opus-5",
+    "addedAt": "2026-10-05",
+    "why": "Foxhills Jewellers' 2026 wedding guest guide and Borsheims both call for heavier, richer winter silhouettes, with Louy Magroos pushing pearls against velvet and satin."
+  },
+  {
+    "query": "jewellery gifts for teenage girls",
+    "keywords": [
+      "christmas jewellery gifts for a 14 year old girl",
+      "jewellery gifts for teenage girl under 25 euros",
+      "cute anklet gift for a teenage girl",
+      "first jewellery gift for a daughter",
+      "trendy teen jewellery gifts 2026"
+    ],
+    "productIds": [
+      "butterfly-anklet",
+      "colorful-crystal-bead-bracelet",
+      "zodiac-charm-bracelet",
+      "evil-eye-ring"
+    ],
+    "category": "Gift Guide",
+    "months": [
+      10,
+      11,
+      12,
+      8
+    ],
+    "productCategories": [
+      "Anklets",
+      "Bracelets",
+      "Rings"
+    ],
+    "source": "research",
+    "researchModel": "claude-opus-5",
+    "addedAt": "2026-10-05",
+    "why": "Massete's Ultimate Christmas Jewelry Gift Guide 2026 runs a dedicated girls' section, and this price-capped buyer is missing from current gift coverage."
+  },
+  {
+    "query": "what jewelry to wear for engagement photos",
+    "keywords": [
+      "hand chain for engagement ring photos",
+      "ring finger chain for a proposal photo",
+      "winter engagement shoot jewellery",
+      "what to wear on your hands for engagement photos",
+      "jewellery that doesn't distract from the ring"
+    ],
+    "productIds": [
+      "gold-hand-chain",
+      "pearl-hand-chain",
+      "silver-finger-hand-chain",
+      "mirror-link-hand-chain"
+    ],
+    "category": "Style Guide",
+    "months": [
+      11,
+      12,
+      1,
+      2
+    ],
+    "productCategories": [
+      "Hand Chains"
+    ],
+    "source": "research",
+    "researchModel": "claude-opus-5",
+    "addedAt": "2026-10-05",
+    "why": "Deans Jewelry and Diamonds on Wabash identify November–February as proposal season, and Glimpse's Top 39 Jewelry Trends of 2026 ties layering to hand chains."
+  },
+  {
+    "query": "jewellery gifts for someone who doesn't wear earrings",
+    "keywords": [
+      "gifts for someone who can't wear earrings",
+      "what to buy someone without pierced ears",
+      "non earring jewellery gifts for her",
+      "jewellery gift for sensitive ears",
+      "christmas gift for her that isn't earrings"
+    ],
+    "productIds": [
+      "birthstone-bracelet",
+      "dainty-chain-bracelet",
+      "initial-letter-rhinestone-choker",
+      "monogram-letter-necklace"
+    ],
+    "category": "Gift Guide",
+    "months": [
+      10,
+      11,
+      12,
+      1,
+      2
+    ],
+    "productCategories": [
+      "Bracelets",
+      "Necklaces"
+    ],
+    "source": "research",
+    "researchModel": "claude-opus-5",
+    "addedAt": "2026-10-05",
+    "why": "Mainstream guides from Gabriel & Co., Massete and Angara all lead with earrings, leaving an unanswered query this earring-free catalog can own."
+  },
+  {
     "query": "choker necklace trend 2026",
     "keywords": [
       "chunky choker necklace 2026",

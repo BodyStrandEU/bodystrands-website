@@ -12241,5 +12241,81 @@
       "personalized"
     ],
     "sizeGuideImage": "/images/products/4c154510-a4d9-4055-9d01-e62e1f7cc15b.png"
+  },
+  {
+    "id": "beaded-star-choker",
+    "name": "Beaded Star Choker Necklace",
+    "price": 30,
+    "currency": "EUR",
+    "category": "Necklaces",
+    "description": "A beaded choker with a dangling star charm, available in red or green — stainless steel, waterproof, and festive without trying too hard.",
+    "fullDescription": "A beaded choker with a dangling star charm, available in red or green.\n\nSimple and festive without trying too hard. Choose the chain color you like, and choose whether you want the star charm or just the clean beaded choker on its own. Made from stainless steel, so it’s waterproof and won’t fade or tarnish, holiday season or not.\n\nPlease note that as each piece is handcrafted, no two pieces are identical and slight variations may occur.",
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Stainless steel"
+      },
+      {
+        "label": "Finish",
+        "value": "Gold tone"
+      },
+      {
+        "label": "Beads",
+        "value": "Faceted glass, available in red or green"
+      },
+      {
+        "label": "Charm",
+        "value": "Star charm, optional — select choker only or with star charm"
+      },
+      {
+        "label": "Size",
+        "value": "35cm + 6cm extender"
+      },
+      {
+        "label": "Waterproof",
+        "value": "Yes"
+      },
+      {
+        "label": "Tarnish-resistant",
+        "value": "Yes"
+      },
+      {
+        "label": "Care",
+        "value": "Wipe gently with a soft cloth after each wear. Store in an airtight container when not in use."
+      },
+      {
+        "label": "Shipping",
+        "value": "Dispatches within 1-2 business days"
+      }
+    ],
+    "variantGroups": [
+      {
+        "label": "Color",
+        "type": "options",
+        "options": [
+          "Red",
+          "Green"
+        ]
+      },
+      {
+        "label": "Style",
+        "type": "options",
+        "options": [
+          "Choker Only",
+          "With Star Charm"
+        ],
+        "optionPrices": {
+          "Choker Only": 0,
+          "With Star Charm": 5
+        }
+      }
+    ],
+    "images": [],
+    "gallery": [],
+    "featured": false,
+    "active": false,
+    "christmas": true,
+    "dateAdded": "2026-10-07T19:03:01.656Z",
+    "altText": "Red and green beaded star choker necklace, stainless steel waterproof holiday jewelry with optional star charm"
   }
 ]

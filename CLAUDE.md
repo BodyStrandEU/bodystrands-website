@@ -111,6 +111,16 @@ User's exact words on the layout: *"i love how you made this infographic.. the i
 - For single-chain products, use one label; for layered/multi-component products, use one label per chain/element
 - Always include the Size Guide block with real product measurements
 
+### Necklace/choker lifestyle shot — APPROVED format, confirmed Oct 7, 2026
+User's exact words: "it came out really really nice. lock in when i ask for necklace lifestyles. this is how i like it." Use this as the default whenever asked for a necklace/choker lifestyle shot (not a tight product-only closeup):
+- Medium shot from the shoulders up — zoomed out further than the standard chin-to-mid-chest product crop
+- Face is partially visible and naturally angled (not fully cropped out at the jaw) — lower half of the face, lips, visible; this is a styled portrait feel, not a pure product closeup
+- Model wearing a textured off-shoulder top (e.g. black faux fur or knit) so shoulders are bare and the neckline is open
+- Hair down, loose, natural
+- Plain white/neutral seamless background, softly lit
+- Soft natural daylight, 85mm f/1.4 lens, shallow depth of field
+- Still ends with the standard "soft natural highlight" + "keep the jewelry exactly as shown" + realistic skin texture + 1:1 square lines
+
 ### Prompt set structure (when asked for a full set)
 Generate 6 prompts minimum:
 1. **Gray background studio** — pure product focus, chin-to-chest crop, 105mm, gray seamless backdrop (always include this one)

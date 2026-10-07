@@ -7,6 +7,12 @@ import MagneticButton from "@/components/MagneticButton";
 
 type Slide = {
   image: string;
+  // Optional art direction: a separate photo for phones (the hero is tall and narrow
+  // there, so a wide photo gets zoomed in hard), and where to anchor each crop so the
+  // overlaid sub-text and button land on a quiet part of the photo.
+  mobileImage?: string;
+  position?: string;
+  mobilePosition?: string;
   eyebrow: string;
   headline: React.ReactNode;
   sub: string;
@@ -27,6 +33,9 @@ const SLIDES: Slide[] = [
   },
   {
     image: "/images/hero-packaging-card.jpg",
+    position: "center 20%",          // keep hand + boxes up top, card lettering below the button
+    mobileImage: "/images/hero-packaging-mobile.jpg",
+    mobilePosition: "35% center",    // hand + logo box; plain box/knit under the text
     eyebrow: "Thoughtfully Packaged",
     headline: <>Arrives <em className="not-italic text-[#A0622A]">Beautifully.</em></>,
     sub: "Every piece ships in signature Bodystrands packaging, ready to gift or keep.",
@@ -76,9 +85,21 @@ export default function HeroCarousel() {
               alt=""
               fill
               priority={i === 0}
-              className="object-cover object-center"
+              className={`object-cover ${s.mobileImage ? "hidden md:block" : ""}`}
+              style={{ objectPosition: s.position ?? "center" }}
               sizes="100vw"
             />
+            {s.mobileImage && (
+              <Image
+                src={s.mobileImage}
+                alt=""
+                fill
+                priority={i === 0}
+                className="object-cover md:hidden"
+                style={{ objectPosition: s.mobilePosition ?? "center" }}
+                sizes="100vw"
+              />
+            )}
           </div>
         ))}
         <div className="absolute inset-0 bg-gradient-to-t from-[#2C2220]/50 via-transparent to-transparent" />

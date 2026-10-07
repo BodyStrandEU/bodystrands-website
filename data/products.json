@@ -12310,12 +12310,27 @@
         }
       }
     ],
-    "images": [],
-    "gallery": [],
+    "images": [
+      "/images/products/fc1bd4f6-12c1-42a2-b423-8fd68e1c95dd.png"
+    ],
+    "gallery": [
+      "/images/products/fc1bd4f6-12c1-42a2-b423-8fd68e1c95dd.png",
+      "/images/products/ea0a87ae-0d8c-4c95-ba52-98673f7bf5ce.png",
+      "/images/products/d69e8fed-cb9a-435e-8081-a5bf905fe042.png",
+      "/images/products/7df2280d-a2f9-401b-93b8-0d44028ffc4a.png",
+      "/images/products/0a2322a0-f1fe-4869-8a31-6b44f11952c4.png",
+      "/images/products/IMG_3827-2.jpg",
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
+      "/images/products/de8d7794-b563-4327-b4c0-addbfbac4b89-copy.png",
+      "/images/products/a769b011-4bbe-4487-a345-c3e95ed151d0-copy-3.png",
+      "/images/products/953c004d-e65a-4a81-b38e-f55202bfe3b0-copy.png"
+    ],
     "featured": false,
     "active": false,
     "christmas": true,
     "dateAdded": "2026-10-07T19:03:01.656Z",
-    "altText": "Red and green beaded star choker necklace, stainless steel waterproof holiday jewelry with optional star charm"
+    "altText": "Red and green beaded star choker necklace, stainless steel waterproof holiday jewelry with optional star charm",
+    "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/4f9b5e63962e3d5eb07cd96259beaccb/downloads/default.mp4",
+    "sizeGuideImage": "/images/products/8c71db0b-041d-4634-b376-59fbaa733943.png"
   }
 ]

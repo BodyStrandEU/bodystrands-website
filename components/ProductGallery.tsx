@@ -4,12 +4,16 @@ import { createPortal } from "react-dom";
 import Image from "@/components/SmartImage";
 import type { Product } from "@/lib/products";
 import { getVideoSources } from "@/lib/videoUtils";
+import { PROCESS_VIDEO } from "@/lib/site-media";
 
 type MediaItem = { type: "image"; src: string } | { type: "video"; src: string };
 
+// [first image, product video, process video, ...rest]. With no product video the process
+// video takes the product-video slot (position 2); with neither, images only.
 function buildMedia(images: string[], videoSrc?: string): MediaItem[] {
   const items: MediaItem[] = images.map((src) => ({ type: "image" as const, src }));
-  if (videoSrc) items.splice(1, 0, { type: "video" as const, src: videoSrc });
+  const videos = [...new Set([videoSrc, PROCESS_VIDEO].filter((v): v is string => !!v))];
+  items.splice(1, 0, ...videos.map((src) => ({ type: "video" as const, src })));
   return items;
 }
 
@@ -272,12 +276,13 @@ export default function ProductGallery({
   activeVariant: string;
 }) {
   const [activeIndex, setActiveIndex]   = useState(0);
-  const [videoError, setVideoError]     = useState(false);
-  const [videoReady, setVideoReady]     = useState(false);
+  // Per-video state, keyed by src — a gallery can hold the product video and the process video.
+  const [failedVideos, setFailedVideos] = useState<Set<string>>(new Set());
+  const [readyVideos, setReadyVideos]   = useState<Set<string>>(new Set());
   const [lightboxOpen, setLightboxOpen] = useState(false);
 
   const mainRef    = useRef<HTMLDivElement>(null);
-  const videoRef   = useRef<HTMLVideoElement>(null);
+  const videoRefs  = useRef<Map<string, HTMLVideoElement>>(new Map());
   const touchStart = useRef({ x: 0, y: 0, time: 0 });
   const swipeDir   = useRef<"h" | "v" | null>(null);
 
@@ -287,10 +292,10 @@ export default function ProductGallery({
     product.video ??
     (product.variantVideos ? Object.values(product.variantVideos)[0] : undefined);
 
-  const allMedia  = buildMedia(images, videoSrc);
-  const media     = videoError ? allMedia.filter((m) => m.type !== "video") : allMedia;
-  const videoIdx  = media.findIndex((m) => m.type === "video");
-  const isOnVideo = activeIndex === videoIdx && videoIdx !== -1;
+  const allMedia    = buildMedia(images, videoSrc);
+  const media       = allMedia.filter((m) => !(m.type === "video" && failedVideos.has(m.src)));
+  const videoItems  = media.filter((m) => m.type === "video");
+  const activeVideo = media[activeIndex]?.type === "video" ? media[activeIndex].src : null;
 
   // Reset when variant changes
   useEffect(() => {
@@ -304,29 +309,35 @@ export default function ProductGallery({
     } else {
       setActiveIndex(0);
     }
-    setVideoError(false);
-    setVideoReady(false);
+    setFailedVideos(new Set());
+    setReadyVideos(new Set());
   }, [activeVariant, product.gallery, product.variantHeroes, product.video, product.variantVideos]);
 
+  // If the gallery shrinks (a video failed to load), keep the index in range.
   useEffect(() => {
-    if (videoError && isOnVideo) setActiveIndex(0);
-  }, [videoError, isOnVideo]);
+    if (activeIndex > media.length - 1) setActiveIndex(0);
+  }, [activeIndex, media.length]);
 
-  // Eagerly buffer video
+  // Buffering: the product's own video loads eagerly (as before); the shared process
+  // video only starts loading once the shopper is one swipe away from it.
+  const videoIndexKey = videoItems.map((v) => v.src).join("|");
   useEffect(() => {
-    const v = videoRef.current;
-    if (!v || !videoSrc || videoError) return;
-    v.preload = "auto";
-    v.load();
-  }, [videoSrc, videoError]);
+    media.forEach((item, i) => {
+      if (item.type !== "video") return;
+      const v = videoRefs.current.get(item.src);
+      if (!v || v.preload === "auto") return;
+      const isProcess = item.src === PROCESS_VIDEO && item.src !== videoSrc;
+      if (!isProcess || Math.abs(i - activeIndex) <= 1) { v.preload = "auto"; v.load(); }
+    });
+  }, [activeIndex, videoIndexKey, videoSrc]); // eslint-disable-line react-hooks/exhaustive-deps
 
-  // Play/pause via ref
+  // Play only the video on screen; pause the rest.
   useEffect(() => {
-    const v = videoRef.current;
-    if (!v) return;
-    if (isOnVideo) { v.currentTime = 0; v.play().catch(() => {}); }
-    else           { v.pause(); }
-  }, [isOnVideo]);
+    videoRefs.current.forEach((v, src) => {
+      if (src === activeVideo) { v.currentTime = 0; v.play().catch(() => {}); }
+      else v.pause();
+    });
+  }, [activeVideo]);
 
   // Native touch — direction detected here so preventDefault fires in time
   useEffect(() => {
@@ -413,28 +424,29 @@ export default function ProductGallery({
           ) : null
         )}
 
-        {/* Video — never unmounted so buffer is preserved */}
-        {videoSrc && !videoError && (
+        {/* Videos — never unmounted so their buffers are preserved */}
+        {videoItems.map((item) => (
           <video
-            ref={videoRef}
+            key={item.src}
+            ref={(el) => { if (el) videoRefs.current.set(item.src, el); else videoRefs.current.delete(item.src); }}
             muted
             loop
             playsInline
-            preload="auto"
-            onCanPlayThrough={() => setVideoReady(true)}
-            onError={() => { setVideoError(true); setVideoReady(false); }}
+            preload="metadata"
+            onCanPlayThrough={() => setReadyVideos((prev) => new Set(prev).add(item.src))}
+            onError={() => setFailedVideos((prev) => new Set(prev).add(item.src))}
             className={`absolute inset-0 w-full h-full object-contain transition-opacity duration-300 ${
-              isOnVideo ? "opacity-100" : "opacity-0 pointer-events-none"
+              activeVideo === item.src ? "opacity-100" : "opacity-0 pointer-events-none"
             }`}
           >
-            {getVideoSources(videoSrc).map((s) => (
+            {getVideoSources(item.src).map((s) => (
               <source key={s.src} src={s.src} type={s.type} />
             ))}
           </video>
-        )}
+        ))}
 
         {/* Buffering spinner */}
-        {isOnVideo && !videoReady && !videoError && (
+        {activeVideo && !readyVideos.has(activeVideo) && (
           <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
             <div className="w-10 h-10 rounded-full border-2 border-white/30 border-t-white animate-spin" />
           </div>

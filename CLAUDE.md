@@ -346,6 +346,7 @@ Belly Chains, Back Chains, Body Chains, Shoulder Chains, Anklets, Bracelets, Nec
 - `app/(site)/shop/[id]/page.tsx` — product detail page
 - `components/ProductCard.tsx` — shop grid card with swipeable carousel
 - `components/ProductGallery.tsx` — detail page gallery (swipe, video at pos 2, thumbnails)
+- `lib/site-media.ts` — `PROCESS_VIDEO`: one site-wide "how we make it" video shown in EVERY product gallery (user decision Oct 7, 2026): after the product's own model video (position 3), or in position 2 when the product has no video. Product pages only, never shop grid cards. Gallery code is live and tested; the constant is still `""` (off) — **next step: user supplies the file → mute audio, convert to MP4, upload to Cloudflare Stream, set the URL, verify a with-video and a no-video product on desktop + mobile.**
 - `components/ProductPageClient.tsx` — client wrapper with sticky CTA logic
 - `components/YouMayAlsoLike.tsx` — "You May Also Like" server component
 - `components/PageTransition.tsx` — page transition animation wrapper

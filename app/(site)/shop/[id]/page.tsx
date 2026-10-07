@@ -1,6 +1,6 @@
 import Link from "next/link";
 import titlePhrases from "@/data/product-title-phrases.json";
-import { products, INFOGRAPHIC_IMAGES } from "@/lib/products";
+import { products, INFOGRAPHIC_IMAGES, type Product } from "@/lib/products";
 import { getShippingRate, COUNTRY_GROUPS, ALL_COUNTRIES } from "@/lib/shipping";
 import { notFound } from "next/navigation";
 import ProductPageClient from "@/components/ProductPageClient";
@@ -19,9 +19,17 @@ const ALL_REAL_REVIEWS: Review[] = Object.values(CUSTOMER_REVIEWS).flat();
 // Replaced a fixed phrase pool assigned by hash (Oct 2, 2026), which gave e.g. the Chain
 // Waist Belt "Belly Chain for Spring Break" in October. Seasonal/occasion searches are
 // targeted by /gifts, /christmas, blog posts and Pinterest instead of product titles.
-// New products: run `node scripts/product-title-phrases.mjs <gsc.json> --only <id>`.
-function pickSuffix(productId: string, category: string): string {
-  return (titlePhrases as Record<string, string>)[productId] ?? category;
+// New products have no Search Console history yet, so until the GSC-driven script is run
+// for them (`node scripts/product-title-phrases.mjs <gsc.json> --only <id>`), this builds
+// an automatic fallback from the product's own flags/category rather than shipping a bare,
+// untargeted category name (e.g. a christmas:true product gets "Christmas <Category>"
+// immediately on launch, not weeks later once it has earned real search data).
+function pickSuffix(product: Product): string {
+  const known = (titlePhrases as Record<string, string>)[product.id];
+  if (known) return known;
+  if (product.christmas) return `Christmas ${product.category}`;
+  if (product.plusSize) return `Plus Size ${product.category}`;
+  return product.category;
 }
 
 // Google truncates SERP snippets around 155-160 chars. The old version appended a fixed
@@ -59,7 +67,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
   const url = `https://www.bodystrands.com/shop/${product.id}`;
   const symbol = product.currency === "EUR" ? "€" : product.currency === "GBP" ? "£" : "$";
   const priceLabel = `${symbol}${product.price.toFixed(2)}`;
-  const suffix = pickSuffix(product.id, product.category);
+  const suffix = pickSuffix(product);
   const metaDescription = buildMetaDescription(product.altText, product.description, priceLabel);
 
   return {

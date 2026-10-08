@@ -1,5 +1,175 @@
 [
   {
+    "query": "butterfly jewelry trend 2026",
+    "keywords": [
+      "butterfly anklet gold",
+      "y2k butterfly necklace",
+      "butterfly body chain outfit",
+      "butterfly charm belly chain",
+      "dainty butterfly jewelry"
+    ],
+    "productIds": [
+      "butterfly-anklet",
+      "butterfly-body-chain",
+      "butterfly-backdrop-necklace-gold",
+      "butterfly-charm-belly-chain"
+    ],
+    "category": "Style Guide",
+    "months": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "productCategories": [
+      "Anklets",
+      "Body Chains",
+      "Necklaces",
+      "Belly Chains"
+    ],
+    "source": "research",
+    "researchModel": "claude-sonnet-5",
+    "addedAt": "2026-10-08",
+    "why": "Butterfly motifs are the current wave of the Y2K nostalgia cycle and the catalog has unusually deep coverage across five product types."
+  },
+  {
+    "query": "coin pendant necklace trend",
+    "keywords": [
+      "coin necklace gold",
+      "coin bracelet trend",
+      "coin charm anklet",
+      "coin chain choker",
+      "medallion jewelry 2026"
+    ],
+    "productIds": [
+      "coin-disc-chain-choker",
+      "coin-disc-bracelet",
+      "coin-disc-chain-anklet",
+      "coin-link-chain-belt"
+    ],
+    "category": "Style Guide",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "productCategories": [
+      "Necklaces",
+      "Bracelets",
+      "Anklets"
+    ],
+    "source": "research",
+    "researchModel": "claude-sonnet-5",
+    "addedAt": "2026-10-08",
+    "why": "Coin and medallion jewelry fits the growing old-money/Mediterranean aesthetic and the catalog has a full mini-collection not yet covered."
+  },
+  {
+    "query": "mob wife aesthetic jewelry",
+    "keywords": [
+      "chunky gold necklace trend",
+      "maximalist necklace stack",
+      "chunky cross necklace outfit",
+      "statement gold chain winter"
+    ],
+    "productIds": [
+      "gold-waist-chain",
+      "maximalist-layered-necklace-stack",
+      "layered-body-chain-double-choker",
+      "gold-belly-body-chain"
+    ],
+    "category": "Style Guide",
+    "months": [
+      10,
+      11,
+      12,
+      1,
+      2
+    ],
+    "productCategories": [
+      "Necklaces",
+      "Belly Chains"
+    ],
+    "source": "research",
+    "researchModel": "claude-sonnet-5",
+    "addedAt": "2026-10-08",
+    "why": "The mob wife aesthetic is a bold maximalist gold trend suited to cold-weather styling content."
+  },
+  {
+    "query": "bridal hair vine chain accessories",
+    "keywords": [
+      "wedding hair jewelry chain",
+      "pearl hair vine for wedding",
+      "bridal head chain gold",
+      "boho wedding hairstyle accessories"
+    ],
+    "productIds": [
+      "bridal-hair-vine-chain",
+      "pearl-bridal-head-chain",
+      "bridal-forehead-chain",
+      "boho-hair-chain"
+    ],
+    "category": "Style Guide",
+    "months": [
+      11,
+      12,
+      1,
+      2,
+      3,
+      4
+    ],
+    "productCategories": [
+      "Head Chains"
+    ],
+    "source": "research",
+    "researchModel": "claude-sonnet-5",
+    "addedAt": "2026-10-08",
+    "why": "Engagement season drives bridal accessory research for spring/summer weddings, and the Head Chains category has no dedicated posts yet."
+  },
+  {
+    "query": "mirror chain jewelry trend",
+    "keywords": [
+      "mirror link hand chain",
+      "disco chain accessory",
+      "reflective chain jewelry 2026",
+      "mirror anklet party"
+    ],
+    "productIds": [
+      "mirror-link-hand-chain",
+      "mirror-link-foot-chain"
+    ],
+    "category": "Style Guide",
+    "months": [
+      10,
+      11,
+      12,
+      1,
+      5,
+      6,
+      7,
+      8
+    ],
+    "productCategories": [
+      "Hand Chains",
+      "Leg Chains"
+    ],
+    "source": "research",
+    "researchModel": "claude-sonnet-5",
+    "addedAt": "2026-10-08",
+    "why": "Mirror and chrome finishes are an under-used niche that pairs naturally with party-season styling content."
+  },
+  {
     "query": "what jewelry to wear with a backless dress",
     "keywords": [
       "backdrop necklace for backless dress",

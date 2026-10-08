@@ -1,0 +1,179 @@
+[
+  {
+    "date": "2026-10-08",
+    "researchModel": "claude-sonnet-5",
+    "trends": [
+      {
+        "name": "Layered necklace sets",
+        "what": "Pre-styled stacks of multiple necklaces sold as one set, including long sautoir-length pieces.",
+        "searches": [
+          "layered necklace set",
+          "necklace stack set",
+          "sautoir necklace"
+        ],
+        "evidence": "A jeweler's fall trend report states layered necklace sets make up almost 33% of all orders by mid-August, climbing through September; a 2026 forecast notes sautoir-length necklaces creeping into the spotlight.",
+        "momentum": "rising",
+        "fit": "we sell it",
+        "productIds": [
+          "curated-layered-necklace-stack",
+          "maximalist-layered-necklace-stack",
+          "turquoise-zodiac-necklace-stack"
+        ],
+        "idea": "Promote existing layered necklace sets as ready-to-wear shopping picks for party season."
+      },
+      {
+        "name": "Sea-inspired jewelry",
+        "what": "Shell, coral, pearl, and turquoise motifs evoking coastal escape.",
+        "searches": [
+          "shell necklace",
+          "turquoise bead necklace",
+          "coastal jewelry"
+        ],
+        "evidence": "A major fashion title's 2026 trend roundup calls out sea-inspired baubles as a moment as fashion craves whimsy and escape.",
+        "momentum": "rising",
+        "fit": "we sell it",
+        "productIds": [
+          "boho-shell-choker-necklace",
+          "cowrie-shell-anklet",
+          "cowrie-shell-belly-chain",
+          "turquoise-beaded-choker",
+          "turquoise-beaded-belly-chain",
+          "turquoise-beaded-cable-chain-necklace"
+        ],
+        "idea": "Create a coastal jewelry edit highlighting shell and turquoise pieces, with a note about an opportunity to add lucite accents."
+      },
+      {
+        "name": "Zodiac and celestial motifs",
+        "what": "Zodiac medallions, constellations, and celestial symbols as personal, spiritual jewelry.",
+        "searches": [
+          "zodiac necklace",
+          "celestial jewelry",
+          "zodiac medallion"
+        ],
+        "evidence": "A fine-jewelry trend guide calls zodiac/celestial jewelry 2026's most personal trend, transcending fad status to become modern classics.",
+        "momentum": "steady",
+        "fit": "we sell it",
+        "productIds": [
+          "zodiac-anklet",
+          "zodiac-charm-bracelet",
+          "zodiac-slip-on-necklace",
+          "gemstone-zodiac-anklet",
+          "turquoise-zodiac-necklace-stack",
+          "zodiac-yoga-belly-chain",
+          "zodiac-snake-belly-chain"
+        ],
+        "idea": "Build a zodiac jewelry hub page linking existing sign-specific gift guides and product pages."
+      },
+      {
+        "name": "Quiet luxury minimalism",
+        "what": "Understated, dainty gold jewelry meant for everyday wear, prized for intention over impulse.",
+        "searches": [
+          "quiet luxury jewelry",
+          "minimalist gold jewelry",
+          "dainty everyday jewelry"
+        ],
+        "evidence": "Trend commentary states the jewelry trends of 2025-2026 reward intention over impulse, with maximalism and quiet luxury growing simultaneously.",
+        "momentum": "steady",
+        "fit": "we sell it",
+        "productIds": [
+          "dainty-gold-body-chain",
+          "minimalist-pearl-back-necklace",
+          "minimalist-glasses-chain",
+          "dainty-chain-bracelet",
+          "dainty-backdrop-back-necklace"
+        ],
+        "idea": "Push dainty, minimalist pieces as a New Year 'edit your jewelry box' capsule collection."
+      },
+      {
+        "name": "Coquette aesthetic",
+        "what": "Soft, feminine pearl and bow-adjacent jewelry blending girlycore with confident softness.",
+        "searches": [
+          "coquette aesthetic jewelry",
+          "coquette jewelry trend",
+          "pearl choker coquette"
+        ],
+        "evidence": "Style press describes the 2026 coquette evolution as confidence in softness, a fusion of girlycore and Old English elegance with balletcore touches, described as peaking on TikTok and Pinterest.",
+        "momentum": "peaking",
+        "fit": "partial",
+        "productIds": [
+          "layered-pearl-choker",
+          "stacked-pearl-cross-choker",
+          "initial-heart-pearl-choker",
+          "pearl-charm-bracelet"
+        ],
+        "idea": "Feature existing pearl choker and bracelet pieces in a coquette styling guide while noting the gap in bow/ribbon-motif jewelry for future development."
+      },
+      {
+        "name": "Chunky, sculptural statement jewelry",
+        "what": "Bold, oversized sculptural metal jewelry and body harnesses for AW2026 statement dressing.",
+        "searches": [
+          "chunky jewelry trend",
+          "statement body jewelry",
+          "bold chain necklace"
+        ],
+        "evidence": "Stylists quoted in a trend feature list sculptural gold and silver pieces, mixed metals, layered necklaces and chunky cuffs as 'in', echoed by AW2026 runway recaps.",
+        "momentum": "rising",
+        "fit": "we sell it",
+        "productIds": [
+          "layered-body-chain-double-choker",
+          "pearl-body-harness",
+          "silver-shoulder-harness",
+          "maximalist-layered-necklace-stack"
+        ],
+        "idea": "Promote body harnesses and layered chain pieces for party season styling, while noting a gap in chunky cuff bracelets."
+      }
+    ],
+    "gaps": [],
+    "blogIdeas": [
+      {
+        "query": "coquette aesthetic jewelry",
+        "why": "Named a defining, viral 2026 aesthetic across style press, overlapping with party-season and Valentine's gifting.",
+        "productIds": [
+          "layered-pearl-choker",
+          "stacked-pearl-cross-choker",
+          "initial-heart-pearl-choker",
+          "pearl-charm-bracelet"
+        ]
+      },
+      {
+        "query": "quiet luxury jewelry",
+        "why": "Multiple 2026 forecasts name quiet luxury a core, still-strong direction, resonating with New Year jewelry resets.",
+        "productIds": [
+          "dainty-gold-body-chain",
+          "minimalist-pearl-back-necklace",
+          "minimalist-glasses-chain",
+          "dainty-chain-bracelet"
+        ]
+      },
+      {
+        "query": "zodiac jewelry trend 2026",
+        "why": "Called out as 2026's 'most personal trend' by a major retailer's forecast; functions as a hub linking sign-specific gift guides.",
+        "productIds": [
+          "zodiac-anklet",
+          "zodiac-charm-bracelet",
+          "turquoise-zodiac-necklace-stack",
+          "gemstone-zodiac-anklet"
+        ]
+      },
+      {
+        "query": "coastal jewelry trend 2026",
+        "why": "Named a top 2026 trend by a major fashion title covering sea-inspired motifs like shells and turquoise.",
+        "productIds": [
+          "boho-shell-choker-necklace",
+          "cowrie-shell-anklet",
+          "turquoise-beaded-choker",
+          "turquoise-beaded-cable-chain-necklace"
+        ]
+      },
+      {
+        "query": "waterproof jewelry that doesn't tarnish",
+        "why": "High-intent, practical purchase query that converts well and complements the everyday never-take-it-off jewelry mindset in 2026 forecasts.",
+        "productIds": [
+          "waterproof-belly-chain",
+          "stainless-steel-belly-chain",
+          "silver-waterproof-belly-chain"
+        ]
+      }
+    ]
+  }
+]

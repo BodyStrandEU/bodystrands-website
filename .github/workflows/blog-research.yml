@@ -38,10 +38,18 @@ jobs:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: node scripts/research-blog-keywords.mjs
 
+      # Owner gets every run's trends and product gaps by email (user request, Oct 8, 2026).
+      - name: Email trend report
+        continue-on-error: true  # never lose the research commit over an email hiccup
+        env:
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          RESEND_FROM_EMAIL: ${{ secrets.RESEND_FROM_EMAIL }}
+        run: node scripts/send-trend-report.mjs
+
       # The queue isn't rendered on the site, so no deploy is needed for this commit.
       - name: Commit and push
         run: |
-          git add data/blog-queue.json
+          git add data/blog-queue.json data/trend-signals.json
           if git diff --staged --quiet; then
             echo "Queue unchanged."
             exit 0

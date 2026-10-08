@@ -420,6 +420,7 @@ User, verbatim: "use this research as a strategic weapon across all areas of my 
 - Trial and error: every change is a test with a date and a reason (seo-overrides keeps `was` + `updated`). Judge by clicks and sales from Search Console/GA4, not by opinion. Keep what works, refresh what doesn't after 3 months.
 - Learn continuously: re-run `scripts/seo-keywords.mjs` whenever working on SEO/social; look for new searches the shop appears for, rising queries, and what ChatGPT sends people to.
 - Proactively tell the user about incoming product trends and product ideas the research surfaces (search demand the catalog doesn't cover yet) — with the evidence behind each.
+- **Trend report email — every research run (user request, Oct 8, 2026: "every report after that should be emailed to me").** `research-blog-keywords.mjs` also researches product trends (named sources + URLs, momentum, catalog fit we-sell-it/partial/gap, `missing` piece types) and keeps blog ideas with no matching product as `gaps`; all saved to `data/trend-signals.json`. `scripts/send-trend-report.mjs` emails the latest run to info@bodystrands.com (Resend) — a step in `blog-research.yml` (Mon + Thu). First report sent Oct 8, 2026 from a manual local run.
 
 ## Social Media Scheduling Rules (Postiz) — ALWAYS follow these
 

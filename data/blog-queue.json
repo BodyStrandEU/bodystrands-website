@@ -1,5 +1,171 @@
 [
   {
+    "query": "coquette aesthetic jewelry",
+    "keywords": [
+      "dainty pearl choker necklace",
+      "pearl bead double choker outfit",
+      "coquette jewelry trend 2026",
+      "soft girl aesthetic accessories",
+      "pearl bracelet for coquette style"
+    ],
+    "productIds": [
+      "layered-pearl-choker",
+      "stacked-pearl-cross-choker",
+      "initial-heart-pearl-choker",
+      "pearl-charm-bracelet"
+    ],
+    "category": "Style Guide",
+    "months": [
+      10,
+      11,
+      12,
+      1,
+      2
+    ],
+    "productCategories": [
+      "Necklaces",
+      "Bracelets"
+    ],
+    "source": "research",
+    "researchModel": "claude-sonnet-5",
+    "addedAt": "2026-10-08",
+    "why": "Named a defining, viral 2026 aesthetic across style press, overlapping with party-season and Valentine's gifting."
+  },
+  {
+    "query": "quiet luxury jewelry",
+    "keywords": [
+      "minimalist gold jewelry trend 2026",
+      "dainty jewelry that looks expensive",
+      "simple everyday gold chain",
+      "understated jewelry trend",
+      "quiet luxury on a budget"
+    ],
+    "productIds": [
+      "dainty-gold-body-chain",
+      "minimalist-pearl-back-necklace",
+      "minimalist-glasses-chain",
+      "dainty-chain-bracelet"
+    ],
+    "category": "Style Guide",
+    "months": [
+      10,
+      11,
+      12,
+      1
+    ],
+    "productCategories": [
+      "Body Chains",
+      "Necklaces",
+      "Eyeglasses Chains",
+      "Bracelets"
+    ],
+    "source": "research",
+    "researchModel": "claude-sonnet-5",
+    "addedAt": "2026-10-08",
+    "why": "Multiple 2026 forecasts name quiet luxury a core, still-strong direction, resonating with New Year jewelry resets."
+  },
+  {
+    "query": "zodiac jewelry trend 2026",
+    "keywords": [
+      "celestial jewelry meaning",
+      "zodiac medallion necklace",
+      "constellation jewelry trend",
+      "star sign jewelry gift",
+      "zodiac anklet gift idea"
+    ],
+    "productIds": [
+      "zodiac-anklet",
+      "zodiac-charm-bracelet",
+      "turquoise-zodiac-necklace-stack",
+      "gemstone-zodiac-anklet"
+    ],
+    "category": "Personalized Jewelry",
+    "months": [
+      10,
+      11,
+      12,
+      1
+    ],
+    "productCategories": [
+      "Anklets",
+      "Bracelets",
+      "Necklaces"
+    ],
+    "source": "research",
+    "researchModel": "claude-sonnet-5",
+    "addedAt": "2026-10-08",
+    "why": "Called out as 2026's 'most personal trend' by a major retailer's forecast; functions as a hub linking sign-specific gift guides."
+  },
+  {
+    "query": "coastal jewelry trend 2026",
+    "keywords": [
+      "shell choker necklace",
+      "turquoise bead necklace outfit",
+      "cowrie shell jewelry meaning",
+      "pearl and turquoise jewelry",
+      "ocean inspired jewelry"
+    ],
+    "productIds": [
+      "boho-shell-choker-necklace",
+      "cowrie-shell-anklet",
+      "turquoise-beaded-choker",
+      "turquoise-beaded-cable-chain-necklace"
+    ],
+    "category": "Style Guide",
+    "months": [
+      10,
+      11,
+      12,
+      2,
+      3
+    ],
+    "productCategories": [
+      "Necklaces",
+      "Anklets"
+    ],
+    "source": "research",
+    "researchModel": "claude-sonnet-5",
+    "addedAt": "2026-10-08",
+    "why": "Named a top 2026 trend by a major fashion title covering sea-inspired motifs like shells and turquoise."
+  },
+  {
+    "query": "waterproof jewelry that doesn't tarnish",
+    "keywords": [
+      "waterproof belly chain for swimming",
+      "shower proof body chain",
+      "stainless steel jewelry that doesn't turn skin green",
+      "tarnish free belly chain",
+      "jewelry you can wear in the shower"
+    ],
+    "productIds": [
+      "waterproof-belly-chain",
+      "stainless-steel-belly-chain",
+      "silver-waterproof-belly-chain"
+    ],
+    "category": "Care & Quality",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "productCategories": [
+      "Belly Chains"
+    ],
+    "source": "research",
+    "researchModel": "claude-sonnet-5",
+    "addedAt": "2026-10-08",
+    "why": "High-intent, practical purchase query that converts well and complements the everyday never-take-it-off jewelry mindset in 2026 forecasts."
+  },
+  {
     "query": "butterfly jewelry trend 2026",
     "keywords": [
       "butterfly anklet gold",

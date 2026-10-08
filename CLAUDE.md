@@ -309,7 +309,7 @@ Belly Chains, Back Chains, Body Chains, Shoulder Chains, Anklets, Bracelets, Nec
 - Category tile images: category-belly.png, elvan-back-full.jpg (Back Chains), category-body.jpg, category-shoulder.jpg, lifestyle-anklet.jpg (Anklets), category-necklace.jpg, category-bracelet.jpg, category-hand.jpg, category-head.jpg, category-glasses.jpg, category-bikini.jpg
 
 ## Homepage Layout
-- Hero: full-screen /images/hero-back-chain.jpg
+- Hero (`components/HeroCarousel.tsx`, Oct 8, 2026): 4 full-screen slides — shoulder chain, studio, packaging boxes, gift wrap — each with a landscape desktop photo (`hero-*.jpg`, 16:9, left third plain for the dark text) and a vertical phone photo (`hero-*-mobile.jpg`, 9:16, subject at top, calm bottom where the caption sits on a cream fade). Photos are 1672×941 / 941×1672; 2560×1440+ would be sharper on big screens. A process video section was tried and dropped; user is shooting a landscape video.
 - Category grid: Back Chains = col-span-2 md:row-span-2 portrait hero anchor, all others = aspect-[3/4] portrait, grid-cols-2 mobile / grid-cols-4 desktop, NO ScrollReveal on tiles
 - Lifestyle slider: reads all files from public/images/lifestyle/ folder sorted alphabetically (7 files: 01–07)
 - Brand Story: /images/elvan-back-cross.jpg

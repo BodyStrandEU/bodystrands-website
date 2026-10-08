@@ -4,14 +4,16 @@ import { createPortal } from "react-dom";
 import Image from "@/components/SmartImage";
 import type { Product } from "@/lib/products";
 import { getVideoSources } from "@/lib/videoUtils";
-import { PROCESS_VIDEO } from "@/lib/site-media";
+import { PROCESS_VIDEO, PACKAGING_IMAGES } from "@/lib/site-media";
 
 type MediaItem = { type: "image"; src: string } | { type: "video"; src: string };
 
-// [first image, product video, process video, ...rest]. With no product video the process
-// video takes the product-video slot (position 2); with neither, images only.
+// [first image, product video, process video, ...rest, ...packaging photos]. With no product
+// video the process video takes the product-video slot (position 2). The shared packaging
+// photos always close the gallery.
 function buildMedia(images: string[], videoSrc?: string): MediaItem[] {
-  const items: MediaItem[] = images.map((src) => ({ type: "image" as const, src }));
+  const productImages = images.filter((src) => !PACKAGING_IMAGES.includes(src));
+  const items: MediaItem[] = [...productImages, ...PACKAGING_IMAGES].map((src) => ({ type: "image" as const, src }));
   const videos = [...new Set([videoSrc, PROCESS_VIDEO].filter((v): v is string => !!v))];
   items.splice(1, 0, ...videos.map((src) => ({ type: "video" as const, src })));
   return items;

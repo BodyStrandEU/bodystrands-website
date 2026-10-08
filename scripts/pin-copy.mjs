@@ -10,12 +10,15 @@
 // Output: { "<id>": { "title": "...", "description": "..." } } — every entry passes the
 // same checks scripts/postiz-create.mjs enforces for Pinterest.
 import Anthropic from "@anthropic-ai/sdk";
-import { readFileSync } from "fs";
+import { readFileSync, existsSync } from "fs";
 import { fileURLToPath } from "url";
 import { dirname, join } from "path";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const products = JSON.parse(readFileSync(join(__dirname, "../data/products.json"), "utf-8"));
+// Shared keyword file (scripts/seo-keywords.mjs): real Google searches + research keywords per product.
+const KW_PATH = join(__dirname, "../data/seo-keywords.json");
+const keywords = existsSync(KW_PATH) ? JSON.parse(readFileSync(KW_PATH, "utf-8")) : { products: {}, categories: {} };
 const MODEL = "claude-opus-5";
 const BATCH = 15;
 const BANNED = /elevat|effortless|quiet (confidence|luxury)|curated|timeless|stunning|must-have|portugal|canada|etsy|link in bio|316l|marine-grade|medical-grade|surgical-grade|solid gold/i;
@@ -44,6 +47,18 @@ function facts(p) {
     p.variants?.length ? `finishes: ${p.variants.join(", ")}` : "",
     `description: ${String(p.description ?? "").slice(0, 400)}`,
     p.altText ? `seo phrase: ${p.altText}` : "", specs ? `specs: ${specs.slice(0, 400)}` : "",
+    searches(p),
+  ].filter(Boolean).join("\n");
+}
+
+/** Real search wording for this piece: Google searches it already shows for, its category's, and research keywords. */
+function searches(p) {
+  const k = keywords.products?.[p.id] ?? {}, c = keywords.categories?.[p.category] ?? {};
+  const q = (list = [], n) => list.slice(0, n).map((x) => x.q).join("; ");
+  return [
+    k.queries?.length ? `Google searches this piece already shows for: ${q(k.queries, 8)}` : "",
+    c.queries?.length ? `Google searches for its category: ${q(c.queries, 6)}` : "",
+    (k.research?.length || c.research?.length) ? `trending research keywords: ${[...(k.research ?? []), ...(c.research ?? [])].slice(0, 8).join("; ")}` : "",
   ].filter(Boolean).join("\n");
 }
 
@@ -65,6 +80,8 @@ async function writeBatch(client, batch, feedback = "") {
     messages: [{ role: "user", content: `Write Pinterest pin copy for these handmade stainless steel jewelry products from Bodystrands.
 
 STYLE — chained long-tail keywords: the end of one search phrase begins the next, so one line covers many real searches. Example of the technique (don't copy the words): "gold body chain for beach accessory for women bikini belly chain" contains "gold body chain", "body chain for beach", "beach accessory for women", "women bikini belly chain".
+
+SEARCH DATA FIRST: when a product lists real Google searches or research keywords, build the chain from that exact wording (only phrases that truly describe the piece). Fill the rest from its facts.
 
 TITLE: "<Product Name> | <keyword chain>", 60-100 characters total. The chain uses what people search for this piece: finish (gold/silver), type (e.g. back necklace, belly chain, anklet), occasion (beach, wedding, bridal, festival, everyday, party), who it's for (for women, for her, bridesmaid), motif (pearl, coin, butterfly, zodiac, birthstone, cross, initial).
 

@@ -1,3 +1,4 @@
+import { categorySeo } from "@/lib/seo-overrides";
 import { Suspense } from "react";
 import { CATEGORY_CONTENT } from "@/lib/category-content";
 import BuyingGuide from "@/components/BuyingGuide";
@@ -32,6 +33,7 @@ export async function generateMetadata({
   if (category && CATEGORY_META[category]) {
     return {
       ...CATEGORY_META[category],
+      ...categorySeo(category),
       alternates: { canonical: `/shop?category=${encodeURIComponent(category)}` },
     };
   }

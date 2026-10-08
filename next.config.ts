@@ -55,7 +55,7 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/blog/how-to-wear-body-chains-to-a-festival-without-looking-overdone",
-        destination: "/blog/how-to-wear-body-chains-to-a-festival-without-looking-uncomfortable",
+        destination: "/blog/festival-jewelry-what-to-wear-and-how-to-style-it",
         permanent: true,
       },
       {
@@ -245,12 +245,12 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/blog/the-best-body-jewelry-for-a-beach-wedding-guest",
-        destination: "/blog/best-body-jewelry-for-a-beach-wedding-guest",
+        destination: "/blog/best-jewelry-for-a-beach-wedding-guest",
         permanent: true,
       },
       {
-        source: "/blog/best-jewelry-for-a-beach-wedding-guest",
-        destination: "/blog/best-body-jewelry-for-a-beach-wedding-guest",
+        source: "/blog/best-body-jewelry-for-a-beach-wedding-guest",
+        destination: "/blog/best-jewelry-for-a-beach-wedding-guest",
         permanent: true,
       },
       {
@@ -260,12 +260,12 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/blog/why-high-quality-stainless-steel-beats-gold-plated-every-time",
-        destination: "/blog/why-stainless-steel-jewelry-outlasts-gold-plated",
+        destination: "/blog/why-stainless-steel-beats-gold-plated-jewelry",
         permanent: true,
       },
       {
-        source: "/blog/why-stainless-steel-beats-gold-plated-jewelry",
-        destination: "/blog/why-stainless-steel-jewelry-outlasts-gold-plated",
+        source: "/blog/why-stainless-steel-jewelry-outlasts-gold-plated",
+        destination: "/blog/why-stainless-steel-beats-gold-plated-jewelry",
         permanent: true,
       },
       {
@@ -279,8 +279,8 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
-        source: "/blog/festival-jewelry-what-to-wear-and-how-to-style-it",
-        destination: "/blog/how-to-wear-body-chains-to-a-festival-without-looking-uncomfortable",
+        source: "/blog/how-to-wear-body-chains-to-a-festival-without-looking-uncomfortable",
+        destination: "/blog/festival-jewelry-what-to-wear-and-how-to-style-it",
         permanent: true,
       },
       {

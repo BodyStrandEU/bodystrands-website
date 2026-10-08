@@ -1,3 +1,4 @@
+import { blogSeo } from "@/lib/seo-overrides";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
@@ -16,11 +17,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const post = blogPosts.find((p) => p.slug === slug);
   if (!post) return {};
   const image = postImage(post);
+  const seo = blogSeo(slug);
   return {
     // Short brand suffix: " — Bodystrands Journal" pushed 111 of 117 titles past the ~60
     // characters Google shows, so the end of the post title was being cut off.
-    title: `${post.title} | Bodystrands`,
-    description: post.excerpt,
+    title: seo?.title ?? `${post.title} | Bodystrands`,
+    description: seo?.description ?? post.excerpt,
     alternates: { canonical: `/blog/${slug}` },
     openGraph: {
       type: "article",

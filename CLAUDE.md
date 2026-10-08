@@ -406,6 +406,21 @@ The Anthropic API key is NOT in .env.local — ask the user to paste it (or crea
 - All product pages have keyword-rich titles via CATEGORY_SUFFIX mapping
 - Blog posts auto-link to products + category pages for internal linking
 
+## SEO refresh rule — 3 months, never automatic (user decision, Oct 8, 2026)
+User, verbatim: "we will not change seo monthly automatically.. seo usually needs time so monitor whats not getting clicks or sales after 3 months then refresh those."
+- **Never** schedule automatic SEO rewrites. A page's Google title/description is only rewritten once it has had **3 months** since its last change AND it still isn't getting clicks or sales. Pages with sales are left alone.
+- Tools: `scripts/seo-keywords.mjs` → `data/seo-keywords.json` (real Search Console queries + research keywords + ChatGPT visits + sales per product/category, plus `opportunities` = page-1/2 searches with no clicks; no AI, reads Google through `/api/admin/google-report` with ADMIN_PASSWORD). `scripts/seo-ctr-rewrite.mjs` → `data/seo-overrides.json` (read by `lib/seo-overrides.ts` in the blog, product and category `generateMetadata`; visible headlines/product names never change). The rewrite script enforces the 3-month rule itself (`updated` per page; baselines: product title phrases + category titles changed Oct 2, 2026, blog posts count from publish date); `--force` only if the user asks.
+- The keyword file also feeds `scripts/pin-copy.mjs` (Pinterest wording from real searches).
+- **Next review dates:** product + category titles eligible from ~Jan 2, 2027; Sep–Oct 2026 blog posts from Dec–Jan. Before rewriting, re-run `seo-keywords.mjs` and judge by clicks/sales, not impressions alone.
+- Merging duplicate blog posts: always keep the URL Search Console ranks best (Sep 29, 2026 merge sent 3 search-known URLs into weaker ones — beach wedding #8 with 1,440 impressions → #13; flipped back Oct 8).
+
+## Research is a strategic weapon across the whole shop — user direction, Oct 8, 2026
+User, verbatim: "use this research as a strategic weapon across all areas of my shop. i want you to continue learning and finding out about people and their search habbits. you can also maybe signal to me incoming product trends or ideas. all decisions are based on facts and trial and error."
+- The 3-month rule above protects **existing** page copy while Google evaluates it. It does NOT pause testing: keep introducing new keywords and long-tail phrases through **new surfaces** every week — new blog posts, new pins (pin copy draws from `data/seo-keywords.json`), Instagram hashtags, gift/Christmas page entries, new product listings, Etsy titles.
+- Trial and error: every change is a test with a date and a reason (seo-overrides keeps `was` + `updated`). Judge by clicks and sales from Search Console/GA4, not by opinion. Keep what works, refresh what doesn't after 3 months.
+- Learn continuously: re-run `scripts/seo-keywords.mjs` whenever working on SEO/social; look for new searches the shop appears for, rising queries, and what ChatGPT sends people to.
+- Proactively tell the user about incoming product trends and product ideas the research surfaces (search demand the catalog doesn't cover yet) — with the evidence behind each.
+
 ## Social Media Scheduling Rules (Postiz) — ALWAYS follow these
 
 ### Platforms & Integration IDs

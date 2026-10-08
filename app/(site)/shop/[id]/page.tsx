@@ -1,3 +1,4 @@
+import { productSeo } from "@/lib/seo-overrides";
 import Link from "next/link";
 import titlePhrases from "@/data/product-title-phrases.json";
 import { products, INFOGRAPHIC_IMAGES, type Product } from "@/lib/products";
@@ -68,10 +69,11 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
   const symbol = product.currency === "EUR" ? "€" : product.currency === "GBP" ? "£" : "$";
   const priceLabel = `${symbol}${product.price.toFixed(2)}`;
   const suffix = pickSuffix(product);
-  const metaDescription = buildMetaDescription(product.altText, product.description, priceLabel);
+  const seo = productSeo(product.id);
+  const metaDescription = seo?.description ?? buildMetaDescription(product.altText, product.description, priceLabel);
 
   return {
-    title: `${product.name} | ${suffix} | Bodystrands`,
+    title: seo?.title ?? `${product.name} | ${suffix} | Bodystrands`,
     description: metaDescription,
     alternates: { canonical: `/shop/${product.id}` },
     openGraph: {

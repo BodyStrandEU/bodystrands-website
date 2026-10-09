@@ -67,9 +67,12 @@ Giordano drops the reference jewelry photo directly into the LLM alongside the p
 - **NEVER**: sparkle effects, star bursts, lens flares, artificial studio strobes
 - The phrase to use: *"a soft natural highlight catches across the chain links, making the metal appear luminous without any alteration"*
 
+### Background color — UPDATED Oct 9, 2026, supersedes "gray seamless"
+Plain gray was the original default (see below), but a side-by-side test confirmed a warm greige/taupe reads more on-brand. User's exact words: "greige is way better and youre right 100% its more on brand." **New standing default for every plain-background product shot:** *"Plain warm greige/taupe seamless studio background — a soft, warm beige-gray tone, between cream and warm gray, not cold or neutral gray."* Use this instead of "gray seamless background" everywhere below and in all future prompts. Keep it identical across every category — never vary the shade per category — since products from different categories constantly sit side by side (homepage, You May Also Like, category tiles), so any drift reads as a mistake, not a feature.
+
 ### What a thumbnail prompt looks like (the APPROVED format)
 From the session where the user said "very good job, save this to memory" — the successful image had:
-- Gray seamless background
+- Gray seamless background (now updated to warm greige/taupe — see above)
 - 105mm f/2.8 or 85mm f/1.4 lens spec
 - Tight crop from chin to mid-chest — face cropped at jaw/chin, not shown
 - Hair swept back so the neck is completely clear
@@ -123,7 +126,7 @@ User's exact words: "it came out really really nice. lock in when i ask for neck
 
 ### Prompt set structure (when asked for a full set)
 Generate 6 prompts minimum:
-1. **Gray background studio** — pure product focus, chin-to-chest crop, 105mm, gray seamless backdrop (always include this one)
+1. **Studio background** — pure product focus, chin-to-chest crop, 105mm, warm greige/taupe seamless backdrop (always include this one — see "Background color" above)
 2. **Beach / coastal lifestyle** — bright, turquoise water bokeh behind, tight crop
 3. **Mediterranean terrace** — white stone, warm sunlight, mid-distance
 4. **Garden / nature** — green bokeh, dappled light

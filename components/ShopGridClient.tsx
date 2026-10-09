@@ -37,7 +37,7 @@ export default function ShopGridClient({
   const gridCls =
     cols === 1
       ? "grid grid-cols-1 gap-y-8"
-      : "grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-x-1 gap-y-10 md:gap-x-1 md:gap-y-14";
+      : "grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-x-px gap-y-16 md:gap-x-1 md:gap-y-14";
 
   if (filtered.length === 0) {
     return (

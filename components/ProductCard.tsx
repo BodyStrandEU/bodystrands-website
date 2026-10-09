@@ -141,7 +141,7 @@ export default function ProductCard({ product, priority = false }: { product: Pr
       {/* Media container */}
       <div
         ref={mediaRef}
-        className="relative overflow-hidden bg-[#FDF9F7] aspect-[4/5] select-none"
+        className="relative overflow-hidden bg-[#FDF9F7] aspect-[7/10] md:aspect-[4/5] select-none"
         onTouchEnd={onTouchEnd}
       >
         <WishlistButton productId={product.id} />

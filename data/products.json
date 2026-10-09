@@ -8462,7 +8462,8 @@
     ],
     "sizeGuideImage": "/images/products/4a34f7fe-cab7-4c40-a10f-cff8807d32cf.webp",
     "altText": "Delicate layered arm chain in gold tone stainless steel for elegant summer jewelry and beach accessory styling",
-    "dateAdded": "2026-07-05T12:49:58-04:00"
+    "dateAdded": "2026-07-05T12:49:58-04:00",
+    "active": false
   },
   {
     "id": "satellite-link-choker",

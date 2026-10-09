@@ -8727,7 +8727,8 @@
       "Silver Plated": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/81c6a9cf4cd77c67e33bb40160d6127e/downloads/default.mp4",
       "Stainless Steel": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/81c6a9cf4cd77c67e33bb40160d6127e/downloads/default.mp4"
     },
-    "dateAdded": "2026-07-11T16:49:10-04:00"
+    "dateAdded": "2026-07-11T16:49:10-04:00",
+    "active": false
   },
   {
     "id": "stacked-pearl-cross-choker",

@@ -5,7 +5,7 @@ export const CATEGORY_HERO_IMAGES: Partial<Record<Category, string>> = {
   "Leg Chains":            "/images/category-leg.jpg",
   "Back Chains":           "/images/elvan-back-full.jpg",
   "Body Chains":           "/images/category-body.jpg",
-  "Shoulder & Arm Chains": "/images/category-shoulder.jpg",
+  "Shoulder Chains": "/images/category-shoulder.jpg",
   "Anklets":               "/images/lifestyle-anklet.jpg",
   "Foot Chains":           "/images/category-foot.jpg",
   "Necklaces":             "/images/category-necklace.jpg",

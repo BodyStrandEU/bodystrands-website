@@ -29,7 +29,7 @@ const SECTIONS: Section[] = [
       { label: "Back Chains", path: "images/elvan-back-full.jpg" },
       { label: "Body Chains", path: "images/category-body.jpg" },
       { label: "Belly Chains", path: "images/category-belly.png" },
-      { label: "Shoulder & Arm Chains", path: "images/category-shoulder.jpg" },
+      { label: "Shoulder Chains", path: "images/category-shoulder.jpg" },
       { label: "Anklets", path: "images/lifestyle-anklet.jpg" },
       { label: "Foot Chains", path: "images/category-foot.jpg" },
       { label: "Necklaces", path: "images/category-necklace.jpg" },

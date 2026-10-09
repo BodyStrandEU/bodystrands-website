@@ -406,7 +406,7 @@ export const CATEGORY_REVIEWS: Record<string, Review[]> = {
     },
   ],
 
-  "Shoulder & Arm Chains": [
+  "Shoulder Chains": [
     {
       name: "Georgia P.",
       location: "Surrey, UK",

@@ -48,29 +48,25 @@ export const CATEGORY_CONTENT: Partial<Record<string, CategoryContent>> = {
     ],
   },
 
-  "Shoulder & Arm Chains": {
+  "Shoulder Chains": {
     intro:
-      "Arm chains and shoulder chains put jewelry where people don't expect it: a slim band around the upper arm, or chains that drape from your neck across your shoulders. Handmade in stainless steel, in gold or silver tone, from €20.",
+      "Shoulder chains put jewelry where people don't expect it: chains that connect at the neck and drape across one or both shoulders. Handmade in stainless steel, in gold or silver tone, from €20.",
     guide: [
-      { type: "heading", text: "Arm chain or shoulder chain: what's the difference?" },
-      { type: "paragraph", text: "An arm chain wraps around your upper arm. The " + link("bicep-chain", "Bicep Chain") + " simply slips on, the " + link("layered-arm-chain", "Layered Arm Chain") + " closes with a lobster clasp and small extender, and the " + link("birthstone-arm-band", "Birthstone Arm Band") + " and " + link("birthstone-arm-chain", "Birthstone Arm Chain") + " add a birthstone of your choice." },
+      { type: "heading", text: "Which shoulder chain is right for you?" },
       { type: "paragraph", text: "A shoulder chain connects at your neck and drapes over one or both shoulders, like the " + link("goddess-shoulder-chain", "Goddess Shoulder Chain") + ", " + link("multi-strand-shoulder-chain", "Multi Strand Shoulder Chain") + " or " + link("double-shoulder-chest-chain", "Double Shoulder Chest Chain") + ". The " + link("silver-shoulder-harness", "Silver Shoulder Harness") + " is a more structured shape, sized S to XL." },
-      { type: "heading", text: "What to wear with an arm chain or shoulder chain" },
+      { type: "heading", text: "What to wear with a shoulder chain" },
       { type: "list", items: [
         "Sleeveless, strapless and one-shoulder tops, where bare skin shows the chain.",
         "Weddings: the " + link("bridal-shoulder-chain", "Bridal Shoulder Chain") + " and " + link("bridal-shoulder-necklace", "Bridal Shoulder Necklace") + " are made for brides and bridesmaids.",
         "Off-shoulder dresses: the " + link("off-shoulder-chain-necklace", "Off-Shoulder Chain Necklace") + " follows the neckline.",
         "Beach days and festivals, over a bikini top or cover-up.",
-        "Cooler months: a slim arm chain over a thin, fitted long-sleeve top.",
       ] },
       { type: "heading", text: "Finding your size" },
-      { type: "paragraph", text: "For an arm chain, measure around the widest part of your upper arm where you want it to sit. For shoulder chains and harnesses, the fit depends on your shoulders and chest, and the harness comes in S, M, L and XL. If you're between sizes, message us after checkout and we'll make it to your measurements for free." },
+      { type: "paragraph", text: "Fit depends on your shoulders and chest, and the harness comes in S, M, L and XL. If you're between sizes, message us after checkout and we'll make it to your measurements for free." },
     ],
     faq: [
-      { question: "How do you wear an arm chain?", answer: "Slide or clasp it around your upper arm, just above the bicep, where it can't slip down. It looks best with sleeveless or one-shoulder tops so the chain sits on bare skin." },
-      { question: "Which arm should you wear an arm chain on?", answer: "Either works. Many people choose the side that shows most in photos, or the arm opposite their bag strap so the chain isn't hidden." },
       { question: "Can you wear a shoulder chain to a wedding?", answer: "Yes. Bridal shoulder chains are designed for brides and bridesmaids and look good with strapless and off-shoulder dresses. As a guest, choose a fine, simple chain so it doesn't compete with the bride." },
-      { question: "Are arm chains waterproof?", answer: "Our arm and shoulder chains are stainless steel, which is water-resistant and tarnish-resistant, so they can handle a swim or a shower." },
+      { question: "Are shoulder chains waterproof?", answer: "Our shoulder chains are stainless steel, which is water-resistant and tarnish-resistant, so they can handle a swim or a shower." },
     ],
   },
 

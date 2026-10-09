@@ -365,28 +365,28 @@
   },
   {
     "productId": "bicep-chain",
-    "category": "Shoulder & Arm Chains",
+    "category": "Shoulder Chains",
     "region": "upperArm",
     "minCm": 25.0,
     "maxCm": 39.0
   },
   {
     "productId": "birthstone-arm-band",
-    "category": "Shoulder & Arm Chains",
+    "category": "Shoulder Chains",
     "region": "upperArm",
     "minCm": 25.0,
     "maxCm": 39.0
   },
   {
     "productId": "birthstone-arm-chain",
-    "category": "Shoulder & Arm Chains",
+    "category": "Shoulder Chains",
     "region": "upperArm",
     "minCm": 25.0,
     "maxCm": 39.0
   },
   {
     "productId": "layered-arm-chain",
-    "category": "Shoulder & Arm Chains",
+    "category": "Shoulder Chains",
     "region": "upperArm",
     "minCm": 25.0,
     "maxCm": 39.0

@@ -83,7 +83,7 @@ export const CATEGORY_SIZE_CONFIG: Partial<Record<Category, CategorySizeConfig>>
     measureLabel: "Ring finger circumference (cm)",
     measureHint: "Wrap a soft tape or a strip of paper snugly around the base of the finger you’ll wear the ring on.",
   },
-  "Shoulder & Arm Chains": {
+  "Shoulder Chains": {
     region: "upperArm",
     measureLabel: "Upper arm circumference (cm)",
     measureHint: "Measure around the fullest part of your upper arm/bicep. (This fits our bicep and arm-band styles specifically — full shoulder-drape pieces are made custom-fit, see note below.)",

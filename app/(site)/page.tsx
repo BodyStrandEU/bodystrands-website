@@ -9,7 +9,6 @@ import StatCounter from "@/components/StatCounter";
 import ScrollReveal from "@/components/ScrollReveal";
 import HeroCarousel from "@/components/HeroCarousel";
 import StatementReveal from "@/components/StatementReveal";
-import RippleImage from "@/components/RippleImage";
 import ReviewsMarquee from "@/components/ReviewsMarquee";
 import LifestyleSlider from "@/components/LifestyleSlider";
 import BrandVideo from "@/components/BrandVideo";
@@ -54,7 +53,7 @@ const allTiles = [
 
 type Tile = typeof allTiles[number];
 
-function CategoryTile({ tile }: { tile: Tile }) {
+function CategoryTile({ tile, priority }: { tile: Tile; priority?: boolean }) {
   return (
     <Link href={tile.href} className="group block">
       <div className="relative overflow-hidden aspect-[3/4]">
@@ -62,6 +61,7 @@ function CategoryTile({ tile }: { tile: Tile }) {
           src={tile.image}
           alt={tile.label}
           fill
+          priority={priority}
           className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-[1.04]"
         />
         <div className="absolute bottom-0 left-0 right-0 h-2/5 bg-gradient-to-t from-black/55 to-transparent" />
@@ -94,8 +94,6 @@ export default function HomePage() {
         .map((f) => `/images/instagram/${f}`)
     : [];
 
-  const heroTile     = allTiles.find((t) => t.label === "Back Chains");
-  const gridTiles    = allTiles.filter((t) => t.label !== "Back Chains");
   const featured     = products
     .filter((p) => p.active !== false)
     .slice()
@@ -106,6 +104,31 @@ export default function HomePage() {
     <>
       {/* ── HERO — image carousel ── */}
       <HeroCarousel />
+
+      {/* ── SHOP BY CATEGORY ── */}
+      <section className="max-w-7xl mx-auto px-4 md:px-10 py-16 md:py-24">
+        <ScrollReveal>
+          <div className="flex items-end justify-between mb-8 md:mb-10 px-2 md:px-0">
+            <div>
+              <p className="text-[0.6rem] tracking-[0.3em] uppercase text-[#A0622A] mb-3">Explore</p>
+              <h2 className="font-heading text-4xl md:text-5xl font-light text-[#2C2220]">
+                Shop by Category
+              </h2>
+            </div>
+            <Link href="/shop" className="hidden md:block text-[0.6rem] tracking-[0.22em] uppercase text-[#A0622A] hover:underline underline-offset-4">
+              View All →
+            </Link>
+          </div>
+        </ScrollReveal>
+
+        <ScrollReveal delay={100}>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-3">
+            {allTiles.map((tile, i) => (
+              <CategoryTile key={tile.label} tile={tile} priority={i < 4} />
+            ))}
+          </div>
+        </ScrollReveal>
+      </section>
 
       {/* ── MARQUEE BELT ── */}
       <div className="bg-[#2C2220] py-4 overflow-hidden select-none">
@@ -130,46 +153,6 @@ export default function HomePage() {
 
       {/* ── BEST SELLERS ── */}
       <BestSellersCarousel />
-
-      {/* ── SHOP BY CATEGORY ── */}
-      <section className="max-w-7xl mx-auto px-4 md:px-10 py-16 md:py-24">
-        <ScrollReveal>
-          <div className="flex items-end justify-between mb-8 md:mb-10 px-2 md:px-0">
-            <div>
-              <p className="text-[0.6rem] tracking-[0.3em] uppercase text-[#A0622A] mb-3">Explore</p>
-              <h2 className="font-heading text-4xl md:text-5xl font-light text-[#2C2220]">
-                Shop by Category
-              </h2>
-            </div>
-            <Link href="/shop" className="hidden md:block text-[0.6rem] tracking-[0.22em] uppercase text-[#A0622A] hover:underline underline-offset-4">
-              View All →
-            </Link>
-          </div>
-        </ScrollReveal>
-
-        <ScrollReveal delay={100}>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-3">
-            {heroTile && (
-              <div className="col-span-2 md:row-span-2">
-                <Link href={heroTile.href} className="group block h-full">
-                  <div className="relative overflow-hidden aspect-[3/4] md:aspect-auto md:h-full">
-                    <RippleImage src={heroTile.image} alt={heroTile.label} priority />
-                    <div className="absolute bottom-0 left-0 right-0 h-2/5 bg-gradient-to-t from-black/55 to-transparent" />
-                    <div className="absolute bottom-0 left-0 p-4 md:p-7">
-                      <h3 className="font-heading font-light text-white leading-tight text-2xl md:text-3xl">
-                        {heroTile.label}
-                      </h3>
-                    </div>
-                  </div>
-                </Link>
-              </div>
-            )}
-            {gridTiles.map((tile) => (
-              <CategoryTile key={tile.label} tile={tile} />
-            ))}
-          </div>
-        </ScrollReveal>
-      </section>
 
       {/* ── FEATURED STRIP ── */}
       {featured.length > 0 && (

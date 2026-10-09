@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { CATEGORIES } from "@/lib/products";
+import { activeCategories } from "@/lib/products";
 
 function InstagramIcon() {
   return (
@@ -14,7 +14,7 @@ function InstagramIcon() {
 
 const SHOP_LINKS = [
   { href: "/shop", label: "All Pieces" },
-  ...CATEGORIES.map((c) => ({ href: `/shop?category=${encodeURIComponent(c)}`, label: c })),
+  ...activeCategories.map((c) => ({ href: `/shop?category=${encodeURIComponent(c)}`, label: c })),
 ];
 
 const INFO_LINKS = [

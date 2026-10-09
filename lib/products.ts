@@ -103,7 +103,10 @@ export function suggestGiftTags(name: string): GiftTag[] {
 
 export const products: Product[] = productsData as Product[];
 
-// Derived automatically — used by Navbar, homepage tiles, and shop filter
+// Derived automatically — used by Navbar, homepage tiles, and shop filter.
+// Only counts products that are actually visible (active !== false), so a
+// category with zero active products (e.g. Bikini Clip Chains, Oct 2026)
+// disappears from nav/filters on its own instead of lingering as a dead link.
 export const activeCategories = [
-  ...new Set(products.map((p) => p.category)),
+  ...new Set(products.filter((p) => p.active !== false).map((p) => p.category)),
 ] as Category[];

@@ -67,12 +67,12 @@ Giordano drops the reference jewelry photo directly into the LLM alongside the p
 - **NEVER**: sparkle effects, star bursts, lens flares, artificial studio strobes
 - The phrase to use: *"a soft natural highlight catches across the chain links, making the metal appear luminous without any alteration"*
 
-### Background color — UPDATED Oct 9, 2026, supersedes "gray seamless"
-Plain gray was the original default (see below), but a side-by-side test confirmed a warm greige/taupe reads more on-brand. User's exact words: "greige is way better and youre right 100% its more on brand." **New standing default for every plain-background product shot:** *"Plain warm greige/taupe seamless studio background — a soft, warm beige-gray tone, between cream and warm gray, not cold or neutral gray."* Use this instead of "gray seamless background" everywhere below and in all future prompts. Keep it identical across every category — never vary the shade per category — since products from different categories constantly sit side by side (homepage, You May Also Like, category tiles), so any drift reads as a mistake, not a feature.
+### Background color — UPDATED Oct 9, 2026 (lightened same day), supersedes "gray seamless"
+Plain gray was the original default (see below), but a side-by-side test confirmed a warm greige/taupe reads more on-brand. User's exact words: "greige is way better and youre right 100% its more on brand." That greige then tested too dark once seen across real product shots — user's exact words: "we thing the greige is nice but might be a little too dark. other websites have a light background displaying the product." **New standing default for every plain-background product shot:** *"Plain light warm greige/sand seamless studio background — a pale, soft warm beige tone, lighter and airier than a typical greige, closer to warm sand or oatmeal, staying warm (never cool or neutral gray, never stark white)."* Use this instead of "gray seamless background" (or the earlier darker greige wording) everywhere below and in all future prompts. Keep it identical across every category — never vary the shade per category — since products from different categories constantly sit side by side (homepage, You May Also Like, category tiles), so any drift reads as a mistake, not a feature.
 
 ### What a thumbnail prompt looks like (the APPROVED format)
 From the session where the user said "very good job, save this to memory" — the successful image had:
-- Gray seamless background (now updated to warm greige/taupe — see above)
+- Gray seamless background (now updated to light warm greige/sand — see above)
 - 105mm f/2.8 or 85mm f/1.4 lens spec
 - Tight crop from chin to mid-chest — face cropped at jaw/chin, not shown
 - Hair swept back so the neck is completely clear
@@ -88,8 +88,10 @@ Models must look like real humans, not AI-generated mannequins. Always include n
 - Avoid over-smoothed, waxy, or poreless AI-skin
 - Suggested phrase to add to every prompt: *"realistic skin texture with subtle natural imperfections, not AI-smooth — photographed on real film"*
 
-### Aspect ratio — always 1:1
-All thumbnail prompts must specify **square format, 1:1 aspect ratio**. Etsy thumbnails are square. Include the line: *"Square format, 1:1 aspect ratio."* in every prompt.
+### Aspect ratio — always 1:1 for thumbnails; 3:4 vertical for hero/category-slot images
+All thumbnail prompts (plain-background, Etsy-style product shots) must specify **square format, 1:1 aspect ratio**. Etsy thumbnails are square. Include the line: *"Square format, 1:1 aspect ratio."* in every prompt.
+
+**Separate rule, added Oct 9, 2026**, for images destined for the homepage category row or any other vertical/portrait slot on the site (`components/` tiles using `aspect-[3/4]` — see "Category grid" below): target **3:4 vertical/portrait**, not square. User's exact words: "change it to a little more vertical aspect ratio so it fits the vertical category slots... keep that in mind for the upcoming photos AR." Include the line: *"Portrait format, 3:4 vertical aspect ratio."* in every prompt for this use case. Extend the scene naturally to fill the taller frame (more visible shoulders/background above or below) rather than stretching or tightly cropping the subject.
 
 ### Always specify camera lens
 - **Tight product / thumbnail**: 105mm f/2.8 macro
@@ -126,7 +128,7 @@ User's exact words: "it came out really really nice. lock in when i ask for neck
 
 ### Prompt set structure (when asked for a full set)
 Generate 6 prompts minimum:
-1. **Studio background** — pure product focus, chin-to-chest crop, 105mm, warm greige/taupe seamless backdrop (always include this one — see "Background color" above)
+1. **Studio background** — pure product focus, chin-to-chest crop, 105mm, light warm greige/sand seamless backdrop (always include this one — see "Background color" above)
 2. **Beach / coastal lifestyle** — bright, turquoise water bokeh behind, tight crop
 3. **Mediterranean terrace** — white stone, warm sunlight, mid-distance
 4. **Garden / nature** — green bokeh, dappled light
@@ -313,7 +315,7 @@ Belly Chains, Back Chains, Body Chains, Shoulder Chains, Anklets, Bracelets, Nec
 
 ## Homepage Layout
 - Hero (`components/HeroCarousel.tsx`, Oct 8, 2026): 4 full-screen slides — shoulder chain, studio, packaging boxes, gift wrap — each with a landscape desktop photo (`hero-*.jpg`, 16:9, left third plain for the dark text) and a vertical phone photo (`hero-*-mobile.jpg`, 9:16, subject at top, calm bottom where the caption sits on a cream fade). Photos are 1672×941 / 941×1672; 2560×1440+ would be sharper on big screens. A process video section was tried and dropped; user is shooting a landscape video.
-- Category grid: Back Chains = col-span-2 md:row-span-2 portrait hero anchor, all others = aspect-[3/4] portrait, grid-cols-2 mobile / grid-cols-4 desktop, NO ScrollReveal on tiles
+- Category grid (updated Oct 9, 2026 — SKIMS-inspired redesign): moved directly under the hero carousel, before the marquee/trust badges. All 13 categories are now equal-size `aspect-[3/4]` portrait tiles, grid-cols-2 mobile / grid-cols-4 desktop — the old asymmetric "Back Chains" col-span-2 row-span-2 anchor tile was removed in favor of a uniform vertical/portrait grid.
 - Lifestyle slider: reads all files from public/images/lifestyle/ folder sorted alphabetically (7 files: 01–07)
 - Brand Story: /images/elvan-back-cross.jpg
 - Page transitions: PageTransition component in layout.tsx, key={pathname}, animate-page-in CSS keyframe

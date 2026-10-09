@@ -46,7 +46,6 @@ const allTiles = [
   { label: "Hand Chains",        href: "/shop?category=Hand+Chains",         image: "/images/category-hand.jpg"     },
   { label: "Head Chains",        href: "/shop?category=Head+Chains",         image: "/images/category-head.jpg"     },
   { label: "Eyeglasses Chains",  href: "/shop?category=Eyeglasses+Chains",  image: "/images/category-glasses.jpg"  },
-  { label: "Bikini Clip Chains", href: "/shop?category=Bikini+Clip+Chains", image: "/images/category-bikini.jpg"   },
   { label: "Leg Chains",         href: "/shop?category=Leg+Chains",         image: "/images/category-leg.jpg"      },
   { label: "Rings",              href: "/shop?category=Rings",              image: "/images/category-rings.jpg"    },
 ];
@@ -110,12 +109,12 @@ export default function HomePage() {
         <ScrollReveal>
           <div className="flex items-end justify-between mb-8 md:mb-10 px-2 md:px-0">
             <div>
-              <p className="text-[0.6rem] tracking-[0.3em] uppercase text-[#A0622A] mb-3">Explore</p>
+              <p className="text-[0.6rem] tracking-[0.3em] uppercase text-[#8C7B6E] mb-3">Explore</p>
               <h2 className="font-heading text-4xl md:text-5xl font-light text-[#2C2220]">
                 Shop by Category
               </h2>
             </div>
-            <Link href="/shop" className="hidden md:block text-[0.6rem] tracking-[0.22em] uppercase text-[#A0622A] hover:underline underline-offset-4">
+            <Link href="/shop" className="hidden md:block text-[0.6rem] tracking-[0.22em] uppercase text-[#8C7B6E] hover:text-[#2C2220] hover:underline underline-offset-4">
               View All →
             </Link>
           </div>
@@ -137,10 +136,10 @@ export default function HomePage() {
             <div key={i} className="flex items-center shrink-0">
               {MARQUEE_TAGS.map((tag) => (
                 <span key={tag} className="flex items-center">
-                  <span className="text-[0.5rem] tracking-[0.28em] uppercase text-[#E8B4A8]/50 px-6 md:px-8">
+                  <span className="text-[0.5rem] tracking-[0.28em] uppercase text-[#FDF9F7]/55 px-6 md:px-8">
                     {tag}
                   </span>
-                  <span className="text-[#A0622A]/45 text-[0.55rem]">◆</span>
+                  <span className="text-[#FDF9F7]/40 text-[0.55rem]">◆</span>
                 </span>
               ))}
             </div>
@@ -161,10 +160,10 @@ export default function HomePage() {
             <div className="max-w-7xl mx-auto px-6 md:px-10 mb-8 md:mb-12">
               <div className="flex items-end justify-between">
                 <div>
-                  <p className="text-[0.6rem] tracking-[0.3em] uppercase text-[#A0622A] mb-3">Just Arrived</p>
+                  <p className="text-[0.6rem] tracking-[0.3em] uppercase text-[#8C7B6E] mb-3">Just Arrived</p>
                   <h2 className="font-heading text-4xl md:text-5xl font-light text-[#2C2220]">New Pieces</h2>
                 </div>
-                <Link href="/shop" className="hidden md:block text-[0.6rem] tracking-[0.22em] uppercase text-[#A0622A] hover:underline underline-offset-4">
+                <Link href="/shop" className="hidden md:block text-[0.6rem] tracking-[0.22em] uppercase text-[#8C7B6E] hover:text-[#2C2220] hover:underline underline-offset-4">
                   View All →
                 </Link>
               </div>
@@ -185,7 +184,7 @@ export default function HomePage() {
       <StatementReveal />
 
       {/* ── STATS ── */}
-      <section className="border-y border-[#E8B4A8]/20 py-14 md:py-20">
+      <section className="border-y border-[#8C7B6E]/20 py-14 md:py-20">
         <ScrollReveal>
           <div className="max-w-7xl mx-auto px-6 md:px-10 grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-6">
             {STATS.map((stat) => (
@@ -212,7 +211,7 @@ export default function HomePage() {
         </ScrollReveal>
         <ScrollReveal delay={150}>
           <div className="flex flex-col gap-6">
-            <p className="text-[0.6rem] tracking-[0.3em] uppercase text-[#A0622A]">Our Philosophy</p>
+            <p className="text-[0.6rem] tracking-[0.3em] uppercase text-[#8C7B6E]">Our Philosophy</p>
             <h2 className="font-heading text-4xl md:text-5xl font-light text-[#2C2220] leading-snug">
               Jewelry that moves<br />
               <em className="not-italic text-[#A0622A]">with you</em>
@@ -247,9 +246,9 @@ export default function HomePage() {
 
       {/* Diamond divider */}
       <div className="max-w-7xl mx-auto px-6 md:px-10 flex items-center gap-6">
-        <div className="flex-1 h-px bg-[#E8B4A8]/30" />
-        <span className="text-[#E8B4A8]/50 text-[0.6rem]">◆</span>
-        <div className="flex-1 h-px bg-[#E8B4A8]/30" />
+        <div className="flex-1 h-px bg-[#8C7B6E]/20" />
+        <span className="text-[#8C7B6E]/50 text-[0.6rem]">◆</span>
+        <div className="flex-1 h-px bg-[#8C7B6E]/20" />
       </div>
     </>
   );

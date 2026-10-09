@@ -87,7 +87,7 @@ export default function ProductOrderPage() {
   const [allProducts, setAllProducts] = useState<Product[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
-  const [category, setCategory] = useState<Category>(CATEGORIES[0]);
+  const [category, setCategory] = useState<Category>([...CATEGORIES].sort()[0]);
   const [orderedIds, setOrderedIds] = useState<string[]>([]);
   const [saving, setSaving] = useState(false);
   const [saved, setSaved] = useState(true);
@@ -227,7 +227,7 @@ export default function ProductOrderPage() {
               fontSize: "0.8rem",
             }}
           >
-            {CATEGORIES.map((c) => (
+            {[...CATEGORIES].sort().map((c) => (
               <option key={c} value={c}>
                 {c}
               </option>

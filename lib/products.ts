@@ -1,20 +1,20 @@
 import productsData from "@/data/products.json";
 
 export const CATEGORIES = [
-  "Belly Chains",
-  "Leg Chains",
-  "Back Chains",
-  "Body Chains",
-  "Shoulder Chains",
   "Anklets",
-  "Foot Chains",
+  "Back Chains",
+  "Belly Chains",
+  "Bikini Clip Chains",
+  "Body Chains",
   "Bracelets",
-  "Necklaces",
+  "Eyeglasses Chains",
+  "Foot Chains",
   "Hand Chains",
   "Head Chains",
-  "Eyeglasses Chains",
-  "Bikini Clip Chains",
+  "Leg Chains",
+  "Necklaces",
   "Rings",
+  "Shoulder Chains",
 ] as const;
 
 export type Category = (typeof CATEGORIES)[number];
@@ -109,4 +109,4 @@ export const products: Product[] = productsData as Product[];
 // disappears from nav/filters on its own instead of lingering as a dead link.
 export const activeCategories = [
   ...new Set(products.filter((p) => p.active !== false).map((p) => p.category)),
-] as Category[];
+].sort() as Category[];

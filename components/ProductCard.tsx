@@ -136,13 +136,12 @@ export default function ProductCard({ product, priority = false }: { product: Pr
   return (
     <div
       className="group block cursor-pointer relative"
-      style={{ borderRadius: "4px" }}
       onClick={onCardClick}
     >
       {/* Media container */}
       <div
         ref={mediaRef}
-        className="relative overflow-hidden bg-[#FDF9F7] aspect-square select-none"
+        className="relative overflow-hidden bg-[#FDF9F7] aspect-[4/5] select-none"
         onTouchEnd={onTouchEnd}
       >
         <WishlistButton productId={product.id} />
@@ -206,48 +205,39 @@ export default function ProductCard({ product, priority = false }: { product: Pr
           </>
         )}
 
-        {/* Variant swatches — tap/click to jump to that variant's images */}
+      </div>
+
+      {/* Info */}
+      <div className="pt-3 px-1">
         {product.variants && product.variants.length > 1 && (
-          <div className="absolute bottom-7 left-2 flex gap-1.5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
+          <div className="flex gap-1.5 mb-2.5">
             {product.variants.map((v) => (
               <button
                 key={v}
                 aria-label={v}
                 onClick={(e) => { e.stopPropagation(); jumpToVariant(v); }}
-                className={`w-4 h-4 rounded-full border-2 transition-all duration-200 ${
-                  activeVariant === v ? "border-white scale-110" : "border-white/50"
+                className={`w-5 h-5 rounded-full border-2 transition-all duration-200 ${
+                  activeVariant === v ? "border-[#2C2220]" : "border-transparent"
                 }`}
                 style={{ backgroundColor: SWATCH_COLORS[v] ?? "#888" }}
               />
             ))}
           </div>
         )}
-      </div>
-
-      {/* Info */}
-      <div className="pt-3 px-1">
-        <p className="text-[0.47rem] tracking-[0.2em] uppercase text-[#8C7B6E]/65 mb-0.5">{product.category}</p>
-        <h3 className="text-[0.7rem] font-light tracking-[0.03em] text-[#2C2220] leading-tight group-hover:text-[#A0622A] transition-colors duration-300 truncate">
+        <p className="text-[0.6rem] tracking-[0.15em] uppercase text-[#8C7B6E] mb-1">{product.category}</p>
+        {/* A <p>, not <h3> — a sitewide rule forces every h1-h4 into light Cormorant
+            Garamond serif, which fights the clean, bold sans look wanted here. */}
+        <p role="heading" aria-level={3} className="font-body text-sm font-semibold tracking-normal text-[#2C2220] leading-snug group-hover:text-[#A0622A] transition-colors duration-300">
           {product.name}
-        </h3>
-        <div className="mt-1 flex items-baseline justify-between gap-1.5">
-          <div className="flex items-baseline gap-1.5 flex-wrap">
-            <span className="text-[0.68rem] font-light tracking-wide text-[#A0622A]">
-              {format(product.price)}
-            </span>
-            <span className="text-[0.58rem] font-light tracking-wide text-[#8C7B6E]/50 line-through">
-              {format(getOriginalPrice(product.price))}
-            </span>
-          </div>
-          <span className="text-[#A0622A] text-[0.75rem] leading-none opacity-0 group-hover:opacity-100 -translate-x-1 group-hover:translate-x-0 transition-[opacity,transform] duration-300">
-            →
+        </p>
+        <div className="mt-1.5 flex items-baseline gap-1.5 flex-wrap">
+          <span className="text-sm font-medium tracking-wide text-[#A0622A]">
+            {format(product.price)}
+          </span>
+          <span className="text-xs font-light tracking-wide text-[#8C7B6E]/50 line-through">
+            {format(getOriginalPrice(product.price))}
           </span>
         </div>
-        {product.variants && product.variants.length > 1 && (
-          <p className="mt-0.5 text-[0.45rem] tracking-[0.12em] uppercase text-[#8C7B6E]">
-            {activeVariant ?? product.variants.join(" · ")}
-          </p>
-        )}
       </div>
     </div>
   );

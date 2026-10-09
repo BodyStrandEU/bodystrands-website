@@ -95,22 +95,23 @@ export default async function ShopPage({
           )}
         </div>
 
-        {/* Layout: filter sidebar (desktop) / pills (mobile) + grid */}
-        <div className="flex flex-col lg:flex-row gap-6 lg:gap-16">
-          <Suspense fallback={null}>
-            <CategoryFilter />
-          </Suspense>
-
-          <div className="flex-1 min-w-0">
-            <ShopGridClient filtered={filtered} grouped={grouped} />
-          </div>
-        </div>
-
-        {/* Buying guide + FAQ — gives Google (and shoppers) the words to match searches
-            like "back necklace" or "arm chain" that the product grid alone can't. */}
-        {content && <BuyingGuide label={`${activeLabel} Guide`} content={content} />}
-
+        {/* Category filter — horizontal row above the grid, same on every breakpoint */}
+        <Suspense fallback={null}>
+          <CategoryFilter />
+        </Suspense>
       </div>
+
+      {/* Full-bleed grid — breaks out of the max-w-7xl container so product photos
+          run edge-to-edge like SKIMS', instead of being boxed in by page margins. */}
+      <ShopGridClient filtered={filtered} grouped={grouped} />
+
+      {/* Buying guide + FAQ — gives Google (and shoppers) the words to match searches
+          like "back necklace" or "arm chain" that the product grid alone can't. */}
+      {content && (
+        <div className="max-w-7xl mx-auto px-1 md:px-10">
+          <BuyingGuide label={`${activeLabel} Guide`} content={content} />
+        </div>
+      )}
     </div>
   );
 }

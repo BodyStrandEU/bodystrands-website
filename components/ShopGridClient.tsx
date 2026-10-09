@@ -37,7 +37,7 @@ export default function ShopGridClient({
   const gridCls =
     cols === 1
       ? "grid grid-cols-1 gap-y-8"
-      : "grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-x-0.5 gap-y-4 md:gap-x-4 md:gap-y-8";
+      : "grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-x-1 gap-y-10 md:gap-x-1 md:gap-y-14";
 
   if (filtered.length === 0) {
     return (
@@ -55,7 +55,7 @@ export default function ShopGridClient({
   return (
     <div>
       {/* Column toggle — mobile only */}
-      <div className="flex justify-end mb-5 lg:hidden">
+      <div className="flex justify-end mb-5 lg:hidden px-4 md:px-10">
         <div className="flex items-center gap-0.5 border border-[#E8B4A8]/40 p-1">
           <button
             onClick={() => setCols(2)}
@@ -80,7 +80,7 @@ export default function ShopGridClient({
         <div className="flex flex-col gap-12 md:gap-16">
           {grouped.map((group, gi) => (
             <div key={group.category}>
-              <div className="flex items-center gap-4 mb-5 px-0.5">
+              <div className="flex items-center gap-4 mb-5 px-4 md:px-10">
                 <span className="text-[0.55rem] tracking-[0.28em] uppercase text-[#A0622A] whitespace-nowrap">
                   {group.category}
                 </span>

@@ -2400,16 +2400,15 @@
     "featured": false,
     "active": true,
     "images": [
-      "https://i.etsystatic.com/55122258/r/il/1d1947/8088863881/il_fullxfull.8088863881_ib30.jpg",
+      "/images/products/f0b404fe-a6f6-48ca-bb15-32da3280d8c6.png",
       "https://i.etsystatic.com/55122258/r/il/0b755c/8032935374/il_fullxfull.8032935374_lxvy.jpg",
-      "https://i.etsystatic.com/55122258/r/il/0278b6/8040974884/il_fullxfull.8040974884_n1vj.jpg",
-      "https://i.etsystatic.com/55122258/r/il/08b032/8040985024/il_fullxfull.8040985024_q40e.jpg",
-      "https://i.etsystatic.com/55122258/r/il/5734ae/8092750057/il_fullxfull.8092750057_kycr.jpg",
       "https://i.etsystatic.com/55122258/r/il/0cfcf9/8032913296/il_fullxfull.8032913296_1lye.jpg",
-      "https://i.etsystatic.com/55122258/r/il/b3a795/7943677304/il_fullxfull.7943677304_jmkv.jpg",
+      "https://i.etsystatic.com/55122258/r/il/08b032/8040985024/il_fullxfull.8040985024_q40e.jpg",
+      "https://i.etsystatic.com/55122258/r/il/1d1947/8088863881/il_fullxfull.8088863881_ib30.jpg",
+      "https://i.etsystatic.com/55122258/r/il/0278b6/8040974884/il_fullxfull.8040974884_n1vj.jpg",
+      "https://i.etsystatic.com/55122258/r/il/5734ae/8092750057/il_fullxfull.8092750057_kycr.jpg",
       "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.webp",
-      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp",
-      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.webp"
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp"
     ],
     "variantGroups": [
       {
@@ -2448,7 +2447,8 @@
     "dateAdded": "2026-06-12T15:00:27-04:00",
     "giftTags": [
       "personalized"
-    ]
+    ],
+    "sizeGuideImage": "/images/products/esty-thumnails-new--19-.png"
   },
   {
     "id": "silver-waist-chain",

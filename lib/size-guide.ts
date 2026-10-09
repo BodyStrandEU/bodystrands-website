@@ -48,6 +48,11 @@ export const CATEGORY_SIZE_CONFIG: Partial<Record<Category, CategorySizeConfig>>
     measureLabel: "Ankle circumference (cm)",
     measureHint: "Wrap a soft tape measure snugly around your ankle bone, where the anklet will sit.",
   },
+  "Foot Chains": {
+    region: "ankle",
+    measureLabel: "Ankle circumference (cm)",
+    measureHint: "Wrap a soft tape measure snugly around your ankle bone, where the foot chain will sit.",
+  },
   "Bracelets": {
     region: "wrist",
     measureLabel: "Wrist circumference (cm)",

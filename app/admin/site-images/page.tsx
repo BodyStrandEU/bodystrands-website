@@ -31,6 +31,7 @@ const SECTIONS: Section[] = [
       { label: "Belly Chains", path: "images/category-belly.png" },
       { label: "Shoulder & Arm Chains", path: "images/category-shoulder.jpg" },
       { label: "Anklets", path: "images/lifestyle-anklet.jpg" },
+      { label: "Foot Chains", path: "images/category-foot.jpg" },
       { label: "Necklaces", path: "images/category-necklace.jpg" },
       { label: "Bracelets", path: "images/category-bracelet.jpg" },
       { label: "Hand Chains", path: "images/category-hand.jpg" },

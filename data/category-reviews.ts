@@ -511,14 +511,6 @@ export const CATEGORY_REVIEWS: Record<string, Review[]> = {
 
   Anklets: [
     {
-      name: "Poppy G.",
-      location: "Brighton, UK",
-      rating: 5,
-      date: "Jun 2026",
-      headline: "Lived on the beach with me for two weeks",
-      text: "Wore the pearl barefoot sandal every day of our Greece trip — sand, sea, pool, all of it. Still looks brand new, no tarnishing at all.",
-    },
-    {
       name: "Yara B.",
       location: "Tel Aviv, Israel",
       rating: 5,
@@ -581,6 +573,17 @@ export const CATEGORY_REVIEWS: Record<string, Review[]> = {
       date: "Jul 2026",
       headline: "Bought three for my bridesmaids, all thrilled",
       text: "Got matching anklets for my bridesmaids for our beach wedding. Simple, elegant, and everyone still wears theirs regularly.",
+    },
+  ],
+
+  "Foot Chains": [
+    {
+      name: "Poppy G.",
+      location: "Brighton, UK",
+      rating: 5,
+      date: "Jun 2026",
+      headline: "Lived on the beach with me for two weeks",
+      text: "Wore the pearl barefoot sandal every day of our Greece trip — sand, sea, pool, all of it. Still looks brand new, no tarnishing at all.",
     },
   ],
 

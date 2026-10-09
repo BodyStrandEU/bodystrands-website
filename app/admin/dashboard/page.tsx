@@ -12,6 +12,7 @@ const CATEGORY_ORDER = [
   "Body Chains",
   "Shoulder & Arm Chains",
   "Anklets",
+  "Foot Chains",
   "Bracelets",
   "Necklaces",
   "Hand Chains",

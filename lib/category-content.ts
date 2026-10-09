@@ -126,7 +126,7 @@ export const CATEGORY_CONTENT: Partial<Record<string, CategoryContent>> = {
 
   "Anklets": {
     intro:
-      "Anklets and barefoot foot chains in gold and silver tone, from €22: dainty chain anklets, pearl and crystal styles, initial and birthstone anklets you personalise, and toe-chain anklets that look like barefoot sandals. All stainless steel, most adjustable.",
+      "Anklets in gold and silver tone, from €22: dainty chain anklets, pearl and crystal styles, and initial and birthstone anklets you personalise. All stainless steel, most adjustable.",
     guide: [
       { type: "heading", text: "Which anklet style is right for you?" },
       { type: "list", items: [
@@ -135,16 +135,30 @@ export const CATEGORY_CONTENT: Partial<Record<string, CategoryContent>> = {
         "Beach and vacation: the " + link("cowrie-shell-anklet", "Cowrie Shell Anklet") + " and " + link("colorful-crystal-bead-anklet", "Colorful Crystal Bead Anklet") + ".",
         "Layered: the " + link("layered-pearl-anklet", "Layered Pearl Anklet") + " gives a stacked look with one clasp.",
       ] },
-      { type: "heading", text: "Barefoot anklets and toe chains" },
-      { type: "paragraph", text: "A barefoot anklet (also called a foot chain or barefoot sandal) runs from the ankle across the top of the foot to a loop around one toe. The " + link("barefoot-toe-chain-anklet", "Barefoot Toe Chain Anklet") + ", " + link("barefoot-sandal-toe-chain", "Barefoot Sandal Toe Chain") + " and " + link("pearl-barefoot-sandal", "Pearl Barefoot Sandal") + " have adjustable ankle and toe loops; the " + link("mirror-link-foot-chain", "Mirror Link Foot Chain") + " and " + link("diamond-initial-foot-chain", "Personalized Diamond Initial Foot Chain") + " have a 21 cm anklet with a 6 cm extender and an 8 cm toe chain. For a larger fit, try the " + link("plus-size-toe-chain-anklet", "Plus Size Toe Chain Anklet") + "." },
       { type: "heading", text: "What size anklet do you need?" },
       { type: "paragraph", text: "Most of our anklets are 21 cm, many with a 5–6 cm extender, which fits most ankles with a little room to move. Measure around your ankle just above the bone and add 1–2 cm for a relaxed fit. Need it longer or shorter? Message us after checkout and we'll make it to size for free." },
     ],
     faq: [
-      { question: "What is a barefoot anklet?", answer: "A barefoot anklet, or foot chain, connects an anklet to a loop around one toe, so a fine chain runs across the top of your foot like a sandal. Ours have adjustable ankle and toe loops." },
       { question: "What length anklet should I buy?", answer: "Measure around your ankle just above the bone and add 1–2 cm. Most of our anklets are 21 cm with a 5–6 cm extender, and we can make a custom length for free." },
       { question: "Can I personalise an anklet?", answer: "Yes. Choose your letter for the initial anklets, or your birth month for the birthstone, zodiac and birth flower anklets, at checkout." },
       { question: "Can you wear an anklet in the sea?", answer: "Our stainless steel anklets are water-resistant and tarnish-resistant, so they can go in the sea or pool. Rinse and dry pieces with shells, beads or pearls after swimming." },
+    ],
+  },
+
+  "Foot Chains": {
+    intro:
+      "Barefoot sandals and foot chains in gold and silver tone, from €24: adjustable ankle-to-toe chains, pearl and mirror-link styles, a plus size fit, and a personalised diamond initial design. All stainless steel, waterproof.",
+    guide: [
+      { type: "heading", text: "What is a foot chain?" },
+      { type: "paragraph", text: "A foot chain (also called a barefoot anklet or barefoot sandal) runs from the ankle across the top of the foot to a loop around one toe — like the chain detail of a sandal, without the sandal. The " + link("barefoot-toe-chain-anklet", "Barefoot Toe Chain Anklet") + ", " + link("barefoot-sandal-toe-chain", "Barefoot Sandal Toe Chain") + " and " + link("pearl-barefoot-sandal", "Pearl Barefoot Sandal") + " have adjustable ankle and toe loops; the " + link("mirror-link-foot-chain", "Mirror Link Foot Chain") + " and " + link("diamond-initial-foot-chain", "Personalized Diamond Initial Foot Chain") + " have a 21 cm anklet with a 6 cm extender and an 8 cm toe chain. For a larger fit, try the " + link("plus-size-toe-chain-anklet", "Plus Size Toe Chain Anklet") + "." },
+      { type: "heading", text: "What size foot chain do you need?" },
+      { type: "paragraph", text: "Most of our foot chains are 21 cm at the ankle with a 5–6 cm extender and an 8 cm toe loop, which fits most feet with a little room to move. Measure around your ankle just above the bone and add 1–2 cm for a relaxed fit. Between sizes or need it longer? Message us after checkout and we'll make it to size for free, or try the Plus Size Toe Chain Anklet." },
+    ],
+    faq: [
+      { question: "What is a foot chain?", answer: "A foot chain, or barefoot anklet, connects an anklet to a loop around one toe, so a fine chain runs across the top of your foot like a sandal. Ours have adjustable ankle and toe loops." },
+      { question: "What length foot chain should I buy?", answer: "Measure around your ankle just above the bone and add 1–2 cm. Most of our foot chains are 21 cm with a 5–6 cm extender and an 8 cm toe loop, and we can make a custom length for free." },
+      { question: "Do you make plus size foot chains?", answer: "Yes. The Plus Size Toe Chain Anklet comes in two fitted plus sizes with a longer base chain built in from the start." },
+      { question: "Can you wear a foot chain in the sea?", answer: "Our stainless steel foot chains are water-resistant and tarnish-resistant, so they can go in the sea or pool. Rinse and dry pieces with pearls or crystals after swimming." },
     ],
   },
 

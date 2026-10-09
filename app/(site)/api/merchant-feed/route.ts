@@ -17,6 +17,7 @@ function escapeXml(str: string): string {
 // watch searches.
 const GOOGLE_CATEGORY: Record<string, number> = {
   Anklets: 189,
+  "Foot Chains": 189, // Google has no separate taxonomy id for foot chains/barefoot sandals
   Bracelets: 191,
   Necklaces: 196,
   Rings: 200,

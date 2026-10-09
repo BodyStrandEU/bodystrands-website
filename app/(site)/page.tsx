@@ -41,6 +41,7 @@ const allTiles = [
   { label: "Belly Chains",       href: "/shop?category=Belly+Chains",        image: "/images/category-belly.png"    },
   { label: "Shoulder & Arm Chains",    href: "/shop?category=Shoulder+%26+Arm+Chains",     image: "/images/category-shoulder.jpg" },
   { label: "Anklets",            href: "/shop?category=Anklets",             image: "/images/lifestyle-anklet.jpg"  },
+  { label: "Foot Chains",        href: "/shop?category=Foot+Chains",         image: "/images/category-foot.jpg"     },
   { label: "Necklaces",          href: "/shop?category=Necklaces",           image: "/images/category-necklace.jpg" },
   { label: "Bracelets",          href: "/shop?category=Bracelets",           image: "/images/category-bracelet.jpg" },
   { label: "Hand Chains",        href: "/shop?category=Hand+Chains",         image: "/images/category-hand.jpg"     },

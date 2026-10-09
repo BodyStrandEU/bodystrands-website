@@ -4,7 +4,7 @@ import { CATEGORY_CONTENT } from "@/lib/category-content";
 import BuyingGuide from "@/components/BuyingGuide";
 import CategoryFilter from "@/components/CategoryFilter";
 import ShopGridClient from "@/components/ShopGridClient";
-import { products, CATEGORIES } from "@/lib/products";
+import { products, CATEGORIES, CATEGORY_ORDER } from "@/lib/products";
 import type { Category } from "@/lib/products";
 import type { Metadata } from "next";
 
@@ -65,10 +65,10 @@ export default async function ShopPage({
   const activeLabel = isFiltered ? category : "All Pieces";
   const content = isFiltered ? CATEGORY_CONTENT[category] : undefined;
 
-  // Group by category in CATEGORIES order when showing all
+  // Group by category in the admin-editable display order when showing all
   const grouped = isFiltered
     ? null
-    : CATEGORIES
+    : CATEGORY_ORDER
         .map((cat) => ({
           category: cat,
           items: activeProducts.filter((p) => p.category === cat),

@@ -420,6 +420,21 @@ export default function AdminDashboard() {
             ↕️ Product Order
           </button>
           <button
+            onClick={() => router.push("/admin/category-order")}
+            style={{
+              padding: "0.6rem 1.5rem",
+              background: "var(--admin-surface)",
+              color: "#A0622A",
+              border: "1px solid #A0622A",
+              borderRadius: "4px",
+              fontSize: "0.85rem",
+              cursor: "pointer",
+              fontWeight: 500,
+            }}
+          >
+            🔀 Category Order
+          </button>
+          <button
             onClick={() => router.push("/admin/product/new")}
             style={{
               padding: "0.6rem 1.5rem",

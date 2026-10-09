@@ -1,4 +1,5 @@
 import productsData from "@/data/products.json";
+import categoryOrderData from "@/data/category-order.json";
 
 export const CATEGORIES = [
   "Anklets",
@@ -103,10 +104,23 @@ export function suggestGiftTags(name: string): GiftTag[] {
 
 export const products: Product[] = productsData as Product[];
 
+// Admin-editable display order for categories (drag-and-drop at
+// /admin/category-order) — falls back to CATEGORIES' own order for any
+// category missing from the file (e.g. a brand-new one not yet dragged in).
+export const CATEGORY_ORDER: Category[] = [
+  ...(categoryOrderData as string[]),
+  ...CATEGORIES.filter((c) => !(categoryOrderData as string[]).includes(c)),
+] as Category[];
+
+const CATEGORY_RANK = new Map(CATEGORY_ORDER.map((c, i) => [c, i]));
+export function byCategoryOrder(a: Category, b: Category): number {
+  return (CATEGORY_RANK.get(a) ?? 0) - (CATEGORY_RANK.get(b) ?? 0);
+}
+
 // Derived automatically — used by Navbar, homepage tiles, and shop filter.
 // Only counts products that are actually visible (active !== false), so a
 // category with zero active products (e.g. Bikini Clip Chains, Oct 2026)
 // disappears from nav/filters on its own instead of lingering as a dead link.
 export const activeCategories = [
   ...new Set(products.filter((p) => p.active !== false).map((p) => p.category)),
-].sort() as Category[];
+].sort(byCategoryOrder) as Category[];

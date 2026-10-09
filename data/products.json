@@ -2187,7 +2187,7 @@
       "Silver Tone"
     ],
     "images": [
-      "https://i.etsystatic.com/55122258/r/il/c98367/7864103019/il_fullxfull.7864103019_khwe.jpg"
+      "/images/products/193c61b3-f888-4623-844d-d7fd908ad303.jpeg"
     ],
     "variantGroups": [
       {
@@ -2205,8 +2205,8 @@
     },
     "altText": "Gold stainless steel bikini body chain necklace for beach and festival wear, waterproof minimalist torso jewelry",
     "gallery": [
+      "/images/products/193c61b3-f888-4623-844d-d7fd908ad303.jpeg",
       "https://i.etsystatic.com/55122258/r/il/c98367/7864103019/il_fullxfull.7864103019_khwe.jpg",
-      "/images/products/IMG_0366.webp",
       "/images/products/f6693a6a-3f4b-407d-869f-3f894b84dd5c.webp",
       "https://i.etsystatic.com/55122258/r/il/fb7ce7/7947817319/il_fullxfull.7947817319_s1sx.jpg",
       "https://i.etsystatic.com/55122258/r/il/f5136d/7816140198/il_fullxfull.7816140198_mqjm.jpg",
@@ -2216,8 +2216,8 @@
       "/images/products/a7008a93-ea13-4dc1-87e8-7b2db04957e5.webp"
     ],
     "variantHeroes": {
-      "Gold Tone": "https://i.etsystatic.com/55122258/r/il/c98367/7864103019/il_fullxfull.7864103019_khwe.jpg",
-      "Silver Tone": "https://i.etsystatic.com/55122258/r/il/4e5f30/7816138402/il_fullxfull.7816138402_cf5o.jpg"
+      "Gold Tone": "/images/products/193c61b3-f888-4623-844d-d7fd908ad303.jpeg",
+      "Silver Tone": "/images/products/a7008a93-ea13-4dc1-87e8-7b2db04957e5.webp"
     },
     "dateAdded": "2026-06-12T15:00:27-04:00"
   },

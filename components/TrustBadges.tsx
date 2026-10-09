@@ -74,11 +74,11 @@ export const BADGES: Badge[] = [
 /** Full-width 4-icon strip — homepage, below the hero. */
 export function TrustBadgesStrip() {
   return (
-    <section className="border-y border-[#E8B4A8]/20 bg-[#FAF7F5]">
+    <section className="border-y border-[#8C7B6E]/20 bg-[#FAF7F5]">
       <div className="max-w-7xl mx-auto px-6 md:px-10 py-10 md:py-12 grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-6">
         {BADGES.map((b) => (
           <div key={b.key} className="flex flex-col items-center text-center gap-2.5">
-            <span className="text-[#A0622A]">{b.icon}</span>
+            <span className="text-[#2C2220]">{b.icon}</span>
             <div>
               <p className="text-[0.6rem] tracking-[0.15em] uppercase text-[#2C2220]">{b.label}</p>
               {b.sublabel && (
@@ -98,7 +98,7 @@ export function TrustBadgesRow() {
     <div className="grid grid-cols-2 gap-x-3 gap-y-2.5">
       {BADGES.map((b) => (
         <div key={b.key} className="flex items-center gap-2">
-          <span className="text-[#A0622A] flex-shrink-0">{b.icon}</span>
+          <span className="text-[#2C2220] flex-shrink-0">{b.icon}</span>
           <p className="text-[0.58rem] tracking-[0.08em] uppercase text-[#8C7B6E] leading-snug">{b.label}</p>
         </div>
       ))}

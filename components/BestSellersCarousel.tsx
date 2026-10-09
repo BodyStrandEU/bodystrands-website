@@ -176,7 +176,7 @@ export default function BestSellersCarousel() {
   return (
     <section className="py-16 md:py-24 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 md:px-10 mb-8 md:mb-10">
-        <p className="text-[0.6rem] tracking-[0.3em] uppercase text-[#A0622A] mb-3">Fan Favorites</p>
+        <p className="text-[0.6rem] tracking-[0.3em] uppercase text-[#8C7B6E] mb-3">Fan Favorites</p>
         <h2 className="font-heading text-4xl md:text-5xl font-light text-[#2C2220]">Best Sellers</h2>
       </div>
 

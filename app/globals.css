@@ -58,8 +58,8 @@ h1, h2, h3, h4 {
 .btn-primary {
   display: inline-block;
   padding: 0.75rem 2.5rem;
-  border: 1px solid #A0622A;
-  color: #A0622A;
+  border: 1px solid #2C2220;
+  color: #2C2220;
   font-family: var(--font-josefin), sans-serif;
   font-size: 0.7rem;
   font-weight: 300;
@@ -69,14 +69,14 @@ h1, h2, h3, h4 {
 }
 
 .btn-primary:hover {
-  background-color: #A0622A;
+  background-color: #2C2220;
   color: #FDF9F7;
 }
 
 .btn-primary-filled {
   display: inline-block;
   padding: 0.75rem 2.5rem;
-  background-color: #A0622A;
+  background-color: #2C2220;
   color: #FDF9F7;
   font-family: var(--font-josefin), sans-serif;
   font-size: 0.7rem;
@@ -87,7 +87,7 @@ h1, h2, h3, h4 {
 }
 
 .btn-primary-filled:hover {
-  background-color: #8A5222;
+  background-color: #1A1412;
 }
 
 /* Hide scrollbar utility */

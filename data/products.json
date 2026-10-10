@@ -4112,7 +4112,7 @@
     "price": 36,
     "currency": "EUR",
     "category": "Back Chains",
-    "description": "Your open-back evening look, completed. This pearl drop backdrop necklace drapes elegantly down the spine — designed for prom gowns, evening dresses, and any occasion that deserves a beautiful back.",
+    "description": "Your open-back evening look, completed. This pearl drop backdrop necklace drapes elegantly down the spine — designed for wedding dresses, evening dresses, and any occasion that deserves a beautiful back.",
     "fullDescription": "Pearl drops fall down the open back on a fine gold chain, creating a cascading effect that turns every exit into an entrance. Designed to complement evening gowns, prom dresses, and formal looks without competing with them.\n\nHandcrafted in gold-tone stainless steel. Three extender sizes: Small (+7 cm (2.8\")), Medium (+14 cm (5.5\")), or Large (+23 cm (9.1\")). Message us after ordering with your exact back measurement.",
     "specs": [
       {
@@ -4147,17 +4147,15 @@
     "featured": false,
     "active": true,
     "images": [
-      "https://i.etsystatic.com/55122258/r/il/6d7dfb/8042848779/il_fullxfull.8042848779_1peb.jpg",
+      "/images/products/383b0af8-bc92-4a0c-8b98-0ef89bb189dc.png",
+      "/images/products/695a5ef8-f7e2-4511-b5b4-ae1539ff7724.png",
       "https://i.etsystatic.com/55122258/r/il/ce407a/7994952882/il_fullxfull.7994952882_qvj4.jpg",
       "https://i.etsystatic.com/55122258/r/il/2955d4/8029794213/il_fullxfull.8029794213_ps5m.jpg",
       "https://i.etsystatic.com/55122258/r/il/692f1b/7819872940/il_fullxfull.7819872940_f62m.jpg",
       "https://i.etsystatic.com/55122258/r/il/698621/7867784241/il_fullxfull.7867784241_oh2z.jpg",
       "https://i.etsystatic.com/55122258/r/il/232146/7994937590/il_fullxfull.7994937590_hvgo.jpg",
       "https://i.etsystatic.com/55122258/r/il/30089d/8042924815/il_fullxfull.8042924815_zxz3.jpg",
-      "https://i.etsystatic.com/55122258/r/il/cbd1a6/7803902507/il_fullxfull.7803902507_7i39.jpg",
-      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp",
-      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.webp",
-      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.webp"
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp"
     ],
     "variantGroups": [
       {
@@ -4169,9 +4167,12 @@
         ]
       }
     ],
-    "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/44b5c57b8b435c7a96f92eb8544f6839/downloads/default.mp4",
+    "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/4329f536dac0d4458ff7ff6b15529af3/downloads/default.mp4",
     "altText": "Gold-tone stainless steel back body chain with pearl drops for open-back evening dresses and prom gowns",
-    "dateAdded": "2026-06-12T15:00:27-04:00"
+    "dateAdded": "2026-06-12T15:00:27-04:00",
+    "giftTags": [
+      "bridal"
+    ]
   },
   {
     "id": "boho-belly-chain",

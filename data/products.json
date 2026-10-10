@@ -8434,7 +8434,7 @@
       "Silver Tone"
     ],
     "images": [
-      "https://i.etsystatic.com/55122258/r/il/cf86a2/7784114265/il_fullxfull.7784114265_m9zq.jpg"
+      "/images/products/66d55914-aa89-4210-ab78-09d664f62092.png"
     ],
     "variantVideos": {
       "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/74f1849f561c7846bdf7ca035c6f7bb7/downloads/default.mp4",
@@ -8442,22 +8442,20 @@
     },
     "altText": "Delicate gold stainless steel beach anklet with pearl accents, elegant ankle bracelet for minimalist style",
     "gallery": [
-      "https://i.etsystatic.com/55122258/r/il/cf86a2/7784114265/il_fullxfull.7784114265_m9zq.jpg",
+      "/images/products/66d55914-aa89-4210-ab78-09d664f62092.png",
       "https://i.etsystatic.com/55122258/r/il/790e96/7763707026/il_fullxfull.7763707026_8tdi.jpg",
+      "https://i.etsystatic.com/55122258/r/il/855c02/7784114267/il_fullxfull.7784114267_9216.jpg",
+      "https://i.etsystatic.com/55122258/r/il/cf86a2/7784114265/il_fullxfull.7784114265_m9zq.jpg",
       "https://i.etsystatic.com/55122258/r/il/c59093/7736159618/il_fullxfull.7736159618_2oc5.jpg",
-      "https://i.etsystatic.com/55122258/r/il/4f89b1/7763623772/il_fullxfull.7763623772_eskh.jpg",
-      "https://i.etsystatic.com/55122258/r/il/89457a/7812429584/il_fullxfull.7812429584_e1td.jpg",
-      "https://i.etsystatic.com/55122258/r/il/23a9f2/7784114211/il_fullxfull.7784114211_22bv.jpg",
-      "https://i.etsystatic.com/55122258/r/il/af5258/7811534845/il_fullxfull.7811534845_pfsd.jpg",
       "https://i.etsystatic.com/55122258/r/il/bc2e3b/7784114249/il_fullxfull.7784114249_h3um.jpg",
-      "https://i.etsystatic.com/55122258/r/il/cebc61/7811531289/il_fullxfull.7811531289_2g5p.jpg",
-      "https://i.etsystatic.com/55122258/r/il/855c02/7784114267/il_fullxfull.7784114267_9216.jpg"
+      "https://i.etsystatic.com/55122258/r/il/4f89b1/7763623772/il_fullxfull.7763623772_eskh.jpg"
     ],
     "variantHeroes": {
-      "Gold Tone": "https://i.etsystatic.com/55122258/r/il/cf86a2/7784114265/il_fullxfull.7784114265_m9zq.jpg",
+      "Gold Tone": "/images/products/66d55914-aa89-4210-ab78-09d664f62092.png",
       "Silver Tone": "https://i.etsystatic.com/55122258/r/il/855c02/7784114267/il_fullxfull.7784114267_9216.jpg"
     },
-    "dateAdded": "2026-06-12T15:00:27-04:00"
+    "dateAdded": "2026-06-12T15:00:27-04:00",
+    "sizeGuideImage": "/images/products/esty-thumnails-new--19-.png"
   },
   {
     "id": "layered-arm-chain",

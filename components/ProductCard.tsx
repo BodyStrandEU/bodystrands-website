@@ -4,6 +4,7 @@ import { useRouter } from "next/navigation";
 import Image from "@/components/SmartImage";
 import type { Product } from "@/lib/products";
 import { INFOGRAPHIC_IMAGES } from "@/lib/products";
+import { PACKAGING_IMAGES } from "@/lib/site-media";
 import { getOriginalPrice } from "@/lib/pricing";
 import WishlistButton from "@/components/WishlistButton";
 import { useCurrency } from "@/lib/currency-context";
@@ -28,20 +29,21 @@ export default function ProductCard({ product, priority = false }: { product: Pr
 
   const { format } = useCurrency();
 
-  // All images for the card carousel — infographics excluded
+  // All images for the card carousel — infographics excluded, shared packaging
+  // photos (boxes, unboxing, gift wrap) appended at the end, same as the PDP gallery.
   const combinedImages = useMemo(() => {
     const perProduct = new Set(product.infographicImages ?? []);
     const isInfographic = (src: string) => INFOGRAPHIC_IMAGES.has(src) || perProduct.has(src);
     // Gallery mode: flat unified array
     if (product.gallery) {
-      return product.gallery.filter(src => !isInfographic(src));
+      return [...product.gallery.filter(src => !isInfographic(src)), ...PACKAGING_IMAGES];
     }
     // Per-variant mode: combine all variant images in order
     const variants = product.variants ?? [];
     if (variants.length > 0 && product.variantImages) {
-      return variants.flatMap((v) => product.variantImages![v] ?? []).filter(src => !isInfographic(src));
+      return [...variants.flatMap((v) => product.variantImages![v] ?? []).filter(src => !isInfographic(src)), ...PACKAGING_IMAGES];
     }
-    return (product.images ?? []).filter(src => !isInfographic(src));
+    return [...(product.images ?? []).filter(src => !isInfographic(src)), ...PACKAGING_IMAGES];
   }, [product.gallery, product.variants, product.variantImages, product.images, product.infographicImages]);
 
   // Which variant does each slide belong to? (only used in per-variant mode)

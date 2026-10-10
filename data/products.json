@@ -4812,8 +4812,9 @@
     "featured": false,
     "active": true,
     "images": [
-      "https://i.etsystatic.com/55122258/r/il/8c60b0/8037681678/il_fullxfull.8037681678_sihl.jpg",
+      "/images/products/d96617f6-d9b8-47db-a1fe-c720429d8d62.png",
       "https://i.etsystatic.com/55122258/r/il/156b36/8010906199/il_fullxfull.8010906199_pzae.jpg",
+      "https://i.etsystatic.com/55122258/r/il/8c60b0/8037681678/il_fullxfull.8037681678_sihl.jpg",
       "https://i.etsystatic.com/55122258/r/il/82e431/7824253621/il_fullxfull.7824253621_acsc.jpg",
       "https://i.etsystatic.com/55122258/r/il/e49f21/7962950444/il_fullxfull.7962950444_chka.jpg",
       "https://i.etsystatic.com/55122258/r/il/3552b6/7962950456/il_fullxfull.7962950456_hfid.jpg",
@@ -4821,8 +4822,7 @@
       "https://i.etsystatic.com/55122258/r/il/4f89b1/7763623772/il_fullxfull.7763623772_eskh.jpg",
       "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp",
       "https://i.etsystatic.com/55122258/r/il/63cc1d/8010906213/il_fullxfull.8010906213_3hkc.jpg",
-      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.webp",
-      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.webp"
+      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.webp"
     ],
     "variantGroups": [
       {
@@ -4865,7 +4865,8 @@
     "dateAdded": "2026-06-12T15:00:27-04:00",
     "giftTags": [
       "personalized"
-    ]
+    ],
+    "sizeGuideImage": "/images/products/esty-thumnails-new--19-.png"
   },
   {
     "id": "cowrie-shell-belly-chain",

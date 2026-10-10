@@ -6914,7 +6914,7 @@
       "Silver Tone"
     ],
     "images": [
-      "https://i.etsystatic.com/55122258/r/il/f9dcc6/7770664374/il_fullxfull.7770664374_53b2.jpg"
+      "/images/products/0270ac2a-1389-4dfb-b3e3-d8886eb658b1.png"
     ],
     "variantGroups": [
       {
@@ -6941,24 +6941,26 @@
     },
     "altText": "Delicate stainless steel birthstone anklet in gold tone, perfect minimalist beach ankle jewelry for everyday wear",
     "gallery": [
-      "https://i.etsystatic.com/55122258/r/il/f9dcc6/7770664374/il_fullxfull.7770664374_53b2.jpg",
+      "/images/products/0270ac2a-1389-4dfb-b3e3-d8886eb658b1.png",
+      "https://i.etsystatic.com/55122258/r/il/9453e0/7770664378/il_fullxfull.7770664378_b1fy.jpg",
       "https://i.etsystatic.com/55122258/r/il/c6ea6a/7765663308/il_fullxfull.7765663308_3a19.jpg",
-      "https://i.etsystatic.com/55122258/r/il/4f89b1/7763623772/il_fullxfull.7763623772_eskh.jpg",
+      "https://i.etsystatic.com/55122258/r/il/f9dcc6/7770664374/il_fullxfull.7770664374_53b2.jpg",
       "https://i.etsystatic.com/55122258/r/il/41846b/7817292051/il_fullxfull.7817292051_96c0.jpg",
+      "https://i.etsystatic.com/55122258/r/il/4f89b1/7763623772/il_fullxfull.7763623772_eskh.jpg",
       "https://i.etsystatic.com/55122258/r/il/2470ac/7769333790/il_fullxfull.7769333790_h6ag.jpg",
       "https://i.etsystatic.com/55122258/r/il/f6d650/7770664458/il_fullxfull.7770664458_81hp.jpg",
       "https://i.etsystatic.com/55122258/r/il/9844dc/7818603383/il_fullxfull.7818603383_golu.jpg",
-      "https://i.etsystatic.com/55122258/r/il/9453e0/7770664378/il_fullxfull.7770664378_b1fy.jpg",
       "https://i.etsystatic.com/55122258/r/il/b7061a/7770664392/il_fullxfull.7770664392_a3l9.jpg"
     ],
     "variantHeroes": {
-      "Gold Tone": "https://i.etsystatic.com/55122258/r/il/f9dcc6/7770664374/il_fullxfull.7770664374_53b2.jpg",
+      "Gold Tone": "/images/products/0270ac2a-1389-4dfb-b3e3-d8886eb658b1.png",
       "Silver Tone": "https://i.etsystatic.com/55122258/r/il/9453e0/7770664378/il_fullxfull.7770664378_b1fy.jpg"
     },
     "dateAdded": "2026-06-12T15:00:27-04:00",
     "giftTags": [
       "personalized"
-    ]
+    ],
+    "sizeGuideImage": "/images/products/esty-thumnails-new--19-.png"
   },
   {
     "id": "pearl-pendant-anklet",

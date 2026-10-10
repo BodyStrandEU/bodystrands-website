@@ -682,13 +682,13 @@
       }
     ],
     "images": [
-      "/images/products/803e8468-9137-477e-8c62-46b3c5bae878.png"
+      "/images/products/5fe28285-b9dd-41d4-8f79-f758af91728a.png"
     ],
     "gallery": [
+      "/images/products/5fe28285-b9dd-41d4-8f79-f758af91728a.png",
       "/images/products/803e8468-9137-477e-8c62-46b3c5bae878.png",
-      "/images/products/colorful-crystal-bead-anklet-beach-1.webp",
-      "/images/products/colorful-crystal-bead-anklet-clasp-detail.webp",
       "/images/products/colorful-crystal-bead-anklet-street-2.webp",
+      "/images/products/colorful-crystal-bead-anklet-clasp-detail.webp",
       "/images/products/colorful-crystal-bead-anklet-poolside.webp"
     ],
     "featured": false,

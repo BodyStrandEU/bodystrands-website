@@ -9968,7 +9968,7 @@
       "Silver Tone"
     ],
     "images": [
-      "https://i.etsystatic.com/55122258/r/il/3fa024/8161513325/il_fullxfull.8161513325_ixgw.jpg"
+      "/images/products/fd1888d0-c74a-426f-a5a8-22d7205573c9.png"
     ],
     "variantVideos": {
       "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/6b61f7ffb44ac1a92b742cd4c8d193b4/downloads/default.mp4",
@@ -9976,21 +9976,22 @@
     },
     "altText": "Gold tone layered pearl anklet in stainless steel, perfect delicate beach anklet for elegant everyday wear",
     "gallery": [
+      "/images/products/fd1888d0-c74a-426f-a5a8-22d7205573c9.png",
+      "/images/products/68bcfa0e-bff6-47d8-a4c7-b75923d83f9c.webp",
       "https://i.etsystatic.com/55122258/r/il/3fa024/8161513325/il_fullxfull.8161513325_ixgw.jpg",
       "https://i.etsystatic.com/55122258/r/il/f45154/8161534047/il_fullxfull.8161534047_b57r.jpg",
       "/images/products/39351d60-5629-47c0-a990-833843da2665.webp",
       "https://i.etsystatic.com/55122258/r/il/b1dd84/8113629418/il_fullxfull.8113629418_wlk3.jpg",
       "https://i.etsystatic.com/55122258/r/il/a4f149/8161535103/il_fullxfull.8161535103_opib.jpg",
-      "https://i.etsystatic.com/55122258/r/il/cebc61/7811531289/il_fullxfull.7811531289_2g5p.jpg",
-      "/images/products/68bcfa0e-bff6-47d8-a4c7-b75923d83f9c.webp",
       "/images/products/956fdbc9-7d34-4299-a7e5-a33f145f85e5.webp",
       "/images/products/46a68692-2213-49df-87b0-c39e9bea93fa.webp"
     ],
     "variantHeroes": {
-      "Gold Tone": "https://i.etsystatic.com/55122258/r/il/3fa024/8161513325/il_fullxfull.8161513325_ixgw.jpg",
+      "Gold Tone": "/images/products/fd1888d0-c74a-426f-a5a8-22d7205573c9.png",
       "Silver Tone": "/images/products/68bcfa0e-bff6-47d8-a4c7-b75923d83f9c.webp"
     },
-    "dateAdded": "2026-06-12T15:00:27-04:00"
+    "dateAdded": "2026-06-12T15:00:27-04:00",
+    "sizeGuideImage": "/images/products/esty-thumnails-new--19-.png"
   },
   {
     "id": "birthstone-ring",

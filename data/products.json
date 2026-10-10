@@ -3433,7 +3433,7 @@
       "Silver Tone"
     ],
     "images": [
-      "https://i.etsystatic.com/55122258/r/il/b4b794/8099319218/il_fullxfull.8099319218_oykq.jpg"
+      "/images/products/99d031dc-6bf2-4d46-9906-e9bcb8097c94.png"
     ],
     "variantGroups": [
       {
@@ -3451,23 +3451,23 @@
     },
     "altText": "Gold tone stainless steel boho back chain necklace for festival and wedding occasions",
     "gallery": [
+      "/images/products/99d031dc-6bf2-4d46-9906-e9bcb8097c94.png",
+      "/images/products/869ae03d-4fbf-47f9-a02f-2010d3045726.png",
+      "/images/products/80f1d4cb-6a71-4e55-bd7e-923c2435be62.webp",
       "https://i.etsystatic.com/55122258/r/il/b4b794/8099319218/il_fullxfull.8099319218_oykq.jpg",
-      "https://i.etsystatic.com/55122258/r/il/4a2c04/7852799106/il_fullxfull.7852799106_s51c.jpg",
       "https://i.etsystatic.com/55122258/r/il/841bda/8099273848/il_fullxfull.8099273848_t15b.jpg",
       "https://i.etsystatic.com/55122258/r/il/e7b8c3/8099273566/il_fullxfull.8099273566_uybm.jpg",
-      "https://i.etsystatic.com/55122258/r/il/88ca45/7769131538/il_fullxfull.7769131538_9erk.jpg",
-      "https://i.etsystatic.com/55122258/r/il/99f6c0/8147196789/il_fullxfull.8147196789_eg1l.jpg",
-      "/images/products/0a1b254c-5813-4737-8064-a672c92d0e4a.webp",
-      "https://i.etsystatic.com/55122258/r/il/7487f5/7971888395/il_fullxfull.7971888395_agfr.jpg",
-      "/images/products/80f1d4cb-6a71-4e55-bd7e-923c2435be62.webp",
-      "/images/products/90530ab8-ae9b-4ead-9785-9b1690eb1d19.webp",
-      "/images/products/69a2a632-913d-42ed-9de2-1646f4a302c9.webp"
+      "/images/products/25afe17f-a6f1-4e1e-aff6-bde9f577f848.png"
     ],
     "variantHeroes": {
-      "Gold Tone": "https://i.etsystatic.com/55122258/r/il/b4b794/8099319218/il_fullxfull.8099319218_oykq.jpg",
-      "Silver Tone": "/images/products/0a1b254c-5813-4737-8064-a672c92d0e4a.webp"
+      "Gold Tone": "/images/products/99d031dc-6bf2-4d46-9906-e9bcb8097c94.png",
+      "Silver Tone": "/images/products/869ae03d-4fbf-47f9-a02f-2010d3045726.png"
     },
-    "dateAdded": "2026-06-12T15:00:27-04:00"
+    "dateAdded": "2026-06-12T15:00:27-04:00",
+    "giftTags": [
+      "bridal"
+    ],
+    "sizeGuideImage": "/images/products/69a2a632-913d-42ed-9de2-1646f4a302c9.png"
   },
   {
     "id": "boho-hair-chain",

@@ -12401,9 +12401,23 @@
       }
     ],
     "featured": false,
-    "images": [],
-    "active": false,
+    "images": [
+      "/images/products/website-thumbnail.png"
+    ],
+    "active": true,
     "altText": "Gold-tone stainless steel layered initial bracelet with diamond rhinestone letter charm",
-    "dateAdded": "2026-10-10T09:08:34-04:00"
+    "dateAdded": "2026-10-10T09:08:34-04:00",
+    "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/84def28226242eefa84581f4a22c41b2/downloads/default.mp4",
+    "gallery": [
+      "/images/products/website-thumbnail.png",
+      "/images/products/460eb187-8482-4df0-b190-56a94c92c239.png",
+      "/images/products/3cbda98a-8eef-4017-a019-ee14429a4f05.png",
+      "/images/products/8dc3f1a7-ca44-45c5-b23d-e958f4b5ceca-2.jpeg",
+      "/images/products/53165426-64d8-4bb3-b7a6-f685893d381f.png",
+      "/images/products/fb331334-bdc6-4605-869e-6cc4bc34933d.png"
+    ],
+    "giftTags": [
+      "personalized"
+    ]
   }
 ]

@@ -12308,5 +12308,102 @@
     "altText": "Red and green beaded star choker necklace, stainless steel waterproof holiday jewelry with optional star charm",
     "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/4f9b5e63962e3d5eb07cd96259beaccb/downloads/default.mp4",
     "sizeGuideImage": "/images/products/8c71db0b-041d-4634-b376-59fbaa733943.png"
+  },
+  {
+    "id": "diamond-initial-layered-bracelet",
+    "name": "Diamond Initial Layered Bracelet",
+    "price": 30,
+    "currency": "EUR",
+    "category": "Bracelets",
+    "description": "Your initial, catching the light with every move. This layered bracelet pairs a fine 1.5mm cable chain with a 2.0mm mirror link chain, finished with a sparkling diamond rhinestone initial charm — handcrafted from tarnish-resistant stainless steel.",
+    "fullDescription": "Two chains, one bracelet. A fine 1.5mm cable chain layers over a 2.0mm mirror link chain, meeting at a pave rhinestone initial charm that catches the light with every movement. Choose your letter and your size from the dropdowns — a personal touch that makes this the kind of bracelet you never take off.\n\nHandcrafted in gold-tone stainless steel — waterproof and tarnish-resistant, so it holds up through everyday wear. Every size includes a 4cm extension chain built in, so you can adjust the fit without losing the layered look. A thoughtful gift for birthdays, holidays, or any occasion that deserves something personal.",
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Gold-tone stainless steel"
+      },
+      {
+        "label": "Chains",
+        "value": "Layered 1.5mm cable chain + 2.0mm mirror link chain"
+      },
+      {
+        "label": "Charm",
+        "value": "Diamond rhinestone initial — choose your letter"
+      },
+      {
+        "label": "Closure",
+        "value": "Lobster clasp with 4cm extension chain"
+      },
+      {
+        "label": "Waterproof",
+        "value": "Yes"
+      },
+      {
+        "label": "Tarnish-resistant",
+        "value": "Yes"
+      },
+      {
+        "label": "Care",
+        "value": "Wipe gently with a soft cloth after each wear. Store in an airtight container when not in use."
+      },
+      {
+        "label": "Shipping",
+        "value": "Dispatches within 1-2 business days"
+      }
+    ],
+    "variantGroups": [
+      {
+        "label": "Letter",
+        "type": "options",
+        "options": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F",
+          "G",
+          "H",
+          "I",
+          "J",
+          "K",
+          "L",
+          "M",
+          "N",
+          "O",
+          "P",
+          "Q",
+          "R",
+          "S",
+          "T",
+          "U",
+          "V",
+          "W",
+          "X",
+          "Y",
+          "Z"
+        ]
+      },
+      {
+        "label": "Size",
+        "type": "options",
+        "options": [
+          "14 cm",
+          "15 cm",
+          "16 cm",
+          "17 cm",
+          "18 cm",
+          "19 cm",
+          "20 cm",
+          "21 cm",
+          "22 cm"
+        ]
+      }
+    ],
+    "featured": false,
+    "images": [],
+    "active": false,
+    "altText": "Gold-tone stainless steel layered initial bracelet with diamond rhinestone letter charm",
+    "dateAdded": "2026-10-10T09:08:34-04:00"
   }
 ]

@@ -7005,22 +7005,27 @@
       "Silver Tone"
     ],
     "images": [
-      "https://i.etsystatic.com/55122258/r/il/63b8c7/8047132396/il_fullxfull.8047132396_narf.jpg"
+      "/images/products/8adceab7-3fcf-4479-8d4b-362ba74eeecb.png"
     ],
     "altText": "Delicate pearl pendant anklet in gold stainless steel, perfect beach wedding ankle jewelry for brides",
     "gallery": [
+      "/images/products/8adceab7-3fcf-4479-8d4b-362ba74eeecb.png",
+      "https://i.etsystatic.com/55122258/r/il/a5f651/8095194599/il_fullxfull.8095194599_jblz.jpg",
       "https://i.etsystatic.com/55122258/r/il/63b8c7/8047132396/il_fullxfull.8047132396_narf.jpg",
       "https://i.etsystatic.com/55122258/r/il/caeb80/8047101488/il_fullxfull.8047101488_og24.jpg",
       "https://i.etsystatic.com/55122258/r/il/4f89b1/7763623772/il_fullxfull.7763623772_eskh.jpg",
-      "https://i.etsystatic.com/55122258/r/il/9c14c2/8047144328/il_fullxfull.8047144328_f0ox.jpg",
-      "https://i.etsystatic.com/55122258/r/il/cebc61/7811531289/il_fullxfull.7811531289_2g5p.jpg",
-      "https://i.etsystatic.com/55122258/r/il/a5f651/8095194599/il_fullxfull.8095194599_jblz.jpg"
+      "https://i.etsystatic.com/55122258/r/il/9c14c2/8047144328/il_fullxfull.8047144328_f0ox.jpg"
     ],
     "variantHeroes": {
-      "Gold Tone": "https://i.etsystatic.com/55122258/r/il/63b8c7/8047132396/il_fullxfull.8047132396_narf.jpg",
+      "Gold Tone": "/images/products/8adceab7-3fcf-4479-8d4b-362ba74eeecb.png",
       "Silver Tone": "https://i.etsystatic.com/55122258/r/il/a5f651/8095194599/il_fullxfull.8095194599_jblz.jpg"
     },
-    "dateAdded": "2026-06-12T15:00:27-04:00"
+    "dateAdded": "2026-06-12T15:00:27-04:00",
+    "variantVideos": {
+      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/2d90f9c638aad3ceb6e838b98dd20326/downloads/default.mp4",
+      "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/2d90f9c638aad3ceb6e838b98dd20326/downloads/default.mp4"
+    },
+    "sizeGuideImage": "/images/products/esty-thumnails-new--19-.png"
   },
   {
     "id": "zodiac-yoga-belly-chain",

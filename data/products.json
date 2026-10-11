@@ -5789,7 +5789,7 @@
       "Silver Tone"
     ],
     "images": [
-      "https://i.etsystatic.com/55122258/r/il/5da32e/7778147651/il_fullxfull.7778147651_a7wu.jpg"
+      "/images/products/483.png"
     ],
     "variantVideos": {
       "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/4ba463a5d29c6d98a85d24efea7cb743/downloads/default.mp4",
@@ -5797,15 +5797,13 @@
     },
     "altText": "Gold tone stainless steel pearl lariat back chain for open-back dresses and special occasions",
     "gallery": [
-      "https://i.etsystatic.com/55122258/r/il/5da32e/7778147651/il_fullxfull.7778147651_a7wu.jpg",
+      "/images/products/483.png",
+      "https://i.etsystatic.com/55122258/r/il/194c9d/7778095017/il_fullxfull.7778095017_qwi5.jpg",
       "https://i.etsystatic.com/55122258/r/il/79a486/7730180530/il_fullxfull.7730180530_qi7l.jpg",
-      "https://i.etsystatic.com/55122258/r/il/51ef6f/7730117938/il_fullxfull.7730117938_4mka.jpg",
-      "https://i.etsystatic.com/55122258/r/il/f03156/7778066725/il_fullxfull.7778066725_flmm.jpg",
-      "https://i.etsystatic.com/55122258/r/il/1f73d7/7778067055/il_fullxfull.7778067055_hplq.jpg",
-      "https://i.etsystatic.com/55122258/r/il/194c9d/7778095017/il_fullxfull.7778095017_qwi5.jpg"
+      "https://i.etsystatic.com/55122258/r/il/51ef6f/7730117938/il_fullxfull.7730117938_4mka.jpg"
     ],
     "variantHeroes": {
-      "Gold Tone": "https://i.etsystatic.com/55122258/r/il/5da32e/7778147651/il_fullxfull.7778147651_a7wu.jpg",
+      "Gold Tone": "/images/products/483.png",
       "Silver Tone": "https://i.etsystatic.com/55122258/r/il/194c9d/7778095017/il_fullxfull.7778095017_qwi5.jpg"
     },
     "dateAdded": "2026-06-12T15:00:27-04:00"

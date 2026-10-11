@@ -41,6 +41,51 @@ export const GIFTS_CONTENT: CategoryContent = {
   ],
 };
 
+export const PERSONALIZED_CONTENT: CategoryContent = {
+  intro:
+    "Jewelry personalised with her initial, birthstone, birth flower or star sign — picked at checkout, no extra cost. Stainless steel in gold and silver tone, from €20 to €44.",
+  guide: [
+    { type: "heading", text: "Choose how you personalise it" },
+    { type: "list", items: [
+      "Initial: the " + link("monogram-letter-necklace", "Monogram Letter Necklace") + ", " + link("script-initial-bracelet", "Script Initial Bracelet") + ", " + link("initial-letter-anklet", "Initial Letter Anklet") + " and " + link("diamond-initial-anklet", "Diamond Initial Anklet") + ".",
+      "Birthstone: the " + link("birthstone-bracelet", "Birthstone Bracelet") + ", " + link("birthstone-choker-necklace", "Birthstone Choker Necklace") + " and " + link("birthstone-gemstone-anklet", "Birthstone Gemstone Anklet") + ".",
+      "Birth flower: the " + link("birth-flower-charm-bracelet", "Birth Flower Charm Bracelet") + ", " + link("birth-flower-charm-necklace", "Birth Flower Charm Necklace") + " and " + link("birth-flower-anklet", "Birth Flower Anklet") + ".",
+      "Zodiac: the " + link("zodiac-charm-bracelet", "Zodiac Charm Bracelet") + ", " + link("zodiac-anklet", "Zodiac Anklet") + ", " + link("zodiac-slip-on-necklace", "Zodiac Slip-On Necklace") + " and " + link("gemstone-zodiac-anklet", "Gemstone Zodiac Anklet") + ".",
+    ] },
+    { type: "heading", text: "Layered and stacked personalised pieces" },
+    { type: "paragraph", text: "For a more built-up look, the " + link("curated-layered-necklace-stack", "Cross & Zodiac Necklace Stack") + ", " + link("turquoise-zodiac-necklace-stack", "Turquoise & Zodiac Necklace Stack") + " and " + link("maximalist-layered-necklace-stack", "Maximalist Layered Necklace Stack") + " come ready-layered, and the " + link("diamond-initial-layered-bracelet", "Diamond Initial Layered Bracelet") + " pairs two chains with a rhinestone initial." },
+    { type: "heading", text: "How personalisation works" },
+    { type: "paragraph", text: "Pick your letter, birth month or star sign from the dropdown on the product page before adding to cart — there's no extra charge and no need to message us first. If you want a size or length adjusted too, message us after ordering and we'll make it to your measurements for free." },
+  ],
+  faq: [
+    { question: "How do I personalise my jewelry?", answer: "Select your letter, birth month, birth flower or star sign from the dropdown on the product page before checkout. No extra cost." },
+    { question: "Can I personalise a gift for someone else?", answer: "Yes — just choose their initial, birth month or sign at checkout. If you're not sure, most of our personalised pieces also make a lovely plain gift." },
+    { question: "Are personalised pieces returnable?", answer: "Yes, the same 14-day return policy applies. If you selected the wrong letter or month, message us and we'll help sort it out." },
+    { question: "What's the price range for personalised jewelry?", answer: "Most personalised pieces run from €20 to €44, with the majority between €24 and €30." },
+  ],
+};
+
+export const BRIDAL_CONTENT: CategoryContent = {
+  intro:
+    "Bridal jewelry for backless wedding dresses: back necklaces, head chains and shoulder chains in pearl and gold or silver-tone stainless steel, from €24 to €50.",
+  guide: [
+    { type: "heading", text: "Back necklaces for backless gowns" },
+    { type: "paragraph", text: "Our biggest bridal category — the " + link("pearl-wedding-back-necklace", "Pearl Wedding Back Necklace") + ", " + link("pearl-evening-backdrop-necklace", "Pearl Evening Backdrop Necklace") + ", " + link("minimalist-pearl-back-necklace", "Minimalist Pearl Back Necklace") + ", " + link("bridal-pearl-back-necklace", "Bridal Pearl Back Necklace") + ", " + link("pearl-bridal-back-chain", "Pearl Bridal Back Chain") + ", " + link("bridal-open-back-necklace", "Bridal Open-Back Necklace") + ", " + link("boho-back-chain", "Boho Back Chain") + " and " + link("pearl-backdrop-necklace", "Pearl Backdrop Necklace") + " all drape down the spine, designed to sit in the open back of a wedding gown." },
+    { type: "heading", text: "Head chains and hair vines" },
+    { type: "paragraph", text: "The " + link("bridal-forehead-chain", "Bridal Forehead Chain") + ", " + link("pearl-bridal-head-chain", "Pearl Bridal Head Chain") + " and " + link("bridal-hair-vine-chain", "Bridal Hair Vine Chain") + " work with an up-do or loose bridal hair, worn alone or layered with a veil." },
+    { type: "heading", text: "Shoulder chains" },
+    { type: "paragraph", text: "The " + link("bridal-shoulder-chain", "Bridal Shoulder Chain") + " and " + link("bridal-shoulder-necklace", "Bridal Shoulder Necklace") + " drape over one or both shoulders — made for off-shoulder and strapless gowns." },
+    { type: "heading", text: "Fit for your dress" },
+    { type: "paragraph", text: "Most back necklaces come with extender sizes, so they can sit anywhere from a low to very low back opening. If you know your exact measurements, message us after ordering and we'll make it to size for free." },
+  ],
+  faq: [
+    { question: "Will a bridal back necklace fit my dress?", answer: "Most come with multiple extender sizes to suit different back openings. Message us your exact measurement after ordering and we'll make it to fit for free." },
+    { question: "Can I wear bridal jewelry during the ceremony and reception?", answer: "Yes. Everything is stainless steel — waterproof and tarnish-resistant, so it holds up through a first dance, a humid venue, or even rain." },
+    { question: "Do you make bridesmaid sets?", answer: "Message us if you'd like to order several of the same piece for your bridal party — we're happy to help coordinate." },
+    { question: "How far in advance should I order bridal jewelry?", answer: "Orders dispatch within 1–2 business days, but order a few weeks ahead if you want time for a custom size or in case you'd like to make changes." },
+  ],
+};
+
 export const CHRISTMAS_CONTENT: CategoryContent = {
   intro:
     "Christmas jewelry gifts for her: personalised initial and birthstone pieces, pearls, charm bracelets and festive pieces like our snowflake and star necklaces. Handmade in stainless steel, most under €30, with gift wrap at checkout.",

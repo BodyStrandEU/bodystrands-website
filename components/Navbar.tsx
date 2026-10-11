@@ -81,14 +81,16 @@ export default function Navbar() {
   const giftLinks = [
     { href: "/gifts#under-25", label: "Under €25" },
     { href: "/gifts#under-40", label: "Under €40" },
-    { href: "/gifts#personalized", label: "Personalized Gifts" },
+    { href: "/personalized", label: "Personalized Gifts" },
     { href: "/gifts#confirmation", label: "Confirmation & Communion Gifts" },
-    { href: "/gifts#bridal", label: "For the Bride" },
+    { href: "/bridal", label: "For the Bride" },
   ];
 
   const pages = [
     { href: "/christmas", label: "Christmas" },
     { href: "/plus-size", label: "Plus Size" },
+    { href: "/personalized", label: "Personalized" },
+    { href: "/bridal", label: "Bridal" },
     { href: "/blog", label: "Journal" },
     { href: "/about", label: "About" },
     { href: "/contact", label: "Contact" },

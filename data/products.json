@@ -6219,14 +6219,12 @@
     "featured": false,
     "active": true,
     "images": [
-      "https://i.etsystatic.com/55122258/r/il/8c6edc/7883951479/il_fullxfull.7883951479_dcta.jpg",
+      "/images/products/02a230c9-11ca-472a-884f-2cd13f4a09cf.png",
       "https://i.etsystatic.com/55122258/r/il/96692e/7883966909/il_fullxfull.7883966909_m1l9.jpg",
-      "https://i.etsystatic.com/55122258/r/il/e998ff/7756532898/il_fullxfull.7756532898_248j.jpg",
-      "https://i.etsystatic.com/55122258/r/il/f2b592/7836004986/il_fullxfull.7836004986_p777.jpg",
-      "https://i.etsystatic.com/55122258/r/il/5a6448/7883951523/il_fullxfull.7883951523_sded.jpg",
-      "https://i.etsystatic.com/55122258/r/il/671d65/7883984639/il_fullxfull.7883984639_iztj.jpg",
       "https://i.etsystatic.com/55122258/r/il/891446/7836088356/il_fullxfull.7836088356_316o.jpg",
-      "https://i.etsystatic.com/55122258/r/il/18ca85/7804755673/il_fullxfull.7804755673_8jj6.jpg",
+      "/images/products/270.png",
+      "https://i.etsystatic.com/55122258/r/il/e998ff/7756532898/il_fullxfull.7756532898_248j.jpg",
+      "https://i.etsystatic.com/55122258/r/il/8c6edc/7883951479/il_fullxfull.7883951479_dcta.jpg",
       "https://i.etsystatic.com/55122258/r/il/ccdf8e/7804755677/il_fullxfull.7804755677_14iy.jpg"
     ],
     "variantGroups": [
@@ -6252,7 +6250,8 @@
     "altText": "Gold-tone stainless steel back chain necklace with personalized birthstone charm for bridal wear",
     "dateAdded": "2026-06-12T15:00:27-04:00",
     "giftTags": [
-      "personalized"
+      "personalized",
+      "bridal"
     ]
   },
   {

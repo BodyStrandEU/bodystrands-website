@@ -40,7 +40,7 @@
       "Silver Tone"
     ],
     "images": [
-      "/images/products/6a2d67bf-5008-41d9-982e-25bf2b68c444.webp"
+      "/images/products/7e988277-1ef1-49fe-9e18-1159ff4c73ef.png"
     ],
     "variantVideos": {
       "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/c885a78de2ff06546f0e804111efaa80/downloads/default.mp4",
@@ -48,20 +48,19 @@
     },
     "altText": "Gold tone stainless steel belly chain for layered waist styling and beach body jewelry wear",
     "gallery": [
-      "/images/products/6a2d67bf-5008-41d9-982e-25bf2b68c444.webp",
+      "/images/products/7e988277-1ef1-49fe-9e18-1159ff4c73ef.png",
       "https://i.etsystatic.com/55122258/r/il/c3abc7/7750208352/il_fullxfull.7750208352_j22z.jpg",
       "https://i.etsystatic.com/55122258/r/il/bbf883/7750208394/il_fullxfull.7750208394_5km6.jpg",
-      "https://i.etsystatic.com/55122258/r/il/d00793/7746874302/il_fullxfull.7746874302_831y.jpg",
       "https://i.etsystatic.com/55122258/r/il/029399/7798159413/il_fullxfull.7798159413_38c2.jpg",
       "https://i.etsystatic.com/55122258/r/il/60582a/7798159381/il_fullxfull.7798159381_8ayl.jpg",
-      "https://i.etsystatic.com/55122258/r/il/153b29/7794757793/il_fullxfull.7794757793_f5wn.jpg",
       "/images/products/8a35ecec-5a49-4ea7-8f8b-609ac639139b.webp"
     ],
     "variantHeroes": {
-      "Gold Tone": "/images/products/6a2d67bf-5008-41d9-982e-25bf2b68c444.webp",
+      "Gold Tone": "/images/products/7e988277-1ef1-49fe-9e18-1159ff4c73ef.png",
       "Silver Tone": "/images/products/8a35ecec-5a49-4ea7-8f8b-609ac639139b.webp"
     },
-    "dateAdded": "2026-06-12T15:00:27-04:00"
+    "dateAdded": "2026-06-12T15:00:27-04:00",
+    "sizeGuideImage": "/images/products/48.png"
   },
   {
     "id": "plus-size-body-chain",

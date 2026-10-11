@@ -222,7 +222,7 @@ export default function CartIcon({ light }: { light?: boolean }) {
                 {!shippingCountry && remaining > 0 && (
                   <p className="text-[0.52rem] tracking-[0.08em] uppercase text-[#8C7B6E] leading-relaxed">
                     {currency === "USD" ? (
-                      <>Free shipping on USA orders over <span className="text-[#2C2220]">$60.00 USD</span></>
+                      <>Free shipping on USA orders over <span className="text-[#2C2220]">$100.00 USD</span></>
                     ) : currency === "CAD" ? (
                       <>Free shipping on Canada orders over <span className="text-[#2C2220]">$75.00 CAD</span></>
                     ) : (

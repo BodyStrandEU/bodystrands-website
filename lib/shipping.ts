@@ -41,13 +41,16 @@ export function getShippingRate(
     };
   }
   if (countryCode === "US") {
-    // Flat EUR pricing — actual carrier cost runs ~€28/shipment, so €5 was underpriced.
-    const free = cartTotal >= 75;
+    // Exact $100 USD free-shipping threshold — converted to EUR using the live rate passed
+    // in, not a hardcoded snapshot, so it always resolves to a real $100.00 regardless of
+    // FX drift (same pattern as Canada's $75 CAD threshold below).
+    const threshold = 100 / rates.USD;
+    const free = cartTotal >= threshold;
     return {
       displayName: free ? "Free Shipping — USA" : "Standard Shipping — USA",
-      amount:      free ? 0 : 2000,
+      amount:      free ? 0 : 1500,
       deliveryMin: 3, deliveryMax: 10,
-      freeThreshold: 75,
+      freeThreshold: threshold,
     };
   }
   if (countryCode === "CA") {

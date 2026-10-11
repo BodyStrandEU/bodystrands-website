@@ -6574,7 +6574,7 @@
       },
       {
         "label": "Care",
-        "value": "Avoid water, perfumes, lotions. Store in an airtight container."
+        "value": "Avoid perfumes, lotions. Store in an airtight container."
       },
       {
         "label": "Shipping",
@@ -6591,7 +6591,7 @@
       "Gold Tone"
     ],
     "images": [
-      "https://i.etsystatic.com/55122258/r/il/bb8878/7802417294/il_fullxfull.7802417294_1vgp.jpg"
+      "/images/products/54ab2dbe-8a39-4ae4-809a-084f4533dce2.png"
     ],
     "variantGroups": [
       {
@@ -6610,18 +6610,18 @@
     },
     "altText": "Gold butterfly back chain necklace in stainless steel, delicate statement back body jewelry for open-back dresses",
     "gallery": [
+      "/images/products/54ab2dbe-8a39-4ae4-809a-084f4533dce2.png",
       "https://i.etsystatic.com/55122258/r/il/bb8878/7802417294/il_fullxfull.7802417294_1vgp.jpg",
-      "https://i.etsystatic.com/55122258/r/il/a68789/7850317727/il_fullxfull.7850317727_1dsd.jpg",
-      "https://i.etsystatic.com/55122258/r/il/28aea9/7802431830/il_fullxfull.7802431830_f6hb.jpg",
       "https://i.etsystatic.com/55122258/r/il/c4f6ca/7790859607/il_fullxfull.7790859607_ljlp.jpg",
-      "https://i.etsystatic.com/55122258/r/il/292446/7850317601/il_fullxfull.7850317601_3wc6.jpg",
-      "https://i.etsystatic.com/55122258/r/il/e57d7b/7802373466/il_fullxfull.7802373466_penx.jpg",
-      "https://i.etsystatic.com/55122258/r/il/94c0e7/7802373322/il_fullxfull.7802373322_j3sv.jpg"
+      "https://i.etsystatic.com/55122258/r/il/a68789/7850317727/il_fullxfull.7850317727_1dsd.jpg"
     ],
     "variantHeroes": {
-      "Gold Tone": "https://i.etsystatic.com/55122258/r/il/bb8878/7802417294/il_fullxfull.7802417294_1vgp.jpg"
+      "Gold Tone": "/images/products/54ab2dbe-8a39-4ae4-809a-084f4533dce2.png"
     },
-    "dateAdded": "2026-06-12T15:00:27-04:00"
+    "dateAdded": "2026-06-12T15:00:27-04:00",
+    "giftTags": [
+      "bridal"
+    ]
   },
   {
     "id": "bridal-open-back-necklace",

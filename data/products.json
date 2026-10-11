@@ -4749,7 +4749,7 @@
       "Silver Tone"
     ],
     "images": [
-      "https://i.etsystatic.com/55122258/r/il/9f6ee4/7867616755/il_fullxfull.7867616755_78bt.jpg"
+      "/images/products/9adc8fbb-2367-48f5-8d7a-3a6868931982.png"
     ],
     "variantGroups": [
       {
@@ -4767,20 +4767,21 @@
     },
     "altText": "Gold tone stainless steel dainty backdrop back necklace for open-back outfits and beach wear",
     "gallery": [
-      "https://i.etsystatic.com/55122258/r/il/9f6ee4/7867616755/il_fullxfull.7867616755_78bt.jpg",
+      "/images/products/9adc8fbb-2367-48f5-8d7a-3a6868931982.png",
       "https://i.etsystatic.com/55122258/r/il/8cb85b/7867608707/il_fullxfull.7867608707_d0k5.jpg",
-      "https://i.etsystatic.com/55122258/r/il/979cd6/7808760694/il_fullxfull.7808760694_936o.jpg",
-      "https://i.etsystatic.com/55122258/r/il/698621/7867784241/il_fullxfull.7867784241_oh2z.jpg",
       "/images/products/IMG_9749.webp",
-      "https://i.etsystatic.com/55122258/r/il/d99681/7819703812/il_fullxfull.7819703812_d194.jpg",
       "https://i.etsystatic.com/55122258/r/il/d204ac/7867554645/il_fullxfull.7867554645_gcbi.jpg",
-      "https://i.etsystatic.com/55122258/r/il/704e34/7867778489/il_fullxfull.7867778489_hpqz.jpg"
+      "https://i.etsystatic.com/55122258/r/il/698621/7867784241/il_fullxfull.7867784241_oh2z.jpg",
+      "https://i.etsystatic.com/55122258/r/il/d99681/7819703812/il_fullxfull.7819703812_d194.jpg"
     ],
     "variantHeroes": {
-      "Gold Tone": "https://i.etsystatic.com/55122258/r/il/9f6ee4/7867616755/il_fullxfull.7867616755_78bt.jpg",
+      "Gold Tone": "/images/products/9adc8fbb-2367-48f5-8d7a-3a6868931982.png",
       "Silver Tone": "https://i.etsystatic.com/55122258/r/il/d204ac/7867554645/il_fullxfull.7867554645_gcbi.jpg"
     },
-    "dateAdded": "2026-06-12T15:00:27-04:00"
+    "dateAdded": "2026-06-12T15:00:27-04:00",
+    "giftTags": [
+      "bridal"
+    ]
   },
   {
     "id": "gemstone-zodiac-anklet",

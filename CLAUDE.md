@@ -93,6 +93,13 @@ All thumbnail prompts (plain-background, Etsy-style product shots) must specify 
 
 **Separate rule, added Oct 9, 2026**, for images destined for the homepage category row or any other vertical/portrait slot on the site (`components/` tiles using `aspect-[3/4]` — see "Category grid" below): target **3:4 vertical/portrait**, not square. User's exact words: "change it to a little more vertical aspect ratio so it fits the vertical category slots... keep that in mind for the upcoming photos AR." Include the line: *"Portrait format, 3:4 vertical aspect ratio."* in every prompt for this use case. Extend the scene naturally to fill the taller frame (more visible shoulders/background above or below) rather than stretching or tightly cropping the subject.
 
+### Photo enhancement — ALWAYS included by default, not just when asked — confirmed Oct 10, 2026
+Every "change the background / fix the AR" edit prompt must also include a professional enhancement pass by default — never wait to be asked again. User's exact words: "no camera settings or enhancing settings? do i have to ask u everytime?" Standard block to include in every edit prompt from here on:
+
+*"Apply a professional enhancement pass: even out the lighting to soft, natural daylight, sharpen overall image clarity, and elevate the color grading to a clean, warm, editorial product-photography look — as if shot on 85mm f/1.4 with soft, flattering studio lighting. Keep the skin looking real: natural skin texture, realistic pores, subtle natural imperfections, photographed on real film — do not smooth, airbrush, or give an AI-plastic finish."*
+
+Only skip this block if the user explicitly says the photo is already enhanced/final and just needs the background or AR touched.
+
 ### Always specify camera lens
 - **Tight product / thumbnail**: 105mm f/2.8 macro
 - **Portrait / editorial**: 85mm f/1.4 or 85mm f/1.2
@@ -521,6 +528,9 @@ User, verbatim: "i tell you consistently to do long tail keywords, end one sente
 - **Pin title:** `Product Name | <keyword chain>`, 60–100 chars. **Pin description:** one plain factual sentence + one chained long-tail line + 2 hashtags, 200–400 chars.
 - Generate with `node scripts/pin-copy.mjs <product-id> ...` (uses product facts only; validates length/hashtags/banned words). Run it again for extra distinct versions when a product has several pins — Pinterest copy must never repeat.
 - Applies to **Pinterest (and Etsy titles)** only. Do NOT put keyword chains in blog posts or visible website copy — Google treats that as keyword stuffing.
+
+### Pinterest images must be vertical 2:3, not square — confirmed Oct 11, 2026
+User's exact words: "my pins on pinterest are square.. i have to start giving you vertical pins, that will increase visibility." Pinterest's own guidance favors tall pins (ideal ~1000×1500px, 2:3 ratio) — square pins get noticeably less vertical real estate in the feed and lower reach. Every pin scheduled from here on needs its own dedicated vertical image — **never reuse the square 1:1 Etsy/thumbnail image for a Pinterest pin.** When writing an image-generation prompt specifically for a Pinterest pin, include the line: *"Portrait format, 2:3 vertical aspect ratio."* — distinct from both the 1:1 thumbnail rule and the 3:4 hero/category-slot rule above.
 - Instagram/Facebook captions stay plain language (see caption tone rule); Instagram gets 2–5 hashtags; no "link in bio" anywhere.
 
 ### ALWAYS schedule through `node scripts/postiz-create.mjs`, NEVER raw `postiz posts:create` — user rule, Oct 1, 2026

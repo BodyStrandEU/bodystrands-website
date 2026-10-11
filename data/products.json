@@ -4350,12 +4350,12 @@
     "price": 32,
     "currency": "EUR",
     "category": "Back Chains",
-    "description": "Your bridal back detail, in pearl. This pearl-accented back necklace drapes down the open back of your wedding gown — romantic, luminous, and adjustable to your exact measurements.",
-    "fullDescription": "Pearl accents cascade down the back on a fine gold chain, creating a soft, romantic silhouette that photographs beautifully from the back of the aisle. One of our most-loved bridal pieces.\n\nHandcrafted in gold-tone stainless steel. Three extender sizes: Small (+7 cm (2.8\")), Medium (+14 cm (5.5\")), or Large (+23 cm (9.1\")). Message us your back measurement after ordering for a perfect custom fit.",
+    "description": "Your bridal back detail, in pearl. This pearl-accented back necklace drapes down the open back of your wedding gown — romantic, luminous, and adjustable to your exact measurements. Available in gold-tone or silver-tone stainless steel.",
+    "fullDescription": "Pearl accents cascade down the back on a fine chain, creating a soft, romantic silhouette that photographs beautifully from the back of the aisle. One of our most-loved bridal pieces — now in gold-tone or silver-tone.\n\nHandcrafted in stainless steel. Three extender sizes: Small (+7 cm (2.8\")), Medium (+14 cm (5.5\")), or Large (+23 cm (9.1\")). Message us your back measurement after ordering for a perfect custom fit.",
     "specs": [
       {
         "label": "Material",
-        "value": "Gold-tone stainless steel with pearl accents"
+        "value": "Stainless steel with pearl accents, gold-tone or silver-tone"
       },
       {
         "label": "Style",
@@ -4393,15 +4393,17 @@
     "featured": false,
     "active": true,
     "images": [
-      "/images/products/d754a9bf-e61f-46a9-8e27-208fc29bccfb.png",
-      "/images/products/c5093ef1-befa-4a93-af8d-71abd2e42904.png",
-      "https://i.etsystatic.com/55122258/r/il/9f3ccf/8029757553/il_fullxfull.8029757553_i7rw.jpg",
-      "https://i.etsystatic.com/55122258/r/il/2955d4/8029794213/il_fullxfull.8029794213_ps5m.jpg",
-      "https://i.etsystatic.com/55122258/r/il/ef7ac5/8029746787/il_fullxfull.8029746787_6ngn.jpg",
-      "https://i.etsystatic.com/55122258/r/il/59f15a/8029772403/il_fullxfull.8029772403_b02n.jpg",
-      "https://i.etsystatic.com/55122258/r/il/698621/7867784241/il_fullxfull.7867784241_oh2z.jpg"
+      "/images/products/c5093ef1-befa-4a93-af8d-71abd2e42904.png"
     ],
     "variantGroups": [
+      {
+        "label": "Color",
+        "type": "options",
+        "options": [
+          "Gold Tone",
+          "Silver Tone"
+        ]
+      },
       {
         "label": "Size",
         "options": [
@@ -4411,11 +4413,37 @@
         ]
       }
     ],
-    "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/bce20b573e1e7ea237c3e9a1af2fdb80/downloads/default.mp4",
-    "altText": "Gold-tone stainless steel pearl back chain necklace for open back wedding dresses and bridal back jewelry",
+    "altText": "Pearl back chain necklace in gold-tone or silver-tone stainless steel for open back wedding dresses and bridal back jewelry",
     "dateAdded": "2026-06-12T15:00:27-04:00",
     "giftTags": [
       "bridal"
+    ],
+    "variants": [
+      "Gold Tone",
+      "Silver Tone"
+    ],
+    "variantHeroes": {
+      "Gold Tone": "/images/products/c5093ef1-befa-4a93-af8d-71abd2e42904.png",
+      "Silver Tone": "/images/products/d754a9bf-e61f-46a9-8e27-208fc29bccfb.png"
+    },
+    "variantVideos": {
+      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/bce20b573e1e7ea237c3e9a1af2fdb80/downloads/default.mp4",
+      "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/bce20b573e1e7ea237c3e9a1af2fdb80/downloads/default.mp4"
+    },
+    "gallery": [
+      "/images/products/c5093ef1-befa-4a93-af8d-71abd2e42904.png",
+      "/images/products/d754a9bf-e61f-46a9-8e27-208fc29bccfb.png",
+      "https://i.etsystatic.com/55122258/r/il/488827/7981799898/il_fullxfull.7981799898_4231.jpg",
+      "https://i.etsystatic.com/55122258/r/il/9f3ccf/8029757553/il_fullxfull.8029757553_i7rw.jpg",
+      "https://i.etsystatic.com/55122258/r/il/2955d4/8029794213/il_fullxfull.8029794213_ps5m.jpg",
+      "https://i.etsystatic.com/55122258/r/il/ef7ac5/8029746787/il_fullxfull.8029746787_6ngn.jpg",
+      "https://i.etsystatic.com/55122258/r/il/59f15a/8029772403/il_fullxfull.8029772403_b02n.jpg",
+      "https://i.etsystatic.com/55122258/r/il/698621/7867784241/il_fullxfull.7867784241_oh2z.jpg",
+      "https://i.etsystatic.com/55122258/r/il/cbd1a6/7803902507/il_fullxfull.7803902507_7i39.jpg",
+      "https://i.etsystatic.com/55122258/r/il/2d76f4/7803902439/il_fullxfull.7803902439_3q4q.jpg",
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp",
+      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.webp",
+      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.webp"
     ]
   },
   {

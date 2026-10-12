@@ -35,11 +35,12 @@ interface SortableImageProps {
   id: string;
   url: string;
   onDelete: (url: string) => void;
+  onExpand: (url: string) => void;
   localPreview?: string;
   heroBadges?: HeroBadge[];
 }
 
-function SortableImage({ id, url, onDelete, localPreview, heroBadges }: SortableImageProps) {
+function SortableImage({ id, url, onDelete, onExpand, localPreview, heroBadges }: SortableImageProps) {
   const { attributes, listeners, setNodeRef, transform, transition, isDragging } =
     useSortable({ id });
 
@@ -109,6 +110,33 @@ function SortableImage({ id, url, onDelete, localPreview, heroBadges }: Sortable
         >
           ×
         </button>
+        <button
+          onPointerDown={(e) => e.stopPropagation()}
+          onClick={(e) => {
+            e.stopPropagation();
+            onExpand(url);
+          }}
+          title="View larger"
+          style={{
+            position: "absolute",
+            top: "2px",
+            left: "2px",
+            width: "20px",
+            height: "20px",
+            background: "rgba(0,0,0,0.7)",
+            color: "#fff",
+            border: "none",
+            borderRadius: "50%",
+            cursor: "pointer",
+            fontSize: "11px",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            lineHeight: 1,
+          }}
+        >
+          ⤢
+        </button>
         {/* Inline hero/main badge buttons — only shown in gallery mode */}
         {heroBadges && heroBadges.length > 0 && (
           <div style={{ position: "absolute", bottom: "2px", left: "2px", display: "flex", gap: "2px" }}>
@@ -147,6 +175,75 @@ function SortableImage({ id, url, onDelete, localPreview, heroBadges }: Sortable
   );
 }
 
+// ─── Lightbox — click an image's ⤢ button to view it full-size ───────────────
+
+function ImageLightbox({ url, onClose }: { url: string; onClose: () => void }) {
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => { if (e.key === "Escape") onClose(); };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [onClose]);
+
+  const isVideo = url.endsWith(".mp4") || url.endsWith(".mov");
+
+  return (
+    <div
+      onClick={onClose}
+      style={{
+        position: "fixed",
+        inset: 0,
+        background: "rgba(0,0,0,0.85)",
+        zIndex: 1000,
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        padding: "2rem",
+      }}
+    >
+      <button
+        onClick={onClose}
+        title="Close"
+        style={{
+          position: "absolute",
+          top: "1.25rem",
+          right: "1.25rem",
+          width: "36px",
+          height: "36px",
+          background: "rgba(255,255,255,0.1)",
+          color: "#fff",
+          border: "1px solid rgba(255,255,255,0.3)",
+          borderRadius: "50%",
+          cursor: "pointer",
+          fontSize: "1.1rem",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          lineHeight: 1,
+        }}
+      >
+        ×
+      </button>
+      {isVideo ? (
+        <video
+          src={url}
+          controls
+          autoPlay
+          onClick={(e) => e.stopPropagation()}
+          style={{ maxWidth: "90vw", maxHeight: "90vh", borderRadius: "4px" }}
+        />
+      ) : (
+        // eslint-disable-next-line @next/next/no-img-element
+        <img
+          src={url}
+          alt=""
+          onClick={(e) => e.stopPropagation()}
+          style={{ maxWidth: "90vw", maxHeight: "90vh", objectFit: "contain", borderRadius: "4px" }}
+        />
+      )}
+    </div>
+  );
+}
+
 // ─── Image section with dnd ───────────────────────────────────────────────────
 
 interface ImageSectionProps {
@@ -162,6 +259,7 @@ function ImageSection({ title, images, onChange, onUpload }: ImageSectionProps) 
   const [pending, setPending] = useState<{ id: string; previewUrl: string }[]>([]);
   // localPreviews: blob URLs kept alive after upload — real path 404s until the site redeploys
   const [localPreviews, setLocalPreviews] = useState<Record<string, string>>({});
+  const [lightboxUrl, setLightboxUrl] = useState<string | null>(null);
 
   const sensors = useSensors(
     useSensor(PointerSensor),
@@ -229,7 +327,7 @@ function ImageSection({ title, images, onChange, onUpload }: ImageSectionProps) 
         <SortableContext items={images} strategy={rectSortingStrategy}>
           <div style={{ display: "flex", flexWrap: "wrap", gap: "0.5rem", marginBottom: "0.75rem" }}>
             {images.map((url) => (
-              <SortableImage key={url} id={url} url={url} onDelete={confirmDelete} localPreview={localPreviews[url]} />
+              <SortableImage key={url} id={url} url={url} onDelete={confirmDelete} onExpand={setLightboxUrl} localPreview={localPreviews[url]} />
             ))}
             {/* Uploading previews */}
             {pending.map((p) => (
@@ -277,6 +375,8 @@ function ImageSection({ title, images, onChange, onUpload }: ImageSectionProps) 
           {isUploading ? "Uploading..." : "Drop files here or click to upload (jpg, png, webp, mp4, mov)"}
         </span>
       </label>
+
+      {lightboxUrl && <ImageLightbox url={lightboxUrl} onClose={() => setLightboxUrl(null)} />}
     </div>
   );
 }
@@ -321,6 +421,7 @@ function GallerySection({
   const [dragOver, setDragOver] = useState(false);
   const [pending, setPending] = useState<{ id: string; previewUrl: string }[]>([]);
   const [localPreviews, setLocalPreviews] = useState<Record<string, string>>({});
+  const [lightboxUrl, setLightboxUrl] = useState<string | null>(null);
 
   const sensors = useSensors(
     useSensor(PointerSensor),
@@ -397,6 +498,7 @@ function GallerySection({
                   id={url}
                   url={url}
                   onDelete={(img) => onReorder(images.filter((x) => x !== img))}
+                  onExpand={setLightboxUrl}
                   localPreview={localPreviews[url]}
                   heroBadges={badges}
                 />
@@ -442,6 +544,8 @@ function GallerySection({
           {isUploading ? "Uploading..." : "Drop files here or click to upload (jpg, png, webp, mp4, mov)"}
         </span>
       </label>
+
+      {lightboxUrl && <ImageLightbox url={lightboxUrl} onClose={() => setLightboxUrl(null)} />}
     </div>
   );
 }

@@ -1383,14 +1383,7 @@
     "featured": false,
     "active": true,
     "images": [
-      "/images/products/a546d9f4-0df6-4be6-b415-8c9dc08e426c.png",
-      "/images/products/6ff3c5b2-4fa2-4c93-8458-e83dc479cbd8.webp",
-      "https://i.etsystatic.com/55122258/r/il/00c68e/7783598352/il_fullxfull.7783598352_ord3.jpg",
-      "https://i.etsystatic.com/55122258/r/il/3ca3d7/7783400862/il_fullxfull.7783400862_3lw5.jpg",
-      "https://i.etsystatic.com/55122258/r/il/17f798/7787214796/il_fullxfull.7787214796_ampn.jpg",
-      "https://i.etsystatic.com/55122258/r/il/d7b84c/7783600598/il_fullxfull.7783600598_op0k.jpg",
-      "https://i.etsystatic.com/55122258/r/il/da142d/7783600828/il_fullxfull.7783600828_l2oi.jpg",
-      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp"
+      "/images/products/6ff3c5b2-4fa2-4c93-8458-e83dc479cbd8.webp"
     ],
     "variantGroups": [
       {
@@ -1409,10 +1402,31 @@
         ]
       }
     ],
-    "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/6d1bffbe5f4404a422d2bb5e7bd6ee9a/downloads/default.mp4",
     "altText": "Delicate gold-tone stainless steel layered belly chain for minimalist waist styling and beach wear.",
     "sizeGuideImage": "/images/products/da3d343f-4647-4ca2-94cb-6da42e47942b.png",
-    "dateAdded": "2026-06-12T15:00:27-04:00"
+    "dateAdded": "2026-06-12T15:00:27-04:00",
+    "gallery": [
+      "/images/products/a546d9f4-0df6-4be6-b415-8c9dc08e426c.png",
+      "/images/products/6ff3c5b2-4fa2-4c93-8458-e83dc479cbd8.webp",
+      "https://i.etsystatic.com/55122258/r/il/00c68e/7783598352/il_fullxfull.7783598352_ord3.jpg",
+      "https://i.etsystatic.com/55122258/r/il/3ca3d7/7783400862/il_fullxfull.7783400862_3lw5.jpg",
+      "https://i.etsystatic.com/55122258/r/il/17f798/7787214796/il_fullxfull.7787214796_ampn.jpg",
+      "https://i.etsystatic.com/55122258/r/il/d7b84c/7783600598/il_fullxfull.7783600598_op0k.jpg",
+      "https://i.etsystatic.com/55122258/r/il/da142d/7783600828/il_fullxfull.7783600828_l2oi.jpg",
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp"
+    ],
+    "variants": [
+      "Gold Stainless",
+      "Silver Stainless"
+    ],
+    "variantHeroes": {
+      "Gold Stainless": "/images/products/6ff3c5b2-4fa2-4c93-8458-e83dc479cbd8.webp",
+      "Silver Stainless": "/images/products/a546d9f4-0df6-4be6-b415-8c9dc08e426c.png"
+    },
+    "variantVideos": {
+      "Gold Stainless": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/6d1bffbe5f4404a422d2bb5e7bd6ee9a/downloads/default.mp4",
+      "Silver Stainless": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/6d1bffbe5f4404a422d2bb5e7bd6ee9a/downloads/default.mp4"
+    }
   },
   {
     "id": "birthstone-bikini-clip-chain",
@@ -4158,12 +4172,12 @@
     "price": 36,
     "currency": "EUR",
     "category": "Back Chains",
-    "description": "Your open-back evening look, completed. This pearl drop backdrop necklace drapes elegantly down the spine — designed for wedding dresses, evening dresses, and any occasion that deserves a beautiful back.",
-    "fullDescription": "Pearl drops fall down the open back on a fine gold chain, creating a cascading effect that turns every exit into an entrance. Designed to complement evening gowns, prom dresses, and formal looks without competing with them.\n\nHandcrafted in gold-tone stainless steel. Three extender sizes: Small (+7 cm (2.8\")), Medium (+14 cm (5.5\")), or Large (+23 cm (9.1\")). Message us after ordering with your exact back measurement.",
+    "description": "Your open-back evening look, completed. This pearl drop backdrop necklace drapes elegantly down the spine in gold-tone or silver-tone — designed for wedding dresses, evening dresses, and any occasion that deserves a beautiful back.",
+    "fullDescription": "Pearl drops fall down the open back on a fine gold chain, creating a cascading effect that turns every exit into an entrance. Designed to complement evening gowns, prom dresses, and formal looks without competing with them.\n\nHandcrafted in stainless steel, now in gold-tone or silver-tone. Three extender sizes: Small (+7 cm (2.8\")), Medium (+14 cm (5.5\")), or Large (+23 cm (9.1\")). Message us after ordering with your exact back measurement.",
     "specs": [
       {
         "label": "Material",
-        "value": "Gold-tone stainless steel with pearl drops"
+        "value": "Stainless steel with pearl drops, gold-tone or silver-tone"
       },
       {
         "label": "Small extender",
@@ -4193,6 +4207,32 @@
     "featured": false,
     "active": true,
     "images": [
+      "/images/products/695a5ef8-f7e2-4511-b5b4-ae1539ff7724.png"
+    ],
+    "variantGroups": [
+      {
+        "label": "Color",
+        "type": "options",
+        "options": [
+          "Gold Tone",
+          "Silver Tone"
+        ]
+      },
+      {
+        "label": "Size",
+        "options": [
+          "Small (+7 cm (2.8\") ext)",
+          "Medium (+14 cm (5.5\") ext)",
+          "Large (+23 cm (9.1\") ext)"
+        ]
+      }
+    ],
+    "altText": "Pearl drop backdrop necklace in gold-tone or silver-tone stainless steel for open-back wedding and evening dresses",
+    "dateAdded": "2026-06-12T15:00:27-04:00",
+    "giftTags": [
+      "bridal"
+    ],
+    "gallery": [
       "/images/products/695a5ef8-f7e2-4511-b5b4-ae1539ff7724.png",
       "/images/products/383b0af8-bc92-4a0c-8b98-0ef89bb189dc.png",
       "https://i.etsystatic.com/55122258/r/il/ce407a/7994952882/il_fullxfull.7994952882_qvj4.jpg",
@@ -4203,22 +4243,18 @@
       "https://i.etsystatic.com/55122258/r/il/30089d/8042924815/il_fullxfull.8042924815_zxz3.jpg",
       "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp"
     ],
-    "variantGroups": [
-      {
-        "label": "Size",
-        "options": [
-          "Small (+7 cm (2.8\") ext)",
-          "Medium (+14 cm (5.5\") ext)",
-          "Large (+23 cm (9.1\") ext)"
-        ]
-      }
+    "variants": [
+      "Gold Tone",
+      "Silver Tone"
     ],
-    "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/4329f536dac0d4458ff7ff6b15529af3/downloads/default.mp4",
-    "altText": "Gold-tone stainless steel back body chain with pearl drops for open-back evening dresses and prom gowns",
-    "dateAdded": "2026-06-12T15:00:27-04:00",
-    "giftTags": [
-      "bridal"
-    ]
+    "variantHeroes": {
+      "Gold Tone": "/images/products/695a5ef8-f7e2-4511-b5b4-ae1539ff7724.png",
+      "Silver Tone": "/images/products/383b0af8-bc92-4a0c-8b98-0ef89bb189dc.png"
+    },
+    "variantVideos": {
+      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/4329f536dac0d4458ff7ff6b15529af3/downloads/default.mp4",
+      "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/4329f536dac0d4458ff7ff6b15529af3/downloads/default.mp4"
+    }
   },
   {
     "id": "turquoise-beaded-belly-chain",

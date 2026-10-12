@@ -3287,16 +3287,15 @@
     "featured": false,
     "active": true,
     "images": [
-      "https://i.etsystatic.com/55122258/r/il/11acaa/7772799618/il_fullxfull.7772799618_lvsf.jpg",
-      "https://i.etsystatic.com/55122258/r/il/8e4af7/7772799606/il_fullxfull.7772799606_7m27.jpg",
-      "https://i.etsystatic.com/55122258/r/il/43d38b/7772614736/il_fullxfull.7772614736_nze8.jpg",
-      "https://i.etsystatic.com/55122258/r/il/0df873/7772615942/il_fullxfull.7772615942_pva0.jpg",
-      "https://i.etsystatic.com/55122258/r/il/bd1ab7/7820725957/il_fullxfull.7820725957_49nu.jpg",
+      "/images/products/a94b9d79-5531-4bbb-9f30-8edd248375dc.png",
       "https://i.etsystatic.com/55122258/r/il/5c671e/7820732007/il_fullxfull.7820732007_tn8h.jpg",
+      "https://i.etsystatic.com/55122258/r/il/8e4af7/7772799606/il_fullxfull.7772799606_7m27.jpg",
+      "https://i.etsystatic.com/55122258/r/il/0df873/7772615942/il_fullxfull.7772615942_pva0.jpg",
+      "https://i.etsystatic.com/55122258/r/il/43d38b/7772614736/il_fullxfull.7772614736_nze8.jpg",
+      "https://i.etsystatic.com/55122258/r/il/bd1ab7/7820725957/il_fullxfull.7820725957_49nu.jpg",
       "https://i.etsystatic.com/55122258/r/il/8f1422/7772793438/il_fullxfull.7772793438_o0s7.jpg",
       "https://i.etsystatic.com/55122258/r/il/856c38/7820732077/il_fullxfull.7820732077_1nr0.jpg",
-      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp",
-      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.webp"
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp"
     ],
     "variantGroups": [
       {
@@ -3310,7 +3309,7 @@
     ],
     "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/bb2249f21c3cf9d5de47efd11ee26201/downloads/default.mp4",
     "altText": "Delicate layered silver belly chain in stainless steel, minimalist waist accessory for body jewelry styling",
-    "sizeGuideImage": "/images/products/il_fullxfull.8090630842_9i25.webp",
+    "sizeGuideImage": "/images/products/da3d343f-4647-4ca2-94cb-6da42e47942b.png",
     "dateAdded": "2026-06-12T15:00:27-04:00"
   },
   {

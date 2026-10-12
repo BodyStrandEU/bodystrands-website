@@ -6578,7 +6578,7 @@
       "Silver Tone"
     ],
     "images": [
-      "https://i.etsystatic.com/55122258/r/il/d682a3/7914467747/il_fullxfull.7914467747_y0yl.jpg"
+      "/images/products/069715ff-f84a-47f9-b15e-6d111ff66fcf.png"
     ],
     "variantGroups": [
       {
@@ -6596,18 +6596,15 @@
     },
     "altText": "Handmade pearl beaded belly chain in gold stainless steel, delicate boho waist chain for beach styling",
     "gallery": [
-      "https://i.etsystatic.com/55122258/r/il/d682a3/7914467747/il_fullxfull.7914467747_y0yl.jpg",
-      "https://i.etsystatic.com/55122258/r/il/aa68bc/7866545038/il_fullxfull.7866545038_pl7p.jpg",
+      "/images/products/069715ff-f84a-47f9-b15e-6d111ff66fcf.png",
       "https://i.etsystatic.com/55122258/r/il/83a3ea/7914467873/il_fullxfull.7914467873_qtz7.jpg",
-      "https://i.etsystatic.com/55122258/r/il/cdd279/7866515030/il_fullxfull.7866515030_jjvy.jpg",
-      "https://i.etsystatic.com/55122258/r/il/99edab/7794757877/il_fullxfull.7794757877_qxts.jpg",
-      "https://i.etsystatic.com/55122258/r/il/94a7c5/7866516384/il_fullxfull.7866516384_p69i.jpg",
-      "https://i.etsystatic.com/55122258/r/il/1a3c71/7866516388/il_fullxfull.7866516388_jj7s.jpg",
-      "https://i.etsystatic.com/55122258/r/il/366fd3/7914469437/il_fullxfull.7914469437_m4rm.jpg"
+      "https://i.etsystatic.com/55122258/r/il/aa68bc/7866545038/il_fullxfull.7866545038_pl7p.jpg",
+      "https://i.etsystatic.com/55122258/r/il/366fd3/7914469437/il_fullxfull.7914469437_m4rm.jpg",
+      "https://i.etsystatic.com/55122258/r/il/94a7c5/7866516384/il_fullxfull.7866516384_p69i.jpg"
     ],
     "variantHeroes": {
-      "Gold Tone": "https://i.etsystatic.com/55122258/r/il/d682a3/7914467747/il_fullxfull.7914467747_y0yl.jpg",
-      "Silver Tone": "https://i.etsystatic.com/55122258/r/il/94a7c5/7866516384/il_fullxfull.7866516384_p69i.jpg"
+      "Gold Tone": "/images/products/069715ff-f84a-47f9-b15e-6d111ff66fcf.png",
+      "Silver Tone": "https://i.etsystatic.com/55122258/r/il/366fd3/7914469437/il_fullxfull.7914469437_m4rm.jpg"
     },
     "dateAdded": "2026-06-12T15:00:27-04:00"
   },

@@ -5981,17 +5981,15 @@
       }
     ],
     "featured": false,
-    "active": true,
+    "active": false,
     "images": [
       "https://i.etsystatic.com/55122258/r/il/8967e1/7926270480/il_fullxfull.7926270480_9i9e.jpg",
-      "https://i.etsystatic.com/55122258/r/il/f599ba/7926269858/il_fullxfull.7926269858_qd9k.jpg",
-      "https://i.etsystatic.com/55122258/r/il/b78f3a/8138541925/il_fullxfull.8138541925_g6th.jpg",
       "https://i.etsystatic.com/55122258/r/il/af25e7/7926269718/il_fullxfull.7926269718_8xop.jpg",
       "https://i.etsystatic.com/55122258/r/il/c54d54/7807712879/il_fullxfull.7807712879_fg0v.jpg",
+      "https://i.etsystatic.com/55122258/r/il/f599ba/7926269858/il_fullxfull.7926269858_qd9k.jpg",
       "https://i.etsystatic.com/55122258/r/il/a4db4a/7926273142/il_fullxfull.7926273142_rpob.jpg",
-      "https://i.etsystatic.com/55122258/r/il/0b7bbb/7807708103/il_fullxfull.7807708103_d3u1.jpg",
       "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp",
-      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.webp"
+      "/images/products/da3d343f-4647-4ca2-94cb-6da42e47942b.png"
     ],
     "variantGroups": [
       {
@@ -6005,7 +6003,8 @@
     ],
     "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/c694a2b4f72e9c0b5a56c277ab2c0a7f/downloads/default.mp4",
     "altText": "Delicate gold-tone stainless steel cross belly chain for everyday waist wear and layering",
-    "dateAdded": "2026-06-12T15:00:27-04:00"
+    "dateAdded": "2026-06-12T15:00:27-04:00",
+    "sizeGuideImage": "/images/products/da3d343f-4647-4ca2-94cb-6da42e47942b.png"
   },
   {
     "id": "pearl-bridal-back-chain",

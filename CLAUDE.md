@@ -88,17 +88,26 @@ Models must look like real humans, not AI-generated mannequins. Always include n
 - Avoid over-smoothed, waxy, or poreless AI-skin
 - Suggested phrase to add to every prompt: *"realistic skin texture with subtle natural imperfections, not AI-smooth — photographed on real film"*
 
+### Skin bleeding into the warm sand background — two root causes, confirmed Oct 12, 2026
+User's exact words: "i feel like its making the model's skin tone like the background... how can we stop this orangish fake looking skin and differenciate it from the background." On tight torso/close-up crops especially (little actual background visible to contrast against), the skin can pick up an orange cast and visually merge with the backdrop. Two fixes, both apply:
+1. **Don't combine model/skin regeneration with the background swap in one prompt.** User's hypothesis, adopted as the new default: generate/fix the model and skin FIRST (against the original or a neutral background), confirm it looks right, THEN run a separate, narrowly-scoped second prompt that changes only the background and explicitly says to leave the already-correct skin untouched. Doing both at once risks the model computing skin and background color together instead of as distinct regions.
+2. **Say "warm" too many times in one prompt and it bleeds into the skin.** The standard block already asks for a warm sand background, warm lighting, and warm color grading — add an explicit line keeping skin tone separate from that: *"Keep the skin's natural, true-to-life tone — distinct and visibly different from the warm sand background, not blended or color-matched to it. No orange cast, no artificial tan, no color bleed from the background onto the skin."*
+
 ### Aspect ratio — always 1:1 for thumbnails; 3:4 vertical for hero/category-slot images
 All thumbnail prompts (plain-background, Etsy-style product shots) must specify **square format, 1:1 aspect ratio**. Etsy thumbnails are square. Include the line: *"Square format, 1:1 aspect ratio."* in every prompt.
 
 **Separate rule, added Oct 9, 2026**, for images destined for the homepage category row or any other vertical/portrait slot on the site (`components/` tiles using `aspect-[3/4]` — see "Category grid" below): target **3:4 vertical/portrait**, not square. User's exact words: "change it to a little more vertical aspect ratio so it fits the vertical category slots... keep that in mind for the upcoming photos AR." Include the line: *"Portrait format, 3:4 vertical aspect ratio."* in every prompt for this use case. Extend the scene naturally to fill the taller frame (more visible shoulders/background above or below) rather than stretching or tightly cropping the subject.
 
-### Photo enhancement — ALWAYS included by default, not just when asked — confirmed Oct 10, 2026
+### SUPERSEDED Oct 12, 2026 — back to the simple original format
+The Oct 10 "always stack a full enhancement paragraph onto every prompt" rule below is retired. User's exact words: "go back to the initial way of generating images.... remember before we started doing website thumbnails." Stacking enhancement + background + AR + skin-separation into one dense multi-paragraph prompt is itself part of what caused the skin/background color-bleed problem (see "Skin bleeding into the warm sand background" above) — simpler, single-purpose prompts work better. Go back to the lean original structure in "What a thumbnail prompt looks like" above: scene/model/lighting/camera lens, background, the soft-highlight phrase, the skin-texture phrase, end with the jewelry-preservation line. Only add an explicit enhancement/polish instruction when the user actually asks for one on a given photo — don't default it into every prompt.
+
+<details><summary>Old rule, kept for history only — do not follow</summary>
+
 Every "change the background / fix the AR" edit prompt must also include a professional enhancement pass by default — never wait to be asked again. User's exact words: "no camera settings or enhancing settings? do i have to ask u everytime?" Standard block to include in every edit prompt from here on:
 
 *"Apply a professional enhancement pass: even out the lighting to soft, natural daylight, sharpen overall image clarity, and elevate the color grading to a clean, warm, editorial product-photography look — as if shot on 85mm f/1.4 with soft, flattering studio lighting. Keep the skin looking real: natural skin texture, realistic pores, subtle natural imperfections, photographed on real film — do not smooth, airbrush, or give an AI-plastic finish."*
 
-Only skip this block if the user explicitly says the photo is already enhanced/final and just needs the background or AR touched.
+</details>
 
 ### Always specify camera lens
 - **Tight product / thumbnail**: 105mm f/2.8 macro

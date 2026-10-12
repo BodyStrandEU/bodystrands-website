@@ -1383,15 +1383,14 @@
     "featured": false,
     "active": true,
     "images": [
+      "/images/products/a546d9f4-0df6-4be6-b415-8c9dc08e426c.png",
       "https://i.etsystatic.com/55122258/r/il/00c68e/7783598352/il_fullxfull.7783598352_ord3.jpg",
-      "/images/products/f985b2bb-689d-4d24-90e2-7d6f06d84ae9.webp",
       "https://i.etsystatic.com/55122258/r/il/3ca3d7/7783400862/il_fullxfull.7783400862_3lw5.jpg",
       "/images/products/6ff3c5b2-4fa2-4c93-8458-e83dc479cbd8.webp",
       "https://i.etsystatic.com/55122258/r/il/17f798/7787214796/il_fullxfull.7787214796_ampn.jpg",
-      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp",
       "https://i.etsystatic.com/55122258/r/il/d7b84c/7783600598/il_fullxfull.7783600598_op0k.jpg",
       "https://i.etsystatic.com/55122258/r/il/da142d/7783600828/il_fullxfull.7783600828_l2oi.jpg",
-      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.webp"
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp"
     ],
     "variantGroups": [
       {
@@ -1412,7 +1411,7 @@
     ],
     "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/6d1bffbe5f4404a422d2bb5e7bd6ee9a/downloads/default.mp4",
     "altText": "Delicate gold-tone stainless steel layered belly chain for minimalist waist styling and beach wear.",
-    "sizeGuideImage": "/images/products/il_fullxfull.8090630842_9i25.webp",
+    "sizeGuideImage": "/images/products/da3d343f-4647-4ca2-94cb-6da42e47942b.png",
     "dateAdded": "2026-06-12T15:00:27-04:00"
   },
   {

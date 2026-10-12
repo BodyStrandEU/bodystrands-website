@@ -728,16 +728,16 @@
     "featured": false,
     "active": true,
     "images": [
+      "/images/products/3de78d0c-5fe9-4df3-9aef-e57cea8e5099.png",
       "https://i.etsystatic.com/55122258/r/il/eabb7d/8050343405/il_fullxfull.8050343405_lv0f.jpg",
       "https://i.etsystatic.com/55122258/r/il/b0b278/8002435152/il_fullxfull.8002435152_pewi.jpg",
-      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp",
       "https://i.etsystatic.com/55122258/r/il/0a48b1/8002436328/il_fullxfull.8002436328_jde7.jpg",
       "https://i.etsystatic.com/55122258/r/il/d849dd/7807040209/il_fullxfull.7807040209_88k9.jpg",
       "https://i.etsystatic.com/55122258/r/il/ca5f71/7759089584/il_fullxfull.7759089584_2j0k.jpg",
       "https://i.etsystatic.com/55122258/r/il/be4849/7757121780/il_fullxfull.7757121780_4iz9.jpg",
       "https://i.etsystatic.com/55122258/r/il/7d203e/7759169030/il_fullxfull.7759169030_aizv.jpg",
       "https://i.etsystatic.com/55122258/r/il/6f32de/7805260215/il_fullxfull.7805260215_hpf4.jpg",
-      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.webp"
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp"
     ],
     "variantGroups": [
       {
@@ -771,7 +771,8 @@
     "dateAdded": "2026-06-12T15:00:27-04:00",
     "giftTags": [
       "personalized"
-    ]
+    ],
+    "sizeGuideImage": "/images/products/da3d343f-4647-4ca2-94cb-6da42e47942b.png"
   },
   {
     "id": "beaded-bikini-clip-chain",

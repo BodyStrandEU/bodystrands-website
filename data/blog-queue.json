@@ -1,5 +1,168 @@
 [
   {
+    "query": "jewellery trends 2027",
+    "keywords": [
+      "jewelry trends 2027 predictions",
+      "what jewellery is in style 2027",
+      "sculptural gold jewelry trend",
+      "baroque pearl trend 2027",
+      "colourful gemstone jewellery trend"
+    ],
+    "productIds": [
+      "maximalist-layered-necklace-stack",
+      "curated-layered-necklace-stack",
+      "pearl-body-harness",
+      "colorful-crystal-bead-choker"
+    ],
+    "category": "Inspiration",
+    "months": [
+      10,
+      11,
+      12,
+      1,
+      2,
+      3
+    ],
+    "productCategories": [],
+    "source": "research",
+    "researchModel": "claude-opus-5",
+    "addedAt": "2026-10-12",
+    "why": "Trend-forecast content is searched Oct–Jan and the 2027 slot is open, writeable off Jewelers Mutual on fluid organic forms, McCaskill on sculptural gold and coloured gemstones, Trendalytics on maximalism (+414% hoops, +184% sapphire) and Gabriel & Co on modern pearls."
+  },
+  {
+    "query": "what jewellery to wear with a sequin dress",
+    "keywords": [
+      "jewelry to wear with a sparkly dress",
+      "necklace for sequin party dress",
+      "dainty jewelry with a busy dress",
+      "what jewellery with a glitter dress",
+      "body chain over sequin dress"
+    ],
+    "productIds": [
+      "satellite-link-choker",
+      "minimalist-pearl-back-necklace",
+      "pearl-hand-chain",
+      "dainty-gold-body-chain"
+    ],
+    "category": "Style Guide",
+    "months": [
+      11,
+      12,
+      1,
+      6
+    ],
+    "productCategories": [
+      "Necklaces",
+      "Hand Chains",
+      "Body Chains"
+    ],
+    "source": "research",
+    "researchModel": "claude-opus-5",
+    "addedAt": "2026-10-12",
+    "why": "Christmas-party dressing peaks mid-Nov to 31 Dec and Gabriel & Co's versatility framing — statement for evening, minimal for every day — matches the exact tension readers have with sequins."
+  },
+  {
+    "query": "what jewellery to wear with a red dress",
+    "keywords": [
+      "gold or silver with a red dress",
+      "necklace for red christmas dress",
+      "what jewellery with a red velvet dress",
+      "red dress valentines jewellery",
+      "waist chain with a red dress"
+    ],
+    "productIds": [
+      "gold-waist-chain",
+      "curated-layered-necklace-stack",
+      "pearl-heart-toggle-necklace",
+      "gold-hand-chain"
+    ],
+    "category": "Style Guide",
+    "months": [
+      11,
+      12,
+      1,
+      2
+    ],
+    "productCategories": [
+      "Belly Chains",
+      "Necklaces",
+      "Hand Chains"
+    ],
+    "source": "research",
+    "researchModel": "claude-opus-5",
+    "addedAt": "2026-10-12",
+    "why": "The red dress is the Christmas/NYE/Valentine's workhorse, and the gold-metal recommendation ties to McCaskill's 'bold gold' and Gabriel & Co's mixed-metals framing."
+  },
+  {
+    "query": "non piercing body jewelry",
+    "keywords": [
+      "body jewelry that doesn't require piercing",
+      "belly chain instead of belly button piercing",
+      "no piercing belly chain for beginners",
+      "waterproof belly chain you can sleep in",
+      "body chain no piercing needed"
+    ],
+    "productIds": [
+      "stainless-steel-belly-chain",
+      "waterproof-belly-chain",
+      "silver-waterproof-belly-chain",
+      "layered-hip-chain"
+    ],
+    "category": "Style Guide",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "productCategories": [
+      "Belly Chains",
+      "Body Chains"
+    ],
+    "source": "research",
+    "researchModel": "claude-opus-5",
+    "addedAt": "2026-10-12",
+    "why": "fitiny's TikTok round-up argues 2026's viral jewellery is defined by low-commitment non-piercing formats, citing #MenJewelry at 4.2bn views in Q1 2026 — and we are a 100% no-piercing body jewellery brand that has never claimed the phrase."
+  },
+  {
+    "query": "christmas gift for daughter jewelry",
+    "keywords": [
+      "christmas jewellery gift for daughter",
+      "personalised gift for daughter under 30 euros",
+      "birthstone gift for daughter",
+      "initial necklace gift for daughter",
+      "christmas gift for adult daughter"
+    ],
+    "productIds": [
+      "monogram-letter-necklace",
+      "birthstone-bracelet",
+      "pearl-heart-initial-bracelet",
+      "butterfly-anklet"
+    ],
+    "category": "Gift Guide",
+    "months": [
+      11,
+      12
+    ],
+    "productCategories": [
+      "Necklaces",
+      "Bracelets",
+      "Anklets"
+    ],
+    "source": "research",
+    "researchModel": "claude-opus-5",
+    "addedAt": "2026-10-12",
+    "why": "Daughter is the one high-volume gift recipient missing from our queue, and A Diamond Is Forever says personalisation is replacing uniformity while Gabriel & Co names personalised and celestial motifs as a core 2026 trend."
+  },
+  {
     "query": "coquette aesthetic jewelry",
     "keywords": [
       "dainty pearl choker necklace",

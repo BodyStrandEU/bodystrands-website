@@ -1,5 +1,299 @@
 [
   {
+    "date": "2026-10-12",
+    "researchModel": "claude-opus-5",
+    "trends": [
+      {
+        "name": "Maximalism: statement pieces and collected-over-time stacks",
+        "what": "Bold, oversized jewellery and layered 'collected over time' stacks replacing matched minimal sets.",
+        "searches": [
+          "statement jewelry outfit",
+          "layered necklace stack",
+          "oversized hoop earrings",
+          "bold gold jewelry"
+        ],
+        "evidence": "Trendalytics (16 Apr 2026) reports oversized hoop earrings search up +414% and frames 2026 as 'more is more', citing Saint Laurent and Valentino palm-sized pendants and shoulder-duster earrings plus a 'collected over time' aesthetic. Gabriel & Co (~Sept 2026) lists chunky chains and statement pieces coexisting with minimal everyday pieces, 'the key trend is versatility'. TikTok Discover's Jewelry Trends for 2026 hub (updated 2026-09-28) features Leslie Curtis Jewelry Designs on 'bold statement pieces, mixed metals, layered necklaces' and CROÍA Jewellery's AW26 round-up of 'unconventional jewellery, pops of colour, statement earrings'.",
+        "sources": [
+          {
+            "name": "Trendalytics",
+            "url": "https://blog.trendalytics.co/trends/jewelry-market-forecast-2026"
+          },
+          {
+            "name": "Gabriel & Co",
+            "url": "https://www.gabrielny.com/blog/jewelry-trends-2026/"
+          },
+          {
+            "name": "TikTok Discover – Jewelry Trends for 2026",
+            "url": "https://www.tiktok.com/discover/jewelry-trends-for-2026"
+          }
+        ],
+        "missing": [
+          "earrings (oversized hoops)",
+          "palm-sized / oversized pendants",
+          "bold gold cuffs"
+        ],
+        "momentum": "rising",
+        "fit": "we sell it",
+        "productIds": [
+          "maximalist-layered-necklace-stack",
+          "curated-layered-necklace-stack",
+          "turquoise-zodiac-necklace-stack",
+          "double-shoulder-chest-chain",
+          "multi-strand-shoulder-chain",
+          "gold-hand-chain",
+          "layered-body-chain-double-choker"
+        ],
+        "idea": "Push the shoulder harnesses, chest chains and layered stacks as party-season statement pieces in styling content."
+      },
+      {
+        "name": "Colour: coloured gemstones, beads and dopamine pieces",
+        "what": "Vivid coloured stones, beads and chunky 'dopamine' jewellery gaining ground over all-metal looks.",
+        "searches": [
+          "colorful jewelry",
+          "colored gemstone necklace",
+          "chunky dopamine necklace",
+          "turquoise beaded necklace"
+        ],
+        "evidence": "Trendalytics reports sapphire jewelry up +184%, read as rising demand for colourful statement pieces. McCaskill & Company says fascination with coloured gemstones will be 'stronger than ever in 2026', naming deep sapphires, vivid emeralds and warm citrines in minimal settings. TikTok Discover's 2026 Jewelry Trends hub features Edmonds Jewellers predicting colourful jewellery goes viral in 2026 and whxte atelier saying colour is the biggest trend; the Fashion Trend Jewelry 2026 hub features 'chunky dopamine necklaces' and shell/stone amulets on cord.",
+        "sources": [
+          {
+            "name": "Trendalytics",
+            "url": "https://blog.trendalytics.co/trends/jewelry-market-forecast-2026"
+          },
+          {
+            "name": "McCaskill & Company",
+            "url": "https://mccaskillandcompany.com/pages/jewelry-trends-for-2026"
+          },
+          {
+            "name": "TikTok Discover – 2026 Jewelry Trends",
+            "url": "https://www.tiktok.com/discover/2026-jewelry-trends"
+          },
+          {
+            "name": "TikTok Discover – Fashion Trend Jewelry 2026",
+            "url": "https://www.tiktok.com/discover/fashion-trend-jewelry-2026"
+          }
+        ],
+        "missing": [
+          "chunky/oversized colour (enamel, resin, large beads)",
+          "coloured belly and body chains beyond metal, pearl and turquoise"
+        ],
+        "momentum": "rising",
+        "fit": "partial",
+        "productIds": [
+          "colorful-crystal-bead-choker",
+          "colorful-crystal-bead-bracelet",
+          "colorful-crystal-bead-anklet",
+          "turquoise-beaded-choker",
+          "turquoise-beaded-cable-chain-necklace",
+          "birthstone-ring",
+          "rhodochrosite-ring",
+          "gemstone-zodiac-anklet",
+          "birthstone-bracelet"
+        ],
+        "idea": "Lead winter colour content with birthstone and gemstone pieces, saving beaded beach colour for the spring push."
+      },
+      {
+        "name": "Personalisation, charms and meaning-driven symbols",
+        "what": "Initials, birthstones, zodiac and celestial symbols replacing uniform matched jewellery.",
+        "searches": [
+          "personalized jewelry gift",
+          "initial necklace",
+          "birthstone jewelry",
+          "charm jewelry",
+          "celestial jewelry"
+        ],
+        "evidence": "A Diamond Is Forever (~Sept 2026) states 'personalization is replacing uniformity', with charms, brooches and mixed-metal pairings letting wearers build layered, story-driven collections instead of matched sets. Gabriel & Co lists 'personalized jewelry and celestial motifs', saying meaning-driven jewellery takes on deeper emotional nuance in 2026. TikTok Discover's 2026 Jewelry Trends hub lists 'meaningful symbols' and 'statement clasps' alongside modular necklaces.",
+        "sources": [
+          {
+            "name": "A Diamond Is Forever",
+            "url": "https://adiamondisforever.com/style-culture/2026_diamond_jewelry_trends_forecast_insights_from_designers_industry_experts/"
+          },
+          {
+            "name": "Gabriel & Co",
+            "url": "https://www.gabrielny.com/blog/jewelry-trends-2026/"
+          },
+          {
+            "name": "TikTok Discover – 2026 Jewelry Trends",
+            "url": "https://www.tiktok.com/discover/2026-jewelry-trends"
+          }
+        ],
+        "missing": [
+          "buildable charm systems (sold-separately charms, charm bars, swappable clasps)",
+          "lockets",
+          "engraved / handwriting pieces"
+        ],
+        "momentum": "steady",
+        "fit": "we sell it",
+        "productIds": [
+          "monogram-letter-necklace",
+          "initial-letter-anklet",
+          "diamond-initial-anklet",
+          "paperclip-initial-necklace",
+          "initial-heart-pearl-choker",
+          "birthstone-bracelet",
+          "birth-flower-charm-necklace",
+          "personalized-birthstone-back-necklace",
+          "zodiac-charm-bracelet",
+          "evil-eye-ring"
+        ],
+        "idea": "Build gifting content around initial, birthstone and zodiac pieces through November and December."
+      },
+      {
+        "name": "Modern pearls (baroque, asymmetric, non-traditional)",
+        "what": "Pearls styled in organic, irregular and avant-garde ways rather than prim classic strands.",
+        "searches": [
+          "baroque pearl necklace",
+          "modern pearl jewelry",
+          "pearl jewelry not old fashioned"
+        ],
+        "evidence": "McCaskill & Company says pearls are back in the spotlight 'but not in the traditional sense', forecasting organic, baroque and asymmetrical pearls used in avant-garde ways. Gabriel & Co lists 'modern pearls' as a core 2026 trend, saying pearls are shedding their prim reputation. fitiny's TikTok round-up (~Aug 2026) names 'coquette pearl-heart combos' as one of four looks defining 2026, with dainty pearl drops and heart motifs.",
+        "sources": [
+          {
+            "name": "McCaskill & Company",
+            "url": "https://mccaskillandcompany.com/pages/jewelry-trends-for-2026"
+          },
+          {
+            "name": "Gabriel & Co",
+            "url": "https://www.gabrielny.com/blog/jewelry-trends-2026/"
+          },
+          {
+            "name": "fitiny",
+            "url": "https://fitiny.com/blogs/tiktok-trends/viral-tiktok-jewelry-looks"
+          }
+        ],
+        "missing": [
+          "baroque / irregular-shaped pearls"
+        ],
+        "momentum": "steady",
+        "fit": "we sell it",
+        "productIds": [
+          "pearl-body-harness",
+          "layered-pearl-choker",
+          "pearl-heart-toggle-necklace",
+          "pearl-belly-chain",
+          "pearl-hand-chain",
+          "bridal-pearl-back-necklace",
+          "pearl-heart-initial-bracelet"
+        ],
+        "idea": "Reframe our pearl body chains and harnesses as the unconventional, non-prim way to wear pearls this party and bridal season."
+      },
+      {
+        "name": "Sculptural, fluid forms and bold gold cuffs",
+        "what": "Organic curves, melting shapes and asymmetric silhouettes replacing angular lines, with chunky gold cuffs and statement rings leading.",
+        "searches": [
+          "sculptural gold necklace",
+          "chunky gold cuff bracelet",
+          "organic shape jewelry"
+        ],
+        "evidence": "Jewelers Mutual says angular lines are taking a back seat to organic forms in both fine and fashion jewellery, with fluid curves and asymmetrical silhouettes 'expected to see mainstream adoption in 2026', naming oval loops, melting shapes and winding gold bands. McCaskill & Company predicts architectural forms and fluid lines, specifically 'bold gold cuffs, oversized hoops, and statement rings'.",
+        "sources": [
+          {
+            "name": "Jewelers Mutual",
+            "url": "https://www.jewelersmutual.com/resources/individuals/trending/2026-trends"
+          },
+          {
+            "name": "McCaskill & Company",
+            "url": "https://mccaskillandcompany.com/pages/jewelry-trends-for-2026"
+          }
+        ],
+        "missing": [
+          "chunky gold cuff bracelet",
+          "sculptural collar / torque necklace",
+          "asymmetric organic-form pendant",
+          "wide bangle"
+        ],
+        "momentum": "rising",
+        "fit": "gap",
+        "productIds": [],
+        "idea": "Test a small sculptural capsule — a chunky gold cuff and an organic-form pendant — since the closest we have are mirror-link and coin-link pieces."
+      },
+      {
+        "name": "No piercing needed jewellery",
+        "what": "Low-commitment, high-impact jewellery formats that need no piercing, from magnetic studs to body chains.",
+        "searches": [
+          "no piercing jewelry",
+          "magnetic earrings no piercing",
+          "body jewelry without piercing"
+        ],
+        "evidence": "fitiny identifies magnetic non-piercing studs as the defining viral format of 2026, arguing the common thread across every viral aesthetic is 'low commitment, high visual impact', and reports #MenJewelry hit 4.2 billion views in Q1 2026 around a 'no piercing needed' single-stud format.",
+        "sources": [
+          {
+            "name": "fitiny",
+            "url": "https://fitiny.com/blogs/tiktok-trends/viral-tiktok-jewelry-looks"
+          }
+        ],
+        "missing": [
+          "magnetic studs",
+          "ear cuffs",
+          "clip-on earrings",
+          "faux nose / septum chains"
+        ],
+        "momentum": "rising",
+        "fit": "partial",
+        "productIds": [
+          "stainless-steel-belly-chain",
+          "waterproof-belly-chain",
+          "layered-hip-chain",
+          "silver-waterproof-belly-chain"
+        ],
+        "idea": "Claim the 'no piercing needed' language across our body chain range, which is already entirely piercing-free but never says so."
+      }
+    ],
+    "gaps": [],
+    "blogIdeas": [
+      {
+        "query": "jewellery trends 2027",
+        "why": "Trend-forecast content is searched Oct–Jan and the 2027 slot is open, writeable off Jewelers Mutual on fluid organic forms, McCaskill on sculptural gold and coloured gemstones, Trendalytics on maximalism (+414% hoops, +184% sapphire) and Gabriel & Co on modern pearls.",
+        "productIds": [
+          "maximalist-layered-necklace-stack",
+          "curated-layered-necklace-stack",
+          "pearl-body-harness",
+          "colorful-crystal-bead-choker"
+        ]
+      },
+      {
+        "query": "what jewellery to wear with a sequin dress",
+        "why": "Christmas-party dressing peaks mid-Nov to 31 Dec and Gabriel & Co's versatility framing — statement for evening, minimal for every day — matches the exact tension readers have with sequins.",
+        "productIds": [
+          "satellite-link-choker",
+          "minimalist-pearl-back-necklace",
+          "pearl-hand-chain",
+          "dainty-gold-body-chain"
+        ]
+      },
+      {
+        "query": "what jewellery to wear with a red dress",
+        "why": "The red dress is the Christmas/NYE/Valentine's workhorse, and the gold-metal recommendation ties to McCaskill's 'bold gold' and Gabriel & Co's mixed-metals framing.",
+        "productIds": [
+          "gold-waist-chain",
+          "curated-layered-necklace-stack",
+          "pearl-heart-toggle-necklace",
+          "gold-hand-chain"
+        ]
+      },
+      {
+        "query": "non piercing body jewelry",
+        "why": "fitiny's TikTok round-up argues 2026's viral jewellery is defined by low-commitment non-piercing formats, citing #MenJewelry at 4.2bn views in Q1 2026 — and we are a 100% no-piercing body jewellery brand that has never claimed the phrase.",
+        "productIds": [
+          "stainless-steel-belly-chain",
+          "waterproof-belly-chain",
+          "silver-waterproof-belly-chain",
+          "layered-hip-chain"
+        ]
+      },
+      {
+        "query": "christmas gift for daughter jewelry",
+        "why": "Daughter is the one high-volume gift recipient missing from our queue, and A Diamond Is Forever says personalisation is replacing uniformity while Gabriel & Co names personalised and celestial motifs as a core 2026 trend.",
+        "productIds": [
+          "monogram-letter-necklace",
+          "birthstone-bracelet",
+          "pearl-heart-initial-bracelet",
+          "butterfly-anklet"
+        ]
+      }
+    ]
+  },
+  {
     "date": "2026-10-08",
     "researchModel": "claude-sonnet-5",
     "trends": [

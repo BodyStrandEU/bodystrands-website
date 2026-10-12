@@ -5802,7 +5802,7 @@
       "Gold Tone"
     ],
     "images": [
-      "/images/products/67f27126-249b-44e1-8f62-40c47872c28a.png"
+      "/images/products/7751db85-c8a1-4c0e-9dc4-277bcca85a0f.png"
     ],
     "variantVideos": {
       "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/39c754d8a036a43ff224b833e06e3398/downloads/default.mp4",
@@ -5810,6 +5810,7 @@
     },
     "altText": "Gold tone stainless steel boho belly chain with waist chain design, perfect festival body jewelry",
     "gallery": [
+      "/images/products/7751db85-c8a1-4c0e-9dc4-277bcca85a0f.png",
       "/images/products/67f27126-249b-44e1-8f62-40c47872c28a.png",
       "/images/products/f7ce12d2-99cd-4f24-bfa0-c1ccdbf7b166.png",
       "https://i.etsystatic.com/55122258/r/il/851a84/7853391664/il_fullxfull.7853391664_dnbl.jpg",
@@ -5820,8 +5821,8 @@
       "https://i.etsystatic.com/55122258/r/il/e1759b/7853391796/il_fullxfull.7853391796_r7u2.jpg"
     ],
     "variantHeroes": {
-      "Silver Tone": "https://i.etsystatic.com/55122258/r/il/851a84/7853391664/il_fullxfull.7853391664_dnbl.jpg",
-      "Gold Tone": "https://i.etsystatic.com/55122258/r/il/aa65aa/7903997473/il_fullxfull.7903997473_eb23.jpg"
+      "Silver Tone": "/images/products/7751db85-c8a1-4c0e-9dc4-277bcca85a0f.png",
+      "Gold Tone": "/images/products/67f27126-249b-44e1-8f62-40c47872c28a.png"
     },
     "dateAdded": "2026-06-12T15:00:27-04:00"
   },

@@ -10929,17 +10929,16 @@
       }
     ],
     "featured": false,
-    "active": true,
+    "active": false,
     "images": [
       "https://i.etsystatic.com/55122258/r/il/e0607c/8094646617/il_fullxfull.8094646617_bgdy.jpg",
       "https://i.etsystatic.com/55122258/r/il/2017a9/7764225047/il_fullxfull.7764225047_acqq.jpg",
-      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp",
       "https://i.etsystatic.com/55122258/r/il/f31f71/7716319856/il_fullxfull.7716319856_7zke.jpg",
       "https://i.etsystatic.com/55122258/r/il/773296/7764224949/il_fullxfull.7764224949_pkt0.jpg",
       "https://i.etsystatic.com/55122258/r/il/5799b2/7764252877/il_fullxfull.7764252877_1yj5.jpg",
       "https://i.etsystatic.com/55122258/r/il/efeaca/7764225059/il_fullxfull.7764225059_4pgs.jpg",
       "https://i.etsystatic.com/55122258/r/il/f70917/7764224955/il_fullxfull.7764224955_spcc.jpg",
-      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.webp"
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp"
     ],
     "variantGroups": [
       {
@@ -10970,7 +10969,7 @@
     ],
     "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/d8995bb3c3eb33065f2c1683bf7c75c8/downloads/default.mp4",
     "altText": "Gold-tone zodiac belly chain in stainless steel, waterproof snake chain waist jewelry for layering",
-    "sizeGuideImage": "/images/products/il_fullxfull.8090630842_9i25.webp",
+    "sizeGuideImage": "/images/products/da3d343f-4647-4ca2-94cb-6da42e47942b.png",
     "dateAdded": "2026-06-12T15:00:27-04:00",
     "giftTags": [
       "personalized"

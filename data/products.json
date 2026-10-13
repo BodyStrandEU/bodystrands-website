@@ -3798,7 +3798,7 @@
       "Silver Tone"
     ],
     "images": [
-      "https://i.etsystatic.com/55122258/r/il/20c08f/7724989232/il_fullxfull.7724989232_gbuw.jpg"
+      "/images/products/1832b591-8700-4761-9fb0-489f74c17e46.jpeg"
     ],
     "variantGroups": [
       {
@@ -3834,21 +3834,21 @@
     },
     "altText": "Delicate gold tone stainless steel waist chain for festival body jewelry and summer wear",
     "gallery": [
-      "https://i.etsystatic.com/55122258/r/il/20c08f/7724989232/il_fullxfull.7724989232_gbuw.jpg",
+      "/images/products/1832b591-8700-4761-9fb0-489f74c17e46.jpeg",
       "https://i.etsystatic.com/55122258/r/il/55bf9c/7771023569/il_fullxfull.7771023569_8chg.jpg",
       "https://i.etsystatic.com/55122258/r/il/feb1ee/7774355159/il_fullxfull.7774355159_31bs.jpg",
-      "https://i.etsystatic.com/55122258/r/il/fe8a39/7803914369/il_fullxfull.7803914369_86nj.jpg",
-      "https://i.etsystatic.com/55122258/r/il/006166/7726395674/il_fullxfull.7726395674_h76x.jpg",
+      "https://i.etsystatic.com/55122258/r/il/20c08f/7724989232/il_fullxfull.7724989232_gbuw.jpg",
       "https://i.etsystatic.com/55122258/r/il/06a110/7774319057/il_fullxfull.7774319057_iyz9.jpg",
-      "https://i.etsystatic.com/55122258/r/il/7dd6ef/7860380609/il_fullxfull.7860380609_8s0y.jpg",
-      "https://i.etsystatic.com/55122258/r/il/e1aff9/7803813443/il_fullxfull.7803813443_6lce.jpg",
+      "https://i.etsystatic.com/55122258/r/il/006166/7726395674/il_fullxfull.7726395674_h76x.jpg",
+      "https://i.etsystatic.com/55122258/r/il/fe8a39/7803914369/il_fullxfull.7803914369_86nj.jpg",
       "https://i.etsystatic.com/55122258/r/il/e59ec8/7724895588/il_fullxfull.7724895588_8cdu.jpg"
     ],
     "variantHeroes": {
       "Gold Tone": "https://i.etsystatic.com/55122258/r/il/20c08f/7724989232/il_fullxfull.7724989232_gbuw.jpg",
-      "Silver Tone": "https://i.etsystatic.com/55122258/r/il/01c9f9/7774341189/il_fullxfull.7774341189_fuuz.jpg"
+      "Silver Tone": "/images/products/1832b591-8700-4761-9fb0-489f74c17e46.jpeg"
     },
-    "dateAdded": "2026-06-12T15:00:27-04:00"
+    "dateAdded": "2026-06-12T15:00:27-04:00",
+    "sizeGuideImage": "/images/products/2bd7ffaf-d01b-4d4c-85d8-3ae0df6267e1.png"
   },
   {
     "id": "coin-link-chain-belt",

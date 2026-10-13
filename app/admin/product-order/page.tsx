@@ -21,7 +21,17 @@ import {
   arrayMove,
 } from "@dnd-kit/sortable";
 import { CSS } from "@dnd-kit/utilities";
-import type { Category, Product } from "@/lib/products";
+import type { Category, GiftTag, Product } from "@/lib/products";
+
+// Scopes a category order can be saved for — "global" is the main shop/nav/footer
+// order (data/category-order.json); the rest are per-collection-page overrides
+// (data/collection-category-order.json), keyed by the same string the pages pass
+// to getPageCategoryOrder().
+const ORDER_SCOPES: { key: string; label: string; giftTag?: GiftTag }[] = [
+  { key: "global", label: "Global (Shop, Nav, Footer)" },
+  { key: "bridal", label: "Bridal Page", giftTag: "bridal" },
+  { key: "personalized", label: "Personalized Page", giftTag: "personalized" },
+];
 
 // ─── Category row (top section — reorders the categories themselves) ─────────
 
@@ -126,11 +136,14 @@ export default function ProductOrderPage() {
   const [error, setError] = useState("");
 
   // Category order (top section)
-  const [categoryOrder, setCategoryOrder] = useState<string[]>([]);
+  const [scope, setScope] = useState(ORDER_SCOPES[0].key);
+  const [globalOrder, setGlobalOrder] = useState<string[]>([]);
+  const [collectionOverrides, setCollectionOverrides] = useState<Record<string, string[]>>({});
+  const [workingCategoryOrder, setWorkingCategoryOrder] = useState<string[]>([]);
   const [categorySaving, setCategorySaving] = useState(false);
   const [categorySaved, setCategorySaved] = useState(true);
 
-  // Product order within a category (bottom section)
+  // Product order within a category (bottom section) — always global, regardless of scope above
   const [category, setCategory] = useState<Category | "">("");
   const [orderedIds, setOrderedIds] = useState<string[]>([]);
   const [productSaving, setProductSaving] = useState(false);
@@ -150,17 +163,53 @@ export default function ProductOrderPage() {
         }
         return r.json() as Promise<string[]>;
       }),
+      fetch("/api/admin/collection-category-order").then((r) => (r.ok ? (r.json() as Promise<Record<string, string[]>>) : {})),
       fetch("/api/admin/products").then((r) => (r.ok ? (r.json() as Promise<Product[]>) : [])),
     ])
-      .then(([orderData, products]) => {
+      .then(([orderData, overridesData, products]) => {
         if (!orderData) return;
-        setCategoryOrder(orderData);
+        setGlobalOrder(orderData);
+        setCollectionOverrides(overridesData);
         setAllProducts(products);
         setCategory((orderData[0] as Category) ?? "");
       })
       .catch(() => setError("Failed to load"))
       .finally(() => setLoading(false));
   }, [router]);
+
+  const activeScope = ORDER_SCOPES.find((s) => s.key === scope) ?? ORDER_SCOPES[0];
+
+  // Categories actually present for this scope (all of them for "global"; only the
+  // ones with at least one active product carrying the scope's gift tag otherwise),
+  // ordered by the saved override (filtered to what's present) then anything left
+  // over in global order.
+  const scopeCounts: Record<string, number> = {};
+  for (const p of allProducts) {
+    if (p.active === false) continue;
+    if (activeScope.giftTag && !p.giftTags?.includes(activeScope.giftTag)) continue;
+    scopeCounts[p.category] = (scopeCounts[p.category] ?? 0) + 1;
+  }
+  const presentCategories = activeScope.giftTag
+    ? globalOrder.filter((c) => (scopeCounts[c] ?? 0) > 0)
+    : globalOrder;
+
+  // Recompute the working category order whenever the scope (or underlying data) changes
+  useEffect(() => {
+    if (globalOrder.length === 0) return;
+    if (!activeScope.giftTag) {
+      setWorkingCategoryOrder(globalOrder);
+    } else {
+      const override = collectionOverrides[activeScope.key] ?? [];
+      const present = new Set(presentCategories);
+      const ordered = [
+        ...override.filter((c) => present.has(c)),
+        ...globalOrder.filter((c) => present.has(c) && !override.includes(c)),
+      ];
+      setWorkingCategoryOrder(ordered);
+    }
+    setCategorySaved(true);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [scope, globalOrder, collectionOverrides, allProducts]);
 
   // Reset the working product order whenever the selected category (or fresh data) changes
   useEffect(() => {
@@ -173,16 +222,16 @@ export default function ProductOrderPage() {
   }, [category, allProducts]);
 
   const byId = new Map(allProducts.map((p) => [p.id, p]));
-  const counts: Record<string, number> = {};
+  const globalCounts: Record<string, number> = {};
   for (const p of allProducts) {
     if (p.active === false) continue;
-    counts[p.category] = (counts[p.category] ?? 0) + 1;
+    globalCounts[p.category] = (globalCounts[p.category] ?? 0) + 1;
   }
 
   function handleCategoryDragEnd(e: DragEndEvent) {
     const { active, over } = e;
     if (!over || active.id === over.id) return;
-    setCategoryOrder((prev) => {
+    setWorkingCategoryOrder((prev) => {
       const oldIndex = prev.indexOf(String(active.id));
       const newIndex = prev.indexOf(String(over.id));
       return arrayMove(prev, oldIndex, newIndex);
@@ -193,15 +242,31 @@ export default function ProductOrderPage() {
   async function saveCategoryOrder() {
     setCategorySaving(true);
     try {
-      const res = await fetch("/api/admin/category-order", {
-        method: "PUT",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(categoryOrder),
-      });
-      if (res.ok) {
-        setCategorySaved(true);
+      if (!activeScope.giftTag) {
+        const res = await fetch("/api/admin/category-order", {
+          method: "PUT",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(workingCategoryOrder),
+        });
+        if (res.ok) {
+          setGlobalOrder(workingCategoryOrder);
+          setCategorySaved(true);
+        } else {
+          setError("Category order save failed");
+        }
       } else {
-        setError("Category order save failed");
+        const nextOverrides = { ...collectionOverrides, [activeScope.key]: workingCategoryOrder };
+        const res = await fetch("/api/admin/collection-category-order", {
+          method: "PUT",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(nextOverrides),
+        });
+        if (res.ok) {
+          setCollectionOverrides(nextOverrides);
+          setCategorySaved(true);
+        } else {
+          setError("Category order save failed");
+        }
       }
     } finally {
       setCategorySaving(false);
@@ -291,14 +356,15 @@ export default function ProductOrderPage() {
 
         {/* Category order */}
         <section style={{ marginBottom: "3rem" }}>
-          <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", marginBottom: "0.75rem", gap: "1rem" }}>
+          <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", marginBottom: "1rem", gap: "1rem", flexWrap: "wrap" }}>
             <div>
               <h2 style={{ fontSize: "0.95rem", fontWeight: 600, color: "var(--admin-text)", margin: 0 }}>
                 Category Order
               </h2>
-              <p style={{ fontSize: "0.72rem", color: "var(--admin-muted)", margin: "0.3rem 0 0" }}>
-                Drag to reorder. Controls the shop page, nav, footer — and the section order on
-                every collection page (bridal, personalized, gifts, etc).
+              <p style={{ fontSize: "0.72rem", color: "var(--admin-muted)", margin: "0.3rem 0 0", maxWidth: 460 }}>
+                {activeScope.giftTag
+                  ? `Drag to reorder just the category sections on the ${activeScope.label}. Falls back to the global order for any category not reordered here.`
+                  : "Drag to reorder. Controls the shop page, nav and footer — and is the fallback order for every collection page below."}
               </p>
             </div>
             <button
@@ -321,14 +387,40 @@ export default function ProductOrderPage() {
             </button>
           </div>
 
+          {/* Scope tabs */}
+          <div style={{ display: "flex", gap: "0.4rem", marginBottom: "1rem", flexWrap: "wrap" }}>
+            {ORDER_SCOPES.map((s) => (
+              <button
+                key={s.key}
+                onClick={() => setScope(s.key)}
+                style={{
+                  padding: "0.4rem 0.85rem",
+                  borderRadius: 999,
+                  border: `1px solid ${scope === s.key ? "#A0622A" : "var(--admin-border2)"}`,
+                  background: scope === s.key ? "#A0622A" : "var(--admin-surface)",
+                  color: scope === s.key ? "#fff" : "var(--admin-text2)",
+                  fontSize: "0.72rem",
+                  fontWeight: 600,
+                  cursor: "pointer",
+                }}
+              >
+                {s.label}
+              </button>
+            ))}
+          </div>
+
           <div style={{ maxWidth: 560 }}>
-            <DndContext sensors={sensors} collisionDetection={closestCenter} onDragEnd={handleCategoryDragEnd}>
-              <SortableContext items={categoryOrder} strategy={verticalListSortingStrategy}>
-                {categoryOrder.map((c) => (
-                  <SortableCategoryRow key={c} category={c} count={counts[c] ?? 0} />
-                ))}
-              </SortableContext>
-            </DndContext>
+            {activeScope.giftTag && presentCategories.length === 0 ? (
+              <p style={{ fontSize: "0.8rem", color: "var(--admin-muted)" }}>No active products tagged for this page yet.</p>
+            ) : (
+              <DndContext sensors={sensors} collisionDetection={closestCenter} onDragEnd={handleCategoryDragEnd}>
+                <SortableContext items={workingCategoryOrder} strategy={verticalListSortingStrategy}>
+                  {workingCategoryOrder.map((c) => (
+                    <SortableCategoryRow key={c} category={c} count={activeScope.giftTag ? (scopeCounts[c] ?? 0) : (globalCounts[c] ?? 0)} />
+                  ))}
+                </SortableContext>
+              </DndContext>
+            )}
           </div>
         </section>
 
@@ -360,7 +452,8 @@ export default function ProductOrderPage() {
           </div>
           <p style={{ fontSize: "0.72rem", color: "var(--admin-muted)", margin: "0 0 1.25rem" }}>
             Drag to reorder within a category. This order is used everywhere that category's
-            products are listed, including inside bridal, personalized and other collection pages.
+            products are listed, including inside bridal, personalized and other collection pages —
+            product order isn&apos;t scoped per page, only the category sections above are.
           </p>
 
           <select
@@ -376,7 +469,7 @@ export default function ProductOrderPage() {
               marginBottom: "1.5rem",
             }}
           >
-            {categoryOrder.map((c) => (
+            {globalOrder.map((c) => (
               <option key={c} value={c}>
                 {c}
               </option>

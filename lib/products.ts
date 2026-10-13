@@ -1,5 +1,6 @@
 import productsData from "@/data/products.json";
 import categoryOrderData from "@/data/category-order.json";
+import collectionCategoryOrderData from "@/data/collection-category-order.json";
 
 export const CATEGORIES = [
   "Anklets",
@@ -115,6 +116,20 @@ export const CATEGORY_ORDER: Category[] = [
 const CATEGORY_RANK = new Map(CATEGORY_ORDER.map((c, i) => [c, i]));
 export function byCategoryOrder(a: Category, b: Category): number {
   return (CATEGORY_RANK.get(a) ?? 0) - (CATEGORY_RANK.get(b) ?? 0);
+}
+
+// Per-collection-page category order (drag-and-drop at /admin/product-order,
+// scoped to a page) — lets /bridal, /personalized etc. show their category
+// sections in a different order than the main shop/nav/footer. A page with no
+// saved override, or any category it doesn't mention, falls back to the
+// global CATEGORY_ORDER position.
+export function getPageCategoryOrder(pageKey: string): Category[] {
+  const override = (collectionCategoryOrderData as Record<string, string[]>)[pageKey];
+  if (!override || override.length === 0) return CATEGORY_ORDER;
+  return [
+    ...override,
+    ...CATEGORY_ORDER.filter((c) => !override.includes(c)),
+  ] as Category[];
 }
 
 // Derived automatically — used by Navbar, homepage tiles, and shop filter.

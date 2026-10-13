@@ -3,7 +3,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import ProductCard from "@/components/ProductCard";
 import GiftCategoryDropdown from "@/components/GiftCategoryDropdown";
-import { products, CATEGORIES, isValidCategory } from "@/lib/products";
+import { products, CATEGORY_ORDER, isValidCategory } from "@/lib/products";
 import blogPosts from "@/data/blog-posts.json";
 import BuyingGuide from "@/components/BuyingGuide";
 import { GIFTS_CONTENT } from "@/lib/gift-content";
@@ -42,9 +42,9 @@ export default async function GiftsPage({
     .filter((p) => p.price > UNDER_25_MAX && p.price <= UNDER_40_MAX)
     .sort((a, b) => a.price - b.price);
 
-  const under40Categories = CATEGORIES.filter((cat) => under40.some((p) => p.category === cat));
+  const under40Categories = CATEGORY_ORDER.filter((cat) => under40.some((p) => p.category === cat));
 
-  const under40ByCategory = (activeCategory === "all" ? CATEGORIES : [activeCategory])
+  const under40ByCategory = (activeCategory === "all" ? CATEGORY_ORDER : [activeCategory])
     .map((cat) => ({
       category: cat,
       items: under40.filter((p) => p.category === cat),

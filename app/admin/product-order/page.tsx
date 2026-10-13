@@ -16,11 +16,47 @@ import {
   SortableContext,
   sortableKeyboardCoordinates,
   rectSortingStrategy,
+  verticalListSortingStrategy,
   useSortable,
   arrayMove,
 } from "@dnd-kit/sortable";
 import { CSS } from "@dnd-kit/utilities";
-import { CATEGORIES, type Category, type Product } from "@/lib/products";
+import type { Category, Product } from "@/lib/products";
+
+// ─── Category row (top section — reorders the categories themselves) ─────────
+
+function SortableCategoryRow({ category, count }: { category: string; count: number }) {
+  const { attributes, listeners, setNodeRef, transform, transition, isDragging } =
+    useSortable({ id: category });
+
+  const style: React.CSSProperties = {
+    transform: CSS.Transform.toString(transform),
+    transition,
+    opacity: isDragging ? 0.5 : 1,
+    cursor: "grab",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "space-between",
+    padding: "0.6rem 0.9rem",
+    border: "1px solid var(--admin-border)",
+    borderRadius: 6,
+    background: "var(--admin-surface)",
+    marginBottom: "0.4rem",
+  };
+
+  return (
+    <div ref={setNodeRef} style={style} {...attributes} {...listeners}>
+      <span style={{ fontSize: "0.8rem", fontWeight: 600, color: "var(--admin-text)" }}>
+        ⠿ {category}
+      </span>
+      <span style={{ fontSize: "0.68rem", color: "var(--admin-muted)" }}>
+        {count} {count === 1 ? "piece" : "pieces"}
+      </span>
+    </div>
+  );
+}
+
+// ─── Product card (bottom section — reorders products within one category) ──
 
 function SortableProductCard({ product }: { product: Product }) {
   const { attributes, listeners, setNodeRef, transform, transition, isDragging } =
@@ -84,13 +120,21 @@ function SortableProductCard({ product }: { product: Product }) {
 
 export default function ProductOrderPage() {
   const router = useRouter();
+
   const [allProducts, setAllProducts] = useState<Product[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
-  const [category, setCategory] = useState<Category>([...CATEGORIES].sort()[0]);
+
+  // Category order (top section)
+  const [categoryOrder, setCategoryOrder] = useState<string[]>([]);
+  const [categorySaving, setCategorySaving] = useState(false);
+  const [categorySaved, setCategorySaved] = useState(true);
+
+  // Product order within a category (bottom section)
+  const [category, setCategory] = useState<Category | "">("");
   const [orderedIds, setOrderedIds] = useState<string[]>([]);
-  const [saving, setSaving] = useState(false);
-  const [saved, setSaved] = useState(true);
+  const [productSaving, setProductSaving] = useState(false);
+  const [productSaved, setProductSaved] = useState(true);
 
   const sensors = useSensors(
     useSensor(PointerSensor, { activationConstraint: { distance: 5 } }),
@@ -98,33 +142,73 @@ export default function ProductOrderPage() {
   );
 
   useEffect(() => {
-    fetch("/api/admin/products")
-      .then((r) => {
+    Promise.all([
+      fetch("/api/admin/category-order").then((r) => {
         if (r.status === 401) {
           router.push("/admin/login");
           return null;
         }
-        return r.json() as Promise<Product[]>;
+        return r.json() as Promise<string[]>;
+      }),
+      fetch("/api/admin/products").then((r) => (r.ok ? (r.json() as Promise<Product[]>) : [])),
+    ])
+      .then(([orderData, products]) => {
+        if (!orderData) return;
+        setCategoryOrder(orderData);
+        setAllProducts(products);
+        setCategory((orderData[0] as Category) ?? "");
       })
-      .then((data) => {
-        if (data) setAllProducts(data);
-      })
-      .catch(() => setError("Failed to load products"))
+      .catch(() => setError("Failed to load"))
       .finally(() => setLoading(false));
   }, [router]);
 
-  // Reset the working order whenever the selected category (or fresh data) changes
+  // Reset the working product order whenever the selected category (or fresh data) changes
   useEffect(() => {
+    if (!category) return;
     const ids = allProducts
       .filter((p) => p.category === category && p.active !== false)
       .map((p) => p.id);
     setOrderedIds(ids);
-    setSaved(true);
+    setProductSaved(true);
   }, [category, allProducts]);
 
   const byId = new Map(allProducts.map((p) => [p.id, p]));
+  const counts: Record<string, number> = {};
+  for (const p of allProducts) {
+    if (p.active === false) continue;
+    counts[p.category] = (counts[p.category] ?? 0) + 1;
+  }
 
-  function handleDragEnd(e: DragEndEvent) {
+  function handleCategoryDragEnd(e: DragEndEvent) {
+    const { active, over } = e;
+    if (!over || active.id === over.id) return;
+    setCategoryOrder((prev) => {
+      const oldIndex = prev.indexOf(String(active.id));
+      const newIndex = prev.indexOf(String(over.id));
+      return arrayMove(prev, oldIndex, newIndex);
+    });
+    setCategorySaved(false);
+  }
+
+  async function saveCategoryOrder() {
+    setCategorySaving(true);
+    try {
+      const res = await fetch("/api/admin/category-order", {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(categoryOrder),
+      });
+      if (res.ok) {
+        setCategorySaved(true);
+      } else {
+        setError("Category order save failed");
+      }
+    } finally {
+      setCategorySaving(false);
+    }
+  }
+
+  function handleProductDragEnd(e: DragEndEvent) {
     const { active, over } = e;
     if (!over || active.id === over.id) return;
     setOrderedIds((prev) => {
@@ -132,11 +216,11 @@ export default function ProductOrderPage() {
       const newIndex = prev.indexOf(String(over.id));
       return arrayMove(prev, oldIndex, newIndex);
     });
-    setSaved(false);
+    setProductSaved(false);
   }
 
-  async function save() {
-    setSaving(true);
+  async function saveProductOrder() {
+    setProductSaving(true);
     try {
       // Splice the reordered items back into their original array slots so every
       // other category's relative order is left completely untouched.
@@ -156,12 +240,12 @@ export default function ProductOrderPage() {
       });
       if (res.ok) {
         setAllProducts(next);
-        setSaved(true);
+        setProductSaved(true);
       } else {
-        setError("Save failed");
+        setError("Product order save failed");
       }
     } finally {
-      setSaving(false);
+      setProductSaving(false);
     }
   }
 
@@ -183,7 +267,7 @@ export default function ProductOrderPage() {
       >
         <div>
           <h1 style={{ fontSize: "1.1rem", fontWeight: 600, color: "var(--admin-text)", margin: 0 }}>
-            Product Order
+            Category &amp; Product Order
           </h1>
           <p
             style={{
@@ -194,7 +278,7 @@ export default function ProductOrderPage() {
               textTransform: "uppercase",
             }}
           >
-            Drag to reorder within a category, save — live in ~1 minute
+            One place for all ordering — live in ~1 minute
           </p>
         </div>
         <Link href="/admin/dashboard" style={{ fontSize: "0.75rem", color: "var(--admin-muted)", textDecoration: "none" }}>
@@ -203,18 +287,82 @@ export default function ProductOrderPage() {
       </div>
 
       <div style={{ maxWidth: 1100, margin: "0 auto", padding: "2rem" }}>
-        {error && <p style={{ color: "#c0392b", fontSize: "0.8rem", marginBottom: "1rem" }}>{error}</p>}
+        {error && <p style={{ color: "#c0392b", fontSize: "0.8rem", marginBottom: "1.5rem" }}>{error}</p>}
 
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "space-between",
-            marginBottom: "1.5rem",
-            flexWrap: "wrap",
-            gap: "1rem",
-          }}
-        >
+        {/* Category order */}
+        <section style={{ marginBottom: "3rem" }}>
+          <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", marginBottom: "0.75rem", gap: "1rem" }}>
+            <div>
+              <h2 style={{ fontSize: "0.95rem", fontWeight: 600, color: "var(--admin-text)", margin: 0 }}>
+                Category Order
+              </h2>
+              <p style={{ fontSize: "0.72rem", color: "var(--admin-muted)", margin: "0.3rem 0 0" }}>
+                Drag to reorder. Controls the shop page, nav, footer — and the section order on
+                every collection page (bridal, personalized, gifts, etc).
+              </p>
+            </div>
+            <button
+              onClick={saveCategoryOrder}
+              disabled={categorySaving || categorySaved}
+              style={{
+                flexShrink: 0,
+                padding: "0.55rem 1.4rem",
+                borderRadius: 4,
+                border: "none",
+                fontSize: "0.75rem",
+                fontWeight: 600,
+                letterSpacing: "0.05em",
+                cursor: categorySaving || categorySaved ? "default" : "pointer",
+                background: categorySaved ? "var(--admin-surface2)" : "#A0622A",
+                color: categorySaved ? "var(--admin-muted)" : "#fff",
+              }}
+            >
+              {categorySaving ? "Saving…" : categorySaved ? "Saved ✓" : "Save Order"}
+            </button>
+          </div>
+
+          <div style={{ maxWidth: 560 }}>
+            <DndContext sensors={sensors} collisionDetection={closestCenter} onDragEnd={handleCategoryDragEnd}>
+              <SortableContext items={categoryOrder} strategy={verticalListSortingStrategy}>
+                {categoryOrder.map((c) => (
+                  <SortableCategoryRow key={c} category={c} count={counts[c] ?? 0} />
+                ))}
+              </SortableContext>
+            </DndContext>
+          </div>
+        </section>
+
+        <div style={{ height: 1, background: "var(--admin-border)", marginBottom: "2.5rem" }} />
+
+        {/* Product order within a category */}
+        <section>
+          <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: "0.5rem", flexWrap: "wrap", gap: "1rem" }}>
+            <h2 style={{ fontSize: "0.95rem", fontWeight: 600, color: "var(--admin-text)", margin: 0 }}>
+              Product Order
+            </h2>
+            <button
+              onClick={saveProductOrder}
+              disabled={productSaving || productSaved}
+              style={{
+                padding: "0.55rem 1.4rem",
+                borderRadius: 4,
+                border: "none",
+                fontSize: "0.75rem",
+                fontWeight: 600,
+                letterSpacing: "0.05em",
+                cursor: productSaving || productSaved ? "default" : "pointer",
+                background: productSaved ? "var(--admin-surface2)" : "#A0622A",
+                color: productSaved ? "var(--admin-muted)" : "#fff",
+              }}
+            >
+              {productSaving ? "Saving…" : productSaved ? "Saved ✓" : "Save Order"}
+            </button>
+          </div>
+          <p style={{ fontSize: "0.72rem", color: "var(--admin-muted)", margin: "0 0 1.25rem" }}>
+            Drag to reorder within a category. This order is used everywhere that category's
+            products are listed, including inside bridal, personalized and other collection pages.
+          </p>
+
           <select
             value={category}
             onChange={(e) => setCategory(e.target.value as Category)}
@@ -225,49 +373,32 @@ export default function ProductOrderPage() {
               background: "var(--admin-surface)",
               color: "var(--admin-text)",
               fontSize: "0.8rem",
+              marginBottom: "1.5rem",
             }}
           >
-            {[...CATEGORIES].sort().map((c) => (
+            {categoryOrder.map((c) => (
               <option key={c} value={c}>
                 {c}
               </option>
             ))}
           </select>
 
-          <button
-            onClick={save}
-            disabled={saving || saved}
-            style={{
-              padding: "0.55rem 1.4rem",
-              borderRadius: 4,
-              border: "none",
-              fontSize: "0.75rem",
-              fontWeight: 600,
-              letterSpacing: "0.05em",
-              cursor: saving || saved ? "default" : "pointer",
-              background: saved ? "var(--admin-surface2)" : "#A0622A",
-              color: saved ? "var(--admin-muted)" : "#fff",
-            }}
-          >
-            {saving ? "Saving…" : saved ? "Saved ✓" : "Save Order"}
-          </button>
-        </div>
-
-        {orderedIds.length === 0 ? (
-          <p style={{ fontSize: "0.8rem", color: "var(--admin-muted)" }}>No active products in this category.</p>
-        ) : (
-          <DndContext sensors={sensors} collisionDetection={closestCenter} onDragEnd={handleDragEnd}>
-            <SortableContext items={orderedIds} strategy={rectSortingStrategy}>
-              <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(150px, 1fr))", gap: "0.9rem" }}>
-                {orderedIds.map((id) => {
-                  const product = byId.get(id);
-                  if (!product) return null;
-                  return <SortableProductCard key={id} product={product} />;
-                })}
-              </div>
-            </SortableContext>
-          </DndContext>
-        )}
+          {orderedIds.length === 0 ? (
+            <p style={{ fontSize: "0.8rem", color: "var(--admin-muted)" }}>No active products in this category.</p>
+          ) : (
+            <DndContext sensors={sensors} collisionDetection={closestCenter} onDragEnd={handleProductDragEnd}>
+              <SortableContext items={orderedIds} strategy={rectSortingStrategy}>
+                <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(150px, 1fr))", gap: "0.9rem" }}>
+                  {orderedIds.map((id) => {
+                    const product = byId.get(id);
+                    if (!product) return null;
+                    return <SortableProductCard key={id} product={product} />;
+                  })}
+                </div>
+              </SortableContext>
+            </DndContext>
+          )}
+        </section>
       </div>
     </div>
   );

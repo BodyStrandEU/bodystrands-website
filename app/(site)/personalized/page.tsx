@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import ProductCard from "@/components/ProductCard";
 import BuyingGuide from "@/components/BuyingGuide";
-import { products, CATEGORIES } from "@/lib/products";
+import { products, CATEGORY_ORDER } from "@/lib/products";
 import { PERSONALIZED_CONTENT } from "@/lib/gift-content";
 
 export const metadata: Metadata = {
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 export default async function PersonalizedPage() {
   const items = products.filter((p) => p.active !== false && p.giftTags?.includes("personalized"));
-  const byCategory = CATEGORIES
+  const byCategory = CATEGORY_ORDER
     .map((category) => ({ category, items: items.filter((p) => p.category === category) }))
     .filter((section) => section.items.length > 0);
 

@@ -1091,7 +1091,7 @@
       "Silver Tone"
     ],
     "images": [
-      "/images/products/396178f7-0588-4892-8644-1903a7476417.webp"
+      "/images/products/3ed73cdb-bdf4-4bbb-b4d4-0cd6185d989d.png"
     ],
     "variantGroups": [
       {
@@ -1109,17 +1109,18 @@
     },
     "altText": "Delicate gold-tone stainless steel layered body chain for festival wear and everyday styling",
     "gallery": [
-      "/images/products/396178f7-0588-4892-8644-1903a7476417.webp",
+      "/images/products/3ed73cdb-bdf4-4bbb-b4d4-0cd6185d989d.png",
       "/images/products/5b0f6af8-b435-4c23-8aeb-ce94beb916f5.webp",
       "/images/products/0acaad30-e8d3-4335-8ac0-565cdac6331e.webp",
       "/images/products/05e945bf-3596-4f59-a13a-a56602881897.webp",
       "/images/products/IMG_1346.webp"
     ],
     "variantHeroes": {
-      "Gold Tone": "/images/products/396178f7-0588-4892-8644-1903a7476417.webp",
-      "Silver Tone": "/images/products/b6afbc6f-4d0b-40be-9da3-a3ac389540ae.webp"
+      "Gold Tone": "/images/products/3ed73cdb-bdf4-4bbb-b4d4-0cd6185d989d.png",
+      "Silver Tone": "/images/products/05e945bf-3596-4f59-a13a-a56602881897.webp"
     },
-    "dateAdded": "2026-06-12T15:00:27-04:00"
+    "dateAdded": "2026-06-12T15:00:27-04:00",
+    "sizeGuideImage": "/images/products/d75a26d3-2060-44af-befb-398ba171ed16.png"
   },
   {
     "id": "layered-pearl-bracelet",

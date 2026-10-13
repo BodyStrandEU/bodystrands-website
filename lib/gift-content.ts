@@ -67,12 +67,12 @@ export const PERSONALIZED_CONTENT: CategoryContent = {
 
 export const BRIDAL_CONTENT: CategoryContent = {
   intro:
-    "Bridal jewelry for backless wedding dresses: back necklaces, head chains and shoulder chains in pearl and gold or silver-tone stainless steel, from €24 to €50.",
+    "Bridal jewelry for your wedding day: back necklaces for open-back gowns, hair vines and head chains for your bridal hairstyle, and shoulder chains for off-shoulder dresses — in pearl and gold or silver-tone stainless steel, from €24 to €50.",
   guide: [
     { type: "heading", text: "Back necklaces for backless gowns" },
     { type: "paragraph", text: "Our biggest bridal category — the " + link("pearl-wedding-back-necklace", "Pearl Wedding Back Necklace") + ", " + link("pearl-evening-backdrop-necklace", "Pearl Evening Backdrop Necklace") + ", " + link("minimalist-pearl-back-necklace", "Minimalist Pearl Back Necklace") + ", " + link("bridal-pearl-back-necklace", "Bridal Pearl Back Necklace") + ", " + link("pearl-bridal-back-chain", "Pearl Bridal Back Chain") + ", " + link("bridal-open-back-necklace", "Bridal Open-Back Necklace") + ", " + link("boho-back-chain", "Boho Back Chain") + " and " + link("pearl-backdrop-necklace", "Pearl Backdrop Necklace") + " all drape down the spine, designed to sit in the open back of a wedding gown." },
-    { type: "heading", text: "Head chains and hair vines" },
-    { type: "paragraph", text: "The " + link("bridal-forehead-chain", "Bridal Forehead Chain") + ", " + link("pearl-bridal-head-chain", "Pearl Bridal Head Chain") + " and " + link("bridal-hair-vine-chain", "Bridal Hair Vine Chain") + " work with an up-do or loose bridal hair, worn alone or layered with a veil." },
+    { type: "heading", text: "Hair vines and head chains" },
+    { type: "paragraph", text: "The " + link("bridal-forehead-chain", "Bridal Forehead Chain") + ", " + link("pearl-bridal-head-chain", "Pearl Bridal Head Chain") + " and " + link("bridal-hair-vine-chain", "Bridal Hair Vine Chain") + " are about your hairstyle, not your dress — they work with an up-do or loose bridal hair, worn alone or layered with a veil, with any neckline or back." },
     { type: "heading", text: "Shoulder chains" },
     { type: "paragraph", text: "The " + link("bridal-shoulder-chain", "Bridal Shoulder Chain") + " and " + link("bridal-shoulder-necklace", "Bridal Shoulder Necklace") + " drape over one or both shoulders — made for off-shoulder and strapless gowns." },
     { type: "heading", text: "Fit for your dress" },

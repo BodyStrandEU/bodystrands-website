@@ -2262,7 +2262,7 @@
       "Silver Tone"
     ],
     "images": [
-      "https://i.etsystatic.com/55122258/r/il/afcfe2/8050476581/il_fullxfull.8050476581_cckx.jpg"
+      "/images/products/0a6fe3f3-ddeb-445f-bfbc-0d3922a6f9c7.png"
     ],
     "variantGroups": [
       {
@@ -2276,21 +2276,24 @@
     ],
     "altText": "Gold tone stainless steel pearl body chain for festival wear and beach luxury occasions",
     "gallery": [
+      "/images/products/0a6fe3f3-ddeb-445f-bfbc-0d3922a6f9c7.png",
       "https://i.etsystatic.com/55122258/r/il/afcfe2/8050476581/il_fullxfull.8050476581_cckx.jpg",
       "https://i.etsystatic.com/55122258/r/il/4e836e/7800322345/il_fullxfull.7800322345_sivz.jpg",
       "https://i.etsystatic.com/55122258/r/il/ef88ff/7752370894/il_fullxfull.7752370894_c1g0.jpg",
-      "https://i.etsystatic.com/55122258/r/il/c88f40/7752370828/il_fullxfull.7752370828_4k6s.jpg",
-      "https://i.etsystatic.com/55122258/r/il/e0d0b6/7801769979/il_fullxfull.7801769979_dtlp.jpg",
-      "https://i.etsystatic.com/55122258/r/il/78ccff/7860367373/il_fullxfull.7860367373_4yi3.jpg",
       "https://i.etsystatic.com/55122258/r/il/372c16/7742861574/il_fullxfull.7742861574_dgsv.jpg",
       "https://i.etsystatic.com/55122258/r/il/9bb31a/7787172961/il_fullxfull.7787172961_487s.jpg",
-      "https://i.etsystatic.com/55122258/r/il/cc2da2/7753821828/il_fullxfull.7753821828_lyv1.jpg",
-      "https://i.etsystatic.com/55122258/r/il/1e7c1a/7787375199/il_fullxfull.7787375199_hxs5.jpg"
+      "/images/products/97194508-a79c-4902-8cc9-1f4a1aefda09.png"
     ],
     "variantHeroes": {
-      "Gold Tone": "https://i.etsystatic.com/55122258/r/il/afcfe2/8050476581/il_fullxfull.8050476581_cckx.jpg"
+      "Gold Tone": "/images/products/0a6fe3f3-ddeb-445f-bfbc-0d3922a6f9c7.png",
+      "Silver Tone": "/images/products/97194508-a79c-4902-8cc9-1f4a1aefda09.png"
     },
-    "dateAdded": "2026-06-12T15:00:27-04:00"
+    "dateAdded": "2026-06-12T15:00:27-04:00",
+    "variantVideos": {
+      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/96588b9eba63867bb5245dd2e10542d0/downloads/default.mp4",
+      "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/96588b9eba63867bb5245dd2e10542d0/downloads/default.mp4"
+    },
+    "sizeGuideImage": "/images/products/d75a26d3-2060-44af-befb-398ba171ed16.png"
   },
   {
     "id": "pearl-charm-bracelet",

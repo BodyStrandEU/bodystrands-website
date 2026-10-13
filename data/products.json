@@ -12458,5 +12458,42 @@
     "giftTags": [
       "personalized"
     ]
+  },
+  {
+    "id": "spinning-snowflake-pendant-necklace",
+    "name": "Spinning Snowflake Pendant Necklace",
+    "price": 30,
+    "currency": "EUR",
+    "category": "Necklaces",
+    "description": "Catch the light with a rotating snowflake charm that spins freely on its chain — equal parts festive and fidget-friendly. Set with sparkling cubic zirconia stones on 18K gold-plated stainless steel, it is a playful, satisfying little piece to touch and twirl through the season and beyond.",
+    "fullDescription": "The snowflake pendant rotates freely on its setting, giving it a satisfying spin whenever you touch it — a little fidget built right into a festive piece. Set with cubic zirconia stones for extra sparkle, on 18K gold-plated stainless steel that won't fade, tarnish, or irritate sensitive skin.\n\nChain length: 40cm + 5cm extender, so you can wear it closer to the collarbone or slightly looser.\n\nCare Instructions: Wipe gently with a soft cloth after each wear. Store in an airtight container when not in use.\n\nShipping: Dispatches within 1–2 business days.\n\nPlease note that as each piece is handcrafted, slight variations may occur.",
+    "specs": [
+      {
+        "label": "Material",
+        "value": "18K gold-plated stainless steel"
+      },
+      {
+        "label": "Pendant",
+        "value": "Rotatable snowflake charm with cubic zirconia accents"
+      },
+      {
+        "label": "Size",
+        "value": "Chain 40cm + 5cm extender"
+      },
+      {
+        "label": "Care",
+        "value": "Wipe gently with a soft cloth. Store in an airtight container."
+      },
+      {
+        "label": "Shipping",
+        "value": "Dispatches within 1–2 business days"
+      }
+    ],
+    "images": [],
+    "featured": false,
+    "active": true,
+    "christmas": true,
+    "dateAdded": "2026-10-13T10:44:20.709Z",
+    "altText": "18K gold-plated spinning snowflake pendant necklace with cubic zirconia accents, fidget-friendly festive jewelry"
   }
 ]

@@ -63,82 +63,87 @@
     "sizeGuideImage": "/images/products/48.png"
   },
   {
-    "id": "plus-size-body-chain",
-    "name": "Plus Size Body Chain",
-    "price": 40,
+    "id": "layered-body-chain-double-choker",
+    "name": "Layered Double Choker Body Chain",
+    "price": 51,
     "currency": "EUR",
     "category": "Body Chains",
-    "description": "The body chain designed to actually drape right on a curvier frame — not just stretched to try. Available in four fitted sizes, in gold or silver stainless steel.",
-    "fullDescription": "We built this one the same way we built our plus size belly chain — starting from real measurements, not squeezing a straight-size chain to its limit. This waterproof stainless steel body chain slips easily over your head and drapes across your chest before clipping securely at your waist or hip with a lobster clasp, so it was designed to actually sit right on a fuller figure, not just stretch to cover it. Wear it over your favorite bikini for a beach day, or layer it under an open shirt for something a little unexpected.\n\nMaterials: Stainless steel\nFinish: Gold tone or Silver tone\nWaterproof: Yes\nTarnish-Resistant: Yes\nHypoallergenic: Yes\nClasp: Secure lobster clasp, fastens behind the waist/hip\n\nSize Guide\nEach piece has two fit points — a neck loop that slips on easily over your head, and a waist/hip attachment that clips at the back.\n\nNeck Fit:\nPlus 1 — 70 cm (28 in)\nPlus 2 — 76 cm (30 in)\nPlus 3 — 82 cm (32 in)\nPlus 4 — 88 cm (35 in)\n\nWaist/Hip Fit:\nPlus 1 — Fits 84–102 cm (33–40 in). Base 100 cm (39 in), plus an 8 cm (3 in) extender = 100–108 cm (39–43 in) total.\nPlus 2 — Fits 102–120 cm (40–47 in). Base 118 cm (46 in), plus an 8 cm (3 in) extender = 118–126 cm (46–50 in) total.\nPlus 3 — Fits 120–138 cm (47–54 in). Base 136 cm (54 in), plus an 8 cm (3 in) extender = 136–144 cm (54–57 in) total.\nPlus 4 — Fits 138–156 cm (54–61 in). Base 154 cm (61 in), plus an 8 cm (3 in) extender = 154–162 cm (61–64 in) total.\n\nFit Note: Measure around your neck and your natural waist/hip, then compare to the ranges above to find your size.\n\nCare Instructions\nWipe gently with a soft cloth after each wear.\nStore in an airtight container when not in use.\n\nPlease note that as each piece is handcrafted, no two pieces are identical and slight variations may occur.",
+    "description": "Wear it over a bikini at the beach, or layer it over a top or dress the rest of the year — this dainty body chain works either way. I handcraft it with a double-layer choker at the neck that drops down into a layered waist chain, so it reads as a necklace and a belly chain in one piece, with real depth instead of a single flat strand.",
+    "fullDescription": "Made from waterproof, anti-tarnish gold-tone or silver-tone stainless steel — swim in it, wear it out, no tarnishing, no fuss.\n\nSizing Guide\nNeck: Fixed size, 38cm + 8cm extension\nWaist: Fixed size + extension — size varies by extension length:\nS — +10cm extension\nM — +14cm extension\nL — +18cm extension\nXL — +23cm extension\n\nFit Note: The neck chain fits most necks as-is. For the waist, measure where you would like it to sit and pick the closest size — the extension is what adjusts the fit.\n\nCustom Sizing: Need a specific measurement? Message me after ordering and I will make it to your exact size at no extra cost.\n\nCare Instructions: Wipe gently with a soft cloth after each wear. Store in an airtight container when not in use.\n\nShipping: Dispatches within 1–2 business days.\n\nPlease note that as each piece is handcrafted, no two pieces are identical and slight variations may occur.",
     "specs": [
       {
         "label": "Material",
-        "value": "Stainless steel"
+        "value": "Waterproof and anti-tarnish gold-tone or silver-tone stainless steel, 2mm mirror link chain"
       },
       {
-        "label": "Finish",
-        "value": "Gold tone or Silver tone"
+        "label": "Colors",
+        "value": "Gold, Silver"
       },
       {
-        "label": "Sizing",
-        "value": "4 fitted plus sizes — see size guide"
+        "label": "Closure",
+        "value": "Lobster clasp + extension chain, both at the neck and the waist"
       },
       {
-        "label": "Waterproof",
-        "value": "Yes"
+        "label": "Waterproof & Sweat-Proof",
+        "value": "Yes — safe for water, sun, and everyday wear"
       },
       {
-        "label": "Tarnish-Resistant",
-        "value": "Yes"
+        "label": "Care",
+        "value": "Wipe gently with a soft cloth after each wear. Store in an airtight container when not in use."
       },
       {
-        "label": "Hypoallergenic",
-        "value": "Yes"
+        "label": "Shipping",
+        "value": "Dispatches within 1–2 business days"
       }
     ],
-    "featured": false,
-    "active": true,
+    "variantGroups": [
+      {
+        "label": "Finish",
+        "type": "options",
+        "options": [
+          "Gold Tone",
+          "Silver Tone"
+        ]
+      },
+      {
+        "label": "Waist Size",
+        "type": "options",
+        "options": [
+          "S — +10cm extension",
+          "M — +14cm extension",
+          "L — +18cm extension",
+          "XL — +23cm extension"
+        ]
+      }
+    ],
     "variants": [
       "Gold Tone",
       "Silver Tone"
     ],
+    "images": [
+      "/images/products/c122afbc-105e-47e1-b39c-33fbf65e73de.png"
+    ],
+    "gallery": [
+      "/images/products/c122afbc-105e-47e1-b39c-33fbf65e73de.png",
+      "/images/products/81f9c47d-dace-4445-b77f-5000d9fe973e.jpeg",
+      "/images/products/37c75025-ed72-4866-a6fc-f8b072d1ad46.png",
+      "/images/products/29170a2b-01fb-4bd2-810d-6743fa4c2b2e.png",
+      "/images/products/486d0a5b-1fc0-4f72-848d-da3411cc9b58.png",
+      "/images/products/watermarked_img_5216291070479054344.jpg"
+    ],
+    "featured": false,
+    "active": true,
+    "dateAdded": "2026-09-13T08:51:32-04:00",
     "variantHeroes": {
-      "Gold Tone": "/images/products/29b29196-0d5c-4585-b67a-309a930e9a1e.png",
-      "Silver Tone": "/images/products/4d15bb80-a57b-4d23-bee3-5f3bde2a19d4.jpg"
+      "Gold Tone": "/images/products/c122afbc-105e-47e1-b39c-33fbf65e73de.png",
+      "Silver Tone": "/images/products/81f9c47d-dace-4445-b77f-5000d9fe973e.jpeg"
     },
     "variantVideos": {
-      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/f333f448e727fd0b32222527e45b459f/downloads/default.mp4",
-      "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/f333f448e727fd0b32222527e45b459f/downloads/default.mp4"
+      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/20aadde57b9911284d1aaed63997041e/downloads/default.mp4",
+      "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/20aadde57b9911284d1aaed63997041e/downloads/default.mp4"
     },
-    "gallery": [
-      "/images/products/29b29196-0d5c-4585-b67a-309a930e9a1e.png",
-      "/images/products/4d15bb80-a57b-4d23-bee3-5f3bde2a19d4.jpg",
-      "/images/products/68810628-5cd6-4861-afa2-96b1a160173e.jpg",
-      "/images/products/fa1cbece-a2ea-4231-9172-996efad85c10.jpg",
-      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.jpg",
-      "/images/products/9f176bb4-a6ad-488d-a95b-bed228fcb4b0.jpg",
-      "/images/products/etsy-thumbnails--2--copy-3.png",
-      "/images/products/5b76dd09-5a4a-4c65-880b-bfff650c62e8.png"
-    ],
-    "images": [
-      "/images/products/29b29196-0d5c-4585-b67a-309a930e9a1e.png"
-    ],
-    "variantGroups": [
-      {
-        "label": "Size",
-        "type": "options",
-        "options": [
-          "Plus 1",
-          "Plus 2",
-          "Plus 3",
-          "Plus 4"
-        ]
-      }
-    ],
-    "altText": "Plus size gold and silver stainless steel body chain, waterproof bikini accessory for curvy women, four fitted sizes",
-    "dateAdded": "2026-08-14T12:05:00-04:00",
-    "sizeGuideImage": "/images/products/23820309-c4d7-4101-88c8-e89a8b2f574c.png",
-    "plusSize": true
+    "sizeGuideImage": "/images/products/901f6258-21fa-4d42-93c0-dfcda4f3eac1.png",
+    "altText": "Delicate gold-tone stainless steel layered double choker body chain for festival wear and beach outfits"
   },
   {
     "id": "diamond-initial-anklet",
@@ -1046,37 +1051,33 @@
     "sizeGuideImage": "/images/products/cd9430c6-fb5a-4a51-8822-6f45077f585f.jpeg"
   },
   {
-    "id": "dainty-gold-body-chain",
-    "name": "Dainty Gold Body Chain",
-    "price": 32,
+    "id": "layered-body-chain",
+    "name": "Layered Body Chain",
+    "price": 36,
     "currency": "EUR",
     "category": "Body Chains",
-    "description": "Your minimalist body statement. This dainty torso harness wraps the body in delicate gold or silver chain — adjustable, lightweight, and completely waterproof for summer days and beyond.",
-    "fullDescription": "A minimalist silhouette that works over a bikini, under a sheer top, or straight on bare skin. The clean chain lines trace the torso softly, creating a sculptural effect that's anything but heavy.\n\nSize & Dimensions:\nNeck fit: 64 cm (25.2\") (easy slip on)\nWaist: Waist/Hip Fit: Adjustable from 79 cm (31.1\") to 102 cm (40.2\") (Select appropriate extension Add on in the drop down menu)\n\nAvailable in Gold or Silver, with three extender sizes to get the perfect fit: Small (+7 cm (2.8\")), Medium (+14 cm (5.5\")), or Large (+23 cm (9.1\")). Made from hypoallergenic stainless steel — non-tarnish, waterproof, and built for everyday wear.",
+    "description": "The body chain that works everywhere. Designed to be worn under a blazer, over a turtleneck, or as a standalone summer look — this layered gold body chain is your most versatile jewellery piece.",
+    "fullDescription": "Subtle enough to peek out from under a blazer lapel, bold enough to wear on bare skin at the beach. Multiple delicate chain strands wrap the torso in a minimalist harness silhouette that moves with your body.\n\nHandmade in gold stainless steel. Adjustable fit — choose your extender size at checkout. Tarnish-resistant and waterproof so it transitions from the office to the weekend without missing a beat.",
     "specs": [
       {
         "label": "Material",
-        "value": "Hypoallergenic stainless steel (waterproof & non-tarnish)"
+        "value": "Gold-tone stainless steel (waterproof & tarnish-resistant)"
       },
       {
-        "label": "Colours",
-        "value": "Gold or Silver"
+        "label": "Style",
+        "value": "Layered minimalist body chain"
       },
       {
-        "label": "Small extender",
-        "value": "+7 cm (2.8\")"
+        "label": "Occasion",
+        "value": "Everyday, office, beach, evening"
       },
       {
-        "label": "Medium extender",
-        "value": "+14 cm (5.5\")"
-      },
-      {
-        "label": "Large extender",
-        "value": "+23 cm (9.1\")"
+        "label": "Fit",
+        "value": "Adjustable with extender sizes"
       },
       {
         "label": "Care",
-        "value": "Wipe gently with a soft cloth. Store in an airtight container."
+        "value": "Wipe gently with soft cloth. Store in an airtight container."
       },
       {
         "label": "Shipping",
@@ -1090,7 +1091,7 @@
       "Silver Tone"
     ],
     "images": [
-      "/images/products/3e4aeecf-aa9b-434f-8dd4-538b7fc69074.webp"
+      "/images/products/396178f7-0588-4892-8644-1903a7476417.webp"
     ],
     "variantGroups": [
       {
@@ -1103,28 +1104,21 @@
       }
     ],
     "variantVideos": {
-      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/6eb5792063507a6a53835d0bef385e6c/downloads/default.mp4",
-      "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/6eb5792063507a6a53835d0bef385e6c/downloads/default.mp4"
+      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/32667de5f6a2d6a8a6d80d6a784d901c/downloads/default.mp4",
+      "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/32667de5f6a2d6a8a6d80d6a784d901c/downloads/default.mp4"
     },
-    "altText": "Delicate gold tone stainless steel body chain harness for minimalist festival wear and everyday styling",
+    "altText": "Delicate gold-tone stainless steel layered body chain for festival wear and everyday styling",
     "gallery": [
-      "/images/products/3e4aeecf-aa9b-434f-8dd4-538b7fc69074.webp",
-      "/images/products/Untitled-design--1-.webp",
-      "https://i.etsystatic.com/55122258/r/il/01cb28/7801900345/il_fullxfull.7801900345_7n0g.jpg",
-      "/images/products/Untitled-design--1--copy-2.webp",
-      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp",
-      "https://i.etsystatic.com/55122258/r/il/1d08fb/7739339773/il_fullxfull.7739339773_3tb8.jpg",
-      "/images/products/a5999a38-d6e5-47aa-b1b3-76c16581b41e.webp",
-      "https://i.etsystatic.com/55122258/r/il/5aed4c/7691395674/il_fullxfull.7691395674_31gb.jpg",
-      "/images/products/AW6C0518-2.webp",
-      "/images/products/124ba28f-2fa0-4150-a3ed-25d6d7f90841-md.webp",
-      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf-copy.webp"
+      "/images/products/396178f7-0588-4892-8644-1903a7476417.webp",
+      "/images/products/5b0f6af8-b435-4c23-8aeb-ce94beb916f5.webp",
+      "/images/products/0acaad30-e8d3-4335-8ac0-565cdac6331e.webp",
+      "/images/products/05e945bf-3596-4f59-a13a-a56602881897.webp",
+      "/images/products/IMG_1346.webp"
     ],
     "variantHeroes": {
-      "Gold Tone": "/images/products/Untitled-design--1-.webp",
-      "Silver Tone": "/images/products/3e4aeecf-aa9b-434f-8dd4-538b7fc69074.webp"
+      "Gold Tone": "/images/products/396178f7-0588-4892-8644-1903a7476417.webp",
+      "Silver Tone": "/images/products/b6afbc6f-4d0b-40be-9da3-a3ac389540ae.webp"
     },
-    "sizeGuideImage": "/images/products/d75a26d3-2060-44af-befb-398ba171ed16.webp",
     "dateAdded": "2026-06-12T15:00:27-04:00"
   },
   {
@@ -2144,77 +2138,6 @@
     "dateAdded": "2026-06-12T15:00:27-04:00"
   },
   {
-    "id": "layered-body-chain",
-    "name": "Layered Body Chain",
-    "price": 36,
-    "currency": "EUR",
-    "category": "Body Chains",
-    "description": "The body chain that works everywhere. Designed to be worn under a blazer, over a turtleneck, or as a standalone summer look — this layered gold body chain is your most versatile jewellery piece.",
-    "fullDescription": "Subtle enough to peek out from under a blazer lapel, bold enough to wear on bare skin at the beach. Multiple delicate chain strands wrap the torso in a minimalist harness silhouette that moves with your body.\n\nHandmade in gold stainless steel. Adjustable fit — choose your extender size at checkout. Tarnish-resistant and waterproof so it transitions from the office to the weekend without missing a beat.",
-    "specs": [
-      {
-        "label": "Material",
-        "value": "Gold-tone stainless steel (waterproof & tarnish-resistant)"
-      },
-      {
-        "label": "Style",
-        "value": "Layered minimalist body chain"
-      },
-      {
-        "label": "Occasion",
-        "value": "Everyday, office, beach, evening"
-      },
-      {
-        "label": "Fit",
-        "value": "Adjustable with extender sizes"
-      },
-      {
-        "label": "Care",
-        "value": "Wipe gently with soft cloth. Store in an airtight container."
-      },
-      {
-        "label": "Shipping",
-        "value": "Dispatches within 1–2 business days"
-      }
-    ],
-    "featured": false,
-    "active": true,
-    "variants": [
-      "Gold Tone",
-      "Silver Tone"
-    ],
-    "images": [
-      "/images/products/396178f7-0588-4892-8644-1903a7476417.webp"
-    ],
-    "variantGroups": [
-      {
-        "label": "Size",
-        "options": [
-          "Small (+7 cm (2.8\") ext)",
-          "Medium (+14 cm (5.5\") ext)",
-          "Large (+23 cm (9.1\") ext)"
-        ]
-      }
-    ],
-    "variantVideos": {
-      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/32667de5f6a2d6a8a6d80d6a784d901c/downloads/default.mp4",
-      "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/32667de5f6a2d6a8a6d80d6a784d901c/downloads/default.mp4"
-    },
-    "altText": "Delicate gold-tone stainless steel layered body chain for festival wear and everyday styling",
-    "gallery": [
-      "/images/products/396178f7-0588-4892-8644-1903a7476417.webp",
-      "/images/products/5b0f6af8-b435-4c23-8aeb-ce94beb916f5.webp",
-      "/images/products/0acaad30-e8d3-4335-8ac0-565cdac6331e.webp",
-      "/images/products/05e945bf-3596-4f59-a13a-a56602881897.webp",
-      "/images/products/IMG_1346.webp"
-    ],
-    "variantHeroes": {
-      "Gold Tone": "/images/products/396178f7-0588-4892-8644-1903a7476417.webp",
-      "Silver Tone": "/images/products/b6afbc6f-4d0b-40be-9da3-a3ac389540ae.webp"
-    },
-    "dateAdded": "2026-06-12T15:00:27-04:00"
-  },
-  {
     "id": "gold-body-necklace",
     "name": "Bikini Body Necklace",
     "price": 36,
@@ -2286,6 +2209,85 @@
     "variantHeroes": {
       "Gold Tone": "/images/products/193c61b3-f888-4623-844d-d7fd908ad303.jpeg",
       "Silver Tone": "/images/products/a7008a93-ea13-4dc1-87e8-7b2db04957e5.webp"
+    },
+    "dateAdded": "2026-06-12T15:00:27-04:00"
+  },
+  {
+    "id": "pearl-body-chain",
+    "name": "Pearl Body Chain",
+    "price": 32,
+    "currency": "EUR",
+    "category": "Body Chains",
+    "description": "Your lingerie and beach luxury piece. This dainty gold or silver pearl body chain wraps the torso in a delicate bralette silhouette — perfect for honeymoons, bridal occasions, and summer styling.",
+    "fullDescription": "Pearl accents trace the body chain in a soft, luminous pattern — designed to be beautiful against skin as much as over a bikini. Available in Gold Stainless or Silver Stainless with adjustable sizing.\n\nHandcrafted in stainless steel. Three extender sizes for a perfect custom fit. A truly special piece for honeymoons, boudoir shoots, and anyone who believes their body deserves jewellery.",
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Stainless steel with pearl accents"
+      },
+      {
+        "label": "Colours",
+        "value": "Gold or Silver stainless"
+      },
+      {
+        "label": "Small extender",
+        "value": "+7 cm (2.8\")"
+      },
+      {
+        "label": "Medium extender",
+        "value": "+14 cm (5.5\")"
+      },
+      {
+        "label": "Large extender",
+        "value": "+23 cm (9.1\")"
+      },
+      {
+        "label": "Occasion",
+        "value": "Honeymoon, bridal, boudoir, beach"
+      },
+      {
+        "label": "Care",
+        "value": "Avoid prolonged water exposure. Wipe with soft cloth."
+      },
+      {
+        "label": "Shipping",
+        "value": "Dispatches within 1–2 business days"
+      }
+    ],
+    "featured": false,
+    "active": true,
+    "variants": [
+      "Gold Tone",
+      "Silver Tone"
+    ],
+    "images": [
+      "https://i.etsystatic.com/55122258/r/il/afcfe2/8050476581/il_fullxfull.8050476581_cckx.jpg"
+    ],
+    "variantGroups": [
+      {
+        "label": "Size",
+        "options": [
+          "Small (+7 cm (2.8\") ext)",
+          "Medium (+14 cm (5.5\") ext)",
+          "Large (+23 cm (9.1\") ext)"
+        ]
+      }
+    ],
+    "altText": "Gold tone stainless steel pearl body chain for festival wear and beach luxury occasions",
+    "gallery": [
+      "https://i.etsystatic.com/55122258/r/il/afcfe2/8050476581/il_fullxfull.8050476581_cckx.jpg",
+      "https://i.etsystatic.com/55122258/r/il/4e836e/7800322345/il_fullxfull.7800322345_sivz.jpg",
+      "https://i.etsystatic.com/55122258/r/il/ef88ff/7752370894/il_fullxfull.7752370894_c1g0.jpg",
+      "https://i.etsystatic.com/55122258/r/il/c88f40/7752370828/il_fullxfull.7752370828_4k6s.jpg",
+      "https://i.etsystatic.com/55122258/r/il/e0d0b6/7801769979/il_fullxfull.7801769979_dtlp.jpg",
+      "https://i.etsystatic.com/55122258/r/il/78ccff/7860367373/il_fullxfull.7860367373_4yi3.jpg",
+      "https://i.etsystatic.com/55122258/r/il/372c16/7742861574/il_fullxfull.7742861574_dgsv.jpg",
+      "https://i.etsystatic.com/55122258/r/il/9bb31a/7787172961/il_fullxfull.7787172961_487s.jpg",
+      "https://i.etsystatic.com/55122258/r/il/cc2da2/7753821828/il_fullxfull.7753821828_lyv1.jpg",
+      "https://i.etsystatic.com/55122258/r/il/1e7c1a/7787375199/il_fullxfull.7787375199_hxs5.jpg"
+    ],
+    "variantHeroes": {
+      "Gold Tone": "https://i.etsystatic.com/55122258/r/il/afcfe2/8050476581/il_fullxfull.8050476581_cckx.jpg"
     },
     "dateAdded": "2026-06-12T15:00:27-04:00"
   },
@@ -3314,25 +3316,33 @@
     "dateAdded": "2026-06-12T15:00:27-04:00"
   },
   {
-    "id": "gold-waist-chain",
-    "name": "Gold Waist Chain",
-    "price": 32,
+    "id": "bikini-body-chain",
+    "name": "Bikini Body Chain",
+    "price": 33.6,
     "currency": "EUR",
     "category": "Body Chains",
-    "description": "Your most versatile summer piece. This dainty waist chain works over a bikini, sundress, or bare skin — minimalist body jewelry handcrafted from waterproof, anti-tarnish stainless steel.",
-    "fullDescription": "A simple, elegant chain at the waist that elevates any summer look without overpowering it. Designed to be adjusted to your exact measurement for a perfect drape.\n\nHandcrafted in stainless steel. Adjustable extender sizing available at checkout. Completely waterproof and anti-tarnish — the chain you never need to take off.",
+    "description": "Your beach body detail. This dainty gold or silver body chain wraps elegantly around the torso — minimalist bikini jewelry handcrafted from waterproof, anti-tarnish stainless steel with adjustable sizing.",
+    "fullDescription": "A delicate chain harness that sits beautifully over a bikini or bare skin, creating a minimalist body adornment. Available in Gold or Silver stainless steel.\n\nThree extender sizes let you dial in a perfect fit: Small (+7 cm (2.8\")), Medium (+14 cm (5.5\")), or Large (+23 cm (9.1\")). Completely waterproof and anti-tarnish.",
     "specs": [
       {
         "label": "Material",
         "value": "Stainless steel (waterproof & anti-tarnish)"
       },
       {
-        "label": "Style",
-        "value": "Minimalist waist chain"
+        "label": "Colours",
+        "value": "Gold or Silver"
       },
       {
-        "label": "Fit",
-        "value": "Adjustable with extender sizes"
+        "label": "Small extender",
+        "value": "+7 cm (2.8\")"
+      },
+      {
+        "label": "Medium extender",
+        "value": "+14 cm (5.5\")"
+      },
+      {
+        "label": "Large extender",
+        "value": "+23 cm (9.1\")"
       },
       {
         "label": "Care",
@@ -3350,7 +3360,7 @@
       "Silver Tone"
     ],
     "images": [
-      "https://i.etsystatic.com/55122258/r/il/20c08f/7724989232/il_fullxfull.7724989232_gbuw.jpg"
+      "https://i.etsystatic.com/55122258/r/il/bf444a/7761992466/il_fullxfull.7761992466_lrc2.jpg"
     ],
     "variantGroups": [
       {
@@ -3360,45 +3370,28 @@
           "Medium (+14 cm (5.5\") ext)",
           "Large (+23 cm (9.1\") ext)"
         ]
-      },
-      {
-        "label": "Zodiac Sign",
-        "type": "options",
-        "options": [
-          "Aries (3.21-4.19)",
-          "Taurus (4.20-5.20)",
-          "Gemini (5.21-6.20)",
-          "Cancer (6.21-7.22)",
-          "Leo (7.23-8.22)",
-          "Virgo (8.23-9.22)",
-          "Libra (9.23-10.22)",
-          "Scorpio(10.23-11.21)",
-          "Sagit. (11.22-12.21)",
-          "Capricorn 12.22-1.19",
-          "Aquarius (1.20-2.18)",
-          "Pisces (2.19-3.20)"
-        ]
       }
     ],
     "variantVideos": {
       "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/31272f686b0ec6e21bded84fd0d46f0c/downloads/default.mp4",
       "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/31272f686b0ec6e21bded84fd0d46f0c/downloads/default.mp4"
     },
-    "altText": "Delicate gold tone stainless steel waist chain for festival body jewelry and summer wear",
+    "altText": "Gold tone stainless steel bikini body chain for beach and festival wear, waterproof handcrafted jewelry",
     "gallery": [
-      "https://i.etsystatic.com/55122258/r/il/20c08f/7724989232/il_fullxfull.7724989232_gbuw.jpg",
+      "https://i.etsystatic.com/55122258/r/il/bf444a/7761992466/il_fullxfull.7761992466_lrc2.jpg",
       "https://i.etsystatic.com/55122258/r/il/55bf9c/7771023569/il_fullxfull.7771023569_8chg.jpg",
-      "https://i.etsystatic.com/55122258/r/il/feb1ee/7774355159/il_fullxfull.7774355159_31bs.jpg",
+      "https://i.etsystatic.com/55122258/r/il/e5f1f0/7762001660/il_fullxfull.7762001660_4hqi.jpg",
+      "https://i.etsystatic.com/55122258/r/il/6ba44c/7762013234/il_fullxfull.7762013234_1918.jpg",
+      "https://i.etsystatic.com/55122258/r/il/f0c320/7809950101/il_fullxfull.7809950101_695r.jpg",
       "https://i.etsystatic.com/55122258/r/il/fe8a39/7803914369/il_fullxfull.7803914369_86nj.jpg",
       "https://i.etsystatic.com/55122258/r/il/006166/7726395674/il_fullxfull.7726395674_h76x.jpg",
-      "https://i.etsystatic.com/55122258/r/il/06a110/7774319057/il_fullxfull.7774319057_iyz9.jpg",
-      "https://i.etsystatic.com/55122258/r/il/7dd6ef/7860380609/il_fullxfull.7860380609_8s0y.jpg",
-      "https://i.etsystatic.com/55122258/r/il/e1aff9/7803813443/il_fullxfull.7803813443_6lce.jpg",
-      "https://i.etsystatic.com/55122258/r/il/e59ec8/7724895588/il_fullxfull.7724895588_8cdu.jpg"
+      "https://i.etsystatic.com/55122258/r/il/306f73/7809952647/il_fullxfull.7809952647_33wa.jpg",
+      "/images/products/Untitled-design--1--copy.webp",
+      "/images/products/unnamed-3-2.webp"
     ],
     "variantHeroes": {
-      "Gold Tone": "https://i.etsystatic.com/55122258/r/il/20c08f/7724989232/il_fullxfull.7724989232_gbuw.jpg",
-      "Silver Tone": "https://i.etsystatic.com/55122258/r/il/01c9f9/7774341189/il_fullxfull.7774341189_fuuz.jpg"
+      "Gold Tone": "https://i.etsystatic.com/55122258/r/il/bf444a/7761992466/il_fullxfull.7761992466_lrc2.jpg",
+      "Silver Tone": "https://i.etsystatic.com/55122258/r/il/306f73/7809952647/il_fullxfull.7809952647_33wa.jpg"
     },
     "dateAdded": "2026-06-12T15:00:27-04:00"
   },
@@ -3764,33 +3757,25 @@
     "dateAdded": "2026-06-12T15:00:27-04:00"
   },
   {
-    "id": "bikini-body-chain",
-    "name": "Bikini Body Chain",
-    "price": 33.6,
+    "id": "gold-waist-chain",
+    "name": "Gold Waist Chain",
+    "price": 32,
     "currency": "EUR",
     "category": "Body Chains",
-    "description": "Your beach body detail. This dainty gold or silver body chain wraps elegantly around the torso — minimalist bikini jewelry handcrafted from waterproof, anti-tarnish stainless steel with adjustable sizing.",
-    "fullDescription": "A delicate chain harness that sits beautifully over a bikini or bare skin, creating a minimalist body adornment. Available in Gold or Silver stainless steel.\n\nThree extender sizes let you dial in a perfect fit: Small (+7 cm (2.8\")), Medium (+14 cm (5.5\")), or Large (+23 cm (9.1\")). Completely waterproof and anti-tarnish.",
+    "description": "Your most versatile summer piece. This dainty waist chain works over a bikini, sundress, or bare skin — minimalist body jewelry handcrafted from waterproof, anti-tarnish stainless steel.",
+    "fullDescription": "A simple, elegant chain at the waist that elevates any summer look without overpowering it. Designed to be adjusted to your exact measurement for a perfect drape.\n\nHandcrafted in stainless steel. Adjustable extender sizing available at checkout. Completely waterproof and anti-tarnish — the chain you never need to take off.",
     "specs": [
       {
         "label": "Material",
         "value": "Stainless steel (waterproof & anti-tarnish)"
       },
       {
-        "label": "Colours",
-        "value": "Gold or Silver"
+        "label": "Style",
+        "value": "Minimalist waist chain"
       },
       {
-        "label": "Small extender",
-        "value": "+7 cm (2.8\")"
-      },
-      {
-        "label": "Medium extender",
-        "value": "+14 cm (5.5\")"
-      },
-      {
-        "label": "Large extender",
-        "value": "+23 cm (9.1\")"
+        "label": "Fit",
+        "value": "Adjustable with extender sizes"
       },
       {
         "label": "Care",
@@ -3808,7 +3793,7 @@
       "Silver Tone"
     ],
     "images": [
-      "https://i.etsystatic.com/55122258/r/il/bf444a/7761992466/il_fullxfull.7761992466_lrc2.jpg"
+      "https://i.etsystatic.com/55122258/r/il/20c08f/7724989232/il_fullxfull.7724989232_gbuw.jpg"
     ],
     "variantGroups": [
       {
@@ -3818,28 +3803,45 @@
           "Medium (+14 cm (5.5\") ext)",
           "Large (+23 cm (9.1\") ext)"
         ]
+      },
+      {
+        "label": "Zodiac Sign",
+        "type": "options",
+        "options": [
+          "Aries (3.21-4.19)",
+          "Taurus (4.20-5.20)",
+          "Gemini (5.21-6.20)",
+          "Cancer (6.21-7.22)",
+          "Leo (7.23-8.22)",
+          "Virgo (8.23-9.22)",
+          "Libra (9.23-10.22)",
+          "Scorpio(10.23-11.21)",
+          "Sagit. (11.22-12.21)",
+          "Capricorn 12.22-1.19",
+          "Aquarius (1.20-2.18)",
+          "Pisces (2.19-3.20)"
+        ]
       }
     ],
     "variantVideos": {
       "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/31272f686b0ec6e21bded84fd0d46f0c/downloads/default.mp4",
       "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/31272f686b0ec6e21bded84fd0d46f0c/downloads/default.mp4"
     },
-    "altText": "Gold tone stainless steel bikini body chain for beach and festival wear, waterproof handcrafted jewelry",
+    "altText": "Delicate gold tone stainless steel waist chain for festival body jewelry and summer wear",
     "gallery": [
-      "https://i.etsystatic.com/55122258/r/il/bf444a/7761992466/il_fullxfull.7761992466_lrc2.jpg",
+      "https://i.etsystatic.com/55122258/r/il/20c08f/7724989232/il_fullxfull.7724989232_gbuw.jpg",
       "https://i.etsystatic.com/55122258/r/il/55bf9c/7771023569/il_fullxfull.7771023569_8chg.jpg",
-      "https://i.etsystatic.com/55122258/r/il/e5f1f0/7762001660/il_fullxfull.7762001660_4hqi.jpg",
-      "https://i.etsystatic.com/55122258/r/il/6ba44c/7762013234/il_fullxfull.7762013234_1918.jpg",
-      "https://i.etsystatic.com/55122258/r/il/f0c320/7809950101/il_fullxfull.7809950101_695r.jpg",
+      "https://i.etsystatic.com/55122258/r/il/feb1ee/7774355159/il_fullxfull.7774355159_31bs.jpg",
       "https://i.etsystatic.com/55122258/r/il/fe8a39/7803914369/il_fullxfull.7803914369_86nj.jpg",
       "https://i.etsystatic.com/55122258/r/il/006166/7726395674/il_fullxfull.7726395674_h76x.jpg",
-      "https://i.etsystatic.com/55122258/r/il/306f73/7809952647/il_fullxfull.7809952647_33wa.jpg",
-      "/images/products/Untitled-design--1--copy.webp",
-      "/images/products/unnamed-3-2.webp"
+      "https://i.etsystatic.com/55122258/r/il/06a110/7774319057/il_fullxfull.7774319057_iyz9.jpg",
+      "https://i.etsystatic.com/55122258/r/il/7dd6ef/7860380609/il_fullxfull.7860380609_8s0y.jpg",
+      "https://i.etsystatic.com/55122258/r/il/e1aff9/7803813443/il_fullxfull.7803813443_6lce.jpg",
+      "https://i.etsystatic.com/55122258/r/il/e59ec8/7724895588/il_fullxfull.7724895588_8cdu.jpg"
     ],
     "variantHeroes": {
-      "Gold Tone": "https://i.etsystatic.com/55122258/r/il/bf444a/7761992466/il_fullxfull.7761992466_lrc2.jpg",
-      "Silver Tone": "https://i.etsystatic.com/55122258/r/il/306f73/7809952647/il_fullxfull.7809952647_33wa.jpg"
+      "Gold Tone": "https://i.etsystatic.com/55122258/r/il/20c08f/7724989232/il_fullxfull.7724989232_gbuw.jpg",
+      "Silver Tone": "https://i.etsystatic.com/55122258/r/il/01c9f9/7774341189/il_fullxfull.7774341189_fuuz.jpg"
     },
     "dateAdded": "2026-06-12T15:00:27-04:00"
   },
@@ -4645,54 +4647,82 @@
     "dateAdded": "2026-06-12T15:00:27-04:00"
   },
   {
-    "id": "pearl-body-harness",
-    "name": "Pearl Body Harness",
-    "price": 36,
+    "id": "plus-size-body-chain",
+    "name": "Plus Size Body Chain",
+    "price": 40,
     "currency": "EUR",
     "category": "Body Chains",
-    "description": "Your most luxurious beach piece. This handcrafted pearl body chain wraps the torso in a delicate bralette harness silhouette — freshwater-style pearls on gold stainless steel for summer and lingerie occasions.",
-    "fullDescription": "Pearl accents trace the body in a soft harness silhouette — a piece that sits beautifully over a bikini, as lingerie, or beneath a sheer top for a textured, luminous effect.\n\nHandcrafted in gold stainless steel. Adjustable fit to suit different body shapes. A truly unique piece that earns its place in your jewellery collection.",
+    "description": "The body chain designed to actually drape right on a curvier frame — not just stretched to try. Available in four fitted sizes, in gold or silver stainless steel.",
+    "fullDescription": "We built this one the same way we built our plus size belly chain — starting from real measurements, not squeezing a straight-size chain to its limit. This waterproof stainless steel body chain slips easily over your head and drapes across your chest before clipping securely at your waist or hip with a lobster clasp, so it was designed to actually sit right on a fuller figure, not just stretch to cover it. Wear it over your favorite bikini for a beach day, or layer it under an open shirt for something a little unexpected.\n\nMaterials: Stainless steel\nFinish: Gold tone or Silver tone\nWaterproof: Yes\nTarnish-Resistant: Yes\nHypoallergenic: Yes\nClasp: Secure lobster clasp, fastens behind the waist/hip\n\nSize Guide\nEach piece has two fit points — a neck loop that slips on easily over your head, and a waist/hip attachment that clips at the back.\n\nNeck Fit:\nPlus 1 — 70 cm (28 in)\nPlus 2 — 76 cm (30 in)\nPlus 3 — 82 cm (32 in)\nPlus 4 — 88 cm (35 in)\n\nWaist/Hip Fit:\nPlus 1 — Fits 84–102 cm (33–40 in). Base 100 cm (39 in), plus an 8 cm (3 in) extender = 100–108 cm (39–43 in) total.\nPlus 2 — Fits 102–120 cm (40–47 in). Base 118 cm (46 in), plus an 8 cm (3 in) extender = 118–126 cm (46–50 in) total.\nPlus 3 — Fits 120–138 cm (47–54 in). Base 136 cm (54 in), plus an 8 cm (3 in) extender = 136–144 cm (54–57 in) total.\nPlus 4 — Fits 138–156 cm (54–61 in). Base 154 cm (61 in), plus an 8 cm (3 in) extender = 154–162 cm (61–64 in) total.\n\nFit Note: Measure around your neck and your natural waist/hip, then compare to the ranges above to find your size.\n\nCare Instructions\nWipe gently with a soft cloth after each wear.\nStore in an airtight container when not in use.\n\nPlease note that as each piece is handcrafted, no two pieces are identical and slight variations may occur.",
     "specs": [
       {
         "label": "Material",
-        "value": "Gold stainless steel with pearl accents"
+        "value": "Stainless steel"
       },
       {
-        "label": "Style",
-        "value": "Pearl body harness / bralette chain"
+        "label": "Finish",
+        "value": "Gold tone or Silver tone"
       },
       {
-        "label": "Occasion",
-        "value": "Beach, lingerie, honeymoon, editorial"
+        "label": "Sizing",
+        "value": "4 fitted plus sizes — see size guide"
       },
       {
-        "label": "Fit",
-        "value": "Neck Fit Adjustable: 48 cm (18.9\") - 61 cm (24\") Waist Fit Adjustable: 79 cm (31.1\") - 102 cm (40.2\")"
+        "label": "Waterproof",
+        "value": "Yes"
       },
       {
-        "label": "Care",
-        "value": "Avoid perfume and lotions. Wipe gently with soft cloth."
+        "label": "Tarnish-Resistant",
+        "value": "Yes"
       },
       {
-        "label": "Shipping",
-        "value": "Dispatches within 1–2 business days"
+        "label": "Hypoallergenic",
+        "value": "Yes"
       }
     ],
     "featured": false,
     "active": true,
-    "images": [
-      "https://i.etsystatic.com/55122258/r/il/54a47a/7967138784/il_fullxfull.7967138784_jbe7.jpg",
-      "https://i.etsystatic.com/55122258/r/il/2ede8e/7967149382/il_fullxfull.7967149382_c4aw.jpg",
-      "https://i.etsystatic.com/55122258/r/il/659d16/7967140792/il_fullxfull.7967140792_p6z2.jpg",
-      "https://i.etsystatic.com/55122258/r/il/f5136d/7816140198/il_fullxfull.7816140198_mqjm.jpg",
-      "https://i.etsystatic.com/55122258/r/il/a6450c/7967144502/il_fullxfull.7967144502_77xn.jpg",
-      "https://i.etsystatic.com/55122258/r/il/88ca45/7769131538/il_fullxfull.7769131538_9erk.jpg",
-      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp",
-      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.webp",
-      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.webp"
+    "variants": [
+      "Gold Tone",
+      "Silver Tone"
     ],
-    "altText": "Gold stainless steel pearl body chain harness for beach festivals and special occasions",
-    "dateAdded": "2026-06-12T15:00:27-04:00"
+    "variantHeroes": {
+      "Gold Tone": "/images/products/29b29196-0d5c-4585-b67a-309a930e9a1e.png",
+      "Silver Tone": "/images/products/4d15bb80-a57b-4d23-bee3-5f3bde2a19d4.jpg"
+    },
+    "variantVideos": {
+      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/f333f448e727fd0b32222527e45b459f/downloads/default.mp4",
+      "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/f333f448e727fd0b32222527e45b459f/downloads/default.mp4"
+    },
+    "gallery": [
+      "/images/products/29b29196-0d5c-4585-b67a-309a930e9a1e.png",
+      "/images/products/4d15bb80-a57b-4d23-bee3-5f3bde2a19d4.jpg",
+      "/images/products/68810628-5cd6-4861-afa2-96b1a160173e.jpg",
+      "/images/products/fa1cbece-a2ea-4231-9172-996efad85c10.jpg",
+      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.jpg",
+      "/images/products/9f176bb4-a6ad-488d-a95b-bed228fcb4b0.jpg",
+      "/images/products/etsy-thumbnails--2--copy-3.png",
+      "/images/products/5b76dd09-5a4a-4c65-880b-bfff650c62e8.png"
+    ],
+    "images": [
+      "/images/products/29b29196-0d5c-4585-b67a-309a930e9a1e.png"
+    ],
+    "variantGroups": [
+      {
+        "label": "Size",
+        "type": "options",
+        "options": [
+          "Plus 1",
+          "Plus 2",
+          "Plus 3",
+          "Plus 4"
+        ]
+      }
+    ],
+    "altText": "Plus size gold and silver stainless steel body chain, waterproof bikini accessory for curvy women, four fitted sizes",
+    "dateAdded": "2026-08-14T12:05:00-04:00",
+    "sizeGuideImage": "/images/products/23820309-c4d7-4101-88c8-e89a8b2f574c.png",
+    "plusSize": true
   },
   {
     "id": "minimalist-pearl-back-necklace",
@@ -5312,21 +5342,21 @@
     "dateAdded": "2026-06-12T15:00:27-04:00"
   },
   {
-    "id": "gold-belly-body-chain",
-    "name": "Belly Body Chain",
-    "price": 36,
+    "id": "dainty-gold-body-chain",
+    "name": "Dainty Gold Body Chain",
+    "price": 32,
     "currency": "EUR",
     "category": "Body Chains",
-    "description": "Your beach-to-festival essential. This dainty gold or silver body and belly chain wraps the torso in a minimalist silhouette — adjustable, waterproof, anti-tarnish stainless steel for all-day wear.",
-    "fullDescription": "A bikini body chain that drapes beautifully over bare skin or a swimsuit. Available in Gold Stainless or Silver Stainless with three extender sizes for a custom fit: Small (+7 cm (2.8\")), Medium (+14 cm (5.5\")), or Large (+23 cm (9.1\")).\n\nHandcrafted in high-quality stainless steel. Completely waterproof and anti-tarnish. Wear it into the water and it stays just as good.",
+    "description": "Your minimalist body statement. This dainty torso harness wraps the body in delicate gold or silver chain — adjustable, lightweight, and completely waterproof for summer days and beyond.",
+    "fullDescription": "A minimalist silhouette that works over a bikini, under a sheer top, or straight on bare skin. The clean chain lines trace the torso softly, creating a sculptural effect that's anything but heavy.\n\nSize & Dimensions:\nNeck fit: 64 cm (25.2\") (easy slip on)\nWaist: Waist/Hip Fit: Adjustable from 79 cm (31.1\") to 102 cm (40.2\") (Select appropriate extension Add on in the drop down menu)\n\nAvailable in Gold or Silver, with three extender sizes to get the perfect fit: Small (+7 cm (2.8\")), Medium (+14 cm (5.5\")), or Large (+23 cm (9.1\")). Made from hypoallergenic stainless steel — non-tarnish, waterproof, and built for everyday wear.",
     "specs": [
       {
         "label": "Material",
-        "value": "Stainless steel (waterproof & anti-tarnish)"
+        "value": "Hypoallergenic stainless steel (waterproof & non-tarnish)"
       },
       {
         "label": "Colours",
-        "value": "Gold or Silver stainless"
+        "value": "Gold or Silver"
       },
       {
         "label": "Small extender",
@@ -5342,7 +5372,7 @@
       },
       {
         "label": "Care",
-        "value": "Wipe gently with soft cloth. Store in an airtight container."
+        "value": "Wipe gently with a soft cloth. Store in an airtight container."
       },
       {
         "label": "Shipping",
@@ -5356,7 +5386,7 @@
       "Silver Tone"
     ],
     "images": [
-      "https://i.etsystatic.com/55122258/r/il/5c4932/7780124258/il_fullxfull.7780124258_scos.jpg"
+      "/images/products/3e4aeecf-aa9b-434f-8dd4-538b7fc69074.webp"
     ],
     "variantGroups": [
       {
@@ -5366,39 +5396,31 @@
           "Medium (+14 cm (5.5\") ext)",
           "Large (+23 cm (9.1\") ext)"
         ]
-      },
-      {
-        "label": "Butterfly Color",
-        "type": "options",
-        "options": [
-          "White",
-          "Blue",
-          "Pink",
-          "Purple",
-          "Yellow"
-        ]
       }
     ],
     "variantVideos": {
-      "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/d19254217bad88aa6ea23f524f3df497/downloads/default.mp4",
-      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/d19254217bad88aa6ea23f524f3df497/downloads/default.mp4"
+      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/6eb5792063507a6a53835d0bef385e6c/downloads/default.mp4",
+      "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/6eb5792063507a6a53835d0bef385e6c/downloads/default.mp4"
     },
-    "altText": "Gold tone stainless steel belly body chain for festivals and beach wear, adjustable and waterproof",
+    "altText": "Delicate gold tone stainless steel body chain harness for minimalist festival wear and everyday styling",
     "gallery": [
-      "https://i.etsystatic.com/55122258/r/il/5c4932/7780124258/il_fullxfull.7780124258_scos.jpg",
-      "https://i.etsystatic.com/55122258/r/il/ed39ed/7779996890/il_fullxfull.7779996890_mpq0.jpg",
-      "https://i.etsystatic.com/55122258/r/il/77471a/7827944739/il_fullxfull.7827944739_ff8t.jpg",
-      "https://i.etsystatic.com/55122258/r/il/878873/7827955559/il_fullxfull.7827955559_n4qc.jpg",
-      "https://i.etsystatic.com/55122258/r/il/372c16/7742861574/il_fullxfull.7742861574_dgsv.jpg",
-      "https://i.etsystatic.com/55122258/r/il/9bb31a/7787172961/il_fullxfull.7787172961_487s.jpg",
-      "https://i.etsystatic.com/55122258/r/il/b22b9f/7976800048/il_fullxfull.7976800048_esh6.jpg",
-      "https://i.etsystatic.com/55122258/r/il/d76b2b/7779997014/il_fullxfull.7779997014_46jf.jpg",
-      "/images/products/9a0c82e4-a01e-47e0-a2b1-eb146080f383-2.webp"
+      "/images/products/3e4aeecf-aa9b-434f-8dd4-538b7fc69074.webp",
+      "/images/products/Untitled-design--1-.webp",
+      "https://i.etsystatic.com/55122258/r/il/01cb28/7801900345/il_fullxfull.7801900345_7n0g.jpg",
+      "/images/products/Untitled-design--1--copy-2.webp",
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp",
+      "https://i.etsystatic.com/55122258/r/il/1d08fb/7739339773/il_fullxfull.7739339773_3tb8.jpg",
+      "/images/products/a5999a38-d6e5-47aa-b1b3-76c16581b41e.webp",
+      "https://i.etsystatic.com/55122258/r/il/5aed4c/7691395674/il_fullxfull.7691395674_31gb.jpg",
+      "/images/products/AW6C0518-2.webp",
+      "/images/products/124ba28f-2fa0-4150-a3ed-25d6d7f90841-md.webp",
+      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf-copy.webp"
     ],
     "variantHeroes": {
-      "Gold Tone": "https://i.etsystatic.com/55122258/r/il/5c4932/7780124258/il_fullxfull.7780124258_scos.jpg",
-      "Silver Tone": "https://i.etsystatic.com/55122258/r/il/d76b2b/7779997014/il_fullxfull.7779997014_46jf.jpg"
+      "Gold Tone": "/images/products/Untitled-design--1-.webp",
+      "Silver Tone": "/images/products/3e4aeecf-aa9b-434f-8dd4-538b7fc69074.webp"
     },
+    "sizeGuideImage": "/images/products/d75a26d3-2060-44af-befb-398ba171ed16.webp",
     "dateAdded": "2026-06-12T15:00:27-04:00"
   },
   {
@@ -7226,41 +7248,33 @@
     "dateAdded": "2026-06-12T15:00:27-04:00"
   },
   {
-    "id": "pearl-body-chain",
-    "name": "Pearl Body Chain",
-    "price": 32,
+    "id": "pearl-body-harness",
+    "name": "Pearl Body Harness",
+    "price": 36,
     "currency": "EUR",
     "category": "Body Chains",
-    "description": "Your lingerie and beach luxury piece. This dainty gold or silver pearl body chain wraps the torso in a delicate bralette silhouette — perfect for honeymoons, bridal occasions, and summer styling.",
-    "fullDescription": "Pearl accents trace the body chain in a soft, luminous pattern — designed to be beautiful against skin as much as over a bikini. Available in Gold Stainless or Silver Stainless with adjustable sizing.\n\nHandcrafted in stainless steel. Three extender sizes for a perfect custom fit. A truly special piece for honeymoons, boudoir shoots, and anyone who believes their body deserves jewellery.",
+    "description": "Your most luxurious beach piece. This handcrafted pearl body chain wraps the torso in a delicate bralette harness silhouette — freshwater-style pearls on gold stainless steel for summer and lingerie occasions.",
+    "fullDescription": "Pearl accents trace the body in a soft harness silhouette — a piece that sits beautifully over a bikini, as lingerie, or beneath a sheer top for a textured, luminous effect.\n\nHandcrafted in gold stainless steel. Adjustable fit to suit different body shapes. A truly unique piece that earns its place in your jewellery collection.",
     "specs": [
       {
         "label": "Material",
-        "value": "Stainless steel with pearl accents"
+        "value": "Gold stainless steel with pearl accents"
       },
       {
-        "label": "Colours",
-        "value": "Gold or Silver stainless"
-      },
-      {
-        "label": "Small extender",
-        "value": "+7 cm (2.8\")"
-      },
-      {
-        "label": "Medium extender",
-        "value": "+14 cm (5.5\")"
-      },
-      {
-        "label": "Large extender",
-        "value": "+23 cm (9.1\")"
+        "label": "Style",
+        "value": "Pearl body harness / bralette chain"
       },
       {
         "label": "Occasion",
-        "value": "Honeymoon, bridal, boudoir, beach"
+        "value": "Beach, lingerie, honeymoon, editorial"
+      },
+      {
+        "label": "Fit",
+        "value": "Neck Fit Adjustable: 48 cm (18.9\") - 61 cm (24\") Waist Fit Adjustable: 79 cm (31.1\") - 102 cm (40.2\")"
       },
       {
         "label": "Care",
-        "value": "Avoid prolonged water exposure. Wipe with soft cloth."
+        "value": "Avoid perfume and lotions. Wipe gently with soft cloth."
       },
       {
         "label": "Shipping",
@@ -7269,57 +7283,36 @@
     ],
     "featured": false,
     "active": true,
-    "variants": [
-      "Gold Tone",
-      "Silver Tone"
-    ],
     "images": [
-      "https://i.etsystatic.com/55122258/r/il/afcfe2/8050476581/il_fullxfull.8050476581_cckx.jpg"
+      "https://i.etsystatic.com/55122258/r/il/54a47a/7967138784/il_fullxfull.7967138784_jbe7.jpg",
+      "https://i.etsystatic.com/55122258/r/il/2ede8e/7967149382/il_fullxfull.7967149382_c4aw.jpg",
+      "https://i.etsystatic.com/55122258/r/il/659d16/7967140792/il_fullxfull.7967140792_p6z2.jpg",
+      "https://i.etsystatic.com/55122258/r/il/f5136d/7816140198/il_fullxfull.7816140198_mqjm.jpg",
+      "https://i.etsystatic.com/55122258/r/il/a6450c/7967144502/il_fullxfull.7967144502_77xn.jpg",
+      "https://i.etsystatic.com/55122258/r/il/88ca45/7769131538/il_fullxfull.7769131538_9erk.jpg",
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp",
+      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.webp",
+      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.webp"
     ],
-    "variantGroups": [
-      {
-        "label": "Size",
-        "options": [
-          "Small (+7 cm (2.8\") ext)",
-          "Medium (+14 cm (5.5\") ext)",
-          "Large (+23 cm (9.1\") ext)"
-        ]
-      }
-    ],
-    "altText": "Gold tone stainless steel pearl body chain for festival wear and beach luxury occasions",
-    "gallery": [
-      "https://i.etsystatic.com/55122258/r/il/afcfe2/8050476581/il_fullxfull.8050476581_cckx.jpg",
-      "https://i.etsystatic.com/55122258/r/il/4e836e/7800322345/il_fullxfull.7800322345_sivz.jpg",
-      "https://i.etsystatic.com/55122258/r/il/ef88ff/7752370894/il_fullxfull.7752370894_c1g0.jpg",
-      "https://i.etsystatic.com/55122258/r/il/c88f40/7752370828/il_fullxfull.7752370828_4k6s.jpg",
-      "https://i.etsystatic.com/55122258/r/il/e0d0b6/7801769979/il_fullxfull.7801769979_dtlp.jpg",
-      "https://i.etsystatic.com/55122258/r/il/78ccff/7860367373/il_fullxfull.7860367373_4yi3.jpg",
-      "https://i.etsystatic.com/55122258/r/il/372c16/7742861574/il_fullxfull.7742861574_dgsv.jpg",
-      "https://i.etsystatic.com/55122258/r/il/9bb31a/7787172961/il_fullxfull.7787172961_487s.jpg",
-      "https://i.etsystatic.com/55122258/r/il/cc2da2/7753821828/il_fullxfull.7753821828_lyv1.jpg",
-      "https://i.etsystatic.com/55122258/r/il/1e7c1a/7787375199/il_fullxfull.7787375199_hxs5.jpg"
-    ],
-    "variantHeroes": {
-      "Gold Tone": "https://i.etsystatic.com/55122258/r/il/afcfe2/8050476581/il_fullxfull.8050476581_cckx.jpg"
-    },
+    "altText": "Gold stainless steel pearl body chain harness for beach festivals and special occasions",
     "dateAdded": "2026-06-12T15:00:27-04:00"
   },
   {
-    "id": "cross-body-chain",
-    "name": "Cross Body Chain",
+    "id": "gold-belly-body-chain",
+    "name": "Belly Body Chain",
     "price": 36,
     "currency": "EUR",
     "category": "Body Chains",
-    "description": "Your meaningful body accessory. This dainty gold body chain features a delicate cross charm — a personal, elegant piece handcrafted from waterproof stainless steel for the beach and everyday wear.\n\nSize & Dimensions:\nNeck Fit: Adjustable from 46 cm (18.1\") to 59 cm (23.2\") (includes a 13 cm (5.1\") extender)\nWaist/Hip Fit: Adjustable from 79 cm (31.1\") to 102 cm (40.2\")\nSelect Small (+7 cm (2.8\")), Medium (+14 cm (5.5\")), or Large (+23 cm (9.1\")) extension",
-    "fullDescription": "A fine stainless steel body chain with a small cross pendant at the centre — faith meets body jewelry in a piece that's subtle enough for every occasion. Three extender sizes for a custom fit.\n\nHandcrafted in gold-tone stainless steel. Completely waterproof and non-tarnish.",
+    "description": "Your beach-to-festival essential. This dainty gold or silver body and belly chain wraps the torso in a minimalist silhouette — adjustable, waterproof, anti-tarnish stainless steel for all-day wear.",
+    "fullDescription": "A bikini body chain that drapes beautifully over bare skin or a swimsuit. Available in Gold Stainless or Silver Stainless with three extender sizes for a custom fit: Small (+7 cm (2.8\")), Medium (+14 cm (5.5\")), or Large (+23 cm (9.1\")).\n\nHandcrafted in high-quality stainless steel. Completely waterproof and anti-tarnish. Wear it into the water and it stays just as good.",
     "specs": [
       {
         "label": "Material",
-        "value": "Gold-tone stainless steel (waterproof & non-tarnish)"
+        "value": "Stainless steel (waterproof & anti-tarnish)"
       },
       {
-        "label": "Charm",
-        "value": "Delicate cross pendant"
+        "label": "Colours",
+        "value": "Gold or Silver stainless"
       },
       {
         "label": "Small extender",
@@ -7344,18 +7337,12 @@
     ],
     "featured": false,
     "active": true,
+    "variants": [
+      "Gold Tone",
+      "Silver Tone"
+    ],
     "images": [
-      "/images/products/IMG_8906.webp",
-      "https://i.etsystatic.com/55122258/r/il/89f510/7787455583/il_fullxfull.7787455583_kuve.jpg",
-      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.webp",
-      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp",
-      "https://i.etsystatic.com/55122258/r/il/ea68a4/7750355964/il_fullxfull.7750355964_25s6.jpg",
-      "https://i.etsystatic.com/55122258/r/il/33e888/7787368067/il_fullxfull.7787368067_8zvi.jpg",
-      "https://i.etsystatic.com/55122258/r/il/d31d91/7798307897/il_fullxfull.7798307897_d9b4.jpg",
-      "https://i.etsystatic.com/55122258/r/il/372c16/7742861574/il_fullxfull.7742861574_dgsv.jpg",
-      "https://i.etsystatic.com/55122258/r/il/9bb31a/7787172961/il_fullxfull.7787172961_487s.jpg",
-      "https://i.etsystatic.com/55122258/r/il/1e7c1a/7787375199/il_fullxfull.7787375199_hxs5.jpg",
-      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.webp"
+      "https://i.etsystatic.com/55122258/r/il/5c4932/7780124258/il_fullxfull.7780124258_scos.jpg"
     ],
     "variantGroups": [
       {
@@ -7365,10 +7352,39 @@
           "Medium (+14 cm (5.5\") ext)",
           "Large (+23 cm (9.1\") ext)"
         ]
+      },
+      {
+        "label": "Butterfly Color",
+        "type": "options",
+        "options": [
+          "White",
+          "Blue",
+          "Pink",
+          "Purple",
+          "Yellow"
+        ]
       }
     ],
-    "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/1479b89fb2003cdf0e766de6c2f0f215/downloads/default.mp4",
-    "altText": "Gold-tone stainless steel cross body chain, dainty festival jewelry handcrafted for meaningful everyday wear",
+    "variantVideos": {
+      "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/d19254217bad88aa6ea23f524f3df497/downloads/default.mp4",
+      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/d19254217bad88aa6ea23f524f3df497/downloads/default.mp4"
+    },
+    "altText": "Gold tone stainless steel belly body chain for festivals and beach wear, adjustable and waterproof",
+    "gallery": [
+      "https://i.etsystatic.com/55122258/r/il/5c4932/7780124258/il_fullxfull.7780124258_scos.jpg",
+      "https://i.etsystatic.com/55122258/r/il/ed39ed/7779996890/il_fullxfull.7779996890_mpq0.jpg",
+      "https://i.etsystatic.com/55122258/r/il/77471a/7827944739/il_fullxfull.7827944739_ff8t.jpg",
+      "https://i.etsystatic.com/55122258/r/il/878873/7827955559/il_fullxfull.7827955559_n4qc.jpg",
+      "https://i.etsystatic.com/55122258/r/il/372c16/7742861574/il_fullxfull.7742861574_dgsv.jpg",
+      "https://i.etsystatic.com/55122258/r/il/9bb31a/7787172961/il_fullxfull.7787172961_487s.jpg",
+      "https://i.etsystatic.com/55122258/r/il/b22b9f/7976800048/il_fullxfull.7976800048_esh6.jpg",
+      "https://i.etsystatic.com/55122258/r/il/d76b2b/7779997014/il_fullxfull.7779997014_46jf.jpg",
+      "/images/products/9a0c82e4-a01e-47e0-a2b1-eb146080f383-2.webp"
+    ],
+    "variantHeroes": {
+      "Gold Tone": "https://i.etsystatic.com/55122258/r/il/5c4932/7780124258/il_fullxfull.7780124258_scos.jpg",
+      "Silver Tone": "https://i.etsystatic.com/55122258/r/il/d76b2b/7779997014/il_fullxfull.7779997014_46jf.jpg"
+    },
     "dateAdded": "2026-06-12T15:00:27-04:00"
   },
   {
@@ -7448,21 +7464,21 @@
     "dateAdded": "2026-06-12T15:00:27-04:00"
   },
   {
-    "id": "butterfly-body-chain",
-    "name": "Butterfly Body Chain",
-    "price": 32,
+    "id": "cross-body-chain",
+    "name": "Cross Body Chain",
+    "price": 36,
     "currency": "EUR",
     "category": "Body Chains",
-    "description": "Your rave and festival body statement. This gold butterfly body chain features a delicate butterfly charm in your chosen colour — a dainty, adjustable chest chain for festival looks, raves, and beach days.",
-    "fullDescription": "Choose your butterfly colour — White, Blue, Pink, Purple, or Yellow — and your extender size for a body chain that's uniquely yours. The butterfly charm sits at the chest of a fine chain harness that drapes across the torso beautifully.\n\nHandcrafted in gold stainless steel. Three extender sizes for a custom fit. Waterproof and anti-tarnish.",
+    "description": "Your meaningful body accessory. This dainty gold body chain features a delicate cross charm — a personal, elegant piece handcrafted from waterproof stainless steel for the beach and everyday wear.\n\nSize & Dimensions:\nNeck Fit: Adjustable from 46 cm (18.1\") to 59 cm (23.2\") (includes a 13 cm (5.1\") extender)\nWaist/Hip Fit: Adjustable from 79 cm (31.1\") to 102 cm (40.2\")\nSelect Small (+7 cm (2.8\")), Medium (+14 cm (5.5\")), or Large (+23 cm (9.1\")) extension",
+    "fullDescription": "A fine stainless steel body chain with a small cross pendant at the centre — faith meets body jewelry in a piece that's subtle enough for every occasion. Three extender sizes for a custom fit.\n\nHandcrafted in gold-tone stainless steel. Completely waterproof and non-tarnish.",
     "specs": [
       {
         "label": "Material",
-        "value": "Gold stainless steel (waterproof & anti-tarnish)"
+        "value": "Gold-tone stainless steel (waterproof & non-tarnish)"
       },
       {
-        "label": "Butterfly colours",
-        "value": "White, Blue, Pink, Purple, Yellow"
+        "label": "Charm",
+        "value": "Delicate cross pendant"
       },
       {
         "label": "Small extender",
@@ -7477,49 +7493,30 @@
         "value": "+23 cm (9.1\")"
       },
       {
-        "label": "Occasion",
-        "value": "Festival, rave, beach, everyday"
-      },
-      {
         "label": "Care",
         "value": "Wipe gently with soft cloth. Store in an airtight container."
       },
       {
         "label": "Shipping",
         "value": "Dispatches within 1–2 business days"
-      },
-      {
-        "label": "Size",
-        "value": "Neck Fit: Adjustable from 46 cm (18.1\") to 59 cm (23.2\") (includes a 13 cm (5.1\") extender) Waist/Hip Fit: Adjustable from 79 cm (31.1\") to 102 cm (40.2\") Select Small (+7 cm (2.8\")), Medium (+14 cm (5.5\")), or Large (+23 cm (9.1\")) extension."
       }
     ],
     "featured": false,
     "active": true,
     "images": [
-      "https://i.etsystatic.com/55122258/r/il/ae446a/8060401053/il_fullxfull.8060401053_15gk.jpg",
-      "https://i.etsystatic.com/55122258/r/il/d363a2/8060489691/il_fullxfull.8060489691_74zq.jpg",
-      "https://i.etsystatic.com/55122258/r/il/22c904/7874038194/il_fullxfull.7874038194_iu3b.jpg",
-      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp",
-      "https://i.etsystatic.com/55122258/r/il/cc8e98/7742858740/il_fullxfull.7742858740_59xj.jpg",
-      "https://i.etsystatic.com/55122258/r/il/6f7a29/8012508612/il_fullxfull.8012508612_4ucd.jpg",
-      "https://i.etsystatic.com/55122258/r/il/54e6ae/7790819453/il_fullxfull.7790819453_cxbl.jpg",
-      "https://i.etsystatic.com/55122258/r/il/c4f6ca/7790859607/il_fullxfull.7790859607_ljlp.jpg",
-      "https://i.etsystatic.com/55122258/r/il/738458/7753862542/il_fullxfull.7753862542_ix8i.jpg",
-      "https://i.etsystatic.com/55122258/r/il/1e7c1a/7787375199/il_fullxfull.7787375199_hxs5.jpg",
+      "/images/products/IMG_8906.webp",
+      "https://i.etsystatic.com/55122258/r/il/89f510/7787455583/il_fullxfull.7787455583_kuve.jpg",
       "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.webp",
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp",
+      "https://i.etsystatic.com/55122258/r/il/ea68a4/7750355964/il_fullxfull.7750355964_25s6.jpg",
+      "https://i.etsystatic.com/55122258/r/il/33e888/7787368067/il_fullxfull.7787368067_8zvi.jpg",
+      "https://i.etsystatic.com/55122258/r/il/d31d91/7798307897/il_fullxfull.7798307897_d9b4.jpg",
+      "https://i.etsystatic.com/55122258/r/il/372c16/7742861574/il_fullxfull.7742861574_dgsv.jpg",
+      "https://i.etsystatic.com/55122258/r/il/9bb31a/7787172961/il_fullxfull.7787172961_487s.jpg",
+      "https://i.etsystatic.com/55122258/r/il/1e7c1a/7787375199/il_fullxfull.7787375199_hxs5.jpg",
       "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.webp"
     ],
     "variantGroups": [
-      {
-        "label": "Butterfly Color",
-        "options": [
-          "White",
-          "Blue",
-          "Pink",
-          "Purple",
-          "Yellow"
-        ]
-      },
       {
         "label": "Size",
         "options": [
@@ -7529,8 +7526,8 @@
         ]
       }
     ],
-    "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/83edf3edc8a44b4b4c310d37634e9fb4/downloads/default.mp4",
-    "altText": "Gold butterfly body chain in stainless steel, adjustable festival jewelry with delicate charm detail",
+    "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/1479b89fb2003cdf0e766de6c2f0f215/downloads/default.mp4",
+    "altText": "Gold-tone stainless steel cross body chain, dainty festival jewelry handcrafted for meaningful everyday wear",
     "dateAdded": "2026-06-12T15:00:27-04:00"
   },
   {
@@ -11387,87 +11384,90 @@
     "sizeGuideImage": "/images/products/ba069f13-aaca-45e4-8e51-900c3b6ad8e3.png"
   },
   {
-    "id": "layered-body-chain-double-choker",
-    "name": "Layered Double Choker Body Chain",
-    "price": 51,
+    "id": "butterfly-body-chain",
+    "name": "Butterfly Body Chain",
+    "price": 32,
     "currency": "EUR",
     "category": "Body Chains",
-    "description": "Wear it over a bikini at the beach, or layer it over a top or dress the rest of the year — this dainty body chain works either way. I handcraft it with a double-layer choker at the neck that drops down into a layered waist chain, so it reads as a necklace and a belly chain in one piece, with real depth instead of a single flat strand.",
-    "fullDescription": "Made from waterproof, anti-tarnish gold-tone or silver-tone stainless steel — swim in it, wear it out, no tarnishing, no fuss.\n\nSizing Guide\nNeck: Fixed size, 38cm + 8cm extension\nWaist: Fixed size + extension — size varies by extension length:\nS — +10cm extension\nM — +14cm extension\nL — +18cm extension\nXL — +23cm extension\n\nFit Note: The neck chain fits most necks as-is. For the waist, measure where you would like it to sit and pick the closest size — the extension is what adjusts the fit.\n\nCustom Sizing: Need a specific measurement? Message me after ordering and I will make it to your exact size at no extra cost.\n\nCare Instructions: Wipe gently with a soft cloth after each wear. Store in an airtight container when not in use.\n\nShipping: Dispatches within 1–2 business days.\n\nPlease note that as each piece is handcrafted, no two pieces are identical and slight variations may occur.",
+    "description": "Your rave and festival body statement. This gold butterfly body chain features a delicate butterfly charm in your chosen colour — a dainty, adjustable chest chain for festival looks, raves, and beach days.",
+    "fullDescription": "Choose your butterfly colour — White, Blue, Pink, Purple, or Yellow — and your extender size for a body chain that's uniquely yours. The butterfly charm sits at the chest of a fine chain harness that drapes across the torso beautifully.\n\nHandcrafted in gold stainless steel. Three extender sizes for a custom fit. Waterproof and anti-tarnish.",
     "specs": [
       {
         "label": "Material",
-        "value": "Waterproof and anti-tarnish gold-tone or silver-tone stainless steel, 2mm mirror link chain"
+        "value": "Gold stainless steel (waterproof & anti-tarnish)"
       },
       {
-        "label": "Colors",
-        "value": "Gold, Silver"
+        "label": "Butterfly colours",
+        "value": "White, Blue, Pink, Purple, Yellow"
       },
       {
-        "label": "Closure",
-        "value": "Lobster clasp + extension chain, both at the neck and the waist"
+        "label": "Small extender",
+        "value": "+7 cm (2.8\")"
       },
       {
-        "label": "Waterproof & Sweat-Proof",
-        "value": "Yes — safe for water, sun, and everyday wear"
+        "label": "Medium extender",
+        "value": "+14 cm (5.5\")"
+      },
+      {
+        "label": "Large extender",
+        "value": "+23 cm (9.1\")"
+      },
+      {
+        "label": "Occasion",
+        "value": "Festival, rave, beach, everyday"
       },
       {
         "label": "Care",
-        "value": "Wipe gently with a soft cloth after each wear. Store in an airtight container when not in use."
+        "value": "Wipe gently with soft cloth. Store in an airtight container."
       },
       {
         "label": "Shipping",
         "value": "Dispatches within 1–2 business days"
-      }
-    ],
-    "variantGroups": [
-      {
-        "label": "Finish",
-        "type": "options",
-        "options": [
-          "Gold Tone",
-          "Silver Tone"
-        ]
       },
       {
-        "label": "Waist Size",
-        "type": "options",
-        "options": [
-          "S — +10cm extension",
-          "M — +14cm extension",
-          "L — +18cm extension",
-          "XL — +23cm extension"
-        ]
+        "label": "Size",
+        "value": "Neck Fit: Adjustable from 46 cm (18.1\") to 59 cm (23.2\") (includes a 13 cm (5.1\") extender) Waist/Hip Fit: Adjustable from 79 cm (31.1\") to 102 cm (40.2\") Select Small (+7 cm (2.8\")), Medium (+14 cm (5.5\")), or Large (+23 cm (9.1\")) extension."
       }
-    ],
-    "variants": [
-      "Gold Tone",
-      "Silver Tone"
-    ],
-    "images": [
-      "/images/products/c122afbc-105e-47e1-b39c-33fbf65e73de.png"
-    ],
-    "gallery": [
-      "/images/products/c122afbc-105e-47e1-b39c-33fbf65e73de.png",
-      "/images/products/81f9c47d-dace-4445-b77f-5000d9fe973e.jpeg",
-      "/images/products/37c75025-ed72-4866-a6fc-f8b072d1ad46.png",
-      "/images/products/29170a2b-01fb-4bd2-810d-6743fa4c2b2e.png",
-      "/images/products/486d0a5b-1fc0-4f72-848d-da3411cc9b58.png",
-      "/images/products/watermarked_img_5216291070479054344.jpg"
     ],
     "featured": false,
     "active": true,
-    "dateAdded": "2026-09-13T08:51:32-04:00",
-    "variantHeroes": {
-      "Gold Tone": "/images/products/c122afbc-105e-47e1-b39c-33fbf65e73de.png",
-      "Silver Tone": "/images/products/81f9c47d-dace-4445-b77f-5000d9fe973e.jpeg"
-    },
-    "variantVideos": {
-      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/20aadde57b9911284d1aaed63997041e/downloads/default.mp4",
-      "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/20aadde57b9911284d1aaed63997041e/downloads/default.mp4"
-    },
-    "sizeGuideImage": "/images/products/901f6258-21fa-4d42-93c0-dfcda4f3eac1.png",
-    "altText": "Delicate gold-tone stainless steel layered double choker body chain for festival wear and beach outfits"
+    "images": [
+      "https://i.etsystatic.com/55122258/r/il/ae446a/8060401053/il_fullxfull.8060401053_15gk.jpg",
+      "https://i.etsystatic.com/55122258/r/il/d363a2/8060489691/il_fullxfull.8060489691_74zq.jpg",
+      "https://i.etsystatic.com/55122258/r/il/22c904/7874038194/il_fullxfull.7874038194_iu3b.jpg",
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp",
+      "https://i.etsystatic.com/55122258/r/il/cc8e98/7742858740/il_fullxfull.7742858740_59xj.jpg",
+      "https://i.etsystatic.com/55122258/r/il/6f7a29/8012508612/il_fullxfull.8012508612_4ucd.jpg",
+      "https://i.etsystatic.com/55122258/r/il/54e6ae/7790819453/il_fullxfull.7790819453_cxbl.jpg",
+      "https://i.etsystatic.com/55122258/r/il/c4f6ca/7790859607/il_fullxfull.7790859607_ljlp.jpg",
+      "https://i.etsystatic.com/55122258/r/il/738458/7753862542/il_fullxfull.7753862542_ix8i.jpg",
+      "https://i.etsystatic.com/55122258/r/il/1e7c1a/7787375199/il_fullxfull.7787375199_hxs5.jpg",
+      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.webp",
+      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.webp"
+    ],
+    "variantGroups": [
+      {
+        "label": "Butterfly Color",
+        "options": [
+          "White",
+          "Blue",
+          "Pink",
+          "Purple",
+          "Yellow"
+        ]
+      },
+      {
+        "label": "Size",
+        "options": [
+          "Small (+7 cm (2.8\") ext)",
+          "Medium (+14 cm (5.5\") ext)",
+          "Large (+23 cm (9.1\") ext)"
+        ]
+      }
+    ],
+    "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/83edf3edc8a44b4b4c310d37634e9fb4/downloads/default.mp4",
+    "altText": "Gold butterfly body chain in stainless steel, adjustable festival jewelry with delicate charm detail",
+    "dateAdded": "2026-06-12T15:00:27-04:00"
   },
   {
     "id": "star-pendant-rhinestone-choker",

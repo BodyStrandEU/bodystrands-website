@@ -12489,11 +12489,19 @@
         "value": "Dispatches within 1–2 business days"
       }
     ],
-    "images": [],
+    "images": [
+      "/images/products/f21c1089-0e83-4955-bbed-306db0e77ef7.png",
+      "/images/products/f932d541-2355-42df-b2e2-7a37821fbaba.png",
+      "/images/products/2bdffe28-0cdd-446b-ab95-41499540e032.png",
+      "/images/products/887eae8a-fb94-4521-9374-831a34017e41.png",
+      "/images/products/96c97328-fb9e-4b36-a9e7-f5cab31fd69e.png"
+    ],
     "featured": false,
     "active": true,
     "christmas": true,
     "dateAdded": "2026-10-13T10:44:20.709Z",
-    "altText": "18K gold-plated spinning snowflake pendant necklace with cubic zirconia accents, fidget-friendly festive jewelry"
+    "altText": "18K gold-plated spinning snowflake pendant necklace with cubic zirconia accents, fidget-friendly festive jewelry",
+    "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/ca248325ae3080f11ea09e986307a2bb/downloads/default.mp4",
+    "sizeGuideImage": "/images/products/d81ea5eb-50d0-46da-812c-ca88a085e2f4.png"
   }
 ]

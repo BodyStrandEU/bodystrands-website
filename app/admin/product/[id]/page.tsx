@@ -1699,7 +1699,21 @@ export default function ProductEditor({ params }: { params: Promise<{ id: string
                       const first = (form.variantImages ?? {})[v]?.[0];
                       if (first) heroes[v] = first;
                     }
-                    setForm((f) => ({ ...f, gallery: all, variantHeroes: heroes, variantImages: {} }));
+                    // A product can have a Color/Finish/Tone checkout dropdown (variantGroups)
+                    // with no hero-selector variants set up yet — without this, Unified Gallery
+                    // mode has no variants to attach G/S badges to, and every save silently
+                    // drops back to a flat gallery with no way to pick a hero per finish.
+                    // Seed `variants` from that dropdown the moment gallery mode turns on, so
+                    // the badges exist from the very first photo upload instead of requiring a
+                    // manual data fix after the fact.
+                    let variants = form.variants ?? [];
+                    if (variants.length === 0) {
+                      const colorGroup = (form.variantGroups ?? []).find(
+                        (g) => /^(color|finish|tone)$/i.test(g.label) && (g.options?.length ?? 0) >= 2 && (g.options?.length ?? 0) <= 6
+                      );
+                      if (colorGroup?.options) variants = colorGroup.options;
+                    }
+                    setForm((f) => ({ ...f, variants, gallery: all, variantHeroes: heroes, variantImages: {} }));
                   }
                 }}
                 style={{

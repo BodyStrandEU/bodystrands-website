@@ -37,13 +37,16 @@ export function proxy(request: NextRequest) {
     return NextResponse.next();
   }
 
-  // Detect shopper's local currency from the edge's geo-IP header, once per browser.
+  // Detect shopper's local currency from the edge's geo-IP header on every visit —
+  // there's no manual currency switcher on the site, so nothing is lost by always
+  // re-deriving it. Previously this only ran once per browser (gated on the cookie's
+  // mere presence), so a shopper's currency stayed stuck at whatever country they were
+  // in up to 30 days ago even after they'd moved somewhere else — confirmed Oct 14,
+  // 2026 by a user who travelled Turkey -> Germany and kept seeing TRY prices.
   const response = NextResponse.next();
-  if (!request.cookies.get(CURRENCY_COOKIE)) {
-    const country  = request.headers.get("cf-ipcountry") ?? "";
-    const currency = currencyForCountry(country);
-    response.cookies.set(CURRENCY_COOKIE, currency, { path: "/", maxAge: 60 * 60 * 24 * 30 });
-  }
+  const country  = request.headers.get("cf-ipcountry") ?? "";
+  const currency = currencyForCountry(country);
+  response.cookies.set(CURRENCY_COOKIE, currency, { path: "/", maxAge: 60 * 60 * 24 * 30 });
   return response;
 }
 

@@ -7344,7 +7344,7 @@
       "Silver Tone"
     ],
     "images": [
-      "https://i.etsystatic.com/55122258/r/il/5c4932/7780124258/il_fullxfull.7780124258_scos.jpg"
+      "/images/products/b3a2d197-334f-4d5e-b050-3d3727a1f873.png"
     ],
     "variantGroups": [
       {
@@ -7354,17 +7354,6 @@
           "Medium (+14 cm (5.5\") ext)",
           "Large (+23 cm (9.1\") ext)"
         ]
-      },
-      {
-        "label": "Butterfly Color",
-        "type": "options",
-        "options": [
-          "White",
-          "Blue",
-          "Pink",
-          "Purple",
-          "Yellow"
-        ]
       }
     ],
     "variantVideos": {
@@ -7373,7 +7362,7 @@
     },
     "altText": "Gold tone stainless steel belly body chain for festivals and beach wear, adjustable and waterproof",
     "gallery": [
-      "https://i.etsystatic.com/55122258/r/il/5c4932/7780124258/il_fullxfull.7780124258_scos.jpg",
+      "/images/products/b3a2d197-334f-4d5e-b050-3d3727a1f873.png",
       "https://i.etsystatic.com/55122258/r/il/ed39ed/7779996890/il_fullxfull.7779996890_mpq0.jpg",
       "https://i.etsystatic.com/55122258/r/il/77471a/7827944739/il_fullxfull.7827944739_ff8t.jpg",
       "https://i.etsystatic.com/55122258/r/il/878873/7827955559/il_fullxfull.7827955559_n4qc.jpg",
@@ -7384,10 +7373,11 @@
       "/images/products/9a0c82e4-a01e-47e0-a2b1-eb146080f383-2.webp"
     ],
     "variantHeroes": {
-      "Gold Tone": "https://i.etsystatic.com/55122258/r/il/5c4932/7780124258/il_fullxfull.7780124258_scos.jpg",
-      "Silver Tone": "https://i.etsystatic.com/55122258/r/il/d76b2b/7779997014/il_fullxfull.7779997014_46jf.jpg"
+      "Gold Tone": "/images/products/b3a2d197-334f-4d5e-b050-3d3727a1f873.png",
+      "Silver Tone": "/images/products/9a0c82e4-a01e-47e0-a2b1-eb146080f383-2.webp"
     },
-    "dateAdded": "2026-06-12T15:00:27-04:00"
+    "dateAdded": "2026-06-12T15:00:27-04:00",
+    "sizeGuideImage": "/images/products/42acd825-376e-49f4-b946-74047a8ed4bb-6.21.27-AM.png"
   },
   {
     "id": "butterfly-layered-belly-chain",

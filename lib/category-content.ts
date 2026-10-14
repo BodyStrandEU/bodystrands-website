@@ -5,11 +5,16 @@
 // data/products.json — keep it that way when editing (no invented specs or grades).
 //
 // Paragraph and list text may contain <a href="/shop/…"> links; headings and FAQ are plain text.
+// A "products" block renders the named product ids as real clickable photo cards (same
+// ProductCard used on the shop grid) right under the paragraph/list that names them —
+// use it after a recommendation calls out specific products by name, so the reader can
+// see and click the actual piece instead of only a text link.
 
 export type GuideBlock =
   | { type: "heading"; text: string }
   | { type: "paragraph"; text: string }
-  | { type: "list"; items: string[] };
+  | { type: "list"; items: string[] }
+  | { type: "products"; ids: string[] };
 
 export type CategoryContent = {
   intro: string;
@@ -84,6 +89,7 @@ export const CATEGORY_CONTENT: Partial<Record<string, CategoryContent>> = {
         "Charms and meaning: " + link("zodiac-yoga-belly-chain", "Zodiac Belly Chain") + ", " + link("cross-belly-chain", "Cross Belly Chain") + ", " + link("butterfly-charm-belly-chain", "Butterfly Charm Belly Chain") + " and " + link("dragonfly-charm-belly-chain", "Dragonfly Charm Belly Chain") + ".",
         "Layered: " + link("layered-hip-chain", "Layered Hip Chain") + " and " + link("silver-waist-chain", "Layered Belly Chain") + ".",
       ] },
+      { type: "products", ids: ["snake-belly-chain", "pearl-belly-chain", "cowrie-shell-belly-chain", "zodiac-yoga-belly-chain", "silver-waist-chain"] },
       { type: "heading", text: "How to measure for a belly chain" },
       { type: "paragraph", text: "Decide where you want it to sit, at your natural waist or lower on your hips, and measure around that exact spot with a soft tape. Many of our belly chains are adjustable, and the " + link("plus-size-belly-chain", "Plus Size Belly Chain") + " is made for larger measurements. For a perfect fit, message us after checkout with your measurement and we'll size it for free." },
     ],

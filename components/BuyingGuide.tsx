@@ -1,4 +1,6 @@
 import type { CategoryContent } from "@/lib/category-content";
+import { products } from "@/lib/products";
+import ProductCard from "@/components/ProductCard";
 
 // Buying guide + FAQ block (with FAQPage structured data) shared by category pages
 // (/shop?category=…), /gifts and /christmas. Paragraph and list text may contain
@@ -17,6 +19,15 @@ export default function BuyingGuide({ label, content }: { label: string; content
                 <li key={j} className="text-sm font-light leading-loose tracking-wide text-[#2C2220]/80" dangerouslySetInnerHTML={{ __html: item }} />
               ))}
             </ul>
+          ) : block.type === "products" ? (
+            <div key={i} className="grid grid-cols-2 sm:grid-cols-3 gap-x-3 gap-y-6 my-1">
+              {block.ids
+                .map((id) => products.find((p) => p.id === id))
+                .filter((p): p is NonNullable<typeof p> => !!p && p.active !== false)
+                .map((p) => (
+                  <ProductCard key={p.id} product={p} />
+                ))}
+            </div>
           ) : (
             <p key={i} className="text-sm font-light leading-loose tracking-wide text-[#2C2220]/80" dangerouslySetInnerHTML={{ __html: block.text }} />
           )

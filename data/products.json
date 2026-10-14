@@ -12551,7 +12551,9 @@
         "value": "Dispatches within 1–2 business days"
       }
     ],
-    "images": [],
+    "images": [
+      "/images/products/954282e7-2a97-4800-9c66-1fd8ce6104bd.jpeg"
+    ],
     "variantGroups": [
       {
         "label": "Color",
@@ -12568,6 +12570,12 @@
     "giftTags": [
       "bridal"
     ],
-    "altText": "Layered bridal back chain with pearl safety pin attachment, three cascading drapes in gold-tone or silver-tone stainless steel for backless wedding dresses"
+    "altText": "Layered bridal back chain with pearl safety pin attachment, three cascading drapes in gold-tone or silver-tone stainless steel for backless wedding dresses",
+    "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/2ff4c648c589651e8930758858259285/downloads/default.mp4",
+    "gallery": [
+      "/images/products/954282e7-2a97-4800-9c66-1fd8ce6104bd.jpeg",
+      "/images/products/7f1b8e17-e038-4570-a580-1077733a63b4.png"
+    ],
+    "sizeGuideImage": "/images/products/5b65b889-26dd-4955-9faa-771c434fd2b1.png"
   }
 ]

@@ -12508,5 +12508,66 @@
     "altText": "18K gold-plated spinning snowflake pendant necklace with cubic zirconia accents, fidget-friendly festive jewelry",
     "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/ca248325ae3080f11ea09e986307a2bb/downloads/default.mp4",
     "sizeGuideImage": "/images/products/d81ea5eb-50d0-46da-812c-ca88a085e2f4.png"
+  },
+  {
+    "id": "layered-bridal-back-chain",
+    "name": "Layered Bridal Back Chain",
+    "price": 40,
+    "currency": "EUR",
+    "category": "Back Chains",
+    "description": "Three cascading chains drape down your back in a soft, layered curve — no clasp, no hassle, just pin the pearl safety pin anywhere on your outfit and you are set. Available in gold-tone or silver-tone stainless steel, this piece turns any backless dress, open-back top, or bare shoulder into the main event.",
+    "fullDescription": "Three layered drapes — long, middle, and small — cascade down the back from a pearl safety pin attachment, so there is no clasp to fuss with. Just pin it anywhere on your outfit and it adjusts to fit any neckline or backless silhouette, not just one dress style.\n\nHandcrafted in waterproof, anti-tarnish stainless steel, gold-tone or silver-tone. Drape lengths: Long 90cm, Middle 70cm, Small 50cm. Want a drape shorter or longer? Message us after checkout and we will adjust it for free.\n\nCare Instructions: Wipe gently with a soft cloth after wear. Store in an airtight container when not in use.\n\nShipping: Dispatches within 1–2 business days.\n\nPlease note that as each piece is handcrafted, no two pieces are identical and slight variations may occur.",
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Handmade stainless steel (waterproof & anti-tarnish), gold-tone or silver-tone"
+      },
+      {
+        "label": "Attachment",
+        "value": "Pearl safety pin — fully adjustable, pins anywhere on your outfit"
+      },
+      {
+        "label": "Long drape",
+        "value": "90cm"
+      },
+      {
+        "label": "Middle drape",
+        "value": "70cm"
+      },
+      {
+        "label": "Small drape",
+        "value": "50cm"
+      },
+      {
+        "label": "Custom fit",
+        "value": "Message us after ordering — we resize at no extra cost"
+      },
+      {
+        "label": "Care",
+        "value": "Wipe gently with a soft cloth. Store in an airtight container."
+      },
+      {
+        "label": "Shipping",
+        "value": "Dispatches within 1–2 business days"
+      }
+    ],
+    "images": [],
+    "variantGroups": [
+      {
+        "label": "Color",
+        "type": "options",
+        "options": [
+          "Gold Tone",
+          "Silver Tone"
+        ]
+      }
+    ],
+    "featured": false,
+    "active": true,
+    "dateAdded": "2026-10-14T12:06:28.733Z",
+    "giftTags": [
+      "bridal"
+    ],
+    "altText": "Layered bridal back chain with pearl safety pin attachment, three cascading drapes in gold-tone or silver-tone stainless steel for backless wedding dresses"
   }
 ]

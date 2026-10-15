@@ -4663,14 +4663,12 @@
     "featured": false,
     "active": true,
     "images": [
+      "https://i.etsystatic.com/55122258/r/il/a29dfe/7978804622/il_fullxfull.7978804622_tuwq.jpg",
       "https://i.etsystatic.com/55122258/r/il/a1e016/7977296540/il_fullxfull.7977296540_q99j.jpg",
       "https://i.etsystatic.com/55122258/r/il/95609f/7977321226/il_fullxfull.7977321226_4akx.jpg",
-      "https://i.etsystatic.com/55122258/r/il/a29dfe/7978804622/il_fullxfull.7978804622_tuwq.jpg",
       "/images/products/ede51c2e-7b01-48a2-8c36-f65dfb5251a8.webp",
       "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp",
-      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.webp",
-      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.webp",
-      "https://i.etsystatic.com/55122258/r/il/26282e/7734979557/il_fullxfull.7734979557_95jd.jpg"
+      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.webp"
     ],
     "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/6fc8335347ccfd5e332cdf6a30175fa8/downloads/default.mp4",
     "altText": "Gold stainless steel pearl hand chain drapes wrist to finger for bridal and boho occasions",
@@ -4687,7 +4685,10 @@
         ]
       }
     ],
-    "dateAdded": "2026-06-12T15:00:27-04:00"
+    "dateAdded": "2026-06-12T15:00:27-04:00",
+    "giftTags": [
+      "bridal"
+    ]
   },
   {
     "id": "barefoot-toe-chain-anklet",

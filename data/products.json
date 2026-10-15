@@ -1601,7 +1601,7 @@
   },
   {
     "id": "silver-eyeglasses-chain",
-    "name": "Eyeglasses Chain",
+    "name": "Eyeglasses Chain 4mm",
     "price": 16,
     "currency": "EUR",
     "category": "Eyeglasses Chains",
@@ -1618,7 +1618,7 @@
       },
       {
         "label": "Chain width",
-        "value": "1.5 mm"
+        "value": "4 mm"
       },
       {
         "label": "Total length",
@@ -1644,7 +1644,7 @@
       "Silver Tone"
     ],
     "images": [
-      "https://i.etsystatic.com/55122258/r/il/d5e410/7895318147/il_fullxfull.7895318147_47mv.jpg"
+      "/images/products/ef680b82-420c-4b82-948b-55e064b049a3.png"
     ],
     "variantVideos": {
       "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/ed06dbf8031d8f63cc95e123a0053b83/downloads/default.mp4",
@@ -1652,19 +1652,15 @@
     },
     "altText": "Stainless steel eyeglasses chain in gold tone with adjustable rubber grips for secure glasses retention",
     "gallery": [
-      "https://i.etsystatic.com/55122258/r/il/d5e410/7895318147/il_fullxfull.7895318147_47mv.jpg",
+      "/images/products/ef680b82-420c-4b82-948b-55e064b049a3.png",
+      "https://i.etsystatic.com/55122258/r/il/2a9ec4/7847370486/il_fullxfull.7847370486_zn3k.jpg",
       "https://i.etsystatic.com/55122258/r/il/5fd435/7847349256/il_fullxfull.7847349256_3xii.jpg",
       "https://i.etsystatic.com/55122258/r/il/41722b/7847365118/il_fullxfull.7847365118_5omu.jpg",
-      "https://i.etsystatic.com/55122258/r/il/e75240/7847360300/il_fullxfull.7847360300_8hfg.jpg",
-      "https://i.etsystatic.com/55122258/r/il/a78dca/7847363182/il_fullxfull.7847363182_6v8v.jpg",
-      "https://i.etsystatic.com/55122258/r/il/857d95/7811531149/il_fullxfull.7811531149_g087.jpg",
-      "/images/products/c5c213f0-4a18-4128-80db-53dc2923fe0d.webp",
-      "https://i.etsystatic.com/55122258/r/il/2a9ec4/7847370486/il_fullxfull.7847370486_zn3k.jpg",
       "https://i.etsystatic.com/55122258/r/il/08979d/7895309513/il_fullxfull.7895309513_psao.jpg"
     ],
     "variantHeroes": {
-      "Gold Tone": "https://i.etsystatic.com/55122258/r/il/d5e410/7895318147/il_fullxfull.7895318147_47mv.jpg",
-      "Silver Tone": "/images/products/c5c213f0-4a18-4128-80db-53dc2923fe0d.webp"
+      "Gold Tone": "/images/products/ef680b82-420c-4b82-948b-55e064b049a3.png",
+      "Silver Tone": "https://i.etsystatic.com/55122258/r/il/2a9ec4/7847370486/il_fullxfull.7847370486_zn3k.jpg"
     },
     "dateAdded": "2026-06-12T15:00:27-04:00"
   },

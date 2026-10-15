@@ -905,49 +905,126 @@
     "plusSize": true
   },
   {
-    "id": "boho-shell-choker-necklace",
-    "name": "Boho Shell Choker Necklace",
-    "price": 28,
+    "id": "paperclip-initial-necklace",
+    "name": "Paperclip Chain Diamond Initial Necklace",
+    "price": 30,
     "currency": "EUR",
     "category": "Necklaces",
-    "description": "Your go-to beach accessory. This bohemian choker features natural cowrie shells and delicate chain for an effortless coastal look — perfect for the beach, festival, or a summer evening out.",
-    "fullDescription": "Lightweight and tactile, this handcrafted shell choker brings a natural, sun-drenched energy to any outfit. The cowrie shells move gently as you do, catching light and drawing the eye in the most effortless way.\n\nHandmade with slight natural variations that make each piece uniquely yours. Style it alone for a minimalist look or layer it with other necklaces for a boho-stacked effect.",
+    "description": "A chunky gold paperclip chain with your initial in rhinestones, hanging right from the clasp — stainless steel, hypoallergenic, and waterproof.",
+    "fullDescription": "A chunky gold paperclip chain with your initial in rhinestones, hanging right from the clasp.\n\nSimple and bold at the same time. The toggle clasp sits at the front with the letter charm dangling straight off it, unisex and easy to layer or wear alone. Made from stainless steel with an 18K PVD real gold plated finish, so it’s hypoallergenic and holds its color without fading or tarnishing.\n\nPlease note that as each piece is handcrafted, no two pieces are identical and slight variations may occur.",
     "specs": [
       {
-        "label": "Style",
-        "value": "Boho shell choker"
+        "label": "Material",
+        "value": "Stainless steel"
       },
       {
-        "label": "Materials",
-        "value": "Cowrie shells, chain"
+        "label": "Finish",
+        "value": "18K PVD real gold plated"
       },
       {
-        "label": "Occasion",
-        "value": "Beach, festival, everyday"
+        "label": "Charm",
+        "value": "Rhinestone initial letter, choose your letter A-Z"
+      },
+      {
+        "label": "Length",
+        "value": "48cm"
+      },
+      {
+        "label": "Closure",
+        "value": "Front toggle (OT) clasp"
+      },
+      {
+        "label": "Hypoallergenic",
+        "value": "Yes"
+      },
+      {
+        "label": "Waterproof",
+        "value": "Yes"
+      },
+      {
+        "label": "Tarnish-resistant",
+        "value": "Yes"
       },
       {
         "label": "Care",
-        "value": "Avoid prolonged water exposure. Wipe gently with a soft cloth."
+        "value": "Wipe gently with a soft cloth after each wear. Store in an airtight container when not in use."
       },
       {
         "label": "Shipping",
-        "value": "Dispatches within 1–2 business days"
+        "value": "Dispatches within 1-2 business days"
       }
+    ],
+    "tags": [
+      "namenskette",
+      "kette mit namen",
+      "dainty name necklace",
+      "custom letter choker",
+      "initials choker",
+      "initialnecklace",
+      "spaced necklace",
+      "mom initial necklace",
+      "balloon initial",
+      "name logo necklace",
+      "monogramnecklace",
+      "paperclip necklace",
+      "big letter necklace"
+    ],
+    "variantGroups": [
+      {
+        "label": "Letter",
+        "type": "options",
+        "options": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F",
+          "G",
+          "H",
+          "I",
+          "J",
+          "K",
+          "L",
+          "M",
+          "N",
+          "O",
+          "P",
+          "Q",
+          "R",
+          "S",
+          "T",
+          "U",
+          "V",
+          "W",
+          "X",
+          "Y",
+          "Z"
+        ]
+      }
+    ],
+    "images": [
+      "/images/products/a1256d7a-79ec-4f78-8b49-19649a23176b.png"
+    ],
+    "gallery": [
+      "/images/products/a1256d7a-79ec-4f78-8b49-19649a23176b.png",
+      "/images/products/b8fb5de6-c3f4-4835-a312-0dc5093aa112.png",
+      "/images/products/73014336-037b-4a25-b503-63f67d11ef24.png",
+      "/images/products/51953be0-2a5b-465c-89dd-48404d3701fc.png",
+      "/images/products/4c154510-a4d9-4055-9d01-e62e1f7cc15b.png",
+      "/images/products/b993eb49-d4e6-44a0-a8ae-49186b4c3bb8.png",
+      "/images/products/53165426-64d8-4bb3-b7a6-f685893d381f.png",
+      "/images/products/SaveClip.App_94009087_3737129469692488_4504472029461009842_n.jpg"
     ],
     "featured": false,
     "active": true,
-    "images": [
-      "https://i.etsystatic.com/55122258/r/il/be3ea2/7687042498/il_fullxfull.7687042498_cocb.jpg",
-      "https://i.etsystatic.com/55122258/r/il/8eee38/7734983899/il_fullxfull.7734983899_r6vj.jpg",
-      "https://i.etsystatic.com/55122258/r/il/64cd0d/7687041388/il_fullxfull.7687041388_rl3h.jpg",
-      "https://i.etsystatic.com/55122258/r/il/7da48f/7687042720/il_fullxfull.7687042720_3x7u.jpg",
-      "https://i.etsystatic.com/55122258/r/il/5f7947/7812491598/il_fullxfull.7812491598_f2zb.jpg",
-      "https://i.etsystatic.com/55122258/r/il/ff330b/7734985527/il_fullxfull.7734985527_syxl.jpg",
-      "https://i.etsystatic.com/55122258/r/il/91ecb7/7734986013/il_fullxfull.7734986013_2ti7.jpg"
+    "dateAdded": "2026-09-29T12:23:20.389Z",
+    "altText": "Gold paperclip chain necklace with rhinestone initial letter charm, chunky unisex hypoallergenic stainless steel necklace",
+    "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/b6b48a210e884d07191f2d0bef234b7c/downloads/default.mp4",
+    "giftTags": [
+      "personalized"
     ],
-    "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/2891a3a9696bb6785ee46e3048191cb2/downloads/default.mp4",
-    "altText": "Boho shell choker necklace in stainless steel with cowrie shells and delicate chain for beach-inspired coastal style",
-    "dateAdded": "2026-06-12T15:00:27-04:00"
+    "sizeGuideImage": "/images/products/4c154510-a4d9-4055-9d01-e62e1f7cc15b.png"
   },
   {
     "id": "pearl-heart-initial-anklet",
@@ -1842,84 +1919,95 @@
     "sizeGuideImage": "/images/products/404f30c7-07d3-4920-85aa-54590a974058.png"
   },
   {
-    "id": "zodiac-slip-on-necklace",
-    "name": "Zodiac Slip-On Necklace",
-    "price": 24,
+    "id": "beaded-star-choker",
+    "name": "Beaded Star Choker Necklace",
+    "price": 30,
     "currency": "EUR",
     "category": "Necklaces",
-    "description": "Your star sign, around your neck. This dainty gold zodiac necklace features a personalised star sign charm on a clasp-free slip-on chain — no fiddly clasps, just slide it on and wear it every day.",
-    "fullDescription": "A 30 cm (11.8\") slip-on design that goes over the head without a clasp, sitting right at the collarbone. The zodiac charm is delicate and dainty — enough to catch the eye up close without being overwhelming.\n\nAvailable in gold or silver stainless steel. Choose your star sign at checkout. A meaningful gift for a birthday, graduation, or anyone who lives by their chart.",
+    "description": "A beaded choker with a dangling star charm, available in red or green — stainless steel, waterproof, and festive without trying too hard.",
+    "fullDescription": "A beaded choker with a dangling star charm, available in red or green.\n\nSimple and festive without trying too hard. Choose the chain color you like, and choose whether you want the star charm or just the clean beaded choker on its own. Made from stainless steel, so it’s waterproof and won’t fade or tarnish, holiday season or not.\n\nPlease note that as each piece is handcrafted, no two pieces are identical and slight variations may occur.",
     "specs": [
       {
         "label": "Material",
-        "value": "Gold or Silver stainless steel (tarnish-resistant)"
+        "value": "Stainless steel"
       },
       {
-        "label": "Style",
-        "value": "Clasp-free slip-on zodiac choker"
+        "label": "Finish",
+        "value": "Gold tone"
       },
       {
-        "label": "Length",
-        "value": "Approx. 30 cm (11.8\")"
+        "label": "Beads",
+        "value": "Faceted glass, available in red or green"
       },
       {
         "label": "Charm",
-        "value": "Your zodiac star sign"
+        "value": "Star charm, optional — select choker only or with star charm"
+      },
+      {
+        "label": "Size",
+        "value": "35cm + 6cm extender"
+      },
+      {
+        "label": "Waterproof",
+        "value": "Yes"
+      },
+      {
+        "label": "Tarnish-resistant",
+        "value": "Yes"
       },
       {
         "label": "Care",
-        "value": "Avoid water, perfumes, lotions. Wipe with soft cloth."
+        "value": "Wipe gently with a soft cloth after each wear. Store in an airtight container when not in use."
       },
       {
         "label": "Shipping",
-        "value": "Dispatches within 1–2 business days"
+        "value": "Dispatches within 1-2 business days"
       }
-    ],
-    "featured": false,
-    "active": true,
-    "images": [
-      "https://i.etsystatic.com/55122258/r/il/e0581f/8142951625/il_fullxfull.8142951625_73u3.jpg",
-      "https://i.etsystatic.com/55122258/r/il/445881/8095081130/il_fullxfull.8095081130_nd5n.jpg",
-      "https://i.etsystatic.com/55122258/r/il/9c67db/8143046201/il_fullxfull.8143046201_cm3q.jpg",
-      "https://i.etsystatic.com/55122258/r/il/7d203e/7759169030/il_fullxfull.7759169030_aizv.jpg",
-      "https://i.etsystatic.com/55122258/r/il/42a411/8095057756/il_fullxfull.8095057756_knht.jpg",
-      "https://i.etsystatic.com/55122258/r/il/255c79/7805113761/il_fullxfull.7805113761_ko80.jpg",
-      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.webp",
-      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.webp",
-      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp"
     ],
     "variantGroups": [
       {
-        "label": "Zodiac Sign",
+        "label": "Color",
+        "type": "options",
         "options": [
-          "Aries (3.21-4.19)",
-          "Taurus (4.20-5.20)",
-          "Gemini (5.21-6.20)",
-          "Cancer (6.21-7.22)",
-          "Leo (7.23-8.22)",
-          "Virgo (8.23-9.22)",
-          "Libra (9.23-10.22)",
-          "Scorpio(10.23-11.21)",
-          "Sagit. (11.22-12.21)",
-          "Capricorn 12.22-1.19",
-          "Aquarius (1.20-2.18)",
-          "Pisces (2.19-3.20)"
+          "Red",
+          "Green"
         ]
       },
       {
-        "label": "Color",
+        "label": "Style",
+        "type": "options",
         "options": [
-          "Gold",
-          "Silver"
-        ]
+          "Choker Only",
+          "With Star Charm"
+        ],
+        "optionPrices": {
+          "Choker Only": 0,
+          "With Star Charm": 5
+        }
       }
     ],
-    "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/9224a2d85c2c115c3ed98769525039a6/downloads/default.mp4",
-    "altText": "Gold stainless steel dainty zodiac necklace with personalized star sign charm slip-on chain design",
-    "dateAdded": "2026-06-12T15:00:27-04:00",
-    "giftTags": [
-      "personalized"
-    ]
+    "images": [
+      "/images/products/fc1bd4f6-12c1-42a2-b423-8fd68e1c95dd.png"
+    ],
+    "gallery": [
+      "/images/products/fc1bd4f6-12c1-42a2-b423-8fd68e1c95dd.png",
+      "/images/products/ea0a87ae-0d8c-4c95-ba52-98673f7bf5ce.png",
+      "/images/products/d69e8fed-cb9a-435e-8081-a5bf905fe042.png",
+      "/images/products/7df2280d-a2f9-401b-93b8-0d44028ffc4a.png",
+      "/images/products/0a2322a0-f1fe-4869-8a31-6b44f11952c4.png",
+      "/images/products/IMG_3827-2.jpg",
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
+      "/images/products/de8d7794-b563-4327-b4c0-addbfbac4b89-copy.png",
+      "/images/products/a769b011-4bbe-4487-a345-c3e95ed151d0-copy-3.png",
+      "/images/products/953c004d-e65a-4a81-b38e-f55202bfe3b0-copy.png"
+    ],
+    "featured": false,
+    "active": true,
+    "christmas": true,
+    "dateAdded": "2026-10-07T19:03:01.656Z",
+    "altText": "Red and green beaded star choker necklace, stainless steel waterproof holiday jewelry with optional star charm",
+    "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/4f9b5e63962e3d5eb07cd96259beaccb/downloads/default.mp4",
+    "sizeGuideImage": "/images/products/8c71db0b-041d-4634-b376-59fbaa733943.png"
   },
   {
     "id": "snake-belly-chain",
@@ -2683,76 +2771,93 @@
     "dateAdded": "2026-06-12T15:00:27-04:00"
   },
   {
-    "id": "monogram-letter-necklace",
-    "name": "Monogram Letter Necklace",
-    "price": 24,
+    "id": "initial-letter-rhinestone-choker",
+    "name": "Diamond Initial Necklace ",
+    "price": 30,
     "currency": "EUR",
     "category": "Necklaces",
-    "description": "Your initial, in gold. This dainty gold necklace features a personalised alphabet charm in your chosen letter — a minimalist, meaningful piece handcrafted in tarnish-resistant stainless steel.",
-    "fullDescription": "A delicate chain holds a single script letter charm at the collarbone — clean, personal, and completely understated. Choose your letter at checkout and wear it as a daily reminder or a gift that means something.\n\nHandcrafted in gold stainless steel. Tarnish-resistant and hypoallergenic. A thoughtful gift for birthdays, anniversaries, and any occasion that calls for something personal.",
+    "description": "A personalized rhinestone initial charm layered over a dainty gold mirror-link chain — simple, sentimental, and unmistakably yours.",
+    "fullDescription": "This necklace is for the girl who likes her jewelry a little personal. A dainty gold mirror-link chain layers over a cable chain holding your initial in sparkling rhinestones — simple, sentimental, and unmistakably yours. Handmade from stainless steel, it's built to wear every day without fading, tarnishing, or giving you grief.\n\nMaterials: Stainless steel\nFinish: Gold tone\nPendant: Rhinestone initial letter charm — choose your letter, A to Z\nSize: Chain 35cm + 6cm extender\nWaterproof: Yes\nTarnish-resistant: Yes\n\nCare Instructions\nWipe gently with a soft cloth after each wear.\nStore in an airtight container when not in use.\n\nShipping: Dispatches within 1–2 business days.\n\nPlease note that as each piece is handcrafted, no two pieces are identical and slight variations may occur.",
     "specs": [
       {
         "label": "Material",
-        "value": "Gold stainless steel (tarnish-resistant & hypoallergenic)"
+        "value": "Stainless steel"
       },
       {
-        "label": "Style",
-        "value": "Initial letter pendant necklace"
+        "label": "Finish",
+        "value": "Gold tone"
       },
       {
-        "label": "Charm",
-        "value": "Your chosen letter — select at checkout"
+        "label": "Pendant",
+        "value": "Rhinestone initial letter charm (A–Z)"
       },
       {
-        "label": "Care",
-        "value": "Avoid water, perfumes, lotions. Wipe with soft cloth."
+        "label": "Size",
+        "value": "Chain 35cm + 6cm extender"
       },
       {
-        "label": "Shipping",
-        "value": "Dispatches within 1–2 business days"
+        "label": "Waterproof",
+        "value": "Yes"
+      },
+      {
+        "label": "Tarnish-Resistant",
+        "value": "Yes"
       }
-    ],
-    "featured": false,
-    "active": true,
-    "images": [
-      "https://i.etsystatic.com/55122258/r/il/5e0c28/8091084395/il_fullxfull.8091084395_bigg.jpg",
-      "https://i.etsystatic.com/55122258/r/il/a597f6/8093085893/il_fullxfull.8093085893_oanl.jpg",
-      "https://i.etsystatic.com/55122258/r/il/731661/8091098799/il_fullxfull.8091098799_enqs.jpg",
-      "https://i.etsystatic.com/55122258/r/il/c61d1b/8091050569/il_fullxfull.8091050569_in9n.jpg",
-      "https://i.etsystatic.com/55122258/r/il/142cd6/8091069901/il_fullxfull.8091069901_jd3w.jpg",
-      "https://i.etsystatic.com/55122258/r/il/0cfcf9/8032913296/il_fullxfull.8032913296_1lye.jpg",
-      "https://i.etsystatic.com/55122258/r/il/61fd8d/8091045239/il_fullxfull.8091045239_kz15.jpg",
-      "https://i.etsystatic.com/55122258/r/il/b3a795/7943677304/il_fullxfull.7943677304_jmkv.jpg",
-      "https://i.etsystatic.com/55122258/r/il/39aa2c/8043150124/il_fullxfull.8043150124_3ixz.jpg"
     ],
     "variantGroups": [
       {
-        "label": "Size",
+        "label": "Letter",
+        "type": "options",
         "options": [
-          "35 CM (13.8\")",
-          "38 CM (15\")",
-          "41 CM (16.1\")",
-          "44 CM (17.3\")",
-          "47 CM (18.5\")",
-          "50 CM (19.7\")",
-          "53 CM (20.9\")",
-          "56 CM (22\")"
-        ]
-      },
-      {
-        "label": "Number of Initials",
-        "options": [
-          "1 Initial",
-          "2 Initials"
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F",
+          "G",
+          "H",
+          "I",
+          "J",
+          "K",
+          "L",
+          "M",
+          "N",
+          "O",
+          "P",
+          "Q",
+          "R",
+          "S",
+          "T",
+          "U",
+          "V",
+          "W",
+          "X",
+          "Y",
+          "Z"
         ]
       }
     ],
-    "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/f735a78b88d98e938aa03c1c4316a90a/downloads/default.mp4",
-    "altText": "Delicate gold stainless steel monogram letter necklace with personalized initial charm for everyday wear",
-    "dateAdded": "2026-06-12T15:00:27-04:00",
+    "images": [
+      "/images/products/0e84cd44-c1be-45e5-826e-ad5d9021bf69.png"
+    ],
+    "gallery": [
+      "/images/products/0e84cd44-c1be-45e5-826e-ad5d9021bf69.png",
+      "/images/products/a2fb0528-56ac-4720-8bfe-5452cab23df4.png",
+      "/images/products/ee08496c-de0c-4e6f-a6a6-1c31a9ead9af.png",
+      "/images/products/53165426-64d8-4bb3-b7a6-f685893d381f.png",
+      "/images/products/2ba8ecb3-c756-42a5-9545-76bc67926144-copy-2.png",
+      "/images/products/b90bf192-e71e-4da4-b360-ce6bdcefcc11.png"
+    ],
+    "featured": false,
+    "active": true,
+    "altText": "Personalized gold initial necklace with rhinestone letter charm, layered mirror-link and cable chain choker, stainless steel alphabet pendant necklace",
+    "dateAdded": "2026-09-14T13:35:00-04:00",
+    "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/80730744eb4857ab0a3520b0a32f179e/downloads/default.mp4",
     "giftTags": [
       "personalized"
-    ]
+    ],
+    "sizeGuideImage": "/images/products/b90bf192-e71e-4da4-b360-ce6bdcefcc11.png"
   },
   {
     "id": "cowrie-shell-anklet",
@@ -5272,33 +5377,48 @@
     "sizeGuideImage": "/images/products/0cad7396-ab9a-4ed6-8b7a-da8a7f43e99e.jpg"
   },
   {
-    "id": "birthstone-choker-necklace",
-    "name": "Birthstone Choker Necklace",
-    "price": 28,
-    "currency": "EUR",
+    "id": "initial-heart-pearl-choker",
+    "name": "Initial Heart Pearl Choker",
     "category": "Necklaces",
-    "description": "Your personalised gemstone necklace. This dainty gold choker features a custom birthstone pendant — an elegant, personal piece available in multiple lengths and all 12 birthstone months.",
-    "fullDescription": "Choose your birthstone and length at checkout — from 35 cm (13.8\") to 53 cm (20.9\") — and receive a necklace made specifically for you. The gemstone pendant sits delicately at the neckline in a fine gold chain setting.\n\nHandcrafted in gold-plated stainless steel. Tarnish-resistant and hypoallergenic. A meaningful gift for birthdays, anniversaries, and milestones.",
+    "price": 32,
+    "currency": "EUR",
+    "description": "A dainty pearl bead chain layered with a fine gold-tone cable chain and a tiny engraved initial heart charm, sitting right at the collarbone — pre-layered so there's no fussing with two clasps, just clip it on and go.",
     "specs": [
       {
         "label": "Material",
-        "value": "Gold stainless steel (tarnish-resistant)"
+        "value": "Gold-tone stainless steel chain"
       },
       {
-        "label": "Birthstone",
-        "value": "All 12 months — select at checkout"
+        "label": "Pearls",
+        "value": "Faux pearl beads (glass)"
       },
       {
-        "label": "Lengths",
-        "value": "35 cm (13.8\") to 53 cm (20.9\") — select at checkout"
+        "label": "Pendant",
+        "value": "Stainless steel heart initial charm — choose your letter"
       },
       {
-        "label": "Style",
-        "value": "Birthstone choker / pendant necklace"
+        "label": "Design",
+        "value": "Double-layer choker — pearl bead chain + fine cable chain"
+      },
+      {
+        "label": "Chain length",
+        "value": "35 cm (13.8\") + 6 cm (2.4\") extender"
+      },
+      {
+        "label": "Adjustable",
+        "value": "35–41 cm (13.8\"–16.1\")"
+      },
+      {
+        "label": "Closure",
+        "value": "Lobster clasp"
+      },
+      {
+        "label": "Waterproof",
+        "value": "Yes — safe for water, sun, and everyday wear"
       },
       {
         "label": "Care",
-        "value": "Avoid perfumes, lotions. Wipe with soft cloth."
+        "value": "Wipe with a soft cloth after wear. Store in an airtight container."
       },
       {
         "label": "Shipping",
@@ -5308,57 +5428,63 @@
     "featured": false,
     "active": true,
     "images": [
-      "https://i.etsystatic.com/55122258/r/il/c5efdf/7943496806/il_fullxfull.7943496806_o0e0.jpg",
-      "https://i.etsystatic.com/55122258/r/il/668050/7991453103/il_fullxfull.7991453103_3plp.jpg",
-      "https://i.etsystatic.com/55122258/r/il/96692e/7883966909/il_fullxfull.7883966909_m1l9.jpg",
-      "https://i.etsystatic.com/55122258/r/il/992c1b/7943593696/il_fullxfull.7943593696_c7v8.jpg",
-      "https://i.etsystatic.com/55122258/r/il/e998ff/7756532898/il_fullxfull.7756532898_248j.jpg",
-      "https://i.etsystatic.com/55122258/r/il/671d65/7883984639/il_fullxfull.7883984639_iztj.jpg",
-      "https://i.etsystatic.com/55122258/r/il/233825/7991458613/il_fullxfull.7991458613_khzo.jpg",
-      "https://i.etsystatic.com/55122258/r/il/de28b4/7991451543/il_fullxfull.7991451543_tjce.jpg",
-      "https://i.etsystatic.com/55122258/r/il/b0372f/7991451809/il_fullxfull.7991451809_2gd6.jpg",
-      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.webp",
-      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.webp",
-      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp"
+      "/images/products/initial-heart-pearl-choker/lifestyle-home.webp"
     ],
+    "gallery": [
+      "/images/products/initial-heart-pearl-choker/lifestyle-home.webp",
+      "/images/products/initial-heart-pearl-choker/lifestyle-nightclub.webp",
+      "/images/products/initial-heart-pearl-choker/macro-heart-detail.webp",
+      "/images/products/initial-heart-pearl-choker/choose-your-initial-chart.webp",
+      "/images/products/IMG_2754-2.jpg",
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
+      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.jpg"
+    ],
+    "video": "/images/products/initial-heart-pearl-choker/video.mp4",
     "variantGroups": [
       {
-        "label": "Birthstone",
+        "label": "Initial",
+        "type": "options",
         "options": [
-          "January",
-          "February",
-          "March",
-          "April",
-          "May",
-          "June",
-          "July",
-          "August",
-          "September",
-          "October",
-          "November",
-          "December"
-        ]
-      },
-      {
-        "label": "Size",
-        "options": [
-          "35 CM (13.8\")",
-          "38 CM (15\")",
-          "41 CM (16.1\")",
-          "44 CM (17.3\")",
-          "47 CM (18.5\")",
-          "50 CM (19.7\")",
-          "53 CM (20.9\")",
-          "56 CM (22\")"
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F",
+          "G",
+          "H",
+          "I",
+          "J",
+          "K",
+          "L",
+          "M",
+          "N",
+          "O",
+          "P",
+          "Q",
+          "R",
+          "S",
+          "T",
+          "U",
+          "V",
+          "W",
+          "X",
+          "Y",
+          "Z"
         ]
       }
     ],
-    "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/09dd187118446d03239e03066b41073a/downloads/default.mp4",
-    "altText": "Delicate gold stainless steel birthstone choker necklace with personalized gemstone pendant for everyday wear",
-    "dateAdded": "2026-06-12T15:00:27-04:00",
+    "infographicImages": [
+      "/images/products/initial-heart-pearl-choker/choose-your-initial-chart.webp",
+      "/images/products/initial-heart-pearl-choker/infographic-sizing.webp"
+    ],
+    "altText": "Dainty pearl choker necklace with gold-tone stainless steel chain and personalized initial heart charm",
+    "fullDescription": "I paired a dainty pearl chain with a fine gold-tone cable chain and a tiny initial heart charm resting right at the collarbone — pre-layered, so there's no fussing with two clasps, just clip it on and go. Wear it to a party, a wedding, or stacked into your everyday little gold jewelry rotation.\n\nProduct Details\nMaterial: Gold-tone stainless steel chain\nPearls: Faux pearl beads (glass)\nPendant: Stainless steel heart initial\nDesign: Double-layer choker — pearl bead chain + fine cable chain\nChain length: 35 cm + 6 cm extender\nClosure: Lobster clasp\nWaterproof & Sweat-Proof: Yes — safe for water, sun, and everyday wear\n\nSize Guide\nAdjustable 35–41 cm, sits snug at the collarbone as a choker\n\nFit Note: Measure around the base of your neck where you'd like the choker to sit, and add 1–2 cm for comfortable movement.\n\nCustom Sizing: Need a specific measurement? Message me before ordering and I'll make it to your exact size at no extra cost.\n\nCare Instructions\nWipe gently with a soft cloth after each wear.\nStore in an airtight container when not in use.\n\nShipping: Dispatches within 1–2 business days.\n\nPlease note that as each piece is handcrafted, no two pieces are identical and slight variations may occur.\n\nThanks for looking! Feel free to message me if you have any questions.",
     "giftTags": [
       "personalized"
-    ]
+    ],
+    "dateAdded": "2026-07-24T21:00:26-04:00",
+    "sizeGuideImage": "/images/products/96157bb8-71ca-41e5-bf15-afbb427fd8f8.png"
   },
   {
     "id": "pearl-lariat-back-necklace",
@@ -8067,6 +8193,805 @@
     ]
   },
   {
+    "id": "boho-shell-choker-necklace",
+    "name": "Boho Shell Choker Necklace",
+    "price": 28,
+    "currency": "EUR",
+    "category": "Necklaces",
+    "description": "Your go-to beach accessory. This bohemian choker features natural cowrie shells and delicate chain for an effortless coastal look — perfect for the beach, festival, or a summer evening out.",
+    "fullDescription": "Lightweight and tactile, this handcrafted shell choker brings a natural, sun-drenched energy to any outfit. The cowrie shells move gently as you do, catching light and drawing the eye in the most effortless way.\n\nHandmade with slight natural variations that make each piece uniquely yours. Style it alone for a minimalist look or layer it with other necklaces for a boho-stacked effect.",
+    "specs": [
+      {
+        "label": "Style",
+        "value": "Boho shell choker"
+      },
+      {
+        "label": "Materials",
+        "value": "Cowrie shells, chain"
+      },
+      {
+        "label": "Occasion",
+        "value": "Beach, festival, everyday"
+      },
+      {
+        "label": "Care",
+        "value": "Avoid prolonged water exposure. Wipe gently with a soft cloth."
+      },
+      {
+        "label": "Shipping",
+        "value": "Dispatches within 1–2 business days"
+      }
+    ],
+    "featured": false,
+    "active": true,
+    "images": [
+      "https://i.etsystatic.com/55122258/r/il/be3ea2/7687042498/il_fullxfull.7687042498_cocb.jpg",
+      "https://i.etsystatic.com/55122258/r/il/8eee38/7734983899/il_fullxfull.7734983899_r6vj.jpg",
+      "https://i.etsystatic.com/55122258/r/il/64cd0d/7687041388/il_fullxfull.7687041388_rl3h.jpg",
+      "https://i.etsystatic.com/55122258/r/il/7da48f/7687042720/il_fullxfull.7687042720_3x7u.jpg",
+      "https://i.etsystatic.com/55122258/r/il/5f7947/7812491598/il_fullxfull.7812491598_f2zb.jpg",
+      "https://i.etsystatic.com/55122258/r/il/ff330b/7734985527/il_fullxfull.7734985527_syxl.jpg",
+      "https://i.etsystatic.com/55122258/r/il/91ecb7/7734986013/il_fullxfull.7734986013_2ti7.jpg"
+    ],
+    "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/2891a3a9696bb6785ee46e3048191cb2/downloads/default.mp4",
+    "altText": "Boho shell choker necklace in stainless steel with cowrie shells and delicate chain for beach-inspired coastal style",
+    "dateAdded": "2026-06-12T15:00:27-04:00"
+  },
+  {
+    "id": "stacked-pearl-cross-choker",
+    "name": "Stacked Pearl Cross Choker",
+    "price": 32,
+    "currency": "EUR",
+    "category": "Necklaces",
+    "description": "Pearls that already know how to layer themselves — a dainty pearl bead chain and fine gold-tone cable chain with a cross charm resting right at the collarbone.",
+    "fullDescription": "I paired a dainty pearl bead chain with a fine gold-tone cable chain and a tiny cross charm resting right at the collarbone — pre-layered, so there's no fussing with two clasps, just clip it on and go. Wear it to church, a christening, a wedding, or stacked into your everyday little gold jewelry rotation.",
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Gold-tone stainless steel chain (Silver-tone also available)"
+      },
+      {
+        "label": "Pearls",
+        "value": "Pearl beads (glass)"
+      },
+      {
+        "label": "Pendant",
+        "value": "Cross charm"
+      },
+      {
+        "label": "Design",
+        "value": "Double-layer choker — pearl bead chain + fine cable chain"
+      },
+      {
+        "label": "Chain length",
+        "value": "35 cm (13.8\") + 6 cm (2.4\") extender"
+      },
+      {
+        "label": "Closure",
+        "value": "Lobster clasp"
+      },
+      {
+        "label": "Waterproof",
+        "value": "Yes"
+      },
+      {
+        "label": "Care",
+        "value": "Wipe with a soft cloth after wear. Store in an airtight container."
+      },
+      {
+        "label": "Shipping",
+        "value": "Dispatches within 1–2 business days"
+      }
+    ],
+    "variants": [
+      "Gold Tone",
+      "Silver Tone"
+    ],
+    "variantHeroes": {
+      "Gold Tone": "/images/products/stacked-pearl-cross-choker/7478046c-ca3b-4bc1-a41e-4a7c8df4ef58.webp",
+      "Silver Tone": "/images/products/stacked-pearl-cross-choker/b3f03ce0-fc74-4b69-be26-f154ab85d0fc.webp"
+    },
+    "variantVideos": {
+      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/2786312dfc400b5d050125f0ca3f30e6/downloads/default.mp4",
+      "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/2786312dfc400b5d050125f0ca3f30e6/downloads/default.mp4"
+    },
+    "gallery": [
+      "/images/products/stacked-pearl-cross-choker/7478046c-ca3b-4bc1-a41e-4a7c8df4ef58.webp",
+      "/images/products/stacked-pearl-cross-choker/b3f03ce0-fc74-4b69-be26-f154ab85d0fc.webp",
+      "/images/products/stacked-pearl-cross-choker/2289a6f4-09e0-4fc8-91e2-0b96c373e028.webp",
+      "/images/products/stacked-pearl-cross-choker/0e443386-0a68-40ce-a633-e8818b20f8f1.webp",
+      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf-copy.webp",
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp"
+    ],
+    "infographicImages": [
+      "/images/products/stacked-pearl-cross-choker/46ff1ac5-bd04-4706-8c12-2d3cb7fbad68.webp"
+    ],
+    "images": [
+      "/images/products/stacked-pearl-cross-choker/7478046c-ca3b-4bc1-a41e-4a7c8df4ef58.webp"
+    ],
+    "featured": false,
+    "active": true,
+    "altText": "Dainty pearl beaded choker necklace with gold-tone stainless steel cross charm for layered styling",
+    "sizeGuideImage": "/images/products/46ff1ac5-bd04-4706-8c12-2d3cb7fbad68.webp",
+    "dateAdded": "2026-07-12T11:25:03-04:00",
+    "giftTags": [
+      "confirmation"
+    ]
+  },
+  {
+    "id": "zodiac-slip-on-necklace",
+    "name": "Zodiac Slip-On Necklace",
+    "price": 24,
+    "currency": "EUR",
+    "category": "Necklaces",
+    "description": "Your star sign, around your neck. This dainty gold zodiac necklace features a personalised star sign charm on a clasp-free slip-on chain — no fiddly clasps, just slide it on and wear it every day.",
+    "fullDescription": "A 30 cm (11.8\") slip-on design that goes over the head without a clasp, sitting right at the collarbone. The zodiac charm is delicate and dainty — enough to catch the eye up close without being overwhelming.\n\nAvailable in gold or silver stainless steel. Choose your star sign at checkout. A meaningful gift for a birthday, graduation, or anyone who lives by their chart.",
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Gold or Silver stainless steel (tarnish-resistant)"
+      },
+      {
+        "label": "Style",
+        "value": "Clasp-free slip-on zodiac choker"
+      },
+      {
+        "label": "Length",
+        "value": "Approx. 30 cm (11.8\")"
+      },
+      {
+        "label": "Charm",
+        "value": "Your zodiac star sign"
+      },
+      {
+        "label": "Care",
+        "value": "Avoid water, perfumes, lotions. Wipe with soft cloth."
+      },
+      {
+        "label": "Shipping",
+        "value": "Dispatches within 1–2 business days"
+      }
+    ],
+    "featured": false,
+    "active": true,
+    "images": [
+      "https://i.etsystatic.com/55122258/r/il/e0581f/8142951625/il_fullxfull.8142951625_73u3.jpg",
+      "https://i.etsystatic.com/55122258/r/il/445881/8095081130/il_fullxfull.8095081130_nd5n.jpg",
+      "https://i.etsystatic.com/55122258/r/il/9c67db/8143046201/il_fullxfull.8143046201_cm3q.jpg",
+      "https://i.etsystatic.com/55122258/r/il/7d203e/7759169030/il_fullxfull.7759169030_aizv.jpg",
+      "https://i.etsystatic.com/55122258/r/il/42a411/8095057756/il_fullxfull.8095057756_knht.jpg",
+      "https://i.etsystatic.com/55122258/r/il/255c79/7805113761/il_fullxfull.7805113761_ko80.jpg",
+      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.webp",
+      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.webp",
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp"
+    ],
+    "variantGroups": [
+      {
+        "label": "Zodiac Sign",
+        "options": [
+          "Aries (3.21-4.19)",
+          "Taurus (4.20-5.20)",
+          "Gemini (5.21-6.20)",
+          "Cancer (6.21-7.22)",
+          "Leo (7.23-8.22)",
+          "Virgo (8.23-9.22)",
+          "Libra (9.23-10.22)",
+          "Scorpio(10.23-11.21)",
+          "Sagit. (11.22-12.21)",
+          "Capricorn 12.22-1.19",
+          "Aquarius (1.20-2.18)",
+          "Pisces (2.19-3.20)"
+        ]
+      },
+      {
+        "label": "Color",
+        "options": [
+          "Gold",
+          "Silver"
+        ]
+      }
+    ],
+    "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/9224a2d85c2c115c3ed98769525039a6/downloads/default.mp4",
+    "altText": "Gold stainless steel dainty zodiac necklace with personalized star sign charm slip-on chain design",
+    "dateAdded": "2026-06-12T15:00:27-04:00",
+    "giftTags": [
+      "personalized"
+    ]
+  },
+  {
+    "id": "monogram-letter-necklace",
+    "name": "Monogram Letter Necklace",
+    "price": 24,
+    "currency": "EUR",
+    "category": "Necklaces",
+    "description": "Your initial, in gold. This dainty gold necklace features a personalised alphabet charm in your chosen letter — a minimalist, meaningful piece handcrafted in tarnish-resistant stainless steel.",
+    "fullDescription": "A delicate chain holds a single script letter charm at the collarbone — clean, personal, and completely understated. Choose your letter at checkout and wear it as a daily reminder or a gift that means something.\n\nHandcrafted in gold stainless steel. Tarnish-resistant and hypoallergenic. A thoughtful gift for birthdays, anniversaries, and any occasion that calls for something personal.",
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Gold stainless steel (tarnish-resistant & hypoallergenic)"
+      },
+      {
+        "label": "Style",
+        "value": "Initial letter pendant necklace"
+      },
+      {
+        "label": "Charm",
+        "value": "Your chosen letter — select at checkout"
+      },
+      {
+        "label": "Care",
+        "value": "Avoid water, perfumes, lotions. Wipe with soft cloth."
+      },
+      {
+        "label": "Shipping",
+        "value": "Dispatches within 1–2 business days"
+      }
+    ],
+    "featured": false,
+    "active": true,
+    "images": [
+      "https://i.etsystatic.com/55122258/r/il/5e0c28/8091084395/il_fullxfull.8091084395_bigg.jpg",
+      "https://i.etsystatic.com/55122258/r/il/a597f6/8093085893/il_fullxfull.8093085893_oanl.jpg",
+      "https://i.etsystatic.com/55122258/r/il/731661/8091098799/il_fullxfull.8091098799_enqs.jpg",
+      "https://i.etsystatic.com/55122258/r/il/c61d1b/8091050569/il_fullxfull.8091050569_in9n.jpg",
+      "https://i.etsystatic.com/55122258/r/il/142cd6/8091069901/il_fullxfull.8091069901_jd3w.jpg",
+      "https://i.etsystatic.com/55122258/r/il/0cfcf9/8032913296/il_fullxfull.8032913296_1lye.jpg",
+      "https://i.etsystatic.com/55122258/r/il/61fd8d/8091045239/il_fullxfull.8091045239_kz15.jpg",
+      "https://i.etsystatic.com/55122258/r/il/b3a795/7943677304/il_fullxfull.7943677304_jmkv.jpg",
+      "https://i.etsystatic.com/55122258/r/il/39aa2c/8043150124/il_fullxfull.8043150124_3ixz.jpg"
+    ],
+    "variantGroups": [
+      {
+        "label": "Size",
+        "options": [
+          "35 CM (13.8\")",
+          "38 CM (15\")",
+          "41 CM (16.1\")",
+          "44 CM (17.3\")",
+          "47 CM (18.5\")",
+          "50 CM (19.7\")",
+          "53 CM (20.9\")",
+          "56 CM (22\")"
+        ]
+      },
+      {
+        "label": "Number of Initials",
+        "options": [
+          "1 Initial",
+          "2 Initials"
+        ]
+      }
+    ],
+    "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/f735a78b88d98e938aa03c1c4316a90a/downloads/default.mp4",
+    "altText": "Delicate gold stainless steel monogram letter necklace with personalized initial charm for everyday wear",
+    "dateAdded": "2026-06-12T15:00:27-04:00",
+    "giftTags": [
+      "personalized"
+    ]
+  },
+  {
+    "id": "layered-pearl-bracelet",
+    "name": "Layered Pearl Bracelet",
+    "price": 24,
+    "currency": "EUR",
+    "category": "Bracelets",
+    "description": "Your everyday pearl, on your wrist. This handcrafted freshwater pearl bracelet layers beautifully — waterproof, tarnish-resistant stainless steel in your choice of gold or silver, sized precisely to your wrist.",
+    "fullDescription": "Each pearl is individually placed on a dainty stainless steel chain, creating a delicate layered effect that dresses up a casual look or complements a formal one. Choose your exact size from 14 to 23 cm (9.1\") at checkout, and select gold or silver stainless steel.\n\nWaterproof and completely tarnish-resistant — it goes from the beach to the dinner table without losing its lustre. Handcrafted with slight natural variations in pearl shape and lustre.",
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Freshwater pearls on stainless steel"
+      },
+      {
+        "label": "Colours",
+        "value": "Gold or Silver stainless"
+      },
+      {
+        "label": "Sizes",
+        "value": "14 cm (5.5\") to 23 cm (9.1\") — select at checkout"
+      },
+      {
+        "label": "Style",
+        "value": "Layered pearl chain bracelet"
+      },
+      {
+        "label": "Care",
+        "value": "Wipe gently with a soft cloth. Store in an airtight container."
+      },
+      {
+        "label": "Shipping",
+        "value": "Dispatches within 1–2 business days"
+      }
+    ],
+    "featured": false,
+    "active": true,
+    "images": [
+      "https://i.etsystatic.com/55122258/r/il/dc4e2f/8165749301/il_fullxfull.8165749301_9lkm.jpg",
+      "https://i.etsystatic.com/55122258/r/il/88889b/8165711891/il_fullxfull.8165711891_gbn3.jpg",
+      "https://i.etsystatic.com/55122258/r/il/7e86e0/8165711877/il_fullxfull.8165711877_od8j.jpg",
+      "https://i.etsystatic.com/55122258/r/il/4c2076/8117803058/il_fullxfull.8117803058_9uyn.jpg",
+      "https://i.etsystatic.com/55122258/r/il/0cb3b5/8165711879/il_fullxfull.8165711879_6ieo.jpg",
+      "https://i.etsystatic.com/55122258/r/il/b3a795/7943677304/il_fullxfull.7943677304_jmkv.jpg",
+      "https://i.etsystatic.com/55122258/r/il/06caae/8165713123/il_fullxfull.8165713123_jyep.jpg"
+    ],
+    "variantGroups": [
+      {
+        "label": "Size",
+        "options": [
+          "14 CM (5.5\")",
+          "15 CM (5.9\")",
+          "16 CM (6.3\")",
+          "17 CM (6.7\")",
+          "18 CM (7.1\")",
+          "19 CM (7.5\")",
+          "20 CM (7.9\")",
+          "21 CM (8.3\")",
+          "22 CM (8.7\")",
+          "23 CM (9.1\")"
+        ]
+      },
+      {
+        "label": "Color",
+        "options": [
+          "Gold stainless",
+          "Silver Stainless"
+        ]
+      }
+    ],
+    "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/081f3c4da5cc334a1c97cdd510d58524/downloads/default.mp4",
+    "altText": "Delicate layered pearl bracelet with freshwater pearls and stainless steel, perfect everyday dainty bracelet",
+    "dateAdded": "2026-06-12T15:00:27-04:00"
+  },
+  {
+    "id": "pearl-chain-anklet",
+    "name": "Pearl Chain Anklet",
+    "price": 22,
+    "currency": "EUR",
+    "category": "Anklets",
+    "description": "Your most elegant ankle piece. This dainty gold or silver anklet features freshwater-style pearl accents — minimalist, luminous, and designed for beach weddings, everyday wear, and every occasion in between.",
+    "fullDescription": "Pearl accents dot a fine chain at the ankle in a simple, luminous pattern that photographs beautifully and feels completely effortless to wear. Available in Gold or Silver stainless steel.\n\nHandcrafted with slight natural variations in pearl placement. Adjustable fit for most ankle sizes. Waterproof and tarnish-resistant.",
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Stainless steel with pearl accents"
+      },
+      {
+        "label": "Colours",
+        "value": "Gold or Silver"
+      },
+      {
+        "label": "Style",
+        "value": "Dainty pearl anklet"
+      },
+      {
+        "label": "Fit",
+        "value": "Adjustable"
+      },
+      {
+        "label": "Care",
+        "value": "Avoid prolonged water exposure. Wipe with soft cloth."
+      },
+      {
+        "label": "Shipping",
+        "value": "Dispatches within 1–2 business days"
+      }
+    ],
+    "featured": false,
+    "active": true,
+    "variants": [
+      "Gold Tone",
+      "Silver Tone"
+    ],
+    "images": [
+      "/images/products/66d55914-aa89-4210-ab78-09d664f62092.png"
+    ],
+    "variantVideos": {
+      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/74f1849f561c7846bdf7ca035c6f7bb7/downloads/default.mp4",
+      "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/74f1849f561c7846bdf7ca035c6f7bb7/downloads/default.mp4"
+    },
+    "altText": "Delicate gold stainless steel beach anklet with pearl accents, elegant ankle bracelet for minimalist style",
+    "gallery": [
+      "/images/products/66d55914-aa89-4210-ab78-09d664f62092.png",
+      "https://i.etsystatic.com/55122258/r/il/790e96/7763707026/il_fullxfull.7763707026_8tdi.jpg",
+      "https://i.etsystatic.com/55122258/r/il/855c02/7784114267/il_fullxfull.7784114267_9216.jpg",
+      "https://i.etsystatic.com/55122258/r/il/cf86a2/7784114265/il_fullxfull.7784114265_m9zq.jpg",
+      "https://i.etsystatic.com/55122258/r/il/c59093/7736159618/il_fullxfull.7736159618_2oc5.jpg",
+      "https://i.etsystatic.com/55122258/r/il/bc2e3b/7784114249/il_fullxfull.7784114249_h3um.jpg",
+      "https://i.etsystatic.com/55122258/r/il/4f89b1/7763623772/il_fullxfull.7763623772_eskh.jpg"
+    ],
+    "variantHeroes": {
+      "Gold Tone": "/images/products/66d55914-aa89-4210-ab78-09d664f62092.png",
+      "Silver Tone": "https://i.etsystatic.com/55122258/r/il/855c02/7784114267/il_fullxfull.7784114267_9216.jpg"
+    },
+    "dateAdded": "2026-06-12T15:00:27-04:00",
+    "sizeGuideImage": "/images/products/esty-thumnails-new--19-.png"
+  },
+  {
+    "id": "layered-arm-chain",
+    "name": "Layered Arm Chain",
+    "price": 24,
+    "currency": "EUR",
+    "category": "Shoulder Chains",
+    "description": "There's nothing quite like finding that one perfect accessory that makes you feel effortlessly put together — whether you're in a swimsuit, a summer dress, an evening gown, or a simple white shirt on a weekend out. This dainty layered arm chain is designed to be exactly that: a weightless, eye-catching piece of arm jewelry that catches the light beautifully whether you're lounging by the pool, attending a wedding, heading to a festival, or simply elevating your everyday look.",
+    "fullDescription": "We carefully handcraft each delicate chain to drape comfortably around your upper arm, giving you a beautiful boho-luxe vibe without any pinching or sliding. A small rubber attachment connects to the jump ring and chain, adding extra flexibility so the piece conforms naturally to the shape of your arm and stays exactly where you want it — all day, all night.\n\nBecause we know every body is wonderfully different, we offer completely custom sizing at no extra cost, ensuring your new favourite piece fits you perfectly no matter the occasion.\n\n✿ Sizing Guide\nMeasure around the fullest part of your upper arm (mid-bicep, relaxed — not flexed). That number is your size.\n\nXS — fits 22 to 25 cm (9.8\")\nS — fits 25 to 28 cm (11\")\nM — fits 28 to 31 cm (12.2\")\nL — fits 31 to 35 cm (13.8\")\nXL — fits 35 to 39 cm (15.4\")\nCustom Fit — message us your exact measurement in cm\n\nEach size includes a small extender for added adjustability. Custom sizing is always available at no extra cost.\n\n✿ Perfect for\nPool days, beach holidays, summer weddings, festival season, bridal parties, date nights, resort wear, boho styling, and everyday layering — this piece works twelve months a year.\n\nWaterproof • Tarnish-resistant • Handmade in Portugal and Canada",
+    "specs": [
+      {
+        "label": "Material",
+        "value": "high-quality stainless steel (waterproof & tarnish-resistant)"
+      },
+      {
+        "label": "Style",
+        "value": "Triple-layered draped arm chain"
+      },
+      {
+        "label": "Closure",
+        "value": "Lobster clasp with small extender"
+      },
+      {
+        "label": "Flexibility",
+        "value": "Rubber attachment for a secure, comfortable fit"
+      },
+      {
+        "label": "Finish options",
+        "value": "Gold Tone (+€5), Silver Plated (+€5), Stainless Steel (base)"
+      },
+      {
+        "label": "Care",
+        "value": "Wipe gently with a soft cloth after wear. Store in an airtight container."
+      },
+      {
+        "label": "Shipping",
+        "value": "Dispatches within 1–2 business days"
+      }
+    ],
+    "variantGroups": [
+      {
+        "label": "Finish",
+        "type": "options",
+        "options": [
+          "Gold Tone",
+          "Silver Plated",
+          "Stainless Steel"
+        ],
+        "optionPrices": {
+          "Gold Tone": 5,
+          "Silver Plated": 5,
+          "Stainless Steel": 0
+        }
+      },
+      {
+        "label": "Upper Arm Size",
+        "type": "options",
+        "options": [
+          "XS - 22 to 25 cm (9.8\")",
+          "S - 25 to 28 cm (11\")",
+          "M - 28 to 31 cm (12.2\")",
+          "L - 31 to 35 cm (13.8\")",
+          "XL - 35 to 39 cm (15.4\")",
+          "Custom Fit"
+        ]
+      }
+    ],
+    "variants": [
+      "Gold Tone",
+      "Silver Plated",
+      "Stainless Steel"
+    ],
+    "variantHeroes": {
+      "Gold Tone": "/images/products/layered-arm-chain/img-gold.webp",
+      "Silver Plated": "/images/products/layered-arm-chain/img-stainless.webp",
+      "Stainless Steel": "/images/products/layered-arm-chain/img-silver.webp"
+    },
+    "variantVideos": {
+      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/625af9cccd93e10d5d3ce87272a4a101/downloads/default.mp4",
+      "Silver Plated": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/625af9cccd93e10d5d3ce87272a4a101/downloads/default.mp4",
+      "Stainless Steel": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/625af9cccd93e10d5d3ce87272a4a101/downloads/default.mp4"
+    },
+    "gallery": [
+      "/images/products/layered-arm-chain/img-gold.webp",
+      "/images/products/layered-arm-chain/img-stainless.webp",
+      "/images/products/layered-arm-chain/img-silver.webp",
+      "/images/products/layered-arm-chain/img-material.webp",
+      "/images/products/layered-arm-chain/img-fit.webp",
+      "/images/products/layered-arm-chain/img-shipping.webp"
+    ],
+    "images": [
+      "/images/products/layered-arm-chain/img-gold.webp"
+    ],
+    "sizeGuideImage": "/images/products/4a34f7fe-cab7-4c40-a10f-cff8807d32cf.webp",
+    "altText": "Delicate layered arm chain in gold tone stainless steel for elegant summer jewelry and beach accessory styling",
+    "dateAdded": "2026-07-05T12:49:58-04:00",
+    "active": false
+  },
+  {
+    "id": "birthstone-choker-necklace",
+    "name": "Birthstone Choker Necklace",
+    "price": 28,
+    "currency": "EUR",
+    "category": "Necklaces",
+    "description": "Your personalised gemstone necklace. This dainty gold choker features a custom birthstone pendant — an elegant, personal piece available in multiple lengths and all 12 birthstone months.",
+    "fullDescription": "Choose your birthstone and length at checkout — from 35 cm (13.8\") to 53 cm (20.9\") — and receive a necklace made specifically for you. The gemstone pendant sits delicately at the neckline in a fine gold chain setting.\n\nHandcrafted in gold-plated stainless steel. Tarnish-resistant and hypoallergenic. A meaningful gift for birthdays, anniversaries, and milestones.",
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Gold stainless steel (tarnish-resistant)"
+      },
+      {
+        "label": "Birthstone",
+        "value": "All 12 months — select at checkout"
+      },
+      {
+        "label": "Lengths",
+        "value": "35 cm (13.8\") to 53 cm (20.9\") — select at checkout"
+      },
+      {
+        "label": "Style",
+        "value": "Birthstone choker / pendant necklace"
+      },
+      {
+        "label": "Care",
+        "value": "Avoid perfumes, lotions. Wipe with soft cloth."
+      },
+      {
+        "label": "Shipping",
+        "value": "Dispatches within 1–2 business days"
+      }
+    ],
+    "featured": false,
+    "active": true,
+    "images": [
+      "https://i.etsystatic.com/55122258/r/il/c5efdf/7943496806/il_fullxfull.7943496806_o0e0.jpg",
+      "https://i.etsystatic.com/55122258/r/il/668050/7991453103/il_fullxfull.7991453103_3plp.jpg",
+      "https://i.etsystatic.com/55122258/r/il/96692e/7883966909/il_fullxfull.7883966909_m1l9.jpg",
+      "https://i.etsystatic.com/55122258/r/il/992c1b/7943593696/il_fullxfull.7943593696_c7v8.jpg",
+      "https://i.etsystatic.com/55122258/r/il/e998ff/7756532898/il_fullxfull.7756532898_248j.jpg",
+      "https://i.etsystatic.com/55122258/r/il/671d65/7883984639/il_fullxfull.7883984639_iztj.jpg",
+      "https://i.etsystatic.com/55122258/r/il/233825/7991458613/il_fullxfull.7991458613_khzo.jpg",
+      "https://i.etsystatic.com/55122258/r/il/de28b4/7991451543/il_fullxfull.7991451543_tjce.jpg",
+      "https://i.etsystatic.com/55122258/r/il/b0372f/7991451809/il_fullxfull.7991451809_2gd6.jpg",
+      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.webp",
+      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.webp",
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp"
+    ],
+    "variantGroups": [
+      {
+        "label": "Birthstone",
+        "options": [
+          "January",
+          "February",
+          "March",
+          "April",
+          "May",
+          "June",
+          "July",
+          "August",
+          "September",
+          "October",
+          "November",
+          "December"
+        ]
+      },
+      {
+        "label": "Size",
+        "options": [
+          "35 CM (13.8\")",
+          "38 CM (15\")",
+          "41 CM (16.1\")",
+          "44 CM (17.3\")",
+          "47 CM (18.5\")",
+          "50 CM (19.7\")",
+          "53 CM (20.9\")",
+          "56 CM (22\")"
+        ]
+      }
+    ],
+    "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/09dd187118446d03239e03066b41073a/downloads/default.mp4",
+    "altText": "Delicate gold stainless steel birthstone choker necklace with personalized gemstone pendant for everyday wear",
+    "dateAdded": "2026-06-12T15:00:27-04:00",
+    "giftTags": [
+      "personalized"
+    ]
+  },
+  {
+    "id": "birthstone-arm-chain",
+    "name": "Birthstone Arm Chain",
+    "price": 28,
+    "currency": "EUR",
+    "category": "Shoulder Chains",
+    "description": "Wear your birth month. Gift someone theirs. This dainty birthstone arm chain wraps softly around your upper arm, finished with a teardrop gemstone pendant in your chosen birth month stone — subtle enough for everyday, personal enough to remember.",
+    "fullDescription": "Twelve gemstones. Twelve months. One piece of arm jewelry that means something.\n\nThis dainty birthstone arm chain wraps softly around your upper arm, finished with a teardrop gemstone pendant in your chosen birth month stone — subtle enough for everyday, personal enough to remember. Whether you're wearing it poolside, at a wedding, or just elevating a simple white shirt on a weekend out, it catches the light in a way that makes people ask.\n\nBuy it for yourself. Gift it to someone you love. Either way, it arrives sized to fit perfectly.\n\nSizing Guide\nMeasure around the fullest part of your upper arm (mid-bicep, relaxed — not flexed). That number is your size.\n\nXS — fits 22 to 25 cm (9.8\")\nS — fits 25 to 28 cm (11\")\nM — fits 28 to 31 cm (12.2\")\nL — fits 31 to 35 cm (13.8\")\nXL — fits 35 to 39 cm (15.4\")\nCustom Fit — message us your exact measurement in cm\n\nCustom sizing is always available at no extra cost — just send us a message after purchase with your measurement and we'll make it to fit.\n\nPerfect for\nBirthdays, bridesmaid gifts, self-gifts, pool days, beach holidays, summer weddings, festival season, resort wear, boho styling, date nights, and everyday wear — twelve months a year.\n\nWaterproof • Tarnish-resistant",
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Stainless steel (waterproof & tarnish-resistant)"
+      },
+      {
+        "label": "Style",
+        "value": "Dainty upper arm chain with birthstone drop pendant"
+      },
+      {
+        "label": "Available in",
+        "value": "Gold Tone"
+      },
+      {
+        "label": "Birthstone",
+        "value": "Choose your month at checkout (January – December)"
+      },
+      {
+        "label": "Closure",
+        "value": "Easy slip on"
+      },
+      {
+        "label": "Flexibility",
+        "value": "Rubber attachment for a comfortable, secure fit around the arm"
+      },
+      {
+        "label": "Care",
+        "value": "Wipe gently with a soft cloth after wear. Store in an airtight container."
+      },
+      {
+        "label": "Shipping",
+        "value": "Dispatches within 1–2 business days"
+      }
+    ],
+    "variantGroups": [
+      {
+        "label": "Birthstone",
+        "type": "options",
+        "options": [
+          "January — Garnet",
+          "February — Amethyst",
+          "March — Aquamarine",
+          "April — Diamond",
+          "May — Emerald",
+          "June — Pearl",
+          "July — Ruby",
+          "August — Peridot",
+          "September — Sapphire",
+          "October — Opal",
+          "November — Citrine",
+          "December — Turquoise"
+        ]
+      },
+      {
+        "label": "Upper Arm Size",
+        "type": "options",
+        "options": [
+          "XS - 22 to 25 cm (9.8\")",
+          "S - 25 to 28 cm (11\")",
+          "M - 28 to 31 cm (12.2\")",
+          "L - 31 to 35 cm (13.8\")",
+          "XL - 35 to 39 cm (15.4\")",
+          "Custom Fit"
+        ]
+      }
+    ],
+    "gallery": [
+      "/images/products/birthstone-arm-chain/img-january.webp",
+      "/images/products/birthstone-arm-chain/img-7.webp",
+      "/images/products/birthstone-arm-chain/img-6.webp",
+      "/images/products/birthstone-arm-chain/img-2.webp",
+      "/images/products/birthstone-arm-chain/img-4.webp",
+      "/images/products/birthstone-arm-chain/img-3.webp",
+      "/images/products/birthstone-arm-chain/img-5.webp",
+      "/images/products/birthstone-arm-chain/img-1.webp"
+    ],
+    "images": [
+      "/images/products/birthstone-arm-chain/img-january.webp"
+    ],
+    "video": "/images/products/birthstone-arm-chain/video.mp4",
+    "featured": false,
+    "altText": "Delicate gold stainless steel birthstone arm chain with teardrop gemstone, waterproof shoulder jewelry for everyday wear",
+    "sizeGuideImage": "/images/products/137e8322-36db-4670-afed-c289f61ce7ae.webp",
+    "dateAdded": "2026-07-10T22:20:45-04:00",
+    "giftTags": [
+      "personalized"
+    ],
+    "active": false
+  },
+  {
+    "id": "bicep-chain",
+    "name": "Bicep Chain",
+    "price": 20,
+    "currency": "EUR",
+    "category": "Shoulder Chains",
+    "description": "There's nothing quite like finding that one perfect accessory that makes you feel effortlessly put together — whether you're in a swimsuit, a summer dress, an evening gown, or a simple white shirt on a weekend out. This dainty bicep chain is designed to be exactly that: a weightless, eye-catching piece of arm jewelry that catches the light beautifully whether you're lounging by the pool, attending a wedding, heading to a festival, or simply elevating your everyday look.",
+    "fullDescription": "We carefully handcraft each delicate chain to drape comfortably around your upper arm, giving you a beautiful boho-luxe vibe without any pinching or sliding. A small rubber attachment connects to the jump ring and chain, adding extra flexibility so the piece conforms naturally to the shape of your arm and stays exactly where you want it — all day, all night.\n\nBecause we know every body is wonderfully different, we offer completely custom sizing at no extra cost, ensuring your new favourite piece fits you perfectly no matter the occasion.\n\n✿ Sizing Guide\nMeasure around the fullest part of your upper arm (mid-bicep, relaxed — not flexed). That number is your size.\n\nXS — fits 22 to 25 cm (9.8\")\nS — fits 25 to 28 cm (11\")\nM — fits 28 to 31 cm (12.2\")\nL — fits 31 to 35 cm (13.8\")\nXL — fits 35 to 39 cm (15.4\")\nCustom Fit — message us your exact measurement in cm\n\nCustom sizing is always available at no extra cost — just send us a message after purchase with your measurement and we'll make it to fit.\n\n✿ Perfect for\nPool days, beach holidays, summer weddings, festival season, bridal parties, date nights, resort wear, boho styling, and everyday layering — this piece works twelve months a year.\n\nWaterproof • Tarnish-resistant • Handmade in Portugal and Canada",
+    "specs": [
+      {
+        "label": "Material",
+        "value": "High-quality stainless steel (waterproof & tarnish-resistant)"
+      },
+      {
+        "label": "Style",
+        "value": "Dainty upper arm chain / arm cuff chain"
+      },
+      {
+        "label": "Closure",
+        "value": "Easy slip on"
+      },
+      {
+        "label": "Flexibility",
+        "value": "Rubber attachment for a comfortable, secure fit around the arm"
+      },
+      {
+        "label": "Finish options",
+        "value": "Gold Tone (+€5), Silver Plated (+€5), Stainless Steel (base)"
+      },
+      {
+        "label": "Care",
+        "value": "Wipe gently with a soft cloth after each wear. Avoid direct contact with perfumes and lotions. Store in an airtight container when not in use."
+      },
+      {
+        "label": "Shipping",
+        "value": "Dispatches within 1–2 business days"
+      }
+    ],
+    "variantGroups": [
+      {
+        "label": "Finish",
+        "type": "options",
+        "options": [
+          "Gold Tone",
+          "Silver Plated",
+          "Stainless Steel"
+        ],
+        "optionPrices": {
+          "Gold Tone": 5,
+          "Silver Plated": 5,
+          "Stainless Steel": 0
+        }
+      },
+      {
+        "label": "Upper Arm Size",
+        "type": "options",
+        "options": [
+          "XS - 22 to 25 cm (9.8\")",
+          "S - 25 to 28 cm (11\")",
+          "M - 28 to 31 cm (12.2\")",
+          "L - 31 to 35 cm (13.8\")",
+          "XL - 35 to 39 cm (15.4\")",
+          "Custom Fit"
+        ]
+      }
+    ],
+    "variants": [
+      "Gold Tone",
+      "Silver Plated",
+      "Stainless Steel"
+    ],
+    "variantHeroes": {
+      "Gold Tone": "/images/products/bicep-chain/img-gold.webp",
+      "Silver Plated": "/images/products/bicep-chain/img-lifestyle-casual.webp",
+      "Stainless Steel": "/images/products/bicep-chain/img-silver.webp"
+    },
+    "gallery": [
+      "/images/products/bicep-chain/img-gold.webp",
+      "/images/products/bicep-chain/img-lifestyle-casual.webp",
+      "/images/products/bicep-chain/img-silver.webp",
+      "/images/products/bicep-chain/img-editorial.webp",
+      "/images/products/bicep-chain/img-lifestyle-cafe.webp",
+      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf-copy.webp",
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp",
+      "/images/products/b0803c14-f4b0-469d-9867-b3f7510566e8.webp"
+    ],
+    "images": [
+      "/images/products/bicep-chain/img-gold.webp"
+    ],
+    "video": "/images/products/bicep-chain/video.mp4",
+    "sizeGuideImage": "/images/products/bicep-chain/img-sizing.webp",
+    "featured": false,
+    "altText": "Gold tone stainless steel bicep chain for summer arm jewelry, waterproof body accessory",
+    "variantVideos": {
+      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/81c6a9cf4cd77c67e33bb40160d6127e/downloads/default.mp4",
+      "Silver Plated": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/81c6a9cf4cd77c67e33bb40160d6127e/downloads/default.mp4",
+      "Stainless Steel": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/81c6a9cf4cd77c67e33bb40160d6127e/downloads/default.mp4"
+    },
+    "dateAdded": "2026-07-11T16:49:10-04:00",
+    "active": false
+  },
+  {
     "id": "birth-flower-charm-necklace",
     "name": "Birth Flower Charm Necklace",
     "price": 28,
@@ -8164,6 +9089,180 @@
     "giftTags": [
       "personalized"
     ]
+  },
+  {
+    "id": "birthstone-arm-band",
+    "name": "Birthstone Arm Band",
+    "price": 24,
+    "currency": "EUR",
+    "category": "Shoulder Chains",
+    "description": "One thin gold chain, one gemstone that means something. This single-strand birthstone arm band sits softly on the upper arm — the simplest way to wear your birth month or gift someone theirs.",
+    "fullDescription": "Twelve gemstones. Twelve months. One quiet, single-strand chain that says more than words.\n\nThis delicate birthstone arm band wraps around your upper arm with just one fine gold chain, finished with a teardrop gemstone in your chosen birth month stone. No layers, no fuss — just a simple, meaningful detail that catches the light on beach days, at weddings, or under a rolled-up sleeve on an ordinary afternoon.\n\nBuy it for yourself. Gift it to someone you love. Either way, it arrives sized to fit perfectly.\n\nSizing Guide\nMeasure around the fullest part of your upper arm (mid-bicep, relaxed — not flexed). That number is your size.\n\nXS — fits 22 to 25 cm (9.8\")\nS — fits 25 to 28 cm (11\")\nM — fits 28 to 31 cm (12.2\")\nL — fits 31 to 35 cm (13.8\")\nXL — fits 35 to 39 cm (15.4\")\nCustom Fit — message us your exact measurement in cm\n\nCustom sizing is always available at no extra cost — just send us a message after purchase with your measurement and we will make it to fit.\n\nPerfect for\nBirthdays, bridesmaid gifts, self-gifts, pool days, beach holidays, summer weddings, festival season, resort wear, minimalist everyday layering, and gifting twelve months a year.\n\nWaterproof • Tarnish-resistant",
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Stainless steel (waterproof & tarnish-resistant)"
+      },
+      {
+        "label": "Style",
+        "value": "Single-strand upper arm band with birthstone drop pendant"
+      },
+      {
+        "label": "Available in",
+        "value": "Gold Tone"
+      },
+      {
+        "label": "Birthstone",
+        "value": "Choose your month at checkout (January – December)"
+      },
+      {
+        "label": "Closure",
+        "value": "Easy slip on"
+      },
+      {
+        "label": "Flexibility",
+        "value": "Rubber attachment for a comfortable, secure fit around the arm"
+      },
+      {
+        "label": "Care",
+        "value": "Wipe gently with a soft cloth after wear. Store in an airtight container."
+      },
+      {
+        "label": "Shipping",
+        "value": "Dispatches within 1–2 business days"
+      }
+    ],
+    "variantGroups": [
+      {
+        "label": "Birthstone",
+        "type": "options",
+        "options": [
+          "January — Garnet",
+          "February — Amethyst",
+          "March — Aquamarine",
+          "April — Diamond",
+          "May — Emerald",
+          "June — Pearl",
+          "July — Ruby",
+          "August — Peridot",
+          "September — Sapphire",
+          "October — Opal",
+          "November — Citrine",
+          "December — Turquoise"
+        ]
+      },
+      {
+        "label": "Upper Arm Size",
+        "type": "options",
+        "options": [
+          "XS - 22 to 25 cm (9.8\")",
+          "S - 25 to 28 cm (11\")",
+          "M - 28 to 31 cm (12.2\")",
+          "L - 31 to 35 cm (13.8\")",
+          "XL - 35 to 39 cm (15.4\")",
+          "Custom Fit"
+        ]
+      }
+    ],
+    "gallery": [
+      "/images/products/birthstone-arm-band/7d42276c-6049-49fb-834a-b8ae3e2ad277.webp",
+      "/images/products/birthstone-arm-band/4916e4ee-99ad-4012-8131-dc7c8be5665f.webp",
+      "/images/products/birthstone-arm-band/8e550763-5dc8-43d9-8c75-0adfb544a12f.webp",
+      "/images/products/8c1a99ad-3706-4574-8abc-1f02e90e6a26-copy-2.webp",
+      "/images/products/birthstone-arm-band/af0c2021-f688-49fa-9906-f4dc49516ea3.webp",
+      "/images/products/birthstone-arm-band/d13632f1-ad9d-4d7c-9e3e-cb575ac49a8a.webp",
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp",
+      "/images/products/2fea701c-8c9a-4de0-a202-09e9d7608b12.webp",
+      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf-copy.webp"
+    ],
+    "images": [
+      "/images/products/birthstone-arm-band/7d42276c-6049-49fb-834a-b8ae3e2ad277.webp"
+    ],
+    "video": "/images/products/birthstone-arm-band/video.mp4",
+    "featured": false,
+    "active": false,
+    "altText": "Gold stainless steel birthstone arm band for upper arm, waterproof shoulder chain jewelry",
+    "sizeGuideImage": "/images/products/birthstone-arm-band/d13632f1-ad9d-4d7c-9e3e-cb575ac49a8a.webp",
+    "dateAdded": "2026-07-13T08:05:47-04:00",
+    "giftTags": [
+      "personalized"
+    ]
+  },
+  {
+    "id": "double-drape-thigh-chain",
+    "name": "Double Drape Thigh Chain",
+    "price": 28,
+    "currency": "EUR",
+    "category": "Leg Chains",
+    "description": "Two layered chain arcs drape across the upper thigh like a modern-day garter — dainty, waterproof stainless steel in gold-tone or silver-tone, with a stretch closure that slips on in seconds.",
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Stainless steel, gold-tone or silver-tone finish"
+      },
+      {
+        "label": "Design",
+        "value": "Double layered drape arc with slim thigh band"
+      },
+      {
+        "label": "Closure",
+        "value": "Slip-on with hidden stretch closure — no clasp needed"
+      },
+      {
+        "label": "Waterproof",
+        "value": "Yes — safe for water, sun, and everyday wear"
+      },
+      {
+        "label": "Care",
+        "value": "Wipe with a soft cloth after wear. Store in an airtight container."
+      },
+      {
+        "label": "Shipping",
+        "value": "Dispatches within 1–2 business days"
+      }
+    ],
+    "variantGroups": [
+      {
+        "label": "Size",
+        "type": "options",
+        "options": [
+          "S — 46 to 51 cm (20.1\")",
+          "M — 51 to 56 cm (22\")",
+          "L — 56 to 61 cm (24\")",
+          "XL — 61 to 66 cm (26\")"
+        ]
+      }
+    ],
+    "variants": [
+      "Gold Tone",
+      "Silver Tone"
+    ],
+    "images": [
+      "/images/products/double-drape-thigh-chain/1272cd0f-gold-park-hero.webp"
+    ],
+    "gallery": [
+      "/images/products/double-drape-thigh-chain/1272cd0f-gold-park-hero.webp",
+      "/images/products/double-drape-thigh-chain/3e6407db-silver-indoor-hero.webp",
+      "/images/products/double-drape-thigh-chain/db0bf291-gold-ocean.webp",
+      "/images/products/double-drape-thigh-chain/80bbcc0c-gold-beach-towel.webp",
+      "/images/products/double-drape-thigh-chain/b7f0fc0f-gold-pool-blue.webp",
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp",
+      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.webp",
+      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf-copy.webp"
+    ],
+    "variantHeroes": {
+      "Gold Tone": "/images/products/double-drape-thigh-chain/1272cd0f-gold-park-hero.webp",
+      "Silver Tone": "/images/products/double-drape-thigh-chain/3e6407db-silver-indoor-hero.webp"
+    },
+    "sizeGuideImage": "/images/products/double-drape-thigh-chain/530dc0d3-size-guide.webp",
+    "altText": "Gold-tone stainless steel double drape thigh chain for body jewelry fashion and waterproof layered leg accessories",
+    "featured": false,
+    "active": false,
+    "variantVideos": {
+      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/1044e580917bb13a7a3278f60a2c717a/downloads/default.mp4",
+      "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/1044e580917bb13a7a3278f60a2c717a/downloads/default.mp4"
+    },
+    "dateAdded": "2026-07-16T17:39:38-04:00"
   },
   {
     "id": "turquoise-beaded-choker",
@@ -8421,240 +9520,6 @@
     ]
   },
   {
-    "id": "layered-pearl-bracelet",
-    "name": "Layered Pearl Bracelet",
-    "price": 24,
-    "currency": "EUR",
-    "category": "Bracelets",
-    "description": "Your everyday pearl, on your wrist. This handcrafted freshwater pearl bracelet layers beautifully — waterproof, tarnish-resistant stainless steel in your choice of gold or silver, sized precisely to your wrist.",
-    "fullDescription": "Each pearl is individually placed on a dainty stainless steel chain, creating a delicate layered effect that dresses up a casual look or complements a formal one. Choose your exact size from 14 to 23 cm (9.1\") at checkout, and select gold or silver stainless steel.\n\nWaterproof and completely tarnish-resistant — it goes from the beach to the dinner table without losing its lustre. Handcrafted with slight natural variations in pearl shape and lustre.",
-    "specs": [
-      {
-        "label": "Material",
-        "value": "Freshwater pearls on stainless steel"
-      },
-      {
-        "label": "Colours",
-        "value": "Gold or Silver stainless"
-      },
-      {
-        "label": "Sizes",
-        "value": "14 cm (5.5\") to 23 cm (9.1\") — select at checkout"
-      },
-      {
-        "label": "Style",
-        "value": "Layered pearl chain bracelet"
-      },
-      {
-        "label": "Care",
-        "value": "Wipe gently with a soft cloth. Store in an airtight container."
-      },
-      {
-        "label": "Shipping",
-        "value": "Dispatches within 1–2 business days"
-      }
-    ],
-    "featured": false,
-    "active": true,
-    "images": [
-      "https://i.etsystatic.com/55122258/r/il/dc4e2f/8165749301/il_fullxfull.8165749301_9lkm.jpg",
-      "https://i.etsystatic.com/55122258/r/il/88889b/8165711891/il_fullxfull.8165711891_gbn3.jpg",
-      "https://i.etsystatic.com/55122258/r/il/7e86e0/8165711877/il_fullxfull.8165711877_od8j.jpg",
-      "https://i.etsystatic.com/55122258/r/il/4c2076/8117803058/il_fullxfull.8117803058_9uyn.jpg",
-      "https://i.etsystatic.com/55122258/r/il/0cb3b5/8165711879/il_fullxfull.8165711879_6ieo.jpg",
-      "https://i.etsystatic.com/55122258/r/il/b3a795/7943677304/il_fullxfull.7943677304_jmkv.jpg",
-      "https://i.etsystatic.com/55122258/r/il/06caae/8165713123/il_fullxfull.8165713123_jyep.jpg"
-    ],
-    "variantGroups": [
-      {
-        "label": "Size",
-        "options": [
-          "14 CM (5.5\")",
-          "15 CM (5.9\")",
-          "16 CM (6.3\")",
-          "17 CM (6.7\")",
-          "18 CM (7.1\")",
-          "19 CM (7.5\")",
-          "20 CM (7.9\")",
-          "21 CM (8.3\")",
-          "22 CM (8.7\")",
-          "23 CM (9.1\")"
-        ]
-      },
-      {
-        "label": "Color",
-        "options": [
-          "Gold stainless",
-          "Silver Stainless"
-        ]
-      }
-    ],
-    "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/081f3c4da5cc334a1c97cdd510d58524/downloads/default.mp4",
-    "altText": "Delicate layered pearl bracelet with freshwater pearls and stainless steel, perfect everyday dainty bracelet",
-    "dateAdded": "2026-06-12T15:00:27-04:00"
-  },
-  {
-    "id": "pearl-chain-anklet",
-    "name": "Pearl Chain Anklet",
-    "price": 22,
-    "currency": "EUR",
-    "category": "Anklets",
-    "description": "Your most elegant ankle piece. This dainty gold or silver anklet features freshwater-style pearl accents — minimalist, luminous, and designed for beach weddings, everyday wear, and every occasion in between.",
-    "fullDescription": "Pearl accents dot a fine chain at the ankle in a simple, luminous pattern that photographs beautifully and feels completely effortless to wear. Available in Gold or Silver stainless steel.\n\nHandcrafted with slight natural variations in pearl placement. Adjustable fit for most ankle sizes. Waterproof and tarnish-resistant.",
-    "specs": [
-      {
-        "label": "Material",
-        "value": "Stainless steel with pearl accents"
-      },
-      {
-        "label": "Colours",
-        "value": "Gold or Silver"
-      },
-      {
-        "label": "Style",
-        "value": "Dainty pearl anklet"
-      },
-      {
-        "label": "Fit",
-        "value": "Adjustable"
-      },
-      {
-        "label": "Care",
-        "value": "Avoid prolonged water exposure. Wipe with soft cloth."
-      },
-      {
-        "label": "Shipping",
-        "value": "Dispatches within 1–2 business days"
-      }
-    ],
-    "featured": false,
-    "active": true,
-    "variants": [
-      "Gold Tone",
-      "Silver Tone"
-    ],
-    "images": [
-      "/images/products/66d55914-aa89-4210-ab78-09d664f62092.png"
-    ],
-    "variantVideos": {
-      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/74f1849f561c7846bdf7ca035c6f7bb7/downloads/default.mp4",
-      "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/74f1849f561c7846bdf7ca035c6f7bb7/downloads/default.mp4"
-    },
-    "altText": "Delicate gold stainless steel beach anklet with pearl accents, elegant ankle bracelet for minimalist style",
-    "gallery": [
-      "/images/products/66d55914-aa89-4210-ab78-09d664f62092.png",
-      "https://i.etsystatic.com/55122258/r/il/790e96/7763707026/il_fullxfull.7763707026_8tdi.jpg",
-      "https://i.etsystatic.com/55122258/r/il/855c02/7784114267/il_fullxfull.7784114267_9216.jpg",
-      "https://i.etsystatic.com/55122258/r/il/cf86a2/7784114265/il_fullxfull.7784114265_m9zq.jpg",
-      "https://i.etsystatic.com/55122258/r/il/c59093/7736159618/il_fullxfull.7736159618_2oc5.jpg",
-      "https://i.etsystatic.com/55122258/r/il/bc2e3b/7784114249/il_fullxfull.7784114249_h3um.jpg",
-      "https://i.etsystatic.com/55122258/r/il/4f89b1/7763623772/il_fullxfull.7763623772_eskh.jpg"
-    ],
-    "variantHeroes": {
-      "Gold Tone": "/images/products/66d55914-aa89-4210-ab78-09d664f62092.png",
-      "Silver Tone": "https://i.etsystatic.com/55122258/r/il/855c02/7784114267/il_fullxfull.7784114267_9216.jpg"
-    },
-    "dateAdded": "2026-06-12T15:00:27-04:00",
-    "sizeGuideImage": "/images/products/esty-thumnails-new--19-.png"
-  },
-  {
-    "id": "layered-arm-chain",
-    "name": "Layered Arm Chain",
-    "price": 24,
-    "currency": "EUR",
-    "category": "Shoulder Chains",
-    "description": "There's nothing quite like finding that one perfect accessory that makes you feel effortlessly put together — whether you're in a swimsuit, a summer dress, an evening gown, or a simple white shirt on a weekend out. This dainty layered arm chain is designed to be exactly that: a weightless, eye-catching piece of arm jewelry that catches the light beautifully whether you're lounging by the pool, attending a wedding, heading to a festival, or simply elevating your everyday look.",
-    "fullDescription": "We carefully handcraft each delicate chain to drape comfortably around your upper arm, giving you a beautiful boho-luxe vibe without any pinching or sliding. A small rubber attachment connects to the jump ring and chain, adding extra flexibility so the piece conforms naturally to the shape of your arm and stays exactly where you want it — all day, all night.\n\nBecause we know every body is wonderfully different, we offer completely custom sizing at no extra cost, ensuring your new favourite piece fits you perfectly no matter the occasion.\n\n✿ Sizing Guide\nMeasure around the fullest part of your upper arm (mid-bicep, relaxed — not flexed). That number is your size.\n\nXS — fits 22 to 25 cm (9.8\")\nS — fits 25 to 28 cm (11\")\nM — fits 28 to 31 cm (12.2\")\nL — fits 31 to 35 cm (13.8\")\nXL — fits 35 to 39 cm (15.4\")\nCustom Fit — message us your exact measurement in cm\n\nEach size includes a small extender for added adjustability. Custom sizing is always available at no extra cost.\n\n✿ Perfect for\nPool days, beach holidays, summer weddings, festival season, bridal parties, date nights, resort wear, boho styling, and everyday layering — this piece works twelve months a year.\n\nWaterproof • Tarnish-resistant • Handmade in Portugal and Canada",
-    "specs": [
-      {
-        "label": "Material",
-        "value": "high-quality stainless steel (waterproof & tarnish-resistant)"
-      },
-      {
-        "label": "Style",
-        "value": "Triple-layered draped arm chain"
-      },
-      {
-        "label": "Closure",
-        "value": "Lobster clasp with small extender"
-      },
-      {
-        "label": "Flexibility",
-        "value": "Rubber attachment for a secure, comfortable fit"
-      },
-      {
-        "label": "Finish options",
-        "value": "Gold Tone (+€5), Silver Plated (+€5), Stainless Steel (base)"
-      },
-      {
-        "label": "Care",
-        "value": "Wipe gently with a soft cloth after wear. Store in an airtight container."
-      },
-      {
-        "label": "Shipping",
-        "value": "Dispatches within 1–2 business days"
-      }
-    ],
-    "variantGroups": [
-      {
-        "label": "Finish",
-        "type": "options",
-        "options": [
-          "Gold Tone",
-          "Silver Plated",
-          "Stainless Steel"
-        ],
-        "optionPrices": {
-          "Gold Tone": 5,
-          "Silver Plated": 5,
-          "Stainless Steel": 0
-        }
-      },
-      {
-        "label": "Upper Arm Size",
-        "type": "options",
-        "options": [
-          "XS - 22 to 25 cm (9.8\")",
-          "S - 25 to 28 cm (11\")",
-          "M - 28 to 31 cm (12.2\")",
-          "L - 31 to 35 cm (13.8\")",
-          "XL - 35 to 39 cm (15.4\")",
-          "Custom Fit"
-        ]
-      }
-    ],
-    "variants": [
-      "Gold Tone",
-      "Silver Plated",
-      "Stainless Steel"
-    ],
-    "variantHeroes": {
-      "Gold Tone": "/images/products/layered-arm-chain/img-gold.webp",
-      "Silver Plated": "/images/products/layered-arm-chain/img-stainless.webp",
-      "Stainless Steel": "/images/products/layered-arm-chain/img-silver.webp"
-    },
-    "variantVideos": {
-      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/625af9cccd93e10d5d3ce87272a4a101/downloads/default.mp4",
-      "Silver Plated": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/625af9cccd93e10d5d3ce87272a4a101/downloads/default.mp4",
-      "Stainless Steel": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/625af9cccd93e10d5d3ce87272a4a101/downloads/default.mp4"
-    },
-    "gallery": [
-      "/images/products/layered-arm-chain/img-gold.webp",
-      "/images/products/layered-arm-chain/img-stainless.webp",
-      "/images/products/layered-arm-chain/img-silver.webp",
-      "/images/products/layered-arm-chain/img-material.webp",
-      "/images/products/layered-arm-chain/img-fit.webp",
-      "/images/products/layered-arm-chain/img-shipping.webp"
-    ],
-    "images": [
-      "/images/products/layered-arm-chain/img-gold.webp"
-    ],
-    "sizeGuideImage": "/images/products/4a34f7fe-cab7-4c40-a10f-cff8807d32cf.webp",
-    "altText": "Delicate layered arm chain in gold tone stainless steel for elegant summer jewelry and beach accessory styling",
-    "dateAdded": "2026-07-05T12:49:58-04:00",
-    "active": false
-  },
-  {
     "id": "satellite-link-choker",
     "name": "Dainty Satellite Link Choker",
     "price": 20,
@@ -8722,457 +9587,133 @@
     "dateAdded": "2026-07-09T19:34:11-04:00"
   },
   {
-    "id": "birthstone-arm-chain",
-    "name": "Birthstone Arm Chain",
-    "price": 28,
+    "id": "pearl-charm-bracelet",
+    "name": "Pearl Charm Bracelet",
+    "price": 24,
     "currency": "EUR",
-    "category": "Shoulder Chains",
-    "description": "Wear your birth month. Gift someone theirs. This dainty birthstone arm chain wraps softly around your upper arm, finished with a teardrop gemstone pendant in your chosen birth month stone — subtle enough for everyday, personal enough to remember.",
-    "fullDescription": "Twelve gemstones. Twelve months. One piece of arm jewelry that means something.\n\nThis dainty birthstone arm chain wraps softly around your upper arm, finished with a teardrop gemstone pendant in your chosen birth month stone — subtle enough for everyday, personal enough to remember. Whether you're wearing it poolside, at a wedding, or just elevating a simple white shirt on a weekend out, it catches the light in a way that makes people ask.\n\nBuy it for yourself. Gift it to someone you love. Either way, it arrives sized to fit perfectly.\n\nSizing Guide\nMeasure around the fullest part of your upper arm (mid-bicep, relaxed — not flexed). That number is your size.\n\nXS — fits 22 to 25 cm (9.8\")\nS — fits 25 to 28 cm (11\")\nM — fits 28 to 31 cm (12.2\")\nL — fits 31 to 35 cm (13.8\")\nXL — fits 35 to 39 cm (15.4\")\nCustom Fit — message us your exact measurement in cm\n\nCustom sizing is always available at no extra cost — just send us a message after purchase with your measurement and we'll make it to fit.\n\nPerfect for\nBirthdays, bridesmaid gifts, self-gifts, pool days, beach holidays, summer weddings, festival season, resort wear, boho styling, date nights, and everyday wear — twelve months a year.\n\nWaterproof • Tarnish-resistant",
+    "category": "Bracelets",
+    "description": "Your everyday pearl, double-stranded. This handcrafted gold bracelet features two delicate strands with freshwater-style pearl and charm accents — waterproof, tarnish-resistant stainless steel for daily wear.",
+    "fullDescription": "Two fine chains sit side by side at the wrist, each dotted with small pearl and charm accents that catch the light with every movement. Wears beautifully alone or stacked with other bracelets.\n\nHandcrafted in gold or silver stainless steel. Waterproof and completely tarnish-resistant. A thoughtful gift for birthdays, Mother's Day, or anyone who loves understated elegance.",
     "specs": [
       {
         "label": "Material",
-        "value": "Stainless steel (waterproof & tarnish-resistant)"
+        "value": "Gold or silver stainless steel with pearl accents"
       },
       {
         "label": "Style",
-        "value": "Dainty upper arm chain with birthstone drop pendant"
-      },
-      {
-        "label": "Available in",
-        "value": "Gold Tone"
-      },
-      {
-        "label": "Birthstone",
-        "value": "Choose your month at checkout (January – December)"
-      },
-      {
-        "label": "Closure",
-        "value": "Easy slip on"
-      },
-      {
-        "label": "Flexibility",
-        "value": "Rubber attachment for a comfortable, secure fit around the arm"
+        "value": "Double-strand pearl charm bracelet"
       },
       {
         "label": "Care",
-        "value": "Wipe gently with a soft cloth after wear. Store in an airtight container."
+        "value": "Wipe gently with soft cloth. Store in an airtight container."
       },
       {
         "label": "Shipping",
         "value": "Dispatches within 1–2 business days"
       }
-    ],
-    "variantGroups": [
-      {
-        "label": "Birthstone",
-        "type": "options",
-        "options": [
-          "January — Garnet",
-          "February — Amethyst",
-          "March — Aquamarine",
-          "April — Diamond",
-          "May — Emerald",
-          "June — Pearl",
-          "July — Ruby",
-          "August — Peridot",
-          "September — Sapphire",
-          "October — Opal",
-          "November — Citrine",
-          "December — Turquoise"
-        ]
-      },
-      {
-        "label": "Upper Arm Size",
-        "type": "options",
-        "options": [
-          "XS - 22 to 25 cm (9.8\")",
-          "S - 25 to 28 cm (11\")",
-          "M - 28 to 31 cm (12.2\")",
-          "L - 31 to 35 cm (13.8\")",
-          "XL - 35 to 39 cm (15.4\")",
-          "Custom Fit"
-        ]
-      }
-    ],
-    "gallery": [
-      "/images/products/birthstone-arm-chain/img-january.webp",
-      "/images/products/birthstone-arm-chain/img-7.webp",
-      "/images/products/birthstone-arm-chain/img-6.webp",
-      "/images/products/birthstone-arm-chain/img-2.webp",
-      "/images/products/birthstone-arm-chain/img-4.webp",
-      "/images/products/birthstone-arm-chain/img-3.webp",
-      "/images/products/birthstone-arm-chain/img-5.webp",
-      "/images/products/birthstone-arm-chain/img-1.webp"
-    ],
-    "images": [
-      "/images/products/birthstone-arm-chain/img-january.webp"
-    ],
-    "video": "/images/products/birthstone-arm-chain/video.mp4",
-    "featured": false,
-    "altText": "Delicate gold stainless steel birthstone arm chain with teardrop gemstone, waterproof shoulder jewelry for everyday wear",
-    "sizeGuideImage": "/images/products/137e8322-36db-4670-afed-c289f61ce7ae.webp",
-    "dateAdded": "2026-07-10T22:20:45-04:00",
-    "giftTags": [
-      "personalized"
-    ],
-    "active": false
-  },
-  {
-    "id": "bicep-chain",
-    "name": "Bicep Chain",
-    "price": 20,
-    "currency": "EUR",
-    "category": "Shoulder Chains",
-    "description": "There's nothing quite like finding that one perfect accessory that makes you feel effortlessly put together — whether you're in a swimsuit, a summer dress, an evening gown, or a simple white shirt on a weekend out. This dainty bicep chain is designed to be exactly that: a weightless, eye-catching piece of arm jewelry that catches the light beautifully whether you're lounging by the pool, attending a wedding, heading to a festival, or simply elevating your everyday look.",
-    "fullDescription": "We carefully handcraft each delicate chain to drape comfortably around your upper arm, giving you a beautiful boho-luxe vibe without any pinching or sliding. A small rubber attachment connects to the jump ring and chain, adding extra flexibility so the piece conforms naturally to the shape of your arm and stays exactly where you want it — all day, all night.\n\nBecause we know every body is wonderfully different, we offer completely custom sizing at no extra cost, ensuring your new favourite piece fits you perfectly no matter the occasion.\n\n✿ Sizing Guide\nMeasure around the fullest part of your upper arm (mid-bicep, relaxed — not flexed). That number is your size.\n\nXS — fits 22 to 25 cm (9.8\")\nS — fits 25 to 28 cm (11\")\nM — fits 28 to 31 cm (12.2\")\nL — fits 31 to 35 cm (13.8\")\nXL — fits 35 to 39 cm (15.4\")\nCustom Fit — message us your exact measurement in cm\n\nCustom sizing is always available at no extra cost — just send us a message after purchase with your measurement and we'll make it to fit.\n\n✿ Perfect for\nPool days, beach holidays, summer weddings, festival season, bridal parties, date nights, resort wear, boho styling, and everyday layering — this piece works twelve months a year.\n\nWaterproof • Tarnish-resistant • Handmade in Portugal and Canada",
-    "specs": [
-      {
-        "label": "Material",
-        "value": "High-quality stainless steel (waterproof & tarnish-resistant)"
-      },
-      {
-        "label": "Style",
-        "value": "Dainty upper arm chain / arm cuff chain"
-      },
-      {
-        "label": "Closure",
-        "value": "Easy slip on"
-      },
-      {
-        "label": "Flexibility",
-        "value": "Rubber attachment for a comfortable, secure fit around the arm"
-      },
-      {
-        "label": "Finish options",
-        "value": "Gold Tone (+€5), Silver Plated (+€5), Stainless Steel (base)"
-      },
-      {
-        "label": "Care",
-        "value": "Wipe gently with a soft cloth after each wear. Avoid direct contact with perfumes and lotions. Store in an airtight container when not in use."
-      },
-      {
-        "label": "Shipping",
-        "value": "Dispatches within 1–2 business days"
-      }
-    ],
-    "variantGroups": [
-      {
-        "label": "Finish",
-        "type": "options",
-        "options": [
-          "Gold Tone",
-          "Silver Plated",
-          "Stainless Steel"
-        ],
-        "optionPrices": {
-          "Gold Tone": 5,
-          "Silver Plated": 5,
-          "Stainless Steel": 0
-        }
-      },
-      {
-        "label": "Upper Arm Size",
-        "type": "options",
-        "options": [
-          "XS - 22 to 25 cm (9.8\")",
-          "S - 25 to 28 cm (11\")",
-          "M - 28 to 31 cm (12.2\")",
-          "L - 31 to 35 cm (13.8\")",
-          "XL - 35 to 39 cm (15.4\")",
-          "Custom Fit"
-        ]
-      }
-    ],
-    "variants": [
-      "Gold Tone",
-      "Silver Plated",
-      "Stainless Steel"
-    ],
-    "variantHeroes": {
-      "Gold Tone": "/images/products/bicep-chain/img-gold.webp",
-      "Silver Plated": "/images/products/bicep-chain/img-lifestyle-casual.webp",
-      "Stainless Steel": "/images/products/bicep-chain/img-silver.webp"
-    },
-    "gallery": [
-      "/images/products/bicep-chain/img-gold.webp",
-      "/images/products/bicep-chain/img-lifestyle-casual.webp",
-      "/images/products/bicep-chain/img-silver.webp",
-      "/images/products/bicep-chain/img-editorial.webp",
-      "/images/products/bicep-chain/img-lifestyle-cafe.webp",
-      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf-copy.webp",
-      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp",
-      "/images/products/b0803c14-f4b0-469d-9867-b3f7510566e8.webp"
-    ],
-    "images": [
-      "/images/products/bicep-chain/img-gold.webp"
-    ],
-    "video": "/images/products/bicep-chain/video.mp4",
-    "sizeGuideImage": "/images/products/bicep-chain/img-sizing.webp",
-    "featured": false,
-    "altText": "Gold tone stainless steel bicep chain for summer arm jewelry, waterproof body accessory",
-    "variantVideos": {
-      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/81c6a9cf4cd77c67e33bb40160d6127e/downloads/default.mp4",
-      "Silver Plated": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/81c6a9cf4cd77c67e33bb40160d6127e/downloads/default.mp4",
-      "Stainless Steel": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/81c6a9cf4cd77c67e33bb40160d6127e/downloads/default.mp4"
-    },
-    "dateAdded": "2026-07-11T16:49:10-04:00",
-    "active": false
-  },
-  {
-    "id": "stacked-pearl-cross-choker",
-    "name": "Stacked Pearl Cross Choker",
-    "price": 32,
-    "currency": "EUR",
-    "category": "Necklaces",
-    "description": "Pearls that already know how to layer themselves — a dainty pearl bead chain and fine gold-tone cable chain with a cross charm resting right at the collarbone.",
-    "fullDescription": "I paired a dainty pearl bead chain with a fine gold-tone cable chain and a tiny cross charm resting right at the collarbone — pre-layered, so there's no fussing with two clasps, just clip it on and go. Wear it to church, a christening, a wedding, or stacked into your everyday little gold jewelry rotation.",
-    "specs": [
-      {
-        "label": "Material",
-        "value": "Gold-tone stainless steel chain (Silver-tone also available)"
-      },
-      {
-        "label": "Pearls",
-        "value": "Pearl beads (glass)"
-      },
-      {
-        "label": "Pendant",
-        "value": "Cross charm"
-      },
-      {
-        "label": "Design",
-        "value": "Double-layer choker — pearl bead chain + fine cable chain"
-      },
-      {
-        "label": "Chain length",
-        "value": "35 cm (13.8\") + 6 cm (2.4\") extender"
-      },
-      {
-        "label": "Closure",
-        "value": "Lobster clasp"
-      },
-      {
-        "label": "Waterproof",
-        "value": "Yes"
-      },
-      {
-        "label": "Care",
-        "value": "Wipe with a soft cloth after wear. Store in an airtight container."
-      },
-      {
-        "label": "Shipping",
-        "value": "Dispatches within 1–2 business days"
-      }
-    ],
-    "variants": [
-      "Gold Tone",
-      "Silver Tone"
-    ],
-    "variantHeroes": {
-      "Gold Tone": "/images/products/stacked-pearl-cross-choker/7478046c-ca3b-4bc1-a41e-4a7c8df4ef58.webp",
-      "Silver Tone": "/images/products/stacked-pearl-cross-choker/b3f03ce0-fc74-4b69-be26-f154ab85d0fc.webp"
-    },
-    "variantVideos": {
-      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/2786312dfc400b5d050125f0ca3f30e6/downloads/default.mp4",
-      "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/2786312dfc400b5d050125f0ca3f30e6/downloads/default.mp4"
-    },
-    "gallery": [
-      "/images/products/stacked-pearl-cross-choker/7478046c-ca3b-4bc1-a41e-4a7c8df4ef58.webp",
-      "/images/products/stacked-pearl-cross-choker/b3f03ce0-fc74-4b69-be26-f154ab85d0fc.webp",
-      "/images/products/stacked-pearl-cross-choker/2289a6f4-09e0-4fc8-91e2-0b96c373e028.webp",
-      "/images/products/stacked-pearl-cross-choker/0e443386-0a68-40ce-a633-e8818b20f8f1.webp",
-      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf-copy.webp",
-      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp"
-    ],
-    "infographicImages": [
-      "/images/products/stacked-pearl-cross-choker/46ff1ac5-bd04-4706-8c12-2d3cb7fbad68.webp"
-    ],
-    "images": [
-      "/images/products/stacked-pearl-cross-choker/7478046c-ca3b-4bc1-a41e-4a7c8df4ef58.webp"
     ],
     "featured": false,
     "active": true,
-    "altText": "Dainty pearl beaded choker necklace with gold-tone stainless steel cross charm for layered styling",
-    "sizeGuideImage": "/images/products/46ff1ac5-bd04-4706-8c12-2d3cb7fbad68.webp",
-    "dateAdded": "2026-07-12T11:25:03-04:00",
-    "giftTags": [
-      "confirmation"
-    ]
-  },
-  {
-    "id": "birthstone-arm-band",
-    "name": "Birthstone Arm Band",
-    "price": 24,
-    "currency": "EUR",
-    "category": "Shoulder Chains",
-    "description": "One thin gold chain, one gemstone that means something. This single-strand birthstone arm band sits softly on the upper arm — the simplest way to wear your birth month or gift someone theirs.",
-    "fullDescription": "Twelve gemstones. Twelve months. One quiet, single-strand chain that says more than words.\n\nThis delicate birthstone arm band wraps around your upper arm with just one fine gold chain, finished with a teardrop gemstone in your chosen birth month stone. No layers, no fuss — just a simple, meaningful detail that catches the light on beach days, at weddings, or under a rolled-up sleeve on an ordinary afternoon.\n\nBuy it for yourself. Gift it to someone you love. Either way, it arrives sized to fit perfectly.\n\nSizing Guide\nMeasure around the fullest part of your upper arm (mid-bicep, relaxed — not flexed). That number is your size.\n\nXS — fits 22 to 25 cm (9.8\")\nS — fits 25 to 28 cm (11\")\nM — fits 28 to 31 cm (12.2\")\nL — fits 31 to 35 cm (13.8\")\nXL — fits 35 to 39 cm (15.4\")\nCustom Fit — message us your exact measurement in cm\n\nCustom sizing is always available at no extra cost — just send us a message after purchase with your measurement and we will make it to fit.\n\nPerfect for\nBirthdays, bridesmaid gifts, self-gifts, pool days, beach holidays, summer weddings, festival season, resort wear, minimalist everyday layering, and gifting twelve months a year.\n\nWaterproof • Tarnish-resistant",
-    "specs": [
-      {
-        "label": "Material",
-        "value": "Stainless steel (waterproof & tarnish-resistant)"
-      },
-      {
-        "label": "Style",
-        "value": "Single-strand upper arm band with birthstone drop pendant"
-      },
-      {
-        "label": "Available in",
-        "value": "Gold Tone"
-      },
-      {
-        "label": "Birthstone",
-        "value": "Choose your month at checkout (January – December)"
-      },
-      {
-        "label": "Closure",
-        "value": "Easy slip on"
-      },
-      {
-        "label": "Flexibility",
-        "value": "Rubber attachment for a comfortable, secure fit around the arm"
-      },
-      {
-        "label": "Care",
-        "value": "Wipe gently with a soft cloth after wear. Store in an airtight container."
-      },
-      {
-        "label": "Shipping",
-        "value": "Dispatches within 1–2 business days"
-      }
-    ],
-    "variantGroups": [
-      {
-        "label": "Birthstone",
-        "type": "options",
-        "options": [
-          "January — Garnet",
-          "February — Amethyst",
-          "March — Aquamarine",
-          "April — Diamond",
-          "May — Emerald",
-          "June — Pearl",
-          "July — Ruby",
-          "August — Peridot",
-          "September — Sapphire",
-          "October — Opal",
-          "November — Citrine",
-          "December — Turquoise"
-        ]
-      },
-      {
-        "label": "Upper Arm Size",
-        "type": "options",
-        "options": [
-          "XS - 22 to 25 cm (9.8\")",
-          "S - 25 to 28 cm (11\")",
-          "M - 28 to 31 cm (12.2\")",
-          "L - 31 to 35 cm (13.8\")",
-          "XL - 35 to 39 cm (15.4\")",
-          "Custom Fit"
-        ]
-      }
-    ],
-    "gallery": [
-      "/images/products/birthstone-arm-band/7d42276c-6049-49fb-834a-b8ae3e2ad277.webp",
-      "/images/products/birthstone-arm-band/4916e4ee-99ad-4012-8131-dc7c8be5665f.webp",
-      "/images/products/birthstone-arm-band/8e550763-5dc8-43d9-8c75-0adfb544a12f.webp",
-      "/images/products/8c1a99ad-3706-4574-8abc-1f02e90e6a26-copy-2.webp",
-      "/images/products/birthstone-arm-band/af0c2021-f688-49fa-9906-f4dc49516ea3.webp",
-      "/images/products/birthstone-arm-band/d13632f1-ad9d-4d7c-9e3e-cb575ac49a8a.webp",
-      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp",
-      "/images/products/2fea701c-8c9a-4de0-a202-09e9d7608b12.webp",
-      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf-copy.webp"
-    ],
     "images": [
-      "/images/products/birthstone-arm-band/7d42276c-6049-49fb-834a-b8ae3e2ad277.webp"
-    ],
-    "video": "/images/products/birthstone-arm-band/video.mp4",
-    "featured": false,
-    "active": false,
-    "altText": "Gold stainless steel birthstone arm band for upper arm, waterproof shoulder chain jewelry",
-    "sizeGuideImage": "/images/products/birthstone-arm-band/d13632f1-ad9d-4d7c-9e3e-cb575ac49a8a.webp",
-    "dateAdded": "2026-07-13T08:05:47-04:00",
-    "giftTags": [
-      "personalized"
-    ]
-  },
-  {
-    "id": "double-drape-thigh-chain",
-    "name": "Double Drape Thigh Chain",
-    "price": 28,
-    "currency": "EUR",
-    "category": "Leg Chains",
-    "description": "Two layered chain arcs drape across the upper thigh like a modern-day garter — dainty, waterproof stainless steel in gold-tone or silver-tone, with a stretch closure that slips on in seconds.",
-    "specs": [
-      {
-        "label": "Material",
-        "value": "Stainless steel, gold-tone or silver-tone finish"
-      },
-      {
-        "label": "Design",
-        "value": "Double layered drape arc with slim thigh band"
-      },
-      {
-        "label": "Closure",
-        "value": "Slip-on with hidden stretch closure — no clasp needed"
-      },
-      {
-        "label": "Waterproof",
-        "value": "Yes — safe for water, sun, and everyday wear"
-      },
-      {
-        "label": "Care",
-        "value": "Wipe with a soft cloth after wear. Store in an airtight container."
-      },
-      {
-        "label": "Shipping",
-        "value": "Dispatches within 1–2 business days"
-      }
+      "/images/products/f1a95b9b-e3ca-4323-bd17-525d5ddcd0a6.webp",
+      "https://i.etsystatic.com/55122258/r/il/6ee4aa/8065073742/il_fullxfull.8065073742_9b79.jpg",
+      "https://i.etsystatic.com/55122258/r/il/1fd40c/8047372098/il_fullxfull.8047372098_8wcr.jpg",
+      "https://i.etsystatic.com/55122258/r/il/cd8904/8032758132/il_fullxfull.8032758132_ru5f.jpg",
+      "https://i.etsystatic.com/55122258/r/il/93ba8e/8051512336/il_fullxfull.8051512336_2di7.jpg",
+      "https://i.etsystatic.com/55122258/r/il/b14ddd/8099427053/il_fullxfull.8099427053_2ou0.jpg",
+      "https://i.etsystatic.com/55122258/r/il/b3a795/7943677304/il_fullxfull.7943677304_jmkv.jpg",
+      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.webp",
+      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.webp",
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp"
     ],
     "variantGroups": [
       {
         "label": "Size",
-        "type": "options",
         "options": [
-          "S — 46 to 51 cm (20.1\")",
-          "M — 51 to 56 cm (22\")",
-          "L — 56 to 61 cm (24\")",
-          "XL — 61 to 66 cm (26\")"
+          "14 CM (5.5\")",
+          "15 CM (5.9\")",
+          "16 CM (6.3\")",
+          "17 CM (6.7\")",
+          "18 CM (7.1\")",
+          "19 CM (7.5\")",
+          "20 CM (7.9\")",
+          "21 CM (8.3\")",
+          "22 CM (8.7\")",
+          "23 CM (9.1\")"
+        ]
+      },
+      {
+        "label": "Color",
+        "options": [
+          "Gold stainless",
+          "Silver Stainless"
         ]
       }
     ],
-    "variants": [
-      "Gold Tone",
-      "Silver Tone"
+    "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/43713f58ef4eb86f6c97a68b12a8b4f6/downloads/default.mp4",
+    "altText": "Delicate gold stainless steel bracelet with pearl charms, handcrafted dainty bracelet for everyday wear",
+    "dateAdded": "2026-06-12T15:00:27-04:00"
+  },
+  {
+    "id": "butterfly-anklet",
+    "name": "Butterfly Anklet",
+    "price": 22,
+    "currency": "EUR",
+    "category": "Anklets",
+    "description": "Your summer ankle detail. This waterproof butterfly charm anklet comes in five butterfly colours — a dainty, playful piece handcrafted from tarnish-resistant stainless steel for beach and everyday wear.",
+    "fullDescription": "Choose your butterfly colour — White, Pink, Yellow, Blue, or Purple — and it arrives on a fine gold ankle chain with an adjustable fit. Light and effortless, the kind of anklet you don't want to take off when summer ends.\n\nHandcrafted in stainless steel. Completely waterproof and anti-tarnish.",
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Stainless steel (waterproof & anti-tarnish)"
+      },
+      {
+        "label": "Butterfly colours",
+        "value": "White, Pink, Yellow, Blue, Purple"
+      },
+      {
+        "label": "Style",
+        "value": "Butterfly charm anklet"
+      },
+      {
+        "label": "Fit",
+        "value": "Adjustable"
+      },
+      {
+        "label": "Care",
+        "value": "Wipe gently with soft cloth. Store in an airtight container."
+      },
+      {
+        "label": "Shipping",
+        "value": "Dispatches within 1–2 business days"
+      }
     ],
-    "images": [
-      "/images/products/double-drape-thigh-chain/1272cd0f-gold-park-hero.webp"
-    ],
-    "gallery": [
-      "/images/products/double-drape-thigh-chain/1272cd0f-gold-park-hero.webp",
-      "/images/products/double-drape-thigh-chain/3e6407db-silver-indoor-hero.webp",
-      "/images/products/double-drape-thigh-chain/db0bf291-gold-ocean.webp",
-      "/images/products/double-drape-thigh-chain/80bbcc0c-gold-beach-towel.webp",
-      "/images/products/double-drape-thigh-chain/b7f0fc0f-gold-pool-blue.webp",
-      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp",
-      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.webp",
-      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf-copy.webp"
-    ],
-    "variantHeroes": {
-      "Gold Tone": "/images/products/double-drape-thigh-chain/1272cd0f-gold-park-hero.webp",
-      "Silver Tone": "/images/products/double-drape-thigh-chain/3e6407db-silver-indoor-hero.webp"
-    },
-    "sizeGuideImage": "/images/products/double-drape-thigh-chain/530dc0d3-size-guide.webp",
-    "altText": "Gold-tone stainless steel double drape thigh chain for body jewelry fashion and waterproof layered leg accessories",
     "featured": false,
-    "active": false,
-    "variantVideos": {
-      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/1044e580917bb13a7a3278f60a2c717a/downloads/default.mp4",
-      "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/1044e580917bb13a7a3278f60a2c717a/downloads/default.mp4"
-    },
-    "dateAdded": "2026-07-16T17:39:38-04:00"
+    "active": true,
+    "images": [
+      "/images/products/f3d2e112-06e4-435a-a2ee-a4f3c70487ae.webp",
+      "/images/products/8fdadd14-e6ac-4714-8f9c-4d30ec683cf5.png",
+      "/images/products/1d05e8b5-b6d8-4c3e-804b-073162423a2b.webp",
+      "/images/products/esty-thumnails-new--22--copy.webp",
+      "https://i.etsystatic.com/55122258/r/il/1878f7/7765732386/il_fullxfull.7765732386_77p7.jpg",
+      "https://i.etsystatic.com/55122258/r/il/4813fe/7813678257/il_fullxfull.7813678257_7atp.jpg"
+    ],
+    "variantGroups": [
+      {
+        "label": "Butterfly Color",
+        "options": [
+          "White",
+          "Pink",
+          "Yellow",
+          "Blue",
+          "Purple"
+        ]
+      }
+    ],
+    "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/dd8560812f8f60d525d90c037b1f3a67/downloads/default.mp4",
+    "altText": "Gold stainless steel butterfly ankle bracelet, waterproof charm anklet for summer beach wear",
+    "sizeGuideImage": "/images/products/esty-thumnails-new--19-.webp",
+    "dateAdded": "2026-06-12T15:00:27-04:00"
   },
   {
     "id": "birth-month-teardrop-choker",
@@ -9270,48 +9811,29 @@
     "altText": "Gold-tone stainless steel dainty choker necklace with teardrop birthstone pendant for everyday wear"
   },
   {
-    "id": "initial-heart-pearl-choker",
-    "name": "Initial Heart Pearl Choker",
-    "category": "Necklaces",
-    "price": 32,
+    "id": "dainty-chain-bracelet",
+    "name": "Dainty Chain Bracelet",
+    "price": 14,
     "currency": "EUR",
-    "description": "A dainty pearl bead chain layered with a fine gold-tone cable chain and a tiny engraved initial heart charm, sitting right at the collarbone — pre-layered so there's no fussing with two clasps, just clip it on and go.",
+    "category": "Bracelets",
+    "description": "Your everyday essential. This minimal gold chain bracelet stacks and layers beautifully — waterproof, tarnish-free stainless steel that earns a permanent spot on your wrist.",
+    "fullDescription": "Clean, simple, and endlessly wearable. A single fine chain at the wrist that goes with everything and bothers no one. The kind of bracelet you put on and forget about because it just works.\n\nHandcrafted in gold stainless steel. Completely waterproof and tarnish-resistant. Buy a second one — they're made to be stacked.",
     "specs": [
       {
         "label": "Material",
-        "value": "Gold-tone stainless steel chain"
+        "value": "Gold stainless steel (waterproof & tarnish-resistant)"
       },
       {
-        "label": "Pearls",
-        "value": "Faux pearl beads (glass)"
+        "label": "Style",
+        "value": "Dainty minimal chain bracelet"
       },
       {
-        "label": "Pendant",
-        "value": "Stainless steel heart initial charm — choose your letter"
-      },
-      {
-        "label": "Design",
-        "value": "Double-layer choker — pearl bead chain + fine cable chain"
-      },
-      {
-        "label": "Chain length",
-        "value": "35 cm (13.8\") + 6 cm (2.4\") extender"
-      },
-      {
-        "label": "Adjustable",
-        "value": "35–41 cm (13.8\"–16.1\")"
-      },
-      {
-        "label": "Closure",
-        "value": "Lobster clasp"
-      },
-      {
-        "label": "Waterproof",
-        "value": "Yes — safe for water, sun, and everyday wear"
+        "label": "Finish",
+        "value": "Gold tone"
       },
       {
         "label": "Care",
-        "value": "Wipe with a soft cloth after wear. Store in an airtight container."
+        "value": "Wipe gently with soft cloth. Store in an airtight container."
       },
       {
         "label": "Shipping",
@@ -9321,63 +9843,44 @@
     "featured": false,
     "active": true,
     "images": [
-      "/images/products/initial-heart-pearl-choker/lifestyle-home.webp"
+      "https://i.etsystatic.com/55122258/r/il/3f111f/8086665923/il_fullxfull.8086665923_qdr3.jpg",
+      "https://i.etsystatic.com/55122258/r/il/3110c4/8038864386/il_fullxfull.8038864386_s536.jpg",
+      "https://i.etsystatic.com/55122258/r/il/3c01a2/8038715412/il_fullxfull.8038715412_s531.jpg",
+      "https://i.etsystatic.com/55122258/r/il/fea173/8038720530/il_fullxfull.8038720530_nqco.jpg",
+      "https://i.etsystatic.com/55122258/r/il/50868c/8086627797/il_fullxfull.8086627797_6yue.jpg",
+      "https://i.etsystatic.com/55122258/r/il/cd8904/8032758132/il_fullxfull.8032758132_ru5f.jpg",
+      "https://i.etsystatic.com/55122258/r/il/b3a795/7943677304/il_fullxfull.7943677304_jmkv.jpg",
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp",
+      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.webp",
+      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.webp"
     ],
-    "gallery": [
-      "/images/products/initial-heart-pearl-choker/lifestyle-home.webp",
-      "/images/products/initial-heart-pearl-choker/lifestyle-nightclub.webp",
-      "/images/products/initial-heart-pearl-choker/macro-heart-detail.webp",
-      "/images/products/initial-heart-pearl-choker/choose-your-initial-chart.webp",
-      "/images/products/IMG_2754-2.jpg",
-      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
-      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.jpg"
-    ],
-    "video": "/images/products/initial-heart-pearl-choker/video.mp4",
     "variantGroups": [
       {
-        "label": "Initial",
-        "type": "options",
+        "label": "Size",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D",
-          "E",
-          "F",
-          "G",
-          "H",
-          "I",
-          "J",
-          "K",
-          "L",
-          "M",
-          "N",
-          "O",
-          "P",
-          "Q",
-          "R",
-          "S",
-          "T",
-          "U",
-          "V",
-          "W",
-          "X",
-          "Y",
-          "Z"
+          "14 CM (5.5\")",
+          "15 CM (5.9\")",
+          "16 CM (6.3\")",
+          "17 CM (6.7\")",
+          "18 CM (7.1\")",
+          "19 CM (7.5\")",
+          "20 CM (7.9\")",
+          "21 CM (8.3\")",
+          "22 CM (8.7\")",
+          "23 CM (9.1\")"
+        ]
+      },
+      {
+        "label": "Choose Your Stack",
+        "options": [
+          "Single Bracelet",
+          "Double Stack (2)",
+          "Triple Stack (3)"
         ]
       }
     ],
-    "infographicImages": [
-      "/images/products/initial-heart-pearl-choker/choose-your-initial-chart.webp",
-      "/images/products/initial-heart-pearl-choker/infographic-sizing.webp"
-    ],
-    "altText": "Dainty pearl choker necklace with gold-tone stainless steel chain and personalized initial heart charm",
-    "fullDescription": "I paired a dainty pearl chain with a fine gold-tone cable chain and a tiny initial heart charm resting right at the collarbone — pre-layered, so there's no fussing with two clasps, just clip it on and go. Wear it to a party, a wedding, or stacked into your everyday little gold jewelry rotation.\n\nProduct Details\nMaterial: Gold-tone stainless steel chain\nPearls: Faux pearl beads (glass)\nPendant: Stainless steel heart initial\nDesign: Double-layer choker — pearl bead chain + fine cable chain\nChain length: 35 cm + 6 cm extender\nClosure: Lobster clasp\nWaterproof & Sweat-Proof: Yes — safe for water, sun, and everyday wear\n\nSize Guide\nAdjustable 35–41 cm, sits snug at the collarbone as a choker\n\nFit Note: Measure around the base of your neck where you'd like the choker to sit, and add 1–2 cm for comfortable movement.\n\nCustom Sizing: Need a specific measurement? Message me before ordering and I'll make it to your exact size at no extra cost.\n\nCare Instructions\nWipe gently with a soft cloth after each wear.\nStore in an airtight container when not in use.\n\nShipping: Dispatches within 1–2 business days.\n\nPlease note that as each piece is handcrafted, no two pieces are identical and slight variations may occur.\n\nThanks for looking! Feel free to message me if you have any questions.",
-    "giftTags": [
-      "personalized"
-    ],
-    "dateAdded": "2026-07-24T21:00:26-04:00",
-    "sizeGuideImage": "/images/products/96157bb8-71ca-41e5-bf15-afbb427fd8f8.png"
+    "altText": "Dainty gold chain bracelet in waterproof stainless steel, perfect for everyday layering and stacking",
+    "dateAdded": "2026-06-12T15:00:27-04:00"
   },
   {
     "id": "colorful-crystal-bead-choker",
@@ -9573,452 +10076,6 @@
       "personalized"
     ],
     "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/ad3648bf0363b65780699bad978c532e/downloads/default.mp4"
-  },
-  {
-    "id": "pearl-charm-bracelet",
-    "name": "Pearl Charm Bracelet",
-    "price": 24,
-    "currency": "EUR",
-    "category": "Bracelets",
-    "description": "Your everyday pearl, double-stranded. This handcrafted gold bracelet features two delicate strands with freshwater-style pearl and charm accents — waterproof, tarnish-resistant stainless steel for daily wear.",
-    "fullDescription": "Two fine chains sit side by side at the wrist, each dotted with small pearl and charm accents that catch the light with every movement. Wears beautifully alone or stacked with other bracelets.\n\nHandcrafted in gold or silver stainless steel. Waterproof and completely tarnish-resistant. A thoughtful gift for birthdays, Mother's Day, or anyone who loves understated elegance.",
-    "specs": [
-      {
-        "label": "Material",
-        "value": "Gold or silver stainless steel with pearl accents"
-      },
-      {
-        "label": "Style",
-        "value": "Double-strand pearl charm bracelet"
-      },
-      {
-        "label": "Care",
-        "value": "Wipe gently with soft cloth. Store in an airtight container."
-      },
-      {
-        "label": "Shipping",
-        "value": "Dispatches within 1–2 business days"
-      }
-    ],
-    "featured": false,
-    "active": true,
-    "images": [
-      "/images/products/f1a95b9b-e3ca-4323-bd17-525d5ddcd0a6.webp",
-      "https://i.etsystatic.com/55122258/r/il/6ee4aa/8065073742/il_fullxfull.8065073742_9b79.jpg",
-      "https://i.etsystatic.com/55122258/r/il/1fd40c/8047372098/il_fullxfull.8047372098_8wcr.jpg",
-      "https://i.etsystatic.com/55122258/r/il/cd8904/8032758132/il_fullxfull.8032758132_ru5f.jpg",
-      "https://i.etsystatic.com/55122258/r/il/93ba8e/8051512336/il_fullxfull.8051512336_2di7.jpg",
-      "https://i.etsystatic.com/55122258/r/il/b14ddd/8099427053/il_fullxfull.8099427053_2ou0.jpg",
-      "https://i.etsystatic.com/55122258/r/il/b3a795/7943677304/il_fullxfull.7943677304_jmkv.jpg",
-      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.webp",
-      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.webp",
-      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp"
-    ],
-    "variantGroups": [
-      {
-        "label": "Size",
-        "options": [
-          "14 CM (5.5\")",
-          "15 CM (5.9\")",
-          "16 CM (6.3\")",
-          "17 CM (6.7\")",
-          "18 CM (7.1\")",
-          "19 CM (7.5\")",
-          "20 CM (7.9\")",
-          "21 CM (8.3\")",
-          "22 CM (8.7\")",
-          "23 CM (9.1\")"
-        ]
-      },
-      {
-        "label": "Color",
-        "options": [
-          "Gold stainless",
-          "Silver Stainless"
-        ]
-      }
-    ],
-    "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/43713f58ef4eb86f6c97a68b12a8b4f6/downloads/default.mp4",
-    "altText": "Delicate gold stainless steel bracelet with pearl charms, handcrafted dainty bracelet for everyday wear",
-    "dateAdded": "2026-06-12T15:00:27-04:00"
-  },
-  {
-    "id": "butterfly-anklet",
-    "name": "Butterfly Anklet",
-    "price": 22,
-    "currency": "EUR",
-    "category": "Anklets",
-    "description": "Your summer ankle detail. This waterproof butterfly charm anklet comes in five butterfly colours — a dainty, playful piece handcrafted from tarnish-resistant stainless steel for beach and everyday wear.",
-    "fullDescription": "Choose your butterfly colour — White, Pink, Yellow, Blue, or Purple — and it arrives on a fine gold ankle chain with an adjustable fit. Light and effortless, the kind of anklet you don't want to take off when summer ends.\n\nHandcrafted in stainless steel. Completely waterproof and anti-tarnish.",
-    "specs": [
-      {
-        "label": "Material",
-        "value": "Stainless steel (waterproof & anti-tarnish)"
-      },
-      {
-        "label": "Butterfly colours",
-        "value": "White, Pink, Yellow, Blue, Purple"
-      },
-      {
-        "label": "Style",
-        "value": "Butterfly charm anklet"
-      },
-      {
-        "label": "Fit",
-        "value": "Adjustable"
-      },
-      {
-        "label": "Care",
-        "value": "Wipe gently with soft cloth. Store in an airtight container."
-      },
-      {
-        "label": "Shipping",
-        "value": "Dispatches within 1–2 business days"
-      }
-    ],
-    "featured": false,
-    "active": true,
-    "images": [
-      "/images/products/f3d2e112-06e4-435a-a2ee-a4f3c70487ae.webp",
-      "/images/products/8fdadd14-e6ac-4714-8f9c-4d30ec683cf5.png",
-      "/images/products/1d05e8b5-b6d8-4c3e-804b-073162423a2b.webp",
-      "/images/products/esty-thumnails-new--22--copy.webp",
-      "https://i.etsystatic.com/55122258/r/il/1878f7/7765732386/il_fullxfull.7765732386_77p7.jpg",
-      "https://i.etsystatic.com/55122258/r/il/4813fe/7813678257/il_fullxfull.7813678257_7atp.jpg"
-    ],
-    "variantGroups": [
-      {
-        "label": "Butterfly Color",
-        "options": [
-          "White",
-          "Pink",
-          "Yellow",
-          "Blue",
-          "Purple"
-        ]
-      }
-    ],
-    "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/dd8560812f8f60d525d90c037b1f3a67/downloads/default.mp4",
-    "altText": "Gold stainless steel butterfly ankle bracelet, waterproof charm anklet for summer beach wear",
-    "sizeGuideImage": "/images/products/esty-thumnails-new--19-.webp",
-    "dateAdded": "2026-06-12T15:00:27-04:00"
-  },
-  {
-    "id": "turquoise-zodiac-necklace-stack",
-    "name": "Turquoise & Zodiac Necklace Stack",
-    "price": 36,
-    "currency": "EUR",
-    "category": "Necklaces",
-    "description": "Wear it solo or wear it stacked. A pre-layered turquoise bead and cable chain choker paired with a separate continuous-loop zodiac pendant necklace — worn together for a three-layer stack, or apart on their own.",
-    "fullDescription": "Wear it solo. Wear it stacked. Wear it your way.\n\nThis set pairs two pieces that were designed to stack: a pre-layered double-chain choker (turquoise bead chain + fine cable chain, clipped on with one clasp — no fussing with two), and a separate long zodiac pendant necklace with a continuous loop, no clasp needed, just slip it over your head. Wear the zodiac piece alone for the necklace you never take off — through the gym, the pool, the shower, straight to dinner — or layer it under the choker for the full three-layer stack shown in the photos. Two necklaces, styled as one look, but yours to wear together or apart.\n\nProduct Details\n\nPiece 1 — Double-Layer Choker\nMaterial: Gold-tone stainless steel chain\nDesign: Double-layer choker\nChain length: 35 cm + 6 cm extender\nClosure: Lobster clasp\n\nPiece 2 — Zodiac Pendant Necklace\nMaterial: Gold-tone stainless steel\nStyle: Dainty cable chain with a small engraved zodiac disc pendant\nChain length: 66 cm continuous loop — one size fits all, no clasp\n\nWaterproof & Sweat-Proof: Yes, on both pieces — safe for water, sun, and everyday wear\n\nHow to Order\nSelect your Zodiac Sign (available in all 12 signs)\n\nSize Guide\nChoker: adjustable 35–41 cm, sits snug at the collarbone\nZodiac necklace: fixed 66 cm continuous loop, one size fits all\n\nFit Note: For the choker, measure around the base of your neck where you'd like it to sit, and add 1–2 cm for comfortable movement. The zodiac necklace's continuous loop requires no measuring — it's designed to slip over the head at one universal length.\n\nCustom Sizing: Need the choker in a specific measurement? Message me before ordering and I'll make it to your exact size at no extra cost. (The zodiac necklace's continuous loop is fixed and can't be resized.)\n\nCare Instructions\nWipe gently with a soft cloth after each wear.\nStore in an airtight container when not in use.\n\nShipping: Dispatches within 1–2 business days.\n\nPlease note that as each piece is handcrafted, no two pieces are identical and slight variations may occur.",
-    "specs": [
-      {
-        "label": "Material",
-        "value": "Gold-tone stainless steel"
-      },
-      {
-        "label": "Design",
-        "value": "Two-piece necklace stack — double-layer choker (turquoise bead chain + fine cable chain) + continuous-loop zodiac pendant necklace"
-      },
-      {
-        "label": "Choker chain length",
-        "value": "35 cm (13.8\") + 6 cm (2.4\") extender"
-      },
-      {
-        "label": "Choker closure",
-        "value": "Lobster clasp"
-      },
-      {
-        "label": "Zodiac necklace length",
-        "value": "66 cm (26\") continuous loop, no clasp"
-      },
-      {
-        "label": "Zodiac sign",
-        "value": "Select from all 12 signs at checkout"
-      },
-      {
-        "label": "Waterproof",
-        "value": "Yes, on both pieces"
-      },
-      {
-        "label": "Care",
-        "value": "Wipe gently with a soft cloth after each wear. Store in an airtight container."
-      },
-      {
-        "label": "Shipping",
-        "value": "Dispatches within 1–2 business days"
-      }
-    ],
-    "featured": false,
-    "active": true,
-    "variantGroups": [
-      {
-        "label": "Zodiac Sign",
-        "options": [
-          "Aries (3.21-4.19)",
-          "Taurus (4.20-5.20)",
-          "Gemini (5.21-6.20)",
-          "Cancer (6.21-7.22)",
-          "Leo (7.23-8.22)",
-          "Virgo (8.23-9.22)",
-          "Libra (9.23-10.22)",
-          "Scorpio(10.23-11.21)",
-          "Sagit. (11.22-12.21)",
-          "Capricorn 12.22-1.19",
-          "Aquarius (1.20-2.18)",
-          "Pisces (2.19-3.20)"
-        ]
-      }
-    ],
-    "images": [
-      "/images/products/c54445d6-f6ba-4667-9e4d-2bdebf9cad66.jpeg",
-      "/images/products/15b8d666-f9d6-419a-b701-2b1c597cce02.png",
-      "/images/products/390e92bb-46a4-4bb6-bba0-47cfaa9bd545.png",
-      "/images/products/c828c481-b3b9-47de-b91f-3db8a4c1948c.jpeg",
-      "/images/products/038c4035-eb5d-4786-95f7-f431025e3970.png",
-      "/images/products/51556245-92a9-4d7e-ba3f-bcb05dce79f1.png"
-    ],
-    "altText": "Layered turquoise bead choker and gold zodiac pendant necklace set, personalized star sign necklace stack",
-    "giftTags": [
-      "personalized"
-    ],
-    "dateAdded": "2026-08-01T09:00:00-04:00",
-    "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/def1205ff0a5b43d0f3debd5b6f1c61b/downloads/default.mp4"
-  },
-  {
-    "id": "dainty-chain-bracelet",
-    "name": "Dainty Chain Bracelet",
-    "price": 14,
-    "currency": "EUR",
-    "category": "Bracelets",
-    "description": "Your everyday essential. This minimal gold chain bracelet stacks and layers beautifully — waterproof, tarnish-free stainless steel that earns a permanent spot on your wrist.",
-    "fullDescription": "Clean, simple, and endlessly wearable. A single fine chain at the wrist that goes with everything and bothers no one. The kind of bracelet you put on and forget about because it just works.\n\nHandcrafted in gold stainless steel. Completely waterproof and tarnish-resistant. Buy a second one — they're made to be stacked.",
-    "specs": [
-      {
-        "label": "Material",
-        "value": "Gold stainless steel (waterproof & tarnish-resistant)"
-      },
-      {
-        "label": "Style",
-        "value": "Dainty minimal chain bracelet"
-      },
-      {
-        "label": "Finish",
-        "value": "Gold tone"
-      },
-      {
-        "label": "Care",
-        "value": "Wipe gently with soft cloth. Store in an airtight container."
-      },
-      {
-        "label": "Shipping",
-        "value": "Dispatches within 1–2 business days"
-      }
-    ],
-    "featured": false,
-    "active": true,
-    "images": [
-      "https://i.etsystatic.com/55122258/r/il/3f111f/8086665923/il_fullxfull.8086665923_qdr3.jpg",
-      "https://i.etsystatic.com/55122258/r/il/3110c4/8038864386/il_fullxfull.8038864386_s536.jpg",
-      "https://i.etsystatic.com/55122258/r/il/3c01a2/8038715412/il_fullxfull.8038715412_s531.jpg",
-      "https://i.etsystatic.com/55122258/r/il/fea173/8038720530/il_fullxfull.8038720530_nqco.jpg",
-      "https://i.etsystatic.com/55122258/r/il/50868c/8086627797/il_fullxfull.8086627797_6yue.jpg",
-      "https://i.etsystatic.com/55122258/r/il/cd8904/8032758132/il_fullxfull.8032758132_ru5f.jpg",
-      "https://i.etsystatic.com/55122258/r/il/b3a795/7943677304/il_fullxfull.7943677304_jmkv.jpg",
-      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp",
-      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.webp",
-      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.webp"
-    ],
-    "variantGroups": [
-      {
-        "label": "Size",
-        "options": [
-          "14 CM (5.5\")",
-          "15 CM (5.9\")",
-          "16 CM (6.3\")",
-          "17 CM (6.7\")",
-          "18 CM (7.1\")",
-          "19 CM (7.5\")",
-          "20 CM (7.9\")",
-          "21 CM (8.3\")",
-          "22 CM (8.7\")",
-          "23 CM (9.1\")"
-        ]
-      },
-      {
-        "label": "Choose Your Stack",
-        "options": [
-          "Single Bracelet",
-          "Double Stack (2)",
-          "Triple Stack (3)"
-        ]
-      }
-    ],
-    "altText": "Dainty gold chain bracelet in waterproof stainless steel, perfect for everyday layering and stacking",
-    "dateAdded": "2026-06-12T15:00:27-04:00"
-  },
-  {
-    "id": "curb-chain-cross-necklace",
-    "name": "Cross Pendant Curb Chain Necklace",
-    "price": 22,
-    "currency": "EUR",
-    "category": "Necklaces",
-    "description": "A solid stainless steel curb chain necklace — available with or without a cross pendant. It won't rust, won't tarnish, and you can keep it on through water and sweat.",
-    "fullDescription": "A solid stainless steel curb chain necklace — available with or without a cross pendant. It won't rust, won't tarnish, and you can keep it on through water and sweat.\n\nProduct Details\n\nMaterial: Stainless steel\nChain Style: Curb chain (Cuban link)\nChain width: 3 mm\nChain length: 55 cm (22\")\nPendant: Optional cross, stainless steel — 20mm width x 35mm height (select \"With Pendant\" at checkout)\nFinish: Gold-tone or Silver-tone\nClosure: Lobster clasp\nWaterproof & Tarnish-Resistant: Yes\n\nHow to Order\nSelect your Finish (Gold or Silver) and your Style (With Pendant or Without Pendant)\n\nSize Guide\n55 cm (22\") fixed length, sits mid-chest on most builds. This chain has no extender, so measure from the base of your neck down to where you'd like it to sit before ordering.\n\nCustom Sizing: Need a different length? Message me before ordering and I'll get you the right fit.\n\nCare Instructions\nWipe gently with a soft cloth after each wear.\nStore in an airtight container when not in use.\n\nShipping: Dispatches within 1–2 business days.\n\nThanks for looking! Feel free to message me if you have any questions.",
-    "specs": [
-      {
-        "label": "Material",
-        "value": "Stainless steel"
-      },
-      {
-        "label": "Chain Style",
-        "value": "Curb chain (Cuban link)"
-      },
-      {
-        "label": "Chain width",
-        "value": "3 mm"
-      },
-      {
-        "label": "Chain length",
-        "value": "55 cm (22\")"
-      },
-      {
-        "label": "Pendant",
-        "value": "Optional cross pendant, stainless steel — 20mm width x 35mm height"
-      },
-      {
-        "label": "Finish",
-        "value": "Gold-tone or Silver-tone"
-      },
-      {
-        "label": "Closure",
-        "value": "Lobster clasp"
-      },
-      {
-        "label": "Waterproof & Tarnish-Resistant",
-        "value": "Yes"
-      }
-    ],
-    "featured": false,
-    "active": true,
-    "variantGroups": [
-      {
-        "label": "Finish",
-        "options": [
-          "Gold Tone",
-          "Silver Tone"
-        ]
-      },
-      {
-        "label": "Style",
-        "options": [
-          "Without Pendant",
-          "With Pendant"
-        ],
-        "optionPrices": {
-          "With Pendant": 8
-        }
-      }
-    ],
-    "images": [
-      "/images/products/40b43833-6642-470c-a59a-6a5cec97b092.png"
-    ],
-    "altText": "Curb chain cross pendant necklace for men in stainless steel, gold and silver tone, with or without pendant option",
-    "dateAdded": "2026-08-06T14:00:00-04:00",
-    "variants": [
-      "Gold Tone",
-      "Silver Tone"
-    ],
-    "gallery": [
-      "/images/products/40b43833-6642-470c-a59a-6a5cec97b092.png",
-      "/images/products/cbea5807-6d58-413e-9537-eb79db016432.png",
-      "/images/products/49903c7f-afb6-4b86-877b-f9a2599977ae.png",
-      "/images/products/38b9cfee-66db-46ca-a981-60744878c927.png",
-      "/images/products/1224e3af-9937-416b-b5a4-4b832577bbd9.png",
-      "/images/products/IMG_1165.jpeg",
-      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf-copy.jpeg"
-    ],
-    "variantHeroes": {
-      "Gold Tone": "/images/products/40b43833-6642-470c-a59a-6a5cec97b092.png",
-      "Silver Tone": "/images/products/cbea5807-6d58-413e-9537-eb79db016432.png"
-    },
-    "variantVideos": {
-      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/7c10bdc5fd2c60f449d03731e8267b07/downloads/default.mp4",
-      "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/7c10bdc5fd2c60f449d03731e8267b07/downloads/default.mp4"
-    },
-    "sizeGuideImage": "/images/products/Infographic-editor.png"
-  },
-  {
-    "id": "coin-disc-chain-choker",
-    "name": "Coin Disc Chain Choker",
-    "price": 24,
-    "currency": "EUR",
-    "category": "Necklaces",
-    "description": "This minimalist choker necklace is for the girl who keeps things simple. A dainty coin disc chain sits right at the collarbone — no pendant, no fuss, just clean lines and quiet confidence.",
-    "fullDescription": "This minimalist choker necklace is for the girl who keeps things simple. A dainty coin disc chain sits right at the collarbone — no pendant, no fuss, just clean lines and quiet confidence. Handmade from stainless steel, it's built to stack, layer, or wear solo every day without fading, tarnishing, or asking for attention it didn't earn.\n\nMaterials: Stainless steel\nFinish: Gold tone / Silver tone\nStyle: Coin disc link chain\nSize: Chain 35cm + 6cm extender (Need a different size? Dm us after purchase and we'll adjust for free)\nWaterproof: Yes\nTarnish-resistant: Yes\n\nCare Instructions\nTo maintain the integrity and shine of your jewelry:\n\nWipe gently with a soft cloth after each wear.\nStore in an airtight container when not in use.\n\nShipping Time: Dispatches within 1-2 business days\n\nPlease note that as each piece is handcrafted, no two pieces are identical and slight variations may occur.\n\nThanks for looking! Feel free to message me if you have any questions.",
-    "specs": [
-      {
-        "label": "Material",
-        "value": "Stainless steel"
-      },
-      {
-        "label": "Finish",
-        "value": "Gold tone / Silver tone"
-      },
-      {
-        "label": "Style",
-        "value": "Coin disc link chain"
-      },
-      {
-        "label": "Chain length",
-        "value": "35 cm + 6 cm extender"
-      },
-      {
-        "label": "Closure",
-        "value": "Lobster clasp"
-      },
-      {
-        "label": "Waterproof",
-        "value": "Yes"
-      },
-      {
-        "label": "Tarnish-Resistant",
-        "value": "Yes"
-      }
-    ],
-    "featured": false,
-    "active": true,
-    "variants": [
-      "Gold Tone",
-      "Silver Tone"
-    ],
-    "variantGroups": [
-      {
-        "label": "Finish",
-        "options": [
-          "Gold Tone",
-          "Silver Tone"
-        ]
-      }
-    ],
-    "images": [
-      "/images/products/RESULT_nanobanana_choker_1.png"
-    ],
-    "altText": "Coin disc chain choker necklace in gold and silver tone stainless steel, waterproof and tarnish-resistant minimalist layering necklace",
-    "dateAdded": "2026-08-08T10:00:00-04:00",
-    "gallery": [
-      "/images/products/RESULT_nanobanana_choker_1.png",
-      "/images/products/aaaca860-3464-4cb6-bef2-8e5301b83913.png",
-      "/images/products/RESULT_flatlay_seedream-2.jpg",
-      "/images/products/78bc94e6-f52f-47f7-a17c-8f260874b561.png",
-      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
-      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf-copy.jpeg"
-    ],
-    "variantHeroes": {
-      "Gold Tone": "/images/products/RESULT_nanobanana_choker_1.png",
-      "Silver Tone": "/images/products/aaaca860-3464-4cb6-bef2-8e5301b83913.png"
-    },
-    "sizeGuideImage": "/images/products/Infographic-editor.png"
   },
   {
     "id": "layered-pearl-anklet",
@@ -10258,97 +10315,86 @@
     "dateAdded": "2026-08-12T12:05:00-04:00"
   },
   {
-    "id": "rosary-pearl-cross-choker",
-    "name": "Rosary Pearl Cross Choker",
-    "price": 30,
+    "id": "turquoise-zodiac-necklace-stack",
+    "name": "Turquoise & Zodiac Necklace Stack",
+    "price": 36,
     "currency": "EUR",
     "category": "Necklaces",
-    "description": "A dainty rosary-style pearl bead chain with a small cross charm made of its own tiny pearls, resting right at the collarbone.",
-    "fullDescription": "A dainty pearl chain with tiny beads threaded individually along a fine stainless steel chain, finished with a small cross charm made of its own tiny pearls. It sits right at the collarbone, simple and delicate. Handmade from stainless steel underneath every pearl and every link, so it stays bright and doesn't fade, tarnish, or need to come off before you shower. Wear it with a white dress for New Year's, under a sweater in the colder months, or as a first communion, christening, or confirmation gift that still gets worn once the day is over. A good gift for a daughter, goddaughter, or granddaughter for their communion or confirmation, or for a bride or bridesmaid who wants something delicate that still means something.",
+    "description": "Wear it solo or wear it stacked. A pre-layered turquoise bead and cable chain choker paired with a separate continuous-loop zodiac pendant necklace — worn together for a three-layer stack, or apart on their own.",
+    "fullDescription": "Wear it solo. Wear it stacked. Wear it your way.\n\nThis set pairs two pieces that were designed to stack: a pre-layered double-chain choker (turquoise bead chain + fine cable chain, clipped on with one clasp — no fussing with two), and a separate long zodiac pendant necklace with a continuous loop, no clasp needed, just slip it over your head. Wear the zodiac piece alone for the necklace you never take off — through the gym, the pool, the shower, straight to dinner — or layer it under the choker for the full three-layer stack shown in the photos. Two necklaces, styled as one look, but yours to wear together or apart.\n\nProduct Details\n\nPiece 1 — Double-Layer Choker\nMaterial: Gold-tone stainless steel chain\nDesign: Double-layer choker\nChain length: 35 cm + 6 cm extender\nClosure: Lobster clasp\n\nPiece 2 — Zodiac Pendant Necklace\nMaterial: Gold-tone stainless steel\nStyle: Dainty cable chain with a small engraved zodiac disc pendant\nChain length: 66 cm continuous loop — one size fits all, no clasp\n\nWaterproof & Sweat-Proof: Yes, on both pieces — safe for water, sun, and everyday wear\n\nHow to Order\nSelect your Zodiac Sign (available in all 12 signs)\n\nSize Guide\nChoker: adjustable 35–41 cm, sits snug at the collarbone\nZodiac necklace: fixed 66 cm continuous loop, one size fits all\n\nFit Note: For the choker, measure around the base of your neck where you'd like it to sit, and add 1–2 cm for comfortable movement. The zodiac necklace's continuous loop requires no measuring — it's designed to slip over the head at one universal length.\n\nCustom Sizing: Need the choker in a specific measurement? Message me before ordering and I'll make it to your exact size at no extra cost. (The zodiac necklace's continuous loop is fixed and can't be resized.)\n\nCare Instructions\nWipe gently with a soft cloth after each wear.\nStore in an airtight container when not in use.\n\nShipping: Dispatches within 1–2 business days.\n\nPlease note that as each piece is handcrafted, no two pieces are identical and slight variations may occur.",
     "specs": [
       {
         "label": "Material",
-        "value": "Gold-tone stainless steel chain (Silver-tone also available)"
-      },
-      {
-        "label": "Pearls",
-        "value": "Pearl beads (glass)"
-      },
-      {
-        "label": "Pendant",
-        "value": "Cross charm with pearl detail"
+        "value": "Gold-tone stainless steel"
       },
       {
         "label": "Design",
-        "value": "Single-strand rosary-style beaded pearl chain"
+        "value": "Two-piece necklace stack — double-layer choker (turquoise bead chain + fine cable chain) + continuous-loop zodiac pendant necklace"
       },
       {
-        "label": "Chain length",
+        "label": "Choker chain length",
         "value": "35 cm (13.8\") + 6 cm (2.4\") extender"
       },
       {
-        "label": "Closure",
+        "label": "Choker closure",
         "value": "Lobster clasp"
       },
       {
+        "label": "Zodiac necklace length",
+        "value": "66 cm (26\") continuous loop, no clasp"
+      },
+      {
+        "label": "Zodiac sign",
+        "value": "Select from all 12 signs at checkout"
+      },
+      {
         "label": "Waterproof",
-        "value": "Yes"
+        "value": "Yes, on both pieces"
       },
       {
         "label": "Care",
-        "value": "Wipe with a soft cloth after wear. Store in an airtight container."
+        "value": "Wipe gently with a soft cloth after each wear. Store in an airtight container."
       },
       {
         "label": "Shipping",
         "value": "Dispatches within 1–2 business days"
       }
     ],
-    "variants": [
-      "Gold Tone",
-      "Silver Tone"
-    ],
-    "variantHeroes": {
-      "Gold Tone": "/images/products/c4a373ae-554d-4133-9842-5c365cc227c4.jpeg",
-      "Silver Tone": "/images/products/b1f476e8-7998-4fbf-8661-55f76713dff5.png"
-    },
-    "variantVideos": {
-      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/d8f98f02feac5a4856f10be2e6bb7b72/downloads/default.mp4",
-      "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/d8f98f02feac5a4856f10be2e6bb7b72/downloads/default.mp4"
-    },
-    "gallery": [
-      "/images/products/c4a373ae-554d-4133-9842-5c365cc227c4.jpeg",
-      "/images/products/7874fe62-5a17-4630-a1ba-8a225042674f.png",
-      "/images/products/b1f476e8-7998-4fbf-8661-55f76713dff5.png",
-      "/images/products/72201376-028e-4b52-b898-d6b11f571a81.jpg",
-      "/images/products/IMG_2997-2.jpg",
-      "/images/products/1549938c-e1ee-4504-a1f0-090180671d41.png"
-    ],
-    "images": [
-      "/images/products/c4a373ae-554d-4133-9842-5c365cc227c4.jpeg"
-    ],
     "featured": false,
     "active": true,
-    "altText": "Dainty gold-tone stainless steel rosary pearl chain choker with cross pendant, waterproof necklace for women",
-    "dateAdded": "2026-08-17T12:00:00-04:00",
+    "variantGroups": [
+      {
+        "label": "Zodiac Sign",
+        "options": [
+          "Aries (3.21-4.19)",
+          "Taurus (4.20-5.20)",
+          "Gemini (5.21-6.20)",
+          "Cancer (6.21-7.22)",
+          "Leo (7.23-8.22)",
+          "Virgo (8.23-9.22)",
+          "Libra (9.23-10.22)",
+          "Scorpio(10.23-11.21)",
+          "Sagit. (11.22-12.21)",
+          "Capricorn 12.22-1.19",
+          "Aquarius (1.20-2.18)",
+          "Pisces (2.19-3.20)"
+        ]
+      }
+    ],
+    "images": [
+      "/images/products/c54445d6-f6ba-4667-9e4d-2bdebf9cad66.jpeg",
+      "/images/products/15b8d666-f9d6-419a-b701-2b1c597cce02.png",
+      "/images/products/390e92bb-46a4-4bb6-bba0-47cfaa9bd545.png",
+      "/images/products/c828c481-b3b9-47de-b91f-3db8a4c1948c.jpeg",
+      "/images/products/038c4035-eb5d-4786-95f7-f431025e3970.png",
+      "/images/products/51556245-92a9-4d7e-ba3f-bcb05dce79f1.png"
+    ],
+    "altText": "Layered turquoise bead choker and gold zodiac pendant necklace set, personalized star sign necklace stack",
     "giftTags": [
-      "confirmation",
-      "bridal"
+      "personalized"
     ],
-    "tags": [
-      "rosary necklace",
-      "pearl cross necklace",
-      "gold cross choker",
-      "silver cross necklace",
-      "beaded pearl necklace",
-      "dainty pearl choker",
-      "confirmation necklace",
-      "communion gift necklace",
-      "bridal pearl necklace",
-      "stainless steel necklace",
-      "waterproof necklace",
-      "religious necklace women"
-    ],
-    "sizeGuideImage": "/images/products/d120aa73-ce2b-430c-8cf2-94d6fa241318.jpg"
+    "dateAdded": "2026-08-01T09:00:00-04:00",
+    "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/def1205ff0a5b43d0f3debd5b6f1c61b/downloads/default.mp4"
   },
   {
     "id": "plus-size-toe-chain-anklet",
@@ -11032,140 +11078,167 @@
     ]
   },
   {
-    "id": "dragonfly-pendant-necklace",
-    "name": "Dragonfly Pendant Necklace",
-    "price": 30,
+    "id": "curb-chain-cross-necklace",
+    "name": "Cross Pendant Curb Chain Necklace",
+    "price": 22,
     "currency": "EUR",
     "category": "Necklaces",
-    "description": "A mirror-link chain necklace finished with a detailed dragonfly charm — wear it solo for everyday, or layer it with your other pieces.",
-    "fullDescription": "A mirror-link chain necklace finished with a detailed dragonfly charm. Wear it solo for an everyday look, or layer it with your other necklaces. Made from stainless steel, so it holds up to water and everyday wear without tarnishing.\n\nChoose gold or silver tone at checkout — a 55 cm (21.7\") base chain with a 6 cm (2.4\") extender, adjustable from 55 cm to 61 cm (21.7\" to 24\").\n\nCustom Size: Need it longer or shorter? Message me after ordering and I'll adjust it for you.\n\nCare Instructions\nWipe gently with a soft cloth after each wear.\nStore in an airtight container when not in use.",
+    "description": "A solid stainless steel curb chain necklace — available with or without a cross pendant. It won't rust, won't tarnish, and you can keep it on through water and sweat.",
+    "fullDescription": "A solid stainless steel curb chain necklace — available with or without a cross pendant. It won't rust, won't tarnish, and you can keep it on through water and sweat.\n\nProduct Details\n\nMaterial: Stainless steel\nChain Style: Curb chain (Cuban link)\nChain width: 3 mm\nChain length: 55 cm (22\")\nPendant: Optional cross, stainless steel — 20mm width x 35mm height (select \"With Pendant\" at checkout)\nFinish: Gold-tone or Silver-tone\nClosure: Lobster clasp\nWaterproof & Tarnish-Resistant: Yes\n\nHow to Order\nSelect your Finish (Gold or Silver) and your Style (With Pendant or Without Pendant)\n\nSize Guide\n55 cm (22\") fixed length, sits mid-chest on most builds. This chain has no extender, so measure from the base of your neck down to where you'd like it to sit before ordering.\n\nCustom Sizing: Need a different length? Message me before ordering and I'll get you the right fit.\n\nCare Instructions\nWipe gently with a soft cloth after each wear.\nStore in an airtight container when not in use.\n\nShipping: Dispatches within 1–2 business days.\n\nThanks for looking! Feel free to message me if you have any questions.",
     "specs": [
       {
         "label": "Material",
-        "value": "Stainless Steel (Gold or Silver Tone)"
+        "value": "Stainless steel"
       },
       {
-        "label": "Chain",
-        "value": "2mm mirror-link chain"
+        "label": "Chain Style",
+        "value": "Curb chain (Cuban link)"
       },
       {
-        "label": "Dragonfly Charm",
-        "value": "35mm high x 50mm wide (wingspan)"
+        "label": "Chain width",
+        "value": "3 mm"
       },
       {
-        "label": "Necklace Length",
-        "value": "55 cm (21.7\") + 6 cm (2.4\") extender, adjustable 55-61 cm (21.7\"-24\")"
-      },
-      {
-        "label": "Finish",
-        "value": "Water-resistant and tarnish-resistant"
-      },
-      {
-        "label": "Care",
-        "value": "Wipe gently with a soft cloth. Store in an airtight container."
-      },
-      {
-        "label": "Shipping",
-        "value": "Dispatches within 1–2 business days"
-      }
-    ],
-    "images": [
-      "/images/products/e3cd1e2d-2e63-43c7-af87-868d465a861b.png"
-    ],
-    "variants": [
-      "Gold Tone",
-      "Silver Tone"
-    ],
-    "featured": false,
-    "active": true,
-    "altText": "Gold and silver stainless steel mirror-link chain necklace with detailed dragonfly charm pendant",
-    "dateAdded": "2026-08-30T09:00:00-04:00",
-    "gallery": [
-      "/images/products/e3cd1e2d-2e63-43c7-af87-868d465a861b.png",
-      "/images/products/c14cba79-a79a-4b7b-8c28-4f2b7ef5c108.png",
-      "/images/products/watermarked_img_5216291070479054344.jpg",
-      "/images/products/f8d20943-4690-4557-94ba-97f34bc89e2a-copy.png",
-      "/images/products/87146c09-8ec5-4c88-b9d4-e294d397305d.png",
-      "/images/products/ae20c43d-de69-4125-a488-c9d3cf743263.png"
-    ],
-    "variantHeroes": {
-      "Gold Tone": "/images/products/e3cd1e2d-2e63-43c7-af87-868d465a861b.png",
-      "Silver Tone": "/images/products/c14cba79-a79a-4b7b-8c28-4f2b7ef5c108.png"
-    },
-    "variantVideos": {
-      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/8d536dadb05c4aa1dfb649c3c07bcc86/downloads/default.mp4",
-      "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/8d536dadb05c4aa1dfb649c3c07bcc86/downloads/default.mp4"
-    },
-    "sizeGuideImage": "/images/products/96030b94-dbdc-408a-878e-104f949bd54e.png"
-  },
-  {
-    "id": "evil-eye-choker-necklace",
-    "name": "Evil Eye Choker Necklace",
-    "price": 32,
-    "currency": "EUR",
-    "category": "Necklaces",
-    "description": "A double-layer choker pairing a fine disc-link chain with a cable chain and an evil eye charm set with a natural tiger's eye stone — a protective piece worn every day.",
-    "fullDescription": "The evil eye is one of the oldest protective symbols out there — worn to ward off negative energy, bad luck, and envy, and to bring good fortune to whoever's wearing it.\n\nI paired a fine disc-link chain with a delicate cable chain and an evil eye charm set with a natural tiger's eye stone, resting right at the collarbone — pre-layered, so there's no fussing with two clasps, just clip it on and go. Wear it every day, gift it to someone who could use a little extra luck, or stack it into your everyday gold jewelry rotation.\n\nCustom Size: Need it longer or shorter? Message me after ordering and I'll adjust it for you.\n\nCare Instructions\nWipe gently with a soft cloth after each wear.\nStore in an airtight container when not in use.",
-    "specs": [
-      {
-        "label": "Material",
-        "value": "Gold-tone stainless steel chain"
-      },
-      {
-        "label": "Stone",
-        "value": "Natural tiger's eye"
+        "label": "Chain length",
+        "value": "55 cm (22\")"
       },
       {
         "label": "Pendant",
-        "value": "Evil eye charm, 20mm across x 16.5mm high"
+        "value": "Optional cross pendant, stainless steel — 20mm width x 35mm height"
       },
       {
-        "label": "Design",
-        "value": "Double-layer choker — disc-link chain + fine cable chain"
-      },
-      {
-        "label": "Chain Length",
-        "value": "35 cm + 6 cm extender, adjustable 35-41 cm"
+        "label": "Finish",
+        "value": "Gold-tone or Silver-tone"
       },
       {
         "label": "Closure",
         "value": "Lobster clasp"
       },
       {
-        "label": "Finish",
-        "value": "Waterproof and sweat-proof"
-      },
-      {
-        "label": "Care",
-        "value": "Wipe gently with a soft cloth. Store in an airtight container."
-      },
-      {
-        "label": "Shipping",
-        "value": "Dispatches within 1–2 business days"
+        "label": "Waterproof & Tarnish-Resistant",
+        "value": "Yes"
       }
-    ],
-    "images": [
-      "/images/products/6699ee73-83af-4724-8e32-5a8af8af2feb.png"
-    ],
-    "variants": [
-      "Gold Tone"
     ],
     "featured": false,
     "active": true,
-    "altText": "Gold-tone stainless steel double-layer choker necklace with evil eye charm and natural tiger's eye stone",
-    "dateAdded": "2026-08-31T09:00:00-04:00",
-    "gallery": [
-      "/images/products/6699ee73-83af-4724-8e32-5a8af8af2feb.png",
-      "/images/products/4a7196f8-0859-4407-aaa4-3ee1794d8574.png",
-      "/images/products/5284b048-6e7d-4caa-83da-aaf65b0af9f3.png",
-      "/images/products/69edc47e-495f-4d0b-a455-fb14c9f47fd0.png",
-      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
-      "/images/products/3f5580cc-5931-4867-a8b9-4b18ac296af9.png"
+    "variantGroups": [
+      {
+        "label": "Finish",
+        "options": [
+          "Gold Tone",
+          "Silver Tone"
+        ]
+      },
+      {
+        "label": "Style",
+        "options": [
+          "Without Pendant",
+          "With Pendant"
+        ],
+        "optionPrices": {
+          "With Pendant": 8
+        }
+      }
     ],
-    "variantVideos": {
-      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/5f01f57149c45ddc1eea943ad6656053/downloads/default.mp4"
+    "images": [
+      "/images/products/40b43833-6642-470c-a59a-6a5cec97b092.png"
+    ],
+    "altText": "Curb chain cross pendant necklace for men in stainless steel, gold and silver tone, with or without pendant option",
+    "dateAdded": "2026-08-06T14:00:00-04:00",
+    "variants": [
+      "Gold Tone",
+      "Silver Tone"
+    ],
+    "gallery": [
+      "/images/products/40b43833-6642-470c-a59a-6a5cec97b092.png",
+      "/images/products/cbea5807-6d58-413e-9537-eb79db016432.png",
+      "/images/products/49903c7f-afb6-4b86-877b-f9a2599977ae.png",
+      "/images/products/38b9cfee-66db-46ca-a981-60744878c927.png",
+      "/images/products/1224e3af-9937-416b-b5a4-4b832577bbd9.png",
+      "/images/products/IMG_1165.jpeg",
+      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf-copy.jpeg"
+    ],
+    "variantHeroes": {
+      "Gold Tone": "/images/products/40b43833-6642-470c-a59a-6a5cec97b092.png",
+      "Silver Tone": "/images/products/cbea5807-6d58-413e-9537-eb79db016432.png"
     },
-    "sizeGuideImage": "/images/products/69edc47e-495f-4d0b-a455-fb14c9f47fd0.png"
+    "variantVideos": {
+      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/7c10bdc5fd2c60f449d03731e8267b07/downloads/default.mp4",
+      "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/7c10bdc5fd2c60f449d03731e8267b07/downloads/default.mp4"
+    },
+    "sizeGuideImage": "/images/products/Infographic-editor.png"
+  },
+  {
+    "id": "coin-disc-chain-choker",
+    "name": "Coin Disc Chain Choker",
+    "price": 24,
+    "currency": "EUR",
+    "category": "Necklaces",
+    "description": "This minimalist choker necklace is for the girl who keeps things simple. A dainty coin disc chain sits right at the collarbone — no pendant, no fuss, just clean lines and quiet confidence.",
+    "fullDescription": "This minimalist choker necklace is for the girl who keeps things simple. A dainty coin disc chain sits right at the collarbone — no pendant, no fuss, just clean lines and quiet confidence. Handmade from stainless steel, it's built to stack, layer, or wear solo every day without fading, tarnishing, or asking for attention it didn't earn.\n\nMaterials: Stainless steel\nFinish: Gold tone / Silver tone\nStyle: Coin disc link chain\nSize: Chain 35cm + 6cm extender (Need a different size? Dm us after purchase and we'll adjust for free)\nWaterproof: Yes\nTarnish-resistant: Yes\n\nCare Instructions\nTo maintain the integrity and shine of your jewelry:\n\nWipe gently with a soft cloth after each wear.\nStore in an airtight container when not in use.\n\nShipping Time: Dispatches within 1-2 business days\n\nPlease note that as each piece is handcrafted, no two pieces are identical and slight variations may occur.\n\nThanks for looking! Feel free to message me if you have any questions.",
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Stainless steel"
+      },
+      {
+        "label": "Finish",
+        "value": "Gold tone / Silver tone"
+      },
+      {
+        "label": "Style",
+        "value": "Coin disc link chain"
+      },
+      {
+        "label": "Chain length",
+        "value": "35 cm + 6 cm extender"
+      },
+      {
+        "label": "Closure",
+        "value": "Lobster clasp"
+      },
+      {
+        "label": "Waterproof",
+        "value": "Yes"
+      },
+      {
+        "label": "Tarnish-Resistant",
+        "value": "Yes"
+      }
+    ],
+    "featured": false,
+    "active": true,
+    "variants": [
+      "Gold Tone",
+      "Silver Tone"
+    ],
+    "variantGroups": [
+      {
+        "label": "Finish",
+        "options": [
+          "Gold Tone",
+          "Silver Tone"
+        ]
+      }
+    ],
+    "images": [
+      "/images/products/RESULT_nanobanana_choker_1.png"
+    ],
+    "altText": "Coin disc chain choker necklace in gold and silver tone stainless steel, waterproof and tarnish-resistant minimalist layering necklace",
+    "dateAdded": "2026-08-08T10:00:00-04:00",
+    "gallery": [
+      "/images/products/RESULT_nanobanana_choker_1.png",
+      "/images/products/aaaca860-3464-4cb6-bef2-8e5301b83913.png",
+      "/images/products/RESULT_flatlay_seedream-2.jpg",
+      "/images/products/78bc94e6-f52f-47f7-a17c-8f260874b561.png",
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
+      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf-copy.jpeg"
+    ],
+    "variantHeroes": {
+      "Gold Tone": "/images/products/RESULT_nanobanana_choker_1.png",
+      "Silver Tone": "/images/products/aaaca860-3464-4cb6-bef2-8e5301b83913.png"
+    },
+    "sizeGuideImage": "/images/products/Infographic-editor.png"
   },
   {
     "id": "dragonfly-charm-belly-chain",
@@ -11529,6 +11602,235 @@
     "dateAdded": "2026-06-12T15:00:27-04:00"
   },
   {
+    "id": "rosary-pearl-cross-choker",
+    "name": "Rosary Pearl Cross Choker",
+    "price": 30,
+    "currency": "EUR",
+    "category": "Necklaces",
+    "description": "A dainty rosary-style pearl bead chain with a small cross charm made of its own tiny pearls, resting right at the collarbone.",
+    "fullDescription": "A dainty pearl chain with tiny beads threaded individually along a fine stainless steel chain, finished with a small cross charm made of its own tiny pearls. It sits right at the collarbone, simple and delicate. Handmade from stainless steel underneath every pearl and every link, so it stays bright and doesn't fade, tarnish, or need to come off before you shower. Wear it with a white dress for New Year's, under a sweater in the colder months, or as a first communion, christening, or confirmation gift that still gets worn once the day is over. A good gift for a daughter, goddaughter, or granddaughter for their communion or confirmation, or for a bride or bridesmaid who wants something delicate that still means something.",
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Gold-tone stainless steel chain (Silver-tone also available)"
+      },
+      {
+        "label": "Pearls",
+        "value": "Pearl beads (glass)"
+      },
+      {
+        "label": "Pendant",
+        "value": "Cross charm with pearl detail"
+      },
+      {
+        "label": "Design",
+        "value": "Single-strand rosary-style beaded pearl chain"
+      },
+      {
+        "label": "Chain length",
+        "value": "35 cm (13.8\") + 6 cm (2.4\") extender"
+      },
+      {
+        "label": "Closure",
+        "value": "Lobster clasp"
+      },
+      {
+        "label": "Waterproof",
+        "value": "Yes"
+      },
+      {
+        "label": "Care",
+        "value": "Wipe with a soft cloth after wear. Store in an airtight container."
+      },
+      {
+        "label": "Shipping",
+        "value": "Dispatches within 1–2 business days"
+      }
+    ],
+    "variants": [
+      "Gold Tone",
+      "Silver Tone"
+    ],
+    "variantHeroes": {
+      "Gold Tone": "/images/products/c4a373ae-554d-4133-9842-5c365cc227c4.jpeg",
+      "Silver Tone": "/images/products/b1f476e8-7998-4fbf-8661-55f76713dff5.png"
+    },
+    "variantVideos": {
+      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/d8f98f02feac5a4856f10be2e6bb7b72/downloads/default.mp4",
+      "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/d8f98f02feac5a4856f10be2e6bb7b72/downloads/default.mp4"
+    },
+    "gallery": [
+      "/images/products/c4a373ae-554d-4133-9842-5c365cc227c4.jpeg",
+      "/images/products/7874fe62-5a17-4630-a1ba-8a225042674f.png",
+      "/images/products/b1f476e8-7998-4fbf-8661-55f76713dff5.png",
+      "/images/products/72201376-028e-4b52-b898-d6b11f571a81.jpg",
+      "/images/products/IMG_2997-2.jpg",
+      "/images/products/1549938c-e1ee-4504-a1f0-090180671d41.png"
+    ],
+    "images": [
+      "/images/products/c4a373ae-554d-4133-9842-5c365cc227c4.jpeg"
+    ],
+    "featured": false,
+    "active": true,
+    "altText": "Dainty gold-tone stainless steel rosary pearl chain choker with cross pendant, waterproof necklace for women",
+    "dateAdded": "2026-08-17T12:00:00-04:00",
+    "giftTags": [
+      "confirmation",
+      "bridal"
+    ],
+    "tags": [
+      "rosary necklace",
+      "pearl cross necklace",
+      "gold cross choker",
+      "silver cross necklace",
+      "beaded pearl necklace",
+      "dainty pearl choker",
+      "confirmation necklace",
+      "communion gift necklace",
+      "bridal pearl necklace",
+      "stainless steel necklace",
+      "waterproof necklace",
+      "religious necklace women"
+    ],
+    "sizeGuideImage": "/images/products/d120aa73-ce2b-430c-8cf2-94d6fa241318.jpg"
+  },
+  {
+    "id": "dragonfly-pendant-necklace",
+    "name": "Dragonfly Pendant Necklace",
+    "price": 30,
+    "currency": "EUR",
+    "category": "Necklaces",
+    "description": "A mirror-link chain necklace finished with a detailed dragonfly charm — wear it solo for everyday, or layer it with your other pieces.",
+    "fullDescription": "A mirror-link chain necklace finished with a detailed dragonfly charm. Wear it solo for an everyday look, or layer it with your other necklaces. Made from stainless steel, so it holds up to water and everyday wear without tarnishing.\n\nChoose gold or silver tone at checkout — a 55 cm (21.7\") base chain with a 6 cm (2.4\") extender, adjustable from 55 cm to 61 cm (21.7\" to 24\").\n\nCustom Size: Need it longer or shorter? Message me after ordering and I'll adjust it for you.\n\nCare Instructions\nWipe gently with a soft cloth after each wear.\nStore in an airtight container when not in use.",
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Stainless Steel (Gold or Silver Tone)"
+      },
+      {
+        "label": "Chain",
+        "value": "2mm mirror-link chain"
+      },
+      {
+        "label": "Dragonfly Charm",
+        "value": "35mm high x 50mm wide (wingspan)"
+      },
+      {
+        "label": "Necklace Length",
+        "value": "55 cm (21.7\") + 6 cm (2.4\") extender, adjustable 55-61 cm (21.7\"-24\")"
+      },
+      {
+        "label": "Finish",
+        "value": "Water-resistant and tarnish-resistant"
+      },
+      {
+        "label": "Care",
+        "value": "Wipe gently with a soft cloth. Store in an airtight container."
+      },
+      {
+        "label": "Shipping",
+        "value": "Dispatches within 1–2 business days"
+      }
+    ],
+    "images": [
+      "/images/products/e3cd1e2d-2e63-43c7-af87-868d465a861b.png"
+    ],
+    "variants": [
+      "Gold Tone",
+      "Silver Tone"
+    ],
+    "featured": false,
+    "active": true,
+    "altText": "Gold and silver stainless steel mirror-link chain necklace with detailed dragonfly charm pendant",
+    "dateAdded": "2026-08-30T09:00:00-04:00",
+    "gallery": [
+      "/images/products/e3cd1e2d-2e63-43c7-af87-868d465a861b.png",
+      "/images/products/c14cba79-a79a-4b7b-8c28-4f2b7ef5c108.png",
+      "/images/products/watermarked_img_5216291070479054344.jpg",
+      "/images/products/f8d20943-4690-4557-94ba-97f34bc89e2a-copy.png",
+      "/images/products/87146c09-8ec5-4c88-b9d4-e294d397305d.png",
+      "/images/products/ae20c43d-de69-4125-a488-c9d3cf743263.png"
+    ],
+    "variantHeroes": {
+      "Gold Tone": "/images/products/e3cd1e2d-2e63-43c7-af87-868d465a861b.png",
+      "Silver Tone": "/images/products/c14cba79-a79a-4b7b-8c28-4f2b7ef5c108.png"
+    },
+    "variantVideos": {
+      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/8d536dadb05c4aa1dfb649c3c07bcc86/downloads/default.mp4",
+      "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/8d536dadb05c4aa1dfb649c3c07bcc86/downloads/default.mp4"
+    },
+    "sizeGuideImage": "/images/products/96030b94-dbdc-408a-878e-104f949bd54e.png"
+  },
+  {
+    "id": "evil-eye-choker-necklace",
+    "name": "Evil Eye Choker Necklace",
+    "price": 32,
+    "currency": "EUR",
+    "category": "Necklaces",
+    "description": "A double-layer choker pairing a fine disc-link chain with a cable chain and an evil eye charm set with a natural tiger's eye stone — a protective piece worn every day.",
+    "fullDescription": "The evil eye is one of the oldest protective symbols out there — worn to ward off negative energy, bad luck, and envy, and to bring good fortune to whoever's wearing it.\n\nI paired a fine disc-link chain with a delicate cable chain and an evil eye charm set with a natural tiger's eye stone, resting right at the collarbone — pre-layered, so there's no fussing with two clasps, just clip it on and go. Wear it every day, gift it to someone who could use a little extra luck, or stack it into your everyday gold jewelry rotation.\n\nCustom Size: Need it longer or shorter? Message me after ordering and I'll adjust it for you.\n\nCare Instructions\nWipe gently with a soft cloth after each wear.\nStore in an airtight container when not in use.",
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Gold-tone stainless steel chain"
+      },
+      {
+        "label": "Stone",
+        "value": "Natural tiger's eye"
+      },
+      {
+        "label": "Pendant",
+        "value": "Evil eye charm, 20mm across x 16.5mm high"
+      },
+      {
+        "label": "Design",
+        "value": "Double-layer choker — disc-link chain + fine cable chain"
+      },
+      {
+        "label": "Chain Length",
+        "value": "35 cm + 6 cm extender, adjustable 35-41 cm"
+      },
+      {
+        "label": "Closure",
+        "value": "Lobster clasp"
+      },
+      {
+        "label": "Finish",
+        "value": "Waterproof and sweat-proof"
+      },
+      {
+        "label": "Care",
+        "value": "Wipe gently with a soft cloth. Store in an airtight container."
+      },
+      {
+        "label": "Shipping",
+        "value": "Dispatches within 1–2 business days"
+      }
+    ],
+    "images": [
+      "/images/products/6699ee73-83af-4724-8e32-5a8af8af2feb.png"
+    ],
+    "variants": [
+      "Gold Tone"
+    ],
+    "featured": false,
+    "active": true,
+    "altText": "Gold-tone stainless steel double-layer choker necklace with evil eye charm and natural tiger's eye stone",
+    "dateAdded": "2026-08-31T09:00:00-04:00",
+    "gallery": [
+      "/images/products/6699ee73-83af-4724-8e32-5a8af8af2feb.png",
+      "/images/products/4a7196f8-0859-4407-aaa4-3ee1794d8574.png",
+      "/images/products/5284b048-6e7d-4caa-83da-aaf65b0af9f3.png",
+      "/images/products/69edc47e-495f-4d0b-a455-fb14c9f47fd0.png",
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
+      "/images/products/3f5580cc-5931-4867-a8b9-4b18ac296af9.png"
+    ],
+    "variantVideos": {
+      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/5f01f57149c45ddc1eea943ad6656053/downloads/default.mp4"
+    },
+    "sizeGuideImage": "/images/products/69edc47e-495f-4d0b-a455-fb14c9f47fd0.png"
+  },
+  {
     "id": "star-pendant-rhinestone-choker",
     "name": "Star Pendant Rhinestone Choker",
     "price": 30,
@@ -11655,229 +11957,6 @@
     "altText": "Dainty turquoise beaded cable chain necklace in gold stainless steel for everyday wear"
   },
   {
-    "id": "initial-letter-rhinestone-choker",
-    "name": "Diamond Initial Necklace ",
-    "price": 30,
-    "currency": "EUR",
-    "category": "Necklaces",
-    "description": "A personalized rhinestone initial charm layered over a dainty gold mirror-link chain — simple, sentimental, and unmistakably yours.",
-    "fullDescription": "This necklace is for the girl who likes her jewelry a little personal. A dainty gold mirror-link chain layers over a cable chain holding your initial in sparkling rhinestones — simple, sentimental, and unmistakably yours. Handmade from stainless steel, it's built to wear every day without fading, tarnishing, or giving you grief.\n\nMaterials: Stainless steel\nFinish: Gold tone\nPendant: Rhinestone initial letter charm — choose your letter, A to Z\nSize: Chain 35cm + 6cm extender\nWaterproof: Yes\nTarnish-resistant: Yes\n\nCare Instructions\nWipe gently with a soft cloth after each wear.\nStore in an airtight container when not in use.\n\nShipping: Dispatches within 1–2 business days.\n\nPlease note that as each piece is handcrafted, no two pieces are identical and slight variations may occur.",
-    "specs": [
-      {
-        "label": "Material",
-        "value": "Stainless steel"
-      },
-      {
-        "label": "Finish",
-        "value": "Gold tone"
-      },
-      {
-        "label": "Pendant",
-        "value": "Rhinestone initial letter charm (A–Z)"
-      },
-      {
-        "label": "Size",
-        "value": "Chain 35cm + 6cm extender"
-      },
-      {
-        "label": "Waterproof",
-        "value": "Yes"
-      },
-      {
-        "label": "Tarnish-Resistant",
-        "value": "Yes"
-      }
-    ],
-    "variantGroups": [
-      {
-        "label": "Letter",
-        "type": "options",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D",
-          "E",
-          "F",
-          "G",
-          "H",
-          "I",
-          "J",
-          "K",
-          "L",
-          "M",
-          "N",
-          "O",
-          "P",
-          "Q",
-          "R",
-          "S",
-          "T",
-          "U",
-          "V",
-          "W",
-          "X",
-          "Y",
-          "Z"
-        ]
-      }
-    ],
-    "images": [
-      "/images/products/0e84cd44-c1be-45e5-826e-ad5d9021bf69.png"
-    ],
-    "gallery": [
-      "/images/products/0e84cd44-c1be-45e5-826e-ad5d9021bf69.png",
-      "/images/products/a2fb0528-56ac-4720-8bfe-5452cab23df4.png",
-      "/images/products/ee08496c-de0c-4e6f-a6a6-1c31a9ead9af.png",
-      "/images/products/53165426-64d8-4bb3-b7a6-f685893d381f.png",
-      "/images/products/2ba8ecb3-c756-42a5-9545-76bc67926144-copy-2.png",
-      "/images/products/b90bf192-e71e-4da4-b360-ce6bdcefcc11.png"
-    ],
-    "featured": false,
-    "active": true,
-    "altText": "Personalized gold initial necklace with rhinestone letter charm, layered mirror-link and cable chain choker, stainless steel alphabet pendant necklace",
-    "dateAdded": "2026-09-14T13:35:00-04:00",
-    "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/80730744eb4857ab0a3520b0a32f179e/downloads/default.mp4",
-    "giftTags": [
-      "personalized"
-    ],
-    "sizeGuideImage": "/images/products/b90bf192-e71e-4da4-b360-ce6bdcefcc11.png"
-  },
-  {
-    "id": "christmas-snowflake-necklace",
-    "name": "Christmas Snowflake Necklace",
-    "price": 30,
-    "currency": "EUR",
-    "category": "Necklaces",
-    "description": "A small gold snowflake pendant on a dainty mirror-link chain. Simple, wintery, and easy to wear well past the holidays.",
-    "fullDescription": "Handmade from stainless steel, it's built to wear every day without fading, tarnishing, or giving you grief.\n\nSize: Chain 35cm + 6cm extender\n\nNeed a different length? Message us after checkout and we'll adjust the size for free!\n\nCare Instructions: Wipe gently with a soft cloth after each wear. Store in an airtight container when not in use.\n\nShipping: Dispatches within 1–2 business days.\n\nPlease note that as each piece is handcrafted, no two pieces are identical and slight variations may occur.",
-    "specs": [
-      {
-        "label": "Material",
-        "value": "Stainless steel necklace, 18k gold plated brass snowflake pendant"
-      },
-      {
-        "label": "Finish",
-        "value": "Gold tone"
-      },
-      {
-        "label": "Pendant",
-        "value": "Rhinestone snowflake charm"
-      },
-      {
-        "label": "Size",
-        "value": "Chain 35cm + 6cm extender"
-      }
-    ],
-    "images": [
-      "/images/products/af1a1431-0e0f-4459-92ec-7ab80b0ac22f.png"
-    ],
-    "gallery": [
-      "/images/products/af1a1431-0e0f-4459-92ec-7ab80b0ac22f.png",
-      "/images/products/f5cc2b92-3d35-49a5-ba5e-9acfdf130aab.png",
-      "/images/products/b0b1382e-92c9-41cb-bd4f-7584fb3992f1.png",
-      "/images/products/9e116bf1-2feb-4c3c-bf07-d07fdb261c10.png",
-      "/images/products/2ba8ecb3-c756-42a5-9545-76bc67926144-copy-2.png",
-      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png"
-    ],
-    "featured": false,
-    "active": true,
-    "christmas": true,
-    "dateAdded": "2026-09-15T20:16:25.689Z",
-    "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/4b080d4a7b8522c8f7464349330c5b32/downloads/default.mp4",
-    "sizeGuideImage": "/images/products/9e116bf1-2feb-4c3c-bf07-d07fdb261c10.png",
-    "altText": "Gold-plated stainless steel dainty Christmas necklace with delicate snowflake pendant for holiday wear"
-  },
-  {
-    "id": "chunky-toggle-cross-necklace",
-    "name": "Chunky Toggle Cross Necklace",
-    "price": 30,
-    "currency": "EUR",
-    "category": "Necklaces",
-    "description": "A bold rolo chain necklace with a cross pendant hanging straight off the front toggle clasp — unisex stainless steel that never fades or tarnishes.",
-    "fullDescription": "A chunky chain with a cross that hangs from the clasp.\n\nThe toggle clasp sits right at the front, with the cross dangling straight off it — a small design detail that makes this one stand out from a typical chain necklace. Unisex, lightweight, and built from stainless steel, so it holds up to daily wear without fading or tarnishing.\n\nPlease note that as each piece is handcrafted, no two pieces are identical and slight variations may occur.",
-    "specs": [
-      {
-        "label": "Material",
-        "value": "Stainless steel"
-      },
-      {
-        "label": "Finish",
-        "value": "Gold tone or Silver tone"
-      },
-      {
-        "label": "Pendant",
-        "value": "Cross charm, 3.5cm x 2cm"
-      },
-      {
-        "label": "Chain",
-        "value": "Bold rolo link, 40cm"
-      },
-      {
-        "label": "Closure",
-        "value": "Front toggle (OT) clasp"
-      },
-      {
-        "label": "Weight",
-        "value": "~10g"
-      },
-      {
-        "label": "Tarnish-resistant",
-        "value": "Yes"
-      },
-      {
-        "label": "Care",
-        "value": "Wipe gently with a soft cloth after each wear. Store in an airtight container when not in use."
-      },
-      {
-        "label": "Shipping",
-        "value": "Dispatches within 1-2 business days"
-      }
-    ],
-    "tags": [
-      "toggle coin necklace",
-      "gold chunky choker",
-      "chokerkette",
-      "gold schmuck damen",
-      "thick rolo chain",
-      "14k rolo chain",
-      "10k ladies chain",
-      "thick gold chain",
-      "rolo belcher chain",
-      "toggle clasp necklace",
-      "chunky silver chain",
-      "silver toggle chain",
-      "elevated basics"
-    ],
-    "images": [
-      "/images/products/1cb96475-ddb5-4579-a11f-15a0684428f5.png"
-    ],
-    "gallery": [
-      "/images/products/1cb96475-ddb5-4579-a11f-15a0684428f5.png",
-      "/images/products/c161317e-321c-4443-a6dc-675e1d7ecfbe.png",
-      "/images/products/6a665764-53bf-49f0-baec-91b5d51ca86b.png",
-      "/images/products/26dc8a79-8ea9-4356-a365-9c150aeaee66.png",
-      "/images/products/SaveClip.App_94009087_3737129469692488_4504472029461009842_n.jpg"
-    ],
-    "variants": [
-      "Gold Tone",
-      "Silver Tone"
-    ],
-    "featured": false,
-    "active": true,
-    "dateAdded": "2026-09-22T00:00:00.000Z",
-    "altText": "Gold tone chunky toggle cross necklace in stainless steel, bold unisex chain necklace design",
-    "variantHeroes": {
-      "Gold Tone": "/images/products/1cb96475-ddb5-4579-a11f-15a0684428f5.png",
-      "Silver Tone": "/images/products/c161317e-321c-4443-a6dc-675e1d7ecfbe.png"
-    },
-    "variantVideos": {
-      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/a268c974f816d96e08d33284f9632501/downloads/default.mp4",
-      "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/a268c974f816d96e08d33284f9632501/downloads/default.mp4"
-    },
-    "sizeGuideImage": "/images/products/26dc8a79-8ea9-4356-a365-9c150aeaee66.png"
-  },
-  {
     "id": "plus-size-bracelet",
     "name": "Plus Size Bracelet",
     "price": 28,
@@ -11952,79 +12031,49 @@
     "sizeGuideImage": "/images/products/a5f67786-25ef-4361-9a4d-9ff3b2bd7a1e.png"
   },
   {
-    "id": "pearl-heart-toggle-necklace",
-    "name": "Chunky Pearl Heart Toggle Necklace",
+    "id": "christmas-snowflake-necklace",
+    "name": "Christmas Snowflake Necklace",
     "price": 30,
     "currency": "EUR",
     "category": "Necklaces",
-    "description": "Imitation pearl beads with a gold rope-trim heart hanging from the front toggle clasp — stainless steel, 18k gold plated, and hypoallergenic.",
-    "fullDescription": "Imitation pearl beads with a gold rope-trim heart hanging from the front toggle clasp.\n\nClassic pearls with a bit more character. Made from stainless steel with a gold plated finish, so it holds its color and won't tarnish or fade. Free of lead, nickel, and cadmium, so it's safe for sensitive skin.\n\nPlease note that as each piece is handcrafted, no two pieces are identical and slight variations may occur.",
+    "description": "A small gold snowflake pendant on a dainty mirror-link chain. Simple, wintery, and easy to wear well past the holidays.",
+    "fullDescription": "Handmade from stainless steel, it's built to wear every day without fading, tarnishing, or giving you grief.\n\nSize: Chain 35cm + 6cm extender\n\nNeed a different length? Message us after checkout and we'll adjust the size for free!\n\nCare Instructions: Wipe gently with a soft cloth after each wear. Store in an airtight container when not in use.\n\nShipping: Dispatches within 1–2 business days.\n\nPlease note that as each piece is handcrafted, no two pieces are identical and slight variations may occur.",
     "specs": [
       {
         "label": "Material",
-        "value": "Stainless steel, imitation pearl"
+        "value": "Stainless steel necklace, 18k gold plated brass snowflake pendant"
       },
       {
         "label": "Finish",
-        "value": "Gold plated"
+        "value": "Gold tone"
       },
       {
         "label": "Pendant",
-        "value": "Rope-trim heart charm"
+        "value": "Rhinestone snowflake charm"
       },
       {
-        "label": "Length",
-        "value": "44cm"
-      },
-      {
-        "label": "Pearl size",
-        "value": "0.8cm"
-      },
-      {
-        "label": "Closure",
-        "value": "Front toggle (OT) clasp"
-      },
-      {
-        "label": "Weight",
-        "value": "25g"
-      },
-      {
-        "label": "Hypoallergenic",
-        "value": "Yes (lead, nickel, and cadmium free)"
-      },
-      {
-        "label": "Waterproof",
-        "value": "Yes"
-      },
-      {
-        "label": "Tarnish-resistant",
-        "value": "Yes"
-      },
-      {
-        "label": "Care",
-        "value": "Wipe gently with a soft cloth after each wear. Store in an airtight container when not in use."
-      },
-      {
-        "label": "Shipping",
-        "value": "Dispatches within 1-2 business days"
+        "label": "Size",
+        "value": "Chain 35cm + 6cm extender"
       }
     ],
     "images": [
-      "/images/products/3a025548-6c92-429b-aacd-08ce252d0023.jpeg"
+      "/images/products/af1a1431-0e0f-4459-92ec-7ab80b0ac22f.png"
     ],
     "gallery": [
-      "/images/products/3a025548-6c92-429b-aacd-08ce252d0023.jpeg",
-      "/images/products/223f770f-c847-4101-a23b-97873e895828.png",
-      "/images/products/90578acb-0f63-48ac-80b2-6d3a01495fe3.png",
-      "/images/products/8db4052c-3a41-4d8f-9e20-241b1e0f1f67.png",
-      "/images/products/SaveClip.App_94009087_3737129469692488_4504472029461009842_n.jpg"
+      "/images/products/af1a1431-0e0f-4459-92ec-7ab80b0ac22f.png",
+      "/images/products/f5cc2b92-3d35-49a5-ba5e-9acfdf130aab.png",
+      "/images/products/b0b1382e-92c9-41cb-bd4f-7584fb3992f1.png",
+      "/images/products/9e116bf1-2feb-4c3c-bf07-d07fdb261c10.png",
+      "/images/products/2ba8ecb3-c756-42a5-9545-76bc67926144-copy-2.png",
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png"
     ],
     "featured": false,
     "active": true,
-    "dateAdded": "2026-09-25T07:52:04.641Z",
-    "altText": "Pearl beaded necklace with gold rope-trim heart pendant and toggle clasp, hypoallergenic stainless steel gold plated jewelry",
-    "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/e52da977c679cfcb2f3f49c83afd2eb0/downloads/default.mp4",
-    "sizeGuideImage": "/images/products/8db4052c-3a41-4d8f-9e20-241b1e0f1f67.png"
+    "christmas": true,
+    "dateAdded": "2026-09-15T20:16:25.689Z",
+    "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/4b080d4a7b8522c8f7464349330c5b32/downloads/default.mp4",
+    "sizeGuideImage": "/images/products/9e116bf1-2feb-4c3c-bf07-d07fdb261c10.png",
+    "altText": "Gold-plated stainless steel dainty Christmas necklace with delicate snowflake pendant for holiday wear"
   },
   {
     "id": "evil-eye-charm-anklet",
@@ -12138,13 +12187,13 @@
     "dateAdded": "2026-06-12T15:00:27-04:00"
   },
   {
-    "id": "paperclip-initial-necklace",
-    "name": "Paperclip Chain Diamond Initial Necklace",
+    "id": "chunky-toggle-cross-necklace",
+    "name": "Chunky Toggle Cross Necklace",
     "price": 30,
     "currency": "EUR",
     "category": "Necklaces",
-    "description": "A chunky gold paperclip chain with your initial in rhinestones, hanging right from the clasp — stainless steel, hypoallergenic, and waterproof.",
-    "fullDescription": "A chunky gold paperclip chain with your initial in rhinestones, hanging right from the clasp.\n\nSimple and bold at the same time. The toggle clasp sits at the front with the letter charm dangling straight off it, unisex and easy to layer or wear alone. Made from stainless steel with an 18K PVD real gold plated finish, so it’s hypoallergenic and holds its color without fading or tarnishing.\n\nPlease note that as each piece is handcrafted, no two pieces are identical and slight variations may occur.",
+    "description": "A bold rolo chain necklace with a cross pendant hanging straight off the front toggle clasp — unisex stainless steel that never fades or tarnishes.",
+    "fullDescription": "A chunky chain with a cross that hangs from the clasp.\n\nThe toggle clasp sits right at the front, with the cross dangling straight off it — a small design detail that makes this one stand out from a typical chain necklace. Unisex, lightweight, and built from stainless steel, so it holds up to daily wear without fading or tarnishing.\n\nPlease note that as each piece is handcrafted, no two pieces are identical and slight variations may occur.",
     "specs": [
       {
         "label": "Material",
@@ -12152,27 +12201,23 @@
       },
       {
         "label": "Finish",
-        "value": "18K PVD real gold plated"
+        "value": "Gold tone or Silver tone"
       },
       {
-        "label": "Charm",
-        "value": "Rhinestone initial letter, choose your letter A-Z"
+        "label": "Pendant",
+        "value": "Cross charm, 3.5cm x 2cm"
       },
       {
-        "label": "Length",
-        "value": "48cm"
+        "label": "Chain",
+        "value": "Bold rolo link, 40cm"
       },
       {
         "label": "Closure",
         "value": "Front toggle (OT) clasp"
       },
       {
-        "label": "Hypoallergenic",
-        "value": "Yes"
-      },
-      {
-        "label": "Waterproof",
-        "value": "Yes"
+        "label": "Weight",
+        "value": "~10g"
       },
       {
         "label": "Tarnish-resistant",
@@ -12188,105 +12233,88 @@
       }
     ],
     "tags": [
-      "namenskette",
-      "kette mit namen",
-      "dainty name necklace",
-      "custom letter choker",
-      "initials choker",
-      "initialnecklace",
-      "spaced necklace",
-      "mom initial necklace",
-      "balloon initial",
-      "name logo necklace",
-      "monogramnecklace",
-      "paperclip necklace",
-      "big letter necklace"
-    ],
-    "variantGroups": [
-      {
-        "label": "Letter",
-        "type": "options",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D",
-          "E",
-          "F",
-          "G",
-          "H",
-          "I",
-          "J",
-          "K",
-          "L",
-          "M",
-          "N",
-          "O",
-          "P",
-          "Q",
-          "R",
-          "S",
-          "T",
-          "U",
-          "V",
-          "W",
-          "X",
-          "Y",
-          "Z"
-        ]
-      }
+      "toggle coin necklace",
+      "gold chunky choker",
+      "chokerkette",
+      "gold schmuck damen",
+      "thick rolo chain",
+      "14k rolo chain",
+      "10k ladies chain",
+      "thick gold chain",
+      "rolo belcher chain",
+      "toggle clasp necklace",
+      "chunky silver chain",
+      "silver toggle chain",
+      "elevated basics"
     ],
     "images": [
-      "/images/products/a1256d7a-79ec-4f78-8b49-19649a23176b.png"
+      "/images/products/1cb96475-ddb5-4579-a11f-15a0684428f5.png"
     ],
     "gallery": [
-      "/images/products/a1256d7a-79ec-4f78-8b49-19649a23176b.png",
-      "/images/products/b8fb5de6-c3f4-4835-a312-0dc5093aa112.png",
-      "/images/products/73014336-037b-4a25-b503-63f67d11ef24.png",
-      "/images/products/51953be0-2a5b-465c-89dd-48404d3701fc.png",
-      "/images/products/4c154510-a4d9-4055-9d01-e62e1f7cc15b.png",
-      "/images/products/b993eb49-d4e6-44a0-a8ae-49186b4c3bb8.png",
-      "/images/products/53165426-64d8-4bb3-b7a6-f685893d381f.png",
+      "/images/products/1cb96475-ddb5-4579-a11f-15a0684428f5.png",
+      "/images/products/c161317e-321c-4443-a6dc-675e1d7ecfbe.png",
+      "/images/products/6a665764-53bf-49f0-baec-91b5d51ca86b.png",
+      "/images/products/26dc8a79-8ea9-4356-a365-9c150aeaee66.png",
       "/images/products/SaveClip.App_94009087_3737129469692488_4504472029461009842_n.jpg"
+    ],
+    "variants": [
+      "Gold Tone",
+      "Silver Tone"
     ],
     "featured": false,
     "active": true,
-    "dateAdded": "2026-09-29T12:23:20.389Z",
-    "altText": "Gold paperclip chain necklace with rhinestone initial letter charm, chunky unisex hypoallergenic stainless steel necklace",
-    "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/b6b48a210e884d07191f2d0bef234b7c/downloads/default.mp4",
-    "giftTags": [
-      "personalized"
-    ],
-    "sizeGuideImage": "/images/products/4c154510-a4d9-4055-9d01-e62e1f7cc15b.png"
+    "dateAdded": "2026-09-22T00:00:00.000Z",
+    "altText": "Gold tone chunky toggle cross necklace in stainless steel, bold unisex chain necklace design",
+    "variantHeroes": {
+      "Gold Tone": "/images/products/1cb96475-ddb5-4579-a11f-15a0684428f5.png",
+      "Silver Tone": "/images/products/c161317e-321c-4443-a6dc-675e1d7ecfbe.png"
+    },
+    "variantVideos": {
+      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/a268c974f816d96e08d33284f9632501/downloads/default.mp4",
+      "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/a268c974f816d96e08d33284f9632501/downloads/default.mp4"
+    },
+    "sizeGuideImage": "/images/products/26dc8a79-8ea9-4356-a365-9c150aeaee66.png"
   },
   {
-    "id": "beaded-star-choker",
-    "name": "Beaded Star Choker Necklace",
+    "id": "pearl-heart-toggle-necklace",
+    "name": "Chunky Pearl Heart Toggle Necklace",
     "price": 30,
     "currency": "EUR",
     "category": "Necklaces",
-    "description": "A beaded choker with a dangling star charm, available in red or green — stainless steel, waterproof, and festive without trying too hard.",
-    "fullDescription": "A beaded choker with a dangling star charm, available in red or green.\n\nSimple and festive without trying too hard. Choose the chain color you like, and choose whether you want the star charm or just the clean beaded choker on its own. Made from stainless steel, so it’s waterproof and won’t fade or tarnish, holiday season or not.\n\nPlease note that as each piece is handcrafted, no two pieces are identical and slight variations may occur.",
+    "description": "Imitation pearl beads with a gold rope-trim heart hanging from the front toggle clasp — stainless steel, 18k gold plated, and hypoallergenic.",
+    "fullDescription": "Imitation pearl beads with a gold rope-trim heart hanging from the front toggle clasp.\n\nClassic pearls with a bit more character. Made from stainless steel with a gold plated finish, so it holds its color and won't tarnish or fade. Free of lead, nickel, and cadmium, so it's safe for sensitive skin.\n\nPlease note that as each piece is handcrafted, no two pieces are identical and slight variations may occur.",
     "specs": [
       {
         "label": "Material",
-        "value": "Stainless steel"
+        "value": "Stainless steel, imitation pearl"
       },
       {
         "label": "Finish",
-        "value": "Gold tone"
+        "value": "Gold plated"
       },
       {
-        "label": "Beads",
-        "value": "Faceted glass, available in red or green"
+        "label": "Pendant",
+        "value": "Rope-trim heart charm"
       },
       {
-        "label": "Charm",
-        "value": "Star charm, optional — select choker only or with star charm"
+        "label": "Length",
+        "value": "44cm"
       },
       {
-        "label": "Size",
-        "value": "35cm + 6cm extender"
+        "label": "Pearl size",
+        "value": "0.8cm"
+      },
+      {
+        "label": "Closure",
+        "value": "Front toggle (OT) clasp"
+      },
+      {
+        "label": "Weight",
+        "value": "25g"
+      },
+      {
+        "label": "Hypoallergenic",
+        "value": "Yes (lead, nickel, and cadmium free)"
       },
       {
         "label": "Waterproof",
@@ -12305,50 +12333,22 @@
         "value": "Dispatches within 1-2 business days"
       }
     ],
-    "variantGroups": [
-      {
-        "label": "Color",
-        "type": "options",
-        "options": [
-          "Red",
-          "Green"
-        ]
-      },
-      {
-        "label": "Style",
-        "type": "options",
-        "options": [
-          "Choker Only",
-          "With Star Charm"
-        ],
-        "optionPrices": {
-          "Choker Only": 0,
-          "With Star Charm": 5
-        }
-      }
-    ],
     "images": [
-      "/images/products/fc1bd4f6-12c1-42a2-b423-8fd68e1c95dd.png"
+      "/images/products/3a025548-6c92-429b-aacd-08ce252d0023.jpeg"
     ],
     "gallery": [
-      "/images/products/fc1bd4f6-12c1-42a2-b423-8fd68e1c95dd.png",
-      "/images/products/ea0a87ae-0d8c-4c95-ba52-98673f7bf5ce.png",
-      "/images/products/d69e8fed-cb9a-435e-8081-a5bf905fe042.png",
-      "/images/products/7df2280d-a2f9-401b-93b8-0d44028ffc4a.png",
-      "/images/products/0a2322a0-f1fe-4869-8a31-6b44f11952c4.png",
-      "/images/products/IMG_3827-2.jpg",
-      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
-      "/images/products/de8d7794-b563-4327-b4c0-addbfbac4b89-copy.png",
-      "/images/products/a769b011-4bbe-4487-a345-c3e95ed151d0-copy-3.png",
-      "/images/products/953c004d-e65a-4a81-b38e-f55202bfe3b0-copy.png"
+      "/images/products/3a025548-6c92-429b-aacd-08ce252d0023.jpeg",
+      "/images/products/223f770f-c847-4101-a23b-97873e895828.png",
+      "/images/products/90578acb-0f63-48ac-80b2-6d3a01495fe3.png",
+      "/images/products/8db4052c-3a41-4d8f-9e20-241b1e0f1f67.png",
+      "/images/products/SaveClip.App_94009087_3737129469692488_4504472029461009842_n.jpg"
     ],
     "featured": false,
     "active": true,
-    "christmas": true,
-    "dateAdded": "2026-10-07T19:03:01.656Z",
-    "altText": "Red and green beaded star choker necklace, stainless steel waterproof holiday jewelry with optional star charm",
-    "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/4f9b5e63962e3d5eb07cd96259beaccb/downloads/default.mp4",
-    "sizeGuideImage": "/images/products/8c71db0b-041d-4634-b376-59fbaa733943.png"
+    "dateAdded": "2026-09-25T07:52:04.641Z",
+    "altText": "Pearl beaded necklace with gold rope-trim heart pendant and toggle clasp, hypoallergenic stainless steel gold plated jewelry",
+    "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/e52da977c679cfcb2f3f49c83afd2eb0/downloads/default.mp4",
+    "sizeGuideImage": "/images/products/8db4052c-3a41-4d8f-9e20-241b1e0f1f67.png"
   },
   {
     "id": "gold-beaded-cross-bracelet",

@@ -1,5 +1,165 @@
 [
   {
+    "query": "pearlcore jewelry trend",
+    "keywords": [
+      "pearl body chain outfit",
+      "chunky pearl jewelry for going out",
+      "pearl hand chain for wedding",
+      "head to toe pearl jewelry",
+      "pearl jewelry aesthetic 2026"
+    ],
+    "productIds": [
+      "pearl-body-chain",
+      "pearl-hand-chain",
+      "pearl-glasses-chain",
+      "layered-pearl-bracelet"
+    ],
+    "category": "Style Guide",
+    "months": [
+      10,
+      11,
+      12,
+      1,
+      2,
+      3
+    ],
+    "productCategories": [
+      "Body Chains",
+      "Hand Chains",
+      "Eyeglasses Chains",
+      "Bracelets"
+    ],
+    "source": "research",
+    "researchModel": "claude-sonnet-5",
+    "addedAt": "2026-10-15",
+    "why": "Branvas's 2026 Jewelry Trend Map gives pearlcore its top 'Prioritize' score for rising search and conversion, and we already carry the aesthetic across five categories."
+  },
+  {
+    "query": "chunky gold jewelry trend",
+    "keywords": [
+      "gold statement body chain",
+      "bold gold waist chain",
+      "gold hand chain jewelry",
+      "'80s inspired gold jewelry",
+      "gold body chain for night out"
+    ],
+    "productIds": [
+      "gold-waist-chain",
+      "gold-hand-chain",
+      "dainty-gold-body-chain",
+      "gold-beaded-cross-bracelet"
+    ],
+    "category": "Style Guide",
+    "months": [
+      10,
+      11,
+      12,
+      1,
+      2
+    ],
+    "productCategories": [
+      "Belly Chains",
+      "Hand Chains",
+      "Bracelets"
+    ],
+    "source": "research",
+    "researchModel": "claude-sonnet-5",
+    "addedAt": "2026-10-15",
+    "why": "National Jeweler reports Pinterest searches for 'gold cuff' up 50% and ''80s luxury' up 225%, while Branvas cites an 18,000% Etsy search spike for gold jewelry."
+  },
+  {
+    "query": "birthstone ring meaning",
+    "keywords": [
+      "how to wear a pinky ring",
+      "which finger does a pinky ring go on",
+      "evil eye ring meaning",
+      "dainty birthstone ring gift",
+      "birthstone ring for her"
+    ],
+    "productIds": [
+      "birthstone-ring",
+      "evil-eye-ring",
+      "rhodochrosite-ring"
+    ],
+    "category": "Personalized Jewelry",
+    "months": [
+      10,
+      11,
+      12,
+      1,
+      2
+    ],
+    "productCategories": [
+      "Rings"
+    ],
+    "source": "research",
+    "researchModel": "claude-sonnet-5",
+    "addedAt": "2026-10-15",
+    "why": "Marie Claire names pinky rings a defining 2026 trend and Artizan Joyeria ranks birthstone jewelry in its top five for the year."
+  },
+  {
+    "query": "lariat necklace trend 2026",
+    "keywords": [
+      "how to wear a lariat necklace",
+      "pearl lariat necklace outfit",
+      "no clasp lariat necklace",
+      "y necklace lariat style",
+      "lariat necklace backdrop"
+    ],
+    "productIds": [
+      "pearl-lariat-back-necklace",
+      "pearl-lariat-backdrop"
+    ],
+    "category": "Style Guide",
+    "months": [
+      10,
+      11,
+      12,
+      1,
+      2,
+      3,
+      4
+    ],
+    "productCategories": [
+      "Necklaces",
+      "Back Chains"
+    ],
+    "source": "research",
+    "researchModel": "claude-sonnet-5",
+    "addedAt": "2026-10-15",
+    "why": "WhoWhatWear's 2026 trend guide lists lariat necklaces as rising ('Investing In'), crediting indie labels for the look's popularity."
+  },
+  {
+    "query": "what jewelry to wear with an off the shoulder top",
+    "keywords": [
+      "off shoulder top necklace ideas",
+      "shoulder chain for off the shoulder dress",
+      "jewelry for cold shoulder top",
+      "off shoulder sweater jewelry"
+    ],
+    "productIds": [
+      "off-shoulder-chain-necklace",
+      "goddess-shoulder-chain",
+      "bridal-shoulder-chain",
+      "silver-shoulder-harness"
+    ],
+    "category": "Style Guide",
+    "months": [
+      10,
+      11,
+      12,
+      1
+    ],
+    "productCategories": [
+      "Shoulder Chains",
+      "Necklaces"
+    ],
+    "source": "research",
+    "researchModel": "claude-sonnet-5",
+    "addedAt": "2026-10-15",
+    "why": "Off-shoulder tops are a recurring cold-weather party silhouette through Christmas/NYE season and this specific garment pairing isn't yet covered."
+  },
+  {
     "query": "jewellery trends 2027",
     "keywords": [
       "jewelry trends 2027 predictions",

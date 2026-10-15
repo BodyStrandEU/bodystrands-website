@@ -1,5 +1,224 @@
 [
   {
+    "date": "2026-10-15",
+    "researchModel": "claude-sonnet-5",
+    "trends": [
+      {
+        "name": "Pearlcore",
+        "what": "A head-to-toe pearl jewelry aesthetic spanning body chains, bracelets, glasses chains and more.",
+        "searches": [
+          "pearlcore",
+          "pearlcore jewelry"
+        ],
+        "evidence": "Branvas's 2026 Jewelry Trend Map scores pearlcore highest on its Trend Positioning Framework, recommending brands 'Prioritize' it. Marie Claire's 2026 trend report also names 'beads, pearls' among the season's defining looks.",
+        "sources": [
+          {
+            "name": "Branvas",
+            "url": "branvas.com/blogs/news/2026-jewelry-trend-map"
+          },
+          {
+            "name": "Marie Claire",
+            "url": "marieclaire.com"
+          }
+        ],
+        "missing": [],
+        "momentum": "rising",
+        "fit": "we sell it",
+        "productIds": [
+          "pearl-body-chain",
+          "pearl-hand-chain",
+          "pearl-glasses-chain",
+          "layered-pearl-bracelet",
+          "pearl-belly-chain",
+          "pearl-barefoot-sandal"
+        ],
+        "idea": "Publish a pearlcore style guide showcasing the shop's existing head-to-toe pearl range."
+      },
+      {
+        "name": "Chunky, bold gold ('80s luxury'/'Glamoratti')",
+        "what": "Bold, chunky gold jewelry inspired by '80s luxury glamour, including cuffs and statement chains.",
+        "searches": [
+          "chunky gold jewelry",
+          "gold cuff",
+          "'80s luxury"
+        ],
+        "evidence": "National Jeweler reports Pinterest searches for 'gold cuff' up 50% and ''80s luxury' up 225%. Branvas cites Etsy reporting an 18,000% increase in gold jewelry searches during their Fall/Winter 2025 trend cycle.",
+        "sources": [
+          {
+            "name": "National Jeweler",
+            "url": ""
+          },
+          {
+            "name": "Branvas",
+            "url": ""
+          }
+        ],
+        "missing": [
+          "wide cuff bracelets/bangles"
+        ],
+        "momentum": "rising",
+        "fit": "partial",
+        "productIds": [
+          "gold-waist-chain",
+          "gold-hand-chain",
+          "dainty-gold-body-chain",
+          "gold-belly-body-chain",
+          "gold-beaded-cross-bracelet"
+        ],
+        "idea": "Promote existing bold gold chain pieces for the gifting season while flagging cuffs/bangles as a future product gap."
+      },
+      {
+        "name": "Personalized & birthstone rings, including pinky rings",
+        "what": "Meaningful personalized rings, especially birthstone rings and pinky rings worn as a styling statement.",
+        "searches": [
+          "birthstone ring",
+          "pinky ring"
+        ],
+        "evidence": "Marie Claire's 2026 report lists 'Pinky Rings' as one of seven defining jewelry trends. Artizan Joyeria's ranked list of 2026 women's jewelry trends puts birthstone jewelry in its top five, noting people connect jewelry to identity and memories through birthstones.",
+        "sources": [
+          {
+            "name": "Marie Claire",
+            "url": "marieclaire.com/fashion/jewelry-trends-2026"
+          },
+          {
+            "name": "Artizan Joyeria",
+            "url": ""
+          }
+        ],
+        "missing": [],
+        "momentum": "rising",
+        "fit": "we sell it",
+        "productIds": [
+          "birthstone-ring",
+          "evil-eye-ring",
+          "rhodochrosite-ring",
+          "birthstone-bracelet"
+        ],
+        "idea": "Create a dedicated ring styling and meaning guide at the accessible gift price point to capture this rising search demand."
+      },
+      {
+        "name": "Lariat / no-clasp slip necklaces",
+        "what": "Necklaces that slip on without a clasp, styled in a Y-shape or draping lariat form.",
+        "searches": [
+          "lariat necklace"
+        ],
+        "evidence": "WhoWhatWear's 2026 'retire these, wear these' guide places lariat necklaces in its 'Investing In' column, crediting indie jewelry brands Le Sundial and Ayllón for the look's rise in popularity.",
+        "sources": [
+          {
+            "name": "WhoWhatWear",
+            "url": ""
+          }
+        ],
+        "missing": [],
+        "momentum": "rising",
+        "fit": "we sell it",
+        "productIds": [
+          "pearl-lariat-back-necklace",
+          "pearl-lariat-backdrop"
+        ],
+        "idea": "Write a styling guide on how to wear the shop's lariat necklaces for both day and evening looks."
+      },
+      {
+        "name": "Brooches",
+        "what": "Decorative pins/brooches making a comeback as a styling accessory.",
+        "searches": [
+          "brooch aesthetic"
+        ],
+        "evidence": "National Jeweler reports searches for 'brooch aesthetic' up 110% as part of Pinterest's 2026 forecast, predicting a revival among both younger and older shoppers.",
+        "sources": [
+          {
+            "name": "National Jeweler",
+            "url": ""
+          }
+        ],
+        "missing": [
+          "brooches/pins"
+        ],
+        "momentum": "rising",
+        "fit": "gap",
+        "productIds": [],
+        "idea": "Note this as a future product opportunity since the shop currently sells no pins or brooches."
+      },
+      {
+        "name": "Statement earrings & wide cuffs/bangles",
+        "what": "Bold statement earrings and rigid wide cuff/bangle bracelets.",
+        "searches": [
+          "statement earrings",
+          "gold cuff bracelet"
+        ],
+        "evidence": "Branvas's trend map scores statement earrings a top 'Prioritize' rating identical to pearlcore, and Artizan Joyeria separately ranks 'Bangles' as the #1 bracelet trend heading into 2026.",
+        "sources": [
+          {
+            "name": "Branvas",
+            "url": ""
+          },
+          {
+            "name": "Artizan Joyeria",
+            "url": ""
+          }
+        ],
+        "missing": [
+          "statement earrings",
+          "rigid cuff/bangle bracelets"
+        ],
+        "momentum": "rising",
+        "fit": "gap",
+        "productIds": [],
+        "idea": "Flag this as a structural product gap since the shop sells no earrings or rigid cuffs at all."
+      }
+    ],
+    "gaps": [],
+    "blogIdeas": [
+      {
+        "query": "pearlcore jewelry trend",
+        "why": "Branvas's 2026 Jewelry Trend Map gives pearlcore its top 'Prioritize' score for rising search and conversion, and we already carry the aesthetic across five categories.",
+        "productIds": [
+          "pearl-body-chain",
+          "pearl-hand-chain",
+          "pearl-glasses-chain",
+          "layered-pearl-bracelet"
+        ]
+      },
+      {
+        "query": "chunky gold jewelry trend",
+        "why": "National Jeweler reports Pinterest searches for 'gold cuff' up 50% and ''80s luxury' up 225%, while Branvas cites an 18,000% Etsy search spike for gold jewelry.",
+        "productIds": [
+          "gold-waist-chain",
+          "gold-hand-chain",
+          "dainty-gold-body-chain",
+          "gold-beaded-cross-bracelet"
+        ]
+      },
+      {
+        "query": "birthstone ring meaning",
+        "why": "Marie Claire names pinky rings a defining 2026 trend and Artizan Joyeria ranks birthstone jewelry in its top five for the year.",
+        "productIds": [
+          "birthstone-ring",
+          "evil-eye-ring",
+          "rhodochrosite-ring"
+        ]
+      },
+      {
+        "query": "lariat necklace trend 2026",
+        "why": "WhoWhatWear's 2026 trend guide lists lariat necklaces as rising ('Investing In'), crediting indie labels for the look's popularity.",
+        "productIds": [
+          "pearl-lariat-back-necklace",
+          "pearl-lariat-backdrop"
+        ]
+      },
+      {
+        "query": "what jewelry to wear with an off the shoulder top",
+        "why": "Off-shoulder tops are a recurring cold-weather party silhouette through Christmas/NYE season and this specific garment pairing isn't yet covered.",
+        "productIds": [
+          "off-shoulder-chain-necklace",
+          "goddess-shoulder-chain",
+          "bridal-shoulder-chain",
+          "silver-shoulder-harness"
+        ]
+      }
+    ]
+  },
+  {
     "date": "2026-10-12",
     "researchModel": "claude-opus-5",
     "trends": [

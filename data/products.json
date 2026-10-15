@@ -12577,5 +12577,74 @@
       "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/2ff4c648c589651e8930758858259285/downloads/default.mp4",
       "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/2ff4c648c589651e8930758858259285/downloads/default.mp4"
     }
+  },
+  {
+    "id": "pearl-shoulder-necklace",
+    "name": "Pearl Shoulder Necklace",
+    "price": 40,
+    "currency": "EUR",
+    "category": "Shoulder Chains",
+    "description": "Three delicate pearl-beaded drapes sweep across your upper arm, giving a romantic, custom feel to a simple strap or slip-style gown without a trip to the tailor. Attaches with your choice of a pearl safety pin, for maximum adjustability anywhere on your outfit, or a lobster clasp to secure it onto a bra or dress strap. Available in gold-tone or silver-tone stainless steel.",
+    "fullDescription": "You found the dress, and now you are looking for that one special detail to make the look completely your own. This minimalist shoulder chain is handmade to add a delicate, sweeping drape to your upper arm, giving a custom, romantic feel to simple straps or slip-style gowns.\n\nChoose your attachment: a pearl safety pin for maximum adjustability, pinning anywhere on your outfit, or a lobster clasp, ideal for securing it onto a bra or dress strap. Crafted from stainless steel with faux pearl beads, gold-tone or silver-tone.\n\nSizing: Top Drape 28.0 cm, Middle Drape 31.8 cm, Bottom Drape 35.6 cm. Need a different length? Message us after checkout and we will adjust it for free.\n\nCare Instructions: Wipe gently with a soft cloth after each wear. Store in an airtight container when not in use.\n\nShipping: Dispatches within 1–2 business days.\n\nPlease note that as each piece is handcrafted, no two pieces are identical and slight variations may occur.",
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Stainless steel with faux pearl beads, gold-tone or silver-tone"
+      },
+      {
+        "label": "Attachment",
+        "value": "Pearl safety pin or lobster clasp — your choice"
+      },
+      {
+        "label": "Top drape",
+        "value": "28.0 cm"
+      },
+      {
+        "label": "Middle drape",
+        "value": "31.8 cm"
+      },
+      {
+        "label": "Bottom drape",
+        "value": "35.6 cm"
+      },
+      {
+        "label": "Custom fit",
+        "value": "Message us after ordering — we resize at no extra cost"
+      },
+      {
+        "label": "Care",
+        "value": "Wipe gently with a soft cloth. Store in an airtight container."
+      },
+      {
+        "label": "Shipping",
+        "value": "Dispatches within 1–2 business days"
+      }
+    ],
+    "images": [],
+    "variantGroups": [
+      {
+        "label": "Color",
+        "type": "options",
+        "options": [
+          "Gold Tone",
+          "Silver Tone"
+        ]
+      },
+      {
+        "label": "Attachment",
+        "type": "options",
+        "options": [
+          "Pearl Safety Pin",
+          "Lobster Clasp"
+        ]
+      }
+    ],
+    "featured": false,
+    "active": true,
+    "dateAdded": "2026-10-15T09:18:25.202Z",
+    "giftTags": [
+      "bridal"
+    ],
+    "altText": "Pearl shoulder necklace with three draping strands of faux pearls, gold-tone or silver-tone stainless steel epaulette-style bridal shoulder chain"
   }
 ]

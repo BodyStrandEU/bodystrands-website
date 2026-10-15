@@ -1123,77 +1123,115 @@
     "sizeGuideImage": "/images/products/d75a26d3-2060-44af-befb-398ba171ed16.png"
   },
   {
-    "id": "layered-pearl-bracelet",
-    "name": "Layered Pearl Bracelet",
-    "price": 24,
+    "id": "diamond-initial-layered-bracelet",
+    "name": "Diamond Initial Layered Bracelet",
+    "price": 30,
     "currency": "EUR",
     "category": "Bracelets",
-    "description": "Your everyday pearl, on your wrist. This handcrafted freshwater pearl bracelet layers beautifully — waterproof, tarnish-resistant stainless steel in your choice of gold or silver, sized precisely to your wrist.",
-    "fullDescription": "Each pearl is individually placed on a dainty stainless steel chain, creating a delicate layered effect that dresses up a casual look or complements a formal one. Choose your exact size from 14 to 23 cm (9.1\") at checkout, and select gold or silver stainless steel.\n\nWaterproof and completely tarnish-resistant — it goes from the beach to the dinner table without losing its lustre. Handcrafted with slight natural variations in pearl shape and lustre.",
+    "description": "Your initial, catching the light with every move. This layered bracelet pairs a fine 1.5mm cable chain with a 2.0mm mirror link chain, finished with a sparkling diamond rhinestone initial charm — handcrafted from tarnish-resistant stainless steel.",
+    "fullDescription": "Two chains, one bracelet. A fine 1.5mm cable chain layers over a 2.0mm mirror link chain, meeting at a pave rhinestone initial charm that catches the light with every movement. Choose your letter and your size from the dropdowns — a personal touch that makes this the kind of bracelet you never take off.\n\nHandcrafted in gold-tone stainless steel — waterproof and tarnish-resistant, so it holds up through everyday wear. Every size includes a 4cm extension chain built in, so you can adjust the fit without losing the layered look. A thoughtful gift for birthdays, holidays, or any occasion that deserves something personal.",
     "specs": [
       {
         "label": "Material",
-        "value": "Freshwater pearls on stainless steel"
+        "value": "Gold-tone stainless steel"
       },
       {
-        "label": "Colours",
-        "value": "Gold or Silver stainless"
+        "label": "Chains",
+        "value": "Layered 1.5mm cable chain + 2.0mm mirror link chain"
       },
       {
-        "label": "Sizes",
-        "value": "14 cm (5.5\") to 23 cm (9.1\") — select at checkout"
+        "label": "Charm",
+        "value": "Diamond rhinestone initial — choose your letter"
       },
       {
-        "label": "Style",
-        "value": "Layered pearl chain bracelet"
+        "label": "Closure",
+        "value": "Lobster clasp with 4cm extension chain"
+      },
+      {
+        "label": "Waterproof",
+        "value": "Yes"
+      },
+      {
+        "label": "Tarnish-resistant",
+        "value": "Yes"
       },
       {
         "label": "Care",
-        "value": "Wipe gently with a soft cloth. Store in an airtight container."
+        "value": "Wipe gently with a soft cloth after each wear. Store in an airtight container when not in use."
       },
       {
         "label": "Shipping",
-        "value": "Dispatches within 1–2 business days"
+        "value": "Dispatches within 1-2 business days"
       }
-    ],
-    "featured": false,
-    "active": true,
-    "images": [
-      "https://i.etsystatic.com/55122258/r/il/dc4e2f/8165749301/il_fullxfull.8165749301_9lkm.jpg",
-      "https://i.etsystatic.com/55122258/r/il/88889b/8165711891/il_fullxfull.8165711891_gbn3.jpg",
-      "https://i.etsystatic.com/55122258/r/il/7e86e0/8165711877/il_fullxfull.8165711877_od8j.jpg",
-      "https://i.etsystatic.com/55122258/r/il/4c2076/8117803058/il_fullxfull.8117803058_9uyn.jpg",
-      "https://i.etsystatic.com/55122258/r/il/0cb3b5/8165711879/il_fullxfull.8165711879_6ieo.jpg",
-      "https://i.etsystatic.com/55122258/r/il/b3a795/7943677304/il_fullxfull.7943677304_jmkv.jpg",
-      "https://i.etsystatic.com/55122258/r/il/06caae/8165713123/il_fullxfull.8165713123_jyep.jpg"
     ],
     "variantGroups": [
       {
-        "label": "Size",
+        "label": "Letter",
+        "type": "options",
         "options": [
-          "14 CM (5.5\")",
-          "15 CM (5.9\")",
-          "16 CM (6.3\")",
-          "17 CM (6.7\")",
-          "18 CM (7.1\")",
-          "19 CM (7.5\")",
-          "20 CM (7.9\")",
-          "21 CM (8.3\")",
-          "22 CM (8.7\")",
-          "23 CM (9.1\")"
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F",
+          "G",
+          "H",
+          "I",
+          "J",
+          "K",
+          "L",
+          "M",
+          "N",
+          "O",
+          "P",
+          "Q",
+          "R",
+          "S",
+          "T",
+          "U",
+          "V",
+          "W",
+          "X",
+          "Y",
+          "Z"
         ]
       },
       {
-        "label": "Color",
+        "label": "Size",
+        "type": "options",
         "options": [
-          "Gold stainless",
-          "Silver Stainless"
+          "14 cm",
+          "15 cm",
+          "16 cm",
+          "17 cm",
+          "18 cm",
+          "19 cm",
+          "20 cm",
+          "21 cm",
+          "22 cm"
         ]
       }
     ],
-    "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/081f3c4da5cc334a1c97cdd510d58524/downloads/default.mp4",
-    "altText": "Delicate layered pearl bracelet with freshwater pearls and stainless steel, perfect everyday dainty bracelet",
-    "dateAdded": "2026-06-12T15:00:27-04:00"
+    "featured": false,
+    "images": [
+      "/images/products/website-thumbnail.png"
+    ],
+    "active": true,
+    "altText": "Gold-tone stainless steel layered initial bracelet with diamond rhinestone letter charm",
+    "dateAdded": "2026-10-10T09:08:34-04:00",
+    "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/84def28226242eefa84581f4a22c41b2/downloads/default.mp4",
+    "gallery": [
+      "/images/products/website-thumbnail.png",
+      "/images/products/460eb187-8482-4df0-b190-56a94c92c239.png",
+      "/images/products/3cbda98a-8eef-4017-a019-ee14429a4f05.png",
+      "/images/products/8dc3f1a7-ca44-45c5-b23d-e958f4b5ceca-2.jpeg",
+      "/images/products/53165426-64d8-4bb3-b7a6-f685893d381f.png",
+      "/images/products/fb331334-bdc6-4605-869e-6cc4bc34933d.png"
+    ],
+    "giftTags": [
+      "personalized"
+    ]
   },
   {
     "id": "pearl-backdrop-necklace",
@@ -2296,44 +2334,56 @@
     "sizeGuideImage": "/images/products/d75a26d3-2060-44af-befb-398ba171ed16.png"
   },
   {
-    "id": "pearl-charm-bracelet",
-    "name": "Pearl Charm Bracelet",
+    "id": "colorful-crystal-bead-bracelet",
+    "name": "Colorful Crystal Bead Bracelet",
+    "category": "Bracelets",
     "price": 24,
     "currency": "EUR",
-    "category": "Bracelets",
-    "description": "Your everyday pearl, double-stranded. This handcrafted gold bracelet features two delicate strands with freshwater-style pearl and charm accents — waterproof, tarnish-resistant stainless steel for daily wear.",
-    "fullDescription": "Two fine chains sit side by side at the wrist, each dotted with small pearl and charm accents that catch the light with every movement. Wears beautifully alone or stacked with other bracelets.\n\nHandcrafted in gold or silver stainless steel. Waterproof and completely tarnish-resistant. A thoughtful gift for birthdays, Mother's Day, or anyone who loves understated elegance.",
+    "description": "A single-strand bracelet stringing colorful abacus-cut glass crystal beads along a fine gold-tone stainless steel chain — waterproof, adjustable, and just as at home on the beach as it is out for the night.",
     "specs": [
       {
         "label": "Material",
-        "value": "Gold or silver stainless steel with pearl accents"
+        "value": "Glass crystal abacus beads, stainless steel chain"
       },
       {
-        "label": "Style",
-        "value": "Double-strand pearl charm bracelet"
+        "label": "Finish",
+        "value": "Gold-tone"
+      },
+      {
+        "label": "Closure",
+        "value": "Lobster clasp"
+      },
+      {
+        "label": "Sizes",
+        "value": "14 cm (5.5\") to 23 cm (9.1\") — select at checkout"
+      },
+      {
+        "label": "Extension",
+        "value": "+5 cm (2\") adjustable extension chain"
+      },
+      {
+        "label": "Waterproof",
+        "value": "Yes"
+      },
+      {
+        "label": "Tarnish-Resistant",
+        "value": "Yes"
       },
       {
         "label": "Care",
-        "value": "Wipe gently with soft cloth. Store in an airtight container."
+        "value": "Wipe with a soft cloth after wear. Store in an airtight container."
       },
       {
         "label": "Shipping",
         "value": "Dispatches within 1–2 business days"
       }
     ],
-    "featured": false,
-    "active": true,
     "images": [
-      "/images/products/f1a95b9b-e3ca-4323-bd17-525d5ddcd0a6.webp",
-      "https://i.etsystatic.com/55122258/r/il/6ee4aa/8065073742/il_fullxfull.8065073742_9b79.jpg",
-      "https://i.etsystatic.com/55122258/r/il/1fd40c/8047372098/il_fullxfull.8047372098_8wcr.jpg",
-      "https://i.etsystatic.com/55122258/r/il/cd8904/8032758132/il_fullxfull.8032758132_ru5f.jpg",
-      "https://i.etsystatic.com/55122258/r/il/93ba8e/8051512336/il_fullxfull.8051512336_2di7.jpg",
-      "https://i.etsystatic.com/55122258/r/il/b14ddd/8099427053/il_fullxfull.8099427053_2ou0.jpg",
-      "https://i.etsystatic.com/55122258/r/il/b3a795/7943677304/il_fullxfull.7943677304_jmkv.jpg",
-      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.webp",
-      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.webp",
-      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp"
+      "/images/products/2e6cfc7e-47d3-48df-964a-26e883c706bd.png",
+      "/images/products/8a453447-3649-4a5a-a7c0-5e4e63512060.jpeg",
+      "/images/products/1411cdd1-c3e0-4fee-9095-9462590ef2e1.png",
+      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf-copy.jpeg",
+      "/images/products/13cb1bad-4640-4867-b6b7-99c1c53be92f.png"
     ],
     "variantGroups": [
       {
@@ -2350,18 +2400,15 @@
           "22 CM (8.7\")",
           "23 CM (9.1\")"
         ]
-      },
-      {
-        "label": "Color",
-        "options": [
-          "Gold stainless",
-          "Silver Stainless"
-        ]
       }
     ],
-    "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/43713f58ef4eb86f6c97a68b12a8b4f6/downloads/default.mp4",
-    "altText": "Delicate gold stainless steel bracelet with pearl charms, handcrafted dainty bracelet for everyday wear",
-    "dateAdded": "2026-06-12T15:00:27-04:00"
+    "featured": false,
+    "active": true,
+    "altText": "Colorful crystal bead bracelet with faceted glass beads and gold-tone stainless steel chain, waterproof and adjustable",
+    "fullDescription": "A rainbow of color, one clasp away from your wrist.\n\nThis single-strand bracelet strings a delicate row of abacus-cut glass crystal beads along a fine gold-tone stainless steel chain — handcrafted so it sits light on the wrist and moves with you from a beach day to a festival night to a pool afternoon without ever coming off. Waterproof and built to last, it's the kind of colorful, trendy little detail that makes a genuinely thoughtful gift — whether you're picking it up for a summer trip of your own, a girls' getaway, or something sweet to send Mom.\n\nProduct Details\nMaterial: Glass crystal abacus beads, stainless steel chain\nFinish: Gold-tone\nClosure: Lobster clasp\nWaterproof & Sweat-Proof: Yes — safe for water, sun, and everyday wear\n\nSize Guide\nAvailable in 14 cm to 23 cm (5.5\"–9.1\")\nIncludes a 5 cm (2\") extension chain for the perfect fit\n\nHow to Order\nSelect your size from the dropdown menu\n\nCustom Sizing: Need a specific size? Message me after purchase and I'll adjust it at no extra cost.\n\nCare Instructions\nWipe gently with a soft cloth after each wear.\nStore in an airtight container when not in use.\n\nShipping: Dispatches within 1–2 business days.\n\nPlease note that as each piece is handcrafted, no two pieces are identical and slight variations may occur.",
+    "dateAdded": "2026-07-29T09:00:00-04:00",
+    "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/31cdb5b01c5e2c9a9af5a43ce925596b/downloads/default.mp4",
+    "sizeGuideImage": "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png"
   },
   {
     "id": "initial-letter-anklet",
@@ -2764,29 +2811,29 @@
     "dateAdded": "2026-06-12T15:00:27-04:00"
   },
   {
-    "id": "dainty-chain-bracelet",
-    "name": "Dainty Chain Bracelet",
-    "price": 14,
+    "id": "zodiac-charm-bracelet",
+    "name": "Zodiac Charm Bracelet",
+    "price": 24,
     "currency": "EUR",
     "category": "Bracelets",
-    "description": "Your everyday essential. This minimal gold chain bracelet stacks and layers beautifully — waterproof, tarnish-free stainless steel that earns a permanent spot on your wrist.",
-    "fullDescription": "Clean, simple, and endlessly wearable. A single fine chain at the wrist that goes with everything and bothers no one. The kind of bracelet you put on and forget about because it just works.\n\nHandcrafted in gold stainless steel. Completely waterproof and tarnish-resistant. Buy a second one — they're made to be stacked.",
+    "description": "Your star sign on your wrist. This Y2K-inspired gold bracelet features a zodiac charm — a personalised, minimalist piece handcrafted from tarnish-resistant stainless steel for everyday wear.",
+    "fullDescription": "Choose your horoscope sign at checkout and the zodiac charm sits on a dainty gold chain bracelet that catches the light with every movement. A personal touch that's subtle enough for the office and fun enough for a night out.\n\nHandcrafted in gold stainless steel. Completely tarnish-resistant. A great gift for anyone who knows their rising sign as well as their sun sign.",
     "specs": [
       {
         "label": "Material",
-        "value": "Gold stainless steel (waterproof & tarnish-resistant)"
+        "value": "Gold stainless steel (tarnish-resistant)"
       },
       {
         "label": "Style",
-        "value": "Dainty minimal chain bracelet"
+        "value": "Zodiac charm bracelet"
       },
       {
-        "label": "Finish",
-        "value": "Gold tone"
+        "label": "Zodiac",
+        "value": "All 12 signs — select at checkout"
       },
       {
         "label": "Care",
-        "value": "Wipe gently with soft cloth. Store in an airtight container."
+        "value": "Avoid water, perfumes, lotions. Wipe with soft cloth."
       },
       {
         "label": "Shipping",
@@ -2796,44 +2843,59 @@
     "featured": false,
     "active": true,
     "images": [
-      "https://i.etsystatic.com/55122258/r/il/3f111f/8086665923/il_fullxfull.8086665923_qdr3.jpg",
-      "https://i.etsystatic.com/55122258/r/il/3110c4/8038864386/il_fullxfull.8038864386_s536.jpg",
-      "https://i.etsystatic.com/55122258/r/il/3c01a2/8038715412/il_fullxfull.8038715412_s531.jpg",
-      "https://i.etsystatic.com/55122258/r/il/fea173/8038720530/il_fullxfull.8038720530_nqco.jpg",
-      "https://i.etsystatic.com/55122258/r/il/50868c/8086627797/il_fullxfull.8086627797_6yue.jpg",
-      "https://i.etsystatic.com/55122258/r/il/cd8904/8032758132/il_fullxfull.8032758132_ru5f.jpg",
-      "https://i.etsystatic.com/55122258/r/il/b3a795/7943677304/il_fullxfull.7943677304_jmkv.jpg",
+      "https://i.etsystatic.com/55122258/r/il/fdce1a/8049938055/il_fullxfull.8049938055_2a2s.jpg",
+      "https://i.etsystatic.com/55122258/r/il/0c66ec/8051673155/il_fullxfull.8051673155_ta78.jpg",
+      "https://i.etsystatic.com/55122258/r/il/82e431/7824253621/il_fullxfull.7824253621_acsc.jpg",
+      "https://i.etsystatic.com/55122258/r/il/71cca8/8049941925/il_fullxfull.8049941925_6i0u.jpg",
+      "https://i.etsystatic.com/55122258/r/il/fed2cd/8003728682/il_fullxfull.8003728682_b0x8.jpg",
+      "https://i.etsystatic.com/55122258/r/il/2cb58f/8049907629/il_fullxfull.8049907629_g5jj.jpg",
+      "https://i.etsystatic.com/55122258/r/il/26282e/7734979557/il_fullxfull.7734979557_95jd.jpg",
       "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp",
       "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.webp",
       "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.webp"
     ],
     "variantGroups": [
       {
-        "label": "Size",
+        "label": "Zodiac Sign",
         "options": [
-          "14 CM (5.5\")",
-          "15 CM (5.9\")",
-          "16 CM (6.3\")",
-          "17 CM (6.7\")",
-          "18 CM (7.1\")",
-          "19 CM (7.5\")",
-          "20 CM (7.9\")",
-          "21 CM (8.3\")",
-          "22 CM (8.7\")",
-          "23 CM (9.1\")"
+          "Aquarius",
+          "Pisces",
+          "Aries",
+          "Taurus",
+          "Gemini",
+          "Cancer",
+          "Leo",
+          "Virgo",
+          "Libra",
+          "Scorpio",
+          "Sagittarius",
+          "Capricorn"
         ]
       },
       {
-        "label": "Choose Your Stack",
+        "label": "Horoscope",
+        "type": "options",
         "options": [
-          "Single Bracelet",
-          "Double Stack (2)",
-          "Triple Stack (3)"
+          "Aquarius",
+          "Pisces",
+          "Aries",
+          "Taurus",
+          "Gemini",
+          "Cancer",
+          "Leo",
+          "Virgo",
+          "Libra",
+          "Scorpio",
+          "Sagittarius",
+          "Capricorn"
         ]
       }
     ],
-    "altText": "Dainty gold chain bracelet in waterproof stainless steel, perfect for everyday layering and stacking",
-    "dateAdded": "2026-06-12T15:00:27-04:00"
+    "altText": "Delicate gold stainless steel zodiac charm bracelet, Y2K-inspired personalized dainty bracelet handcrafted in Portugal",
+    "dateAdded": "2026-06-12T15:00:27-04:00",
+    "giftTags": [
+      "personalized"
+    ]
   },
   {
     "id": "boho-beach-body-chain",
@@ -3096,70 +3158,103 @@
     ]
   },
   {
-    "id": "script-initial-bracelet",
-    "name": "Script Initial Bracelet",
-    "price": 24,
+    "id": "pearl-heart-initial-bracelet",
+    "name": "Pearl Heart Initial Bracelet",
+    "price": 28,
     "currency": "EUR",
     "category": "Bracelets",
-    "description": "Your name, on your wrist. This personalised gold bracelet features a custom cursive letter charm — a meaningful, minimalist piece handcrafted from tarnish-resistant stainless steel.",
-    "fullDescription": "A fine gold chain holds a single script initial in a flowing cursive font — personal without being loud, elegant without trying too hard. Choose your letter at checkout and wear it as your signature piece.\n\nHandcrafted in gold stainless steel. Completely tarnish-resistant and hypoallergenic. A perfect gift for birthdays, anniversaries, or anyone who deserves something made just for them.",
+    "description": "Not just a bracelet — a little monogram for your wrist. A dainty pearl chain layered over a fine gold cable link chain, finished with a heart charm engraved with your initial — personalized, layered, and effortlessly yours.",
+    "fullDescription": "Not just a bracelet — a little monogram for your wrist. Handmade with a dainty pearl chain layered over a fine cable link chain and finished with a heart charm engraved with your initial, this double-strand piece turns a simple accessory into something that's unmistakably yours. No stacking required — the layered, personalized look is built in.\n\nWears beautifully every day, dressed up or down — with a t-shirt and jeans, over a sweater cuff, or stacked with your other favorites. The pearls add a classic touch while your initial heart charm makes it unmistakably you.\n\nChoose your initial at checkout. A thoughtful, personalized gift for bridesmaids, best friends, and anyone who loves dainty jewelry that actually lasts — and feels personal.\n\nHandcrafted with slight natural variations — no two pieces are exactly alike.",
     "specs": [
       {
         "label": "Material",
-        "value": "Gold stainless steel (tarnish-resistant & hypoallergenic)"
+        "value": "Gold-tone stainless steel"
       },
       {
         "label": "Style",
-        "value": "Script initial charm bracelet"
+        "value": "Double-strand — pearl chain and cable link chain with engraved initial heart charm, as one piece"
       },
       {
-        "label": "Charm",
-        "value": "Your chosen letter — personalise at checkout"
+        "label": "Finish",
+        "value": "Water-resistant and tarnish-resistant"
+      },
+      {
+        "label": "Closure",
+        "value": "Lobster clasp with adjustable extender"
+      },
+      {
+        "label": "Personalization",
+        "value": "Heart charm engraved with the initial of your choice"
+      },
+      {
+        "label": "Length",
+        "value": "14 cm (5.5\") to 23 cm (9.1\") — includes a 4 cm (1.6\") adjustable extension"
+      },
+      {
+        "label": "Custom sizing",
+        "value": "Message us after purchase and we will adjust to your exact measurements"
       },
       {
         "label": "Care",
-        "value": "Avoid perfumes, lotions. Wipe with soft cloth."
+        "value": "Wipe gently with a soft cloth after each wear. Store in an airtight container."
       },
       {
         "label": "Shipping",
-        "value": "Dispatches within 1–2 business days"
+        "value": "Dispatches within 1–2 business days from Europe"
+      }
+    ],
+    "images": [
+      "/images/products/81c42c09-7e3d-4bab-ad14-bbf68af14404.png"
+    ],
+    "variantGroups": [
+      {
+        "label": "Choose your Initial",
+        "options": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F",
+          "G",
+          "H",
+          "I",
+          "J",
+          "K",
+          "L",
+          "M",
+          "N",
+          "O",
+          "P",
+          "Q",
+          "R",
+          "S",
+          "T",
+          "U",
+          "V",
+          "W",
+          "X",
+          "Y",
+          "Z"
+        ]
       }
     ],
     "featured": false,
     "active": true,
-    "images": [
-      "https://i.etsystatic.com/55122258/r/il/f86d76/8032963030/il_fullxfull.8032963030_9p7i.jpg",
-      "https://i.etsystatic.com/55122258/r/il/0b755c/8032935374/il_fullxfull.8032935374_lxvy.jpg",
-      "https://i.etsystatic.com/55122258/r/il/1c3987/8032906070/il_fullxfull.8032906070_bsrt.jpg",
-      "https://i.etsystatic.com/55122258/r/il/cd8904/8032758132/il_fullxfull.8032758132_ru5f.jpg",
-      "https://i.etsystatic.com/55122258/r/il/0cfcf9/8032913296/il_fullxfull.8032913296_1lye.jpg",
-      "https://i.etsystatic.com/55122258/r/il/cc31e8/8080835881/il_fullxfull.8080835881_ogp8.jpg",
-      "https://i.etsystatic.com/55122258/r/il/4d102e/8032907036/il_fullxfull.8032907036_pnqd.jpg",
-      "https://i.etsystatic.com/55122258/r/il/b3a795/7943677304/il_fullxfull.7943677304_jmkv.jpg"
-    ],
-    "variantGroups": [
-      {
-        "label": "Size",
-        "options": [
-          "14 CM (5.5\")",
-          "15 CM (5.9\")",
-          "16 CM (6.3\")",
-          "17 CM (6.7\")",
-          "18 CM (7.1\")",
-          "19 CM (7.5\")",
-          "20 CM (7.9\")",
-          "21 CM (8.3\")",
-          "22 CM (8.7\")",
-          "23 CM (9.1\")"
-        ]
-      }
-    ],
-    "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/5165e2eacd199a97c3d9ef43e60f92a0/downloads/default.mp4",
-    "altText": "Gold stainless steel personalized initial bracelet with dainty cursive letter charm, handcrafted and tarnish-resistant",
-    "dateAdded": "2026-06-12T15:00:27-04:00",
+    "altText": "Personalized double-strand pearl bracelet with gold heart charm engraved initial, layered pearl and cable chain bracelet",
     "giftTags": [
       "personalized"
-    ]
+    ],
+    "dateAdded": "2026-08-28T09:00:00-04:00",
+    "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/b69d656281327765128292a07d4575b4/downloads/default.mp4",
+    "gallery": [
+      "/images/products/81c42c09-7e3d-4bab-ad14-bbf68af14404.png",
+      "/images/products/1b0246c7-46c2-4906-ad65-8143ea9b4c68.png",
+      "/images/products/3c456e1e-1abf-497c-94d7-49de4a3670d5.png",
+      "/images/products/0351d2a0-9e2d-4016-8492-a473e29379d3.png",
+      "/images/products/84cd0cb4-ba1b-4720-a643-320d032707d4.png"
+    ],
+    "sizeGuideImage": "/images/products/84cd0cb4-ba1b-4720-a643-320d032707d4.png"
   },
   {
     "id": "birth-flower-anklet",
@@ -3933,88 +4028,108 @@
     "sizeGuideImage": "/images/products/b6b14869-6fad-46fc-adc3-fb0e0ab020a3.png"
   },
   {
-    "id": "zodiac-charm-bracelet",
-    "name": "Zodiac Charm Bracelet",
-    "price": 24,
+    "id": "birth-flower-charm-bracelet",
+    "name": "Birth Flower Charm Bracelet",
+    "price": 28,
     "currency": "EUR",
     "category": "Bracelets",
-    "description": "Your star sign on your wrist. This Y2K-inspired gold bracelet features a zodiac charm — a personalised, minimalist piece handcrafted from tarnish-resistant stainless steel for everyday wear.",
-    "fullDescription": "Choose your horoscope sign at checkout and the zodiac charm sits on a dainty gold chain bracelet that catches the light with every movement. A personal touch that's subtle enough for the office and fun enough for a night out.\n\nHandcrafted in gold stainless steel. Completely tarnish-resistant. A great gift for anyone who knows their rising sign as well as their sun sign.",
+    "description": "Your birth flower, always with you. A dainty bracelet featuring a delicate flower charm that matches your birth month — handcrafted in tarnish-resistant stainless steel, available in gold or silver.",
+    "fullDescription": "Choose your birth month and receive a bracelet with its corresponding flower charm — from January's Carnation to December's Holly. Each charm is beautifully detailed, sitting on a dainty chain that rests close to the wrist.\n\nPersonalised, wearable, and completely tarnish-resistant. Made from high-quality stainless steel so it can be worn every day — through swimming, showering, and everything in between. A thoughtful gift or a quiet reminder of who you are.\n\nComes with a 5 cm (2\") extender for a perfect fit across all wrist sizes.",
     "specs": [
       {
         "label": "Material",
-        "value": "Gold stainless steel (tarnish-resistant)"
+        "value": "high-quality stainless steel (tarnish-resistant)"
       },
       {
-        "label": "Style",
-        "value": "Zodiac charm bracelet"
+        "label": "Finishes",
+        "value": "Gold Tone or Silver Tone"
       },
       {
-        "label": "Zodiac",
-        "value": "All 12 signs — select at checkout"
+        "label": "Charm",
+        "value": "Birth flower — 12 months, 12 flowers"
       },
       {
-        "label": "Care",
-        "value": "Avoid water, perfumes, lotions. Wipe with soft cloth."
+        "label": "Length",
+        "value": "14–23 cm (5.5\"–9.1\") + 5 cm (2\") extender"
+      },
+      {
+        "label": "Fit",
+        "value": "Adjustable — fits most wrist sizes, extender included"
       },
       {
         "label": "Shipping",
         "value": "Dispatches within 1–2 business days"
       }
     ],
-    "featured": false,
-    "active": true,
     "images": [
-      "https://i.etsystatic.com/55122258/r/il/fdce1a/8049938055/il_fullxfull.8049938055_2a2s.jpg",
-      "https://i.etsystatic.com/55122258/r/il/0c66ec/8051673155/il_fullxfull.8051673155_ta78.jpg",
-      "https://i.etsystatic.com/55122258/r/il/82e431/7824253621/il_fullxfull.7824253621_acsc.jpg",
-      "https://i.etsystatic.com/55122258/r/il/71cca8/8049941925/il_fullxfull.8049941925_6i0u.jpg",
-      "https://i.etsystatic.com/55122258/r/il/fed2cd/8003728682/il_fullxfull.8003728682_b0x8.jpg",
-      "https://i.etsystatic.com/55122258/r/il/2cb58f/8049907629/il_fullxfull.8049907629_g5jj.jpg",
-      "https://i.etsystatic.com/55122258/r/il/26282e/7734979557/il_fullxfull.7734979557_95jd.jpg",
-      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp",
-      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.webp",
-      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.webp"
+      "/images/products/birth-flower-charm-bracelet/e0e3896f-5197-4d94-974f-7b14ee305954.webp"
+    ],
+    "video": "/images/products/birth-flower-charm-bracelet/0618.mp4",
+    "featured": false,
+    "variants": [
+      "Gold Tone",
+      "Silver Tone"
     ],
     "variantGroups": [
       {
-        "label": "Zodiac Sign",
+        "label": "Size",
+        "type": "options",
         "options": [
-          "Aquarius",
-          "Pisces",
-          "Aries",
-          "Taurus",
-          "Gemini",
-          "Cancer",
-          "Leo",
-          "Virgo",
-          "Libra",
-          "Scorpio",
-          "Sagittarius",
-          "Capricorn"
+          "14 cm (5.5\")",
+          "15 cm (5.9\")",
+          "16 cm (6.3\")",
+          "17 cm (6.7\")",
+          "18 cm (7.1\")",
+          "19 cm (7.5\")",
+          "20 cm (7.9\")",
+          "21 cm (8.3\")",
+          "22 cm (8.7\")",
+          "23 cm (9.1\")"
         ]
       },
       {
-        "label": "Horoscope",
+        "label": "Birth Month",
         "type": "options",
         "options": [
-          "Aquarius",
-          "Pisces",
-          "Aries",
-          "Taurus",
-          "Gemini",
-          "Cancer",
-          "Leo",
-          "Virgo",
-          "Libra",
-          "Scorpio",
-          "Sagittarius",
-          "Capricorn"
+          "January — Carnation",
+          "February — Violet",
+          "March — Daffodil",
+          "April — Daisy",
+          "May — Lily of the Valley",
+          "June — Rose",
+          "July — Water Lily",
+          "August — Poppy",
+          "September — Aster",
+          "October — Marigold",
+          "November — Chrysanthemum",
+          "December — Holly"
         ]
       }
     ],
-    "altText": "Delicate gold stainless steel zodiac charm bracelet, Y2K-inspired personalized dainty bracelet handcrafted in Portugal",
-    "dateAdded": "2026-06-12T15:00:27-04:00",
+    "active": true,
+    "infographicImages": [
+      "/images/products/birth-flower-charm-bracelet/035ca701-d84a-49fd-8b8d-196dd1903eb0.webp",
+      "/images/products/birth-flower-charm-bracelet/f6314926-4454-4b6d-947b-0b5470742a2e.webp"
+    ],
+    "altText": "Delicate gold tone stainless steel birth flower charm bracelet for everyday wear and special occasions",
+    "gallery": [
+      "/images/products/birth-flower-charm-bracelet/e0e3896f-5197-4d94-974f-7b14ee305954.webp",
+      "/images/products/birth-flower-charm-bracelet/25fe1c2f-6f88-4116-9922-23f730900978.webp",
+      "/images/products/birth-flower-charm-bracelet/92022e6a-2968-4014-a577-94b76e8bdba8.webp",
+      "/images/products/birth-flower-charm-bracelet/1f6f7c1d-1825-4cbe-93f8-4dd53e61cd63.webp",
+      "/images/products/birth-flower-charm-bracelet/22f3e739-d337-4777-a775-58d9ad12ee1c.webp",
+      "/images/products/birth-flower-charm-bracelet/035ca701-d84a-49fd-8b8d-196dd1903eb0.webp",
+      "/images/products/birth-flower-charm-bracelet/f6314926-4454-4b6d-947b-0b5470742a2e.webp",
+      "/images/products/birth-flower-charm-bracelet/55110011-2bba-4572-8dcb-5f9d06f99c32.webp",
+      "/images/products/birth-flower-charm-bracelet/0acc7259-5314-4c79-a09d-8f0f7c724ecf.webp",
+      "/images/products/birth-flower-charm-bracelet/4746a3fe-b2a1-4cef-86cc-181e6f1a189a.webp",
+      "/images/products/birth-flower-charm-bracelet/0.webp"
+    ],
+    "variantHeroes": {
+      "Gold Tone": "/images/products/birth-flower-charm-bracelet/e0e3896f-5197-4d94-974f-7b14ee305954.webp",
+      "Silver Tone": "/images/products/birth-flower-charm-bracelet/4746a3fe-b2a1-4cef-86cc-181e6f1a189a.webp"
+    },
+    "dateAdded": "2026-06-18T17:14:08-04:00",
     "giftTags": [
       "personalized"
     ]
@@ -5050,91 +5165,73 @@
     "dateAdded": "2026-06-12T15:00:27-04:00"
   },
   {
-    "id": "birthstone-bracelet",
-    "name": "Birthstone Bracelet",
-    "price": 26,
+    "id": "coin-disc-bracelet",
+    "name": "Coin Disc Bracelet",
+    "price": 20,
     "currency": "EUR",
     "category": "Bracelets",
-    "description": "Your personal gemstone, on your wrist. This custom gold bracelet features a dainty birthstone charm in your chosen month — handcrafted from tarnish-resistant stainless steel in your exact size.",
-    "fullDescription": "Select your birthstone month and wrist size at checkout — from 14 cm (5.5\") to 22 cm (8.7\") — and receive a bracelet that's been made specifically for you. A dainty gold chain with a delicate gemstone charm that holds personal meaning.\n\nHandcrafted in gold stainless steel. Tarnish-resistant and hypoallergenic. A beautiful gift for birthdays, Mother's Day, or any occasion that deserves something personal.",
+    "description": "A dainty gold disc chain bracelet — flat coin-shaped links in lightweight, waterproof, tarnish-resistant stainless steel.",
+    "fullDescription": "A dainty gold disc chain bracelet made for everyday wear — lightweight, minimalist, and effortless to layer or wear alone. Each flat gold disc links into a delicate chain that catches the light beautifully on its own.\n\nMaterials: Gold stainless steel\nClosure: Lobster clasp with 3 adjustable loop options\nWaterproof & Tarnish-Resistant: Yes — hypoallergenic, safe for water, sun, and everyday wear\n\nSize Guide\nAvailable in 15.5 cm, 16.5 cm, or 18 cm — choose your size at checkout.\n\nCare Instructions\nWipe gently with a soft cloth after each wear.\nStore in an airtight container when not in use.\n\nPlease note that as each piece is handcrafted, no two pieces are identical and slight variations may occur.",
     "specs": [
       {
         "label": "Material",
-        "value": "Gold stainless steel (tarnish-resistant & hypoallergenic)"
+        "value": "Gold Stainless Steel"
       },
       {
-        "label": "Birthstone",
-        "value": "All 12 months — select at checkout"
+        "label": "Style",
+        "value": "Dainty coin disc-link chain"
       },
       {
-        "label": "Sizes",
-        "value": "14 cm (5.5\") to 22 cm (8.7\") — select at checkout"
+        "label": "Bracelet Length",
+        "value": "15.5 cm / 16.5 cm / 18 cm (3 adjustable sizes)"
+      },
+      {
+        "label": "Clasp",
+        "value": "Secure lobster clasp closure"
+      },
+      {
+        "label": "Waterproof",
+        "value": "Yes"
+      },
+      {
+        "label": "Tarnish-Resistant",
+        "value": "Yes"
       },
       {
         "label": "Care",
-        "value": "Avoid water, perfumes, lotions. Wipe with soft cloth."
+        "value": "Wipe gently with a soft cloth. Store in an airtight container."
       },
       {
         "label": "Shipping",
         "value": "Dispatches within 1–2 business days"
       }
     ],
-    "featured": false,
-    "active": true,
     "images": [
-      "https://i.etsystatic.com/55122258/r/il/32bcb7/7995316377/il_fullxfull.7995316377_7kk0.jpg",
-      "https://i.etsystatic.com/55122258/r/il/32f1b2/7947544000/il_fullxfull.7947544000_6fva.jpg",
-      "https://i.etsystatic.com/55122258/r/il/96692e/7883966909/il_fullxfull.7883966909_m1l9.jpg",
-      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp",
-      "https://i.etsystatic.com/55122258/r/il/ebe5bc/7947619574/il_fullxfull.7947619574_olgy.jpg",
-      "https://i.etsystatic.com/55122258/r/il/e998ff/7756532898/il_fullxfull.7756532898_248j.jpg",
-      "https://i.etsystatic.com/55122258/r/il/671d65/7883984639/il_fullxfull.7883984639_iztj.jpg",
-      "https://i.etsystatic.com/55122258/r/il/9e92eb/7947542360/il_fullxfull.7947542360_cajk.jpg",
-      "https://i.etsystatic.com/55122258/r/il/26594f/7947542946/il_fullxfull.7947542946_byee.jpg",
-      "https://i.etsystatic.com/55122258/r/il/b78a5c/7947544278/il_fullxfull.7947544278_m5rk.jpg",
-      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.webp",
-      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.webp"
+      "/images/products/b9cf31fb-b638-4305-969d-2e678356ee1d.png"
     ],
     "variantGroups": [
       {
-        "label": "Birthstone",
-        "options": [
-          "January",
-          "February",
-          "March",
-          "April",
-          "May",
-          "June",
-          "July",
-          "August",
-          "September",
-          "October",
-          "November",
-          "December"
-        ]
-      },
-      {
         "label": "Size",
         "options": [
-          "14 CM (5.5\")",
-          "15 CM (5.9\")",
-          "16 CM (6.3\")",
-          "17 CM (6.7\")",
-          "18 CM (7.1\")",
-          "19 CM (7.5\")",
-          "20 CM (7.9\")",
-          "21 CM (8.3\")",
-          "22 CM (8.7\")",
-          "23 CM (9.1\")"
+          "15.5 CM (6.1\")",
+          "16.5 CM (6.5\")",
+          "18 CM (7.1\")"
         ]
       }
     ],
-    "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/55b54d928f426a837667fbc731977fa7/downloads/default.mp4",
-    "altText": "Gold stainless steel dainty bracelet with personalized birthstone charm, handcrafted hypoallergenic jewelry Portugal",
-    "dateAdded": "2026-06-12T15:00:27-04:00",
-    "giftTags": [
-      "personalized"
-    ]
+    "featured": false,
+    "active": true,
+    "altText": "Gold stainless steel dainty coin disc-link chain bracelet, minimalist waterproof jewelry",
+    "dateAdded": "2026-08-28T09:00:00-04:00",
+    "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/aaa9150ae2d05427a9e23c665f6177ee/downloads/default.mp4",
+    "gallery": [
+      "/images/products/b9cf31fb-b638-4305-969d-2e678356ee1d.png",
+      "/images/products/58de484b-2b7c-4b20-92f5-00f31828e47f.png",
+      "/images/products/6e7eed3d-c7a6-48d7-9adf-a2f9ba14279f.png",
+      "/images/products/062ae184-f8de-4a9d-a63f-5fc13bb93279.png",
+      "/images/products/0cad7396-ab9a-4ed6-8b7a-da8a7f43e99e.jpg"
+    ],
+    "sizeGuideImage": "/images/products/0cad7396-ab9a-4ed6-8b7a-da8a7f43e99e.jpg"
   },
   {
     "id": "birthstone-choker-necklace",
@@ -7792,41 +7889,29 @@
     "dateAdded": "2026-06-12T15:00:27-04:00"
   },
   {
-    "id": "layered-turquoise-bead-bracelet",
-    "name": "Layered Turquoise Bead Bracelet",
-    "price": 24,
+    "id": "pearl-rosary-cross-bracelet",
+    "name": "Pearl Rosary Cross Bracelet",
+    "price": 28,
     "currency": "EUR",
     "category": "Bracelets",
-    "description": "There's something about a pop of turquoise on the wrist that just works — this double-strand bracelet pairs a delicate row of turquoise enamel beads with a fine cable chain, both worn together as one connected piece. Handcrafted in gold stainless steel.",
-    "fullDescription": "Each strand is crafted as one connected piece — a fine cable chain running alongside a longer-link chain set with small vivid turquoise enamel beads at even intervals. The two strands sit together naturally on the wrist for an effortless layered look, no stacking required.\n\nWaterproof and completely tarnish-resistant — wear it to the beach, the pool, or every day. Handcrafted with slight natural variations possible.",
+    "description": "A delicate pearl rosary bracelet finished with a pearl-detailed cross charm — a meaningful communion, confirmation, or baptism gift in gold or silver stainless steel.",
+    "fullDescription": "There's something about a strand of pearls meeting a cross charm on the wrist that just works. I string a delicate row of pearl beads into one dainty piece, finished with a cross pendant that carries its own tiny pearls to match. Handcrafted in gold-tone or silver-tone stainless steel, it moves effortlessly between a first communion, a confirmation, and everyday wear.\n\nMaterials: Stainless steel (gold-tone or silver-tone) with pearl bead accents\nClosure: Lobster clasp with a 5 cm (2\") extension chain\nWaterproof & Tarnish-Resistant: Yes — safe for water, sun, and everyday wear\n\nSize Guide\nAvailable in 14–23 cm (5.5\"–9\"), plus a 5 cm (2\") extension chain for the perfect fit.\n\nFit Note: Measure your wrist and compare to the sizes above. Need a custom measurement? Message me after ordering and I'll adjust it at no extra cost.\n\nCare Instructions\nWipe gently with a soft cloth after each wear.\nStore in an airtight container when not in use.\n\nPlease note that as each piece is handcrafted, no two pieces are identical and slight variations may occur.",
     "specs": [
       {
         "label": "Material",
-        "value": "High-Quality Stainless Steel"
+        "value": "Stainless steel with pearl bead accents"
       },
       {
-        "label": "Finish",
-        "value": "Gold Tone"
+        "label": "Style",
+        "value": "Beaded rosary bracelet with pearl cross charm"
       },
       {
-        "label": "Detail",
-        "value": "Turquoise enamel beads"
-      },
-      {
-        "label": "Sizes",
-        "value": "14 cm (5.5\") to 23 cm (9.1\") — select at checkout"
-      },
-      {
-        "label": "Extension",
-        "value": "+5 cm (2\") adjustable extension chain"
-      },
-      {
-        "label": "Closure",
-        "value": "Lobster clasp"
+        "label": "Occasion",
+        "value": "Communion, confirmation, baptism, everyday"
       },
       {
         "label": "Care",
-        "value": "Wipe gently with a soft cloth. Store in an airtight container."
+        "value": "Wipe gently with soft cloth. Store in an airtight container."
       },
       {
         "label": "Shipping",
@@ -7836,16 +7921,15 @@
     "featured": false,
     "active": true,
     "images": [
-      "/images/products/layered-turquoise-bracelet-3.webp",
-      "/images/products/layered-turquoise-bracelet-2.webp",
-      "/images/products/layered-turquoise-bracelet-5.webp",
-      "/images/products/layered-turquoise-bracelet-4.webp",
-      "/images/products/layered-turquoise-bracelet-1.webp"
+      "/images/products/55b58355-c2a2-4232-b564-abdc4b678558-copy.png"
+    ],
+    "variants": [
+      "Gold Tone",
+      "Silver Tone"
     ],
     "variantGroups": [
       {
         "label": "Size",
-        "type": "options",
         "options": [
           "14 CM (5.5\")",
           "15 CM (5.9\")",
@@ -7860,113 +7944,90 @@
         ]
       }
     ],
-    "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/f35387e600366ebad4bee78cda9e9846/downloads/default.mp4",
-    "altText": "Layered turquoise bead bracelet in high-quality stainless steel, dainty double-strand design for everyday wear",
-    "dateAdded": "2026-06-14T09:13:05-04:00"
+    "altText": "Gold and silver stainless steel pearl rosary bracelet with cross charm, confirmation and baptism gift",
+    "dateAdded": "2026-08-23T09:00:00-04:00",
+    "giftTags": [
+      "confirmation"
+    ],
+    "gallery": [
+      "/images/products/55b58355-c2a2-4232-b564-abdc4b678558-copy.png",
+      "/images/products/d0ad017d-2c15-40e1-814f-674f3e4b171b.png",
+      "/images/products/IMG_3025-2.jpg",
+      "/images/products/c032cdd4-269d-4a51-b47e-abed6784093d.png",
+      "/images/products/e9c87cec-d284-49a5-8a32-4889a0973618.png"
+    ],
+    "variantHeroes": {
+      "Gold Tone": "/images/products/55b58355-c2a2-4232-b564-abdc4b678558-copy.png",
+      "Silver Tone": "/images/products/d0ad017d-2c15-40e1-814f-674f3e4b171b.png"
+    },
+    "variantVideos": {
+      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/1e70a9c5cd10b877a6ce1f4f32992706/downloads/default.mp4",
+      "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/1e70a9c5cd10b877a6ce1f4f32992706/downloads/default.mp4"
+    },
+    "sizeGuideImage": "/images/products/e9c87cec-d284-49a5-8a32-4889a0973618.png"
   },
   {
-    "id": "birth-flower-charm-bracelet",
-    "name": "Birth Flower Charm Bracelet",
-    "price": 28,
+    "id": "script-initial-bracelet",
+    "name": "Script Initial Bracelet",
+    "price": 24,
     "currency": "EUR",
     "category": "Bracelets",
-    "description": "Your birth flower, always with you. A dainty bracelet featuring a delicate flower charm that matches your birth month — handcrafted in tarnish-resistant stainless steel, available in gold or silver.",
-    "fullDescription": "Choose your birth month and receive a bracelet with its corresponding flower charm — from January's Carnation to December's Holly. Each charm is beautifully detailed, sitting on a dainty chain that rests close to the wrist.\n\nPersonalised, wearable, and completely tarnish-resistant. Made from high-quality stainless steel so it can be worn every day — through swimming, showering, and everything in between. A thoughtful gift or a quiet reminder of who you are.\n\nComes with a 5 cm (2\") extender for a perfect fit across all wrist sizes.",
+    "description": "Your name, on your wrist. This personalised gold bracelet features a custom cursive letter charm — a meaningful, minimalist piece handcrafted from tarnish-resistant stainless steel.",
+    "fullDescription": "A fine gold chain holds a single script initial in a flowing cursive font — personal without being loud, elegant without trying too hard. Choose your letter at checkout and wear it as your signature piece.\n\nHandcrafted in gold stainless steel. Completely tarnish-resistant and hypoallergenic. A perfect gift for birthdays, anniversaries, or anyone who deserves something made just for them.",
     "specs": [
       {
         "label": "Material",
-        "value": "high-quality stainless steel (tarnish-resistant)"
+        "value": "Gold stainless steel (tarnish-resistant & hypoallergenic)"
       },
       {
-        "label": "Finishes",
-        "value": "Gold Tone or Silver Tone"
+        "label": "Style",
+        "value": "Script initial charm bracelet"
       },
       {
         "label": "Charm",
-        "value": "Birth flower — 12 months, 12 flowers"
+        "value": "Your chosen letter — personalise at checkout"
       },
       {
-        "label": "Length",
-        "value": "14–23 cm (5.5\"–9.1\") + 5 cm (2\") extender"
-      },
-      {
-        "label": "Fit",
-        "value": "Adjustable — fits most wrist sizes, extender included"
+        "label": "Care",
+        "value": "Avoid perfumes, lotions. Wipe with soft cloth."
       },
       {
         "label": "Shipping",
         "value": "Dispatches within 1–2 business days"
       }
     ],
-    "images": [
-      "/images/products/birth-flower-charm-bracelet/e0e3896f-5197-4d94-974f-7b14ee305954.webp"
-    ],
-    "video": "/images/products/birth-flower-charm-bracelet/0618.mp4",
     "featured": false,
-    "variants": [
-      "Gold Tone",
-      "Silver Tone"
+    "active": true,
+    "images": [
+      "https://i.etsystatic.com/55122258/r/il/f86d76/8032963030/il_fullxfull.8032963030_9p7i.jpg",
+      "https://i.etsystatic.com/55122258/r/il/0b755c/8032935374/il_fullxfull.8032935374_lxvy.jpg",
+      "https://i.etsystatic.com/55122258/r/il/1c3987/8032906070/il_fullxfull.8032906070_bsrt.jpg",
+      "https://i.etsystatic.com/55122258/r/il/cd8904/8032758132/il_fullxfull.8032758132_ru5f.jpg",
+      "https://i.etsystatic.com/55122258/r/il/0cfcf9/8032913296/il_fullxfull.8032913296_1lye.jpg",
+      "https://i.etsystatic.com/55122258/r/il/cc31e8/8080835881/il_fullxfull.8080835881_ogp8.jpg",
+      "https://i.etsystatic.com/55122258/r/il/4d102e/8032907036/il_fullxfull.8032907036_pnqd.jpg",
+      "https://i.etsystatic.com/55122258/r/il/b3a795/7943677304/il_fullxfull.7943677304_jmkv.jpg"
     ],
     "variantGroups": [
       {
         "label": "Size",
-        "type": "options",
         "options": [
-          "14 cm (5.5\")",
-          "15 cm (5.9\")",
-          "16 cm (6.3\")",
-          "17 cm (6.7\")",
-          "18 cm (7.1\")",
-          "19 cm (7.5\")",
-          "20 cm (7.9\")",
-          "21 cm (8.3\")",
-          "22 cm (8.7\")",
-          "23 cm (9.1\")"
-        ]
-      },
-      {
-        "label": "Birth Month",
-        "type": "options",
-        "options": [
-          "January — Carnation",
-          "February — Violet",
-          "March — Daffodil",
-          "April — Daisy",
-          "May — Lily of the Valley",
-          "June — Rose",
-          "July — Water Lily",
-          "August — Poppy",
-          "September — Aster",
-          "October — Marigold",
-          "November — Chrysanthemum",
-          "December — Holly"
+          "14 CM (5.5\")",
+          "15 CM (5.9\")",
+          "16 CM (6.3\")",
+          "17 CM (6.7\")",
+          "18 CM (7.1\")",
+          "19 CM (7.5\")",
+          "20 CM (7.9\")",
+          "21 CM (8.3\")",
+          "22 CM (8.7\")",
+          "23 CM (9.1\")"
         ]
       }
     ],
-    "active": true,
-    "infographicImages": [
-      "/images/products/birth-flower-charm-bracelet/035ca701-d84a-49fd-8b8d-196dd1903eb0.webp",
-      "/images/products/birth-flower-charm-bracelet/f6314926-4454-4b6d-947b-0b5470742a2e.webp"
-    ],
-    "altText": "Delicate gold tone stainless steel birth flower charm bracelet for everyday wear and special occasions",
-    "gallery": [
-      "/images/products/birth-flower-charm-bracelet/e0e3896f-5197-4d94-974f-7b14ee305954.webp",
-      "/images/products/birth-flower-charm-bracelet/25fe1c2f-6f88-4116-9922-23f730900978.webp",
-      "/images/products/birth-flower-charm-bracelet/92022e6a-2968-4014-a577-94b76e8bdba8.webp",
-      "/images/products/birth-flower-charm-bracelet/1f6f7c1d-1825-4cbe-93f8-4dd53e61cd63.webp",
-      "/images/products/birth-flower-charm-bracelet/22f3e739-d337-4777-a775-58d9ad12ee1c.webp",
-      "/images/products/birth-flower-charm-bracelet/035ca701-d84a-49fd-8b8d-196dd1903eb0.webp",
-      "/images/products/birth-flower-charm-bracelet/f6314926-4454-4b6d-947b-0b5470742a2e.webp",
-      "/images/products/birth-flower-charm-bracelet/55110011-2bba-4572-8dcb-5f9d06f99c32.webp",
-      "/images/products/birth-flower-charm-bracelet/0acc7259-5314-4c79-a09d-8f0f7c724ecf.webp",
-      "/images/products/birth-flower-charm-bracelet/4746a3fe-b2a1-4cef-86cc-181e6f1a189a.webp",
-      "/images/products/birth-flower-charm-bracelet/0.webp"
-    ],
-    "variantHeroes": {
-      "Gold Tone": "/images/products/birth-flower-charm-bracelet/e0e3896f-5197-4d94-974f-7b14ee305954.webp",
-      "Silver Tone": "/images/products/birth-flower-charm-bracelet/4746a3fe-b2a1-4cef-86cc-181e6f1a189a.webp"
-    },
-    "dateAdded": "2026-06-18T17:14:08-04:00",
+    "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/5165e2eacd199a97c3d9ef43e60f92a0/downloads/default.mp4",
+    "altText": "Gold stainless steel personalized initial bracelet with dainty cursive letter charm, handcrafted and tarnish-resistant",
+    "dateAdded": "2026-06-12T15:00:27-04:00",
     "giftTags": [
       "personalized"
     ]
@@ -8326,26 +8387,53 @@
     ]
   },
   {
-    "id": "pink-cross-charm-bracelet",
-    "name": "Pink Cross Charm Bracelet",
+    "id": "layered-pearl-bracelet",
+    "name": "Layered Pearl Bracelet",
     "price": 24,
     "currency": "EUR",
     "category": "Bracelets",
-    "description": "A soft pink enamel cross charm on a delicate gold mirror-link chain — understated faith jewelry you can wear every day without taking off. Made from high-quality stainless steel, it's fully waterproof and tarnish-free. Fastens with a lobster clasp and includes a 5 cm (2\") extension chain so you can adjust the fit. Available from 14 to 23 cm (9.1\").",
-    "variants": [
-      "14 CM (5.5\")",
-      "15 CM (5.9\")",
-      "16 CM (6.3\")",
-      "17 CM (6.7\")",
-      "18 CM (7.1\")",
-      "19 CM (7.5\")",
-      "20 CM (7.9\")",
-      "21 CM (8.3\")",
-      "22 CM (8.7\")",
-      "23 CM (9.1\")"
+    "description": "Your everyday pearl, on your wrist. This handcrafted freshwater pearl bracelet layers beautifully — waterproof, tarnish-resistant stainless steel in your choice of gold or silver, sized precisely to your wrist.",
+    "fullDescription": "Each pearl is individually placed on a dainty stainless steel chain, creating a delicate layered effect that dresses up a casual look or complements a formal one. Choose your exact size from 14 to 23 cm (9.1\") at checkout, and select gold or silver stainless steel.\n\nWaterproof and completely tarnish-resistant — it goes from the beach to the dinner table without losing its lustre. Handcrafted with slight natural variations in pearl shape and lustre.",
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Freshwater pearls on stainless steel"
+      },
+      {
+        "label": "Colours",
+        "value": "Gold or Silver stainless"
+      },
+      {
+        "label": "Sizes",
+        "value": "14 cm (5.5\") to 23 cm (9.1\") — select at checkout"
+      },
+      {
+        "label": "Style",
+        "value": "Layered pearl chain bracelet"
+      },
+      {
+        "label": "Care",
+        "value": "Wipe gently with a soft cloth. Store in an airtight container."
+      },
+      {
+        "label": "Shipping",
+        "value": "Dispatches within 1–2 business days"
+      }
+    ],
+    "featured": false,
+    "active": true,
+    "images": [
+      "https://i.etsystatic.com/55122258/r/il/dc4e2f/8165749301/il_fullxfull.8165749301_9lkm.jpg",
+      "https://i.etsystatic.com/55122258/r/il/88889b/8165711891/il_fullxfull.8165711891_gbn3.jpg",
+      "https://i.etsystatic.com/55122258/r/il/7e86e0/8165711877/il_fullxfull.8165711877_od8j.jpg",
+      "https://i.etsystatic.com/55122258/r/il/4c2076/8117803058/il_fullxfull.8117803058_9uyn.jpg",
+      "https://i.etsystatic.com/55122258/r/il/0cb3b5/8165711879/il_fullxfull.8165711879_6ieo.jpg",
+      "https://i.etsystatic.com/55122258/r/il/b3a795/7943677304/il_fullxfull.7943677304_jmkv.jpg",
+      "https://i.etsystatic.com/55122258/r/il/06caae/8165713123/il_fullxfull.8165713123_jyep.jpg"
     ],
     "variantGroups": [
       {
+        "label": "Size",
         "options": [
           "14 CM (5.5\")",
           "15 CM (5.9\")",
@@ -8357,44 +8445,19 @@
           "21 CM (8.3\")",
           "22 CM (8.7\")",
           "23 CM (9.1\")"
-        ],
-        "label": "Size"
+        ]
+      },
+      {
+        "label": "Color",
+        "options": [
+          "Gold stainless",
+          "Silver Stainless"
+        ]
       }
     ],
-    "images": [
-      "/images/products/pink-cross-charm-bracelet/72b7106a-7423-47b8-b131-427b12d83546.webp"
-    ],
-    "gallery": [
-      "/images/products/pink-cross-charm-bracelet/72b7106a-7423-47b8-b131-427b12d83546.webp",
-      "/images/products/pink-cross-charm-bracelet/bc9e6a17-4222-4642-87a4-33d3bb1830e2.webp",
-      "/images/products/pink-cross-charm-bracelet/93141b7c-c1b3-49c9-80be-c8d93a031d37.webp",
-      "/images/products/pink-cross-charm-bracelet/c79b1023-33a0-4607-a357-ed311593fee0.webp",
-      "/images/products/pink-cross-charm-bracelet/0acc7259-5314-4c79-a09d-8f0f7c724ecf.webp",
-      "/images/products/pink-cross-charm-bracelet/55110011-2bba-4572-8dcb-5f9d06f99c32.webp"
-    ],
-    "video": "/images/products/pink-cross-charm-bracelet/0627.mp4",
-    "altText": "Dainty stainless steel bracelet with pink cross charm on delicate gold chain, everyday faith jewelry",
-    "tags": [
-      "cross charm bracelet",
-      "pink cross bracelet",
-      "gold cross bracelet",
-      "dainty cross bracelet",
-      "religious jewelry women",
-      "enamel cross bracelet",
-      "first communion gift",
-      "confirmation gift",
-      "faith bracelet",
-      "stainless steel bracelet",
-      "waterproof bracelet",
-      "adjustable bracelet",
-      "gold chain bracelet",
-      "pink enamel jewelry",
-      "gift for her"
-    ],
-    "dateAdded": "2026-06-27T12:57:57-04:00",
-    "giftTags": [
-      "confirmation"
-    ]
+    "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/081f3c4da5cc334a1c97cdd510d58524/downloads/default.mp4",
+    "altText": "Delicate layered pearl bracelet with freshwater pearls and stainless steel, perfect everyday dainty bracelet",
+    "dateAdded": "2026-06-12T15:00:27-04:00"
   },
   {
     "id": "pearl-chain-anklet",
@@ -9478,56 +9541,44 @@
     "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/ad3648bf0363b65780699bad978c532e/downloads/default.mp4"
   },
   {
-    "id": "colorful-crystal-bead-bracelet",
-    "name": "Colorful Crystal Bead Bracelet",
-    "category": "Bracelets",
+    "id": "pearl-charm-bracelet",
+    "name": "Pearl Charm Bracelet",
     "price": 24,
     "currency": "EUR",
-    "description": "A single-strand bracelet stringing colorful abacus-cut glass crystal beads along a fine gold-tone stainless steel chain — waterproof, adjustable, and just as at home on the beach as it is out for the night.",
+    "category": "Bracelets",
+    "description": "Your everyday pearl, double-stranded. This handcrafted gold bracelet features two delicate strands with freshwater-style pearl and charm accents — waterproof, tarnish-resistant stainless steel for daily wear.",
+    "fullDescription": "Two fine chains sit side by side at the wrist, each dotted with small pearl and charm accents that catch the light with every movement. Wears beautifully alone or stacked with other bracelets.\n\nHandcrafted in gold or silver stainless steel. Waterproof and completely tarnish-resistant. A thoughtful gift for birthdays, Mother's Day, or anyone who loves understated elegance.",
     "specs": [
       {
         "label": "Material",
-        "value": "Glass crystal abacus beads, stainless steel chain"
+        "value": "Gold or silver stainless steel with pearl accents"
       },
       {
-        "label": "Finish",
-        "value": "Gold-tone"
-      },
-      {
-        "label": "Closure",
-        "value": "Lobster clasp"
-      },
-      {
-        "label": "Sizes",
-        "value": "14 cm (5.5\") to 23 cm (9.1\") — select at checkout"
-      },
-      {
-        "label": "Extension",
-        "value": "+5 cm (2\") adjustable extension chain"
-      },
-      {
-        "label": "Waterproof",
-        "value": "Yes"
-      },
-      {
-        "label": "Tarnish-Resistant",
-        "value": "Yes"
+        "label": "Style",
+        "value": "Double-strand pearl charm bracelet"
       },
       {
         "label": "Care",
-        "value": "Wipe with a soft cloth after wear. Store in an airtight container."
+        "value": "Wipe gently with soft cloth. Store in an airtight container."
       },
       {
         "label": "Shipping",
         "value": "Dispatches within 1–2 business days"
       }
     ],
+    "featured": false,
+    "active": true,
     "images": [
-      "/images/products/2e6cfc7e-47d3-48df-964a-26e883c706bd.png",
-      "/images/products/8a453447-3649-4a5a-a7c0-5e4e63512060.jpeg",
-      "/images/products/1411cdd1-c3e0-4fee-9095-9462590ef2e1.png",
-      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf-copy.jpeg",
-      "/images/products/13cb1bad-4640-4867-b6b7-99c1c53be92f.png"
+      "/images/products/f1a95b9b-e3ca-4323-bd17-525d5ddcd0a6.webp",
+      "https://i.etsystatic.com/55122258/r/il/6ee4aa/8065073742/il_fullxfull.8065073742_9b79.jpg",
+      "https://i.etsystatic.com/55122258/r/il/1fd40c/8047372098/il_fullxfull.8047372098_8wcr.jpg",
+      "https://i.etsystatic.com/55122258/r/il/cd8904/8032758132/il_fullxfull.8032758132_ru5f.jpg",
+      "https://i.etsystatic.com/55122258/r/il/93ba8e/8051512336/il_fullxfull.8051512336_2di7.jpg",
+      "https://i.etsystatic.com/55122258/r/il/b14ddd/8099427053/il_fullxfull.8099427053_2ou0.jpg",
+      "https://i.etsystatic.com/55122258/r/il/b3a795/7943677304/il_fullxfull.7943677304_jmkv.jpg",
+      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.webp",
+      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.webp",
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp"
     ],
     "variantGroups": [
       {
@@ -9544,15 +9595,18 @@
           "22 CM (8.7\")",
           "23 CM (9.1\")"
         ]
+      },
+      {
+        "label": "Color",
+        "options": [
+          "Gold stainless",
+          "Silver Stainless"
+        ]
       }
     ],
-    "featured": false,
-    "active": true,
-    "altText": "Colorful crystal bead bracelet with faceted glass beads and gold-tone stainless steel chain, waterproof and adjustable",
-    "fullDescription": "A rainbow of color, one clasp away from your wrist.\n\nThis single-strand bracelet strings a delicate row of abacus-cut glass crystal beads along a fine gold-tone stainless steel chain — handcrafted so it sits light on the wrist and moves with you from a beach day to a festival night to a pool afternoon without ever coming off. Waterproof and built to last, it's the kind of colorful, trendy little detail that makes a genuinely thoughtful gift — whether you're picking it up for a summer trip of your own, a girls' getaway, or something sweet to send Mom.\n\nProduct Details\nMaterial: Glass crystal abacus beads, stainless steel chain\nFinish: Gold-tone\nClosure: Lobster clasp\nWaterproof & Sweat-Proof: Yes — safe for water, sun, and everyday wear\n\nSize Guide\nAvailable in 14 cm to 23 cm (5.5\"–9.1\")\nIncludes a 5 cm (2\") extension chain for the perfect fit\n\nHow to Order\nSelect your size from the dropdown menu\n\nCustom Sizing: Need a specific size? Message me after purchase and I'll adjust it at no extra cost.\n\nCare Instructions\nWipe gently with a soft cloth after each wear.\nStore in an airtight container when not in use.\n\nShipping: Dispatches within 1–2 business days.\n\nPlease note that as each piece is handcrafted, no two pieces are identical and slight variations may occur.",
-    "dateAdded": "2026-07-29T09:00:00-04:00",
-    "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/31cdb5b01c5e2c9a9af5a43ce925596b/downloads/default.mp4",
-    "sizeGuideImage": "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png"
+    "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/43713f58ef4eb86f6c97a68b12a8b4f6/downloads/default.mp4",
+    "altText": "Delicate gold stainless steel bracelet with pearl charms, handcrafted dainty bracelet for everyday wear",
+    "dateAdded": "2026-06-12T15:00:27-04:00"
   },
   {
     "id": "butterfly-anklet",
@@ -9698,78 +9752,76 @@
     "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/def1205ff0a5b43d0f3debd5b6f1c61b/downloads/default.mp4"
   },
   {
-    "id": "cuban-chain-bracelet",
-    "name": "Cuban Chain Bracelet",
-    "price": 20,
+    "id": "dainty-chain-bracelet",
+    "name": "Dainty Chain Bracelet",
+    "price": 14,
     "currency": "EUR",
     "category": "Bracelets",
-    "description": "The bracelet that doesn't try too hard. A Cuban curb chain in solid stainless steel, sized to sit right and built to last — no charms, no fuss, just weight and metal doing their job.",
-    "fullDescription": "The bracelet that doesn't try too hard.\n\nA Cuban curb chain in solid stainless steel, sized to sit right and built to last — no charms, no fuss, just weight and metal doing their job. Marketed for men, worn by anyone who wants a bracelet that means it.\n\nProduct Details\n\nMaterial: Stainless steel\nChain Style: Cuban curb chain\nFinish: Gold-tone or Silver-tone\nChain width: 3.5 mm\nLength: 21 cm (8.3\")\nClosure: Lobster clasp\nWaterproof & Tarnish-Resistant: Yes\n\nHow to Order\nSelect your Finish (Gold or Silver)\n\nSize Guide\n21 cm (8.3\") fits most average wrist sizes comfortably. Measure around your wrist where you'd like it to sit — this chain is a fixed length with no extender.\n\nCustom Sizing: Need a different length? Message me before ordering and I'll get you the right fit.\n\nCare Instructions\nWipe gently with a soft cloth after each wear.\nStore in an airtight container when not in use.\n\nShipping: Dispatches within 1–2 business days.\n\nThanks for looking! Feel free to message me if you have any questions.",
+    "description": "Your everyday essential. This minimal gold chain bracelet stacks and layers beautifully — waterproof, tarnish-free stainless steel that earns a permanent spot on your wrist.",
+    "fullDescription": "Clean, simple, and endlessly wearable. A single fine chain at the wrist that goes with everything and bothers no one. The kind of bracelet you put on and forget about because it just works.\n\nHandcrafted in gold stainless steel. Completely waterproof and tarnish-resistant. Buy a second one — they're made to be stacked.",
     "specs": [
       {
         "label": "Material",
-        "value": "Stainless steel"
+        "value": "Gold stainless steel (waterproof & tarnish-resistant)"
       },
       {
-        "label": "Chain Style",
-        "value": "Cuban curb chain"
+        "label": "Style",
+        "value": "Dainty minimal chain bracelet"
       },
       {
         "label": "Finish",
-        "value": "Gold-tone or Silver-tone"
+        "value": "Gold tone"
       },
       {
-        "label": "Chain width",
-        "value": "3.5 mm"
+        "label": "Care",
+        "value": "Wipe gently with soft cloth. Store in an airtight container."
       },
       {
-        "label": "Length",
-        "value": "21 cm (8.3\")"
-      },
-      {
-        "label": "Closure",
-        "value": "Lobster clasp"
-      },
-      {
-        "label": "Waterproof & Tarnish-Resistant",
-        "value": "Yes"
+        "label": "Shipping",
+        "value": "Dispatches within 1–2 business days"
       }
     ],
     "featured": false,
     "active": true,
+    "images": [
+      "https://i.etsystatic.com/55122258/r/il/3f111f/8086665923/il_fullxfull.8086665923_qdr3.jpg",
+      "https://i.etsystatic.com/55122258/r/il/3110c4/8038864386/il_fullxfull.8038864386_s536.jpg",
+      "https://i.etsystatic.com/55122258/r/il/3c01a2/8038715412/il_fullxfull.8038715412_s531.jpg",
+      "https://i.etsystatic.com/55122258/r/il/fea173/8038720530/il_fullxfull.8038720530_nqco.jpg",
+      "https://i.etsystatic.com/55122258/r/il/50868c/8086627797/il_fullxfull.8086627797_6yue.jpg",
+      "https://i.etsystatic.com/55122258/r/il/cd8904/8032758132/il_fullxfull.8032758132_ru5f.jpg",
+      "https://i.etsystatic.com/55122258/r/il/b3a795/7943677304/il_fullxfull.7943677304_jmkv.jpg",
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp",
+      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.webp",
+      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.webp"
+    ],
     "variantGroups": [
       {
-        "label": "Finish",
+        "label": "Size",
         "options": [
-          "Gold Tone",
-          "Silver Tone"
+          "14 CM (5.5\")",
+          "15 CM (5.9\")",
+          "16 CM (6.3\")",
+          "17 CM (6.7\")",
+          "18 CM (7.1\")",
+          "19 CM (7.5\")",
+          "20 CM (7.9\")",
+          "21 CM (8.3\")",
+          "22 CM (8.7\")",
+          "23 CM (9.1\")"
+        ]
+      },
+      {
+        "label": "Choose Your Stack",
+        "options": [
+          "Single Bracelet",
+          "Double Stack (2)",
+          "Triple Stack (3)"
         ]
       }
     ],
-    "images": [
-      "/images/products/e29bba22-0986-434e-bbc8-8d795b25e722.png"
-    ],
-    "altText": "Cuban curb chain bracelet for men in stainless steel, gold and silver tone, waterproof and tarnish-resistant",
-    "dateAdded": "2026-08-06T14:00:00-04:00",
-    "variants": [
-      "Gold Tone",
-      "Silver Tone"
-    ],
-    "gallery": [
-      "/images/products/e29bba22-0986-434e-bbc8-8d795b25e722.png",
-      "/images/products/cfe167e0-3659-471a-abec-eb409d814240.png",
-      "/images/products/176df181-a4e5-465d-9eb3-03818a3ba0b2.png",
-      "/images/products/IMG_1175-3.jpeg"
-    ],
-    "variantHeroes": {
-      "Gold Tone": "/images/products/e29bba22-0986-434e-bbc8-8d795b25e722.png",
-      "Silver Tone": "/images/products/f6403cb5-62e3-4c78-8a0d-35e3f27a77b2.png"
-    },
-    "variantVideos": {
-      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/fdb71f380488697d1572ac17787b247b/downloads/default.mp4",
-      "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/fdb71f380488697d1572ac17787b247b/downloads/default.mp4"
-    },
-    "sizeGuideImage": "/images/products/bcd4e901-9b25-4163-99dd-831b8b651e69.jpeg"
+    "altText": "Dainty gold chain bracelet in waterproof stainless steel, perfect for everyday layering and stacking",
+    "dateAdded": "2026-06-12T15:00:27-04:00"
   },
   {
     "id": "curb-chain-cross-necklace",
@@ -10424,103 +10476,29 @@
     ]
   },
   {
-    "id": "plus-size-bracelet",
-    "name": "Plus Size Bracelet",
-    "price": 28,
+    "id": "birthstone-bracelet",
+    "name": "Birthstone Bracelet",
+    "price": 26,
     "currency": "EUR",
     "category": "Bracelets",
-    "description": "A double-strand faux pearl and gold cable chain bracelet, handmade in six fitted sizes so it actually closes comfortably on a fuller wrist — not just stretched to fit.",
-    "fullDescription": "Two strands. One piece. Finally, a fit that's actually yours.\n\nThis handmade bracelet pairs a faux pearl chain with a delicate gold cable chain, worn together as one piece so the layered look is already done for you. We built this one for wrists that never quite matched the standard size chart — six fitted sizes with room to adjust, so you're not choosing between too tight and three inches of extra chain swinging around.\n\nWear it to brunch, to the beach, to a wedding, or on a Tuesday when you just want your wrist to feel finished. The pearls keep it classic. The gold keeps it light. Together they just work, at any size.\n\nMaterials: Stainless steel with faux pearl\nFinish: Gold tone or Silver tone\nWaterproof: Yes\nTarnish-Resistant: Yes\nHypoallergenic: Yes\nClosure: Lobster clasp with adjustable extender\n\nSize Guide\nPlus 1 — 18cm (7.1\") base, +4cm (1.6\") extender. Fits 18–22cm (7.1\"–8.7\").\nPlus 2 — 20cm (7.9\") base, +4cm (1.6\") extender. Fits 20–24cm (7.9\"–9.4\").\nPlus 3 — 22cm (8.7\") base, +4cm (1.6\") extender. Fits 22–26cm (8.7\"–10.2\").\nPlus 4 — 24cm (9.4\") base, +4cm (1.6\") extender. Fits 24–28cm (9.4\"–11.0\").\nPlus 5 — 26cm (10.2\") base, +4cm (1.6\") extender. Fits 26–30cm (10.2\"–11.8\").\nPlus 6 — 28cm (11.0\") base, +4cm (1.6\") extender. Fits 28–32cm (11.0\"–12.6\").\nChain thickness: 1.5 mm\n\nFit Note: Not sure which to pick? Wrap a measuring tape or piece of string snugly around your wrist, then match that number to the ranges above.\n\nCare Instructions\nWipe gently with a soft cloth after each wear.\nStore in an airtight container when not in use.\n\nA beautiful gift for anyone who appreciates jewelry that looks expensive but feels effortless — and actually closes comfortably on the first try.\n\nPlease note that as each piece is handcrafted, no two pieces are identical and slight variations may occur.",
+    "description": "Your personal gemstone, on your wrist. This custom gold bracelet features a dainty birthstone charm in your chosen month — handcrafted from tarnish-resistant stainless steel in your exact size.",
+    "fullDescription": "Select your birthstone month and wrist size at checkout — from 14 cm (5.5\") to 22 cm (8.7\") — and receive a bracelet that's been made specifically for you. A dainty gold chain with a delicate gemstone charm that holds personal meaning.\n\nHandcrafted in gold stainless steel. Tarnish-resistant and hypoallergenic. A beautiful gift for birthdays, Mother's Day, or any occasion that deserves something personal.",
     "specs": [
       {
         "label": "Material",
-        "value": "Stainless steel with faux pearl"
+        "value": "Gold stainless steel (tarnish-resistant & hypoallergenic)"
       },
       {
-        "label": "Finish",
-        "value": "Gold tone or Silver tone"
+        "label": "Birthstone",
+        "value": "All 12 months — select at checkout"
       },
       {
-        "label": "Sizing",
-        "value": "6 fitted plus sizes — see size guide"
-      },
-      {
-        "label": "Waterproof",
-        "value": "Yes"
-      },
-      {
-        "label": "Tarnish-Resistant",
-        "value": "Yes"
-      },
-      {
-        "label": "Hypoallergenic",
-        "value": "Yes"
-      }
-    ],
-    "featured": false,
-    "active": true,
-    "variants": [
-      "Gold Tone",
-      "Silver Tone"
-    ],
-    "variantHeroes": {
-      "Gold Tone": "/images/products/e11ec17f-4db6-4b28-b3a3-c75449db275c-copy.png",
-      "Silver Tone": "/images/products/a19f572e-fe47-4695-a3b4-8450be30f245.png"
-    },
-    "gallery": [
-      "/images/products/e11ec17f-4db6-4b28-b3a3-c75449db275c-copy.png",
-      "/images/products/a19f572e-fe47-4695-a3b4-8450be30f245.png",
-      "/images/products/be902336-752d-4489-9dd0-6b3f5c845cf9.png",
-      "/images/products/92821837-f642-4334-b46b-0c6c7eaa3283.png",
-      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.jpg",
-      "/images/products/a5f67786-25ef-4361-9a4d-9ff3b2bd7a1e.png"
-    ],
-    "images": [
-      "/images/products/e11ec17f-4db6-4b28-b3a3-c75449db275c-copy.png"
-    ],
-    "variantGroups": [
-      {
-        "label": "Size",
-        "type": "options",
-        "options": [
-          "Plus 1",
-          "Plus 2",
-          "Plus 3",
-          "Plus 4",
-          "Plus 5",
-          "Plus 6"
-        ]
-      }
-    ],
-    "altText": "Plus size gold and silver stainless steel faux pearl bracelet, adjustable double-strand wrist chain for curvy women, six fitted sizes",
-    "dateAdded": "2026-08-22T16:09:31.591Z",
-    "plusSize": true,
-    "sizeGuideImage": "/images/products/a5f67786-25ef-4361-9a4d-9ff3b2bd7a1e.png"
-  },
-  {
-    "id": "pearl-rosary-cross-bracelet",
-    "name": "Pearl Rosary Cross Bracelet",
-    "price": 28,
-    "currency": "EUR",
-    "category": "Bracelets",
-    "description": "A delicate pearl rosary bracelet finished with a pearl-detailed cross charm — a meaningful communion, confirmation, or baptism gift in gold or silver stainless steel.",
-    "fullDescription": "There's something about a strand of pearls meeting a cross charm on the wrist that just works. I string a delicate row of pearl beads into one dainty piece, finished with a cross pendant that carries its own tiny pearls to match. Handcrafted in gold-tone or silver-tone stainless steel, it moves effortlessly between a first communion, a confirmation, and everyday wear.\n\nMaterials: Stainless steel (gold-tone or silver-tone) with pearl bead accents\nClosure: Lobster clasp with a 5 cm (2\") extension chain\nWaterproof & Tarnish-Resistant: Yes — safe for water, sun, and everyday wear\n\nSize Guide\nAvailable in 14–23 cm (5.5\"–9\"), plus a 5 cm (2\") extension chain for the perfect fit.\n\nFit Note: Measure your wrist and compare to the sizes above. Need a custom measurement? Message me after ordering and I'll adjust it at no extra cost.\n\nCare Instructions\nWipe gently with a soft cloth after each wear.\nStore in an airtight container when not in use.\n\nPlease note that as each piece is handcrafted, no two pieces are identical and slight variations may occur.",
-    "specs": [
-      {
-        "label": "Material",
-        "value": "Stainless steel with pearl bead accents"
-      },
-      {
-        "label": "Style",
-        "value": "Beaded rosary bracelet with pearl cross charm"
-      },
-      {
-        "label": "Occasion",
-        "value": "Communion, confirmation, baptism, everyday"
+        "label": "Sizes",
+        "value": "14 cm (5.5\") to 22 cm (8.7\") — select at checkout"
       },
       {
         "label": "Care",
-        "value": "Wipe gently with soft cloth. Store in an airtight container."
+        "value": "Avoid water, perfumes, lotions. Wipe with soft cloth."
       },
       {
         "label": "Shipping",
@@ -10530,13 +10508,37 @@
     "featured": false,
     "active": true,
     "images": [
-      "/images/products/55b58355-c2a2-4232-b564-abdc4b678558-copy.png"
-    ],
-    "variants": [
-      "Gold Tone",
-      "Silver Tone"
+      "https://i.etsystatic.com/55122258/r/il/32bcb7/7995316377/il_fullxfull.7995316377_7kk0.jpg",
+      "https://i.etsystatic.com/55122258/r/il/32f1b2/7947544000/il_fullxfull.7947544000_6fva.jpg",
+      "https://i.etsystatic.com/55122258/r/il/96692e/7883966909/il_fullxfull.7883966909_m1l9.jpg",
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp",
+      "https://i.etsystatic.com/55122258/r/il/ebe5bc/7947619574/il_fullxfull.7947619574_olgy.jpg",
+      "https://i.etsystatic.com/55122258/r/il/e998ff/7756532898/il_fullxfull.7756532898_248j.jpg",
+      "https://i.etsystatic.com/55122258/r/il/671d65/7883984639/il_fullxfull.7883984639_iztj.jpg",
+      "https://i.etsystatic.com/55122258/r/il/9e92eb/7947542360/il_fullxfull.7947542360_cajk.jpg",
+      "https://i.etsystatic.com/55122258/r/il/26594f/7947542946/il_fullxfull.7947542946_byee.jpg",
+      "https://i.etsystatic.com/55122258/r/il/b78a5c/7947544278/il_fullxfull.7947544278_m5rk.jpg",
+      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.webp",
+      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.webp"
     ],
     "variantGroups": [
+      {
+        "label": "Birthstone",
+        "options": [
+          "January",
+          "February",
+          "March",
+          "April",
+          "May",
+          "June",
+          "July",
+          "August",
+          "September",
+          "October",
+          "November",
+          "December"
+        ]
+      },
       {
         "label": "Size",
         "options": [
@@ -10553,27 +10555,85 @@
         ]
       }
     ],
-    "altText": "Gold and silver stainless steel pearl rosary bracelet with cross charm, confirmation and baptism gift",
-    "dateAdded": "2026-08-23T09:00:00-04:00",
+    "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/55b54d928f426a837667fbc731977fa7/downloads/default.mp4",
+    "altText": "Gold stainless steel dainty bracelet with personalized birthstone charm, handcrafted hypoallergenic jewelry Portugal",
+    "dateAdded": "2026-06-12T15:00:27-04:00",
     "giftTags": [
-      "confirmation"
+      "personalized"
+    ]
+  },
+  {
+    "id": "layered-turquoise-bead-bracelet",
+    "name": "Layered Turquoise Bead Bracelet",
+    "price": 24,
+    "currency": "EUR",
+    "category": "Bracelets",
+    "description": "There's something about a pop of turquoise on the wrist that just works — this double-strand bracelet pairs a delicate row of turquoise enamel beads with a fine cable chain, both worn together as one connected piece. Handcrafted in gold stainless steel.",
+    "fullDescription": "Each strand is crafted as one connected piece — a fine cable chain running alongside a longer-link chain set with small vivid turquoise enamel beads at even intervals. The two strands sit together naturally on the wrist for an effortless layered look, no stacking required.\n\nWaterproof and completely tarnish-resistant — wear it to the beach, the pool, or every day. Handcrafted with slight natural variations possible.",
+    "specs": [
+      {
+        "label": "Material",
+        "value": "High-Quality Stainless Steel"
+      },
+      {
+        "label": "Finish",
+        "value": "Gold Tone"
+      },
+      {
+        "label": "Detail",
+        "value": "Turquoise enamel beads"
+      },
+      {
+        "label": "Sizes",
+        "value": "14 cm (5.5\") to 23 cm (9.1\") — select at checkout"
+      },
+      {
+        "label": "Extension",
+        "value": "+5 cm (2\") adjustable extension chain"
+      },
+      {
+        "label": "Closure",
+        "value": "Lobster clasp"
+      },
+      {
+        "label": "Care",
+        "value": "Wipe gently with a soft cloth. Store in an airtight container."
+      },
+      {
+        "label": "Shipping",
+        "value": "Dispatches within 1–2 business days"
+      }
     ],
-    "gallery": [
-      "/images/products/55b58355-c2a2-4232-b564-abdc4b678558-copy.png",
-      "/images/products/d0ad017d-2c15-40e1-814f-674f3e4b171b.png",
-      "/images/products/IMG_3025-2.jpg",
-      "/images/products/c032cdd4-269d-4a51-b47e-abed6784093d.png",
-      "/images/products/e9c87cec-d284-49a5-8a32-4889a0973618.png"
+    "featured": false,
+    "active": true,
+    "images": [
+      "/images/products/layered-turquoise-bracelet-3.webp",
+      "/images/products/layered-turquoise-bracelet-2.webp",
+      "/images/products/layered-turquoise-bracelet-5.webp",
+      "/images/products/layered-turquoise-bracelet-4.webp",
+      "/images/products/layered-turquoise-bracelet-1.webp"
     ],
-    "variantHeroes": {
-      "Gold Tone": "/images/products/55b58355-c2a2-4232-b564-abdc4b678558-copy.png",
-      "Silver Tone": "/images/products/d0ad017d-2c15-40e1-814f-674f3e4b171b.png"
-    },
-    "variantVideos": {
-      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/1e70a9c5cd10b877a6ce1f4f32992706/downloads/default.mp4",
-      "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/1e70a9c5cd10b877a6ce1f4f32992706/downloads/default.mp4"
-    },
-    "sizeGuideImage": "/images/products/e9c87cec-d284-49a5-8a32-4889a0973618.png"
+    "variantGroups": [
+      {
+        "label": "Size",
+        "type": "options",
+        "options": [
+          "14 CM (5.5\")",
+          "15 CM (5.9\")",
+          "16 CM (6.3\")",
+          "17 CM (6.7\")",
+          "18 CM (7.1\")",
+          "19 CM (7.5\")",
+          "20 CM (7.9\")",
+          "21 CM (8.3\")",
+          "22 CM (8.7\")",
+          "23 CM (9.1\")"
+        ]
+      }
+    ],
+    "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/f35387e600366ebad4bee78cda9e9846/downloads/default.mp4",
+    "altText": "Layered turquoise bead bracelet in high-quality stainless steel, dainty double-strand design for everyday wear",
+    "dateAdded": "2026-06-14T09:13:05-04:00"
   },
   {
     "id": "mirror-link-hand-chain",
@@ -10703,172 +10763,149 @@
     "sizeGuideImage": "/images/products/be89b88a-4550-4ad4-ba5b-3275a6414c91.png"
   },
   {
-    "id": "coin-disc-bracelet",
-    "name": "Coin Disc Bracelet",
+    "id": "pink-cross-charm-bracelet",
+    "name": "Pink Cross Charm Bracelet",
+    "price": 24,
+    "currency": "EUR",
+    "category": "Bracelets",
+    "description": "A soft pink enamel cross charm on a delicate gold mirror-link chain — understated faith jewelry you can wear every day without taking off. Made from high-quality stainless steel, it's fully waterproof and tarnish-free. Fastens with a lobster clasp and includes a 5 cm (2\") extension chain so you can adjust the fit. Available from 14 to 23 cm (9.1\").",
+    "variants": [
+      "14 CM (5.5\")",
+      "15 CM (5.9\")",
+      "16 CM (6.3\")",
+      "17 CM (6.7\")",
+      "18 CM (7.1\")",
+      "19 CM (7.5\")",
+      "20 CM (7.9\")",
+      "21 CM (8.3\")",
+      "22 CM (8.7\")",
+      "23 CM (9.1\")"
+    ],
+    "variantGroups": [
+      {
+        "options": [
+          "14 CM (5.5\")",
+          "15 CM (5.9\")",
+          "16 CM (6.3\")",
+          "17 CM (6.7\")",
+          "18 CM (7.1\")",
+          "19 CM (7.5\")",
+          "20 CM (7.9\")",
+          "21 CM (8.3\")",
+          "22 CM (8.7\")",
+          "23 CM (9.1\")"
+        ],
+        "label": "Size"
+      }
+    ],
+    "images": [
+      "/images/products/pink-cross-charm-bracelet/72b7106a-7423-47b8-b131-427b12d83546.webp"
+    ],
+    "gallery": [
+      "/images/products/pink-cross-charm-bracelet/72b7106a-7423-47b8-b131-427b12d83546.webp",
+      "/images/products/pink-cross-charm-bracelet/bc9e6a17-4222-4642-87a4-33d3bb1830e2.webp",
+      "/images/products/pink-cross-charm-bracelet/93141b7c-c1b3-49c9-80be-c8d93a031d37.webp",
+      "/images/products/pink-cross-charm-bracelet/c79b1023-33a0-4607-a357-ed311593fee0.webp",
+      "/images/products/pink-cross-charm-bracelet/0acc7259-5314-4c79-a09d-8f0f7c724ecf.webp",
+      "/images/products/pink-cross-charm-bracelet/55110011-2bba-4572-8dcb-5f9d06f99c32.webp"
+    ],
+    "video": "/images/products/pink-cross-charm-bracelet/0627.mp4",
+    "altText": "Dainty stainless steel bracelet with pink cross charm on delicate gold chain, everyday faith jewelry",
+    "tags": [
+      "cross charm bracelet",
+      "pink cross bracelet",
+      "gold cross bracelet",
+      "dainty cross bracelet",
+      "religious jewelry women",
+      "enamel cross bracelet",
+      "first communion gift",
+      "confirmation gift",
+      "faith bracelet",
+      "stainless steel bracelet",
+      "waterproof bracelet",
+      "adjustable bracelet",
+      "gold chain bracelet",
+      "pink enamel jewelry",
+      "gift for her"
+    ],
+    "dateAdded": "2026-06-27T12:57:57-04:00",
+    "giftTags": [
+      "confirmation"
+    ]
+  },
+  {
+    "id": "cuban-chain-bracelet",
+    "name": "Cuban Chain Bracelet",
     "price": 20,
     "currency": "EUR",
     "category": "Bracelets",
-    "description": "A dainty gold disc chain bracelet — flat coin-shaped links in lightweight, waterproof, tarnish-resistant stainless steel.",
-    "fullDescription": "A dainty gold disc chain bracelet made for everyday wear — lightweight, minimalist, and effortless to layer or wear alone. Each flat gold disc links into a delicate chain that catches the light beautifully on its own.\n\nMaterials: Gold stainless steel\nClosure: Lobster clasp with 3 adjustable loop options\nWaterproof & Tarnish-Resistant: Yes — hypoallergenic, safe for water, sun, and everyday wear\n\nSize Guide\nAvailable in 15.5 cm, 16.5 cm, or 18 cm — choose your size at checkout.\n\nCare Instructions\nWipe gently with a soft cloth after each wear.\nStore in an airtight container when not in use.\n\nPlease note that as each piece is handcrafted, no two pieces are identical and slight variations may occur.",
+    "description": "The bracelet that doesn't try too hard. A Cuban curb chain in solid stainless steel, sized to sit right and built to last — no charms, no fuss, just weight and metal doing their job.",
+    "fullDescription": "The bracelet that doesn't try too hard.\n\nA Cuban curb chain in solid stainless steel, sized to sit right and built to last — no charms, no fuss, just weight and metal doing their job. Marketed for men, worn by anyone who wants a bracelet that means it.\n\nProduct Details\n\nMaterial: Stainless steel\nChain Style: Cuban curb chain\nFinish: Gold-tone or Silver-tone\nChain width: 3.5 mm\nLength: 21 cm (8.3\")\nClosure: Lobster clasp\nWaterproof & Tarnish-Resistant: Yes\n\nHow to Order\nSelect your Finish (Gold or Silver)\n\nSize Guide\n21 cm (8.3\") fits most average wrist sizes comfortably. Measure around your wrist where you'd like it to sit — this chain is a fixed length with no extender.\n\nCustom Sizing: Need a different length? Message me before ordering and I'll get you the right fit.\n\nCare Instructions\nWipe gently with a soft cloth after each wear.\nStore in an airtight container when not in use.\n\nShipping: Dispatches within 1–2 business days.\n\nThanks for looking! Feel free to message me if you have any questions.",
     "specs": [
       {
         "label": "Material",
-        "value": "Gold Stainless Steel"
+        "value": "Stainless steel"
       },
       {
-        "label": "Style",
-        "value": "Dainty coin disc-link chain"
-      },
-      {
-        "label": "Bracelet Length",
-        "value": "15.5 cm / 16.5 cm / 18 cm (3 adjustable sizes)"
-      },
-      {
-        "label": "Clasp",
-        "value": "Secure lobster clasp closure"
-      },
-      {
-        "label": "Waterproof",
-        "value": "Yes"
-      },
-      {
-        "label": "Tarnish-Resistant",
-        "value": "Yes"
-      },
-      {
-        "label": "Care",
-        "value": "Wipe gently with a soft cloth. Store in an airtight container."
-      },
-      {
-        "label": "Shipping",
-        "value": "Dispatches within 1–2 business days"
-      }
-    ],
-    "images": [
-      "/images/products/b9cf31fb-b638-4305-969d-2e678356ee1d.png"
-    ],
-    "variantGroups": [
-      {
-        "label": "Size",
-        "options": [
-          "15.5 CM (6.1\")",
-          "16.5 CM (6.5\")",
-          "18 CM (7.1\")"
-        ]
-      }
-    ],
-    "featured": false,
-    "active": true,
-    "altText": "Gold stainless steel dainty coin disc-link chain bracelet, minimalist waterproof jewelry",
-    "dateAdded": "2026-08-28T09:00:00-04:00",
-    "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/aaa9150ae2d05427a9e23c665f6177ee/downloads/default.mp4",
-    "gallery": [
-      "/images/products/b9cf31fb-b638-4305-969d-2e678356ee1d.png",
-      "/images/products/58de484b-2b7c-4b20-92f5-00f31828e47f.png",
-      "/images/products/6e7eed3d-c7a6-48d7-9adf-a2f9ba14279f.png",
-      "/images/products/062ae184-f8de-4a9d-a63f-5fc13bb93279.png",
-      "/images/products/0cad7396-ab9a-4ed6-8b7a-da8a7f43e99e.jpg"
-    ],
-    "sizeGuideImage": "/images/products/0cad7396-ab9a-4ed6-8b7a-da8a7f43e99e.jpg"
-  },
-  {
-    "id": "pearl-heart-initial-bracelet",
-    "name": "Pearl Heart Initial Bracelet",
-    "price": 28,
-    "currency": "EUR",
-    "category": "Bracelets",
-    "description": "Not just a bracelet — a little monogram for your wrist. A dainty pearl chain layered over a fine gold cable link chain, finished with a heart charm engraved with your initial — personalized, layered, and effortlessly yours.",
-    "fullDescription": "Not just a bracelet — a little monogram for your wrist. Handmade with a dainty pearl chain layered over a fine cable link chain and finished with a heart charm engraved with your initial, this double-strand piece turns a simple accessory into something that's unmistakably yours. No stacking required — the layered, personalized look is built in.\n\nWears beautifully every day, dressed up or down — with a t-shirt and jeans, over a sweater cuff, or stacked with your other favorites. The pearls add a classic touch while your initial heart charm makes it unmistakably you.\n\nChoose your initial at checkout. A thoughtful, personalized gift for bridesmaids, best friends, and anyone who loves dainty jewelry that actually lasts — and feels personal.\n\nHandcrafted with slight natural variations — no two pieces are exactly alike.",
-    "specs": [
-      {
-        "label": "Material",
-        "value": "Gold-tone stainless steel"
-      },
-      {
-        "label": "Style",
-        "value": "Double-strand — pearl chain and cable link chain with engraved initial heart charm, as one piece"
+        "label": "Chain Style",
+        "value": "Cuban curb chain"
       },
       {
         "label": "Finish",
-        "value": "Water-resistant and tarnish-resistant"
+        "value": "Gold-tone or Silver-tone"
       },
       {
-        "label": "Closure",
-        "value": "Lobster clasp with adjustable extender"
-      },
-      {
-        "label": "Personalization",
-        "value": "Heart charm engraved with the initial of your choice"
+        "label": "Chain width",
+        "value": "3.5 mm"
       },
       {
         "label": "Length",
-        "value": "14 cm (5.5\") to 23 cm (9.1\") — includes a 4 cm (1.6\") adjustable extension"
+        "value": "21 cm (8.3\")"
       },
       {
-        "label": "Custom sizing",
-        "value": "Message us after purchase and we will adjust to your exact measurements"
+        "label": "Closure",
+        "value": "Lobster clasp"
       },
       {
-        "label": "Care",
-        "value": "Wipe gently with a soft cloth after each wear. Store in an airtight container."
-      },
-      {
-        "label": "Shipping",
-        "value": "Dispatches within 1–2 business days from Europe"
-      }
-    ],
-    "images": [
-      "/images/products/81c42c09-7e3d-4bab-ad14-bbf68af14404.png"
-    ],
-    "variantGroups": [
-      {
-        "label": "Choose your Initial",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D",
-          "E",
-          "F",
-          "G",
-          "H",
-          "I",
-          "J",
-          "K",
-          "L",
-          "M",
-          "N",
-          "O",
-          "P",
-          "Q",
-          "R",
-          "S",
-          "T",
-          "U",
-          "V",
-          "W",
-          "X",
-          "Y",
-          "Z"
-        ]
+        "label": "Waterproof & Tarnish-Resistant",
+        "value": "Yes"
       }
     ],
     "featured": false,
     "active": true,
-    "altText": "Personalized double-strand pearl bracelet with gold heart charm engraved initial, layered pearl and cable chain bracelet",
-    "giftTags": [
-      "personalized"
+    "variantGroups": [
+      {
+        "label": "Finish",
+        "options": [
+          "Gold Tone",
+          "Silver Tone"
+        ]
+      }
     ],
-    "dateAdded": "2026-08-28T09:00:00-04:00",
-    "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/b69d656281327765128292a07d4575b4/downloads/default.mp4",
+    "images": [
+      "/images/products/e29bba22-0986-434e-bbc8-8d795b25e722.png"
+    ],
+    "altText": "Cuban curb chain bracelet for men in stainless steel, gold and silver tone, waterproof and tarnish-resistant",
+    "dateAdded": "2026-08-06T14:00:00-04:00",
+    "variants": [
+      "Gold Tone",
+      "Silver Tone"
+    ],
     "gallery": [
-      "/images/products/81c42c09-7e3d-4bab-ad14-bbf68af14404.png",
-      "/images/products/1b0246c7-46c2-4906-ad65-8143ea9b4c68.png",
-      "/images/products/3c456e1e-1abf-497c-94d7-49de4a3670d5.png",
-      "/images/products/0351d2a0-9e2d-4016-8492-a473e29379d3.png",
-      "/images/products/84cd0cb4-ba1b-4720-a643-320d032707d4.png"
+      "/images/products/e29bba22-0986-434e-bbc8-8d795b25e722.png",
+      "/images/products/cfe167e0-3659-471a-abec-eb409d814240.png",
+      "/images/products/176df181-a4e5-465d-9eb3-03818a3ba0b2.png",
+      "/images/products/IMG_1175-3.jpeg"
     ],
-    "sizeGuideImage": "/images/products/84cd0cb4-ba1b-4720-a643-320d032707d4.png"
+    "variantHeroes": {
+      "Gold Tone": "/images/products/e29bba22-0986-434e-bbc8-8d795b25e722.png",
+      "Silver Tone": "/images/products/f6403cb5-62e3-4c78-8a0d-35e3f27a77b2.png"
+    },
+    "variantVideos": {
+      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/fdb71f380488697d1572ac17787b247b/downloads/default.mp4",
+      "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/fdb71f380488697d1572ac17787b247b/downloads/default.mp4"
+    },
+    "sizeGuideImage": "/images/products/bcd4e901-9b25-4163-99dd-831b8b651e69.jpeg"
   },
   {
     "id": "zodiac-snake-belly-chain",
@@ -11806,85 +11843,78 @@
     "sizeGuideImage": "/images/products/26dc8a79-8ea9-4356-a365-9c150aeaee66.png"
   },
   {
-    "id": "gold-beaded-cross-bracelet",
-    "name": "Gold Beaded Cross Bracelet",
-    "price": 30,
+    "id": "plus-size-bracelet",
+    "name": "Plus Size Bracelet",
+    "price": 28,
     "currency": "EUR",
     "category": "Bracelets",
-    "description": "A beaded gold bracelet with a curved cross and a small medallion charm — stainless steel, waterproof, and built to hold its shine.",
-    "fullDescription": "A beaded gold bracelet with a curved cross and a small medallion charm.\n\nSimple and easy to layer, with just enough detail to feel meaningful. Built from stainless steel, so it holds up to daily wear without fading or tarnishing.\n\nPlease note that as each piece is handcrafted, no two pieces are identical and slight variations may occur.",
+    "description": "A double-strand faux pearl and gold cable chain bracelet, handmade in six fitted sizes so it actually closes comfortably on a fuller wrist — not just stretched to fit.",
+    "fullDescription": "Two strands. One piece. Finally, a fit that's actually yours.\n\nThis handmade bracelet pairs a faux pearl chain with a delicate gold cable chain, worn together as one piece so the layered look is already done for you. We built this one for wrists that never quite matched the standard size chart — six fitted sizes with room to adjust, so you're not choosing between too tight and three inches of extra chain swinging around.\n\nWear it to brunch, to the beach, to a wedding, or on a Tuesday when you just want your wrist to feel finished. The pearls keep it classic. The gold keeps it light. Together they just work, at any size.\n\nMaterials: Stainless steel with faux pearl\nFinish: Gold tone or Silver tone\nWaterproof: Yes\nTarnish-Resistant: Yes\nHypoallergenic: Yes\nClosure: Lobster clasp with adjustable extender\n\nSize Guide\nPlus 1 — 18cm (7.1\") base, +4cm (1.6\") extender. Fits 18–22cm (7.1\"–8.7\").\nPlus 2 — 20cm (7.9\") base, +4cm (1.6\") extender. Fits 20–24cm (7.9\"–9.4\").\nPlus 3 — 22cm (8.7\") base, +4cm (1.6\") extender. Fits 22–26cm (8.7\"–10.2\").\nPlus 4 — 24cm (9.4\") base, +4cm (1.6\") extender. Fits 24–28cm (9.4\"–11.0\").\nPlus 5 — 26cm (10.2\") base, +4cm (1.6\") extender. Fits 26–30cm (10.2\"–11.8\").\nPlus 6 — 28cm (11.0\") base, +4cm (1.6\") extender. Fits 28–32cm (11.0\"–12.6\").\nChain thickness: 1.5 mm\n\nFit Note: Not sure which to pick? Wrap a measuring tape or piece of string snugly around your wrist, then match that number to the ranges above.\n\nCare Instructions\nWipe gently with a soft cloth after each wear.\nStore in an airtight container when not in use.\n\nA beautiful gift for anyone who appreciates jewelry that looks expensive but feels effortless — and actually closes comfortably on the first try.\n\nPlease note that as each piece is handcrafted, no two pieces are identical and slight variations may occur.",
     "specs": [
       {
         "label": "Material",
-        "value": "Stainless steel"
+        "value": "Stainless steel with faux pearl"
       },
       {
         "label": "Finish",
-        "value": "Gold tone"
+        "value": "Gold tone or Silver tone"
       },
       {
-        "label": "Charm",
-        "value": "Curved cross bar (4.87cm) with medallion charm"
-      },
-      {
-        "label": "Size",
-        "value": "18.5–21.5cm, adjustable with lobster clasp and extender"
-      },
-      {
-        "label": "Weight",
-        "value": "21g"
+        "label": "Sizing",
+        "value": "6 fitted plus sizes — see size guide"
       },
       {
         "label": "Waterproof",
         "value": "Yes"
       },
       {
-        "label": "Tarnish-resistant",
+        "label": "Tarnish-Resistant",
         "value": "Yes"
       },
       {
-        "label": "Care",
-        "value": "Wipe gently with a soft cloth after each wear. Store in an airtight container when not in use."
-      },
-      {
-        "label": "Shipping",
-        "value": "Dispatches within 1-2 business days"
+        "label": "Hypoallergenic",
+        "value": "Yes"
       }
-    ],
-    "tags": [
-      "tiny cross bracelet",
-      "cross sideways",
-      "konfirmation",
-      "tiger eye bracelet",
-      "dainty gold rosary",
-      "madrina gift",
-      "goddaughter gift",
-      "dainty catholic",
-      "st christopher gold",
-      "beaded cross bracelet",
-      "newton bracelet",
-      "waterproof bracelet",
-      "bracelet femme"
-    ],
-    "images": [
-      "/images/products/55bac0b1-7356-4e74-97a8-f585287d5664.png"
-    ],
-    "gallery": [
-      "/images/products/55bac0b1-7356-4e74-97a8-f585287d5664.png",
-      "/images/products/IMG_3309.jpg",
-      "/images/products/1db351dc-3972-4a31-a79b-cae5959ea9da.png",
-      "/images/products/badf8700-5f63-4324-88e1-b381d421b7a6.png",
-      "/images/products/SaveClip.App_94009087_3737129469692488_4504472029461009842_n.jpg"
     ],
     "featured": false,
     "active": true,
-    "dateAdded": "2026-09-22T00:00:00.000Z",
-    "altText": "Gold beaded cross bracelet with medallion charm, stainless steel faith jewelry for women and men",
-    "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/4724f1732c17b637fb95f1ae0085cd41/downloads/default.mp4",
-    "giftTags": [
-      "confirmation"
+    "variants": [
+      "Gold Tone",
+      "Silver Tone"
     ],
-    "sizeGuideImage": "/images/products/1db351dc-3972-4a31-a79b-cae5959ea9da.png"
+    "variantHeroes": {
+      "Gold Tone": "/images/products/e11ec17f-4db6-4b28-b3a3-c75449db275c-copy.png",
+      "Silver Tone": "/images/products/a19f572e-fe47-4695-a3b4-8450be30f245.png"
+    },
+    "gallery": [
+      "/images/products/e11ec17f-4db6-4b28-b3a3-c75449db275c-copy.png",
+      "/images/products/a19f572e-fe47-4695-a3b4-8450be30f245.png",
+      "/images/products/be902336-752d-4489-9dd0-6b3f5c845cf9.png",
+      "/images/products/92821837-f642-4334-b46b-0c6c7eaa3283.png",
+      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.jpg",
+      "/images/products/a5f67786-25ef-4361-9a4d-9ff3b2bd7a1e.png"
+    ],
+    "images": [
+      "/images/products/e11ec17f-4db6-4b28-b3a3-c75449db275c-copy.png"
+    ],
+    "variantGroups": [
+      {
+        "label": "Size",
+        "type": "options",
+        "options": [
+          "Plus 1",
+          "Plus 2",
+          "Plus 3",
+          "Plus 4",
+          "Plus 5",
+          "Plus 6"
+        ]
+      }
+    ],
+    "altText": "Plus size gold and silver stainless steel faux pearl bracelet, adjustable double-strand wrist chain for curvy women, six fitted sizes",
+    "dateAdded": "2026-08-22T16:09:31.591Z",
+    "plusSize": true,
+    "sizeGuideImage": "/images/products/a5f67786-25ef-4361-9a4d-9ff3b2bd7a1e.png"
   },
   {
     "id": "pearl-heart-toggle-necklace",
@@ -12336,29 +12366,33 @@
     "sizeGuideImage": "/images/products/8c71db0b-041d-4634-b376-59fbaa733943.png"
   },
   {
-    "id": "diamond-initial-layered-bracelet",
-    "name": "Diamond Initial Layered Bracelet",
+    "id": "gold-beaded-cross-bracelet",
+    "name": "Gold Beaded Cross Bracelet",
     "price": 30,
     "currency": "EUR",
     "category": "Bracelets",
-    "description": "Your initial, catching the light with every move. This layered bracelet pairs a fine 1.5mm cable chain with a 2.0mm mirror link chain, finished with a sparkling diamond rhinestone initial charm — handcrafted from tarnish-resistant stainless steel.",
-    "fullDescription": "Two chains, one bracelet. A fine 1.5mm cable chain layers over a 2.0mm mirror link chain, meeting at a pave rhinestone initial charm that catches the light with every movement. Choose your letter and your size from the dropdowns — a personal touch that makes this the kind of bracelet you never take off.\n\nHandcrafted in gold-tone stainless steel — waterproof and tarnish-resistant, so it holds up through everyday wear. Every size includes a 4cm extension chain built in, so you can adjust the fit without losing the layered look. A thoughtful gift for birthdays, holidays, or any occasion that deserves something personal.",
+    "description": "A beaded gold bracelet with a curved cross and a small medallion charm — stainless steel, waterproof, and built to hold its shine.",
+    "fullDescription": "A beaded gold bracelet with a curved cross and a small medallion charm.\n\nSimple and easy to layer, with just enough detail to feel meaningful. Built from stainless steel, so it holds up to daily wear without fading or tarnishing.\n\nPlease note that as each piece is handcrafted, no two pieces are identical and slight variations may occur.",
     "specs": [
       {
         "label": "Material",
-        "value": "Gold-tone stainless steel"
+        "value": "Stainless steel"
       },
       {
-        "label": "Chains",
-        "value": "Layered 1.5mm cable chain + 2.0mm mirror link chain"
+        "label": "Finish",
+        "value": "Gold tone"
       },
       {
         "label": "Charm",
-        "value": "Diamond rhinestone initial — choose your letter"
+        "value": "Curved cross bar (4.87cm) with medallion charm"
       },
       {
-        "label": "Closure",
-        "value": "Lobster clasp with 4cm extension chain"
+        "label": "Size",
+        "value": "18.5–21.5cm, adjustable with lobster clasp and extender"
+      },
+      {
+        "label": "Weight",
+        "value": "21g"
       },
       {
         "label": "Waterproof",
@@ -12377,74 +12411,40 @@
         "value": "Dispatches within 1-2 business days"
       }
     ],
-    "variantGroups": [
-      {
-        "label": "Letter",
-        "type": "options",
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D",
-          "E",
-          "F",
-          "G",
-          "H",
-          "I",
-          "J",
-          "K",
-          "L",
-          "M",
-          "N",
-          "O",
-          "P",
-          "Q",
-          "R",
-          "S",
-          "T",
-          "U",
-          "V",
-          "W",
-          "X",
-          "Y",
-          "Z"
-        ]
-      },
-      {
-        "label": "Size",
-        "type": "options",
-        "options": [
-          "14 cm",
-          "15 cm",
-          "16 cm",
-          "17 cm",
-          "18 cm",
-          "19 cm",
-          "20 cm",
-          "21 cm",
-          "22 cm"
-        ]
-      }
+    "tags": [
+      "tiny cross bracelet",
+      "cross sideways",
+      "konfirmation",
+      "tiger eye bracelet",
+      "dainty gold rosary",
+      "madrina gift",
+      "goddaughter gift",
+      "dainty catholic",
+      "st christopher gold",
+      "beaded cross bracelet",
+      "newton bracelet",
+      "waterproof bracelet",
+      "bracelet femme"
+    ],
+    "images": [
+      "/images/products/55bac0b1-7356-4e74-97a8-f585287d5664.png"
+    ],
+    "gallery": [
+      "/images/products/55bac0b1-7356-4e74-97a8-f585287d5664.png",
+      "/images/products/IMG_3309.jpg",
+      "/images/products/1db351dc-3972-4a31-a79b-cae5959ea9da.png",
+      "/images/products/badf8700-5f63-4324-88e1-b381d421b7a6.png",
+      "/images/products/SaveClip.App_94009087_3737129469692488_4504472029461009842_n.jpg"
     ],
     "featured": false,
-    "images": [
-      "/images/products/website-thumbnail.png"
-    ],
     "active": true,
-    "altText": "Gold-tone stainless steel layered initial bracelet with diamond rhinestone letter charm",
-    "dateAdded": "2026-10-10T09:08:34-04:00",
-    "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/84def28226242eefa84581f4a22c41b2/downloads/default.mp4",
-    "gallery": [
-      "/images/products/website-thumbnail.png",
-      "/images/products/460eb187-8482-4df0-b190-56a94c92c239.png",
-      "/images/products/3cbda98a-8eef-4017-a019-ee14429a4f05.png",
-      "/images/products/8dc3f1a7-ca44-45c5-b23d-e958f4b5ceca-2.jpeg",
-      "/images/products/53165426-64d8-4bb3-b7a6-f685893d381f.png",
-      "/images/products/fb331334-bdc6-4605-869e-6cc4bc34933d.png"
-    ],
+    "dateAdded": "2026-09-22T00:00:00.000Z",
+    "altText": "Gold beaded cross bracelet with medallion charm, stainless steel faith jewelry for women and men",
+    "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/4724f1732c17b637fb95f1ae0085cd41/downloads/default.mp4",
     "giftTags": [
-      "personalized"
-    ]
+      "confirmation"
+    ],
+    "sizeGuideImage": "/images/products/1db351dc-3972-4a31-a79b-cae5959ea9da.png"
   },
   {
     "id": "spinning-snowflake-pendant-necklace",

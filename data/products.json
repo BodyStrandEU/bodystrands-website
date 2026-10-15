@@ -12620,7 +12620,9 @@
         "value": "Dispatches within 1–2 business days"
       }
     ],
-    "images": [],
+    "images": [
+      "/images/products/a4095ab0-93e6-45a2-899c-9353ebbbe479.png"
+    ],
     "variantGroups": [
       {
         "label": "Color",
@@ -12645,6 +12647,22 @@
     "giftTags": [
       "bridal"
     ],
-    "altText": "Pearl shoulder necklace with three draping strands of faux pearls, gold-tone or silver-tone stainless steel epaulette-style bridal shoulder chain"
+    "altText": "Pearl shoulder necklace with three draping strands of faux pearls, gold-tone or silver-tone stainless steel epaulette-style bridal shoulder chain",
+    "gallery": [
+      "/images/products/a4095ab0-93e6-45a2-899c-9353ebbbe479.png",
+      "/images/products/463668e7-830f-4153-bc4b-6638c6f766a3.png",
+      "/images/products/5764b77d-d5bd-4306-bff2-12cd74f5e874.png",
+      "/images/products/89232de1-a444-4909-b956-fe1ecd5eb551.png",
+      "/images/products/2e2e7fdb-d48c-46e5-b6c6-515fdb33d441-copy.png"
+    ],
+    "variantHeroes": {
+      "Gold Tone": "/images/products/a4095ab0-93e6-45a2-899c-9353ebbbe479.png",
+      "Silver Tone": "/images/products/463668e7-830f-4153-bc4b-6638c6f766a3.png"
+    },
+    "variants": [
+      "Gold Tone",
+      "Silver Tone"
+    ],
+    "sizeGuideImage": "/images/products/2e2e7fdb-d48c-46e5-b6c6-515fdb33d441-copy.png"
   }
 ]

@@ -30,6 +30,10 @@ const FAQ_GROUPS: FaqGroup[] = [
         question: "Is each piece adjustable?",
         answer: "Most of our chains — belly chains, back chains, anklets — are adjustable to fit a range of sizes. Check the specific product's size guide (linked on the product page) for exact measurements.",
       },
+      {
+        question: "Is the jewelry in your photos real?",
+        answer: "Yes — every piece shown is the real, unaltered jewelry, 100% handmade using the highest quality stainless steel, exactly as you'll receive it. Some of our lifestyle photos use AI-enhanced or AI-generated styling (the model, setting, or background) to help you picture how a piece looks worn, but the product itself is never AI-generated or changed.",
+      },
     ],
   },
   {

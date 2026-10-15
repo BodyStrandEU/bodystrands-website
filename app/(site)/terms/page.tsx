@@ -22,7 +22,7 @@ export default function TermsPage() {
 
         <section>
           <h2 className="font-josefin text-sm tracking-widest uppercase mb-3">2. Products</h2>
-          <p>All Bodystrands jewelry is handmade. Slight variations in appearance may occur between pieces — this is a feature of handmade craft, not a defect. Product images are as accurate as possible but may vary slightly in colour depending on your screen.</p>
+          <p>All Bodystrands jewelry is handmade using high-quality stainless steel. Slight variations in appearance may occur between pieces — this is a feature of handmade craft, not a defect. Product images are as accurate as possible but may vary slightly in colour depending on your screen. Some lifestyle photos use AI-enhanced or AI-generated styling (model, setting, or background) to show a piece worn; the jewelry itself is always shown real and unaltered.</p>
         </section>
 
         <section>

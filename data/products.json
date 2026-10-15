@@ -1530,41 +1530,41 @@
     ]
   },
   {
-    "id": "bridal-forehead-chain",
-    "name": "Bridal Forehead Chain",
-    "price": 32,
+    "id": "bridal-hair-vine-chain",
+    "name": "Bridal Hair Vine Chain",
+    "price": 36,
     "currency": "EUR",
     "category": "Head Chains",
-    "description": "Your bridal crown, reimagined in chain. This dainty forehead jewelry drapes softly across the hairline — ethereal, romantic, and perfect for weddings, festivals, and bohemian occasions.",
-    "fullDescription": "Delicate chain cascades across the forehead in a barely-there silhouette that photographs beautifully and feels completely weightless to wear. It sits behind the hairline so it disappears into your style while letting the chain do all the talking.\n\nHandcrafted for brides, bridesmaids, and festival-goers who love a statement without the weight. Adjustable to fit, made from durable gold-tone stainless steel.",
+    "description": "Your bridal hair detail, in minimalist chain. This delicate hair vine drapes through bridal updos and loose waves alike — elegant, adjustable, and handcrafted in gold or silver stainless steel for your most important day.",
+    "fullDescription": "Inspired by classic bridal hair vines, this chain version sits softly in the hair without the rigidity of traditional pieces. It moves naturally through any hairstyle and holds its position with small discreet pins.\n\nAvailable in Gold or Silver. Adjustable length. A timeless bridal accessory that photographs beautifully in every style.",
     "specs": [
       {
         "label": "Material",
-        "value": "Gold or silver-tone stainless steel"
+        "value": "Stainless steel"
+      },
+      {
+        "label": "Colours",
+        "value": "Gold or Silver"
       },
       {
         "label": "Style",
-        "value": "Bridal forehead / head chain"
-      },
-      {
-        "label": "Occasion",
-        "value": "Wedding, bridal, boho, festival"
+        "value": "Minimalist bridal hair vine"
       },
       {
         "label": "Fit",
-        "value": "Adjustable"
+        "value": "Adjustable — attaches with small pins"
+      },
+      {
+        "label": "Occasion",
+        "value": "Wedding, bridal, boho"
       },
       {
         "label": "Care",
-        "value": "Store in an airtight container. Handle gently."
+        "value": "Handle gently. Store in an airtight container."
       },
       {
         "label": "Shipping",
         "value": "Dispatches within 1–2 business days"
-      },
-      {
-        "label": "Size",
-        "value": "Length: 52 cm (20.5\") base chain with a 6 cm (2.4\") extension (adjusts up to 58 cm (22.8\"))"
       }
     ],
     "featured": false,
@@ -1574,26 +1574,27 @@
       "Silver Tone"
     ],
     "images": [
-      "/images/products/8f4f0279-4cb9-4be4-8a2b-eb00007c22fd.webp"
+      "/images/products/5eb7d95b-2cad-4666-8362-f20aa9183061.png"
     ],
-    "variantVideos": {
-      "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/ea8607590094cfbc7842dd84b42e10fd/downloads/default.mp4",
-      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/ea8607590094cfbc7842dd84b42e10fd/downloads/default.mp4"
-    },
-    "altText": "Gold-tone stainless steel bridal forehead chain headpiece for wedding hair jewelry",
+    "altText": "Gold tone stainless steel bridal hair vine chain draped through wedding updo hairstyle",
     "gallery": [
-      "/images/products/8f4f0279-4cb9-4be4-8a2b-eb00007c22fd.webp",
-      "/images/products/f2f23b06-f910-420f-97d5-b3bfb939c09f.webp",
-      "/images/products/49cfbed0-3ca2-49b7-85b5-938b180c8b79.webp",
-      "https://i.etsystatic.com/55122258/r/il/5f745b/7871482945/il_fullxfull.7871482945_9qw5.jpg",
-      "https://i.etsystatic.com/55122258/r/il/fd4744/7807979968/il_fullxfull.7807979968_qa8r.jpg",
-      "https://i.etsystatic.com/55122258/r/il/3e1b20/7904377486/il_fullxfull.7904377486_3jjc.jpg",
-      "https://i.etsystatic.com/55122258/r/il/7a42a6/7904385148/il_fullxfull.7904385148_2lja.jpg"
+      "/images/products/5eb7d95b-2cad-4666-8362-f20aa9183061.png",
+      "/images/products/b3deb32a-fae4-4005-8751-d36d3e2aec0f.webp",
+      "/images/products/IMG_2533-2.webp",
+      "/images/products/0c82c788-c58b-4dc8-b448-f63750bc15e6.webp",
+      "/images/products/f227eb4c-343a-43ea-89ec-3d9f6eaed86a.webp",
+      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.webp",
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp"
     ],
     "variantHeroes": {
-      "Gold Tone": "/images/products/8f4f0279-4cb9-4be4-8a2b-eb00007c22fd.webp",
-      "Silver Tone": "https://i.etsystatic.com/55122258/r/il/3e1b20/7904377486/il_fullxfull.7904377486_3jjc.jpg"
+      "Gold Tone": "/images/products/5eb7d95b-2cad-4666-8362-f20aa9183061.png",
+      "Silver Tone": "/images/products/b3deb32a-fae4-4005-8751-d36d3e2aec0f.webp"
     },
+    "variantVideos": {
+      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/6cc3ebaf9e58d8f218cde6d699724327/downloads/default.mp4",
+      "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/6cc3ebaf9e58d8f218cde6d699724327/downloads/default.mp4"
+    },
+    "sizeGuideImage": "/images/products/esty-thumnails-new--25-.webp",
     "dateAdded": "2026-06-12T15:00:27-04:00",
     "giftTags": [
       "bridal"
@@ -1665,29 +1666,29 @@
     "dateAdded": "2026-06-12T15:00:27-04:00"
   },
   {
-    "id": "pearl-bridal-head-chain",
-    "name": "Pearl Bridal Head Chain",
-    "price": 34,
+    "id": "boho-hair-chain",
+    "name": "Boho Hair Chain",
+    "price": 28,
     "currency": "EUR",
     "category": "Head Chains",
-    "description": "Your bridal hair moment, perfected. This delicate pearl and gold head chain drapes beautifully across the hairline — soft, luminous, and made for weddings, engagement shoots, and boho occasions.",
-    "fullDescription": "Tiny pearl accents catch the light as the chain sweeps across the forehead, creating an effortlessly romantic bridal look. It clips into the hair discreetly and stays in place throughout the ceremony and reception.\n\nHandcrafted in gold-tone stainless steel with pearl detailing. A timeless piece that works as beautifully on a beach wedding as it does in a grand venue.",
+    "description": "Your festival crown. This minimalist gold hair chain drapes softly across the head for boho weddings, music festivals, and any occasion that calls for effortless, flowing hair jewelry.",
+    "fullDescription": "Attaches into the hair with discreet pins and drapes a fine chain across the hairline or through the hair in a bohemian arc. Lightweight enough to wear all day, beautiful enough to be photographed.\n\nHandcrafted in gold-tone stainless steel. Adjustable fit. A favourite for bridesmaids, brides, and festival-goers who want their hair to be part of the look.",
     "specs": [
       {
         "label": "Material",
-        "value": "Gold-tone stainless steel with pearl accents"
+        "value": "Gold-tone stainless steel"
       },
       {
         "label": "Style",
-        "value": "Pearl bridal head chain / hair vine"
+        "value": "Boho hair chain / bridal headpiece"
       },
       {
         "label": "Occasion",
-        "value": "Wedding, bridal, boho, formal"
+        "value": "Wedding, festival, boho, bridal"
       },
       {
         "label": "Fit",
-        "value": "Adjustable — attaches to hair with comb or pin"
+        "value": "Adjustable — attaches to hair with pins"
       },
       {
         "label": "Care",
@@ -1701,36 +1702,33 @@
     "featured": false,
     "active": true,
     "variants": [
-      "Gold Tone",
-      "Silver Tone"
+      "Silver Tone",
+      "Gold Tone"
     ],
     "images": [
-      "https://i.etsystatic.com/55122258/r/il/8d2af9/8020112711/il_fullxfull.8020112711_jbay.jpg"
+      "https://i.etsystatic.com/55122258/r/il/e3caa7/7904567178/il_fullxfull.7904567178_dqhq.jpg"
     ],
     "variantVideos": {
-      "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/b3446e367ec820c9c1668944f76cbb39/downloads/default.mp4",
-      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/8264eccb0b6cfd7f2a8c7505d06077de/downloads/default.mp4"
+      "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/0b5a7252056eba4e22d15de6db388139/downloads/default.mp4",
+      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/0b5a7252056eba4e22d15de6db388139/downloads/default.mp4"
     },
-    "altText": "Delicate gold-tone stainless steel bridal head chain with pearl accents for wedding hairstyles",
+    "altText": "Gold-tone stainless steel boho hair chain headpiece for festivals and weddings",
     "gallery": [
-      "https://i.etsystatic.com/55122258/r/il/8d2af9/8020112711/il_fullxfull.8020112711_jbay.jpg",
-      "https://i.etsystatic.com/55122258/r/il/022eb3/8020124799/il_fullxfull.8020124799_aweh.jpg",
-      "https://i.etsystatic.com/55122258/r/il/5f261a/8020152167/il_fullxfull.8020152167_qwjl.jpg",
-      "https://i.etsystatic.com/55122258/r/il/fd4744/7807979968/il_fullxfull.7807979968_qa8r.jpg",
-      "/images/products/49cfbed0-3ca2-49b7-85b5-938b180c8b79.webp",
-      "/images/products/f2f23b06-f910-420f-97d5-b3bfb939c09f.webp",
-      "/images/products/22079b65-5549-4e99-82a5-03370c656882.webp",
-      "https://i.etsystatic.com/55122258/r/il/4e63f4/8020150831/il_fullxfull.8020150831_ckfl.jpg",
-      "/images/products/a84ced35-90fb-4281-8607-cdd6a4c7e087.webp"
+      "https://i.etsystatic.com/55122258/r/il/e3caa7/7904567178/il_fullxfull.7904567178_dqhq.jpg",
+      "https://i.etsystatic.com/55122258/r/il/4d2caf/7952481367/il_fullxfull.7952481367_mt7q.jpg",
+      "https://i.etsystatic.com/55122258/r/il/812fa6/7904484222/il_fullxfull.7904484222_ei1h.jpg",
+      "https://i.etsystatic.com/55122258/r/il/dea29a/7952425519/il_fullxfull.7952425519_iyui.jpg",
+      "https://i.etsystatic.com/55122258/r/il/3cbe0f/7952549085/il_fullxfull.7952549085_hn18.jpg"
     ],
     "variantHeroes": {
-      "Gold Tone": "https://i.etsystatic.com/55122258/r/il/8d2af9/8020112711/il_fullxfull.8020112711_jbay.jpg",
-      "Silver Tone": "/images/products/22079b65-5549-4e99-82a5-03370c656882.webp"
+      "Silver Tone": "https://i.etsystatic.com/55122258/r/il/e3caa7/7904567178/il_fullxfull.7904567178_dqhq.jpg",
+      "Gold Tone": "https://i.etsystatic.com/55122258/r/il/3cbe0f/7952549085/il_fullxfull.7952549085_hn18.jpg"
     },
     "dateAdded": "2026-06-12T15:00:27-04:00",
     "giftTags": [
       "bridal"
-    ]
+    ],
+    "sizeGuideImage": "/images/products/esty-thumnails-new--25-.png"
   },
   {
     "id": "diamond-initial-foot-chain",
@@ -3624,69 +3622,74 @@
     "sizeGuideImage": "/images/products/69a2a632-913d-42ed-9de2-1646f4a302c9.png"
   },
   {
-    "id": "boho-hair-chain",
-    "name": "Boho Hair Chain",
-    "price": 28,
+    "id": "bridal-forehead-chain",
+    "name": "Bridal Forehead Chain",
+    "price": 32,
     "currency": "EUR",
     "category": "Head Chains",
-    "description": "Your festival crown. This minimalist gold hair chain drapes softly across the head for boho weddings, music festivals, and any occasion that calls for effortless, flowing hair jewelry.",
-    "fullDescription": "Attaches into the hair with discreet pins and drapes a fine chain across the hairline or through the hair in a bohemian arc. Lightweight enough to wear all day, beautiful enough to be photographed.\n\nHandcrafted in gold-tone stainless steel. Adjustable fit. A favourite for bridesmaids, brides, and festival-goers who want their hair to be part of the look.",
+    "description": "Your bridal crown, reimagined in chain. This dainty forehead jewelry drapes softly across the hairline — ethereal, romantic, and perfect for weddings, festivals, and bohemian occasions.",
+    "fullDescription": "Delicate chain cascades across the forehead in a barely-there silhouette that photographs beautifully and feels completely weightless to wear. It sits behind the hairline so it disappears into your style while letting the chain do all the talking.\n\nHandcrafted for brides, bridesmaids, and festival-goers who love a statement without the weight. Adjustable to fit, made from durable gold-tone stainless steel.",
     "specs": [
       {
         "label": "Material",
-        "value": "Gold-tone stainless steel"
+        "value": "Gold or silver-tone stainless steel"
       },
       {
         "label": "Style",
-        "value": "Boho hair chain / bridal headpiece"
+        "value": "Bridal forehead / head chain"
       },
       {
         "label": "Occasion",
-        "value": "Wedding, festival, boho, bridal"
+        "value": "Wedding, bridal, boho, festival"
       },
       {
         "label": "Fit",
-        "value": "Adjustable — attaches to hair with pins"
+        "value": "Adjustable"
       },
       {
         "label": "Care",
-        "value": "Handle gently. Store in an airtight container."
+        "value": "Store in an airtight container. Handle gently."
       },
       {
         "label": "Shipping",
         "value": "Dispatches within 1–2 business days"
+      },
+      {
+        "label": "Size",
+        "value": "Length: 52 cm (20.5\") base chain with a 6 cm (2.4\") extension (adjusts up to 58 cm (22.8\"))"
       }
     ],
     "featured": false,
     "active": true,
     "variants": [
-      "Silver Tone",
-      "Gold Tone"
+      "Gold Tone",
+      "Silver Tone"
     ],
     "images": [
-      "https://i.etsystatic.com/55122258/r/il/e3caa7/7904567178/il_fullxfull.7904567178_dqhq.jpg"
+      "/images/products/8f4f0279-4cb9-4be4-8a2b-eb00007c22fd.webp"
     ],
     "variantVideos": {
-      "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/0b5a7252056eba4e22d15de6db388139/downloads/default.mp4",
-      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/0b5a7252056eba4e22d15de6db388139/downloads/default.mp4"
+      "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/ea8607590094cfbc7842dd84b42e10fd/downloads/default.mp4",
+      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/ea8607590094cfbc7842dd84b42e10fd/downloads/default.mp4"
     },
-    "altText": "Gold-tone stainless steel boho hair chain headpiece for festivals and weddings",
+    "altText": "Gold-tone stainless steel bridal forehead chain headpiece for wedding hair jewelry",
     "gallery": [
-      "https://i.etsystatic.com/55122258/r/il/e3caa7/7904567178/il_fullxfull.7904567178_dqhq.jpg",
-      "https://i.etsystatic.com/55122258/r/il/4d2caf/7952481367/il_fullxfull.7952481367_mt7q.jpg",
-      "https://i.etsystatic.com/55122258/r/il/812fa6/7904484222/il_fullxfull.7904484222_ei1h.jpg",
-      "https://i.etsystatic.com/55122258/r/il/dea29a/7952425519/il_fullxfull.7952425519_iyui.jpg",
-      "https://i.etsystatic.com/55122258/r/il/3cbe0f/7952549085/il_fullxfull.7952549085_hn18.jpg"
+      "/images/products/8f4f0279-4cb9-4be4-8a2b-eb00007c22fd.webp",
+      "/images/products/f2f23b06-f910-420f-97d5-b3bfb939c09f.webp",
+      "/images/products/49cfbed0-3ca2-49b7-85b5-938b180c8b79.webp",
+      "https://i.etsystatic.com/55122258/r/il/5f745b/7871482945/il_fullxfull.7871482945_9qw5.jpg",
+      "https://i.etsystatic.com/55122258/r/il/fd4744/7807979968/il_fullxfull.7807979968_qa8r.jpg",
+      "https://i.etsystatic.com/55122258/r/il/3e1b20/7904377486/il_fullxfull.7904377486_3jjc.jpg",
+      "https://i.etsystatic.com/55122258/r/il/7a42a6/7904385148/il_fullxfull.7904385148_2lja.jpg"
     ],
     "variantHeroes": {
-      "Silver Tone": "https://i.etsystatic.com/55122258/r/il/e3caa7/7904567178/il_fullxfull.7904567178_dqhq.jpg",
-      "Gold Tone": "https://i.etsystatic.com/55122258/r/il/3cbe0f/7952549085/il_fullxfull.7952549085_hn18.jpg"
+      "Gold Tone": "/images/products/8f4f0279-4cb9-4be4-8a2b-eb00007c22fd.webp",
+      "Silver Tone": "https://i.etsystatic.com/55122258/r/il/3e1b20/7904377486/il_fullxfull.7904377486_3jjc.jpg"
     },
     "dateAdded": "2026-06-12T15:00:27-04:00",
     "giftTags": [
       "bridal"
-    ],
-    "sizeGuideImage": "/images/products/esty-thumnails-new--25-.png"
+    ]
   },
   {
     "id": "2-in-1-body-chain-necklace",
@@ -6246,33 +6249,29 @@
     ]
   },
   {
-    "id": "bridal-hair-vine-chain",
-    "name": "Bridal Hair Vine Chain",
-    "price": 36,
+    "id": "pearl-bridal-head-chain",
+    "name": "Pearl Bridal Head Chain",
+    "price": 34,
     "currency": "EUR",
     "category": "Head Chains",
-    "description": "Your bridal hair detail, in minimalist chain. This delicate hair vine drapes through bridal updos and loose waves alike — elegant, adjustable, and handcrafted in gold or silver stainless steel for your most important day.",
-    "fullDescription": "Inspired by classic bridal hair vines, this chain version sits softly in the hair without the rigidity of traditional pieces. It moves naturally through any hairstyle and holds its position with small discreet pins.\n\nAvailable in Gold or Silver. Adjustable length. A timeless bridal accessory that photographs beautifully in every style.",
+    "description": "Your bridal hair moment, perfected. This delicate pearl and gold head chain drapes beautifully across the hairline — soft, luminous, and made for weddings, engagement shoots, and boho occasions.",
+    "fullDescription": "Tiny pearl accents catch the light as the chain sweeps across the forehead, creating an effortlessly romantic bridal look. It clips into the hair discreetly and stays in place throughout the ceremony and reception.\n\nHandcrafted in gold-tone stainless steel with pearl detailing. A timeless piece that works as beautifully on a beach wedding as it does in a grand venue.",
     "specs": [
       {
         "label": "Material",
-        "value": "Stainless steel"
-      },
-      {
-        "label": "Colours",
-        "value": "Gold or Silver"
+        "value": "Gold-tone stainless steel with pearl accents"
       },
       {
         "label": "Style",
-        "value": "Minimalist bridal hair vine"
-      },
-      {
-        "label": "Fit",
-        "value": "Adjustable — attaches with small pins"
+        "value": "Pearl bridal head chain / hair vine"
       },
       {
         "label": "Occasion",
-        "value": "Wedding, bridal, boho"
+        "value": "Wedding, bridal, boho, formal"
+      },
+      {
+        "label": "Fit",
+        "value": "Adjustable — attaches to hair with comb or pin"
       },
       {
         "label": "Care",
@@ -6290,27 +6289,28 @@
       "Silver Tone"
     ],
     "images": [
-      "/images/products/5eb7d95b-2cad-4666-8362-f20aa9183061.png"
+      "https://i.etsystatic.com/55122258/r/il/8d2af9/8020112711/il_fullxfull.8020112711_jbay.jpg"
     ],
-    "altText": "Gold tone stainless steel bridal hair vine chain draped through wedding updo hairstyle",
+    "variantVideos": {
+      "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/b3446e367ec820c9c1668944f76cbb39/downloads/default.mp4",
+      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/8264eccb0b6cfd7f2a8c7505d06077de/downloads/default.mp4"
+    },
+    "altText": "Delicate gold-tone stainless steel bridal head chain with pearl accents for wedding hairstyles",
     "gallery": [
-      "/images/products/5eb7d95b-2cad-4666-8362-f20aa9183061.png",
-      "/images/products/b3deb32a-fae4-4005-8751-d36d3e2aec0f.webp",
-      "/images/products/IMG_2533-2.webp",
-      "/images/products/0c82c788-c58b-4dc8-b448-f63750bc15e6.webp",
-      "/images/products/f227eb4c-343a-43ea-89ec-3d9f6eaed86a.webp",
-      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.webp",
-      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp"
+      "https://i.etsystatic.com/55122258/r/il/8d2af9/8020112711/il_fullxfull.8020112711_jbay.jpg",
+      "https://i.etsystatic.com/55122258/r/il/022eb3/8020124799/il_fullxfull.8020124799_aweh.jpg",
+      "https://i.etsystatic.com/55122258/r/il/5f261a/8020152167/il_fullxfull.8020152167_qwjl.jpg",
+      "https://i.etsystatic.com/55122258/r/il/fd4744/7807979968/il_fullxfull.7807979968_qa8r.jpg",
+      "/images/products/49cfbed0-3ca2-49b7-85b5-938b180c8b79.webp",
+      "/images/products/f2f23b06-f910-420f-97d5-b3bfb939c09f.webp",
+      "/images/products/22079b65-5549-4e99-82a5-03370c656882.webp",
+      "https://i.etsystatic.com/55122258/r/il/4e63f4/8020150831/il_fullxfull.8020150831_ckfl.jpg",
+      "/images/products/a84ced35-90fb-4281-8607-cdd6a4c7e087.webp"
     ],
     "variantHeroes": {
-      "Gold Tone": "/images/products/5eb7d95b-2cad-4666-8362-f20aa9183061.png",
-      "Silver Tone": "/images/products/b3deb32a-fae4-4005-8751-d36d3e2aec0f.webp"
+      "Gold Tone": "https://i.etsystatic.com/55122258/r/il/8d2af9/8020112711/il_fullxfull.8020112711_jbay.jpg",
+      "Silver Tone": "/images/products/22079b65-5549-4e99-82a5-03370c656882.webp"
     },
-    "variantVideos": {
-      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/6cc3ebaf9e58d8f218cde6d699724327/downloads/default.mp4",
-      "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/6cc3ebaf9e58d8f218cde6d699724327/downloads/default.mp4"
-    },
-    "sizeGuideImage": "/images/products/esty-thumnails-new--25-.webp",
     "dateAdded": "2026-06-12T15:00:27-04:00",
     "giftTags": [
       "bridal"

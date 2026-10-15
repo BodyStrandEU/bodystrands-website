@@ -6608,8 +6608,6 @@
       "/images/products/97e6f7a5-080f-4f41-ab59-ed0b50fc7e2c.webp",
       "/images/products/IMG_2551-2.webp",
       "https://i.etsystatic.com/55122258/r/il/31071c/7978948578/il_fullxfull.7978948578_4cnz.jpg",
-      "https://i.etsystatic.com/55122258/r/il/26282e/7734979557/il_fullxfull.7734979557_95jd.jpg",
-      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf-copy.webp",
       "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp"
     ],
     "variantHeroes": {
@@ -6633,7 +6631,10 @@
         ]
       }
     ],
-    "dateAdded": "2026-06-12T15:00:27-04:00"
+    "dateAdded": "2026-06-12T15:00:27-04:00",
+    "giftTags": [
+      "bridal"
+    ]
   },
   {
     "id": "pearl-beaded-belly-chain",

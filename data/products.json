@@ -9548,17 +9548,17 @@
       }
     ],
     "gallery": [
-      "/images/products/0c7f0749-c174-442e-9730-590ff7f09eb7.webp",
-      "/images/products/910a0c46-cbb4-4354-b945-e9a019f92e48.webp",
-      "/images/products/54cc1ca6-cebd-47b1-ad59-85bc939b0294.webp",
+      "/images/products/d28c8d39-c780-43d1-bc4b-a891ee1757ca.png",
+      "/images/products/c80d48e8-8a7a-4f1a-a5bc-843b88777bbc.png",
+      "/images/products/IMG_3710-2.jpg",
       "/images/products/f05bdfd4-bb4e-46e5-9de6-db8d038ec039.webp",
       "/images/products/IMG_1908.webp",
       "/images/products/b045dcb9-2e69-4b7f-832f-03cba5b65b9a.webp",
       "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp",
-      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.webp"
+      "/images/products/fb4e6785-5481-4525-9dc8-0ecfe35e5671.png"
     ],
     "images": [
-      "/images/products/0c7f0749-c174-442e-9730-590ff7f09eb7.webp"
+      "/images/products/d28c8d39-c780-43d1-bc4b-a891ee1757ca.png"
     ],
     "featured": false,
     "altText": "Dainty satellite link choker in stainless steel, minimalist chain necklace for everyday wear",
@@ -9567,14 +9567,15 @@
       "Silver Tone"
     ],
     "variantHeroes": {
-      "Gold Tone": "/images/products/0c7f0749-c174-442e-9730-590ff7f09eb7.webp",
-      "Silver Tone": "/images/products/54cc1ca6-cebd-47b1-ad59-85bc939b0294.webp"
+      "Gold Tone": "/images/products/d28c8d39-c780-43d1-bc4b-a891ee1757ca.png",
+      "Silver Tone": "/images/products/c80d48e8-8a7a-4f1a-a5bc-843b88777bbc.png"
     },
     "variantVideos": {
-      "Gold Tone": "/images/products/minimalist-choker.mp4",
-      "Silver Tone": "/images/products/minimalist-choker.mp4"
+      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/6c14abb36a65f4d9e06aed362ea787dc/downloads/default.mp4",
+      "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/6c14abb36a65f4d9e06aed362ea787dc/downloads/default.mp4"
     },
-    "dateAdded": "2026-07-09T19:34:11-04:00"
+    "dateAdded": "2026-07-09T19:34:11-04:00",
+    "sizeGuideImage": "/images/products/b045dcb9-2e69-4b7f-832f-03cba5b65b9a.png"
   },
   {
     "id": "pearl-charm-bracelet",

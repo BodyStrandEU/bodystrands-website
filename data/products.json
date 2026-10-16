@@ -440,7 +440,7 @@
       }
     ],
     "images": [
-      "/images/products/bridal-shoulder-chain-main.webp"
+      "/images/products/bridal-shoulder-chain-silver-5.webp"
     ],
     "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/a483b83d4a14a3f88a0687ecf9b92b44/downloads/default.mp4",
     "featured": true,
@@ -464,21 +464,18 @@
     },
     "altText": "Delicate gold tone stainless steel bridal shoulder chain for wedding dress, minimalist arm jewelry",
     "gallery": [
-      "/images/products/bridal-shoulder-chain-main.webp",
       "/images/products/bridal-shoulder-chain-silver-5.webp",
-      "/images/products/bridal-shoulder-chain-gold-1.webp",
       "/images/products/bridal-shoulder-chain-gold-2.webp",
+      "/images/products/bridal-shoulder-chain-both-4.webp",
+      "/images/products/bridal-shoulder-chain-silver-4.webp",
+      "/images/products/bridal-shoulder-chain-main.webp",
+      "/images/products/bridal-shoulder-chain-gold-1.webp",
       "/images/products/bridal-shoulder-chain-gold-3.webp",
       "/images/products/bridal-shoulder-chain-both-2.webp",
-      "/images/products/bridal-shoulder-chain-both-3.webp",
-      "/images/products/bridal-shoulder-chain-both-4.webp",
-      "/images/products/bridal-shoulder-chain-silver-2.webp",
-      "/images/products/bridal-shoulder-chain-silver-3.webp",
-      "/images/products/bridal-shoulder-chain-silver-4.webp",
-      "/images/products/bridal-shoulder-chain-both-1.webp"
+      "/images/products/bridal-shoulder-chain-both-3.webp"
     ],
     "variantHeroes": {
-      "Gold Tone": "/images/products/bridal-shoulder-chain-main.webp",
+      "Gold Tone": "/images/products/bridal-shoulder-chain-gold-2.webp",
       "Silver Tone": "/images/products/bridal-shoulder-chain-silver-5.webp"
     },
     "dateAdded": "2026-06-11T17:58:31-04:00",

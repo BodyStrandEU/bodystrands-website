@@ -95,7 +95,7 @@ export default function HomePage() {
     : [];
 
   const featured     = products
-    .filter((p) => p.active !== false && !p.plusSize)
+    .filter((p) => p.active !== false && !p.plusSize && p.audience !== "men")
     .slice()
     .sort((a, b) => new Date(b.dateAdded ?? 0).getTime() - new Date(a.dateAdded ?? 0).getTime())
     .slice(0, 10);

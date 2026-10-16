@@ -55,9 +55,9 @@ export default async function ShopPage({
   const isValidCategory = (c: string): c is Category =>
     (CATEGORIES as readonly string[]).includes(c);
 
-  // Plus size pieces live on /plus-size only — excluded here so they don't also
-  // appear mixed into general category browsing.
-  const activeProducts = products.filter((p) => p.active !== false && !p.plusSize);
+  // Plus size pieces live on /plus-size only, men's pieces on /men only — both
+  // excluded here so they don't also appear mixed into general category browsing.
+  const activeProducts = products.filter((p) => p.active !== false && !p.plusSize && p.audience !== "men");
 
   const isFiltered = !!(category && isValidCategory(category));
   const filtered   = isFiltered

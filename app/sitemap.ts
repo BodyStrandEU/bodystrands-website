@@ -14,6 +14,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/shop`,               priority: 0.9, changeFrequency: "daily",   lastModified: buildTime },
     { url: `${BASE}/gifts`,              priority: 0.8, changeFrequency: "weekly",  lastModified: buildTime },
     { url: `${BASE}/plus-size`,          priority: 0.8, changeFrequency: "weekly",  lastModified: buildTime },
+    { url: `${BASE}/men`,                priority: 0.8, changeFrequency: "weekly",  lastModified: buildTime },
     { url: `${BASE}/christmas`,          priority: 0.8, changeFrequency: "weekly",  lastModified: buildTime },
     { url: `${BASE}/personalized`,       priority: 0.8, changeFrequency: "weekly",  lastModified: buildTime },
     { url: `${BASE}/bridal`,             priority: 0.8, changeFrequency: "weekly",  lastModified: buildTime },

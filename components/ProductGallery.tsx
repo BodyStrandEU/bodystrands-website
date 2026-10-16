@@ -69,7 +69,7 @@ function GalleryLightbox({
   }
 
   function nav(i: number) {
-    const next = Math.max(0, Math.min(i, media.length - 1));
+    const next = (i + media.length) % media.length;
     if (next === indexRef.current) return;
     indexRef.current = next;
     setIndex(next);
@@ -129,9 +129,7 @@ function GalleryLightbox({
         const dx = e.changedTouches[0].clientX - sw.x;
         const dt = Date.now() - sw.t;
         if (Math.abs(dx) > 40 && dt < 400) {
-          const next = dx < 0
-            ? Math.min(indexRef.current + 1, media.length - 1)
-            : Math.max(indexRef.current - 1, 0);
+          const next = (indexRef.current + (dx < 0 ? 1 : -1) + media.length) % media.length;
           if (next !== indexRef.current) {
             indexRef.current = next; setIndex(next); resetZoom();
           }
@@ -219,15 +217,13 @@ function GalleryLightbox({
           <>
             <button
               onClick={() => nav(index - 1)}
-              disabled={index === 0}
               aria-label="Previous"
-              className="hidden md:flex absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 items-center justify-center bg-white/10 hover:bg-white/20 text-white text-2xl disabled:opacity-0 transition-all z-10"
+              className="hidden md:flex absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 items-center justify-center bg-white/10 hover:bg-white/20 text-white text-2xl transition-all z-10"
             >‹</button>
             <button
               onClick={() => nav(index + 1)}
-              disabled={index === media.length - 1}
               aria-label="Next"
-              className="hidden md:flex absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 items-center justify-center bg-white/10 hover:bg-white/20 text-white text-2xl disabled:opacity-0 transition-all z-10"
+              className="hidden md:flex absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 items-center justify-center bg-white/10 hover:bg-white/20 text-white text-2xl transition-all z-10"
             >›</button>
           </>
         )}
@@ -373,7 +369,7 @@ export default function ProductGallery({
   }, []);
 
   const goTo = (i: number) =>
-    setActiveIndex(Math.max(0, Math.min(i, media.length - 1)));
+    setActiveIndex((i + media.length) % media.length);
 
   const handleTouchEnd = (e: React.TouchEvent) => {
     const dx = touchStart.current.x - e.changedTouches[0].clientX;
@@ -486,15 +482,13 @@ export default function ProductGallery({
           <>
             <button
               onClick={(e) => { e.stopPropagation(); goTo(activeIndex - 1); }}
-              disabled={activeIndex === 0}
               aria-label="Previous"
-              className="hidden md:flex absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 items-center justify-center bg-white/80 text-[#2C2220] text-xl disabled:opacity-0 transition-opacity hover:bg-white z-10"
+              className="hidden md:flex absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 items-center justify-center bg-white/80 text-[#2C2220] text-xl transition-opacity hover:bg-white z-10"
             >‹</button>
             <button
               onClick={(e) => { e.stopPropagation(); goTo(activeIndex + 1); }}
-              disabled={activeIndex === media.length - 1}
               aria-label="Next"
-              className="hidden md:flex absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 items-center justify-center bg-white/80 text-[#2C2220] text-xl disabled:opacity-0 transition-opacity hover:bg-white z-10"
+              className="hidden md:flex absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 items-center justify-center bg-white/80 text-[#2C2220] text-xl transition-opacity hover:bg-white z-10"
             >›</button>
           </>
         )}

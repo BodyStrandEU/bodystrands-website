@@ -112,7 +112,7 @@ export default function ProductCard({ product, priority = false }: { product: Pr
   }, []);
 
   function goTo(i: number) {
-    setSlideIndex(Math.max(0, Math.min(i, combinedImages.length - 1)));
+    setSlideIndex((i + combinedImages.length) % combinedImages.length);
   }
 
   function onTouchEnd(e: React.TouchEvent) {
@@ -190,17 +190,15 @@ export default function ProductCard({ product, priority = false }: { product: Pr
           <>
             <button
               onClick={(e) => { e.stopPropagation(); goTo(slideIndex - 1); }}
-              disabled={slideIndex === 0}
               aria-label="Previous"
-              className="absolute left-1.5 top-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-white/80 backdrop-blur-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200 disabled:!opacity-0 z-10 text-[#2C2220] text-sm leading-none"
+              className="absolute left-1.5 top-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-white/80 backdrop-blur-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-10 text-[#2C2220] text-sm leading-none"
             >
               ‹
             </button>
             <button
               onClick={(e) => { e.stopPropagation(); goTo(slideIndex + 1); }}
-              disabled={slideIndex === combinedImages.length - 1}
               aria-label="Next"
-              className="absolute right-1.5 top-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-white/80 backdrop-blur-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200 disabled:!opacity-0 z-10 text-[#2C2220] text-sm leading-none"
+              className="absolute right-1.5 top-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-white/80 backdrop-blur-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-10 text-[#2C2220] text-sm leading-none"
             >
               ›
             </button>

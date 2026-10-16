@@ -1482,6 +1482,28 @@ export default function ProductEditor({ params }: { params: Promise<{ id: string
           </div>
 
           <div style={{ marginBottom: "1rem" }}>
+            <label style={{ display: "block", fontSize: "0.82rem", color: "var(--admin-text2)", marginBottom: "0.35rem" }}>
+              Audience
+            </label>
+            <select
+              value={form.audience ?? ""}
+              onChange={(e) => setForm((f) => ({ ...f, audience: (e.target.value || undefined) as typeof f.audience }))}
+              style={{
+                padding: "0.5rem 0.75rem",
+                borderRadius: "4px",
+                border: "1px solid var(--admin-border2)",
+                background: "var(--admin-surface)",
+                color: "var(--admin-text)",
+                fontSize: "0.8rem",
+              }}
+            >
+              <option value="">Women (default)</option>
+              <option value="men">Men — shows only on /men, excluded from main shop/homepage</option>
+              <option value="unisex">Unisex</option>
+            </select>
+          </div>
+
+          <div style={{ marginBottom: "1rem" }}>
             <label style={labelStyle}>Short Description</label>
             <textarea
               style={{ ...inputStyle, minHeight: "80px", resize: "vertical" }}

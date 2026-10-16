@@ -2200,7 +2200,7 @@
     "specs": [
       {
         "label": "Material",
-        "value": "High-quality stainless steel"
+        "value": "Stainless steel"
       },
       {
         "label": "Colours",
@@ -2234,27 +2234,30 @@
       "Silver Tone"
     ],
     "images": [
-      "https://i.etsystatic.com/55122258/r/il/bef080/8054121082/il_fullxfull.8054121082_g5gb.jpg"
+      "/images/products/e8372780-5fee-4061-b7fe-4db7cd4e1bf1.png"
     ],
     "variantVideos": {
-      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/7de8777193d46bc347551a71431ac610/downloads/default.mp4",
-      "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/7de8777193d46bc347551a71431ac610/downloads/default.mp4"
+      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/b431c0b3e20c5a1775a62322008402d7/downloads/default.mp4",
+      "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/b431c0b3e20c5a1775a62322008402d7/downloads/default.mp4"
     },
     "altText": "Layered gold tone stainless steel shoulder chain for elegant arm draping and dramatic statement jewelry styling",
     "gallery": [
-      "https://i.etsystatic.com/55122258/r/il/bef080/8054121082/il_fullxfull.8054121082_g5gb.jpg",
-      "/images/products/d9486dcb-9155-43e9-840e-98bf8ef72b8b.webp",
-      "https://i.etsystatic.com/55122258/r/il/7a95a0/8056121460/il_fullxfull.8056121460_bczv.jpg",
-      "https://i.etsystatic.com/55122258/r/il/1c9985/8101969895/il_fullxfull.8101969895_4nvq.jpg",
-      "https://i.etsystatic.com/55122258/r/il/cbd1a6/7803902507/il_fullxfull.7803902507_7i39.jpg",
-      "https://i.etsystatic.com/55122258/r/il/6235b8/8054057478/il_fullxfull.8054057478_743k.jpg",
-      "https://i.etsystatic.com/55122258/r/il/44241f/8054494472/il_fullxfull.8054494472_9q4h.jpg"
+      "/images/products/e8372780-5fee-4061-b7fe-4db7cd4e1bf1.png",
+      "/images/products/8d696668-d828-4af6-b47f-86aa4cbaee1e.png",
+      "https://i.etsystatic.com/55122258/r/il/44241f/8054494472/il_fullxfull.8054494472_9q4h.jpg",
+      "/images/products/cf366679-e0ef-4453-a3a5-ac21e709c1dd.png",
+      "/images/products/73a4371b-2cdb-4129-ab72-f0e3eb1d816b.png",
+      "/images/products/IMG_3076-2.jpg"
     ],
     "variantHeroes": {
-      "Gold Tone": "https://i.etsystatic.com/55122258/r/il/bef080/8054121082/il_fullxfull.8054121082_g5gb.jpg",
-      "Silver Tone": "https://i.etsystatic.com/55122258/r/il/6235b8/8054057478/il_fullxfull.8054057478_743k.jpg"
+      "Gold Tone": "/images/products/e8372780-5fee-4061-b7fe-4db7cd4e1bf1.png",
+      "Silver Tone": "/images/products/8d696668-d828-4af6-b47f-86aa4cbaee1e.png"
     },
-    "dateAdded": "2026-06-12T15:00:27-04:00"
+    "dateAdded": "2026-06-12T15:00:27-04:00",
+    "sizeGuideImage": "/images/products/cf366679-e0ef-4453-a3a5-ac21e709c1dd.png",
+    "giftTags": [
+      "bridal"
+    ]
   },
   {
     "id": "gold-hand-chain",

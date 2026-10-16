@@ -11088,7 +11088,7 @@
       }
     ],
     "featured": false,
-    "active": false,
+    "active": true,
     "variantGroups": [
       {
         "label": "Finish",

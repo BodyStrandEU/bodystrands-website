@@ -11195,23 +11195,26 @@
       }
     ],
     "images": [
-      "/images/products/RESULT_nanobanana_choker_1.png"
+      "/images/products/9ab4cd14-8423-4c9c-a576-a29c4f288f10.png"
     ],
     "altText": "Coin disc chain choker necklace in gold and silver tone stainless steel, waterproof and tarnish-resistant minimalist layering necklace",
     "dateAdded": "2026-08-08T10:00:00-04:00",
     "gallery": [
-      "/images/products/RESULT_nanobanana_choker_1.png",
-      "/images/products/aaaca860-3464-4cb6-bef2-8e5301b83913.png",
-      "/images/products/RESULT_flatlay_seedream-2.jpg",
-      "/images/products/78bc94e6-f52f-47f7-a17c-8f260874b561.png",
-      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png",
-      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf-copy.jpeg"
+      "/images/products/9ab4cd14-8423-4c9c-a576-a29c4f288f10.png",
+      "/images/products/285632da-f956-4178-b8d8-46a294a9ee96.png",
+      "/images/products/IMG_3715.jpg",
+      "/images/products/b522b78c-6abe-4f92-b119-a02bedaacbaa.jpeg",
+      "/images/products/69e35ae4-02d2-41bd-b442-7379862cda25.png",
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png"
     ],
     "variantHeroes": {
-      "Gold Tone": "/images/products/RESULT_nanobanana_choker_1.png",
-      "Silver Tone": "/images/products/aaaca860-3464-4cb6-bef2-8e5301b83913.png"
+      "Gold Tone": "/images/products/285632da-f956-4178-b8d8-46a294a9ee96.png",
+      "Silver Tone": "/images/products/9ab4cd14-8423-4c9c-a576-a29c4f288f10.png"
     },
-    "sizeGuideImage": "/images/products/Infographic-editor.png"
+    "variantVideos": {
+      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/c865b700487366e2e095d76e346eefbf/downloads/default.mp4",
+      "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/c865b700487366e2e095d76e346eefbf/downloads/default.mp4"
+    }
   },
   {
     "id": "dragonfly-charm-belly-chain",

@@ -7104,7 +7104,7 @@
       "Silver Tone"
     ],
     "images": [
-      "/images/products/8b70f096-b048-4097-9519-acaeb3de7530.png"
+      "/images/products/dd875272-a554-468e-9af2-5c8863f5aee4.png"
     ],
     "variantGroups": [
       {
@@ -7122,15 +7122,14 @@
     },
     "altText": "Delicate pearl back body chain in gold stainless steel, romantic bridal backdrop necklace with cascading drops",
     "gallery": [
-      "/images/products/8b70f096-b048-4097-9519-acaeb3de7530.png",
       "/images/products/dd875272-a554-468e-9af2-5c8863f5aee4.png",
       "https://i.etsystatic.com/55122258/r/il/36300d/7839073581/il_fullxfull.7839073581_hfc9.jpg",
+      "https://i.etsystatic.com/55122258/r/il/06f8c5/7791135220/il_fullxfull.7791135220_od5j.jpg",
       "https://i.etsystatic.com/55122258/r/il/0c6862/7839063565/il_fullxfull.7839063565_nucr.jpg",
-      "https://i.etsystatic.com/55122258/r/il/972cce/7839233709/il_fullxfull.7839233709_t94x.jpg",
-      "https://i.etsystatic.com/55122258/r/il/06f8c5/7791135220/il_fullxfull.7791135220_od5j.jpg"
+      "https://i.etsystatic.com/55122258/r/il/972cce/7839233709/il_fullxfull.7839233709_t94x.jpg"
     ],
     "variantHeroes": {
-      "Gold Tone": "https://i.etsystatic.com/55122258/r/il/36300d/7839073581/il_fullxfull.7839073581_hfc9.jpg",
+      "Gold Tone": "/images/products/dd875272-a554-468e-9af2-5c8863f5aee4.png",
       "Silver Tone": "https://i.etsystatic.com/55122258/r/il/06f8c5/7791135220/il_fullxfull.7791135220_od5j.jpg"
     },
     "dateAdded": "2026-06-12T15:00:27-04:00",

@@ -8353,14 +8353,13 @@
     "featured": false,
     "active": true,
     "images": [
+      "/images/products/be279f2e-7abb-4f40-8272-c6f5f89c90ea.png",
       "https://i.etsystatic.com/55122258/r/il/e0581f/8142951625/il_fullxfull.8142951625_73u3.jpg",
       "https://i.etsystatic.com/55122258/r/il/445881/8095081130/il_fullxfull.8095081130_nd5n.jpg",
       "https://i.etsystatic.com/55122258/r/il/9c67db/8143046201/il_fullxfull.8143046201_cm3q.jpg",
       "https://i.etsystatic.com/55122258/r/il/7d203e/7759169030/il_fullxfull.7759169030_aizv.jpg",
       "https://i.etsystatic.com/55122258/r/il/42a411/8095057756/il_fullxfull.8095057756_knht.jpg",
-      "https://i.etsystatic.com/55122258/r/il/255c79/7805113761/il_fullxfull.7805113761_ko80.jpg",
       "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.webp",
-      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.webp",
       "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp"
     ],
     "variantGroups": [
@@ -8394,7 +8393,8 @@
     "dateAdded": "2026-06-12T15:00:27-04:00",
     "giftTags": [
       "personalized"
-    ]
+    ],
+    "sizeGuideImage": "/images/products/40016029-053d-4710-bf2e-8d6f542464fc.png"
   },
   {
     "id": "monogram-letter-necklace",

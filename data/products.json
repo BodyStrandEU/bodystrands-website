@@ -309,8 +309,8 @@
     "price": 36,
     "currency": "EUR",
     "category": "Shoulder Chains",
-    "description": "Your dress is already the one. This is the detail that makes the whole look completely, unforgettably yours. Draped softly from the neck across both shoulders, handcrafted in tarnish-resistant stainless steel — available in gold or silver.",
-    "fullDescription": "This dainty shoulder chain drapes softly from the neck across both shoulders and down the upper arms, adding a delicate layered shimmer to strapless gowns, off-the-shoulder dresses, and sweetheart necklines. It sits so lightly you forget you are wearing it — until you catch it in a photo and realize it made the whole look.\n\nHandmade from durable stainless steel in gold or silver, so it holds its colour and resists tarnishing through the ceremony, the dancing, and every moment in between.",
+    "description": "Your dress is already the one. This is the detail that makes the whole look completely, unforgettably yours. Draped softly from the neck across both shoulders, now available in four sizes for a precise fit — handcrafted in tarnish-resistant stainless steel, gold or silver.",
+    "fullDescription": "This dainty shoulder chain drapes softly from the neck across both shoulders and down the upper arms, adding a delicate layered shimmer to strapless gowns, off-the-shoulder dresses, and sweetheart necklines. It sits so lightly you forget you are wearing it — until you catch it in a photo and realize it made the whole look.\n\nNow available in four sizes — Small, Medium, Large, and XL/Plus — based on your shoulder-to-shoulder and upper-arm-to-upper-arm measurements. See the size guide for exact measurements, or message us your measurements after ordering and we will adjust your chain to fit at no extra cost.\n\nHandmade from durable stainless steel in gold or silver, so it holds its colour and resists tarnishing through the ceremony, the dancing, and every moment in between.",
     "specs": [
       {
         "label": "Material",
@@ -321,20 +321,24 @@
         "value": "Gold or Silver"
       },
       {
-        "label": "Neck chain",
-        "value": "38.5 cm (15.2\") with 6 cm (2.4\") extension"
+        "label": "Small",
+        "value": "Up to 41 cm (16.1\") shoulder-to-shoulder, up to 48 cm (18.9\") upper-arm-to-upper-arm"
       },
       {
-        "label": "Shoulder chain",
-        "value": "46 cm (18.1\") × 2"
+        "label": "Medium",
+        "value": "41–43 cm (16.1\"–16.9\") shoulder-to-shoulder, 48–51 cm (18.9\"–20.1\") upper-arm-to-upper-arm"
       },
       {
-        "label": "Arm chain",
-        "value": "55 cm (21.7\") × 2"
+        "label": "Large",
+        "value": "43–46 cm (16.9\"–18.1\") shoulder-to-shoulder, 51–53 cm (20.1\"–20.9\") upper-arm-to-upper-arm"
+      },
+      {
+        "label": "XL / Plus",
+        "value": "46 cm+ (18.1\"+) shoulder-to-shoulder, 53 cm+ (20.9\"+) upper-arm-to-upper-arm"
       },
       {
         "label": "Custom fit",
-        "value": "Message us after checkout — we adjust every chain length at no extra cost"
+        "value": "For the most accurate fit, message us your exact measurements after ordering — we adjust every chain length at no extra cost"
       },
       {
         "label": "Care",
@@ -376,7 +380,19 @@
       "Silver Tone": "/images/products/goddess-shoulder-chain-main.webp",
       "Gold Tone": "/images/products/435b9a3b-10b1-4b5d-a535-a4f3786d8057.webp"
     },
-    "dateAdded": "2026-06-11T09:19:12-04:00"
+    "dateAdded": "2026-06-11T09:19:12-04:00",
+    "variantGroups": [
+      {
+        "label": "Size",
+        "options": [
+          "Small",
+          "Medium",
+          "Large",
+          "XL / Plus"
+        ]
+      }
+    ],
+    "sizeGuideImage": "/images/products/goddess-shoulder-chain-size-guide.jpg"
   },
   {
     "id": "bridal-shoulder-chain",

@@ -61,7 +61,7 @@ export type Product = {
   dateAdded?: string; // ISO 8601 — when the product was first introduced; drives homepage "New Pieces" sort
   giftTags?: GiftTag[]; // occasion/recipient tags for the /gifts mega-menu — see GIFT_TAGS above
   audience?: "men" | "women" | "unisex"; // who the piece is marketed toward — data-only for now, no UI yet (Phase 1 of the men's line rollout). Omitted = women's (the default, existing catalog).
-  plusSize?: boolean; // surfaces the product on the /plus-size collection page, in addition to its normal category — same pattern as giftTags, never removes it from regular category browsing
+  plusSize?: boolean; // surfaces the product on the /plus-size collection page ONLY — excluded from the main shop grid, homepage, and You May Also Like (see those filters) per Oct 16, 2026 user decision. Still directly reachable/purchasable via its own product page and the sitemap.
   christmas?: boolean; // surfaces the product on the /christmas collection page, in addition to its normal category — same pattern as plusSize
 };
 

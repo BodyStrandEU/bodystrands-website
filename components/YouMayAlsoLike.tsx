@@ -4,7 +4,7 @@ import ProductCard from "@/components/ProductCard";
 
 export default function YouMayAlsoLike({ product }: { product: Product }) {
   const related = products
-    .filter((p) => p.id !== product.id && p.category === product.category && p.active !== false)
+    .filter((p) => p.id !== product.id && p.category === product.category && p.active !== false && !p.plusSize)
     .slice(0, 4);
 
   if (related.length === 0) return null;

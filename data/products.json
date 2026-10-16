@@ -536,7 +536,7 @@
       }
     ],
     "images": [
-      "/images/products/bf05115b-938f-437c-9744-78ffa7503f8f.webp"
+      "/images/products/68b8b265-14c9-4806-a399-4f338043bde0.png"
     ],
     "featured": true,
     "variants": [
@@ -556,24 +556,26 @@
     "active": true,
     "altText": "Gold tone stainless steel double shoulder chest chain for elegant layered jewelry styling",
     "gallery": [
-      "/images/products/bf05115b-938f-437c-9744-78ffa7503f8f.webp",
-      "/images/products/0218471e-ca76-4bbd-9590-a8d35236fdc0.webp",
+      "/images/products/68b8b265-14c9-4806-a399-4f338043bde0.png",
+      "/images/products/d1285c89-1ff4-407e-bf5b-25ddd1a2e7a7-copy.webp",
       "/images/products/IMG_2581-2.webp",
       "/images/products/IMG_2587.webp",
-      "/images/products/d1285c89-1ff4-407e-bf5b-25ddd1a2e7a7-copy.webp",
-      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf-copy.webp",
+      "/images/products/c3dd0fbe-c4bf-4e40-bdc7-eb8bef0ea431.png",
       "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp"
     ],
     "variantHeroes": {
-      "Gold Tone": "/images/products/double-shoulder-chest-chain-gold-7.webp",
-      "Silver Tone": "/images/products/0218471e-ca76-4bbd-9590-a8d35236fdc0.webp"
+      "Gold Tone": "/images/products/d1285c89-1ff4-407e-bf5b-25ddd1a2e7a7-copy.webp",
+      "Silver Tone": "/images/products/68b8b265-14c9-4806-a399-4f338043bde0.png"
     },
     "variantVideos": {
       "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/f1c070881c7ef49d3624c7082f9d118a/downloads/default.mp4",
       "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/f1c070881c7ef49d3624c7082f9d118a/downloads/default.mp4"
     },
     "sizeGuideImage": "/images/products/c3dd0fbe-c4bf-4e40-bdc7-eb8bef0ea431.webp",
-    "dateAdded": "2026-06-11T18:55:36-04:00"
+    "dateAdded": "2026-06-11T18:55:36-04:00",
+    "giftTags": [
+      "bridal"
+    ]
   },
   {
     "id": "dainty-eyeglasses-chain",

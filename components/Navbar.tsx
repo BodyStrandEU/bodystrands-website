@@ -128,7 +128,7 @@ export default function Navbar() {
           scrolled ? "bg-[#FDF9F7]/95 backdrop-blur-sm shadow-sm" : "bg-transparent"
         }`}
       >
-        <div className="max-w-7xl mx-auto px-6 md:px-10 h-20 md:h-24 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-6 md:px-10 h-20 md:h-24 flex items-center justify-between gap-6">
           <Link href="/" className="flex-shrink-0 outline-none">
             <Image
               src="/images/logo.png"
@@ -143,7 +143,7 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop nav */}
-          <nav className="hidden md:flex items-center gap-10">
+          <nav className="hidden md:flex items-center gap-6 lg:gap-8">
             {/* Shop with dropdown */}
             <div ref={dropdownRef} className="relative">
               <button

@@ -2727,7 +2727,7 @@
     "currency": "EUR",
     "category": "Shoulder Chains",
     "description": "Your off-the-shoulder look, perfected. This dainty shoulder chain necklace sits softly across the décolletage and upper arms — the elegant accent your favourite summer tops and evening wear have been missing.",
-    "fullDescription": "A delicate chain drapes just above the shoulders and across the upper chest, creating a floating necklace effect that's unlike anything you'll find in a conventional jewellery shop. It moves with you through the evening, catching light and drawing the eye.\n\nHandcrafted in stainless steel in gold or silver. Adjustable sizing available — message us after ordering with your measurements.",
+    "fullDescription": "A delicate chain drapes just above the shoulders and across the upper chest, creating a floating necklace effect that's unlike anything you'll find in a conventional jewellery shop. It moves with you through the evening, catching light and drawing the eye.\n\nHandcrafted in stainless steel in gold or silver. Available in three sizes — Small (24 cm), Medium (28 cm), and Large (32 cm) — with the front and back drape cut to the exact same length for a balanced, symmetrical fit. Need something in between? Message us after ordering and we'll custom-size it at no extra cost.",
     "specs": [
       {
         "label": "Material",
@@ -2742,8 +2742,16 @@
         "value": "Off-shoulder drape chain"
       },
       {
+        "label": "Front drape",
+        "value": "Small 24 cm (9.4\") · Medium 28 cm (11\") · Large 32 cm (12.6\")"
+      },
+      {
+        "label": "Back drape",
+        "value": "Same length as front at every size"
+      },
+      {
         "label": "Custom fit",
-        "value": "Message us after ordering — we resize at no extra cost"
+        "value": "Message us after ordering if you need a size in between — we resize at no extra cost"
       },
       {
         "label": "Care",
@@ -2767,9 +2775,9 @@
       {
         "label": "Size",
         "options": [
-          "Small",
-          "Medium",
-          "Large"
+          "Small — 24 cm (9.4\")",
+          "Medium — 28 cm (11\")",
+          "Large — 32 cm (12.6\")"
         ]
       }
     ],

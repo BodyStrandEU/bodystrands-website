@@ -2727,7 +2727,7 @@
     "currency": "EUR",
     "category": "Shoulder Chains",
     "description": "Your off-the-shoulder look, perfected. This dainty shoulder chain necklace sits softly across the décolletage and upper arms — the elegant accent your favourite summer tops and evening wear have been missing.",
-    "fullDescription": "A delicate chain drapes just above the shoulders and across the upper chest, creating a floating necklace effect that's unlike anything you'll find in a conventional jewellery shop. It moves with you through the evening, catching light and drawing the eye.\n\nHandcrafted in stainless steel in gold or silver. Available in three sizes — Small (24 cm), Medium (28 cm), and Large (32 cm) — with the front and back drape cut to the exact same length for a balanced, symmetrical fit. Need something in between? Message us after ordering and we'll custom-size it at no extra cost.",
+    "fullDescription": "A delicate chain drapes just above the shoulders and across the upper chest, creating a floating necklace effect that's unlike anything you'll find in a conventional jewellery shop. It moves with you through the evening, catching light and drawing the eye.\n\nHandcrafted in stainless steel in gold or silver. The shoulder loops are 66 cm (26\") each with a 33 cm (13\") drop and fit most frames at every size — only the front and back horizontal chain length changes: Small 30.5 cm (12\"), Medium 35.5 cm (14\"), Large 40.5 cm (16\"). Need something in between? Message us after ordering and we'll custom-size it at no extra cost.",
     "specs": [
       {
         "label": "Material",
@@ -2742,12 +2742,16 @@
         "value": "Off-shoulder drape chain"
       },
       {
-        "label": "Front drape",
-        "value": "Small 24 cm (9.4\") · Medium 28 cm (11\") · Large 32 cm (12.6\")"
+        "label": "Shoulder loops",
+        "value": "66 cm (26\") per loop, all sizes — 33 cm (13\") drop from shoulder to underarm"
       },
       {
-        "label": "Back drape",
-        "value": "Same length as front at every size"
+        "label": "Front horizontal chain",
+        "value": "Small 30.5 cm (12\") · Medium 35.5 cm (14\") · Large 40.5 cm (16\")"
+      },
+      {
+        "label": "Back horizontal chain",
+        "value": "Same as front — Small 30.5 cm (12\") · Medium 35.5 cm (14\") · Large 40.5 cm (16\")"
       },
       {
         "label": "Custom fit",
@@ -2775,9 +2779,9 @@
       {
         "label": "Size",
         "options": [
-          "Small — 24 cm (9.4\")",
-          "Medium — 28 cm (11\")",
-          "Large — 32 cm (12.6\")"
+          "Small — 30.5 cm (12\")",
+          "Medium — 35.5 cm (14\")",
+          "Large — 40.5 cm (16\")"
         ]
       }
     ],

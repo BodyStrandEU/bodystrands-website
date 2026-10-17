@@ -60,8 +60,36 @@ export function getShippingRate(
     const free = cartTotal >= threshold;
     return {
       displayName: free ? "Free Shipping — Canada" : "Standard Shipping — Canada",
-      amount:      free ? 0 : 500,
+      // Lowered from €5 to €8 on Oct 17, 2026 to match the discounted-country tier below —
+      // threshold unchanged, it was already the correct 50 EUR-equivalent rounded to a clean
+      // number ($73.50 -> $75).
+      amount:      free ? 0 : 800,
       deliveryMin: 3, deliveryMax: 10,
+      freeThreshold: threshold,
+    };
+  }
+  // Discounted tier added Oct 17, 2026 for the highest-traffic "Rest of World" countries
+  // (ranked by all-time GA4 sessions): €8 standard, free over a clean native-currency number
+  // close to a converted 50 EUR, same methodology as the US/CA thresholds above. China, Iran
+  // and Pakistan also ranked high but aren't in COUNTRY_GROUPS below (not currently offered
+  // as a checkout destination at all), so they're excluded here too until that's resolved.
+  const DISCOUNTED_COUNTRIES: Record<string, { name: string; currency: CurrencyCode; freeTarget: number }> = {
+    SG: { name: "Singapore",     currency: "SGD", freeTarget: 75 },
+    IN: { name: "India",         currency: "INR", freeTarget: 4500 },
+    AU: { name: "Australia",     currency: "AUD", freeTarget: 85 },
+    BR: { name: "Brazil",        currency: "BRL", freeTarget: 305 },
+    SA: { name: "Saudi Arabia",  currency: "SAR", freeTarget: 200 },
+    TR: { name: "Turkey",        currency: "TRY", freeTarget: 1850 },
+    AE: { name: "UAE",           currency: "AED", freeTarget: 200 },
+  };
+  const discounted = DISCOUNTED_COUNTRIES[countryCode];
+  if (discounted) {
+    const threshold = discounted.freeTarget / rates[discounted.currency];
+    const free = cartTotal >= threshold;
+    return {
+      displayName: free ? `Free Shipping — ${discounted.name}` : `Standard Shipping — ${discounted.name}`,
+      amount:      free ? 0 : 800,
+      deliveryMin: 7, deliveryMax: 20,
       freeThreshold: threshold,
     };
   }

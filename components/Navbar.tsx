@@ -38,18 +38,24 @@ export default function Navbar() {
   const overDarkHero = false;
   const { currency, format } = useCurrency();
 
-  // US/CA get their own fixed native-currency thresholds instead of a converted EUR50 —
-  // keep these two figures in sync by hand with lib/shipping.ts's US/CA freeThreshold.
-  const shippingLineFull = currency === "USD"
-    ? "Free Shipping in the USA Over $60.00 USD"
-    : currency === "CAD"
-      ? "Free Shipping in Canada Over $75.00 CAD"
-      : `Free Shipping in Europe & North America Over ${format(50)}`;
-  const shippingLineShort = currency === "USD"
-    ? "Free Shipping Over $60.00 USD"
-    : currency === "CAD"
-      ? "Free Shipping Over $75.00 CAD"
-      : `Free Shipping Over ${format(50)}`;
+  // Countries with their own fixed native-currency thresholds instead of a converted EUR50 —
+  // keep these figures in sync by hand with lib/shipping.ts's matching freeThreshold values.
+  // USD was stuck at a stale "$60.00" here even after the real threshold moved to $100 on
+  // Oct 13, 2026 — fixed Oct 17, 2026 along with adding the new discounted-country tier.
+  const SHIPPING_LINES: Partial<Record<string, { full: string; short: string }>> = {
+    USD: { full: "Free Shipping in the USA Over $100.00 USD", short: "Free Shipping Over $100.00 USD" },
+    CAD: { full: "Free Shipping in Canada Over $75.00 CAD",   short: "Free Shipping Over $75.00 CAD" },
+    SGD: { full: "Free Shipping in Singapore Over $75.00 SGD",   short: "Free Shipping Over $75.00 SGD" },
+    INR: { full: "Free Shipping in India Over ₹4,500 INR",       short: "Free Shipping Over ₹4,500 INR" },
+    AUD: { full: "Free Shipping in Australia Over $85.00 AUD",   short: "Free Shipping Over $85.00 AUD" },
+    BRL: { full: "Free Shipping in Brazil Over R$305.00 BRL",    short: "Free Shipping Over R$305.00 BRL" },
+    SAR: { full: "Free Shipping in Saudi Arabia Over 200.00 SAR", short: "Free Shipping Over 200.00 SAR" },
+    TRY: { full: "Free Shipping in Turkey Over ₺1,850 TRY",      short: "Free Shipping Over ₺1,850 TRY" },
+    AED: { full: "Free Shipping in the UAE Over 200.00 AED",     short: "Free Shipping Over 200.00 AED" },
+  };
+  const shippingLine = SHIPPING_LINES[currency];
+  const shippingLineFull  = shippingLine?.full  ?? `Free Shipping in Europe & North America Over ${format(50)}`;
+  const shippingLineShort = shippingLine?.short ?? `Free Shipping Over ${format(50)}`;
 
   const [scrolled,    setScrolled]    = useState(false);
   const [menuOpen,    setMenuOpen]    = useState(false);

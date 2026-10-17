@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState, useEffect } from "react";
+import { useRef, useState, useEffect, type ReactNode } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useCart } from "@/lib/cart";
@@ -11,6 +11,22 @@ import { TrustBadgesInline } from "@/components/TrustBadges";
 const FREE_THRESHOLD = 50;
 // Keep in sync by hand with GIFT_WRAP_FEE_EUR in app/(site)/api/checkout/route.ts
 const GIFT_WRAP_FEE = 4;
+
+// Pre-checkout nudge (shown before a shipping country is entered) — keep these thresholds in
+// sync by hand with lib/shipping.ts's US/CA/DISCOUNTED_COUNTRIES blocks and Navbar.tsx's
+// SHIPPING_LINES. Once a shipping country is selected, shippingRate.freeThreshold below takes
+// over and is always correct automatically.
+const PRE_CHECKOUT_FREE_SHIPPING: Partial<Record<string, ReactNode>> = {
+  USD: <>Free shipping on USA orders over <span className="text-[#2C2220]">$100.00 USD</span></>,
+  CAD: <>Free shipping on Canada orders over <span className="text-[#2C2220]">$75.00 CAD</span></>,
+  SGD: <>Free shipping on Singapore orders over <span className="text-[#2C2220]">$75.00 SGD</span></>,
+  INR: <>Free shipping on India orders over <span className="text-[#2C2220]">₹4,500 INR</span></>,
+  AUD: <>Free shipping on Australia orders over <span className="text-[#2C2220]">$85.00 AUD</span></>,
+  BRL: <>Free shipping on Brazil orders over <span className="text-[#2C2220]">R$305.00 BRL</span></>,
+  SAR: <>Free shipping on Saudi Arabia orders over <span className="text-[#2C2220]">200.00 SAR</span></>,
+  TRY: <>Free shipping on Turkey orders over <span className="text-[#2C2220]">₺1,850 TRY</span></>,
+  AED: <>Free shipping on UAE orders over <span className="text-[#2C2220]">200.00 AED</span></>,
+};
 
 export default function CartIcon({ light }: { light?: boolean }) {
   const { items, count, subtotal, remove, updateQty, clear, shippingCountry, setShippingCountry } = useCart();
@@ -221,11 +237,7 @@ export default function CartIcon({ light }: { light?: boolean }) {
                 )}
                 {!shippingCountry && remaining > 0 && (
                   <p className="text-[0.52rem] tracking-[0.08em] uppercase text-[#8C7B6E] leading-relaxed">
-                    {currency === "USD" ? (
-                      <>Free shipping on USA orders over <span className="text-[#2C2220]">$100.00 USD</span></>
-                    ) : currency === "CAD" ? (
-                      <>Free shipping on Canada orders over <span className="text-[#2C2220]">$75.00 CAD</span></>
-                    ) : (
+                    {PRE_CHECKOUT_FREE_SHIPPING[currency] ?? (
                       <>Free shipping on Europe & North America orders over{" "}
                       <span className="text-[#2C2220]">{format(FREE_THRESHOLD)}</span></>
                     )}

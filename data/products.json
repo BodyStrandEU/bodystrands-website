@@ -4757,45 +4757,33 @@
     ]
   },
   {
-    "id": "dainty-backdrop-back-necklace",
-    "name": "Dainty Backdrop Back Necklace",
-    "price": 32,
+    "id": "pearl-backdrop-necklace",
+    "name": "Pearl Backdrop Necklace",
+    "price": 24,
     "currency": "EUR",
     "category": "Back Chains",
-    "description": "Your open-back look's finishing piece. This dainty gold or silver backdrop necklace drapes down the spine with elegant simplicity — for bikinis, bridal gowns, and open-back dresses that deserve a beautiful back.",
-    "fullDescription": "A fine chain sits at the neckline and sweeps down the open back, adjustable to your exact drop length. Clean, elegant, and versatile enough to work on any open-back garment.\n\nAvailable in Gold or Silver stainless steel with three extender sizes. Message us your measurements after ordering and we'll customise the fit at no extra cost.",
+    "description": "The finishing touch your open-back look has been waiting for. This bridal pearl backdrop necklace drapes elegantly down the spine — delicate, romantic, and completely weightless. Available in gold or silver.",
+    "fullDescription": "Pearl drops cascade gently down the back, turning every exit into a moment. Designed for wedding gowns, open-back evening dresses, and bridesmaid looks that deserve something beautiful at the back.\n\nHandcrafted from stainless steel with pearl accents in gold or silver finish. Adjustable fit — message us after ordering with your measurements and we'll resize at no extra cost.",
     "specs": [
       {
         "label": "Material",
-        "value": "Stainless steel"
+        "value": "Stainless steel with pearl accents"
       },
       {
         "label": "Colours",
         "value": "Gold or Silver"
       },
       {
-        "label": "Small extender",
-        "value": "+7 cm (2.8\")"
-      },
-      {
-        "label": "Medium extender",
-        "value": "+14 cm (5.5\")"
-      },
-      {
-        "label": "Large extender",
-        "value": "+23 cm (9.1\")"
+        "label": "Style",
+        "value": "Pearl bridal backdrop necklace"
       },
       {
         "label": "Occasion",
-        "value": "Bridal, beach, open-back dress"
-      },
-      {
-        "label": "Custom fit",
-        "value": "For a perfect fit, Message us your dimensions after ordering — we resize at no extra cost"
+        "value": "Wedding, bridal, formal"
       },
       {
         "label": "Care",
-        "value": "Avoid perfumes, lotions. Store in an airtight container."
+        "value": "Avoid perfumes, and lotions. Store in an airtight container."
       },
       {
         "label": "Shipping",
@@ -4809,39 +4797,32 @@
       "Silver Tone"
     ],
     "images": [
-      "/images/products/9adc8fbb-2367-48f5-8d7a-3a6868931982.png"
-    ],
-    "variantGroups": [
-      {
-        "label": "Size",
-        "options": [
-          "Small (+7 cm (2.8\") ext)",
-          "Medium (+14 cm (5.5\") ext)",
-          "Large (+23 cm (9.1\") ext)"
-        ]
-      }
+      "/images/products/69295c69-027e-4b73-be6d-1b301caa31e0.png"
     ],
     "variantVideos": {
-      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/eaae5e0c75229942d834cacc8373ecf9/downloads/default.mp4",
-      "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/eaae5e0c75229942d834cacc8373ecf9/downloads/default.mp4"
+      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/e70f0cf057a57f76956c21b7c7edc6d2/downloads/default.mp4",
+      "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/e70f0cf057a57f76956c21b7c7edc6d2/downloads/default.mp4"
     },
-    "altText": "Gold tone stainless steel dainty backdrop back necklace for open-back outfits and beach wear",
+    "altText": "Delicate gold stainless steel back body chain with pearl accents for bridal open-back necklace styling",
     "gallery": [
-      "/images/products/9adc8fbb-2367-48f5-8d7a-3a6868931982.png",
-      "https://i.etsystatic.com/55122258/r/il/8cb85b/7867608707/il_fullxfull.7867608707_d0k5.jpg",
-      "/images/products/IMG_9749.webp",
-      "https://i.etsystatic.com/55122258/r/il/d204ac/7867554645/il_fullxfull.7867554645_gcbi.jpg",
-      "https://i.etsystatic.com/55122258/r/il/698621/7867784241/il_fullxfull.7867784241_oh2z.jpg",
-      "https://i.etsystatic.com/55122258/r/il/d99681/7819703812/il_fullxfull.7819703812_d194.jpg"
+      "/images/products/69295c69-027e-4b73-be6d-1b301caa31e0.png",
+      "https://i.etsystatic.com/55122258/r/il/d8a5ca/7732006565/il_fullxfull.7732006565_9nw0.jpg",
+      "https://i.etsystatic.com/55122258/r/il/8f86ae/8113384714/il_fullxfull.8113384714_caup.jpg",
+      "https://i.etsystatic.com/55122258/r/il/2de89e/7808403059/il_fullxfull.7808403059_izy3.jpg",
+      "https://i.etsystatic.com/55122258/r/il/a43963/7760456018/il_fullxfull.7760456018_qsii.jpg",
+      "https://i.etsystatic.com/55122258/r/il/059c6d/8161283419/il_fullxfull.8161283419_p2ma.jpg",
+      "https://i.etsystatic.com/55122258/r/il/839bd2/7827659073/il_fullxfull.7827659073_b7qq.jpg",
+      "https://i.etsystatic.com/55122258/r/il/17d2fa/8113385312/il_fullxfull.8113385312_9cvl.jpg"
     ],
     "variantHeroes": {
-      "Gold Tone": "/images/products/9adc8fbb-2367-48f5-8d7a-3a6868931982.png",
-      "Silver Tone": "https://i.etsystatic.com/55122258/r/il/d204ac/7867554645/il_fullxfull.7867554645_gcbi.jpg"
+      "Gold Tone": "/images/products/69295c69-027e-4b73-be6d-1b301caa31e0.png",
+      "Silver Tone": "https://i.etsystatic.com/55122258/r/il/839bd2/7827659073/il_fullxfull.7827659073_b7qq.jpg"
     },
     "dateAdded": "2026-06-12T15:00:27-04:00",
     "giftTags": [
       "bridal"
-    ]
+    ],
+    "sizeGuideImage": "/images/products/il_fullxfull.8113384714_caup.webp"
   },
   {
     "id": "pearl-hand-chain",
@@ -5045,74 +5026,6 @@
     "plusSize": true
   },
   {
-    "id": "pearl-backdrop-necklace",
-    "name": "Pearl Backdrop Necklace",
-    "price": 24,
-    "currency": "EUR",
-    "category": "Back Chains",
-    "description": "The finishing touch your open-back look has been waiting for. This bridal pearl backdrop necklace drapes elegantly down the spine — delicate, romantic, and completely weightless. Available in gold or silver.",
-    "fullDescription": "Pearl drops cascade gently down the back, turning every exit into a moment. Designed for wedding gowns, open-back evening dresses, and bridesmaid looks that deserve something beautiful at the back.\n\nHandcrafted from stainless steel with pearl accents in gold or silver finish. Adjustable fit — message us after ordering with your measurements and we'll resize at no extra cost.",
-    "specs": [
-      {
-        "label": "Material",
-        "value": "Stainless steel with pearl accents"
-      },
-      {
-        "label": "Colours",
-        "value": "Gold or Silver"
-      },
-      {
-        "label": "Style",
-        "value": "Pearl bridal backdrop necklace"
-      },
-      {
-        "label": "Occasion",
-        "value": "Wedding, bridal, formal"
-      },
-      {
-        "label": "Care",
-        "value": "Avoid perfumes, and lotions. Store in an airtight container."
-      },
-      {
-        "label": "Shipping",
-        "value": "Dispatches within 1–2 business days"
-      }
-    ],
-    "featured": false,
-    "active": true,
-    "variants": [
-      "Gold Tone",
-      "Silver Tone"
-    ],
-    "images": [
-      "/images/products/69295c69-027e-4b73-be6d-1b301caa31e0.png"
-    ],
-    "variantVideos": {
-      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/e70f0cf057a57f76956c21b7c7edc6d2/downloads/default.mp4",
-      "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/e70f0cf057a57f76956c21b7c7edc6d2/downloads/default.mp4"
-    },
-    "altText": "Delicate gold stainless steel back body chain with pearl accents for bridal open-back necklace styling",
-    "gallery": [
-      "/images/products/69295c69-027e-4b73-be6d-1b301caa31e0.png",
-      "https://i.etsystatic.com/55122258/r/il/d8a5ca/7732006565/il_fullxfull.7732006565_9nw0.jpg",
-      "https://i.etsystatic.com/55122258/r/il/8f86ae/8113384714/il_fullxfull.8113384714_caup.jpg",
-      "https://i.etsystatic.com/55122258/r/il/2de89e/7808403059/il_fullxfull.7808403059_izy3.jpg",
-      "https://i.etsystatic.com/55122258/r/il/a43963/7760456018/il_fullxfull.7760456018_qsii.jpg",
-      "https://i.etsystatic.com/55122258/r/il/059c6d/8161283419/il_fullxfull.8161283419_p2ma.jpg",
-      "https://i.etsystatic.com/55122258/r/il/839bd2/7827659073/il_fullxfull.7827659073_b7qq.jpg",
-      "https://i.etsystatic.com/55122258/r/il/17d2fa/8113385312/il_fullxfull.8113385312_9cvl.jpg"
-    ],
-    "variantHeroes": {
-      "Gold Tone": "/images/products/69295c69-027e-4b73-be6d-1b301caa31e0.png",
-      "Silver Tone": "https://i.etsystatic.com/55122258/r/il/839bd2/7827659073/il_fullxfull.7827659073_b7qq.jpg"
-    },
-    "dateAdded": "2026-06-12T15:00:27-04:00",
-    "giftTags": [
-      "bridal"
-    ],
-    "sizeGuideImage": "/images/products/il_fullxfull.8113384714_caup.webp"
-  },
-  {
     "id": "personalized-birthstone-back-necklace",
     "name": "Personalized Birthstone Back Necklace",
     "price": 25.6,
@@ -5184,6 +5097,93 @@
     "dateAdded": "2026-06-12T15:00:27-04:00",
     "giftTags": [
       "personalized",
+      "bridal"
+    ]
+  },
+  {
+    "id": "dainty-backdrop-back-necklace",
+    "name": "Dainty Backdrop Back Necklace",
+    "price": 32,
+    "currency": "EUR",
+    "category": "Back Chains",
+    "description": "Your open-back look's finishing piece. This dainty gold or silver backdrop necklace drapes down the spine with elegant simplicity — for bikinis, bridal gowns, and open-back dresses that deserve a beautiful back.",
+    "fullDescription": "A fine chain sits at the neckline and sweeps down the open back, adjustable to your exact drop length. Clean, elegant, and versatile enough to work on any open-back garment.\n\nAvailable in Gold or Silver stainless steel with three extender sizes. Message us your measurements after ordering and we'll customise the fit at no extra cost.",
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Stainless steel"
+      },
+      {
+        "label": "Colours",
+        "value": "Gold or Silver"
+      },
+      {
+        "label": "Small extender",
+        "value": "+7 cm (2.8\")"
+      },
+      {
+        "label": "Medium extender",
+        "value": "+14 cm (5.5\")"
+      },
+      {
+        "label": "Large extender",
+        "value": "+23 cm (9.1\")"
+      },
+      {
+        "label": "Occasion",
+        "value": "Bridal, beach, open-back dress"
+      },
+      {
+        "label": "Custom fit",
+        "value": "For a perfect fit, Message us your dimensions after ordering — we resize at no extra cost"
+      },
+      {
+        "label": "Care",
+        "value": "Avoid perfumes, lotions. Store in an airtight container."
+      },
+      {
+        "label": "Shipping",
+        "value": "Dispatches within 1–2 business days"
+      }
+    ],
+    "featured": false,
+    "active": true,
+    "variants": [
+      "Gold Tone",
+      "Silver Tone"
+    ],
+    "images": [
+      "/images/products/9adc8fbb-2367-48f5-8d7a-3a6868931982.png"
+    ],
+    "variantGroups": [
+      {
+        "label": "Size",
+        "options": [
+          "Small (+7 cm (2.8\") ext)",
+          "Medium (+14 cm (5.5\") ext)",
+          "Large (+23 cm (9.1\") ext)"
+        ]
+      }
+    ],
+    "variantVideos": {
+      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/eaae5e0c75229942d834cacc8373ecf9/downloads/default.mp4",
+      "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/eaae5e0c75229942d834cacc8373ecf9/downloads/default.mp4"
+    },
+    "altText": "Gold tone stainless steel dainty backdrop back necklace for open-back outfits and beach wear",
+    "gallery": [
+      "/images/products/9adc8fbb-2367-48f5-8d7a-3a6868931982.png",
+      "https://i.etsystatic.com/55122258/r/il/8cb85b/7867608707/il_fullxfull.7867608707_d0k5.jpg",
+      "/images/products/IMG_9749.webp",
+      "https://i.etsystatic.com/55122258/r/il/d204ac/7867554645/il_fullxfull.7867554645_gcbi.jpg",
+      "https://i.etsystatic.com/55122258/r/il/698621/7867784241/il_fullxfull.7867784241_oh2z.jpg",
+      "https://i.etsystatic.com/55122258/r/il/d99681/7819703812/il_fullxfull.7819703812_d194.jpg"
+    ],
+    "variantHeroes": {
+      "Gold Tone": "/images/products/9adc8fbb-2367-48f5-8d7a-3a6868931982.png",
+      "Silver Tone": "https://i.etsystatic.com/55122258/r/il/d204ac/7867554645/il_fullxfull.7867554645_gcbi.jpg"
+    },
+    "dateAdded": "2026-06-12T15:00:27-04:00",
+    "giftTags": [
       "bridal"
     ]
   },

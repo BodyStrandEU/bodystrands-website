@@ -24,8 +24,9 @@ export default async function MenPage() {
               Men's Jewelry
             </h1>
             <p className="text-sm font-light tracking-wide text-[#8C7B6E] leading-relaxed max-w-md">
-              Solid Cuban curb chains in gold-tone or silver-tone stainless steel — no charms,
-              no fuss, just weight and metal built to last. Waterproof and tarnish-resistant.
+              Men wear jewelry too. These pieces are made for them. We make ours the same way
+              for everyone: real stainless steel, properly finished, built to survive the
+              shower, the gym, and everyday wear without losing its shine.
             </p>
           </div>
           <div className="relative aspect-[4/3] w-full overflow-hidden -mx-6 md:mx-0">

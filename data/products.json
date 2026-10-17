@@ -4683,7 +4683,7 @@
       "Silver Tone"
     ],
     "images": [
-      "/images/products/67b40e8a-fd66-4c80-9d83-611f2e8a16ae-copy.webp"
+      "/images/products/9a25fc08-2054-403c-8e46-5fb792dc04df.png"
     ],
     "variantGroups": [
       {
@@ -4702,23 +4702,27 @@
     },
     "altText": "Handcrafted silver stainless steel shoulder harness for evening wear, elegant body chain accessory for formal dresses",
     "gallery": [
+      "/images/products/9a25fc08-2054-403c-8e46-5fb792dc04df.png",
+      "/images/products/54bdca19-ad04-4534-9683-0fa20328ebae.png",
+      "https://i.etsystatic.com/55122258/r/il/145235/7987884440/il_fullxfull.7987884440_5ck3.jpg",
+      "/images/products/3de2bbc3-6c6d-4e12-a085-d57964719dbe.png",
       "/images/products/67b40e8a-fd66-4c80-9d83-611f2e8a16ae-copy.webp",
       "https://i.etsystatic.com/55122258/r/il/b9181f/7987888140/il_fullxfull.7987888140_9j6g.jpg",
-      "https://i.etsystatic.com/55122258/r/il/145235/7987884440/il_fullxfull.7987884440_5ck3.jpg",
-      "/images/products/1ae16d95-0e18-4ce4-aeb3-0c755b4d618c-copy.webp",
-      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp",
       "https://i.etsystatic.com/55122258/r/il/07c056/7987871718/il_fullxfull.7987871718_fldp.jpg",
       "https://i.etsystatic.com/55122258/r/il/0d1ed3/7987871978/il_fullxfull.7987871978_kq45.jpg",
-      "https://i.etsystatic.com/55122258/r/il/cbd1a6/7803902507/il_fullxfull.7803902507_7i39.jpg",
-      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.webp",
-      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.webp"
+      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.webp",
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp"
     ],
     "variantHeroes": {
-      "Gold Tone": "/images/products/67b40e8a-fd66-4c80-9d83-611f2e8a16ae-copy.webp",
-      "Silver Tone": "https://i.etsystatic.com/55122258/r/il/b9181f/7987888140/il_fullxfull.7987888140_9j6g.jpg"
+      "Gold Tone": "/images/products/54bdca19-ad04-4534-9683-0fa20328ebae.png",
+      "Silver Tone": "/images/products/9a25fc08-2054-403c-8e46-5fb792dc04df.png"
     },
     "sizeGuideImage": "/images/products/25f995a3-cea4-4872-b772-7d62d0e000ec.webp",
-    "dateAdded": "2026-06-12T15:00:27-04:00"
+    "dateAdded": "2026-06-12T15:00:27-04:00",
+    "giftTags": [
+      "bridal"
+    ],
+    "plusSize": false
   },
   {
     "id": "pearl-wedding-back-necklace",

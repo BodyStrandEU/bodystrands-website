@@ -2727,7 +2727,7 @@
     "currency": "EUR",
     "category": "Shoulder Chains",
     "description": "Your off-the-shoulder look, perfected. This dainty shoulder chain necklace sits softly across the décolletage and upper arms — the elegant accent your favourite summer tops and evening wear have been missing.",
-    "fullDescription": "A delicate chain drapes just above the shoulders and across the upper chest, creating a floating necklace effect that's unlike anything you'll find in a conventional jewellery shop. It moves with you through the evening, catching light and drawing the eye.\n\nHandcrafted in stainless steel in gold or silver. Available in three sizes — Small (24 cm), Medium (28 cm), and Large (32 cm) — with the front and back drape cut to the exact same length for a balanced, symmetrical fit. Need something in between? Message us after ordering and we'll custom-size it at no extra cost.",
+    "fullDescription": "A delicate chain drapes just above the shoulders and across the upper chest, creating a floating necklace effect that's unlike anything you'll find in a conventional jewellery shop. It moves with you through the evening, catching light and drawing the eye.\n\nHandcrafted in stainless steel in gold or silver. Adjustable sizing available — message us after ordering with your measurements.",
     "specs": [
       {
         "label": "Material",
@@ -2742,16 +2742,8 @@
         "value": "Off-shoulder drape chain"
       },
       {
-        "label": "Front drape",
-        "value": "Small 24 cm (9.4\") · Medium 28 cm (11\") · Large 32 cm (12.6\")"
-      },
-      {
-        "label": "Back drape",
-        "value": "Same length as front at every size"
-      },
-      {
         "label": "Custom fit",
-        "value": "Message us after ordering if you need a size in between — we resize at no extra cost"
+        "value": "Message us after ordering — we resize at no extra cost"
       },
       {
         "label": "Care",
@@ -2769,15 +2761,15 @@
       "Silver Tone"
     ],
     "images": [
-      "/images/products/0940847a-f4bf-412c-82ab-c0ca80d3de00.webp"
+      "/images/products/f69421b9-2dcf-4030-adb4-9aa5a4ce595a.png"
     ],
     "variantGroups": [
       {
         "label": "Size",
         "options": [
-          "Small — 24 cm (9.4\")",
-          "Medium — 28 cm (11\")",
-          "Large — 32 cm (12.6\")"
+          "Small",
+          "Medium",
+          "Large"
         ]
       }
     ],
@@ -2787,18 +2779,21 @@
     },
     "altText": "Gold tone stainless steel off-shoulder chain necklace for elegant décolletage styling and special occasions",
     "gallery": [
+      "/images/products/f69421b9-2dcf-4030-adb4-9aa5a4ce595a.png",
       "/images/products/0940847a-f4bf-412c-82ab-c0ca80d3de00.webp",
       "https://i.etsystatic.com/55122258/r/il/bc4bc3/8099217083/il_fullxfull.8099217083_e5km.jpg",
       "https://i.etsystatic.com/55122258/r/il/cd07a5/8099217085/il_fullxfull.8099217085_eti5.jpg",
-      "https://i.etsystatic.com/55122258/r/il/cbd1a6/7803902507/il_fullxfull.7803902507_7i39.jpg",
-      "https://i.etsystatic.com/55122258/r/il/ee7e54/8099217069/il_fullxfull.8099217069_obyr.jpg",
-      "https://i.etsystatic.com/55122258/r/il/9b2511/8103697781/il_fullxfull.8103697781_evgk.jpg"
+      "/images/products/7b710959-4a43-4b74-ac09-759b063cbb2e.png"
     ],
     "variantHeroes": {
       "Gold Tone": "/images/products/0940847a-f4bf-412c-82ab-c0ca80d3de00.webp",
-      "Silver Tone": "https://i.etsystatic.com/55122258/r/il/ee7e54/8099217069/il_fullxfull.8099217069_obyr.jpg"
+      "Silver Tone": "/images/products/f69421b9-2dcf-4030-adb4-9aa5a4ce595a.png"
     },
-    "dateAdded": "2026-06-12T15:00:27-04:00"
+    "dateAdded": "2026-06-12T15:00:27-04:00",
+    "giftTags": [
+      "bridal"
+    ],
+    "sizeGuideImage": "/images/products/7b710959-4a43-4b74-ac09-759b063cbb2e.png"
   },
   {
     "id": "initial-letter-rhinestone-choker",

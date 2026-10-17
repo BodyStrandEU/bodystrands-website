@@ -304,99 +304,6 @@
     ]
   },
   {
-    "id": "goddess-shoulder-chain",
-    "name": "Goddess Shoulder Chain",
-    "price": 36,
-    "currency": "EUR",
-    "category": "Shoulder Chains",
-    "description": "Your dress is already the one. This is the detail that makes the whole look completely, unforgettably yours. Draped softly from the neck across both shoulders, now available in four sizes for a precise fit — handcrafted in tarnish-resistant stainless steel, gold or silver.",
-    "fullDescription": "This dainty shoulder chain drapes softly from the neck across both shoulders and down the upper arms, adding a delicate layered shimmer to strapless gowns, off-the-shoulder dresses, and sweetheart necklines. It sits so lightly you forget you are wearing it — until you catch it in a photo and realize it made the whole look.\n\nNow available in four sizes — Small, Medium, Large, and XL/Plus — based on your shoulder-to-shoulder and upper-arm-to-upper-arm measurements. See the size guide for exact measurements, or message us your measurements after ordering and we will adjust your chain to fit at no extra cost.\n\nHandmade from durable stainless steel in gold or silver, so it holds its colour and resists tarnishing through the ceremony, the dancing, and every moment in between.",
-    "specs": [
-      {
-        "label": "Material",
-        "value": "High-quality stainless steel"
-      },
-      {
-        "label": "Colours",
-        "value": "Gold or Silver"
-      },
-      {
-        "label": "Small",
-        "value": "Up to 41 cm (16.1\") shoulder-to-shoulder, up to 48 cm (18.9\") upper-arm-to-upper-arm"
-      },
-      {
-        "label": "Medium",
-        "value": "41–43 cm (16.1\"–16.9\") shoulder-to-shoulder, 48–51 cm (18.9\"–20.1\") upper-arm-to-upper-arm"
-      },
-      {
-        "label": "Large",
-        "value": "43–46 cm (16.9\"–18.1\") shoulder-to-shoulder, 51–53 cm (20.1\"–20.9\") upper-arm-to-upper-arm"
-      },
-      {
-        "label": "XL / Plus",
-        "value": "46 cm+ (18.1\"+) shoulder-to-shoulder, 53 cm+ (20.9\"+) upper-arm-to-upper-arm"
-      },
-      {
-        "label": "Custom fit",
-        "value": "For the most accurate fit, message us your exact measurements after ordering — we adjust every chain length at no extra cost"
-      },
-      {
-        "label": "Care",
-        "value": "Wipe gently with a soft cloth after wear. Store in an airtight container."
-      },
-      {
-        "label": "Shipping",
-        "value": "Dispatches within 1–2 business days"
-      }
-    ],
-    "images": [
-      "/images/products/59a83f0a-7516-4c9d-b785-ff76790fa250.png"
-    ],
-    "variantVideos": {
-      "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/992bfe17680bc4fbd83158154a7b1345/downloads/default.mp4",
-      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/a60ff139fe09398b9f4e48d687db28a8/downloads/default.mp4"
-    },
-    "featured": true,
-    "variants": [
-      "Silver Tone",
-      "Gold Tone"
-    ],
-    "active": true,
-    "altText": "Gold tone stainless steel goddess shoulder chain for elegant evening wear and special occasions",
-    "gallery": [
-      "/images/products/59a83f0a-7516-4c9d-b785-ff76790fa250.png",
-      "/images/products/c1ea4c0a-b5b6-4da9-a5de-8fdbe229ba10.png",
-      "/images/products/831cc6e5-c83c-435b-afe9-5b28a9d1025e.webp",
-      "/images/products/4a3d4343-1df8-4748-9a6e-289541a9de5c.webp",
-      "/images/products/goddess-shoulder-chain-main.webp",
-      "/images/products/goddess-shoulder-chain-both-3.webp",
-      "/images/products/00415bfe-021a-4247-8149-9e794e141d70.jpg",
-      "/images/products/goddess-shoulder-chain-both-4.webp",
-      "/images/products/435b9a3b-10b1-4b5d-a535-a4f3786d8057.webp",
-      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.jpg"
-    ],
-    "variantHeroes": {
-      "Silver Tone": "/images/products/59a83f0a-7516-4c9d-b785-ff76790fa250.png",
-      "Gold Tone": "/images/products/831cc6e5-c83c-435b-afe9-5b28a9d1025e.webp"
-    },
-    "dateAdded": "2026-06-11T09:19:12-04:00",
-    "sizeGuideImage": "/images/products/00415bfe-021a-4247-8149-9e794e141d70.jpg",
-    "variantGroups": [
-      {
-        "label": "Size",
-        "options": [
-          "Small",
-          "Medium",
-          "Large",
-          "XL / Plus"
-        ]
-      }
-    ],
-    "giftTags": [
-      "bridal"
-    ]
-  },
-  {
     "id": "bridal-shoulder-chain",
     "name": "Bridal Shoulder Chain",
     "price": 28,
@@ -489,13 +396,119 @@
     "sizeGuideImage": "/images/products/c60961fc-5268-4a1c-ad97-420558e4f0cf.png"
   },
   {
-    "id": "double-shoulder-chest-chain",
-    "name": "Double Shoulder Chest Chain",
-    "price": 44,
+    "id": "silver-shoulder-harness",
+    "name": "Silver Shoulder Harness",
+    "price": 32,
     "currency": "EUR",
     "category": "Shoulder Chains",
-    "description": "Make a beautiful statement with this delicate shoulder chain, designed to drape perfectly across your collarbone and upper arms. Crafted by hand from highly durable stainless steel — a stunning complement to bridal wear, prom gowns, or any strapless dress. Available in gold or silver.",
-    "fullDescription": "Where most shoulder chains cover one side, this one goes further — draping softly over both shoulders with layered chains that fall across the chest in perfect symmetry. The result is balanced, elegant, and completely unforgettable on a strapless gown, a white linen dress, or a simple black top.\n\nHandmade from high-quality stainless steel in gold or silver tone, so it holds its colour and resists tarnishing through every wear. Size is fully customisable — message us your exact dimensions after checkout and we can craft the perfect custom fit at no extra cost.",
+    "description": "Your evening gown's most striking accent. This dainty shoulder harness drapes elegantly across the body — handcrafted stainless steel with four sizes to choose from.",
+    "fullDescription": "A structured yet delicate shoulder harness that drapes from the neck across the shoulders and down the chest, creating a statement silhouette for evening gowns, bachelorette looks, and any occasion that calls for something extraordinary.\n\nAvailable in Gold or Silver stainless steel.\n\nSizing:\nS — Neck Chain: 34.5 cm (13.6\") · Extension: 8 cm (3.1\") · Shoulder Chain: 51 cm (20.1\")\nM — Neck Chain: 35.5 cm (14\") · Extension: 9 cm (3.5\") · Shoulder Chain: 56 cm (22\")\nL — Neck Chain: 36.5 cm (14.4\") · Extension: 9 cm (3.5\") · Shoulder Chain: 60.5 cm (23.8\")\nXL — Neck Chain: 38 cm (15\") · Extension: 10 cm (3.9\") · Shoulder Chain: 65 cm (25.6\")\n\nNeed a custom size? Message us after ordering and we'll adjust at no extra cost.",
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Stainless steel"
+      },
+      {
+        "label": "Colours",
+        "value": "Gold or Silver"
+      },
+      {
+        "label": "Sizes",
+        "value": "S, M, L, XL"
+      },
+      {
+        "label": "S",
+        "value": "Neck 34.5 cm (13.6\") · Extension 8 cm (3.1\") · Shoulder 51 cm (20.1\")"
+      },
+      {
+        "label": "M",
+        "value": "Neck 35.5 cm (14\") · Extension 9 cm (3.5\") · Shoulder 56 cm (22\")"
+      },
+      {
+        "label": "L",
+        "value": "Neck 36.5 cm (14.4\") · Extension 9 cm (3.5\") · Shoulder 60.5 cm (23.8\")"
+      },
+      {
+        "label": "XL",
+        "value": "Neck 38 cm (15\") · Extension 10 cm (3.9\") · Shoulder 65 cm (25.6\")"
+      },
+      {
+        "label": "Style",
+        "value": "Shoulder harness / body chain"
+      },
+      {
+        "label": "Occasion",
+        "value": "Evening gown, bachelorette, formal"
+      },
+      {
+        "label": "Custom fit",
+        "value": "Message us after ordering — we resize at no extra cost"
+      },
+      {
+        "label": "Care",
+        "value": "Wipe gently with soft cloth. Store in an airtight container."
+      },
+      {
+        "label": "Shipping",
+        "value": "Dispatches within 1–2 business days"
+      }
+    ],
+    "featured": false,
+    "active": true,
+    "variants": [
+      "Gold Tone",
+      "Silver Tone"
+    ],
+    "images": [
+      "/images/products/9a25fc08-2054-403c-8e46-5fb792dc04df.png"
+    ],
+    "variantGroups": [
+      {
+        "label": "Size",
+        "options": [
+          "S (34.5 cm (13.6\") neck)",
+          "M (35.5 cm (14\") neck)",
+          "L (36.5 cm (14.4\") neck)",
+          "XL (38 cm (15\") neck)"
+        ]
+      }
+    ],
+    "variantVideos": {
+      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/3b5597d550632d7ed412630037a8b052/downloads/default.mp4",
+      "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/3b5597d550632d7ed412630037a8b052/downloads/default.mp4"
+    },
+    "altText": "Handcrafted silver stainless steel shoulder harness for evening wear, elegant body chain accessory for formal dresses",
+    "gallery": [
+      "/images/products/9a25fc08-2054-403c-8e46-5fb792dc04df.png",
+      "/images/products/54bdca19-ad04-4534-9683-0fa20328ebae.png",
+      "https://i.etsystatic.com/55122258/r/il/145235/7987884440/il_fullxfull.7987884440_5ck3.jpg",
+      "/images/products/3de2bbc3-6c6d-4e12-a085-d57964719dbe.png",
+      "/images/products/67b40e8a-fd66-4c80-9d83-611f2e8a16ae-copy.webp",
+      "https://i.etsystatic.com/55122258/r/il/b9181f/7987888140/il_fullxfull.7987888140_9j6g.jpg",
+      "https://i.etsystatic.com/55122258/r/il/07c056/7987871718/il_fullxfull.7987871718_fldp.jpg",
+      "https://i.etsystatic.com/55122258/r/il/0d1ed3/7987871978/il_fullxfull.7987871978_kq45.jpg",
+      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.webp",
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp"
+    ],
+    "variantHeroes": {
+      "Gold Tone": "/images/products/54bdca19-ad04-4534-9683-0fa20328ebae.png",
+      "Silver Tone": "/images/products/9a25fc08-2054-403c-8e46-5fb792dc04df.png"
+    },
+    "sizeGuideImage": "/images/products/25f995a3-cea4-4872-b772-7d62d0e000ec.webp",
+    "dateAdded": "2026-06-12T15:00:27-04:00",
+    "giftTags": [
+      "bridal"
+    ],
+    "plusSize": false
+  },
+  {
+    "id": "goddess-shoulder-chain",
+    "name": "Goddess Shoulder Chain",
+    "price": 36,
+    "currency": "EUR",
+    "category": "Shoulder Chains",
+    "description": "Your dress is already the one. This is the detail that makes the whole look completely, unforgettably yours. Draped softly from the neck across both shoulders, now available in four sizes for a precise fit — handcrafted in tarnish-resistant stainless steel, gold or silver.",
+    "fullDescription": "This dainty shoulder chain drapes softly from the neck across both shoulders and down the upper arms, adding a delicate layered shimmer to strapless gowns, off-the-shoulder dresses, and sweetheart necklines. It sits so lightly you forget you are wearing it — until you catch it in a photo and realize it made the whole look.\n\nNow available in four sizes — Small, Medium, Large, and XL/Plus — based on your shoulder-to-shoulder and upper-arm-to-upper-arm measurements. See the size guide for exact measurements, or message us your measurements after ordering and we will adjust your chain to fit at no extra cost.\n\nHandmade from durable stainless steel in gold or silver, so it holds its colour and resists tarnishing through the ceremony, the dancing, and every moment in between.",
     "specs": [
       {
         "label": "Material",
@@ -503,35 +516,31 @@
       },
       {
         "label": "Colours",
-        "value": "Gold or Silver finish"
+        "value": "Gold or Silver"
       },
       {
-        "label": "Top arm drape",
-        "value": "28.0 cm (11\")"
+        "label": "Small",
+        "value": "Up to 41 cm (16.1\") shoulder-to-shoulder, up to 48 cm (18.9\") upper-arm-to-upper-arm"
       },
       {
-        "label": "Middle arm drape",
-        "value": "31.8 cm (12.5\")"
+        "label": "Medium",
+        "value": "41–43 cm (16.1\"–16.9\") shoulder-to-shoulder, 48–51 cm (18.9\"–20.1\") upper-arm-to-upper-arm"
       },
       {
-        "label": "Bottom arm drape",
-        "value": "35.6 cm (14\")"
+        "label": "Large",
+        "value": "43–46 cm (16.9\"–18.1\") shoulder-to-shoulder, 51–53 cm (20.1\"–20.9\") upper-arm-to-upper-arm"
       },
       {
-        "label": "Horizontal strand",
-        "value": "30.0 cm (11.8\")"
-      },
-      {
-        "label": "Size extensions",
-        "value": "Small +5 cm (2\") · Medium +10 cm (3.9\") · Large +15 cm (5.9\")"
+        "label": "XL / Plus",
+        "value": "46 cm+ (18.1\"+) shoulder-to-shoulder, 53 cm+ (20.9\"+) upper-arm-to-upper-arm"
       },
       {
         "label": "Custom fit",
-        "value": "Message us after ordering — we resize to your exact measurements at no extra cost"
+        "value": "For the most accurate fit, message us your exact measurements after ordering — we adjust every chain length at no extra cost"
       },
       {
         "label": "Care",
-        "value": "Wipe gently with a soft cloth after each wear. Store in an airtight container."
+        "value": "Wipe gently with a soft cloth after wear. Store in an airtight container."
       },
       {
         "label": "Shipping",
@@ -539,44 +548,48 @@
       }
     ],
     "images": [
-      "/images/products/bb0524e9-cadb-4cc0-8dc5-4aa106a71fea.png"
+      "/images/products/59a83f0a-7516-4c9d-b785-ff76790fa250.png"
     ],
+    "variantVideos": {
+      "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/992bfe17680bc4fbd83158154a7b1345/downloads/default.mp4",
+      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/a60ff139fe09398b9f4e48d687db28a8/downloads/default.mp4"
+    },
     "featured": true,
     "variants": [
-      "Gold Tone",
-      "Silver Tone"
+      "Silver Tone",
+      "Gold Tone"
     ],
+    "active": true,
+    "altText": "Gold tone stainless steel goddess shoulder chain for elegant evening wear and special occasions",
+    "gallery": [
+      "/images/products/59a83f0a-7516-4c9d-b785-ff76790fa250.png",
+      "/images/products/c1ea4c0a-b5b6-4da9-a5de-8fdbe229ba10.png",
+      "/images/products/831cc6e5-c83c-435b-afe9-5b28a9d1025e.webp",
+      "/images/products/4a3d4343-1df8-4748-9a6e-289541a9de5c.webp",
+      "/images/products/goddess-shoulder-chain-main.webp",
+      "/images/products/goddess-shoulder-chain-both-3.webp",
+      "/images/products/00415bfe-021a-4247-8149-9e794e141d70.jpg",
+      "/images/products/goddess-shoulder-chain-both-4.webp",
+      "/images/products/435b9a3b-10b1-4b5d-a535-a4f3786d8057.webp",
+      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.jpg"
+    ],
+    "variantHeroes": {
+      "Silver Tone": "/images/products/59a83f0a-7516-4c9d-b785-ff76790fa250.png",
+      "Gold Tone": "/images/products/831cc6e5-c83c-435b-afe9-5b28a9d1025e.webp"
+    },
+    "dateAdded": "2026-06-11T09:19:12-04:00",
+    "sizeGuideImage": "/images/products/00415bfe-021a-4247-8149-9e794e141d70.jpg",
     "variantGroups": [
       {
         "label": "Size",
         "options": [
-          "Small (+5 cm (2\"))",
-          "Medium (+10 cm (3.9\"))",
-          "Large (+15 cm (5.9\"))"
+          "Small",
+          "Medium",
+          "Large",
+          "XL / Plus"
         ]
       }
     ],
-    "active": true,
-    "altText": "Gold tone stainless steel double shoulder chest chain for elegant layered jewelry styling",
-    "gallery": [
-      "/images/products/bb0524e9-cadb-4cc0-8dc5-4aa106a71fea.png",
-      "/images/products/68b8b265-14c9-4806-a399-4f338043bde0.png",
-      "/images/products/IMG_2581-2.webp",
-      "/images/products/IMG_2587.webp",
-      "/images/products/d1285c89-1ff4-407e-bf5b-25ddd1a2e7a7-copy.webp",
-      "/images/products/c3dd0fbe-c4bf-4e40-bdc7-eb8bef0ea431.png",
-      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp"
-    ],
-    "variantHeroes": {
-      "Gold Tone": "/images/products/bb0524e9-cadb-4cc0-8dc5-4aa106a71fea.png",
-      "Silver Tone": "/images/products/68b8b265-14c9-4806-a399-4f338043bde0.png"
-    },
-    "variantVideos": {
-      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/f1c070881c7ef49d3624c7082f9d118a/downloads/default.mp4",
-      "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/f1c070881c7ef49d3624c7082f9d118a/downloads/default.mp4"
-    },
-    "sizeGuideImage": "/images/products/c3dd0fbe-c4bf-4e40-bdc7-eb8bef0ea431.webp",
-    "dateAdded": "2026-06-11T18:55:36-04:00",
     "giftTags": [
       "bridal"
     ]
@@ -2721,13 +2734,13 @@
     "dateAdded": "2026-06-12T15:00:27-04:00"
   },
   {
-    "id": "off-shoulder-chain-necklace",
-    "name": "Off-Shoulder Chain Necklace",
-    "price": 36,
+    "id": "double-shoulder-chest-chain",
+    "name": "Double Shoulder Chest Chain",
+    "price": 44,
     "currency": "EUR",
     "category": "Shoulder Chains",
-    "description": "Your off-the-shoulder look, perfected. This dainty shoulder chain necklace sits softly across the décolletage and upper arms — the elegant accent your favourite summer tops and evening wear have been missing.",
-    "fullDescription": "A delicate chain drapes just above the shoulders and across the upper chest, creating a floating necklace effect that's unlike anything you'll find in a conventional jewellery shop. It moves with you through the evening, catching light and drawing the eye.\n\nHandcrafted in stainless steel in gold or silver. Available in three sizes — Small (24 cm), Medium (28 cm), and Large (32 cm) — with the front and back drape cut to the exact same length for a balanced, symmetrical fit. Need something in between? Message us after ordering and we'll custom-size it at no extra cost.",
+    "description": "Make a beautiful statement with this delicate shoulder chain, designed to drape perfectly across your collarbone and upper arms. Crafted by hand from highly durable stainless steel — a stunning complement to bridal wear, prom gowns, or any strapless dress. Available in gold or silver.",
+    "fullDescription": "Where most shoulder chains cover one side, this one goes further — draping softly over both shoulders with layered chains that fall across the chest in perfect symmetry. The result is balanced, elegant, and completely unforgettable on a strapless gown, a white linen dress, or a simple black top.\n\nHandmade from high-quality stainless steel in gold or silver tone, so it holds its colour and resists tarnishing through every wear. Size is fully customisable — message us your exact dimensions after checkout and we can craft the perfect custom fit at no extra cost.",
     "specs": [
       {
         "label": "Material",
@@ -2735,73 +2748,83 @@
       },
       {
         "label": "Colours",
-        "value": "Gold or Silver"
+        "value": "Gold or Silver finish"
       },
       {
-        "label": "Style",
-        "value": "Off-shoulder drape chain"
+        "label": "Top arm drape",
+        "value": "28.0 cm (11\")"
       },
       {
-        "label": "Front drape",
-        "value": "Small 24 cm (9.4\") · Medium 28 cm (11\") · Large 32 cm (12.6\")"
+        "label": "Middle arm drape",
+        "value": "31.8 cm (12.5\")"
       },
       {
-        "label": "Back drape",
-        "value": "Same length as front at every size"
+        "label": "Bottom arm drape",
+        "value": "35.6 cm (14\")"
+      },
+      {
+        "label": "Horizontal strand",
+        "value": "30.0 cm (11.8\")"
+      },
+      {
+        "label": "Size extensions",
+        "value": "Small +5 cm (2\") · Medium +10 cm (3.9\") · Large +15 cm (5.9\")"
       },
       {
         "label": "Custom fit",
-        "value": "Message us after ordering if you need a size in between — we resize at no extra cost"
+        "value": "Message us after ordering — we resize to your exact measurements at no extra cost"
       },
       {
         "label": "Care",
-        "value": "Wipe gently with soft cloth. Store in an airtight container."
+        "value": "Wipe gently with a soft cloth after each wear. Store in an airtight container."
       },
       {
         "label": "Shipping",
         "value": "Dispatches within 1–2 business days"
       }
     ],
-    "featured": false,
-    "active": true,
+    "images": [
+      "/images/products/bb0524e9-cadb-4cc0-8dc5-4aa106a71fea.png"
+    ],
+    "featured": true,
     "variants": [
       "Gold Tone",
       "Silver Tone"
-    ],
-    "images": [
-      "/images/products/f69421b9-2dcf-4030-adb4-9aa5a4ce595a.png"
     ],
     "variantGroups": [
       {
         "label": "Size",
         "options": [
-          "Small — 24 cm (9.4\")",
-          "Medium — 28 cm (11\")",
-          "Large — 32 cm (12.6\")"
+          "Small (+5 cm (2\"))",
+          "Medium (+10 cm (3.9\"))",
+          "Large (+15 cm (5.9\"))"
         ]
       }
     ],
-    "variantVideos": {
-      "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/348fffc1dfdaf61d072e579bed7976fd/downloads/default.mp4",
-      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/348fffc1dfdaf61d072e579bed7976fd/downloads/default.mp4"
-    },
-    "altText": "Gold tone stainless steel off-shoulder chain necklace for elegant décolletage styling and special occasions",
+    "active": true,
+    "altText": "Gold tone stainless steel double shoulder chest chain for elegant layered jewelry styling",
     "gallery": [
-      "/images/products/f69421b9-2dcf-4030-adb4-9aa5a4ce595a.png",
-      "/images/products/0940847a-f4bf-412c-82ab-c0ca80d3de00.webp",
-      "https://i.etsystatic.com/55122258/r/il/bc4bc3/8099217083/il_fullxfull.8099217083_e5km.jpg",
-      "https://i.etsystatic.com/55122258/r/il/cd07a5/8099217085/il_fullxfull.8099217085_eti5.jpg",
-      "/images/products/7b710959-4a43-4b74-ac09-759b063cbb2e.png"
+      "/images/products/bb0524e9-cadb-4cc0-8dc5-4aa106a71fea.png",
+      "/images/products/68b8b265-14c9-4806-a399-4f338043bde0.png",
+      "/images/products/IMG_2581-2.webp",
+      "/images/products/IMG_2587.webp",
+      "/images/products/d1285c89-1ff4-407e-bf5b-25ddd1a2e7a7-copy.webp",
+      "/images/products/c3dd0fbe-c4bf-4e40-bdc7-eb8bef0ea431.png",
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp"
     ],
     "variantHeroes": {
-      "Gold Tone": "/images/products/0940847a-f4bf-412c-82ab-c0ca80d3de00.webp",
-      "Silver Tone": "/images/products/f69421b9-2dcf-4030-adb4-9aa5a4ce595a.png"
+      "Gold Tone": "/images/products/bb0524e9-cadb-4cc0-8dc5-4aa106a71fea.png",
+      "Silver Tone": "/images/products/68b8b265-14c9-4806-a399-4f338043bde0.png"
     },
-    "dateAdded": "2026-06-12T15:00:27-04:00",
+    "variantVideos": {
+      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/f1c070881c7ef49d3624c7082f9d118a/downloads/default.mp4",
+      "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/f1c070881c7ef49d3624c7082f9d118a/downloads/default.mp4"
+    },
+    "sizeGuideImage": "/images/products/c3dd0fbe-c4bf-4e40-bdc7-eb8bef0ea431.webp",
+    "dateAdded": "2026-06-11T18:55:36-04:00",
     "giftTags": [
       "bridal"
-    ],
-    "sizeGuideImage": "/images/products/7b710959-4a43-4b74-ac09-759b063cbb2e.png"
+    ]
   },
   {
     "id": "initial-letter-rhinestone-choker",
@@ -3826,29 +3849,37 @@
     ]
   },
   {
-    "id": "2-in-1-body-chain-necklace",
-    "name": "2-in-1 Body Chain Necklace",
-    "price": 32,
+    "id": "off-shoulder-chain-necklace",
+    "name": "Off-Shoulder Chain Necklace",
+    "price": 36,
     "currency": "EUR",
     "category": "Shoulder Chains",
-    "description": "Two looks, one piece. This clever gold chain works as a body chain for summer or converts to a backdrop necklace for open-back dresses — the most versatile handcrafted piece in your jewellery collection.",
-    "fullDescription": "Wear it over a bikini as a minimalist body chain, or reconfigure it around the neck and down the open back for a stunning bridal or evening look. One handcrafted piece that earns its place in your collection by adapting to whatever you're wearing.\n\nHandcrafted in gold stainless steel. Adjustable fit. A beautifully practical solution for travellers and anyone who wants maximum impact from minimal packing.",
+    "description": "Your off-the-shoulder look, perfected. This dainty shoulder chain necklace sits softly across the décolletage and upper arms — the elegant accent your favourite summer tops and evening wear have been missing.",
+    "fullDescription": "A delicate chain drapes just above the shoulders and across the upper chest, creating a floating necklace effect that's unlike anything you'll find in a conventional jewellery shop. It moves with you through the evening, catching light and drawing the eye.\n\nHandcrafted in stainless steel in gold or silver. Available in three sizes — Small (24 cm), Medium (28 cm), and Large (32 cm) — with the front and back drape cut to the exact same length for a balanced, symmetrical fit. Need something in between? Message us after ordering and we'll custom-size it at no extra cost.",
     "specs": [
       {
         "label": "Material",
-        "value": "Gold stainless steel (waterproof & anti-tarnish)"
+        "value": "High-quality stainless steel"
+      },
+      {
+        "label": "Colours",
+        "value": "Gold or Silver"
       },
       {
         "label": "Style",
-        "value": "2-in-1 body chain and backdrop necklace"
+        "value": "Off-shoulder drape chain"
       },
       {
-        "label": "Occasion",
-        "value": "Beach, summer, bridal, evening"
+        "label": "Front drape",
+        "value": "Small 24 cm (9.4\") · Medium 28 cm (11\") · Large 32 cm (12.6\")"
       },
       {
-        "label": "Fit",
-        "value": "Adjustable"
+        "label": "Back drape",
+        "value": "Same length as front at every size"
+      },
+      {
+        "label": "Custom fit",
+        "value": "Message us after ordering if you need a size in between — we resize at no extra cost"
       },
       {
         "label": "Care",
@@ -3866,38 +3897,39 @@
       "Silver Tone"
     ],
     "images": [
-      "https://i.etsystatic.com/55122258/r/il/652cb6/8064271499/il_fullxfull.8064271499_piad.jpg"
+      "/images/products/f69421b9-2dcf-4030-adb4-9aa5a4ce595a.png"
     ],
     "variantGroups": [
       {
         "label": "Size",
         "options": [
-          "Small",
-          "Medium",
-          "Large/Plus size"
+          "Small — 24 cm (9.4\")",
+          "Medium — 28 cm (11\")",
+          "Large — 32 cm (12.6\")"
         ]
       }
     ],
     "variantVideos": {
-      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/64a0c17c56bf25c386b0ee73413e7899/downloads/default.mp4",
-      "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/64a0c17c56bf25c386b0ee73413e7899/downloads/default.mp4"
+      "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/348fffc1dfdaf61d072e579bed7976fd/downloads/default.mp4",
+      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/348fffc1dfdaf61d072e579bed7976fd/downloads/default.mp4"
     },
-    "altText": "Gold stainless steel 2-in-1 body chain necklace for open-back dresses and summer wear",
+    "altText": "Gold tone stainless steel off-shoulder chain necklace for elegant décolletage styling and special occasions",
     "gallery": [
-      "https://i.etsystatic.com/55122258/r/il/652cb6/8064271499/il_fullxfull.8064271499_piad.jpg",
-      "https://i.etsystatic.com/55122258/r/il/b18c74/8063480249/il_fullxfull.8063480249_t6v8.jpg",
-      "/images/products/6eed872e-53fc-40a2-bde3-ef3bdcc40e38.png",
-      "https://i.etsystatic.com/55122258/r/il/541ccf/8062529151/il_fullxfull.8062529151_hkmd.jpg",
-      "https://i.etsystatic.com/55122258/r/il/032e53/8064180455/il_fullxfull.8064180455_ducb.jpg"
+      "/images/products/f69421b9-2dcf-4030-adb4-9aa5a4ce595a.png",
+      "/images/products/0940847a-f4bf-412c-82ab-c0ca80d3de00.webp",
+      "https://i.etsystatic.com/55122258/r/il/bc4bc3/8099217083/il_fullxfull.8099217083_e5km.jpg",
+      "https://i.etsystatic.com/55122258/r/il/cd07a5/8099217085/il_fullxfull.8099217085_eti5.jpg",
+      "/images/products/7b710959-4a43-4b74-ac09-759b063cbb2e.png"
     ],
     "variantHeroes": {
-      "Gold Tone": "https://i.etsystatic.com/55122258/r/il/541ccf/8062529151/il_fullxfull.8062529151_hkmd.jpg",
-      "Silver Tone": "/images/products/6eed872e-53fc-40a2-bde3-ef3bdcc40e38.png"
+      "Gold Tone": "/images/products/0940847a-f4bf-412c-82ab-c0ca80d3de00.webp",
+      "Silver Tone": "/images/products/f69421b9-2dcf-4030-adb4-9aa5a4ce595a.png"
     },
     "dateAdded": "2026-06-12T15:00:27-04:00",
     "giftTags": [
       "bridal"
-    ]
+    ],
+    "sizeGuideImage": "/images/products/7b710959-4a43-4b74-ac09-759b063cbb2e.png"
   },
   {
     "id": "boho-forehead-chain",
@@ -4619,53 +4651,29 @@
     "dateAdded": "2026-06-12T15:00:27-04:00"
   },
   {
-    "id": "silver-shoulder-harness",
-    "name": "Silver Shoulder Harness",
+    "id": "2-in-1-body-chain-necklace",
+    "name": "2-in-1 Body Chain Necklace",
     "price": 32,
     "currency": "EUR",
     "category": "Shoulder Chains",
-    "description": "Your evening gown's most striking accent. This dainty shoulder harness drapes elegantly across the body — handcrafted stainless steel with four sizes to choose from.",
-    "fullDescription": "A structured yet delicate shoulder harness that drapes from the neck across the shoulders and down the chest, creating a statement silhouette for evening gowns, bachelorette looks, and any occasion that calls for something extraordinary.\n\nAvailable in Gold or Silver stainless steel.\n\nSizing:\nS — Neck Chain: 34.5 cm (13.6\") · Extension: 8 cm (3.1\") · Shoulder Chain: 51 cm (20.1\")\nM — Neck Chain: 35.5 cm (14\") · Extension: 9 cm (3.5\") · Shoulder Chain: 56 cm (22\")\nL — Neck Chain: 36.5 cm (14.4\") · Extension: 9 cm (3.5\") · Shoulder Chain: 60.5 cm (23.8\")\nXL — Neck Chain: 38 cm (15\") · Extension: 10 cm (3.9\") · Shoulder Chain: 65 cm (25.6\")\n\nNeed a custom size? Message us after ordering and we'll adjust at no extra cost.",
+    "description": "Two looks, one piece. This clever gold chain works as a body chain for summer or converts to a backdrop necklace for open-back dresses — the most versatile handcrafted piece in your jewellery collection.",
+    "fullDescription": "Wear it over a bikini as a minimalist body chain, or reconfigure it around the neck and down the open back for a stunning bridal or evening look. One handcrafted piece that earns its place in your collection by adapting to whatever you're wearing.\n\nHandcrafted in gold stainless steel. Adjustable fit. A beautifully practical solution for travellers and anyone who wants maximum impact from minimal packing.",
     "specs": [
       {
         "label": "Material",
-        "value": "Stainless steel"
-      },
-      {
-        "label": "Colours",
-        "value": "Gold or Silver"
-      },
-      {
-        "label": "Sizes",
-        "value": "S, M, L, XL"
-      },
-      {
-        "label": "S",
-        "value": "Neck 34.5 cm (13.6\") · Extension 8 cm (3.1\") · Shoulder 51 cm (20.1\")"
-      },
-      {
-        "label": "M",
-        "value": "Neck 35.5 cm (14\") · Extension 9 cm (3.5\") · Shoulder 56 cm (22\")"
-      },
-      {
-        "label": "L",
-        "value": "Neck 36.5 cm (14.4\") · Extension 9 cm (3.5\") · Shoulder 60.5 cm (23.8\")"
-      },
-      {
-        "label": "XL",
-        "value": "Neck 38 cm (15\") · Extension 10 cm (3.9\") · Shoulder 65 cm (25.6\")"
+        "value": "Gold stainless steel (waterproof & anti-tarnish)"
       },
       {
         "label": "Style",
-        "value": "Shoulder harness / body chain"
+        "value": "2-in-1 body chain and backdrop necklace"
       },
       {
         "label": "Occasion",
-        "value": "Evening gown, bachelorette, formal"
+        "value": "Beach, summer, bridal, evening"
       },
       {
-        "label": "Custom fit",
-        "value": "Message us after ordering — we resize at no extra cost"
+        "label": "Fit",
+        "value": "Adjustable"
       },
       {
         "label": "Care",
@@ -4683,46 +4691,38 @@
       "Silver Tone"
     ],
     "images": [
-      "/images/products/9a25fc08-2054-403c-8e46-5fb792dc04df.png"
+      "https://i.etsystatic.com/55122258/r/il/652cb6/8064271499/il_fullxfull.8064271499_piad.jpg"
     ],
     "variantGroups": [
       {
         "label": "Size",
         "options": [
-          "S (34.5 cm (13.6\") neck)",
-          "M (35.5 cm (14\") neck)",
-          "L (36.5 cm (14.4\") neck)",
-          "XL (38 cm (15\") neck)"
+          "Small",
+          "Medium",
+          "Large/Plus size"
         ]
       }
     ],
     "variantVideos": {
-      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/3b5597d550632d7ed412630037a8b052/downloads/default.mp4",
-      "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/3b5597d550632d7ed412630037a8b052/downloads/default.mp4"
+      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/64a0c17c56bf25c386b0ee73413e7899/downloads/default.mp4",
+      "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/64a0c17c56bf25c386b0ee73413e7899/downloads/default.mp4"
     },
-    "altText": "Handcrafted silver stainless steel shoulder harness for evening wear, elegant body chain accessory for formal dresses",
+    "altText": "Gold stainless steel 2-in-1 body chain necklace for open-back dresses and summer wear",
     "gallery": [
-      "/images/products/9a25fc08-2054-403c-8e46-5fb792dc04df.png",
-      "/images/products/54bdca19-ad04-4534-9683-0fa20328ebae.png",
-      "https://i.etsystatic.com/55122258/r/il/145235/7987884440/il_fullxfull.7987884440_5ck3.jpg",
-      "/images/products/3de2bbc3-6c6d-4e12-a085-d57964719dbe.png",
-      "/images/products/67b40e8a-fd66-4c80-9d83-611f2e8a16ae-copy.webp",
-      "https://i.etsystatic.com/55122258/r/il/b9181f/7987888140/il_fullxfull.7987888140_9j6g.jpg",
-      "https://i.etsystatic.com/55122258/r/il/07c056/7987871718/il_fullxfull.7987871718_fldp.jpg",
-      "https://i.etsystatic.com/55122258/r/il/0d1ed3/7987871978/il_fullxfull.7987871978_kq45.jpg",
-      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.webp",
-      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp"
+      "https://i.etsystatic.com/55122258/r/il/652cb6/8064271499/il_fullxfull.8064271499_piad.jpg",
+      "https://i.etsystatic.com/55122258/r/il/b18c74/8063480249/il_fullxfull.8063480249_t6v8.jpg",
+      "/images/products/6eed872e-53fc-40a2-bde3-ef3bdcc40e38.png",
+      "https://i.etsystatic.com/55122258/r/il/541ccf/8062529151/il_fullxfull.8062529151_hkmd.jpg",
+      "https://i.etsystatic.com/55122258/r/il/032e53/8064180455/il_fullxfull.8064180455_ducb.jpg"
     ],
     "variantHeroes": {
-      "Gold Tone": "/images/products/54bdca19-ad04-4534-9683-0fa20328ebae.png",
-      "Silver Tone": "/images/products/9a25fc08-2054-403c-8e46-5fb792dc04df.png"
+      "Gold Tone": "https://i.etsystatic.com/55122258/r/il/541ccf/8062529151/il_fullxfull.8062529151_hkmd.jpg",
+      "Silver Tone": "/images/products/6eed872e-53fc-40a2-bde3-ef3bdcc40e38.png"
     },
-    "sizeGuideImage": "/images/products/25f995a3-cea4-4872-b772-7d62d0e000ec.webp",
     "dateAdded": "2026-06-12T15:00:27-04:00",
     "giftTags": [
       "bridal"
-    ],
-    "plusSize": false
+    ]
   },
   {
     "id": "pearl-wedding-back-necklace",

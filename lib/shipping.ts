@@ -60,10 +60,7 @@ export function getShippingRate(
     const free = cartTotal >= threshold;
     return {
       displayName: free ? "Free Shipping — Canada" : "Standard Shipping — Canada",
-      // Lowered from €5 to €8 on Oct 17, 2026 to match the discounted-country tier below —
-      // threshold unchanged, it was already the correct 50 EUR-equivalent rounded to a clean
-      // number ($73.50 -> $75).
-      amount:      free ? 0 : 800,
+      amount:      free ? 0 : 500,
       deliveryMin: 3, deliveryMax: 10,
       freeThreshold: threshold,
     };

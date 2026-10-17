@@ -720,37 +720,29 @@
     "sizeGuideImage": "/images/products/1c864f7f-658d-4b1a-bd86-2c3ceb6950a3-1.png"
   },
   {
-    "id": "zodiac-yoga-belly-chain",
-    "name": "Zodiac Belly Chain",
-    "price": 29.6,
+    "id": "layered-hip-chain",
+    "name": "Layered Hip Chain",
+    "price": 32,
     "currency": "EUR",
     "category": "Belly Chains",
-    "description": "This gold zodiac belly chain combines your star sign charm with a waterproof, adjustable stainless steel chain — designed for every active life moment.",
-    "fullDescription": "Choose your zodiac sign and size at checkout for a belly chain that goes wherever you do — to the gym, the yoga studio, the beach, and beyond. The zodiac charm adds a personal touch to a practical, everyday piece.\n\nGold-tone stainless steel. Completely waterproof and anti-tarnish. Three extender sizes: Small (71–81 cm (28\"–31.9\")), Medium (71–91 cm (28\"–35.8\")), or Large (71–100 cm (28\"–39.4\")).",
+    "description": "Your festival or beach statement piece. This silver or gold layered hip and waist chain drapes across the hips in multiple strands — bold, minimalist, and designed to stand out in any summer outfit.",
+    "fullDescription": "Multiple delicate strands layer across the waist and hip, creating a fluid, stacked effect that moves beautifully as you do. Equally stunning at a festival, the beach, or layered over a swimsuit.\n\nMade from silver or gold tone stainless steel — waterproof, anti-tarnish, and designed to be worn all season long. Adjustable sizing available at checkout.",
     "specs": [
       {
         "label": "Material",
-        "value": "Gold-tone stainless steel (waterproof & anti-tarnish)"
+        "value": "Silver-tone stainless steel (waterproof & anti-tarnish)"
       },
       {
-        "label": "Zodiac",
-        "value": "All 12 signs — select at checkout"
-      },
-      {
-        "label": "Small",
-        "value": "71–81 cm (28\"–31.9\")"
-      },
-      {
-        "label": "Medium",
-        "value": "71–91 cm (28\"–35.8\")"
-      },
-      {
-        "label": "Large",
-        "value": "71–100 cm (28\"–39.4\")"
+        "label": "Style",
+        "value": "Layered hip and waist chain"
       },
       {
         "label": "Occasion",
-        "value": "Yoga, pilates, beach, everyday"
+        "value": "Festival, beach, summer"
+      },
+      {
+        "label": "Fit",
+        "value": "Adjustable"
       },
       {
         "label": "Care",
@@ -763,17 +755,12 @@
     ],
     "featured": false,
     "active": true,
+    "variants": [
+      "Gold Tone",
+      "Silver Tone"
+    ],
     "images": [
-      "/images/products/3de78d0c-5fe9-4df3-9aef-e57cea8e5099.png",
-      "https://i.etsystatic.com/55122258/r/il/b0b278/8002435152/il_fullxfull.8002435152_pewi.jpg",
-      "https://i.etsystatic.com/55122258/r/il/eabb7d/8050343405/il_fullxfull.8050343405_lv0f.jpg",
-      "https://i.etsystatic.com/55122258/r/il/0a48b1/8002436328/il_fullxfull.8002436328_jde7.jpg",
-      "https://i.etsystatic.com/55122258/r/il/d849dd/7807040209/il_fullxfull.7807040209_88k9.jpg",
-      "https://i.etsystatic.com/55122258/r/il/ca5f71/7759089584/il_fullxfull.7759089584_2j0k.jpg",
-      "https://i.etsystatic.com/55122258/r/il/be4849/7757121780/il_fullxfull.7757121780_4iz9.jpg",
-      "https://i.etsystatic.com/55122258/r/il/7d203e/7759169030/il_fullxfull.7759169030_aizv.jpg",
-      "https://i.etsystatic.com/55122258/r/il/6f32de/7805260215/il_fullxfull.7805260215_hpf4.jpg",
-      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp"
+      "/images/products/0e4a8235-95c7-421f-8007-133e423032a5.png"
     ],
     "variantGroups": [
       {
@@ -783,32 +770,29 @@
           "Medium 71 cm (28\") - 91 cm (35.8\")",
           "Large 71 cm (28\") - 100 cm (39.4\")"
         ]
-      },
-      {
-        "label": "Zodiac Sign",
-        "options": [
-          "Aries (3.21-4.19)",
-          "Taurus (4.20-5.20)",
-          "Gemini (5.21-6.20)",
-          "Cancer (6.21-7.22)",
-          "Leo (7.23-8.22)",
-          "Virgo (8.23-9.22)",
-          "Libra (9.23-10.22)",
-          "Scorpio(10.23-11.21)",
-          "Sagit. (11.22-12.21)",
-          "Capricorn 12.22-1.19",
-          "Aquarius (1.20-2.18)",
-          "Pisces (2.19-3.20)"
-        ]
       }
     ],
-    "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/924b3f16f202a2e79b98c3885cb74653/downloads/default.mp4",
-    "altText": "Gold-tone stainless steel zodiac belly chain with adjustable waist chain design for active wear",
-    "dateAdded": "2026-06-12T15:00:27-04:00",
-    "giftTags": [
-      "personalized"
+    "variantVideos": {
+      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/0b1619a2974fe53fac5acf3f0446f5ad/downloads/default.mp4",
+      "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/0b1619a2974fe53fac5acf3f0446f5ad/downloads/default.mp4"
+    },
+    "altText": "Silver-tone stainless steel layered hip chain for festivals and beach wear, waterproof belly body chain",
+    "gallery": [
+      "/images/products/0e4a8235-95c7-421f-8007-133e423032a5.png",
+      "/images/products/7db0339f-0a74-4e65-a227-3280f7316d82.jpeg",
+      "/images/products/IMG_2351.webp",
+      "/images/products/da2c5eb3-be12-4f8d-aec8-d52e2a8521d2.png",
+      "/images/products/7bd902aa-ff68-439b-ae95-1df92ab23b50-1.png",
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp",
+      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.webp",
+      "/images/products/IMG_2378.jpg"
     ],
-    "sizeGuideImage": "/images/products/da3d343f-4647-4ca2-94cb-6da42e47942b.png"
+    "variantHeroes": {
+      "Gold Tone": "/images/products/7bd902aa-ff68-439b-ae95-1df92ab23b50-1.png",
+      "Silver Tone": "/images/products/0e4a8235-95c7-421f-8007-133e423032a5.png"
+    },
+    "sizeGuideImage": "/images/products/efdfd7b7-9b1a-4208-872d-f6b4ab61742f.webp",
+    "dateAdded": "2026-06-12T15:00:27-04:00"
   },
   {
     "id": "beaded-bikini-clip-chain",
@@ -860,37 +844,45 @@
     "dateAdded": "2026-06-12T14:11:58-04:00"
   },
   {
-    "id": "plus-size-belly-chain",
-    "name": "Plus Size Belly Chain",
-    "price": 33,
+    "id": "waterproof-belly-chain",
+    "name": "Waterproof Belly Chain",
+    "price": 25.6,
     "currency": "EUR",
     "category": "Belly Chains",
-    "description": "The belly chain made for real curves — not stretched to fit them. Available in four fitted sizes, in gold or silver stainless steel.",
-    "fullDescription": "We built this one differently — not by stretching a chain that was never made for you, but by starting from real plus-size measurements. This delicate stainless steel belly chain comes in four fitted sizes, so instead of maxing out a single \"one size\" chain and hoping it drapes right, you get a length that was actually designed to sit beautifully across your hips from the start. Whether you're layering it with your favorite swimsuit for a beach day or wearing it as a subtle accent under a crop top, this non-tarnish waist chain is the finishing touch your body jewelry collection has been missing.\n\nMaterials: Stainless steel\nFinish: Gold tone or Silver tone\nWaterproof: Yes\nTarnish-Resistant: Yes\nHypoallergenic: Yes\nClasp: Secure lobster clasp\n\nSize Guide\nPlus 1 — Fits 84–102 cm (33–40 in) waist. Base length 100 cm (39 in), plus an 8 cm (3 in) extender = 100–108 cm (39–43 in) total.\nPlus 2 — Fits 102–120 cm (40–47 in) waist. Base length 118 cm (46 in), plus an 8 cm (3 in) extender = 118–126 cm (46–50 in) total.\nPlus 3 — Fits 120–138 cm (47–54 in) waist. Base length 136 cm (54 in), plus an 8 cm (3 in) extender = 136–144 cm (54–57 in) total.\nPlus 4 — Fits 138–156 cm (54–61 in) waist. Base length 154 cm (61 in), plus an 8 cm (3 in) extender = 154–162 cm (61–64 in) total.\n\nFit Note: Measure around your natural waist and compare to the ranges above to find your size.\n\nCare Instructions\nWipe gently with a soft cloth after each wear.\nStore in an airtight container when not in use.\n\nPlease note that as each piece is handcrafted, no two pieces are identical and slight variations may occur.",
+    "description": "Your waist chain for the beach and beyond. This waterproof, anti-tarnish stainless steel belly chain is available in gold or silver with three size options — designed to stay on all summer.",
+    "fullDescription": "A clean, versatile waist chain that looks equally at home over a bikini as it does with a sundress. The 71 cm (28\") base chain comes with your choice of small, medium, or large open-link extender for a custom fit.\n\nCompletely waterproof and anti-tarnish in gold or silver stainless steel — it won't fade, tarnish, or irritate your skin no matter how many times it gets wet.",
     "specs": [
       {
         "label": "Material",
-        "value": "Stainless steel"
+        "value": "Stainless steel (waterproof & anti-tarnish)"
       },
       {
-        "label": "Finish",
-        "value": "Gold tone or Silver tone"
+        "label": "Colours",
+        "value": "Gold or Silver"
       },
       {
-        "label": "Sizing",
-        "value": "4 fitted plus sizes — see size guide"
+        "label": "Base chain",
+        "value": "71 cm (28\")"
       },
       {
-        "label": "Waterproof",
-        "value": "Yes"
+        "label": "Small",
+        "value": "71–81 cm (28\"–31.9\")"
       },
       {
-        "label": "Tarnish-Resistant",
-        "value": "Yes"
+        "label": "Medium",
+        "value": "71–91 cm (28\"–35.8\")"
       },
       {
-        "label": "Hypoallergenic",
-        "value": "Yes"
+        "label": "Large",
+        "value": "71–100 cm (28\"–39.4\")"
+      },
+      {
+        "label": "Care",
+        "value": "Wipe gently with a soft cloth. Store in an airtight container."
+      },
+      {
+        "label": "Shipping",
+        "value": "Dispatches within 1–2 business days"
       }
     ],
     "featured": false,
@@ -899,42 +891,39 @@
       "Gold Tone",
       "Silver Tone"
     ],
-    "variantHeroes": {
-      "Silver Tone": "/images/products/7ec3aa4d-065a-4970-9c0f-7d5109775cbd.png",
-      "Gold Tone": "/images/products/e8fcf52d-dd95-49f0-b01a-646b2f1c24cf.png"
-    },
-    "variantVideos": {
-      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/d82e36f6cf0dab05a99deef3af7ac33d/downloads/default.mp4",
-      "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/d82e36f6cf0dab05a99deef3af7ac33d/downloads/default.mp4"
-    },
-    "gallery": [
-      "/images/products/e8fcf52d-dd95-49f0-b01a-646b2f1c24cf.png",
-      "/images/products/7ec3aa4d-065a-4970-9c0f-7d5109775cbd.png",
-      "/images/products/fa1cbece-a2ea-4231-9172-996efad85c10.jpg",
-      "/images/products/68810628-5cd6-4861-afa2-96b1a160173e.jpg",
-      "/images/products/88e72919-5be0-4e78-abb5-8be718193dd1-2.jpg",
-      "/images/products/17daf746-ffb1-4f96-a99a-90206555b788.jpeg",
-      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.jpg"
-    ],
     "images": [
-      "/images/products/e8fcf52d-dd95-49f0-b01a-646b2f1c24cf.png"
+      "/images/products/f6cab0a7-17d3-4573-a943-ef96ede908fd.png"
     ],
     "variantGroups": [
       {
         "label": "Size",
-        "type": "options",
         "options": [
-          "Plus 1",
-          "Plus 2",
-          "Plus 3",
-          "Plus 4"
+          "Small 71 cm (28\") - 81 cm (31.9\")",
+          "Medium 71 cm (28\") - 91 cm (35.8\")",
+          "Large 71 cm (28\") - 100 cm (39.4\")"
         ]
       }
     ],
-    "altText": "Plus size gold and silver stainless steel belly chain, adjustable waist chain for curvy women, four fitted sizes",
-    "dateAdded": "2026-08-14T12:00:00-04:00",
-    "sizeGuideImage": "/images/products/c32a3426-9ae6-4714-8d53-55813bf3220e.jpg",
-    "plusSize": true
+    "variantVideos": {
+      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/46eeebfae174369a50144ea75059e6d0/downloads/default.mp4",
+      "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/46eeebfae174369a50144ea75059e6d0/downloads/default.mp4"
+    },
+    "altText": "Gold tone stainless steel waterproof belly chain for beach wear and everyday styling",
+    "gallery": [
+      "/images/products/f6cab0a7-17d3-4573-a943-ef96ede908fd.png",
+      "https://i.etsystatic.com/55122258/r/il/9cad0f/7947179569/il_fullxfull.7947179569_kcfi.jpg",
+      "/images/products/68810628-5cd6-4861-afa2-96b1a160173e.jpg",
+      "/images/products/fa1cbece-a2ea-4231-9172-996efad85c10.jpg",
+      "https://i.etsystatic.com/55122258/r/il/fbe2fe/7947313965/il_fullxfull.7947313965_7y6z.jpg",
+      "https://i.etsystatic.com/55122258/r/il/b1d40c/7947282767/il_fullxfull.7947282767_5y3o.jpg",
+      "https://i.etsystatic.com/55122258/r/il/42c951/8157790725/il_fullxfull.8157790725_9diy.jpg",
+      "https://i.etsystatic.com/55122258/r/il/eb340d/8109884568/il_fullxfull.8109884568_a0hu.jpg"
+    ],
+    "variantHeroes": {
+      "Gold Tone": "/images/products/f6cab0a7-17d3-4573-a943-ef96ede908fd.png",
+      "Silver Tone": "https://i.etsystatic.com/55122258/r/il/fbe2fe/7947313965/il_fullxfull.7947313965_7y6z.jpg"
+    },
+    "dateAdded": "2026-06-12T15:00:27-04:00"
   },
   {
     "id": "paperclip-initial-necklace",
@@ -1483,21 +1472,21 @@
     "sizeGuideImage": "/images/products/esty-thumnails-new--19-.png"
   },
   {
-    "id": "silver-waist-chain",
-    "name": "Layered Belly Chain",
+    "id": "layered-silver-belly-chain",
+    "name": "Layered Silver Belly Chain",
     "price": 24,
     "currency": "EUR",
     "category": "Belly Chains",
-    "description": "Your clean, minimalist waist detail in silver. This dainty stainless steel belly chain sits perfectly at the waist — waterproof, tarnish-resistant, and sized exactly to you with three extender options. It incudes two separate gold or silver waist chains for layering over your outfit.",
-    "fullDescription": "No embellishment, just a beautifully proportioned silver chain at the waist. The 71 cm (28\") base comes with a choice of extender size: Small (71–81 cm (28\"–31.9\")), Medium (71–91 cm (28\"–35.8\")), or Large (71–100 cm (28\"–39.4\")).\n\nMade from silver-tone stainless steel that's completely waterproof and anti-tarnish. Wear it to the beach, the pool, and everywhere in between — it keeps its shine indefinitely.",
+    "description": "Your minimalist layered waist detail. This silver plated stainless steel belly chain features multiple delicate strands that sit beautifully at the hip — waterproof, adjustable, and made for all-day summer wear.",
+    "fullDescription": "Multiple fine silver strands layer at the waist in a fluid, stacked effect that photographs beautifully from the side and the front. Wears alone or stacked with a single-strand chain for an even bolder look.\n\nSilver plated stainless steel. Water resistant and tarnish-resistant. Three extender sizes: Small (71–81 cm (28\"–31.9\")), Medium (71–91 cm (28\"–35.8\")), or Large (71–100 cm (28\"–39.4\")).",
     "specs": [
       {
         "label": "Material",
-        "value": "Gold or silver-tone stainless steel (waterproof & anti-tarnish)"
+        "value": "Silver plated stainless steel (water resistant)"
       },
       {
-        "label": "Base chain",
-        "value": "2x 71 cm (28\") snake chains"
+        "label": "Style",
+        "value": "Layered multi-strand belly chain"
       },
       {
         "label": "Small",
@@ -1523,7 +1512,15 @@
     "featured": false,
     "active": true,
     "images": [
-      "/images/products/a546d9f4-0df6-4be6-b415-8c9dc08e426c.png"
+      "/images/products/a94b9d79-5531-4bbb-9f30-8edd248375dc.png",
+      "https://i.etsystatic.com/55122258/r/il/5c671e/7820732007/il_fullxfull.7820732007_tn8h.jpg",
+      "https://i.etsystatic.com/55122258/r/il/8e4af7/7772799606/il_fullxfull.7772799606_7m27.jpg",
+      "https://i.etsystatic.com/55122258/r/il/0df873/7772615942/il_fullxfull.7772615942_pva0.jpg",
+      "https://i.etsystatic.com/55122258/r/il/43d38b/7772614736/il_fullxfull.7772614736_nze8.jpg",
+      "https://i.etsystatic.com/55122258/r/il/bd1ab7/7820725957/il_fullxfull.7820725957_49nu.jpg",
+      "https://i.etsystatic.com/55122258/r/il/8f1422/7772793438/il_fullxfull.7772793438_o0s7.jpg",
+      "https://i.etsystatic.com/55122258/r/il/856c38/7820732077/il_fullxfull.7820732077_1nr0.jpg",
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp"
     ],
     "variantGroups": [
       {
@@ -1533,40 +1530,12 @@
           "Medium 71 cm (28\") - 91 cm (35.8\")",
           "Large 71 cm (28\") - 100 cm (39.4\")"
         ]
-      },
-      {
-        "label": "Finish",
-        "options": [
-          "Gold Stainless",
-          "Silver Stainless"
-        ]
       }
     ],
-    "altText": "Delicate gold-tone stainless steel layered belly chain for minimalist waist styling and beach wear.",
+    "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/bb2249f21c3cf9d5de47efd11ee26201/downloads/default.mp4",
+    "altText": "Delicate layered silver belly chain in stainless steel, minimalist waist accessory for body jewelry styling",
     "sizeGuideImage": "/images/products/da3d343f-4647-4ca2-94cb-6da42e47942b.png",
-    "dateAdded": "2026-06-12T15:00:27-04:00",
-    "gallery": [
-      "/images/products/a546d9f4-0df6-4be6-b415-8c9dc08e426c.png",
-      "/images/products/6ff3c5b2-4fa2-4c93-8458-e83dc479cbd8.webp",
-      "https://i.etsystatic.com/55122258/r/il/00c68e/7783598352/il_fullxfull.7783598352_ord3.jpg",
-      "https://i.etsystatic.com/55122258/r/il/3ca3d7/7783400862/il_fullxfull.7783400862_3lw5.jpg",
-      "https://i.etsystatic.com/55122258/r/il/17f798/7787214796/il_fullxfull.7787214796_ampn.jpg",
-      "https://i.etsystatic.com/55122258/r/il/d7b84c/7783600598/il_fullxfull.7783600598_op0k.jpg",
-      "https://i.etsystatic.com/55122258/r/il/da142d/7783600828/il_fullxfull.7783600828_l2oi.jpg",
-      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp"
-    ],
-    "variants": [
-      "Gold Stainless",
-      "Silver Stainless"
-    ],
-    "variantHeroes": {
-      "Gold Stainless": "/images/products/6ff3c5b2-4fa2-4c93-8458-e83dc479cbd8.webp",
-      "Silver Stainless": "/images/products/a546d9f4-0df6-4be6-b415-8c9dc08e426c.png"
-    },
-    "variantVideos": {
-      "Gold Stainless": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/6d1bffbe5f4404a422d2bb5e7bd6ee9a/downloads/default.mp4",
-      "Silver Stainless": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/6d1bffbe5f4404a422d2bb5e7bd6ee9a/downloads/default.mp4"
-    }
+    "dateAdded": "2026-06-12T15:00:27-04:00"
   },
   {
     "id": "birthstone-bikini-clip-chain",
@@ -2042,92 +2011,90 @@
     "sizeGuideImage": "/images/products/8c71db0b-041d-4634-b376-59fbaa733943.png"
   },
   {
-    "id": "snake-belly-chain",
-    "name": "Snake Belly Chain",
-    "price": 16,
+    "id": "silver-waist-chain",
+    "name": "Layered Belly Chain",
+    "price": 24,
     "currency": "EUR",
     "category": "Belly Chains",
-    "description": "Your go-to summer staple. This minimalist snake chain drapes beautifully across your waist — waterproof, tarnish-resistant stainless steel that keeps its glow through the beach, the pool, and everything in between. Available in gold or silver.",
-    "fullDescription": "A 71 cm (28\") solid snake chain in stainless steel, smooth against the skin and designed to be worn alone or layered. Choose your extender size at checkout for a dialled-in fit: Small (71–81 cm (28\"–31.9\")), Medium (71–91 cm (28\"–35.8\")), or Large (71–100 cm (28\"–39.4\")). The open-link extender lets you clasp at any point for a millimetre-perfect result.\n\nCompletely waterproof and anti-tarnish — it never comes off unless you want it to. These chains layer beautifully together: two or three creates a look that photographs as well as it feels.",
+    "description": "Your clean, minimalist waist detail in silver. This dainty stainless steel belly chain sits perfectly at the waist — waterproof, tarnish-resistant, and sized exactly to you with three extender options. It incudes two separate gold or silver waist chains for layering over your outfit.",
+    "fullDescription": "No embellishment, just a beautifully proportioned silver chain at the waist. The 71 cm (28\") base comes with a choice of extender size: Small (71–81 cm (28\"–31.9\")), Medium (71–91 cm (28\"–35.8\")), or Large (71–100 cm (28\"–39.4\")).\n\nMade from silver-tone stainless steel that's completely waterproof and anti-tarnish. Wear it to the beach, the pool, and everywhere in between — it keeps its shine indefinitely.",
     "specs": [
       {
         "label": "Material",
-        "value": "Stainless steel (waterproof & anti-tarnish)"
+        "value": "Gold or silver-tone stainless steel (waterproof & anti-tarnish)"
       },
       {
-        "label": "Colours",
-        "value": "Gold or Silver"
+        "label": "Base chain",
+        "value": "2x 71 cm (28\") snake chains"
       },
       {
-        "label": "Base length",
-        "value": "71 cm (28\") solid snake chain"
+        "label": "Small",
+        "value": "71–81 cm (28\"–31.9\")"
       },
       {
-        "label": "Small extender",
-        "value": "+10 cm (3.9\") — fits 71–81 cm (28\"–31.9\")"
+        "label": "Medium",
+        "value": "71–91 cm (28\"–35.8\")"
       },
       {
-        "label": "Medium extender",
-        "value": "+20 cm (7.9\") — fits 71–91 cm (28\"–35.8\")"
-      },
-      {
-        "label": "Large extender",
-        "value": "+29 cm (11.4\") — fits 71–100 cm (28\"–39.4\")"
-      },
-      {
-        "label": "Custom fit",
-        "value": "Message us after checkout — we adjust extender length at no extra cost"
+        "label": "Large",
+        "value": "71–100 cm (28\"–39.4\")"
       },
       {
         "label": "Care",
-        "value": "Wipe gently with a soft cloth after wear. Store in an airtight container."
+        "value": "Wipe gently with soft cloth. Store in an airtight container."
       },
       {
         "label": "Shipping",
         "value": "Dispatches within 1–2 business days"
       }
     ],
+    "featured": false,
+    "active": true,
     "images": [
-      "/images/products/ddd2e14b-0a63-4bcd-a6ac-53a0c5523b61.png"
-    ],
-    "variants": [
-      "Gold Tone",
-      "Silver Tone"
+      "/images/products/a546d9f4-0df6-4be6-b415-8c9dc08e426c.png"
     ],
     "variantGroups": [
       {
         "label": "Size",
         "options": [
-          "Small (71–81 cm (28\"–31.9\"))",
-          "Medium (71–91 cm (28\"–35.8\"))",
-          "Large (71–100 cm (28\"–39.4\"))"
+          "Small 71 cm (28\") - 81 cm (31.9\")",
+          "Medium 71 cm (28\") - 91 cm (35.8\")",
+          "Large 71 cm (28\") - 100 cm (39.4\")"
+        ]
+      },
+      {
+        "label": "Finish",
+        "options": [
+          "Gold Stainless",
+          "Silver Stainless"
         ]
       }
     ],
-    "featured": false,
-    "active": true,
-    "variantVideos": {
-      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/9a009a1292580bf185bdd4739314c3a8/downloads/default.mp4",
-      "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/d115d770e24b680933a38bb054c8ffd7/downloads/default.mp4"
-    },
-    "altText": "Gold tone stainless steel snake belly chain for summer, waterproof waist chain accessory",
+    "altText": "Delicate gold-tone stainless steel layered belly chain for minimalist waist styling and beach wear.",
+    "sizeGuideImage": "/images/products/da3d343f-4647-4ca2-94cb-6da42e47942b.png",
+    "dateAdded": "2026-06-12T15:00:27-04:00",
     "gallery": [
-      "/images/products/ddd2e14b-0a63-4bcd-a6ac-53a0c5523b61.png",
-      "/images/products/f1f33d88-633e-4472-bf35-69b16a308986.webp",
-      "/images/products/etsy-thumbnails--1--copy-7.webp",
-      "/images/products/9cc0b743-3372-437e-954f-f808ab0d296a-2.webp",
-      "/images/products/764ad5f6-99b4-4dd2-b02d-ea7be9c4618c.webp",
-      "https://i.etsystatic.com/55122258/r/il/3044d6/7744102609/il_fullxfull.7744102609_yof6.jpg",
-      "/images/products/b737f6ce-566c-4f01-aa20-ef40d07d82ce.webp",
-      "/images/products/987a3619-11d9-42a4-bd7d-316d1a4fa2cd.webp",
-      "https://i.etsystatic.com/55122258/r/il/bd436c/7831325315/il_fullxfull.7831325315_bq5k.jpg"
+      "/images/products/a546d9f4-0df6-4be6-b415-8c9dc08e426c.png",
+      "/images/products/6ff3c5b2-4fa2-4c93-8458-e83dc479cbd8.webp",
+      "https://i.etsystatic.com/55122258/r/il/00c68e/7783598352/il_fullxfull.7783598352_ord3.jpg",
+      "https://i.etsystatic.com/55122258/r/il/3ca3d7/7783400862/il_fullxfull.7783400862_3lw5.jpg",
+      "https://i.etsystatic.com/55122258/r/il/17f798/7787214796/il_fullxfull.7787214796_ampn.jpg",
+      "https://i.etsystatic.com/55122258/r/il/d7b84c/7783600598/il_fullxfull.7783600598_op0k.jpg",
+      "https://i.etsystatic.com/55122258/r/il/da142d/7783600828/il_fullxfull.7783600828_l2oi.jpg",
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp"
+    ],
+    "variants": [
+      "Gold Stainless",
+      "Silver Stainless"
     ],
     "variantHeroes": {
-      "Gold Tone": "/images/products/ddd2e14b-0a63-4bcd-a6ac-53a0c5523b61.png",
-      "Silver Tone": "/images/products/f1f33d88-633e-4472-bf35-69b16a308986.webp"
+      "Gold Stainless": "/images/products/6ff3c5b2-4fa2-4c93-8458-e83dc479cbd8.webp",
+      "Silver Stainless": "/images/products/a546d9f4-0df6-4be6-b415-8c9dc08e426c.png"
     },
-    "sizeGuideImage": "/images/products/da3d343f-4647-4ca2-94cb-6da42e47942b.png",
-    "dateAdded": "2026-06-12T14:11:58-04:00"
+    "variantVideos": {
+      "Gold Stainless": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/6d1bffbe5f4404a422d2bb5e7bd6ee9a/downloads/default.mp4",
+      "Silver Stainless": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/6d1bffbe5f4404a422d2bb5e7bd6ee9a/downloads/default.mp4"
+    }
   },
   {
     "id": "pearl-cross-faith-bracelet",
@@ -2655,21 +2622,21 @@
     "sizeGuideImage": "/images/products/esty-thumnails-new--19-.png"
   },
   {
-    "id": "butterfly-charm-belly-chain",
-    "name": "Butterfly Charm Belly Chain",
-    "price": 22,
+    "id": "zodiac-yoga-belly-chain",
+    "name": "Zodiac Belly Chain",
+    "price": 29.6,
     "currency": "EUR",
     "category": "Belly Chains",
-    "description": "Your summer staple with a playful twist. This dainty waist chain features a delicate butterfly charm in your choice of colour — waterproof and anti-tarnish stainless steel made to be worn every day.",
-    "fullDescription": "A 71 cm (28\") base chain with an open-link extender, so you can dial in the perfect fit from Small (71–81 cm (28\"–31.9\")) to Large (71–100 cm (28\"–39.4\")). The butterfly charm catches light beautifully whether you're layering it over a bikini or pairing it with a sundress.\n\nChoose from Pink, Blue, White, Purple, or Yellow butterfly. Made from stainless steel that won't rust, tarnish, or discolour your skin through swimming, sunscreen, or long summer days.",
+    "description": "This gold zodiac belly chain combines your star sign charm with a waterproof, adjustable stainless steel chain — designed for every active life moment.",
+    "fullDescription": "Choose your zodiac sign and size at checkout for a belly chain that goes wherever you do — to the gym, the yoga studio, the beach, and beyond. The zodiac charm adds a personal touch to a practical, everyday piece.\n\nGold-tone stainless steel. Completely waterproof and anti-tarnish. Three extender sizes: Small (71–81 cm (28\"–31.9\")), Medium (71–91 cm (28\"–35.8\")), or Large (71–100 cm (28\"–39.4\")).",
     "specs": [
       {
         "label": "Material",
-        "value": "Stainless steel (waterproof & anti-tarnish)"
+        "value": "Gold-tone stainless steel (waterproof & anti-tarnish)"
       },
       {
-        "label": "Base chain",
-        "value": "71 cm (28\")"
+        "label": "Zodiac",
+        "value": "All 12 signs — select at checkout"
       },
       {
         "label": "Small",
@@ -2684,12 +2651,12 @@
         "value": "71–100 cm (28\"–39.4\")"
       },
       {
-        "label": "Butterfly colours",
-        "value": "Pink, Blue, White, Purple, Yellow"
+        "label": "Occasion",
+        "value": "Yoga, pilates, beach, everyday"
       },
       {
         "label": "Care",
-        "value": "Wipe gently with a soft cloth. Store in an airtight container."
+        "value": "Wipe gently with soft cloth. Store in an airtight container."
       },
       {
         "label": "Shipping",
@@ -2699,27 +2666,18 @@
     "featured": false,
     "active": true,
     "images": [
-      "https://i.etsystatic.com/55122258/r/il/773cdb/7690300976/il_fullxfull.7690300976_30na.jpg",
-      "https://i.etsystatic.com/55122258/r/il/2001b9/7698999546/il_fullxfull.7698999546_rxit.jpg",
-      "/images/products/5d9b759b-df61-4a22-9921-7037a315d339.png",
-      "https://i.etsystatic.com/55122258/r/il/728a96/7736687519/il_fullxfull.7736687519_os32.jpg",
-      "https://i.etsystatic.com/55122258/r/il/5d8410/7690054538/il_fullxfull.7690054538_s4hw.jpg",
-      "https://i.etsystatic.com/55122258/r/il/66de73/7690107296/il_fullxfull.7690107296_5rup.jpg",
-      "https://i.etsystatic.com/55122258/r/il/669754/7700124762/il_fullxfull.7700124762_h91t.jpg",
-      "https://i.etsystatic.com/55122258/r/il/2c5296/7690107348/il_fullxfull.7690107348_qz4w.jpg",
-      "https://i.etsystatic.com/55122258/r/il/6a306e/7736687741/il_fullxfull.7736687741_i4pd.jpg"
+      "/images/products/3de78d0c-5fe9-4df3-9aef-e57cea8e5099.png",
+      "https://i.etsystatic.com/55122258/r/il/b0b278/8002435152/il_fullxfull.8002435152_pewi.jpg",
+      "https://i.etsystatic.com/55122258/r/il/eabb7d/8050343405/il_fullxfull.8050343405_lv0f.jpg",
+      "https://i.etsystatic.com/55122258/r/il/0a48b1/8002436328/il_fullxfull.8002436328_jde7.jpg",
+      "https://i.etsystatic.com/55122258/r/il/d849dd/7807040209/il_fullxfull.7807040209_88k9.jpg",
+      "https://i.etsystatic.com/55122258/r/il/ca5f71/7759089584/il_fullxfull.7759089584_2j0k.jpg",
+      "https://i.etsystatic.com/55122258/r/il/be4849/7757121780/il_fullxfull.7757121780_4iz9.jpg",
+      "https://i.etsystatic.com/55122258/r/il/7d203e/7759169030/il_fullxfull.7759169030_aizv.jpg",
+      "https://i.etsystatic.com/55122258/r/il/6f32de/7805260215/il_fullxfull.7805260215_hpf4.jpg",
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp"
     ],
     "variantGroups": [
-      {
-        "label": "Design",
-        "options": [
-          "Pink Butterfly",
-          "Blue Butterfly",
-          "White Butterfly",
-          "Purple Butterfly",
-          "Yellow Butterfly"
-        ]
-      },
       {
         "label": "Size",
         "options": [
@@ -2727,11 +2685,32 @@
           "Medium 71 cm (28\") - 91 cm (35.8\")",
           "Large 71 cm (28\") - 100 cm (39.4\")"
         ]
+      },
+      {
+        "label": "Zodiac Sign",
+        "options": [
+          "Aries (3.21-4.19)",
+          "Taurus (4.20-5.20)",
+          "Gemini (5.21-6.20)",
+          "Cancer (6.21-7.22)",
+          "Leo (7.23-8.22)",
+          "Virgo (8.23-9.22)",
+          "Libra (9.23-10.22)",
+          "Scorpio(10.23-11.21)",
+          "Sagit. (11.22-12.21)",
+          "Capricorn 12.22-1.19",
+          "Aquarius (1.20-2.18)",
+          "Pisces (2.19-3.20)"
+        ]
       }
     ],
-    "altText": "Gold butterfly charm belly chain in stainless steel, dainty waist chain perfect for summer layering and beach wear.",
-    "sizeGuideImage": "/images/products/il_fullxfull.8090630842_9i25.webp",
-    "dateAdded": "2026-06-12T15:00:27-04:00"
+    "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/924b3f16f202a2e79b98c3885cb74653/downloads/default.mp4",
+    "altText": "Gold-tone stainless steel zodiac belly chain with adjustable waist chain design for active wear",
+    "dateAdded": "2026-06-12T15:00:27-04:00",
+    "giftTags": [
+      "personalized"
+    ],
+    "sizeGuideImage": "/images/products/da3d343f-4647-4ca2-94cb-6da42e47942b.png"
   },
   {
     "id": "double-shoulder-chest-chain",
@@ -3551,70 +3530,92 @@
     ]
   },
   {
-    "id": "layered-silver-belly-chain",
-    "name": "Layered Silver Belly Chain",
-    "price": 24,
+    "id": "snake-belly-chain",
+    "name": "Snake Belly Chain",
+    "price": 16,
     "currency": "EUR",
     "category": "Belly Chains",
-    "description": "Your minimalist layered waist detail. This silver plated stainless steel belly chain features multiple delicate strands that sit beautifully at the hip — waterproof, adjustable, and made for all-day summer wear.",
-    "fullDescription": "Multiple fine silver strands layer at the waist in a fluid, stacked effect that photographs beautifully from the side and the front. Wears alone or stacked with a single-strand chain for an even bolder look.\n\nSilver plated stainless steel. Water resistant and tarnish-resistant. Three extender sizes: Small (71–81 cm (28\"–31.9\")), Medium (71–91 cm (28\"–35.8\")), or Large (71–100 cm (28\"–39.4\")).",
+    "description": "Your go-to summer staple. This minimalist snake chain drapes beautifully across your waist — waterproof, tarnish-resistant stainless steel that keeps its glow through the beach, the pool, and everything in between. Available in gold or silver.",
+    "fullDescription": "A 71 cm (28\") solid snake chain in stainless steel, smooth against the skin and designed to be worn alone or layered. Choose your extender size at checkout for a dialled-in fit: Small (71–81 cm (28\"–31.9\")), Medium (71–91 cm (28\"–35.8\")), or Large (71–100 cm (28\"–39.4\")). The open-link extender lets you clasp at any point for a millimetre-perfect result.\n\nCompletely waterproof and anti-tarnish — it never comes off unless you want it to. These chains layer beautifully together: two or three creates a look that photographs as well as it feels.",
     "specs": [
       {
         "label": "Material",
-        "value": "Silver plated stainless steel (water resistant)"
+        "value": "Stainless steel (waterproof & anti-tarnish)"
       },
       {
-        "label": "Style",
-        "value": "Layered multi-strand belly chain"
+        "label": "Colours",
+        "value": "Gold or Silver"
       },
       {
-        "label": "Small",
-        "value": "71–81 cm (28\"–31.9\")"
+        "label": "Base length",
+        "value": "71 cm (28\") solid snake chain"
       },
       {
-        "label": "Medium",
-        "value": "71–91 cm (28\"–35.8\")"
+        "label": "Small extender",
+        "value": "+10 cm (3.9\") — fits 71–81 cm (28\"–31.9\")"
       },
       {
-        "label": "Large",
-        "value": "71–100 cm (28\"–39.4\")"
+        "label": "Medium extender",
+        "value": "+20 cm (7.9\") — fits 71–91 cm (28\"–35.8\")"
+      },
+      {
+        "label": "Large extender",
+        "value": "+29 cm (11.4\") — fits 71–100 cm (28\"–39.4\")"
+      },
+      {
+        "label": "Custom fit",
+        "value": "Message us after checkout — we adjust extender length at no extra cost"
       },
       {
         "label": "Care",
-        "value": "Wipe gently with soft cloth. Store in an airtight container."
+        "value": "Wipe gently with a soft cloth after wear. Store in an airtight container."
       },
       {
         "label": "Shipping",
         "value": "Dispatches within 1–2 business days"
       }
     ],
-    "featured": false,
-    "active": true,
     "images": [
-      "/images/products/a94b9d79-5531-4bbb-9f30-8edd248375dc.png",
-      "https://i.etsystatic.com/55122258/r/il/5c671e/7820732007/il_fullxfull.7820732007_tn8h.jpg",
-      "https://i.etsystatic.com/55122258/r/il/8e4af7/7772799606/il_fullxfull.7772799606_7m27.jpg",
-      "https://i.etsystatic.com/55122258/r/il/0df873/7772615942/il_fullxfull.7772615942_pva0.jpg",
-      "https://i.etsystatic.com/55122258/r/il/43d38b/7772614736/il_fullxfull.7772614736_nze8.jpg",
-      "https://i.etsystatic.com/55122258/r/il/bd1ab7/7820725957/il_fullxfull.7820725957_49nu.jpg",
-      "https://i.etsystatic.com/55122258/r/il/8f1422/7772793438/il_fullxfull.7772793438_o0s7.jpg",
-      "https://i.etsystatic.com/55122258/r/il/856c38/7820732077/il_fullxfull.7820732077_1nr0.jpg",
-      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp"
+      "/images/products/ddd2e14b-0a63-4bcd-a6ac-53a0c5523b61.png"
+    ],
+    "variants": [
+      "Gold Tone",
+      "Silver Tone"
     ],
     "variantGroups": [
       {
         "label": "Size",
         "options": [
-          "Small 71 cm (28\") - 81 cm (31.9\")",
-          "Medium 71 cm (28\") - 91 cm (35.8\")",
-          "Large 71 cm (28\") - 100 cm (39.4\")"
+          "Small (71–81 cm (28\"–31.9\"))",
+          "Medium (71–91 cm (28\"–35.8\"))",
+          "Large (71–100 cm (28\"–39.4\"))"
         ]
       }
     ],
-    "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/bb2249f21c3cf9d5de47efd11ee26201/downloads/default.mp4",
-    "altText": "Delicate layered silver belly chain in stainless steel, minimalist waist accessory for body jewelry styling",
+    "featured": false,
+    "active": true,
+    "variantVideos": {
+      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/9a009a1292580bf185bdd4739314c3a8/downloads/default.mp4",
+      "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/d115d770e24b680933a38bb054c8ffd7/downloads/default.mp4"
+    },
+    "altText": "Gold tone stainless steel snake belly chain for summer, waterproof waist chain accessory",
+    "gallery": [
+      "/images/products/ddd2e14b-0a63-4bcd-a6ac-53a0c5523b61.png",
+      "/images/products/f1f33d88-633e-4472-bf35-69b16a308986.webp",
+      "/images/products/etsy-thumbnails--1--copy-7.webp",
+      "/images/products/9cc0b743-3372-437e-954f-f808ab0d296a-2.webp",
+      "/images/products/764ad5f6-99b4-4dd2-b02d-ea7be9c4618c.webp",
+      "https://i.etsystatic.com/55122258/r/il/3044d6/7744102609/il_fullxfull.7744102609_yof6.jpg",
+      "/images/products/b737f6ce-566c-4f01-aa20-ef40d07d82ce.webp",
+      "/images/products/987a3619-11d9-42a4-bd7d-316d1a4fa2cd.webp",
+      "https://i.etsystatic.com/55122258/r/il/bd436c/7831325315/il_fullxfull.7831325315_bq5k.jpg"
+    ],
+    "variantHeroes": {
+      "Gold Tone": "/images/products/ddd2e14b-0a63-4bcd-a6ac-53a0c5523b61.png",
+      "Silver Tone": "/images/products/f1f33d88-633e-4472-bf35-69b16a308986.webp"
+    },
     "sizeGuideImage": "/images/products/da3d343f-4647-4ca2-94cb-6da42e47942b.png",
-    "dateAdded": "2026-06-12T15:00:27-04:00"
+    "dateAdded": "2026-06-12T14:11:58-04:00"
   },
   {
     "id": "bikini-body-chain",
@@ -3993,21 +3994,17 @@
     ]
   },
   {
-    "id": "waterproof-belly-chain",
-    "name": "Waterproof Belly Chain",
-    "price": 25.6,
+    "id": "silver-waterproof-belly-chain",
+    "name": "Silver Belly Chain",
+    "price": 16,
     "currency": "EUR",
     "category": "Belly Chains",
-    "description": "Your waist chain for the beach and beyond. This waterproof, anti-tarnish stainless steel belly chain is available in gold or silver with three size options — designed to stay on all summer.",
-    "fullDescription": "A clean, versatile waist chain that looks equally at home over a bikini as it does with a sundress. The 71 cm (28\") base chain comes with your choice of small, medium, or large open-link extender for a custom fit.\n\nCompletely waterproof and anti-tarnish in gold or silver stainless steel — it won't fade, tarnish, or irritate your skin no matter how many times it gets wet.",
+    "description": "Your minimalist silver waist chain for the beach. This clean, water-resistant stainless steel belly chain adjusts from Small to Large — simple, durable, and designed to stay on all summer.",
+    "fullDescription": "No frills, no embellishment — just a beautifully proportioned silver chain at the waist that's fully waterproof and anti-tarnish. The open-link extender lets you clasp at any point for a millimetre-perfect fit.\n\nSilver-tone stainless steel. Three extender sizes: Small (71–81 cm (28\"–31.9\")), Medium (71–91 cm (28\"–35.8\")), or Large (71–100 cm (28\"–39.4\")). The belly chain that earns its place by never coming off.",
     "specs": [
       {
         "label": "Material",
-        "value": "Stainless steel (waterproof & anti-tarnish)"
-      },
-      {
-        "label": "Colours",
-        "value": "Gold or Silver"
+        "value": "Silver-tone stainless steel (water resistant & anti-tarnish)"
       },
       {
         "label": "Base chain",
@@ -4027,7 +4024,7 @@
       },
       {
         "label": "Care",
-        "value": "Wipe gently with a soft cloth. Store in an airtight container."
+        "value": "Wipe gently with soft cloth. Store in an airtight container."
       },
       {
         "label": "Shipping",
@@ -4036,12 +4033,15 @@
     ],
     "featured": false,
     "active": true,
-    "variants": [
-      "Gold Tone",
-      "Silver Tone"
-    ],
     "images": [
-      "/images/products/f6cab0a7-17d3-4573-a943-ef96ede908fd.png"
+      "https://i.etsystatic.com/55122258/r/il/e7dacb/7820649197/il_fullxfull.7820649197_8p7a.jpg",
+      "/images/products/e5addb54-b3c4-426c-8a32-b98b0ae110ac.png",
+      "https://i.etsystatic.com/55122258/r/il/0df873/7772615942/il_fullxfull.7772615942_pva0.jpg",
+      "https://i.etsystatic.com/55122258/r/il/316511/7772715982/il_fullxfull.7772715982_1mgj.jpg",
+      "https://i.etsystatic.com/55122258/r/il/3b2757/7820649577/il_fullxfull.7820649577_p46g.jpg",
+      "https://i.etsystatic.com/55122258/r/il/787e06/7772715502/il_fullxfull.7772715502_d707.jpg",
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp",
+      "/images/products/da3d343f-4647-4ca2-94cb-6da42e47942b.png"
     ],
     "variantGroups": [
       {
@@ -4053,25 +4053,9 @@
         ]
       }
     ],
-    "variantVideos": {
-      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/46eeebfae174369a50144ea75059e6d0/downloads/default.mp4",
-      "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/46eeebfae174369a50144ea75059e6d0/downloads/default.mp4"
-    },
-    "altText": "Gold tone stainless steel waterproof belly chain for beach wear and everyday styling",
-    "gallery": [
-      "/images/products/f6cab0a7-17d3-4573-a943-ef96ede908fd.png",
-      "https://i.etsystatic.com/55122258/r/il/9cad0f/7947179569/il_fullxfull.7947179569_kcfi.jpg",
-      "/images/products/68810628-5cd6-4861-afa2-96b1a160173e.jpg",
-      "/images/products/fa1cbece-a2ea-4231-9172-996efad85c10.jpg",
-      "https://i.etsystatic.com/55122258/r/il/fbe2fe/7947313965/il_fullxfull.7947313965_7y6z.jpg",
-      "https://i.etsystatic.com/55122258/r/il/b1d40c/7947282767/il_fullxfull.7947282767_5y3o.jpg",
-      "https://i.etsystatic.com/55122258/r/il/42c951/8157790725/il_fullxfull.8157790725_9diy.jpg",
-      "https://i.etsystatic.com/55122258/r/il/eb340d/8109884568/il_fullxfull.8109884568_a0hu.jpg"
-    ],
-    "variantHeroes": {
-      "Gold Tone": "/images/products/f6cab0a7-17d3-4573-a943-ef96ede908fd.png",
-      "Silver Tone": "https://i.etsystatic.com/55122258/r/il/fbe2fe/7947313965/il_fullxfull.7947313965_7y6z.jpg"
-    },
+    "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/0b78741a901616f76cee775175bfebe9/downloads/default.mp4",
+    "altText": "Delicate silver-tone stainless steel belly chain for beach wear, adjustable minimalist waist chain design",
+    "sizeGuideImage": "/images/products/da3d343f-4647-4ca2-94cb-6da42e47942b.png",
     "dateAdded": "2026-06-12T15:00:27-04:00"
   },
   {
@@ -4164,33 +4148,37 @@
     "sizeGuideImage": "/images/products/2bd7ffaf-d01b-4d4c-85d8-3ae0df6267e1.png"
   },
   {
-    "id": "coin-link-chain-belt",
-    "name": "Coin Link Chain Belt",
-    "price": 32,
+    "id": "butterfly-charm-belly-chain",
+    "name": "Butterfly Charm Belly Chain",
+    "price": 22,
     "currency": "EUR",
     "category": "Belly Chains",
-    "description": "A handmade stainless steel disc-link chain belt that pairs with a slip dress, jeans, a ribbed knit, or office trousers — same belt, endless outfits.",
-    "fullDescription": "A good belt changes everything. I made this handmade stainless steel chain belt for those moments when your outfit needs a little extra intention — whether you're styling a sleek slip dress, throwing it over your favorite ribbed knit, or looking for a versatile fashion accessory to break up your office trousers. Crafted from durable, waterproof disc chain, it's designed to be that reliable piece you don't have to worry about tarnishing or taking off before it rains. It sits beautifully, catches the light just right, and thanks to the fully adjustable extender, you get a comfortable, perfectly tailored fit every single time you put it on.\n\nThat's really where the value is — this isn't a one-outfit piece. Wear it over a bikini at the beach, with jeans and a plain top, over a slip dress for a night out, or with tailored trousers at the office. Same belt, endless outfits.\n\nNeed a different size? Message me after ordering and I'll adjust it for free.\n\nCare Instructions\nWipe gently with a soft cloth after each wear.\nStore in an airtight container when not in use.",
+    "description": "Your summer staple with a playful twist. This dainty waist chain features a delicate butterfly charm in your choice of colour — waterproof and anti-tarnish stainless steel made to be worn every day.",
+    "fullDescription": "A 71 cm (28\") base chain with an open-link extender, so you can dial in the perfect fit from Small (71–81 cm (28\"–31.9\")) to Large (71–100 cm (28\"–39.4\")). The butterfly charm catches light beautifully whether you're layering it over a bikini or pairing it with a sundress.\n\nChoose from Pink, Blue, White, Purple, or Yellow butterfly. Made from stainless steel that won't rust, tarnish, or discolour your skin through swimming, sunscreen, or long summer days.",
     "specs": [
       {
         "label": "Material",
-        "value": "High-quality stainless steel (waterproof and anti-tarnish)"
+        "value": "Stainless steel (waterproof & anti-tarnish)"
       },
       {
-        "label": "Style",
-        "value": "Sleek disc-link chain"
+        "label": "Base chain",
+        "value": "71 cm (28\")"
       },
       {
-        "label": "Color",
-        "value": "Gold Tone"
+        "label": "Small",
+        "value": "71–81 cm (28\"–31.9\")"
       },
       {
-        "label": "Size",
-        "value": "Each size is a solid connected disc chain base plus a 10 cm (4\") open-link extender"
+        "label": "Medium",
+        "value": "71–91 cm (28\"–35.8\")"
       },
       {
-        "label": "Finish",
-        "value": "Waterproof and anti-tarnish"
+        "label": "Large",
+        "value": "71–100 cm (28\"–39.4\")"
+      },
+      {
+        "label": "Butterfly colours",
+        "value": "Pink, Blue, White, Purple, Yellow"
       },
       {
         "label": "Care",
@@ -4201,49 +4189,42 @@
         "value": "Dispatches within 1–2 business days"
       }
     ],
+    "featured": false,
+    "active": true,
     "images": [
-      "/images/products/98ae0849-42ac-42de-bf8d-04e08acb0e55.png"
-    ],
-    "variants": [
-      "Gold Tone"
+      "https://i.etsystatic.com/55122258/r/il/773cdb/7690300976/il_fullxfull.7690300976_30na.jpg",
+      "https://i.etsystatic.com/55122258/r/il/2001b9/7698999546/il_fullxfull.7698999546_rxit.jpg",
+      "/images/products/5d9b759b-df61-4a22-9921-7037a315d339.png",
+      "https://i.etsystatic.com/55122258/r/il/728a96/7736687519/il_fullxfull.7736687519_os32.jpg",
+      "https://i.etsystatic.com/55122258/r/il/5d8410/7690054538/il_fullxfull.7690054538_s4hw.jpg",
+      "https://i.etsystatic.com/55122258/r/il/66de73/7690107296/il_fullxfull.7690107296_5rup.jpg",
+      "https://i.etsystatic.com/55122258/r/il/669754/7700124762/il_fullxfull.7700124762_h91t.jpg",
+      "https://i.etsystatic.com/55122258/r/il/2c5296/7690107348/il_fullxfull.7690107348_qz4w.jpg",
+      "https://i.etsystatic.com/55122258/r/il/6a306e/7736687741/il_fullxfull.7736687741_i4pd.jpg"
     ],
     "variantGroups": [
       {
+        "label": "Design",
+        "options": [
+          "Pink Butterfly",
+          "Blue Butterfly",
+          "White Butterfly",
+          "Purple Butterfly",
+          "Yellow Butterfly"
+        ]
+      },
+      {
         "label": "Size",
         "options": [
-          "Small — 81 cm (31.9\")",
-          "Medium — 91 cm (35.8\")",
-          "Large — 110 cm (43.3\")"
-        ],
-        "optionPrices": {
-          "Small — 81 cm (31.9\")": 0,
-          "Medium — 91 cm (35.8\")": 2,
-          "Large — 110 cm (43.3\")": 4
-        }
+          "Small 71 cm (28\") - 81 cm (31.9\")",
+          "Medium 71 cm (28\") - 91 cm (35.8\")",
+          "Large 71 cm (28\") - 100 cm (39.4\")"
+        ]
       }
     ],
-    "featured": false,
-    "active": true,
-    "altText": "Gold-tone stainless steel disc-link chain belt, waterproof and adjustable waist belt",
-    "dateAdded": "2026-09-01T09:00:00-04:00",
-    "gallery": [
-      "/images/products/98ae0849-42ac-42de-bf8d-04e08acb0e55.png",
-      "/images/products/1c3128ea-573e-4eb1-bd2f-2bd1dcc46674.png",
-      "/images/products/e92da0fa-604c-4b70-9d15-ba366f43c848.png",
-      "/images/products/e0b75e2c-8a25-42e0-80fc-af53ea3fb5fb.png",
-      "/images/products/f0782c4d-84da-48cf-9ca9-9b00053f61eb.png",
-      "/images/products/df8be7dc-4e6f-4554-9c60-d1d0e37c1eed.png",
-      "/images/products/4055fcd3-127b-41d6-b5a3-997a1bb8762d.png",
-      "/images/products/b6b14869-6fad-46fc-adc3-fb0e0ab020a3.png",
-      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png"
-    ],
-    "variantHeroes": {
-      "Gold Tone": "/images/products/1c3128ea-573e-4eb1-bd2f-2bd1dcc46674.png"
-    },
-    "variantVideos": {
-      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/7a386f8225334022f22ab12f76c3200a/downloads/default.mp4"
-    },
-    "sizeGuideImage": "/images/products/b6b14869-6fad-46fc-adc3-fb0e0ab020a3.png"
+    "altText": "Gold butterfly charm belly chain in stainless steel, dainty waist chain perfect for summer layering and beach wear.",
+    "sizeGuideImage": "/images/products/il_fullxfull.8090630842_9i25.webp",
+    "dateAdded": "2026-06-12T15:00:27-04:00"
   },
   {
     "id": "birth-flower-charm-bracelet",
@@ -4353,29 +4334,37 @@
     ]
   },
   {
-    "id": "layered-hip-chain",
-    "name": "Layered Hip Chain",
-    "price": 32,
+    "id": "zodiac-snake-belly-chain",
+    "name": "Zodiac Snake Belly Chain",
+    "price": 22.4,
     "currency": "EUR",
     "category": "Belly Chains",
-    "description": "Your festival or beach statement piece. This silver or gold layered hip and waist chain drapes across the hips in multiple strands — bold, minimalist, and designed to stand out in any summer outfit.",
-    "fullDescription": "Multiple delicate strands layer across the waist and hip, creating a fluid, stacked effect that moves beautifully as you do. Equally stunning at a festival, the beach, or layered over a swimsuit.\n\nMade from silver or gold tone stainless steel — waterproof, anti-tarnish, and designed to be worn all season long. Adjustable sizing available at checkout.",
+    "description": "Your star sign at your waist. This gold zodiac belly chain features your chosen horoscope charm on a classic snake chain — waterproof, adjustable stainless steel body jewelry for yoga, beach, and everyday wear.",
+    "fullDescription": "A 71 cm (28\") snake chain with a zodiac charm in your star sign — adjust the fit with three extender sizes at checkout. The clean snake chain is the same style as our most-loved belly chain, personalised with your astrological sign.\n\nGold-tone stainless steel. Completely waterproof and anti-tarnish. Three sizes: Small (71–81 cm (28\"–31.9\")), Medium (71–91 cm (28\"–35.8\")), or Large (71–100 cm (28\"–39.4\")).",
     "specs": [
       {
         "label": "Material",
-        "value": "Silver-tone stainless steel (waterproof & anti-tarnish)"
+        "value": "Gold-tone stainless steel (waterproof & anti-tarnish)"
       },
       {
-        "label": "Style",
-        "value": "Layered hip and waist chain"
+        "label": "Zodiac",
+        "value": "All 12 signs — select at checkout"
+      },
+      {
+        "label": "Small",
+        "value": "71–81 cm (28\"–31.9\")"
+      },
+      {
+        "label": "Medium",
+        "value": "71–91 cm (28\"–35.8\")"
+      },
+      {
+        "label": "Large",
+        "value": "71–100 cm (28\"–39.4\")"
       },
       {
         "label": "Occasion",
-        "value": "Festival, beach, summer"
-      },
-      {
-        "label": "Fit",
-        "value": "Adjustable"
+        "value": "Beach, yoga, everyday"
       },
       {
         "label": "Care",
@@ -4388,12 +4377,15 @@
     ],
     "featured": false,
     "active": true,
-    "variants": [
-      "Gold Tone",
-      "Silver Tone"
-    ],
     "images": [
-      "/images/products/0e4a8235-95c7-421f-8007-133e423032a5.png"
+      "https://i.etsystatic.com/55122258/r/il/e0607c/8094646617/il_fullxfull.8094646617_bgdy.jpg",
+      "https://i.etsystatic.com/55122258/r/il/2017a9/7764225047/il_fullxfull.7764225047_acqq.jpg",
+      "https://i.etsystatic.com/55122258/r/il/f31f71/7716319856/il_fullxfull.7716319856_7zke.jpg",
+      "https://i.etsystatic.com/55122258/r/il/773296/7764224949/il_fullxfull.7764224949_pkt0.jpg",
+      "https://i.etsystatic.com/55122258/r/il/5799b2/7764252877/il_fullxfull.7764252877_1yj5.jpg",
+      "https://i.etsystatic.com/55122258/r/il/efeaca/7764225059/il_fullxfull.7764225059_4pgs.jpg",
+      "https://i.etsystatic.com/55122258/r/il/f70917/7764224955/il_fullxfull.7764224955_spcc.jpg",
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp"
     ],
     "variantGroups": [
       {
@@ -4403,29 +4395,32 @@
           "Medium 71 cm (28\") - 91 cm (35.8\")",
           "Large 71 cm (28\") - 100 cm (39.4\")"
         ]
+      },
+      {
+        "label": "Zodiac Sign",
+        "options": [
+          "Capricorn 12/22-1/19",
+          "Aquarius 1/20-2/18",
+          "Pisces 2/19-3/20",
+          "Aries 3/21-4/19",
+          "Taurus 4/20-5/20",
+          "Gemini 5/21-6/20",
+          "Cancer 6/21-7/22",
+          "Leo 7/23-8/22",
+          "Virgo 8/23-9/22",
+          "Libra 9/23-10/22",
+          "Scorpio 10/23-11/21",
+          "Sagitt. 11/22-12/21"
+        ]
       }
     ],
-    "variantVideos": {
-      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/0b1619a2974fe53fac5acf3f0446f5ad/downloads/default.mp4",
-      "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/0b1619a2974fe53fac5acf3f0446f5ad/downloads/default.mp4"
-    },
-    "altText": "Silver-tone stainless steel layered hip chain for festivals and beach wear, waterproof belly body chain",
-    "gallery": [
-      "/images/products/0e4a8235-95c7-421f-8007-133e423032a5.png",
-      "/images/products/7db0339f-0a74-4e65-a227-3280f7316d82.jpeg",
-      "/images/products/IMG_2351.webp",
-      "/images/products/da2c5eb3-be12-4f8d-aec8-d52e2a8521d2.png",
-      "/images/products/7bd902aa-ff68-439b-ae95-1df92ab23b50-1.png",
-      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp",
-      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.webp",
-      "/images/products/IMG_2378.jpg"
-    ],
-    "variantHeroes": {
-      "Gold Tone": "/images/products/7bd902aa-ff68-439b-ae95-1df92ab23b50-1.png",
-      "Silver Tone": "/images/products/0e4a8235-95c7-421f-8007-133e423032a5.png"
-    },
-    "sizeGuideImage": "/images/products/efdfd7b7-9b1a-4208-872d-f6b4ab61742f.webp",
-    "dateAdded": "2026-06-12T15:00:27-04:00"
+    "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/d8995bb3c3eb33065f2c1683bf7c75c8/downloads/default.mp4",
+    "altText": "Gold-tone zodiac belly chain in stainless steel, waterproof snake chain waist jewelry for layering",
+    "sizeGuideImage": "/images/products/da3d343f-4647-4ca2-94cb-6da42e47942b.png",
+    "dateAdded": "2026-06-12T15:00:27-04:00",
+    "giftTags": [
+      "personalized"
+    ]
   },
   {
     "id": "coin-disc-chain-anklet",
@@ -4594,61 +4589,86 @@
     }
   },
   {
-    "id": "turquoise-beaded-belly-chain",
-    "name": "Turquoise Beaded Belly Chain",
+    "id": "coin-link-chain-belt",
+    "name": "Coin Link Chain Belt",
     "price": 32,
     "currency": "EUR",
     "category": "Belly Chains",
-    "description": "Your boho beach waist detail. This vibrant turquoise beaded belly chain wraps the waist in earthy colour and texture — handcrafted gold stainless steel with natural-toned beads for a free-spirited summer look.",
-    "fullDescription": "Turquoise beads scatter across a fine gold chain in a pattern that's playful and textural without being heavy. Designed for beach days, festivals, and anyone who brings colour to their accessories.\n\nHandcrafted in gold-tone stainless steel with boho bead accents. Adjustable fit. A statement waist chain that's completely unlike anything you'll find in a high street shop.",
+    "description": "A handmade stainless steel disc-link chain belt that pairs with a slip dress, jeans, a ribbed knit, or office trousers — same belt, endless outfits.",
+    "fullDescription": "A good belt changes everything. I made this handmade stainless steel chain belt for those moments when your outfit needs a little extra intention — whether you're styling a sleek slip dress, throwing it over your favorite ribbed knit, or looking for a versatile fashion accessory to break up your office trousers. Crafted from durable, waterproof disc chain, it's designed to be that reliable piece you don't have to worry about tarnishing or taking off before it rains. It sits beautifully, catches the light just right, and thanks to the fully adjustable extender, you get a comfortable, perfectly tailored fit every single time you put it on.\n\nThat's really where the value is — this isn't a one-outfit piece. Wear it over a bikini at the beach, with jeans and a plain top, over a slip dress for a night out, or with tailored trousers at the office. Same belt, endless outfits.\n\nNeed a different size? Message me after ordering and I'll adjust it for free.\n\nCare Instructions\nWipe gently with a soft cloth after each wear.\nStore in an airtight container when not in use.",
     "specs": [
       {
         "label": "Material",
-        "value": "Gold-tone stainless steel with turquoise beads"
+        "value": "High-quality stainless steel (waterproof and anti-tarnish)"
       },
       {
         "label": "Style",
-        "value": "Boho beaded belly chain"
+        "value": "Sleek disc-link chain"
       },
       {
-        "label": "Occasion",
-        "value": "Beach, festival, boho, summer"
+        "label": "Color",
+        "value": "Gold Tone"
       },
       {
-        "label": "Fit",
-        "value": "Adjustable"
+        "label": "Size",
+        "value": "Each size is a solid connected disc chain base plus a 10 cm (4\") open-link extender"
+      },
+      {
+        "label": "Finish",
+        "value": "Waterproof and anti-tarnish"
       },
       {
         "label": "Care",
-        "value": "Avoid perfume, lotions. Wipe gently with soft cloth."
+        "value": "Wipe gently with a soft cloth. Store in an airtight container."
       },
       {
         "label": "Shipping",
         "value": "Dispatches within 1–2 business days"
       }
     ],
-    "featured": false,
-    "active": true,
     "images": [
-      "/images/products/3f53dfc5-b763-4550-94b7-0a0aff444183.png",
-      "https://i.etsystatic.com/55122258/r/il/8f4690/8074368205/il_fullxfull.8074368205_jt0q.jpg",
-      "https://i.etsystatic.com/55122258/r/il/1c43d1/8026491396/il_fullxfull.8026491396_4mm9.jpg",
-      "https://i.etsystatic.com/55122258/r/il/779bcb/8026430228/il_fullxfull.8026430228_2rnt.jpg",
-      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.webp",
-      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp"
+      "/images/products/98ae0849-42ac-42de-bf8d-04e08acb0e55.png"
+    ],
+    "variants": [
+      "Gold Tone"
     ],
     "variantGroups": [
       {
         "label": "Size",
         "options": [
-          "Small 77 cm (30.3\") - 84 cm (33.1\")",
-          "Medium 77 cm (30.3\") - 91 cm (35.8\")",
-          "Large 77 cm (30.3\") - 97 cm (38.2\")"
-        ]
+          "Small — 81 cm (31.9\")",
+          "Medium — 91 cm (35.8\")",
+          "Large — 110 cm (43.3\")"
+        ],
+        "optionPrices": {
+          "Small — 81 cm (31.9\")": 0,
+          "Medium — 91 cm (35.8\")": 2,
+          "Large — 110 cm (43.3\")": 4
+        }
       }
     ],
-    "altText": "Gold-tone stainless steel turquoise beaded belly chain for boho beach waist styling",
-    "dateAdded": "2026-06-12T15:00:27-04:00"
+    "featured": false,
+    "active": true,
+    "altText": "Gold-tone stainless steel disc-link chain belt, waterproof and adjustable waist belt",
+    "dateAdded": "2026-09-01T09:00:00-04:00",
+    "gallery": [
+      "/images/products/98ae0849-42ac-42de-bf8d-04e08acb0e55.png",
+      "/images/products/1c3128ea-573e-4eb1-bd2f-2bd1dcc46674.png",
+      "/images/products/e92da0fa-604c-4b70-9d15-ba366f43c848.png",
+      "/images/products/e0b75e2c-8a25-42e0-80fc-af53ea3fb5fb.png",
+      "/images/products/f0782c4d-84da-48cf-9ca9-9b00053f61eb.png",
+      "/images/products/df8be7dc-4e6f-4554-9c60-d1d0e37c1eed.png",
+      "/images/products/4055fcd3-127b-41d6-b5a3-997a1bb8762d.png",
+      "/images/products/b6b14869-6fad-46fc-adc3-fb0e0ab020a3.png",
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.png"
+    ],
+    "variantHeroes": {
+      "Gold Tone": "/images/products/1c3128ea-573e-4eb1-bd2f-2bd1dcc46674.png"
+    },
+    "variantVideos": {
+      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/7a386f8225334022f22ab12f76c3200a/downloads/default.mp4"
+    },
+    "sizeGuideImage": "/images/products/b6b14869-6fad-46fc-adc3-fb0e0ab020a3.png"
   },
   {
     "id": "2-in-1-body-chain-necklace",
@@ -5771,67 +5791,90 @@
     "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/78a7bf34e8093d0a9c9955957d42f0d4/downloads/default.mp4"
   },
   {
-    "id": "pearl-waist-chain",
-    "name": "Pearl Waist Chain",
-    "price": 32,
+    "id": "dragonfly-charm-belly-chain",
+    "name": "Dragonfly Charm Belly Chain",
+    "price": 28,
     "currency": "EUR",
     "category": "Belly Chains",
-    "description": "Your honeymoon lingerie accessory. This delicate pearl belly chain drapes at the waist in a minimalist beaded silhouette — designed for intimate occasions, beach styling, and anyone who loves refined summer jewelry.",
-    "fullDescription": "Small pearl accents trace a fine chain at the waist, creating a soft, luminous effect that's especially beautiful against bare skin. Sized from Small (77–84 cm (30.3\"–33.1\")) to Large (77–98 cm (30.3\"–38.6\")) for a custom fit.\n\nHandcrafted in gold-tone stainless steel. Adjustable with an open-link extender. A beautiful honeymoon or boudoir accessory — equally stunning at the beach.",
+    "description": "A fine snake chain that sits low on the waist, finished with a detailed dragonfly charm — slide it to the front, back, or hip for however you want to wear it.",
+    "fullDescription": "A fine snake chain that sits low on the waist, finished with a detailed dragonfly charm. Wear it over jeans and a crop top, layered under an open jacket, or on its own over a swimsuit. Slide the charm anywhere along the chain to wear it at your hip, on your back, or centered in front. Made from stainless steel, so it holds up to water and everyday wear without tarnishing.\n\nChoose gold or silver tone, and your size at checkout — the 71 cm (28\") base chain with a Small, Medium, or Large open-link extender for a precise fit.\n\nFit Note: The extender uses an open-link chain, so you can secure the clasp at any point for a precise fit.\n\nCustom Size: Need it longer or shorter? Message me after ordering and I'll adjust it for you.\n\nCare Instructions\nWipe gently with a soft cloth after each wear.\nStore in an airtight container when not in use.",
     "specs": [
       {
         "label": "Material",
-        "value": "Gold-tone stainless steel with pearl accents"
+        "value": "Stainless Steel (Gold or Silver Tone)"
       },
       {
-        "label": "Style",
-        "value": "Pearl belly chain"
+        "label": "Dragonfly Charm",
+        "value": "35mm high x 50mm wide (wingspan), 4.5g"
       },
       {
-        "label": "Small",
-        "value": "77–84 cm (30.3\"–33.1\")"
+        "label": "Base Chain",
+        "value": "71 cm (28\") solid snake chain"
       },
       {
-        "label": "Medium",
-        "value": "77–91 cm (30.3\"–35.8\")"
+        "label": "Closure",
+        "value": "Lobster clasp with open-link extender"
       },
       {
-        "label": "Large",
-        "value": "77–98 cm (30.3\"–38.6\")"
+        "label": "Finish",
+        "value": "Water-resistant and tarnish-resistant"
       },
       {
         "label": "Care",
-        "value": "Avoid prolonged water exposure. Wipe with soft cloth."
+        "value": "Wipe gently with a soft cloth. Store in an airtight container."
       },
       {
         "label": "Shipping",
         "value": "Dispatches within 1–2 business days"
       }
     ],
-    "featured": false,
-    "active": true,
     "images": [
-      "/images/products/ae24730e-9a3f-4fb3-96ba-fb52b70b2070.jpeg",
-      "https://i.etsystatic.com/55122258/r/il/a41b6d/8001079964/il_fullxfull.8001079964_bg9c.jpg",
-      "https://i.etsystatic.com/55122258/r/il/9ff756/8048999163/il_fullxfull.8048999163_6sj2.jpg",
-      "https://i.etsystatic.com/55122258/r/il/8da875/8049502507/il_fullxfull.8049502507_qgn8.jpg",
-      "/images/products/b1c33587-4f7b-450c-818d-e2042e7afe43.png",
-      "https://i.etsystatic.com/55122258/r/il/b151df/8001027860/il_fullxfull.8001027860_s9y2.jpg",
-      "https://i.etsystatic.com/55122258/r/il/402454/8001016496/il_fullxfull.8001016496_icac.jpg"
+      "/images/products/eacbff13-a0a4-440a-b8e7-bc8b39eb71f1.png"
+    ],
+    "variants": [
+      "Gold Tone",
+      "Silver Tone"
     ],
     "variantGroups": [
       {
         "label": "Size",
         "options": [
-          "Small 77 cm (30.3\") - 84 cm (33.1\")",
-          "Medium 77 cm (30.3\") - 91 cm (35.8\")",
-          "Large 77 cm (30.3\") - 97 cm (38.2\")"
-        ]
+          "Small — 71-81 cm (28\"-32\")",
+          "Medium — 71-91 cm (28\"-36\")",
+          "Large — 71-100 cm (28\"-39.5\")"
+        ],
+        "optionPrices": {
+          "Small — 71-81 cm (28\"-32\")": 0,
+          "Medium — 71-91 cm (28\"-36\")": 1.5,
+          "Large — 71-100 cm (28\"-39.5\")": 4
+        }
       }
     ],
-    "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/b42b4cc5e082907872ff833c35af3dad/downloads/default.mp4",
-    "altText": "Gold-tone stainless steel pearl waist chain with delicate beaded design for intimate occasions",
-    "dateAdded": "2026-06-12T15:00:27-04:00"
+    "featured": false,
+    "active": true,
+    "altText": "Gold and silver stainless steel snake chain belly chain with detailed dragonfly charm, adjustable waist chain",
+    "dateAdded": "2026-08-29T09:00:00-04:00",
+    "gallery": [
+      "/images/products/eacbff13-a0a4-440a-b8e7-bc8b39eb71f1.png",
+      "/images/products/4d504a36-4e96-4261-96c9-2d9782d4bbfc.png",
+      "/images/products/92c64814-6dc2-4cee-98e1-e6f6779fcaba.png",
+      "/images/products/32e765a7-cd65-41a7-8843-c7dd477a1ce8.png",
+      "/images/products/4e23b98a-8ebf-498b-b561-310f7d33ed0b.png",
+      "/images/products/10599202-a414-4b0e-ac00-fe3eec0dae30.jpg",
+      "/images/products/f8d20943-4690-4557-94ba-97f34bc89e2a.png",
+      "/images/products/IMG_3143-2.jpg",
+      "/images/products/b24ca309-cb90-43d1-b8b1-f620bfc7efc5.jpg",
+      "/images/products/da3d343f-4647-4ca2-94cb-6da42e47942b.png"
+    ],
+    "variantHeroes": {
+      "Gold Tone": "/images/products/eacbff13-a0a4-440a-b8e7-bc8b39eb71f1.png",
+      "Silver Tone": "/images/products/92c64814-6dc2-4cee-98e1-e6f6779fcaba.png"
+    },
+    "variantVideos": {
+      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/7f04ab7564ab8709f0d279926565a491/downloads/default.mp4",
+      "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/7f04ab7564ab8709f0d279926565a491/downloads/default.mp4"
+    },
+    "sizeGuideImage": "/images/products/da3d343f-4647-4ca2-94cb-6da42e47942b.png"
   },
   {
     "id": "beaded-glasses-chain",
@@ -6075,37 +6118,37 @@
     "dateAdded": "2026-06-12T15:00:27-04:00"
   },
   {
-    "id": "boho-belly-chain",
-    "name": "Boho Belly Chain",
-    "price": 25.6,
+    "id": "pearl-waist-chain",
+    "name": "Pearl Waist Chain",
+    "price": 32,
     "currency": "EUR",
     "category": "Belly Chains",
-    "description": "Your festival essential. This boho gold or silver belly chain features a free-spirited waist chain design in waterproof stainless steel — sized to fit with three extender options for a perfect, personalised drape.",
-    "fullDescription": "A versatile belly chain that moves beautifully at the waist all season long. Available in Silver or Gold stainless steel, with three size options to ensure a comfortable, flattering fit.\n\nHandcrafted and completely waterproof — wear it to the beach, the festival, or the pool and it comes back just as good as it left.",
+    "description": "Your honeymoon lingerie accessory. This delicate pearl belly chain drapes at the waist in a minimalist beaded silhouette — designed for intimate occasions, beach styling, and anyone who loves refined summer jewelry.",
+    "fullDescription": "Small pearl accents trace a fine chain at the waist, creating a soft, luminous effect that's especially beautiful against bare skin. Sized from Small (77–84 cm (30.3\"–33.1\")) to Large (77–98 cm (30.3\"–38.6\")) for a custom fit.\n\nHandcrafted in gold-tone stainless steel. Adjustable with an open-link extender. A beautiful honeymoon or boudoir accessory — equally stunning at the beach.",
     "specs": [
       {
         "label": "Material",
-        "value": "Stainless steel (waterproof & anti-tarnish)"
+        "value": "Gold-tone stainless steel with pearl accents"
       },
       {
-        "label": "Colours",
-        "value": "Gold or Silver"
+        "label": "Style",
+        "value": "Pearl belly chain"
       },
       {
         "label": "Small",
-        "value": "71–81 cm (28\"–31.9\")"
+        "value": "77–84 cm (30.3\"–33.1\")"
       },
       {
         "label": "Medium",
-        "value": "71–91 cm (28\"–35.8\")"
+        "value": "77–91 cm (30.3\"–35.8\")"
       },
       {
         "label": "Large",
-        "value": "71–100 cm (28\"–39.4\")"
+        "value": "77–98 cm (30.3\"–38.6\")"
       },
       {
         "label": "Care",
-        "value": "Wipe gently with soft cloth. Store in an airtight container."
+        "value": "Avoid prolonged water exposure. Wipe with soft cloth."
       },
       {
         "label": "Shipping",
@@ -6114,33 +6157,27 @@
     ],
     "featured": false,
     "active": true,
-    "variants": [
-      "Silver Tone",
-      "Gold Tone"
-    ],
     "images": [
-      "/images/products/7751db85-c8a1-4c0e-9dc4-277bcca85a0f.png"
+      "/images/products/ae24730e-9a3f-4fb3-96ba-fb52b70b2070.jpeg",
+      "https://i.etsystatic.com/55122258/r/il/a41b6d/8001079964/il_fullxfull.8001079964_bg9c.jpg",
+      "https://i.etsystatic.com/55122258/r/il/9ff756/8048999163/il_fullxfull.8048999163_6sj2.jpg",
+      "https://i.etsystatic.com/55122258/r/il/8da875/8049502507/il_fullxfull.8049502507_qgn8.jpg",
+      "/images/products/b1c33587-4f7b-450c-818d-e2042e7afe43.png",
+      "https://i.etsystatic.com/55122258/r/il/b151df/8001027860/il_fullxfull.8001027860_s9y2.jpg",
+      "https://i.etsystatic.com/55122258/r/il/402454/8001016496/il_fullxfull.8001016496_icac.jpg"
     ],
-    "variantVideos": {
-      "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/39c754d8a036a43ff224b833e06e3398/downloads/default.mp4",
-      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/39c754d8a036a43ff224b833e06e3398/downloads/default.mp4"
-    },
-    "altText": "Gold tone stainless steel boho belly chain with waist chain design, perfect festival body jewelry",
-    "gallery": [
-      "/images/products/7751db85-c8a1-4c0e-9dc4-277bcca85a0f.png",
-      "/images/products/67f27126-249b-44e1-8f62-40c47872c28a.png",
-      "/images/products/f7ce12d2-99cd-4f24-bfa0-c1ccdbf7b166.png",
-      "https://i.etsystatic.com/55122258/r/il/851a84/7853391664/il_fullxfull.7853391664_dnbl.jpg",
-      "https://i.etsystatic.com/55122258/r/il/aa65aa/7903997473/il_fullxfull.7903997473_eb23.jpg",
-      "https://i.etsystatic.com/55122258/r/il/5de2f5/7853391714/il_fullxfull.7853391714_m6jx.jpg",
-      "https://i.etsystatic.com/55122258/r/il/0d52a7/7903910339/il_fullxfull.7903910339_g8kg.jpg",
-      "https://i.etsystatic.com/55122258/r/il/740f54/7901353689/il_fullxfull.7901353689_emp4.jpg",
-      "https://i.etsystatic.com/55122258/r/il/e1759b/7853391796/il_fullxfull.7853391796_r7u2.jpg"
+    "variantGroups": [
+      {
+        "label": "Size",
+        "options": [
+          "Small 77 cm (30.3\") - 84 cm (33.1\")",
+          "Medium 77 cm (30.3\") - 91 cm (35.8\")",
+          "Large 77 cm (30.3\") - 97 cm (38.2\")"
+        ]
+      }
     ],
-    "variantHeroes": {
-      "Silver Tone": "/images/products/7751db85-c8a1-4c0e-9dc4-277bcca85a0f.png",
-      "Gold Tone": "/images/products/67f27126-249b-44e1-8f62-40c47872c28a.png"
-    },
+    "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/b42b4cc5e082907872ff833c35af3dad/downloads/default.mp4",
+    "altText": "Gold-tone stainless steel pearl waist chain with delicate beaded design for intimate occasions",
     "dateAdded": "2026-06-12T15:00:27-04:00"
   },
   {
@@ -6211,33 +6248,37 @@
     ]
   },
   {
-    "id": "cowrie-shell-belly-chain",
-    "name": "Cowrie Shell Belly Chain",
-    "price": 26.8,
+    "id": "pearl-beaded-belly-chain",
+    "name": "Pearl Beaded Belly Chain",
+    "price": 24,
     "currency": "EUR",
     "category": "Belly Chains",
-    "description": "Your beach body accessory. This boho cowrie shell waist chain wraps the belly in natural coastal energy — handcrafted with real shells on a fine chain for an effortless summer look.",
-    "fullDescription": "Cowrie shells dangle gently from a fine waist chain, moving with you through the surf and sand in a sound and feeling that is purely summer. No two shells are identical — each piece carries its own natural variation.\n\nHandcrafted in stainless steel with natural cowrie shells. Adjustable fit. Waterproof — made to live at the beach all season.",
+    "description": "Your boho beach waist piece. This handmade pearl and bead belly chain adds a natural, textural accent to your waist — delicate gold stainless steel with freshwater-style pearl beads for a luminous summer look.",
+    "fullDescription": "Small pearl beads scatter across a fine chain at the waist in an organic, handcrafted pattern. Each piece is slightly different — the natural variation in pearl size and placement is what makes it handmade.\n\nAvailable in Silver or Gold stainless steel. Three extender sizes: Small (71–81 cm (28\"–31.9\")), Medium (71–91 cm (28\"–35.8\")), or Large (71–100 cm (28\"–39.4\")).",
     "specs": [
       {
         "label": "Material",
-        "value": "Pull string cord with natural cowrie shells"
+        "value": "Stainless steel with pearl beads"
       },
       {
-        "label": "Style",
-        "value": "Cowrie shell belly chain"
+        "label": "Colours",
+        "value": "Gold or Silver"
       },
       {
-        "label": "Fit",
-        "value": "Adjustable"
+        "label": "Small",
+        "value": "71–81 cm (28\"–31.9\")"
       },
       {
-        "label": "Occasion",
-        "value": "Beach, boho, summer, festival"
+        "label": "Medium",
+        "value": "71–91 cm (28\"–35.8\")"
+      },
+      {
+        "label": "Large",
+        "value": "71–100 cm (28\"–39.4\")"
       },
       {
         "label": "Care",
-        "value": "Rinse with fresh water after salt water. Wipe dry."
+        "value": "Avoid perfume, lotions. Wipe gently with soft cloth."
       },
       {
         "label": "Shipping",
@@ -6246,18 +6287,39 @@
     ],
     "featured": false,
     "active": true,
-    "images": [
-      "/images/products/d55e2513-16eb-4d9e-82ac-0caf4be0ddbc.jpeg",
-      "https://i.etsystatic.com/55122258/r/il/ab349f/7686716506/il_fullxfull.7686716506_iw1h.jpg",
-      "https://i.etsystatic.com/55122258/r/il/c7ed2f/7750649582/il_fullxfull.7750649582_9ss0.jpg",
-      "https://i.etsystatic.com/55122258/r/il/53dfe8/7686701154/il_fullxfull.7686701154_973n.jpg",
-      "https://i.etsystatic.com/55122258/r/il/bf9a65/7686695514/il_fullxfull.7686695514_6htc.jpg",
-      "https://i.etsystatic.com/55122258/r/il/b97077/7734642851/il_fullxfull.7734642851_7dft.jpg",
-      "https://i.etsystatic.com/55122258/r/il/71b1ae/7750649544/il_fullxfull.7750649544_1cba.jpg",
-      "https://i.etsystatic.com/55122258/r/il/1b4c2f/7686711984/il_fullxfull.7686711984_7ges.jpg"
+    "variants": [
+      "Gold Tone",
+      "Silver Tone"
     ],
-    "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/321011b9b08756cd909599f824e74eec/downloads/default.mp4",
-    "altText": "Natural cowrie shell belly chain with pull string cord, handcrafted boho waist chain for beach accessory styling",
+    "images": [
+      "/images/products/069715ff-f84a-47f9-b15e-6d111ff66fcf.png"
+    ],
+    "variantGroups": [
+      {
+        "label": "Size",
+        "options": [
+          "Small 71 cm (28\") - 81 cm (31.9\")",
+          "Medium 71 cm (28\") - 91 cm (35.8\")",
+          "Large 71 cm (28\") - 100 cm (39.4\")"
+        ]
+      }
+    ],
+    "variantVideos": {
+      "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/e1afbf5947491c637867af59204d52ed/downloads/default.mp4",
+      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/aedd1283828d29b0e89195ddf153027d/downloads/default.mp4"
+    },
+    "altText": "Handmade pearl beaded belly chain in gold stainless steel, delicate boho waist chain for beach styling",
+    "gallery": [
+      "/images/products/069715ff-f84a-47f9-b15e-6d111ff66fcf.png",
+      "https://i.etsystatic.com/55122258/r/il/83a3ea/7914467873/il_fullxfull.7914467873_qtz7.jpg",
+      "https://i.etsystatic.com/55122258/r/il/aa68bc/7866545038/il_fullxfull.7866545038_pl7p.jpg",
+      "https://i.etsystatic.com/55122258/r/il/366fd3/7914469437/il_fullxfull.7914469437_m4rm.jpg",
+      "https://i.etsystatic.com/55122258/r/il/94a7c5/7866516384/il_fullxfull.7866516384_p69i.jpg"
+    ],
+    "variantHeroes": {
+      "Gold Tone": "/images/products/069715ff-f84a-47f9-b15e-6d111ff66fcf.png",
+      "Silver Tone": "https://i.etsystatic.com/55122258/r/il/366fd3/7914469437/il_fullxfull.7914469437_m4rm.jpg"
+    },
     "dateAdded": "2026-06-12T15:00:27-04:00"
   },
   {
@@ -6846,37 +6908,33 @@
     ]
   },
   {
-    "id": "pearl-beaded-belly-chain",
-    "name": "Pearl Beaded Belly Chain",
-    "price": 24,
+    "id": "cowrie-shell-belly-chain",
+    "name": "Cowrie Shell Belly Chain",
+    "price": 26.8,
     "currency": "EUR",
     "category": "Belly Chains",
-    "description": "Your boho beach waist piece. This handmade pearl and bead belly chain adds a natural, textural accent to your waist — delicate gold stainless steel with freshwater-style pearl beads for a luminous summer look.",
-    "fullDescription": "Small pearl beads scatter across a fine chain at the waist in an organic, handcrafted pattern. Each piece is slightly different — the natural variation in pearl size and placement is what makes it handmade.\n\nAvailable in Silver or Gold stainless steel. Three extender sizes: Small (71–81 cm (28\"–31.9\")), Medium (71–91 cm (28\"–35.8\")), or Large (71–100 cm (28\"–39.4\")).",
+    "description": "Your beach body accessory. This boho cowrie shell waist chain wraps the belly in natural coastal energy — handcrafted with real shells on a fine chain for an effortless summer look.",
+    "fullDescription": "Cowrie shells dangle gently from a fine waist chain, moving with you through the surf and sand in a sound and feeling that is purely summer. No two shells are identical — each piece carries its own natural variation.\n\nHandcrafted in stainless steel with natural cowrie shells. Adjustable fit. Waterproof — made to live at the beach all season.",
     "specs": [
       {
         "label": "Material",
-        "value": "Stainless steel with pearl beads"
+        "value": "Pull string cord with natural cowrie shells"
       },
       {
-        "label": "Colours",
-        "value": "Gold or Silver"
+        "label": "Style",
+        "value": "Cowrie shell belly chain"
       },
       {
-        "label": "Small",
-        "value": "71–81 cm (28\"–31.9\")"
+        "label": "Fit",
+        "value": "Adjustable"
       },
       {
-        "label": "Medium",
-        "value": "71–91 cm (28\"–35.8\")"
-      },
-      {
-        "label": "Large",
-        "value": "71–100 cm (28\"–39.4\")"
+        "label": "Occasion",
+        "value": "Beach, boho, summer, festival"
       },
       {
         "label": "Care",
-        "value": "Avoid perfume, lotions. Wipe gently with soft cloth."
+        "value": "Rinse with fresh water after salt water. Wipe dry."
       },
       {
         "label": "Shipping",
@@ -6885,39 +6943,18 @@
     ],
     "featured": false,
     "active": true,
-    "variants": [
-      "Gold Tone",
-      "Silver Tone"
-    ],
     "images": [
-      "/images/products/069715ff-f84a-47f9-b15e-6d111ff66fcf.png"
+      "/images/products/d55e2513-16eb-4d9e-82ac-0caf4be0ddbc.jpeg",
+      "https://i.etsystatic.com/55122258/r/il/ab349f/7686716506/il_fullxfull.7686716506_iw1h.jpg",
+      "https://i.etsystatic.com/55122258/r/il/c7ed2f/7750649582/il_fullxfull.7750649582_9ss0.jpg",
+      "https://i.etsystatic.com/55122258/r/il/53dfe8/7686701154/il_fullxfull.7686701154_973n.jpg",
+      "https://i.etsystatic.com/55122258/r/il/bf9a65/7686695514/il_fullxfull.7686695514_6htc.jpg",
+      "https://i.etsystatic.com/55122258/r/il/b97077/7734642851/il_fullxfull.7734642851_7dft.jpg",
+      "https://i.etsystatic.com/55122258/r/il/71b1ae/7750649544/il_fullxfull.7750649544_1cba.jpg",
+      "https://i.etsystatic.com/55122258/r/il/1b4c2f/7686711984/il_fullxfull.7686711984_7ges.jpg"
     ],
-    "variantGroups": [
-      {
-        "label": "Size",
-        "options": [
-          "Small 71 cm (28\") - 81 cm (31.9\")",
-          "Medium 71 cm (28\") - 91 cm (35.8\")",
-          "Large 71 cm (28\") - 100 cm (39.4\")"
-        ]
-      }
-    ],
-    "variantVideos": {
-      "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/e1afbf5947491c637867af59204d52ed/downloads/default.mp4",
-      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/aedd1283828d29b0e89195ddf153027d/downloads/default.mp4"
-    },
-    "altText": "Handmade pearl beaded belly chain in gold stainless steel, delicate boho waist chain for beach styling",
-    "gallery": [
-      "/images/products/069715ff-f84a-47f9-b15e-6d111ff66fcf.png",
-      "https://i.etsystatic.com/55122258/r/il/83a3ea/7914467873/il_fullxfull.7914467873_qtz7.jpg",
-      "https://i.etsystatic.com/55122258/r/il/aa68bc/7866545038/il_fullxfull.7866545038_pl7p.jpg",
-      "https://i.etsystatic.com/55122258/r/il/366fd3/7914469437/il_fullxfull.7914469437_m4rm.jpg",
-      "https://i.etsystatic.com/55122258/r/il/94a7c5/7866516384/il_fullxfull.7866516384_p69i.jpg"
-    ],
-    "variantHeroes": {
-      "Gold Tone": "/images/products/069715ff-f84a-47f9-b15e-6d111ff66fcf.png",
-      "Silver Tone": "https://i.etsystatic.com/55122258/r/il/366fd3/7914469437/il_fullxfull.7914469437_m4rm.jpg"
-    },
+    "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/321011b9b08756cd909599f824e74eec/downloads/default.mp4",
+    "altText": "Natural cowrie shell belly chain with pull string cord, handcrafted boho waist chain for beach accessory styling",
     "dateAdded": "2026-06-12T15:00:27-04:00"
   },
   {
@@ -7411,21 +7448,21 @@
     "sizeGuideImage": "/images/products/esty-thumnails-new--19-.png"
   },
   {
-    "id": "silver-waterproof-belly-chain",
-    "name": "Silver Belly Chain",
-    "price": 16,
+    "id": "boho-belly-chain",
+    "name": "Boho Belly Chain",
+    "price": 25.6,
     "currency": "EUR",
     "category": "Belly Chains",
-    "description": "Your minimalist silver waist chain for the beach. This clean, water-resistant stainless steel belly chain adjusts from Small to Large — simple, durable, and designed to stay on all summer.",
-    "fullDescription": "No frills, no embellishment — just a beautifully proportioned silver chain at the waist that's fully waterproof and anti-tarnish. The open-link extender lets you clasp at any point for a millimetre-perfect fit.\n\nSilver-tone stainless steel. Three extender sizes: Small (71–81 cm (28\"–31.9\")), Medium (71–91 cm (28\"–35.8\")), or Large (71–100 cm (28\"–39.4\")). The belly chain that earns its place by never coming off.",
+    "description": "Your festival essential. This boho gold or silver belly chain features a free-spirited waist chain design in waterproof stainless steel — sized to fit with three extender options for a perfect, personalised drape.",
+    "fullDescription": "A versatile belly chain that moves beautifully at the waist all season long. Available in Silver or Gold stainless steel, with three size options to ensure a comfortable, flattering fit.\n\nHandcrafted and completely waterproof — wear it to the beach, the festival, or the pool and it comes back just as good as it left.",
     "specs": [
       {
         "label": "Material",
-        "value": "Silver-tone stainless steel (water resistant & anti-tarnish)"
+        "value": "Stainless steel (waterproof & anti-tarnish)"
       },
       {
-        "label": "Base chain",
-        "value": "71 cm (28\")"
+        "label": "Colours",
+        "value": "Gold or Silver"
       },
       {
         "label": "Small",
@@ -7450,29 +7487,33 @@
     ],
     "featured": false,
     "active": true,
+    "variants": [
+      "Silver Tone",
+      "Gold Tone"
+    ],
     "images": [
-      "https://i.etsystatic.com/55122258/r/il/e7dacb/7820649197/il_fullxfull.7820649197_8p7a.jpg",
-      "/images/products/e5addb54-b3c4-426c-8a32-b98b0ae110ac.png",
-      "https://i.etsystatic.com/55122258/r/il/0df873/7772615942/il_fullxfull.7772615942_pva0.jpg",
-      "https://i.etsystatic.com/55122258/r/il/316511/7772715982/il_fullxfull.7772715982_1mgj.jpg",
-      "https://i.etsystatic.com/55122258/r/il/3b2757/7820649577/il_fullxfull.7820649577_p46g.jpg",
-      "https://i.etsystatic.com/55122258/r/il/787e06/7772715502/il_fullxfull.7772715502_d707.jpg",
-      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp",
-      "/images/products/da3d343f-4647-4ca2-94cb-6da42e47942b.png"
+      "/images/products/7751db85-c8a1-4c0e-9dc4-277bcca85a0f.png"
     ],
-    "variantGroups": [
-      {
-        "label": "Size",
-        "options": [
-          "Small 71 cm (28\") - 81 cm (31.9\")",
-          "Medium 71 cm (28\") - 91 cm (35.8\")",
-          "Large 71 cm (28\") - 100 cm (39.4\")"
-        ]
-      }
+    "variantVideos": {
+      "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/39c754d8a036a43ff224b833e06e3398/downloads/default.mp4",
+      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/39c754d8a036a43ff224b833e06e3398/downloads/default.mp4"
+    },
+    "altText": "Gold tone stainless steel boho belly chain with waist chain design, perfect festival body jewelry",
+    "gallery": [
+      "/images/products/7751db85-c8a1-4c0e-9dc4-277bcca85a0f.png",
+      "/images/products/67f27126-249b-44e1-8f62-40c47872c28a.png",
+      "/images/products/f7ce12d2-99cd-4f24-bfa0-c1ccdbf7b166.png",
+      "https://i.etsystatic.com/55122258/r/il/851a84/7853391664/il_fullxfull.7853391664_dnbl.jpg",
+      "https://i.etsystatic.com/55122258/r/il/aa65aa/7903997473/il_fullxfull.7903997473_eb23.jpg",
+      "https://i.etsystatic.com/55122258/r/il/5de2f5/7853391714/il_fullxfull.7853391714_m6jx.jpg",
+      "https://i.etsystatic.com/55122258/r/il/0d52a7/7903910339/il_fullxfull.7903910339_g8kg.jpg",
+      "https://i.etsystatic.com/55122258/r/il/740f54/7901353689/il_fullxfull.7901353689_emp4.jpg",
+      "https://i.etsystatic.com/55122258/r/il/e1759b/7853391796/il_fullxfull.7853391796_r7u2.jpg"
     ],
-    "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/0b78741a901616f76cee775175bfebe9/downloads/default.mp4",
-    "altText": "Delicate silver-tone stainless steel belly chain for beach wear, adjustable minimalist waist chain design",
-    "sizeGuideImage": "/images/products/da3d343f-4647-4ca2-94cb-6da42e47942b.png",
+    "variantHeroes": {
+      "Silver Tone": "/images/products/7751db85-c8a1-4c0e-9dc4-277bcca85a0f.png",
+      "Gold Tone": "/images/products/67f27126-249b-44e1-8f62-40c47872c28a.png"
+    },
     "dateAdded": "2026-06-12T15:00:27-04:00"
   },
   {
@@ -10997,41 +11038,33 @@
     "audience": "men"
   },
   {
-    "id": "zodiac-snake-belly-chain",
-    "name": "Zodiac Snake Belly Chain",
-    "price": 22.4,
+    "id": "turquoise-beaded-belly-chain",
+    "name": "Turquoise Beaded Belly Chain",
+    "price": 32,
     "currency": "EUR",
     "category": "Belly Chains",
-    "description": "Your star sign at your waist. This gold zodiac belly chain features your chosen horoscope charm on a classic snake chain — waterproof, adjustable stainless steel body jewelry for yoga, beach, and everyday wear.",
-    "fullDescription": "A 71 cm (28\") snake chain with a zodiac charm in your star sign — adjust the fit with three extender sizes at checkout. The clean snake chain is the same style as our most-loved belly chain, personalised with your astrological sign.\n\nGold-tone stainless steel. Completely waterproof and anti-tarnish. Three sizes: Small (71–81 cm (28\"–31.9\")), Medium (71–91 cm (28\"–35.8\")), or Large (71–100 cm (28\"–39.4\")).",
+    "description": "Your boho beach waist detail. This vibrant turquoise beaded belly chain wraps the waist in earthy colour and texture — handcrafted gold stainless steel with natural-toned beads for a free-spirited summer look.",
+    "fullDescription": "Turquoise beads scatter across a fine gold chain in a pattern that's playful and textural without being heavy. Designed for beach days, festivals, and anyone who brings colour to their accessories.\n\nHandcrafted in gold-tone stainless steel with boho bead accents. Adjustable fit. A statement waist chain that's completely unlike anything you'll find in a high street shop.",
     "specs": [
       {
         "label": "Material",
-        "value": "Gold-tone stainless steel (waterproof & anti-tarnish)"
+        "value": "Gold-tone stainless steel with turquoise beads"
       },
       {
-        "label": "Zodiac",
-        "value": "All 12 signs — select at checkout"
-      },
-      {
-        "label": "Small",
-        "value": "71–81 cm (28\"–31.9\")"
-      },
-      {
-        "label": "Medium",
-        "value": "71–91 cm (28\"–35.8\")"
-      },
-      {
-        "label": "Large",
-        "value": "71–100 cm (28\"–39.4\")"
+        "label": "Style",
+        "value": "Boho beaded belly chain"
       },
       {
         "label": "Occasion",
-        "value": "Beach, yoga, everyday"
+        "value": "Beach, festival, boho, summer"
+      },
+      {
+        "label": "Fit",
+        "value": "Adjustable"
       },
       {
         "label": "Care",
-        "value": "Wipe gently with soft cloth. Store in an airtight container."
+        "value": "Avoid perfume, lotions. Wipe gently with soft cloth."
       },
       {
         "label": "Shipping",
@@ -11041,49 +11074,25 @@
     "featured": false,
     "active": true,
     "images": [
-      "https://i.etsystatic.com/55122258/r/il/e0607c/8094646617/il_fullxfull.8094646617_bgdy.jpg",
-      "https://i.etsystatic.com/55122258/r/il/2017a9/7764225047/il_fullxfull.7764225047_acqq.jpg",
-      "https://i.etsystatic.com/55122258/r/il/f31f71/7716319856/il_fullxfull.7716319856_7zke.jpg",
-      "https://i.etsystatic.com/55122258/r/il/773296/7764224949/il_fullxfull.7764224949_pkt0.jpg",
-      "https://i.etsystatic.com/55122258/r/il/5799b2/7764252877/il_fullxfull.7764252877_1yj5.jpg",
-      "https://i.etsystatic.com/55122258/r/il/efeaca/7764225059/il_fullxfull.7764225059_4pgs.jpg",
-      "https://i.etsystatic.com/55122258/r/il/f70917/7764224955/il_fullxfull.7764224955_spcc.jpg",
+      "/images/products/3f53dfc5-b763-4550-94b7-0a0aff444183.png",
+      "https://i.etsystatic.com/55122258/r/il/8f4690/8074368205/il_fullxfull.8074368205_jt0q.jpg",
+      "https://i.etsystatic.com/55122258/r/il/1c43d1/8026491396/il_fullxfull.8026491396_4mm9.jpg",
+      "https://i.etsystatic.com/55122258/r/il/779bcb/8026430228/il_fullxfull.8026430228_2rnt.jpg",
+      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.webp",
       "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp"
     ],
     "variantGroups": [
       {
         "label": "Size",
         "options": [
-          "Small 71 cm (28\") - 81 cm (31.9\")",
-          "Medium 71 cm (28\") - 91 cm (35.8\")",
-          "Large 71 cm (28\") - 100 cm (39.4\")"
-        ]
-      },
-      {
-        "label": "Zodiac Sign",
-        "options": [
-          "Capricorn 12/22-1/19",
-          "Aquarius 1/20-2/18",
-          "Pisces 2/19-3/20",
-          "Aries 3/21-4/19",
-          "Taurus 4/20-5/20",
-          "Gemini 5/21-6/20",
-          "Cancer 6/21-7/22",
-          "Leo 7/23-8/22",
-          "Virgo 8/23-9/22",
-          "Libra 9/23-10/22",
-          "Scorpio 10/23-11/21",
-          "Sagitt. 11/22-12/21"
+          "Small 77 cm (30.3\") - 84 cm (33.1\")",
+          "Medium 77 cm (30.3\") - 91 cm (35.8\")",
+          "Large 77 cm (30.3\") - 97 cm (38.2\")"
         ]
       }
     ],
-    "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/d8995bb3c3eb33065f2c1683bf7c75c8/downloads/default.mp4",
-    "altText": "Gold-tone zodiac belly chain in stainless steel, waterproof snake chain waist jewelry for layering",
-    "sizeGuideImage": "/images/products/da3d343f-4647-4ca2-94cb-6da42e47942b.png",
-    "dateAdded": "2026-06-12T15:00:27-04:00",
-    "giftTags": [
-      "personalized"
-    ]
+    "altText": "Gold-tone stainless steel turquoise beaded belly chain for boho beach waist styling",
+    "dateAdded": "2026-06-12T15:00:27-04:00"
   },
   {
     "id": "curb-chain-cross-necklace",
@@ -11252,90 +11261,81 @@
     }
   },
   {
-    "id": "dragonfly-charm-belly-chain",
-    "name": "Dragonfly Charm Belly Chain",
-    "price": 28,
+    "id": "plus-size-belly-chain",
+    "name": "Plus Size Belly Chain",
+    "price": 33,
     "currency": "EUR",
     "category": "Belly Chains",
-    "description": "A fine snake chain that sits low on the waist, finished with a detailed dragonfly charm — slide it to the front, back, or hip for however you want to wear it.",
-    "fullDescription": "A fine snake chain that sits low on the waist, finished with a detailed dragonfly charm. Wear it over jeans and a crop top, layered under an open jacket, or on its own over a swimsuit. Slide the charm anywhere along the chain to wear it at your hip, on your back, or centered in front. Made from stainless steel, so it holds up to water and everyday wear without tarnishing.\n\nChoose gold or silver tone, and your size at checkout — the 71 cm (28\") base chain with a Small, Medium, or Large open-link extender for a precise fit.\n\nFit Note: The extender uses an open-link chain, so you can secure the clasp at any point for a precise fit.\n\nCustom Size: Need it longer or shorter? Message me after ordering and I'll adjust it for you.\n\nCare Instructions\nWipe gently with a soft cloth after each wear.\nStore in an airtight container when not in use.",
+    "description": "The belly chain made for real curves — not stretched to fit them. Available in four fitted sizes, in gold or silver stainless steel.",
+    "fullDescription": "We built this one differently — not by stretching a chain that was never made for you, but by starting from real plus-size measurements. This delicate stainless steel belly chain comes in four fitted sizes, so instead of maxing out a single \"one size\" chain and hoping it drapes right, you get a length that was actually designed to sit beautifully across your hips from the start. Whether you're layering it with your favorite swimsuit for a beach day or wearing it as a subtle accent under a crop top, this non-tarnish waist chain is the finishing touch your body jewelry collection has been missing.\n\nMaterials: Stainless steel\nFinish: Gold tone or Silver tone\nWaterproof: Yes\nTarnish-Resistant: Yes\nHypoallergenic: Yes\nClasp: Secure lobster clasp\n\nSize Guide\nPlus 1 — Fits 84–102 cm (33–40 in) waist. Base length 100 cm (39 in), plus an 8 cm (3 in) extender = 100–108 cm (39–43 in) total.\nPlus 2 — Fits 102–120 cm (40–47 in) waist. Base length 118 cm (46 in), plus an 8 cm (3 in) extender = 118–126 cm (46–50 in) total.\nPlus 3 — Fits 120–138 cm (47–54 in) waist. Base length 136 cm (54 in), plus an 8 cm (3 in) extender = 136–144 cm (54–57 in) total.\nPlus 4 — Fits 138–156 cm (54–61 in) waist. Base length 154 cm (61 in), plus an 8 cm (3 in) extender = 154–162 cm (61–64 in) total.\n\nFit Note: Measure around your natural waist and compare to the ranges above to find your size.\n\nCare Instructions\nWipe gently with a soft cloth after each wear.\nStore in an airtight container when not in use.\n\nPlease note that as each piece is handcrafted, no two pieces are identical and slight variations may occur.",
     "specs": [
       {
         "label": "Material",
-        "value": "Stainless Steel (Gold or Silver Tone)"
-      },
-      {
-        "label": "Dragonfly Charm",
-        "value": "35mm high x 50mm wide (wingspan), 4.5g"
-      },
-      {
-        "label": "Base Chain",
-        "value": "71 cm (28\") solid snake chain"
-      },
-      {
-        "label": "Closure",
-        "value": "Lobster clasp with open-link extender"
+        "value": "Stainless steel"
       },
       {
         "label": "Finish",
-        "value": "Water-resistant and tarnish-resistant"
+        "value": "Gold tone or Silver tone"
       },
       {
-        "label": "Care",
-        "value": "Wipe gently with a soft cloth. Store in an airtight container."
+        "label": "Sizing",
+        "value": "4 fitted plus sizes — see size guide"
       },
       {
-        "label": "Shipping",
-        "value": "Dispatches within 1–2 business days"
-      }
-    ],
-    "images": [
-      "/images/products/eacbff13-a0a4-440a-b8e7-bc8b39eb71f1.png"
-    ],
-    "variants": [
-      "Gold Tone",
-      "Silver Tone"
-    ],
-    "variantGroups": [
+        "label": "Waterproof",
+        "value": "Yes"
+      },
       {
-        "label": "Size",
-        "options": [
-          "Small — 71-81 cm (28\"-32\")",
-          "Medium — 71-91 cm (28\"-36\")",
-          "Large — 71-100 cm (28\"-39.5\")"
-        ],
-        "optionPrices": {
-          "Small — 71-81 cm (28\"-32\")": 0,
-          "Medium — 71-91 cm (28\"-36\")": 1.5,
-          "Large — 71-100 cm (28\"-39.5\")": 4
-        }
+        "label": "Tarnish-Resistant",
+        "value": "Yes"
+      },
+      {
+        "label": "Hypoallergenic",
+        "value": "Yes"
       }
     ],
     "featured": false,
     "active": true,
-    "altText": "Gold and silver stainless steel snake chain belly chain with detailed dragonfly charm, adjustable waist chain",
-    "dateAdded": "2026-08-29T09:00:00-04:00",
-    "gallery": [
-      "/images/products/eacbff13-a0a4-440a-b8e7-bc8b39eb71f1.png",
-      "/images/products/4d504a36-4e96-4261-96c9-2d9782d4bbfc.png",
-      "/images/products/92c64814-6dc2-4cee-98e1-e6f6779fcaba.png",
-      "/images/products/32e765a7-cd65-41a7-8843-c7dd477a1ce8.png",
-      "/images/products/4e23b98a-8ebf-498b-b561-310f7d33ed0b.png",
-      "/images/products/10599202-a414-4b0e-ac00-fe3eec0dae30.jpg",
-      "/images/products/f8d20943-4690-4557-94ba-97f34bc89e2a.png",
-      "/images/products/IMG_3143-2.jpg",
-      "/images/products/b24ca309-cb90-43d1-b8b1-f620bfc7efc5.jpg",
-      "/images/products/da3d343f-4647-4ca2-94cb-6da42e47942b.png"
+    "variants": [
+      "Gold Tone",
+      "Silver Tone"
     ],
     "variantHeroes": {
-      "Gold Tone": "/images/products/eacbff13-a0a4-440a-b8e7-bc8b39eb71f1.png",
-      "Silver Tone": "/images/products/92c64814-6dc2-4cee-98e1-e6f6779fcaba.png"
+      "Silver Tone": "/images/products/7ec3aa4d-065a-4970-9c0f-7d5109775cbd.png",
+      "Gold Tone": "/images/products/e8fcf52d-dd95-49f0-b01a-646b2f1c24cf.png"
     },
     "variantVideos": {
-      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/7f04ab7564ab8709f0d279926565a491/downloads/default.mp4",
-      "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/7f04ab7564ab8709f0d279926565a491/downloads/default.mp4"
+      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/d82e36f6cf0dab05a99deef3af7ac33d/downloads/default.mp4",
+      "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/d82e36f6cf0dab05a99deef3af7ac33d/downloads/default.mp4"
     },
-    "sizeGuideImage": "/images/products/da3d343f-4647-4ca2-94cb-6da42e47942b.png"
+    "gallery": [
+      "/images/products/e8fcf52d-dd95-49f0-b01a-646b2f1c24cf.png",
+      "/images/products/7ec3aa4d-065a-4970-9c0f-7d5109775cbd.png",
+      "/images/products/fa1cbece-a2ea-4231-9172-996efad85c10.jpg",
+      "/images/products/68810628-5cd6-4861-afa2-96b1a160173e.jpg",
+      "/images/products/88e72919-5be0-4e78-abb5-8be718193dd1-2.jpg",
+      "/images/products/17daf746-ffb1-4f96-a99a-90206555b788.jpeg",
+      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.jpg"
+    ],
+    "images": [
+      "/images/products/e8fcf52d-dd95-49f0-b01a-646b2f1c24cf.png"
+    ],
+    "variantGroups": [
+      {
+        "label": "Size",
+        "type": "options",
+        "options": [
+          "Plus 1",
+          "Plus 2",
+          "Plus 3",
+          "Plus 4"
+        ]
+      }
+    ],
+    "altText": "Plus size gold and silver stainless steel belly chain, adjustable waist chain for curvy women, four fitted sizes",
+    "dateAdded": "2026-08-14T12:00:00-04:00",
+    "sizeGuideImage": "/images/products/c32a3426-9ae6-4714-8d53-55813bf3220e.jpg",
+    "plusSize": true
   },
   {
     "id": "bridal-shoulder-necklace",

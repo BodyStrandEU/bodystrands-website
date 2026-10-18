@@ -162,7 +162,7 @@ export default function CartIcon({ light }: { light?: boolean }) {
                             +
                           </button>
                         </div>
-                        <p className="text-[0.65rem] text-[#A0622A] font-light">
+                        <p className="text-[0.65rem] text-[#2C2220] font-light">
                           {format(item.unitPrice * item.quantity)}
                         </p>
                       </div>

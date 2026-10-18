@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import Stripe from "stripe";
 import { products, type Product } from "@/lib/products";
+import { getSalePrice } from "@/lib/pricing";
 import { getShippingRate, ALL_COUNTRIES } from "@/lib/shipping";
 import { fetchExchangeRates, type CurrencyCode } from "@/lib/currency";
 
@@ -14,7 +15,12 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
 
 const GIFT_WRAP_FEE_EUR = 4;
 
-type CartItemInput = { productId: string; variant?: string; groupSelections?: Record<string, string>; quantity?: number };
+type CartItemInput = { productId: string; variant?: string; groupSelections?: Record<string, string>; quantity?: number; measurementNote?: string };
+
+// Free-text, never affects price — safe to take as-is from the client (unlike priceAdd above).
+function sanitizeNote(note: unknown): string {
+  return typeof note === "string" ? note.slice(0, 300).trim() : "";
+}
 
 // Security: the price add-on is NEVER taken from the client as a number — that would let
 // a tampered request pay whatever it wants. Instead we're given which *option* was selected
@@ -111,15 +117,18 @@ export async function POST(req: NextRequest) {
       const lineItems: Stripe.Checkout.SessionCreateParams.LineItem[] = [];
       let totalAmount = 0;
       const productNames: string[] = [];
+      const measurementNotes: string[] = [];
 
       for (const item of cartItems) {
         const product = products.find((p) => p.id === item.productId);
         if (!product) continue;
         const qty       = item.quantity ?? 1;
-        const unitPrice = product.price + computeValidatedPriceAdd(product, item.groupSelections);
+        const unitPrice = (getSalePrice(product) ?? product.price) + computeValidatedPriceAdd(product, item.groupSelections);
         const name      = item.variant ? `${product.name} — ${item.variant}` : product.name;
         totalAmount    += unitPrice * qty;
         productNames.push(name);
+        const note = sanitizeNote(item.measurementNote);
+        if (note) measurementNotes.push(`${product.name}: ${note}`);
         lineItems.push({
           price_data: {
             currency: product.currency.toLowerCase(),
@@ -163,6 +172,7 @@ export async function POST(req: NextRequest) {
           currency: "EUR",
           giftWrap: giftWrap ? "yes" : "no",
           ...(giftWrap && giftNote ? { giftNote } : {}),
+          ...(measurementNotes.length ? { measurementNote: measurementNotes.join(" | ").slice(0, 500) } : {}),
         },
         shipping_options,
         shipping_address_collection: { allowed_countries: STRIPE_COUNTRIES },
@@ -179,12 +189,13 @@ export async function POST(req: NextRequest) {
     }
 
     // ── Single-item / Buy Now checkout ──────────────────────────────────
-    const { productId, variant, groupSelections } = body as { productId: string; variant?: string; groupSelections?: Record<string, string> };
+    const { productId, variant, groupSelections, measurementNote: rawMeasurementNote } = body as { productId: string; variant?: string; groupSelections?: Record<string, string>; measurementNote?: string };
     const product = products.find((p) => p.id === productId);
     if (!product) return NextResponse.json({ error: "Product not found" }, { status: 404 });
 
     const productName = variant ? `${product.name} — ${variant}` : product.name;
-    const totalAmount = product.price + computeValidatedPriceAdd(product, groupSelections);
+    const totalAmount = (getSalePrice(product) ?? product.price) + computeValidatedPriceAdd(product, groupSelections);
+    const measurementNote = sanitizeNote(rawMeasurementNote);
 
     const shipping_options = country
       ? buildSingleShippingOption(country, totalAmount, rates)
@@ -208,7 +219,7 @@ export async function POST(req: NextRequest) {
         quantity: 1,
       }],
       mode:     "payment",
-      metadata: { productId: product.id, productName, price: totalAmount.toFixed(2), currency: product.currency },
+      metadata: { productId: product.id, productName, price: totalAmount.toFixed(2), currency: product.currency, ...(measurementNote ? { measurementNote } : {}) },
       shipping_options,
       shipping_address_collection: { allowed_countries: STRIPE_COUNTRIES },
       adaptive_pricing: { enabled: true },

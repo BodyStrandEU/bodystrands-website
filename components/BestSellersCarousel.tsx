@@ -4,7 +4,7 @@ import { useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { products } from "@/lib/products";
-import { getOriginalPrice } from "@/lib/pricing";
+import { getSalePrice } from "@/lib/pricing";
 import { useCurrency } from "@/lib/currency-context";
 
 // Hand-picked by Giordano — real top sellers across a spread of categories,
@@ -23,6 +23,7 @@ const BEST_SELLER_IDS = [
 
 function BestSellerCard({ product, onClickCapture }: { product: (typeof products)[number]; onClickCapture: (e: React.MouseEvent) => void }) {
   const { format } = useCurrency();
+  const salePrice = getSalePrice(product);
   const image = product.images?.[0];
 
   return (
@@ -53,12 +54,14 @@ function BestSellerCard({ product, onClickCapture }: { product: (typeof products
           {product.name}
         </h3>
         <div className="flex items-baseline gap-2">
-          <span className="text-base font-medium tracking-wide text-[#A0622A]">
-            {format(product.price)}
+          <span className="text-base font-light tracking-wide text-[#2C2220]">
+            {format(salePrice ?? product.price)}
           </span>
-          <span className="text-[0.7rem] font-light tracking-wide text-[#8C7B6E]/50 line-through">
-            {format(getOriginalPrice(product.price))}
-          </span>
+          {salePrice !== null && (
+            <span className="text-[0.7rem] font-light tracking-wide text-[#8C7B6E]/50 line-through">
+              {format(product.price)}
+            </span>
+          )}
         </div>
       </div>
     </Link>

@@ -63,6 +63,9 @@ export type Product = {
   audience?: "men" | "women" | "unisex"; // who the piece is marketed toward — data-only for now, no UI yet (Phase 1 of the men's line rollout). Omitted = women's (the default, existing catalog).
   plusSize?: boolean; // surfaces the product on the /plus-size collection page ONLY — excluded from the main shop grid, homepage, and You May Also Like (see those filters) per Oct 16, 2026 user decision. Still directly reachable/purchasable via its own product page and the sitemap.
   christmas?: boolean; // surfaces the product on the /christmas collection page, in addition to its normal category — same pattern as plusSize
+  salePercent?: number; // admin-set real discount (e.g. 25 = 25% off), set per product via the admin dashboard's Sale control. Surfaces the product on /sales IN ADDITION to its normal category (same inclusive pattern as christmas), with real strikethrough pricing everywhere it's shown. Checkout charges the discounted price. Omitted/0 = no sale.
+  tailoredFitAvailable?: boolean; // shows an optional "your measurements" text box on the product page / in cart for products sized one-size-fits-most but offering a free custom-length adjustment (e.g. Goddess Shoulder Chain). The note travels through cart -> checkout metadata -> the owner order-notification email.
+  measureGuideImage?: string; // separate "how to measure" diagram shown via its own button inside the tailoredFitAvailable box — distinct from sizeGuideImage (which shows the product's own fixed size specs)
 };
 
 // Images that are infographics across all products — hidden on shop card, shown on product page

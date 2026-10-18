@@ -159,6 +159,7 @@ function GalleryLightbox({
       role="dialog"
       aria-modal="true"
       aria-label="Image viewer"
+      onClick={onClose}
     >
       {/* Top bar */}
       <div className="flex items-center justify-between px-5 py-3 flex-shrink-0">
@@ -181,6 +182,7 @@ function GalleryLightbox({
         ref={containerRef}
         className="flex-1 relative overflow-hidden"
         style={{ touchAction: "none" }}
+        onClick={(e) => e.stopPropagation()}
       >
         {isImg && (
           <div
@@ -243,7 +245,7 @@ function GalleryLightbox({
             {media.map((item, i) => (
               <button
                 key={i}
-                onClick={() => nav(i)}
+                onClick={(e) => { e.stopPropagation(); nav(i); }}
                 aria-label={`View ${i + 1}`}
                 className={`flex-shrink-0 w-11 h-11 relative overflow-hidden transition-all duration-200 ${
                   i === index ? "ring-1 ring-white opacity-100" : "opacity-40 hover:opacity-65"

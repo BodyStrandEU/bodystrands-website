@@ -83,12 +83,30 @@ export function convert(eurAmount: number, currency: CurrencyCode, rates: Record
   return eurAmount * (rates[currency] ?? 1);
 }
 
+// How "chunky" a clean round number should be in a given currency, based on how many local
+// units equal 1 EUR (the rate). A currency near EUR parity (USD, GBP, CAD, AUD, CHF ≈ 0.8-1.8)
+// rounds to the nearest 5; a currency valued at a much smaller unit (JPY, KRW, IDR, VND) rounds
+// to a proportionally larger clean step so prices still look deliberate, not arbitrary, in that
+// currency's own typical pricing scale. A very strong currency (KWD, BHD, rate < 0.5) rounds to
+// the nearest whole unit, since even 1 unit there is already worth several EUR.
+function roundingStep(rate: number): number {
+  if (rate < 0.5) return 1;
+  if (rate < 5) return 5;
+  if (rate < 50) return 10;
+  if (rate < 500) return 50;
+  if (rate < 5000) return 500;
+  return 5000;
+}
+
 export function formatMoney(eurAmount: number, currency: CurrencyCode, rates: Record<CurrencyCode, number>): string {
-  // Rounded to the nearest whole unit for a clean display price — an exact EUR->local
-  // conversion lands on odd cents (e.g. $41.12) that look unintentional. This is display-only:
-  // checkout always charges the exact EUR price and Stripe's own adaptive_pricing (a separate,
-  // independently-rounded conversion) handles what the shopper actually pays at checkout.
-  const converted = Math.round(convert(eurAmount, currency, rates));
+  // Rounded to a clean step (see roundingStep) for a deliberate-looking display price — an
+  // exact EUR->local conversion lands on odd, arbitrary-looking numbers otherwise (e.g. $41.12,
+  // or even $43 instead of a clean $40). This is display-only: checkout always charges the
+  // exact EUR price and Stripe's own adaptive_pricing (a separate, independently-rounded
+  // conversion) handles what the shopper actually pays at checkout.
+  const rate = rates[currency] ?? 1;
+  const step = roundingStep(rate);
+  const converted = Math.round(convert(eurAmount, currency, rates) / step) * step;
   return new Intl.NumberFormat(CURRENCY_LOCALE[currency], {
     style: "currency",
     currency,

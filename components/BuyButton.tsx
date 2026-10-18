@@ -7,6 +7,7 @@ export default function BuyButton({
   productId,
   variant,
   groupSelections,
+  measurementNote,
   disabled: externalDisabled,
   disabledMessage,
   secondary,
@@ -14,6 +15,7 @@ export default function BuyButton({
   productId: string;
   variant?: string;
   groupSelections?: Record<string, string>;
+  measurementNote?: string;
   disabled?: boolean;
   disabledMessage?: string;
   secondary?: boolean;
@@ -39,6 +41,7 @@ export default function BuyButton({
           productId,
           variant,
           groupSelections,
+          measurementNote,
           country:  shippingCountry || undefined,
         }),
       });

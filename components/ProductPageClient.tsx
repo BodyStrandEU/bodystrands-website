@@ -5,7 +5,7 @@ import ProductGallery from "@/components/ProductGallery";
 import BuyButton from "@/components/BuyButton";
 import ProductDetails from "@/components/ProductDetails";
 import type { Product } from "@/lib/products";
-import { getOriginalPrice } from "@/lib/pricing";
+import { getSalePrice } from "@/lib/pricing";
 import { useCart } from "@/lib/cart";
 import { COUNTRY_GROUPS, getShippingRate } from "@/lib/shipping";
 import WishlistButton from "@/components/WishlistButton";
@@ -98,6 +98,7 @@ export default function ProductPageClient({ product }: { product: Product }) {
     product.variants?.[0] ?? ""
   );
   const [groupSelections, setGroupSelections] = useState<Record<string, string>>({});
+  const [measurementNote, setMeasurementNote] = useState("");
   const [showSticky, setShowSticky]           = useState(false);
   const [stickyLoading, setStickyLoading]     = useState(false);
   const [stickyError, setStickyError]         = useState("");
@@ -146,7 +147,9 @@ export default function ProductPageClient({ product }: { product: Product }) {
     return sum + (group.optionPrices[selected] ?? 0);
   }, 0);
 
-  const totalPrice = product.price + priceAdd;
+  const salePrice = getSalePrice(product);
+  const totalPrice = (salePrice ?? product.price) + priceAdd;
+  const originalTotal = product.price + priceAdd; // pre-sale total, for strikethrough display only
 
   const allGroupsSelected =
     !product.variantGroups ||
@@ -230,7 +233,7 @@ export default function ProductPageClient({ product }: { product: Product }) {
 
         <div className="flex flex-col gap-1.5">
           <div className="flex items-baseline gap-3 flex-wrap">
-            <span className="text-2xl font-light text-[#A0622A] tracking-wide">
+            <span className="text-2xl font-light text-[#2C2220] tracking-wide">
               {format(totalPrice)}
               {priceAdd > 0 && (
                 <span className="text-sm text-[#8C7B6E] ml-2 font-light">
@@ -238,18 +241,16 @@ export default function ProductPageClient({ product }: { product: Product }) {
                 </span>
               )}
             </span>
-            <span className="text-base font-light text-[#8C7B6E]/60 line-through tracking-wide">
-              {format(getOriginalPrice(totalPrice))}
-            </span>
-            <span className="text-[0.55rem] tracking-[0.18em] uppercase text-[#FDF9F7] bg-[#A0622A] px-2 py-0.5">
-              −25%
-            </span>
-          </div>
-          <div className="flex items-center gap-2.5">
-            <div className="w-1 h-1 rounded-full bg-[#A0622A] animate-pulse" />
-            <p className="text-[0.55rem] tracking-[0.18em] uppercase text-[#8C7B6E]">
-              Limited time sale
-            </p>
+            {salePrice !== null && (
+              <>
+                <span className="text-base font-light text-[#8C7B6E]/60 line-through tracking-wide">
+                  {format(originalTotal)}
+                </span>
+                <span className="text-[0.55rem] tracking-[0.18em] uppercase text-[#FDF9F7] bg-[#A0622A] px-2 py-0.5">
+                  −{product.salePercent}%
+                </span>
+              </>
+            )}
           </div>
         </div>
 
@@ -269,6 +270,28 @@ export default function ProductPageClient({ product }: { product: Product }) {
           <div className="flex justify-end">
             <SizeGuideButton image={product.sizeGuideImage} />
           </div>
+        )}
+
+        {/* Optional tailored-fit measurements — collapsed by default, never required */}
+        {product.tailoredFitAvailable && (
+          <details className="group">
+            <summary className="cursor-pointer select-none text-[0.6rem] tracking-[0.15em] uppercase text-[#A0622A] hover:text-[#8a5224] transition-colors">
+              Want a tailored fit? Add your measurements (optional) ▾
+            </summary>
+            <textarea
+              value={measurementNote}
+              onChange={(e) => setMeasurementNote(e.target.value.slice(0, 300))}
+              placeholder="e.g. Shoulder 44cm, Arm 50cm"
+              rows={2}
+              maxLength={300}
+              className="mt-2 w-full border border-[#E8B4A8]/50 px-3 py-2 text-xs font-light text-[#2C2220] placeholder:text-[#8C7B6E]/50 focus:outline-none focus:border-[#A0622A] resize-none"
+            />
+            {product.measureGuideImage && (
+              <div className="mt-2">
+                <SizeGuideButton image={product.measureGuideImage} label="How to Measure" />
+              </div>
+            )}
+          </details>
         )}
 
         {/* Finish selector — hidden when a variantGroup already covers the same options */}
@@ -412,6 +435,7 @@ export default function ProductPageClient({ product }: { product: Product }) {
                 unitPrice:   totalPrice,
                 image:       product.images?.[0],
                 currency:    product.currency,
+                measurementNote: measurementNote.trim() || undefined,
               });
               setAddedMsg(true);
               setTimeout(() => setAddedMsg(false), 2000);
@@ -433,6 +457,7 @@ export default function ProductPageClient({ product }: { product: Product }) {
             productId={product.id}
             variant={combinedVariant}
             groupSelections={groupSelections}
+            measurementNote={measurementNote.trim() || undefined}
             disabled={!allGroupsSelected}
             secondary
           />
@@ -462,7 +487,7 @@ export default function ProductPageClient({ product }: { product: Product }) {
         <div className="flex items-center gap-4">
           <div className="flex-1 min-w-0">
             <p className="text-[0.55rem] tracking-[0.15em] uppercase text-[#8C7B6E] truncate">{product.name}</p>
-            <p className="text-base font-light text-[#A0622A] tracking-wide">{format(totalPrice)}</p>
+            <p className="text-base font-light text-[#2C2220] tracking-wide">{format(totalPrice)}</p>
           </div>
           <button
             onClick={handleStickyBuy}

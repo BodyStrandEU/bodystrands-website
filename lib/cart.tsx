@@ -13,6 +13,7 @@ export type CartItem = {
   image?:      string;
   currency:    string;
   quantity:    number;
+  measurementNote?: string; // optional customer-entered measurements for a tailored fit (see Product.tailoredFitAvailable)
 };
 
 type CartCtx = {

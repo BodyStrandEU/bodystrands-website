@@ -93,6 +93,7 @@ export default function Navbar() {
   ];
 
   const pages = [
+    { href: "/sales", label: "Sale" },
     { href: "/men", label: "Men" },
     { href: "/christmas", label: "Christmas" },
     { href: "/plus-size", label: "Plus Size" },
@@ -266,8 +267,10 @@ export default function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`text-[0.65rem] font-light tracking-[0.22em] uppercase transition-colors duration-200 ${
-                  (scrolled || !overDarkHero) ? "text-[#2C2220] hover:text-[#A0622A]" : "text-[#FDF9F7] hover:text-white [text-shadow:0_1px_4px_rgba(0,0,0,0.5)]"
+                className={`text-[0.65rem] tracking-[0.22em] uppercase transition-colors duration-200 ${
+                  link.label === "Sale"
+                    ? "font-semibold text-[#A0622A] hover:text-[#8a5224]"
+                    : `font-light ${(scrolled || !overDarkHero) ? "text-[#2C2220] hover:text-[#A0622A]" : "text-[#FDF9F7] hover:text-white [text-shadow:0_1px_4px_rgba(0,0,0,0.5)]"}`
                 }`}
               >
                 {link.label}
@@ -320,8 +323,8 @@ export default function Navbar() {
 
         {/* Mobile menu — always in DOM, animated via max-height */}
         <div
-          className={`md:hidden bg-[#FDF9F7] border-t border-[#E8B4A8]/30 overflow-hidden transition-all duration-300 ease-in-out ${
-            menuOpen ? "max-h-[80vh] opacity-100" : "max-h-0 opacity-0"
+          className={`md:hidden bg-[#FDF9F7] border-t border-[#E8B4A8]/30 transition-all duration-300 ease-in-out ${
+            menuOpen ? "max-h-[80vh] opacity-100 overflow-y-auto" : "max-h-0 opacity-0 overflow-hidden"
           }`}
         >
           <div className="px-6 py-8">
@@ -360,7 +363,11 @@ export default function Navbar() {
                   key={link.href}
                   href={link.href}
                   onClick={() => setMenuOpen(false)}
-                  className="text-[0.65rem] font-light tracking-[0.22em] uppercase text-[#2C2220] hover:text-[#A0622A] transition-colors"
+                  className={`text-[0.65rem] tracking-[0.22em] uppercase transition-colors ${
+                    link.label === "Sale"
+                      ? "font-semibold text-[#A0622A]"
+                      : "font-light text-[#2C2220] hover:text-[#A0622A]"
+                  }`}
                 >
                   {link.label}
                 </Link>

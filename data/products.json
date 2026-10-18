@@ -2,7 +2,7 @@
   {
     "id": "stainless-steel-belly-chain",
     "name": "Stainless Steel Belly Chain",
-    "price": 25.6,
+    "price": 35,
     "currency": "EUR",
     "category": "Belly Chains",
     "description": "Your everyday layered waist chain. This non-tarnish stainless steel belly chain is available in gold or silver — waterproof body jewelry for bikinis, summer looks, and everyday wear.",
@@ -65,7 +65,7 @@
   {
     "id": "layered-body-chain-double-choker",
     "name": "Layered Double Choker Body Chain",
-    "price": 51,
+    "price": 70,
     "currency": "EUR",
     "category": "Body Chains",
     "description": "Wear it over a bikini at the beach, or layer it over a top or dress the rest of the year — this dainty body chain works either way. I handcraft it with a double-layer choker at the neck that drops down into a layered waist chain, so it reads as a necklace and a belly chain in one piece, with real depth instead of a single flat strand.",
@@ -148,7 +148,7 @@
   {
     "id": "diamond-initial-anklet",
     "name": "Diamond Initial Anklet",
-    "price": 30,
+    "price": 40,
     "currency": "EUR",
     "category": "Anklets",
     "description": "A double-layered gold anklet with a rhinestone letter charm — a flat mirror-link chain over a fine cable chain, stainless steel and waterproof.",
@@ -252,7 +252,7 @@
   {
     "id": "pink-cross-choker",
     "name": "Pink Cross Choker Necklace",
-    "price": 28,
+    "price": 40,
     "currency": "EUR",
     "category": "Necklaces",
     "description": "This necklace is for the girl who wants to say something without saying anything. The pink enamel cross sits right at the collarbone on a dainty gold mirror-link chain — sweet, feminine, and a little unexpected.",
@@ -306,7 +306,7 @@
   {
     "id": "bridal-shoulder-chain",
     "name": "Bridal Shoulder Chain",
-    "price": 28,
+    "price": 40,
     "currency": "EUR",
     "category": "Shoulder Chains",
     "description": "The one detail your wedding look is missing. This minimalist shoulder chain sweeps delicately across your upper arm, attaching directly to your dress or bra so it stays perfectly in place all day. Handmade from tarnish-resistant stainless steel — available in gold or silver.",
@@ -398,7 +398,7 @@
   {
     "id": "silver-shoulder-harness",
     "name": "Silver Shoulder Harness",
-    "price": 32,
+    "price": 45,
     "currency": "EUR",
     "category": "Shoulder Chains",
     "description": "Your evening gown's most striking accent. This dainty shoulder harness drapes elegantly across the body — handcrafted stainless steel with four sizes to choose from.",
@@ -504,11 +504,11 @@
   {
     "id": "goddess-shoulder-chain",
     "name": "Goddess Shoulder Chain",
-    "price": 36,
+    "price": 50,
     "currency": "EUR",
     "category": "Shoulder Chains",
-    "description": "Your dress is already the one. This is the detail that makes the whole look completely, unforgettably yours. Draped softly from the neck across both shoulders, now available in four sizes for a precise fit — handcrafted in tarnish-resistant stainless steel, gold or silver.",
-    "fullDescription": "This dainty shoulder chain drapes softly from the neck across both shoulders and down the upper arms, adding a delicate layered shimmer to strapless gowns, off-the-shoulder dresses, and sweetheart necklines. It sits so lightly you forget you are wearing it — until you catch it in a photo and realize it made the whole look.\n\nNow available in four sizes — Small, Medium, Large, and XL/Plus — based on your shoulder-to-shoulder and upper-arm-to-upper-arm measurements. See the size guide for exact measurements, or message us your measurements after ordering and we will adjust your chain to fit at no extra cost.\n\nHandmade from durable stainless steel in gold or silver, so it holds its colour and resists tarnishing through the ceremony, the dancing, and every moment in between.",
+    "description": "Your dress is already the one. This is the detail that makes the whole look completely, unforgettably yours. Draped softly from the neck across both shoulders — handcrafted in tarnish-resistant stainless steel, gold or silver.",
+    "fullDescription": "This dainty shoulder chain drapes softly from the neck across both shoulders and down the upper arms, adding a delicate layered shimmer to strapless gowns, off-the-shoulder dresses, and sweetheart necklines. It sits so lightly you forget you are wearing it — until you catch it in a photo and realize it made the whole look.\n\nOne adjustable size fits most, with a 6 cm neck extender for a comfortable fit. Need a more precise fit? Message us your measurements after ordering and we will adjust your chain at no extra cost.\n\nHandmade from durable stainless steel in gold or silver, so it holds its colour and resists tarnishing through the ceremony, the dancing, and every moment in between.",
     "specs": [
       {
         "label": "Material",
@@ -519,20 +519,16 @@
         "value": "Gold or Silver"
       },
       {
-        "label": "Small",
-        "value": "Up to 41 cm (16.1\") shoulder-to-shoulder, up to 48 cm (18.9\") upper-arm-to-upper-arm"
+        "label": "Shoulder",
+        "value": "46 cm (18.1\")"
       },
       {
-        "label": "Medium",
-        "value": "41–43 cm (16.1\"–16.9\") shoulder-to-shoulder, 48–51 cm (18.9\"–20.1\") upper-arm-to-upper-arm"
+        "label": "Upper Arm",
+        "value": "55 cm (21.7\")"
       },
       {
-        "label": "Large",
-        "value": "43–46 cm (16.9\"–18.1\") shoulder-to-shoulder, 51–53 cm (20.1\"–20.9\") upper-arm-to-upper-arm"
-      },
-      {
-        "label": "XL / Plus",
-        "value": "46 cm+ (18.1\"+) shoulder-to-shoulder, 53 cm+ (20.9\"+) upper-arm-to-upper-arm"
+        "label": "Neck",
+        "value": "38.5 cm (15.2\") + 6 cm (2.4\") extender"
       },
       {
         "label": "Custom fit",
@@ -579,25 +575,16 @@
     },
     "dateAdded": "2026-06-11T09:19:12-04:00",
     "sizeGuideImage": "/images/products/9ac26be7-e4dc-4ef5-960f-b13a7986f649.jpeg",
-    "variantGroups": [
-      {
-        "label": "Size",
-        "options": [
-          "Small",
-          "Medium",
-          "Large",
-          "XL / Plus"
-        ]
-      }
-    ],
     "giftTags": [
       "bridal"
-    ]
+    ],
+    "tailoredFitAvailable": true,
+    "measureGuideImage": "/images/products/2bbae788-090e-4d5c-98a8-25e15c6abfe8.png"
   },
   {
     "id": "dainty-eyeglasses-chain",
     "name": "Dainty Eyeglasses Chain 1.5 mm ",
-    "price": 20,
+    "price": 25,
     "currency": "EUR",
     "category": "Eyeglasses Chains",
     "description": "The glasses chain you will actually want to wear. Handcrafted from tarnish-resistant stainless steel with adjustable rubber grips that slip onto any frame — keeping your favourite pair close without pulling the look apart. Available in gold or silver.",
@@ -664,7 +651,7 @@
   {
     "id": "colorful-crystal-bead-anklet",
     "name": "Colorful Crystal Bead Anklet",
-    "price": 24,
+    "price": 30,
     "currency": "EUR",
     "category": "Anklets",
     "description": "Faceted crystal beads in warm burgundy, coral, cream, mustard, and tan are individually linked along a fine gold-tone stainless steel chain — a pop of color that still feels put together, not costume-y. Waterproof and tarnish-resistant, so it goes from the beach to everyday wear without a second thought.",
@@ -722,7 +709,7 @@
   {
     "id": "layered-hip-chain",
     "name": "Layered Hip Chain",
-    "price": 32,
+    "price": 45,
     "currency": "EUR",
     "category": "Belly Chains",
     "description": "Your festival or beach statement piece. This silver or gold layered hip and waist chain drapes across the hips in multiple strands — bold, minimalist, and designed to stand out in any summer outfit.",
@@ -797,7 +784,7 @@
   {
     "id": "beaded-bikini-clip-chain",
     "name": "Beaded Bikini Clip Chain",
-    "price": 24,
+    "price": 30,
     "currency": "EUR",
     "category": "Bikini Clip Chains",
     "description": "Three chains. One clip. Wear it anywhere. This handmade triple-strand chain clips onto any bikini strap, hip tie, waistband, or bra in seconds — no tying, no fussing. Fine gold cable chains with scattered earthy beads that move with you all day.",
@@ -846,7 +833,7 @@
   {
     "id": "waterproof-belly-chain",
     "name": "Waterproof Belly Chain",
-    "price": 25.6,
+    "price": 35,
     "currency": "EUR",
     "category": "Belly Chains",
     "description": "Your waist chain for the beach and beyond. This waterproof, anti-tarnish stainless steel belly chain is available in gold or silver with three size options — designed to stay on all summer.",
@@ -928,7 +915,7 @@
   {
     "id": "paperclip-initial-necklace",
     "name": "Paperclip Chain Diamond Initial Necklace",
-    "price": 30,
+    "price": 40,
     "currency": "EUR",
     "category": "Necklaces",
     "description": "A chunky gold paperclip chain with your initial in rhinestones, hanging right from the clasp — stainless steel, hypoallergenic, and waterproof.",
@@ -1049,7 +1036,7 @@
   {
     "id": "pearl-heart-initial-anklet",
     "name": "Pearl Heart Initial Anklet",
-    "price": 28,
+    "price": 40,
     "currency": "EUR",
     "category": "Anklets",
     "description": "Not just an anklet — a little monogram for your ankle. A dainty pearl chain layered over a fine gold cable link chain, finished with a heart charm engraved with your initial — personalized, layered, and effortlessly yours.",
@@ -1149,7 +1136,7 @@
   {
     "id": "layered-body-chain",
     "name": "Layered Body Chain",
-    "price": 36,
+    "price": 50,
     "currency": "EUR",
     "category": "Body Chains",
     "description": "The body chain that works everywhere. Designed to be worn under a blazer, over a turtleneck, or as a standalone summer look — this layered gold body chain is your most versatile jewellery piece.",
@@ -1221,7 +1208,7 @@
   {
     "id": "diamond-initial-layered-bracelet",
     "name": "Diamond Initial Layered Bracelet",
-    "price": 30,
+    "price": 40,
     "currency": "EUR",
     "category": "Bracelets",
     "description": "Your initial, catching the light with every move. This layered bracelet pairs a fine 1.5mm cable chain with a 2.0mm mirror link chain, finished with a sparkling diamond rhinestone initial charm — handcrafted from tarnish-resistant stainless steel.",
@@ -1332,7 +1319,7 @@
   {
     "id": "boho-back-chain",
     "name": "Boho Back Chain",
-    "price": 36,
+    "price": 50,
     "currency": "EUR",
     "category": "Back Chains",
     "description": "Your festival or wedding back statement. This boho back necklace drapes elegantly down the spine — a versatile piece that works at beach weddings, bohemian ceremonies, and every summer occasion in between.",
@@ -1413,7 +1400,7 @@
   {
     "id": "zodiac-anklet",
     "name": "Zodiac Anklet",
-    "price": 22,
+    "price": 30,
     "currency": "EUR",
     "category": "Anklets",
     "description": "Your star sign, around your ankle. This dainty handmade anklet features a dangling zodiac charm paired with your birth year on a hypoallergenic stainless steel chain — waterproof, tarnish-resistant, and made to live in.",
@@ -1487,7 +1474,7 @@
   {
     "id": "layered-silver-belly-chain",
     "name": "Layered Silver Belly Chain",
-    "price": 24,
+    "price": 30,
     "currency": "EUR",
     "category": "Belly Chains",
     "description": "Your minimalist layered waist detail. This silver plated stainless steel belly chain features multiple delicate strands that sit beautifully at the hip — waterproof, adjustable, and made for all-day summer wear.",
@@ -1553,7 +1540,7 @@
   {
     "id": "birthstone-bikini-clip-chain",
     "name": "Birthstone Bikini Clip Chain",
-    "price": 24,
+    "price": 30,
     "currency": "EUR",
     "category": "Bikini Clip Chains",
     "description": "Your personalised swimwear detail. This gold clip-on chain features a dainty gemstone birthstone pendant — attaches in seconds to any bikini strap, hip tie, or waistband for a custom summer look.",
@@ -1622,7 +1609,7 @@
   {
     "id": "bridal-hair-vine-chain",
     "name": "Bridal Hair Vine Chain",
-    "price": 36,
+    "price": 50,
     "currency": "EUR",
     "category": "Head Chains",
     "description": "Your bridal hair detail, in minimalist chain. This delicate hair vine drapes through bridal updos and loose waves alike — elegant, adjustable, and handcrafted in gold or silver stainless steel for your most important day.",
@@ -1693,7 +1680,7 @@
   {
     "id": "silver-eyeglasses-chain",
     "name": "Eyeglasses Chain 4mm",
-    "price": 16,
+    "price": 20,
     "currency": "EUR",
     "category": "Eyeglasses Chains",
     "description": "Your glasses chain, elevated. This sleek stainless steel eyeglasses strap keeps your frames close in gold or silver — adjustable rubber grips slip onto any glasses for a functional and stylish hold.",
@@ -1758,7 +1745,7 @@
   {
     "id": "boho-hair-chain",
     "name": "Boho Hair Chain",
-    "price": 28,
+    "price": 40,
     "currency": "EUR",
     "category": "Head Chains",
     "description": "Your festival crown. This minimalist gold hair chain drapes softly across the head for boho weddings, music festivals, and any occasion that calls for effortless, flowing hair jewelry.",
@@ -1823,7 +1810,7 @@
   {
     "id": "diamond-initial-foot-chain",
     "name": "Personalized Diamond Initial Foot Chain",
-    "price": 38,
+    "price": 50,
     "currency": "EUR",
     "category": "Foot Chains",
     "description": "A double-wrap ankle chain connected to a single toe chain, with your initial in rhinestones — stainless steel, 18K gold plated, and waterproof.",
@@ -1934,7 +1921,7 @@
   {
     "id": "beaded-star-choker",
     "name": "Beaded Star Choker Necklace",
-    "price": 30,
+    "price": 40,
     "currency": "EUR",
     "category": "Necklaces",
     "description": "A beaded choker with a dangling star charm, available in red or green — stainless steel, waterproof, and festive without trying too hard.",
@@ -2026,7 +2013,7 @@
   {
     "id": "silver-waist-chain",
     "name": "Layered Belly Chain",
-    "price": 24,
+    "price": 30,
     "currency": "EUR",
     "category": "Belly Chains",
     "description": "Your clean, minimalist waist detail in silver. This dainty stainless steel belly chain sits perfectly at the waist — waterproof, tarnish-resistant, and sized exactly to you with three extender options. It incudes two separate gold or silver waist chains for layering over your outfit.",
@@ -2112,7 +2099,7 @@
   {
     "id": "pearl-cross-faith-bracelet",
     "name": "Pearl Cross Faith Bracelet",
-    "price": 28,
+    "price": 40,
     "currency": "EUR",
     "category": "Bracelets",
     "description": "A meaningful piece for your most important moments. This handcrafted pearl bracelet features a delicate cross charm — a beautiful communion, confirmation, or faith gift in gold or silver stainless steel.",
@@ -2185,7 +2172,7 @@
   {
     "id": "multi-strand-shoulder-chain",
     "name": "Multi Strand Shoulder Chain",
-    "price": 36,
+    "price": 50,
     "currency": "EUR",
     "category": "Shoulder Chains",
     "description": "Your most dramatic shoulder detail. This multi-strand arm chain drapes in layered waves from neck to upper arm — architectural, elegant, and completely unforgettable on a strapless gown or evening look.",
@@ -2255,7 +2242,7 @@
   {
     "id": "gold-hand-chain",
     "name": "Multi-Strand Hand Chain",
-    "price": 48,
+    "price": 65,
     "currency": "EUR",
     "category": "Hand Chains",
     "description": "Your editorial hand detail. This dainty gold or silver hand chain drapes from wrist to fingers — a slave bracelet-style piece that adds a bohemian, sculptural dimension to any look, festival, or photoshoot.",
@@ -2316,7 +2303,7 @@
   {
     "id": "gold-body-necklace",
     "name": "Bikini Body Necklace",
-    "price": 36,
+    "price": 50,
     "currency": "EUR",
     "category": "Body Chains",
     "description": "Your bikini's best accessory. This dainty body necklace drapes across the décolletage and torso — minimalist beach jewelry that transforms any swimsuit into a styled summer look.",
@@ -2391,7 +2378,7 @@
   {
     "id": "pearl-body-chain",
     "name": "Pearl Body Chain",
-    "price": 32,
+    "price": 45,
     "currency": "EUR",
     "category": "Body Chains",
     "description": "Your lingerie and beach luxury piece. This dainty gold or silver pearl body chain wraps the torso in a delicate bralette silhouette — perfect for honeymoons, bridal occasions, and summer styling.",
@@ -2474,7 +2461,7 @@
     "id": "colorful-crystal-bead-bracelet",
     "name": "Colorful Crystal Bead Bracelet",
     "category": "Bracelets",
-    "price": 24,
+    "price": 30,
     "currency": "EUR",
     "description": "A single-strand bracelet stringing colorful abacus-cut glass crystal beads along a fine gold-tone stainless steel chain — waterproof, adjustable, and just as at home on the beach as it is out for the night.",
     "specs": [
@@ -2550,7 +2537,7 @@
   {
     "id": "initial-letter-anklet",
     "name": "Initial Letter Anklet",
-    "price": 24,
+    "price": 30,
     "currency": "EUR",
     "category": "Anklets",
     "description": "Your personalised ankle detail. This dainty gold anklet features a custom initial letter charm — a meaningful, minimalist piece handcrafted from tarnish-resistant stainless steel.",
@@ -2637,7 +2624,7 @@
   {
     "id": "zodiac-yoga-belly-chain",
     "name": "Zodiac Belly Chain",
-    "price": 29.6,
+    "price": 40,
     "currency": "EUR",
     "category": "Belly Chains",
     "description": "This gold zodiac belly chain combines your star sign charm with a waterproof, adjustable stainless steel chain — designed for every active life moment.",
@@ -2728,7 +2715,7 @@
   {
     "id": "double-shoulder-chest-chain",
     "name": "Double Shoulder Chest Chain",
-    "price": 44,
+    "price": 60,
     "currency": "EUR",
     "category": "Shoulder Chains",
     "description": "Make a beautiful statement with this delicate shoulder chain, designed to drape perfectly across your collarbone and upper arms. Crafted by hand from highly durable stainless steel — a stunning complement to bridal wear, prom gowns, or any strapless dress. Available in gold or silver.",
@@ -2821,7 +2808,7 @@
   {
     "id": "initial-letter-rhinestone-choker",
     "name": "Diamond Initial Necklace ",
-    "price": 30,
+    "price": 40,
     "currency": "EUR",
     "category": "Necklaces",
     "description": "A personalized rhinestone initial charm layered over a dainty gold mirror-link chain — simple, sentimental, and unmistakably yours.",
@@ -2910,7 +2897,7 @@
   {
     "id": "cowrie-shell-anklet",
     "name": "Cowrie Shell Anklet",
-    "price": 24,
+    "price": 30,
     "currency": "EUR",
     "category": "Anklets",
     "description": "Your barefoot beach look, elevated. This dainty boho anklet features a real cowrie shell on an adjustable gold-tone chain — the kind of piece you keep on all summer.",
@@ -2951,7 +2938,7 @@
   {
     "id": "barefoot-sandal-toe-chain",
     "name": "Barefoot Sandal Toe Chain",
-    "price": 26,
+    "price": 35,
     "currency": "EUR",
     "category": "Foot Chains",
     "description": "Your beach wedding accessory, finally found. This dainty handmade barefoot sandal loops around the ankle and toe — a delicate, effortless piece for beach ceremonies, summer shoots, and barefoot moments.",
@@ -3015,7 +3002,7 @@
   {
     "id": "zodiac-charm-bracelet",
     "name": "Zodiac Charm Bracelet",
-    "price": 24,
+    "price": 30,
     "currency": "EUR",
     "category": "Bracelets",
     "description": "Your star sign on your wrist. This Y2K-inspired gold bracelet features a zodiac charm — a personalised, minimalist piece handcrafted from tarnish-resistant stainless steel for everyday wear.",
@@ -3099,7 +3086,7 @@
   {
     "id": "boho-beach-body-chain",
     "name": "Boho Beach Body Chain",
-    "price": 36,
+    "price": 50,
     "currency": "EUR",
     "category": "Body Chains",
     "description": "Your festival body accessory. This boho-inspired silver or gold body chain drapes across the torso in a minimalist bikini harness silhouette — waterproof, anti-tarnish stainless steel for the beach and beyond.",
@@ -3171,7 +3158,7 @@
   {
     "id": "thigh-chain",
     "name": "Thigh Chain",
-    "price": 50,
+    "price": 65,
     "currency": "EUR",
     "category": "Leg Chains",
     "description": "Your most unexpected accessory. This dainty gold or silver thigh chain wraps around the upper leg like a garter — festival-ready, editorial, and completely waterproof stainless steel.",
@@ -3267,7 +3254,7 @@
     "id": "birthstone-thigh-chain",
     "name": "Birthstone Thigh Chain",
     "category": "Leg Chains",
-    "price": 28,
+    "price": 40,
     "currency": "EUR",
     "description": "The piece nobody else in the room is wearing. One dainty chain wraps around the upper thigh — from it, an arc drop with your gemstone at the lowest point. Choose your stone, your birthstone, your colour. 12 colours, one piece, completely personal.",
     "specs": [
@@ -3354,7 +3341,7 @@
   {
     "id": "pearl-heart-initial-bracelet",
     "name": "Pearl Heart Initial Bracelet",
-    "price": 28,
+    "price": 40,
     "currency": "EUR",
     "category": "Bracelets",
     "description": "Not just a bracelet — a little monogram for your wrist. A dainty pearl chain layered over a fine gold cable link chain, finished with a heart charm engraved with your initial — personalized, layered, and effortlessly yours.",
@@ -3453,7 +3440,7 @@
   {
     "id": "birth-flower-anklet",
     "name": "Birth Flower Anklet",
-    "price": 28,
+    "price": 40,
     "currency": "EUR",
     "category": "Anklets",
     "description": "Your birth month. Your flower. On your ankle, every day. A personalized double-strand anklet combining a dainty pearl chain with a fine stainless steel cable link chain, finished with your birth month flower charm. No stacking required — the layered look is built in.",
@@ -3545,7 +3532,7 @@
   {
     "id": "snake-belly-chain",
     "name": "Snake Belly Chain",
-    "price": 16,
+    "price": 20,
     "currency": "EUR",
     "category": "Belly Chains",
     "description": "Your go-to summer staple. This minimalist snake chain drapes beautifully across your waist — waterproof, tarnish-resistant stainless steel that keeps its glow through the beach, the pool, and everything in between. Available in gold or silver.",
@@ -3633,7 +3620,7 @@
   {
     "id": "bikini-body-chain",
     "name": "Bikini Body Chain",
-    "price": 33.6,
+    "price": 45,
     "currency": "EUR",
     "category": "Body Chains",
     "description": "Your beach body detail. This dainty gold or silver body chain wraps elegantly around the torso — minimalist bikini jewelry handcrafted from waterproof, anti-tarnish stainless steel with adjustable sizing.",
@@ -3714,7 +3701,7 @@
   {
     "id": "bridal-open-back-necklace",
     "name": "Bridal Open-Back Necklace",
-    "price": 32,
+    "price": 45,
     "currency": "EUR",
     "category": "Back Chains",
     "description": "Your open-back wedding look, completed in gold or silver. This adjustable bridal backdrop necklace drapes elegantly down the spine — for backless dresses, open-back gowns, and every look that asks for something beautiful behind you.\n\nSize & Dimensions:\nNeck Measurement: 64 cm (25.2\") easy slip-on loop (no clasp required).\nWaist/Hip Fit: Adjustable from 79 cm (31.1\") to 102 cm (40.2\")\nSelect Small (+7 cm (2.8\")), Medium (+14 cm (5.5\")), or Large (+23 cm (9.1\")) extension.",
@@ -3800,7 +3787,7 @@
   {
     "id": "bridal-forehead-chain",
     "name": "Bridal Forehead Chain",
-    "price": 32,
+    "price": 45,
     "currency": "EUR",
     "category": "Head Chains",
     "description": "Your bridal crown, reimagined in chain. This dainty forehead jewelry drapes softly across the hairline — ethereal, romantic, and perfect for weddings, festivals, and bohemian occasions.",
@@ -3870,7 +3857,7 @@
   {
     "id": "off-shoulder-chain-necklace",
     "name": "Off-Shoulder Chain Necklace",
-    "price": 36,
+    "price": 50,
     "currency": "EUR",
     "category": "Shoulder Chains",
     "description": "Your off-the-shoulder look, perfected. This dainty shoulder chain necklace sits softly across the décolletage and upper arms — the elegant accent your favourite summer tops and evening wear have been missing.",
@@ -3953,7 +3940,7 @@
   {
     "id": "boho-forehead-chain",
     "name": "Boho Forehead Chain",
-    "price": 24,
+    "price": 30,
     "currency": "EUR",
     "category": "Head Chains",
     "description": "Your festival statement piece. This gold boho head chain drapes across the forehead — an ethereal, minimalist headpiece available in gold or silver for weddings, festivals, and everyday bohemian style.",
@@ -4014,7 +4001,7 @@
   {
     "id": "silver-waterproof-belly-chain",
     "name": "Silver Belly Chain",
-    "price": 16,
+    "price": 20,
     "currency": "EUR",
     "category": "Belly Chains",
     "description": "Your minimalist silver waist chain for the beach. This clean, water-resistant stainless steel belly chain adjusts from Small to Large — simple, durable, and designed to stay on all summer.",
@@ -4079,7 +4066,7 @@
   {
     "id": "gold-waist-chain",
     "name": "Gold Waist Chain",
-    "price": 32,
+    "price": 45,
     "currency": "EUR",
     "category": "Body Chains",
     "description": "Your most versatile summer piece. This dainty waist chain works over a bikini, sundress, or bare skin — minimalist body jewelry handcrafted from waterproof, anti-tarnish stainless steel.",
@@ -4168,7 +4155,7 @@
   {
     "id": "butterfly-charm-belly-chain",
     "name": "Butterfly Charm Belly Chain",
-    "price": 22,
+    "price": 30,
     "currency": "EUR",
     "category": "Belly Chains",
     "description": "Your summer staple with a playful twist. This dainty waist chain features a delicate butterfly charm in your choice of colour — waterproof and anti-tarnish stainless steel made to be worn every day.",
@@ -4247,7 +4234,7 @@
   {
     "id": "birth-flower-charm-bracelet",
     "name": "Birth Flower Charm Bracelet",
-    "price": 28,
+    "price": 40,
     "currency": "EUR",
     "category": "Bracelets",
     "description": "Your birth flower, always with you. A dainty bracelet featuring a delicate flower charm that matches your birth month — handcrafted in tarnish-resistant stainless steel, available in gold or silver.",
@@ -4354,7 +4341,7 @@
   {
     "id": "zodiac-snake-belly-chain",
     "name": "Zodiac Snake Belly Chain",
-    "price": 22.4,
+    "price": 30,
     "currency": "EUR",
     "category": "Belly Chains",
     "description": "Your star sign at your waist. This gold zodiac belly chain features your chosen horoscope charm on a classic snake chain — waterproof, adjustable stainless steel body jewelry for yoga, beach, and everyday wear.",
@@ -4443,7 +4430,7 @@
   {
     "id": "coin-disc-chain-anklet",
     "name": "Coin Disc Chain Anklet",
-    "price": 24,
+    "price": 30,
     "currency": "EUR",
     "category": "Anklets",
     "description": "Barefoot on the sand or dressed up with heels, this coin disc anklet doesn't care where you take it. Tiny stainless steel discs catch the light with every step, sitting light and easy right above the ankle bone.",
@@ -4519,7 +4506,7 @@
   {
     "id": "layered-bridal-back-chain",
     "name": "Layered Bridal Back Chain",
-    "price": 40,
+    "price": 55,
     "currency": "EUR",
     "category": "Back Chains",
     "description": "Three cascading chains drape down your back in a soft, layered curve — no clasp, no hassle, just pin the pearl safety pin anywhere on your outfit and you are set. Available in gold-tone or silver-tone stainless steel, this piece turns any backless dress, open-back top, or bare shoulder into the main event.",
@@ -4603,7 +4590,7 @@
   {
     "id": "coin-link-chain-belt",
     "name": "Coin Link Chain Belt",
-    "price": 32,
+    "price": 45,
     "currency": "EUR",
     "category": "Belly Chains",
     "description": "A handmade stainless steel disc-link chain belt that pairs with a slip dress, jeans, a ribbed knit, or office trousers — same belt, endless outfits.",
@@ -4685,7 +4672,7 @@
   {
     "id": "2-in-1-body-chain-necklace",
     "name": "2-in-1 Body Chain Necklace",
-    "price": 32,
+    "price": 45,
     "currency": "EUR",
     "category": "Shoulder Chains",
     "description": "Two looks, one piece. This clever gold chain works as a body chain for summer or converts to a backdrop necklace for open-back dresses — the most versatile handcrafted piece in your jewellery collection.",
@@ -4759,7 +4746,7 @@
   {
     "id": "pearl-backdrop-necklace",
     "name": "Pearl Backdrop Necklace",
-    "price": 24,
+    "price": 30,
     "currency": "EUR",
     "category": "Back Chains",
     "description": "The finishing touch your open-back look has been waiting for. This bridal pearl backdrop necklace drapes elegantly down the spine — delicate, romantic, and completely weightless. Available in gold or silver.",
@@ -4827,7 +4814,7 @@
   {
     "id": "pearl-hand-chain",
     "name": "Pearl Hand Chain",
-    "price": 29.6,
+    "price": 40,
     "currency": "EUR",
     "category": "Hand Chains",
     "description": "Your bridal hand detail, in pearl. This dainty gold pearl hand chain drapes from wrist to finger — a delicate, luminous accessory for weddings, boho occasions, and any look that deserves a finishing touch.",
@@ -4903,7 +4890,7 @@
   {
     "id": "pearl-barefoot-sandal",
     "name": "Pearl Barefoot Sandal",
-    "price": 32,
+    "price": 45,
     "currency": "EUR",
     "category": "Foot Chains",
     "description": "Your beach wedding footwear detail. This handcrafted pearl barefoot sandal loops from ankle to toe — delicate, waterproof stainless steel adorned with freshwater-style pearls for your most special barefoot moments.",
@@ -4950,7 +4937,7 @@
   {
     "id": "plus-size-body-chain",
     "name": "Plus Size Body Chain",
-    "price": 40,
+    "price": 55,
     "currency": "EUR",
     "category": "Body Chains",
     "description": "The body chain designed to actually drape right on a curvier frame — not just stretched to try. Available in four fitted sizes, in gold or silver stainless steel.",
@@ -5028,7 +5015,7 @@
   {
     "id": "personalized-birthstone-back-necklace",
     "name": "Personalized Birthstone Back Necklace",
-    "price": 25.6,
+    "price": 35,
     "currency": "EUR",
     "category": "Back Chains",
     "description": "Your most personal bridal back detail. This custom birthstone backdrop necklace features your chosen gemstone charm draping down the spine — a meaningful, handcrafted piece for open-back wedding gowns and special occasions.",
@@ -5103,7 +5090,7 @@
   {
     "id": "dainty-backdrop-back-necklace",
     "name": "Dainty Backdrop Back Necklace",
-    "price": 32,
+    "price": 45,
     "currency": "EUR",
     "category": "Back Chains",
     "description": "Your open-back look's finishing piece. This dainty gold or silver backdrop necklace drapes down the spine with elegant simplicity — for bikinis, bridal gowns, and open-back dresses that deserve a beautiful back.",
@@ -5190,7 +5177,7 @@
   {
     "id": "gemstone-zodiac-anklet",
     "name": "Gemstone Zodiac Anklet",
-    "price": 28,
+    "price": 40,
     "currency": "EUR",
     "category": "Anklets",
     "description": "Your personalised ankle piece with double meaning. This dainty gold anklet combines your zodiac sign charm with your birthstone gemstone — a truly individual gift or personal talisman.",
@@ -5287,7 +5274,7 @@
   {
     "id": "coin-disc-belly-chain",
     "name": "Coin Disc Belly Chain",
-    "price": 32,
+    "price": 45,
     "currency": "EUR",
     "category": "Belly Chains",
     "description": "Your summer statement waist piece. This handmade coin disc belly chain features delicate disc charms on a waterproof stainless steel chain — a boho-inspired look that pairs perfectly with any bikini or summer outfit.",
@@ -5353,7 +5340,7 @@
   {
     "id": "coin-disc-bracelet",
     "name": "Coin Disc Bracelet",
-    "price": 20,
+    "price": 25,
     "currency": "EUR",
     "category": "Bracelets",
     "description": "A dainty gold disc chain bracelet — flat coin-shaped links in lightweight, waterproof, tarnish-resistant stainless steel.",
@@ -5423,7 +5410,7 @@
     "id": "initial-heart-pearl-choker",
     "name": "Initial Heart Pearl Choker",
     "category": "Necklaces",
-    "price": 32,
+    "price": 45,
     "currency": "EUR",
     "description": "A dainty pearl bead chain layered with a fine gold-tone cable chain and a tiny engraved initial heart charm, sitting right at the collarbone — pre-layered so there's no fussing with two clasps, just clip it on and go.",
     "specs": [
@@ -5532,7 +5519,7 @@
   {
     "id": "butterfly-backdrop-necklace",
     "name": "Butterfly Backdrop Necklace",
-    "price": 24,
+    "price": 30,
     "currency": "EUR",
     "category": "Back Chains",
     "description": "Your most playful back detail. This butterfly lariat backdrop necklace features a delicate butterfly charm in your chosen colour — a fun, romantic piece for prom, leavers events, and open-back dresses.",
@@ -5603,7 +5590,7 @@
   {
     "id": "chain-waist-belt",
     "name": "Chain Waist Belt",
-    "price": 32,
+    "price": 45,
     "currency": "EUR",
     "category": "Belly Chains",
     "description": "Your minimalist statement belt. This dainty silver chain belt wraps the waist over dresses, skirts, and wide-leg trousers — adding a subtle metallic accent that elevates any outfit from casual to considered.",
@@ -5670,7 +5657,7 @@
   {
     "id": "dainty-gold-body-chain",
     "name": "Dainty Gold Body Chain",
-    "price": 32,
+    "price": 45,
     "currency": "EUR",
     "category": "Body Chains",
     "description": "Your minimalist body statement. This dainty torso harness wraps the body in delicate gold or silver chain — adjustable, lightweight, and completely waterproof for summer days and beyond.",
@@ -5750,7 +5737,7 @@
   {
     "id": "pearl-glasses-chain",
     "name": "Pearl Glasses Chain",
-    "price": 32,
+    "price": 45,
     "currency": "EUR",
     "category": "Eyeglasses Chains",
     "description": "Your most elegant glasses strap. This dainty gold pearl eyeglasses chain keeps your favourite frames close while adding a refined, luminous detail — handcrafted stainless steel with freshwater-style pearl accents.",
@@ -5799,7 +5786,7 @@
   {
     "id": "dragonfly-charm-belly-chain",
     "name": "Dragonfly Charm Belly Chain",
-    "price": 28,
+    "price": 40,
     "currency": "EUR",
     "category": "Belly Chains",
     "description": "A fine snake chain that sits low on the waist, finished with a detailed dragonfly charm — slide it to the front, back, or hip for however you want to wear it.",
@@ -5885,7 +5872,7 @@
   {
     "id": "beaded-glasses-chain",
     "name": "Beaded Glasses Chain",
-    "price": 32,
+    "price": 45,
     "currency": "EUR",
     "category": "Eyeglasses Chains",
     "description": "Your boho eyewear accessory. This dainty gold beaded glasses chain features scattered decorative beads on a fine chain — a stylish, practical sunglass retainer handcrafted for effortless everyday wear.",
@@ -5936,7 +5923,7 @@
   {
     "id": "boho-beaded-eyeglasses-chain",
     "name": "Boho Beaded Eyeglasses Chain",
-    "price": 32,
+    "price": 45,
     "currency": "EUR",
     "category": "Eyeglasses Chains",
     "description": "Your everyday boho eyewear detail. This gold beaded eyeglasses retainer features eclectic mixed beads on a fine chain — practical, beautiful, and handcrafted to be worn as jewellery as much as a glasses holder.",
@@ -5988,7 +5975,7 @@
   {
     "id": "minimalist-glasses-chain",
     "name": "Minimalist Glasses Chain",
-    "price": 20,
+    "price": 25,
     "currency": "EUR",
     "category": "Eyeglasses Chains",
     "description": "Your clean, everyday glasses holder. This minimalist stainless steel sunglass chain is available in gold, silver — a chic, no-fuss way to keep your frames close without sacrificing style.",
@@ -6051,7 +6038,7 @@
   {
     "id": "butterfly-waist-chain",
     "name": "Butterfly Waist Chain",
-    "price": 20,
+    "price": 25,
     "currency": "EUR",
     "category": "Belly Chains",
     "description": "Your Y2K waist moment. This aesthetic butterfly belly chain features a delicate charm in your chosen colour — waterproof stainless steel in a fun, nostalgic silhouette for beach days and festival looks.",
@@ -6126,7 +6113,7 @@
   {
     "id": "pearl-waist-chain",
     "name": "Pearl Waist Chain",
-    "price": 32,
+    "price": 45,
     "currency": "EUR",
     "category": "Belly Chains",
     "description": "Your honeymoon lingerie accessory. This delicate pearl belly chain drapes at the waist in a minimalist beaded silhouette — designed for intimate occasions, beach styling, and anyone who loves refined summer jewelry.",
@@ -6189,7 +6176,7 @@
   {
     "id": "butterfly-backdrop-necklace-gold",
     "name": "Butterfly Backdrop Necklace Gold",
-    "price": 32,
+    "price": 45,
     "currency": "EUR",
     "category": "Back Chains",
     "description": "Your open-back statement, with a butterfly twist. This gold butterfly backdrop necklace features a delicate butterfly charm in your chosen colour — a romantic, playful piece for bridal occasions and prom.",
@@ -6269,7 +6256,7 @@
   {
     "id": "pearl-beaded-belly-chain",
     "name": "Pearl Beaded Belly Chain",
-    "price": 24,
+    "price": 30,
     "currency": "EUR",
     "category": "Belly Chains",
     "description": "Your boho beach waist piece. This handmade pearl and bead belly chain adds a natural, textural accent to your waist — delicate gold stainless steel with freshwater-style pearl beads for a luminous summer look.",
@@ -6344,7 +6331,7 @@
   {
     "id": "cross-belly-chain",
     "name": "Cross Belly Chain",
-    "price": 25.6,
+    "price": 35,
     "currency": "EUR",
     "category": "Belly Chains",
     "description": "Your daily waist detail with meaning. This dainty gold belly chain features a delicate cross charm — waterproof, anti-tarnish stainless steel in three sizes for a personalised beach-to-everyday fit.",
@@ -6408,7 +6395,7 @@
   {
     "id": "pearl-evening-backdrop-necklace",
     "name": "Pearl Evening Backdrop Necklace",
-    "price": 36,
+    "price": 50,
     "currency": "EUR",
     "category": "Back Chains",
     "description": "Your open-back evening look, completed. This pearl drop backdrop necklace drapes elegantly down the spine in gold-tone or silver-tone — designed for wedding dresses, evening dresses, and any occasion that deserves a beautiful back.",
@@ -6498,7 +6485,7 @@
   {
     "id": "pearl-bridal-head-chain",
     "name": "Pearl Bridal Head Chain",
-    "price": 34,
+    "price": 45,
     "currency": "EUR",
     "category": "Head Chains",
     "description": "Your bridal hair moment, perfected. This delicate pearl and gold head chain drapes beautifully across the hairline — soft, luminous, and made for weddings, engagement shoots, and boho occasions.",
@@ -6566,7 +6553,7 @@
   {
     "id": "boho-finger-hand-chain",
     "name": "Boho Finger Hand Chain",
-    "price": 24,
+    "price": 30,
     "currency": "EUR",
     "category": "Hand Chains",
     "description": "Your festival hand statement. This dainty gold or silver hand chain connects ring to bracelet for an effortlessly bohemian hand harness — handcrafted stainless steel for festivals, photoshoots, and everyday boho style.",
@@ -6635,7 +6622,7 @@
   {
     "id": "pearl-wedding-back-necklace",
     "name": "Pearl Wedding Back Necklace",
-    "price": 32,
+    "price": 45,
     "currency": "EUR",
     "category": "Back Chains",
     "description": "Your bridal back detail, in pearl. This pearl-accented back necklace drapes down the open back of your wedding gown — romantic, luminous, and adjustable to your exact measurements. Available in gold-tone or silver-tone stainless steel.",
@@ -6731,7 +6718,7 @@
   {
     "id": "pearl-belly-chain",
     "name": "Pearl Belly Chain",
-    "price": 36,
+    "price": 50,
     "currency": "EUR",
     "category": "Belly Chains",
     "description": "Your boho beach waist statement. This pearl belly chain features freshwater-style pearl accents on a fine gold chain — anti-tarnish, adjustable, and designed for festivals, beaches, and honeymoons.",
@@ -6795,7 +6782,7 @@
   {
     "id": "pearl-bridal-back-chain",
     "name": "Pearl Bridal Back Chain",
-    "price": 32,
+    "price": 45,
     "currency": "EUR",
     "category": "Back Chains",
     "description": "Your wedding back detail, in pearl. This pearl and chain backdrop necklace drapes down the open back in a romantic, luminous silhouette — available in gold or silver with adjustable sizing.",
@@ -6879,7 +6866,7 @@
   {
     "id": "silver-finger-hand-chain",
     "name": "Dainty Hand Chain",
-    "price": 24,
+    "price": 30,
     "currency": "EUR",
     "category": "Hand Chains",
     "description": "This delicate stainless steel hand chain is the kind of detail that does the talking for you — a dainty rolo chain that drapes gracefully from wrist to finger for a barely-there feel that's impossible to ignore.",
@@ -6969,7 +6956,7 @@
   {
     "id": "cowrie-shell-belly-chain",
     "name": "Cowrie Shell Belly Chain",
-    "price": 26.8,
+    "price": 35,
     "currency": "EUR",
     "category": "Belly Chains",
     "description": "Your beach body accessory. This boho cowrie shell waist chain wraps the belly in natural coastal energy — handcrafted with real shells on a fine chain for an effortless summer look.",
@@ -7019,7 +7006,7 @@
   {
     "id": "bridal-pearl-back-necklace",
     "name": "Bridal Pearl Back Necklace",
-    "price": 36,
+    "price": 50,
     "currency": "EUR",
     "category": "Back Chains",
     "description": "Your most romantic bridal accessory. This pearl and chain backdrop necklace drapes down the open back in cascading pearl drops — available in gold or silver with adjustable sizing for a perfect fit.",
@@ -7105,7 +7092,7 @@
   {
     "id": "pearl-lariat-backdrop",
     "name": "Pearl Lariat Backdrop",
-    "price": 25.6,
+    "price": 35,
     "currency": "EUR",
     "category": "Back Chains",
     "description": "Your open-back gown's most romantic detail. This pearl lariat drops elegantly from the neckline down the spine — delicate, luminous, and available in gold or silver for bridal and evening occasions.",
@@ -7172,7 +7159,7 @@
   {
     "id": "pearl-lariat-back-necklace",
     "name": "Pearl Lariat Back Necklace",
-    "price": 32,
+    "price": 45,
     "currency": "EUR",
     "category": "Back Chains",
     "description": "Your bridal back, redefined. This handcrafted pearl lariat backdrop necklace hangs in an elegant beaded arc down the spine — romantic, luminous, and completely unmissable on an open-back wedding gown.",
@@ -7226,7 +7213,7 @@
   {
     "id": "y2k-belly-chain",
     "name": "Y2K Belly Chain",
-    "price": 36,
+    "price": 50,
     "currency": "EUR",
     "category": "Body Chains",
     "description": "Your McBling waist moment. This bold gold or silver belly chain channels Y2K energy — adjustable, non-tarnish stainless steel body jewelry for low-rise jeans, festival outfits, and statement summer looks.",
@@ -7306,7 +7293,7 @@
   {
     "id": "birthstone-gemstone-anklet",
     "name": "Birthstone Gemstone Anklet",
-    "price": 22,
+    "price": 30,
     "currency": "EUR",
     "category": "Anklets",
     "description": "Your personalised ankle piece. This dainty gold or silver anklet features a custom gemstone birthstone charm — a meaningful, minimalist piece handcrafted from tarnish-resistant stainless steel.",
@@ -7401,7 +7388,7 @@
   {
     "id": "pearl-pendant-anklet",
     "name": "Pearl Pendant Anklet",
-    "price": 24,
+    "price": 30,
     "currency": "EUR",
     "category": "Anklets",
     "description": "Your bridal ankle detail. This elegant pearl pendant anklet adds a refined finishing touch to bare feet for beach weddings, garden ceremonies, and any occasion where your feet deserve to look beautiful.",
@@ -7464,7 +7451,7 @@
   {
     "id": "boho-belly-chain",
     "name": "Boho Belly Chain",
-    "price": 25.6,
+    "price": 35,
     "currency": "EUR",
     "category": "Belly Chains",
     "description": "Your festival essential. This boho gold or silver belly chain features a free-spirited waist chain design in waterproof stainless steel — sized to fit with three extender options for a perfect, personalised drape.",
@@ -7533,7 +7520,7 @@
   {
     "id": "dainty-summer-belly-chain",
     "name": "Dainty Summer Belly Chain",
-    "price": 20,
+    "price": 25,
     "currency": "EUR",
     "category": "Belly Chains",
     "description": "Your minimalist summer essential. This dainty silver or gold belly chain sits cleanly at the waist — waterproof stainless steel in a simple, elegant silhouette for bikinis, dresses, and everyday summer wear.",
@@ -7595,7 +7582,7 @@
   {
     "id": "pearl-body-harness",
     "name": "Pearl Body Harness",
-    "price": 36,
+    "price": 50,
     "currency": "EUR",
     "category": "Body Chains",
     "description": "Your most luxurious beach piece. This handcrafted pearl body chain wraps the torso in a delicate bralette harness silhouette — freshwater-style pearls on gold stainless steel for summer and lingerie occasions.",
@@ -7644,7 +7631,7 @@
   {
     "id": "gold-belly-body-chain",
     "name": "Belly Body Chain",
-    "price": 36,
+    "price": 50,
     "currency": "EUR",
     "category": "Body Chains",
     "description": "Your beach-to-festival essential. This dainty gold or silver body and belly chain wraps the torso in a minimalist silhouette — adjustable, waterproof, anti-tarnish stainless steel for all-day wear.",
@@ -7724,7 +7711,7 @@
   {
     "id": "butterfly-layered-belly-chain",
     "name": "Butterfly Layered Belly Chain",
-    "price": 28,
+    "price": 40,
     "currency": "EUR",
     "category": "Belly Chains",
     "description": "Your playful layered waist piece. This butterfly charm belly chain comes in five colours on a minimalist gold chain — a dainty, adjustable waist accessory for swimwear, summer looks, and festival outfits.",
@@ -7800,7 +7787,7 @@
   {
     "id": "cross-body-chain",
     "name": "Cross Body Chain",
-    "price": 36,
+    "price": 50,
     "currency": "EUR",
     "category": "Body Chains",
     "description": "Your meaningful body accessory. This dainty gold body chain features a delicate cross charm — a personal, elegant piece handcrafted from waterproof stainless steel for the beach and everyday wear.\n\nSize & Dimensions:\nNeck Fit: Adjustable from 46 cm (18.1\") to 59 cm (23.2\") (includes a 13 cm (5.1\") extender)\nWaist/Hip Fit: Adjustable from 79 cm (31.1\") to 102 cm (40.2\")\nSelect Small (+7 cm (2.8\")), Medium (+14 cm (5.5\")), or Large (+23 cm (9.1\")) extension",
@@ -7865,7 +7852,7 @@
   {
     "id": "reversible-pearl-lariat-necklace",
     "name": "Reversible Pearl Lariat Necklace",
-    "price": 25.6,
+    "price": 35,
     "currency": "EUR",
     "category": "Back Chains",
     "description": "Two looks, one piece. This reversible gold or silver pearl lariat wears as a front necklace or flips to become an open-back chain — the most versatile backdrop necklace in your collection.",
@@ -7928,7 +7915,7 @@
   {
     "id": "reversible-y-chain-lariat",
     "name": "Reversible Y-Chain Lariat",
-    "price": 24,
+    "price": 30,
     "currency": "EUR",
     "category": "Back Chains",
     "description": "Your most versatile neck piece. This minimalist reversible Y-chain lariat works both as a front lariat necklace and as an open-back chain — a dainty, elegant piece in gold or silver for brides and everyday wear.",
@@ -7991,7 +7978,7 @@
   {
     "id": "beach-belly-chain",
     "name": "Beach Belly Chain",
-    "price": 25.6,
+    "price": 35,
     "currency": "EUR",
     "category": "Belly Chains",
     "description": "Your essential beach waist piece. This dainty gold or silver belly chain sits cleanly at the waist — minimalist, waterproof stainless steel body jewelry designed for bikinis, summer looks, and every day at the beach.",
@@ -8059,7 +8046,7 @@
   {
     "id": "gold-body-chain-harness",
     "name": "Gold Body Chain Harness",
-    "price": 32,
+    "price": 45,
     "currency": "EUR",
     "category": "Body Chains",
     "description": "Your dainty chest and torso statement. This minimalist gold body chain harness wraps the upper body in delicate chain — adjustable, waterproof stainless steel for festival, beach, and editorial looks.",
@@ -8139,7 +8126,7 @@
   {
     "id": "pearl-rosary-cross-bracelet",
     "name": "Pearl Rosary Cross Bracelet",
-    "price": 28,
+    "price": 40,
     "currency": "EUR",
     "category": "Bracelets",
     "description": "A delicate pearl rosary bracelet finished with a pearl-detailed cross charm — a meaningful communion, confirmation, or baptism gift in gold or silver stainless steel.",
@@ -8217,7 +8204,7 @@
   {
     "id": "script-initial-bracelet",
     "name": "Script Initial Bracelet",
-    "price": 24,
+    "price": 30,
     "currency": "EUR",
     "category": "Bracelets",
     "description": "Your name, on your wrist. This personalised gold bracelet features a custom cursive letter charm — a meaningful, minimalist piece handcrafted from tarnish-resistant stainless steel.",
@@ -8283,7 +8270,7 @@
   {
     "id": "boho-shell-choker-necklace",
     "name": "Boho Shell Choker Necklace",
-    "price": 28,
+    "price": 40,
     "currency": "EUR",
     "category": "Necklaces",
     "description": "Your go-to beach accessory. This bohemian choker features natural cowrie shells and delicate chain for an effortless coastal look — perfect for the beach, festival, or a summer evening out.",
@@ -8328,7 +8315,7 @@
   {
     "id": "stacked-pearl-cross-choker",
     "name": "Stacked Pearl Cross Choker",
-    "price": 32,
+    "price": 45,
     "currency": "EUR",
     "category": "Necklaces",
     "description": "Pearls that already know how to layer themselves — a dainty pearl bead chain and fine gold-tone cable chain with a cross charm resting right at the collarbone.",
@@ -8408,7 +8395,7 @@
   {
     "id": "zodiac-slip-on-necklace",
     "name": "Zodiac Slip-On Necklace",
-    "price": 24,
+    "price": 30,
     "currency": "EUR",
     "category": "Necklaces",
     "description": "Your star sign, around your neck. This dainty gold zodiac necklace features a personalised star sign charm on a clasp-free slip-on chain — no fiddly clasps, just slide it on and wear it every day.",
@@ -8488,7 +8475,7 @@
   {
     "id": "monogram-letter-necklace",
     "name": "Monogram Letter Necklace",
-    "price": 24,
+    "price": 30,
     "currency": "EUR",
     "category": "Necklaces",
     "description": "Your initial, in gold. This dainty gold necklace features a personalised alphabet charm in your chosen letter — a minimalist, meaningful piece handcrafted in tarnish-resistant stainless steel.",
@@ -8559,7 +8546,7 @@
   {
     "id": "layered-pearl-bracelet",
     "name": "Layered Pearl Bracelet",
-    "price": 24,
+    "price": 30,
     "currency": "EUR",
     "category": "Bracelets",
     "description": "Your everyday pearl, on your wrist. This handcrafted freshwater pearl bracelet layers beautifully — waterproof, tarnish-resistant stainless steel in your choice of gold or silver, sized precisely to your wrist.",
@@ -8632,7 +8619,7 @@
   {
     "id": "pearl-chain-anklet",
     "name": "Pearl Chain Anklet",
-    "price": 22,
+    "price": 30,
     "currency": "EUR",
     "category": "Anklets",
     "description": "Your most elegant ankle piece. This dainty gold or silver anklet features freshwater-style pearl accents — minimalist, luminous, and designed for beach weddings, everyday wear, and every occasion in between.",
@@ -8696,7 +8683,7 @@
   {
     "id": "layered-arm-chain",
     "name": "Layered Arm Chain",
-    "price": 24,
+    "price": 30,
     "currency": "EUR",
     "category": "Shoulder Chains",
     "description": "There's nothing quite like finding that one perfect accessory that makes you feel effortlessly put together — whether you're in a swimsuit, a summer dress, an evening gown, or a simple white shirt on a weekend out. This dainty layered arm chain is designed to be exactly that: a weightless, eye-catching piece of arm jewelry that catches the light beautifully whether you're lounging by the pool, attending a wedding, heading to a festival, or simply elevating your everyday look.",
@@ -8793,7 +8780,7 @@
   {
     "id": "birthstone-choker-necklace",
     "name": "Birthstone Choker Necklace",
-    "price": 28,
+    "price": 40,
     "currency": "EUR",
     "category": "Necklaces",
     "description": "Your personalised gemstone necklace. This dainty gold choker features a custom birthstone pendant — an elegant, personal piece available in multiple lengths and all 12 birthstone months.",
@@ -8882,7 +8869,7 @@
   {
     "id": "birthstone-arm-chain",
     "name": "Birthstone Arm Chain",
-    "price": 28,
+    "price": 40,
     "currency": "EUR",
     "category": "Shoulder Chains",
     "description": "Wear your birth month. Gift someone theirs. This dainty birthstone arm chain wraps softly around your upper arm, finished with a teardrop gemstone pendant in your chosen birth month stone — subtle enough for everyday, personal enough to remember.",
@@ -8979,7 +8966,7 @@
   {
     "id": "bicep-chain",
     "name": "Bicep Chain",
-    "price": 20,
+    "price": 25,
     "currency": "EUR",
     "category": "Shoulder Chains",
     "description": "There's nothing quite like finding that one perfect accessory that makes you feel effortlessly put together — whether you're in a swimsuit, a summer dress, an evening gown, or a simple white shirt on a weekend out. This dainty bicep chain is designed to be exactly that: a weightless, eye-catching piece of arm jewelry that catches the light beautifully whether you're lounging by the pool, attending a wedding, heading to a festival, or simply elevating your everyday look.",
@@ -9080,7 +9067,7 @@
   {
     "id": "birth-flower-charm-necklace",
     "name": "Birth Flower Charm Necklace",
-    "price": 28,
+    "price": 40,
     "currency": "EUR",
     "category": "Necklaces",
     "description": "Your birth flower, always close to your heart. A dainty necklace featuring a delicate flower charm that matches your birth month — handcrafted in tarnish-resistant stainless steel, available in gold or silver.",
@@ -9178,7 +9165,7 @@
   {
     "id": "birthstone-arm-band",
     "name": "Birthstone Arm Band",
-    "price": 24,
+    "price": 30,
     "currency": "EUR",
     "category": "Shoulder Chains",
     "description": "One thin gold chain, one gemstone that means something. This single-strand birthstone arm band sits softly on the upper arm — the simplest way to wear your birth month or gift someone theirs.",
@@ -9276,7 +9263,7 @@
   {
     "id": "double-drape-thigh-chain",
     "name": "Double Drape Thigh Chain",
-    "price": 28,
+    "price": 40,
     "currency": "EUR",
     "category": "Leg Chains",
     "description": "Two layered chain arcs drape across the upper thigh like a modern-day garter — dainty, waterproof stainless steel in gold-tone or silver-tone, with a stretch closure that slips on in seconds.",
@@ -9353,7 +9340,7 @@
     "id": "turquoise-beaded-choker",
     "name": "Turquoise Enamel Bead Double Choker",
     "category": "Necklaces",
-    "price": 28,
+    "price": 40,
     "currency": "EUR",
     "description": "Two delicate chains, one cool colour. A gold mirror-link chain and a turquoise enamel bead chain — made as one seamless double-layer choker that sits right at your collarbone, effortless and just a little undone.",
     "specs": [
@@ -9417,7 +9404,7 @@
     "id": "layered-pearl-choker",
     "name": "Pearl Bead Double Choker",
     "category": "Necklaces",
-    "price": 28,
+    "price": 40,
     "currency": "EUR",
     "description": "Two chains, one clasp, zero hassle — a dainty pearl bead chain layered with a fine cable chain, made as one seamless double-layer choker that sits right at your collarbone, pre-layered so there's no fussing with two clasps, just clip it on and go.",
     "specs": [
@@ -9496,7 +9483,7 @@
     "id": "curated-layered-necklace-stack",
     "name": "Cross & Zodiac Necklace Stack",
     "category": "Necklaces",
-    "price": 36,
+    "price": 50,
     "currency": "EUR",
     "description": "Two necklaces, styled as one look — a pre-layered pearl and cable chain choker with a cross pendant, paired with a separate zodiac pendant necklace on a continuous loop, no clasp needed. Wear them stacked together for the full three-layer look, or apart on their own.",
     "specs": [
@@ -9601,7 +9588,7 @@
   {
     "id": "satellite-link-choker",
     "name": "Dainty Satellite Link Choker",
-    "price": 20,
+    "price": 25,
     "currency": "EUR",
     "category": "Necklaces",
     "description": "This necklace is for the girl who doesn't need anything extra. A dainty twisted oval-link sits right at the collarbone — no pendant, no fuss, just clean lines and quiet confidence.",
@@ -9669,7 +9656,7 @@
   {
     "id": "pearl-charm-bracelet",
     "name": "Pearl Charm Bracelet",
-    "price": 24,
+    "price": 30,
     "currency": "EUR",
     "category": "Bracelets",
     "description": "Your everyday pearl, double-stranded. This handcrafted gold bracelet features two delicate strands with freshwater-style pearl and charm accents — waterproof, tarnish-resistant stainless steel for daily wear.",
@@ -9737,7 +9724,7 @@
   {
     "id": "butterfly-anklet",
     "name": "Butterfly Anklet",
-    "price": 22,
+    "price": 30,
     "currency": "EUR",
     "category": "Anklets",
     "description": "Your summer ankle detail. This waterproof butterfly charm anklet comes in five butterfly colours — a dainty, playful piece handcrafted from tarnish-resistant stainless steel for beach and everyday wear.",
@@ -9798,7 +9785,7 @@
   {
     "id": "birth-month-teardrop-choker",
     "name": "Birth Month Teardrop Choker",
-    "price": 20,
+    "price": 25,
     "currency": "EUR",
     "category": "Necklaces",
     "description": "Her birth month, her stone, her necklace. A dainty gold-tone choker with a pear-cut gemstone pendant in the color that means something — waterproof, hypoallergenic, and sized to sit close at the collarbone.",
@@ -9877,7 +9864,7 @@
   {
     "id": "dainty-chain-bracelet",
     "name": "Dainty Chain Bracelet",
-    "price": 14,
+    "price": 20,
     "currency": "EUR",
     "category": "Bracelets",
     "description": "Your everyday essential. This minimal gold chain bracelet stacks and layers beautifully — waterproof, tarnish-free stainless steel that earns a permanent spot on your wrist.",
@@ -9949,7 +9936,7 @@
   {
     "id": "colorful-crystal-bead-choker",
     "name": "Colorful Crystal Bead Choker",
-    "price": 24,
+    "price": 30,
     "currency": "EUR",
     "category": "Necklaces",
     "description": "Faceted glass crystal beads in a warm, sunset-toned mix — coral, cream, burgundy, and mustard — individually linked along a fine gold-tone stainless steel chain. Sits close to the neck like a dainty choker, waterproof and tarnish-resistant for beach, pool, and everyday wear.",
@@ -10015,7 +10002,7 @@
     "id": "maximalist-layered-necklace-stack",
     "name": "Maximalist Layered Necklace Stack",
     "category": "Necklaces",
-    "price": 44,
+    "price": 60,
     "currency": "EUR",
     "description": "Three necklaces, styled as one look — a pre-layered pearl and cable chain choker with a heart initial pendant, a flat stainless steel chain, and a separate zodiac pendant necklace on a continuous loop, no clasp needed. Wear them stacked together for the full four-layer look, or apart on their own.",
     "specs": [
@@ -10141,7 +10128,7 @@
   {
     "id": "layered-pearl-anklet",
     "name": "Layered Pearl Anklet",
-    "price": 28,
+    "price": 40,
     "currency": "EUR",
     "category": "Anklets",
     "description": "Your most elegant anklet. This double-strand stainless steel anklet features freshwater-style pearl accents — dainty, refined, and perfect for beach weddings or everyday wear.",
@@ -10203,7 +10190,7 @@
   {
     "id": "birthstone-ring",
     "name": "Birthstone Ring",
-    "price": 19.2,
+    "price": 25,
     "currency": "EUR",
     "category": "Rings",
     "description": "Twelve birthstones, one tiny ring — pick the color that's actually yours. This dainty gold stacking ring is set with a single round cubic zirconia stone in your birth month color, simple enough to wear every day and personal enough to mean something.",
@@ -10276,7 +10263,7 @@
   {
     "id": "evil-eye-ring",
     "name": "Evil Eye Ring",
-    "price": 19.2,
+    "price": 25,
     "currency": "EUR",
     "category": "Rings",
     "description": "Superstitious or not, this one's hard to put down. Wear it to protect yourself from the evil eye — the symbol has been used for centuries as a shield against bad luck and negative energy aimed your way. A row of tiny green-stone eyes woven into a gold band, open at the back so it slides on and adjusts without any guesswork — no sizing chart required.",
@@ -10331,7 +10318,7 @@
   {
     "id": "rhodochrosite-ring",
     "name": "Rhodochrosite Gold Bead Ring",
-    "price": 19.2,
+    "price": 25,
     "currency": "EUR",
     "category": "Rings",
     "description": "A soft pink stone to help keep you calm. Rhodochrosite means \"rose-colored\" in Greek, and it's often called the Inca Rose — known for easing anxiety, soothing your nervous system, and opening you up to a little more self-love. One gold stainless steel bead breaks up the natural pattern, and since every stone is natural, no two rings look exactly alike.",
@@ -10378,7 +10365,7 @@
   {
     "id": "turquoise-zodiac-necklace-stack",
     "name": "Turquoise & Zodiac Necklace Stack",
-    "price": 36,
+    "price": 50,
     "currency": "EUR",
     "category": "Necklaces",
     "description": "Wear it solo or wear it stacked. A pre-layered turquoise bead and cable chain choker paired with a separate continuous-loop zodiac pendant necklace — worn together for a three-layer stack, or apart on their own.",
@@ -10462,7 +10449,7 @@
   {
     "id": "plus-size-toe-chain-anklet",
     "name": "Plus Size Toe Chain Anklet",
-    "price": 32,
+    "price": 45,
     "currency": "EUR",
     "category": "Foot Chains",
     "description": "A foot chain built for bigger ankles, not just an added extender. Available in two fitted plus sizes, gold or silver stainless steel.",
@@ -10546,7 +10533,7 @@
   {
     "id": "pearl-cross-hand-chain",
     "name": "Pearl Cross Hand Chain",
-    "price": 30,
+    "price": 40,
     "currency": "EUR",
     "category": "Hand Chains",
     "description": "A hand chain that drapes from your wrist across the back of your hand, with a small pearl cross pendant that hangs right at the wrist and catches the light as you move.",
@@ -10622,7 +10609,7 @@
   {
     "id": "birthstone-bracelet",
     "name": "Birthstone Bracelet",
-    "price": 26,
+    "price": 35,
     "currency": "EUR",
     "category": "Bracelets",
     "description": "Your personal gemstone, on your wrist. This custom gold bracelet features a dainty birthstone charm in your chosen month — handcrafted from tarnish-resistant stainless steel in your exact size.",
@@ -10708,7 +10695,7 @@
   {
     "id": "layered-turquoise-bead-bracelet",
     "name": "Layered Turquoise Bead Bracelet",
-    "price": 24,
+    "price": 30,
     "currency": "EUR",
     "category": "Bracelets",
     "description": "There's something about a pop of turquoise on the wrist that just works — this double-strand bracelet pairs a delicate row of turquoise enamel beads with a fine cable chain, both worn together as one connected piece. Handcrafted in gold stainless steel.",
@@ -10781,7 +10768,7 @@
   {
     "id": "mirror-link-hand-chain",
     "name": "Mirror Link Hand Chain",
-    "price": 24,
+    "price": 30,
     "currency": "EUR",
     "category": "Hand Chains",
     "description": "A delicate mirror-link hand chain that wraps from finger to wrist — dainty, minimalist, and adjustable, in gold-tone or silver-tone stainless steel.",
@@ -10846,7 +10833,7 @@
   {
     "id": "mirror-link-foot-chain",
     "name": "Mirror Link Foot Chain",
-    "price": 24,
+    "price": 30,
     "currency": "EUR",
     "category": "Foot Chains",
     "description": "A delicate mirror-link barefoot sandal that wraps from ankle to toe — adjustable, lightweight, and effortless, in gold-tone or silver-tone stainless steel.",
@@ -10908,7 +10895,7 @@
   {
     "id": "pink-cross-charm-bracelet",
     "name": "Pink Cross Charm Bracelet",
-    "price": 24,
+    "price": 30,
     "currency": "EUR",
     "category": "Bracelets",
     "description": "A soft pink enamel cross charm on a delicate gold mirror-link chain — understated faith jewelry you can wear every day without taking off. Made from high-quality stainless steel, it's fully waterproof and tarnish-free. Fastens with a lobster clasp and includes a 5 cm (2\") extension chain so you can adjust the fit. Available from 14 to 23 cm (9.1\").",
@@ -10979,7 +10966,7 @@
   {
     "id": "cuban-chain-bracelet",
     "name": "Cuban Chain Bracelet",
-    "price": 20,
+    "price": 25,
     "currency": "EUR",
     "category": "Bracelets",
     "description": "The bracelet that doesn't try too hard. A Cuban curb chain in solid stainless steel, sized to sit right and built to last — no charms, no fuss, just weight and metal doing their job.",
@@ -11054,7 +11041,7 @@
   {
     "id": "turquoise-beaded-belly-chain",
     "name": "Turquoise Beaded Belly Chain",
-    "price": 32,
+    "price": 45,
     "currency": "EUR",
     "category": "Belly Chains",
     "description": "Your boho beach waist detail. This vibrant turquoise beaded belly chain wraps the waist in earthy colour and texture — handcrafted gold stainless steel with natural-toned beads for a free-spirited summer look.",
@@ -11111,7 +11098,7 @@
   {
     "id": "curb-chain-cross-necklace",
     "name": "Cross Pendant Curb Chain Necklace",
-    "price": 22,
+    "price": 30,
     "currency": "EUR",
     "category": "Necklaces",
     "description": "A solid stainless steel curb chain necklace — available with or without a cross pendant. It won't rust, won't tarnish, and you can keep it on through water and sweat.",
@@ -11201,7 +11188,7 @@
   {
     "id": "coin-disc-chain-choker",
     "name": "Coin Disc Chain Choker",
-    "price": 24,
+    "price": 30,
     "currency": "EUR",
     "category": "Necklaces",
     "description": "This minimalist choker necklace is for the girl who keeps things simple. A dainty coin disc chain sits right at the collarbone — no pendant, no fuss, just clean lines and quiet confidence.",
@@ -11276,7 +11263,7 @@
   {
     "id": "plus-size-belly-chain",
     "name": "Plus Size Belly Chain",
-    "price": 33,
+    "price": 45,
     "currency": "EUR",
     "category": "Belly Chains",
     "description": "The belly chain made for real curves — not stretched to fit them. Available in four fitted sizes, in gold or silver stainless steel.",
@@ -11353,7 +11340,7 @@
   {
     "id": "bridal-shoulder-necklace",
     "name": "Bridal Shoulder Necklace",
-    "price": 50,
+    "price": 65,
     "currency": "EUR",
     "category": "Shoulder Chains",
     "description": "A dainty three-layer shoulder chain that drapes from a delicate choker across your upper arm — the finishing detail for any strapless wedding dress or top.",
@@ -11451,7 +11438,7 @@
   {
     "id": "double-thigh-belly-chain",
     "name": "Double Thigh Belly Chain",
-    "price": 75,
+    "price": 100,
     "currency": "EUR",
     "category": "Leg Chains",
     "description": "Catch the sun at the beach or add a hidden, alluring detail under your favorite dress for date night. I handcraft this waist and double thigh chain to drape symmetrically down both legs, so it moves with you instead of sitting stiff.",
@@ -11541,7 +11528,7 @@
   {
     "id": "butterfly-body-chain",
     "name": "Butterfly Body Chain",
-    "price": 32,
+    "price": 45,
     "currency": "EUR",
     "category": "Body Chains",
     "description": "Your rave and festival body statement. This gold butterfly body chain features a delicate butterfly charm in your chosen colour — a dainty, adjustable chest chain for festival looks, raves, and beach days.",
@@ -11627,7 +11614,7 @@
   {
     "id": "rosary-pearl-cross-choker",
     "name": "Rosary Pearl Cross Choker",
-    "price": 30,
+    "price": 40,
     "currency": "EUR",
     "category": "Necklaces",
     "description": "A dainty rosary-style pearl bead chain with a small cross charm made of its own tiny pearls, resting right at the collarbone.",
@@ -11720,7 +11707,7 @@
   {
     "id": "dragonfly-pendant-necklace",
     "name": "Dragonfly Pendant Necklace",
-    "price": 30,
+    "price": 40,
     "currency": "EUR",
     "category": "Necklaces",
     "description": "A mirror-link chain necklace finished with a detailed dragonfly charm — wear it solo for everyday, or layer it with your other pieces.",
@@ -11786,7 +11773,7 @@
   {
     "id": "evil-eye-choker-necklace",
     "name": "Evil Eye Choker Necklace",
-    "price": 32,
+    "price": 45,
     "currency": "EUR",
     "category": "Necklaces",
     "description": "A double-layer choker pairing a fine disc-link chain with a cable chain and an evil eye charm set with a natural tiger's eye stone — a protective piece worn every day.",
@@ -11855,7 +11842,7 @@
   {
     "id": "star-pendant-rhinestone-choker",
     "name": "Star Pendant Rhinestone Choker",
-    "price": 30,
+    "price": 40,
     "currency": "EUR",
     "category": "Necklaces",
     "description": "A little sparkle that doesn't try too hard. A single 11mm rhinestone star charm hangs from a delicate gold mirror-link chain, sitting right at the collarbone — playful, a little festive, and easy to wear all season long, from holiday parties straight through the new year.",
@@ -11936,7 +11923,7 @@
   {
     "id": "turquoise-beaded-cable-chain-necklace",
     "name": "Turquoise Beaded Cable Chain Necklace",
-    "price": 25,
+    "price": 35,
     "currency": "EUR",
     "category": "Necklaces",
     "description": "One dainty gold chain with turquoise enamel beads woven through a stainless steel cable link chain. Sweet, effortless, and a little unexpected. Wear it to the beach, a wedding, or just because. It works every time.",
@@ -11981,7 +11968,7 @@
   {
     "id": "plus-size-bracelet",
     "name": "Plus Size Bracelet",
-    "price": 28,
+    "price": 40,
     "currency": "EUR",
     "category": "Bracelets",
     "description": "A double-strand faux pearl and gold cable chain bracelet, handmade in six fitted sizes so it actually closes comfortably on a fuller wrist — not just stretched to fit.",
@@ -12055,7 +12042,7 @@
   {
     "id": "christmas-snowflake-necklace",
     "name": "Christmas Snowflake Necklace",
-    "price": 30,
+    "price": 40,
     "currency": "EUR",
     "category": "Necklaces",
     "description": "A small gold snowflake pendant on a dainty mirror-link chain. Simple, wintery, and easy to wear well past the holidays.",
@@ -12100,7 +12087,7 @@
   {
     "id": "evil-eye-charm-anklet",
     "name": "Evil Eye Charm Anklet",
-    "price": 24,
+    "price": 30,
     "currency": "EUR",
     "category": "Anklets",
     "description": "Your protective summer anklet. This dainty gold anklet features a pink evil eye charm — a beautiful amulet piece handcrafted from tarnish-resistant stainless steel for everyday wear.",
@@ -12150,7 +12137,7 @@
   {
     "id": "barefoot-toe-chain-anklet",
     "name": "Barefoot Toe Chain Anklet",
-    "price": 24,
+    "price": 30,
     "currency": "EUR",
     "category": "Foot Chains",
     "description": "Your beach jewelry essential. This dainty foot chain loops from ankle to toe in gold or silver — a simple, elegant barefoot sandal for beach days, summer shoots, and any occasion where shoes are optional.",
@@ -12210,7 +12197,7 @@
   {
     "id": "chunky-toggle-cross-necklace",
     "name": "Chunky Toggle Cross Necklace",
-    "price": 30,
+    "price": 40,
     "currency": "EUR",
     "category": "Necklaces",
     "description": "A bold rolo chain necklace with a cross pendant hanging straight off the front toggle clasp — unisex stainless steel that never fades or tarnishes.",
@@ -12299,7 +12286,7 @@
   {
     "id": "pearl-heart-toggle-necklace",
     "name": "Chunky Pearl Heart Toggle Necklace",
-    "price": 30,
+    "price": 40,
     "currency": "EUR",
     "category": "Necklaces",
     "description": "Imitation pearl beads with a gold rope-trim heart hanging from the front toggle clasp — stainless steel, 18k gold plated, and hypoallergenic.",
@@ -12374,7 +12361,7 @@
   {
     "id": "gold-beaded-cross-bracelet",
     "name": "Gold Beaded Cross Bracelet",
-    "price": 30,
+    "price": 40,
     "currency": "EUR",
     "category": "Bracelets",
     "description": "A beaded gold bracelet with a curved cross and a small medallion charm — stainless steel, waterproof, and built to hold its shine.",
@@ -12455,7 +12442,7 @@
   {
     "id": "spinning-snowflake-pendant-necklace",
     "name": "Spinning Snowflake Pendant Necklace",
-    "price": 30,
+    "price": 40,
     "currency": "EUR",
     "category": "Necklaces",
     "description": "Catch the light with a rotating snowflake charm that spins freely on its chain — equal parts festive and fidget-friendly. Set with sparkling cubic zirconia stones on 18K gold-plated stainless steel, it is a playful, satisfying little piece to touch and twirl through the season and beyond.",
@@ -12500,7 +12487,7 @@
   {
     "id": "minimalist-pearl-back-necklace",
     "name": "Minimalist Pearl Back Necklace",
-    "price": 28,
+    "price": 40,
     "currency": "EUR",
     "category": "Back Chains",
     "description": "Your open-back essential. This minimalist pearl backdrop necklace drapes elegantly down the spine in gold or silver — understated, refined, and designed for any open-back look from bridal to everyday.",
@@ -12570,7 +12557,7 @@
   {
     "id": "pearl-shoulder-necklace",
     "name": "Pearl Shoulder Necklace",
-    "price": 40,
+    "price": 55,
     "currency": "EUR",
     "category": "Shoulder Chains",
     "description": "Three delicate pearl-beaded drapes sweep across your upper arm, giving a romantic, custom feel to a simple strap or slip-style gown without a trip to the tailor. Attaches with your choice of a pearl safety pin, for maximum adjustability anywhere on your outfit, or a lobster clasp to secure it onto a bra or dress strap. Available in gold-tone or silver-tone stainless steel.",

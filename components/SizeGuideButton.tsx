@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 import Image from "@/components/SmartImage";
 
-function SizeGuideModal({ image, onClose }: { image: string; onClose: () => void }) {
+function SizeGuideModal({ image, label, onClose }: { image: string; label: string; onClose: () => void }) {
   useEffect(() => {
     const prev = document.body.style.overflow;
     document.body.style.overflow = "hidden";
@@ -20,11 +20,11 @@ function SizeGuideModal({ image, onClose }: { image: string; onClose: () => void
       className="fixed inset-0 z-[9999] bg-black/80 flex flex-col"
       role="dialog"
       aria-modal="true"
-      aria-label="Size guide"
+      aria-label={label}
       onClick={onClose}
     >
       <div className="flex items-center justify-between px-5 py-3 flex-shrink-0">
-        <span className="text-white/70 text-[0.6rem] tracking-[0.2em] uppercase">Size Guide</span>
+        <span className="text-white/70 text-[0.6rem] tracking-[0.2em] uppercase">{label}</span>
         <button
           onClick={onClose}
           aria-label="Close"
@@ -35,14 +35,21 @@ function SizeGuideModal({ image, onClose }: { image: string; onClose: () => void
           </svg>
         </button>
       </div>
-      <div className="flex-1 relative" onClick={(e) => e.stopPropagation()}>
-        <Image src={image} alt="Size guide" fill className="object-contain" sizes="100vw" />
+      <div className="flex-1 flex items-center justify-center p-4 md:p-8 overflow-hidden">
+        <Image
+          src={image}
+          alt={label}
+          width={1200}
+          height={1200}
+          className="w-auto h-auto max-w-full max-h-full object-contain"
+          onClick={(e) => e.stopPropagation()}
+        />
       </div>
     </div>
   );
 }
 
-export default function SizeGuideButton({ image }: { image?: string }) {
+export default function SizeGuideButton({ image, label = "Size Guide" }: { image?: string; label?: string }) {
   const [open, setOpen] = useState(false);
   if (!image) return null;
 
@@ -58,14 +65,14 @@ export default function SizeGuideButton({ image }: { image?: string }) {
           <path d="M21.21 15.89A10 10 0 1 1 8 2.83" />
           <path d="M22 12A10 10 0 0 0 12 2v10z" />
         </svg>
-        <span className="text-[0.7rem] tracking-[0.2em] uppercase font-medium">Size Guide</span>
+        <span className="text-[0.7rem] tracking-[0.2em] uppercase font-medium">{label}</span>
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
           <path d="M9 18l6-6-6-6" />
         </svg>
       </button>
 
       {open && typeof document !== "undefined" && createPortal(
-        <SizeGuideModal image={image} onClose={() => setOpen(false)} />,
+        <SizeGuideModal image={image} label={label} onClose={() => setOpen(false)} />,
         document.body
       )}
     </>

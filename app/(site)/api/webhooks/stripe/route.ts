@@ -10,6 +10,12 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
 });
 const resend = new Resend(process.env.RESEND_API_KEY);
 
+// Customer-entered free text (measurement notes etc.) goes straight into an HTML email —
+// escape it so it can't break the markup or inject content.
+function escapeHtml(s: string): string {
+  return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+}
+
 export async function POST(req: NextRequest) {
   const body = await req.text();
   const sig  = req.headers.get("stripe-signature");
@@ -80,6 +86,7 @@ export async function POST(req: NextRequest) {
     const currency      = (session.currency ?? "eur").toUpperCase();
     const giftWrap      = session.metadata?.giftWrap === "yes";
     const giftNote      = session.metadata?.giftNote ?? "";
+    const measurementNote = session.metadata?.measurementNote ?? "";
     const customerEmail = session.customer_details?.email ?? "—";
     const customerName  = session.customer_details?.name ?? "—";
     const address       = session.customer_details?.address;
@@ -192,7 +199,13 @@ export async function POST(req: NextRequest) {
           ${giftWrap ? `
           <div style="border:2px solid #A0622A;background:#FBF2EC;padding:16px 20px;margin:16px 0;">
             <p style="font-size:13px;font-weight:bold;color:#A0622A;margin:0 0 6px;">🎁 GIFT WRAP REQUESTED</p>
-            ${giftNote ? `<p style="font-size:13px;color:#2C2220;margin:0;white-space:pre-wrap;">Note: "${giftNote}"</p>` : `<p style="font-size:13px;color:#8C7B6E;margin:0;">No note left.</p>`}
+            ${giftNote ? `<p style="font-size:13px;color:#2C2220;margin:0;white-space:pre-wrap;">Note: "${escapeHtml(giftNote)}"</p>` : `<p style="font-size:13px;color:#8C7B6E;margin:0;">No note left.</p>`}
+          </div>
+          ` : ""}
+          ${measurementNote ? `
+          <div style="border:2px solid #A0622A;background:#FBF2EC;padding:16px 20px;margin:16px 0;">
+            <p style="font-size:13px;font-weight:bold;color:#A0622A;margin:0 0 6px;">📏 TAILORED FIT REQUESTED</p>
+            <p style="font-size:13px;color:#2C2220;margin:0;white-space:pre-wrap;">${escapeHtml(measurementNote)}</p>
           </div>
           ` : ""}
           <table style="width:100%;border-collapse:collapse;margin:20px 0;">

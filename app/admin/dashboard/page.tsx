@@ -75,6 +75,22 @@ export default function AdminDashboard() {
     }
   }
 
+  async function setSalePercent(id: string, percent: number | null) {
+    const updated = products.map((p) =>
+      p.id === id ? { ...p, salePercent: percent ?? undefined } : p
+    );
+    setProducts(updated);
+    const res = await fetch("/api/admin/products", {
+      method: "PUT",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(updated),
+    });
+    if (!res.ok) {
+      setError("Failed to save changes");
+      setProducts(products);
+    }
+  }
+
   async function deleteProduct(id: string, name: string) {
     if (!window.confirm(`Delete "${name}"? This cannot be undone.`)) return;
     setDeleting(id);
@@ -119,6 +135,8 @@ export default function AdminDashboard() {
   function ProductCard({ product }: { product: Product }) {
     const isActive = product.active ?? true;
     const isDeleting = deleting === product.id;
+    const [saleInput, setSaleInput] = useState(product.salePercent ? String(product.salePercent) : "");
+    const onSale = (product.salePercent ?? 0) > 0;
     return (
       <div
         style={{
@@ -207,9 +225,69 @@ export default function AdminDashboard() {
           <h3 style={{ margin: "0 0 0.25rem", fontSize: "0.95rem", fontWeight: 600, color: "var(--admin-text)" }}>
             {product.name}
           </h3>
-          <p style={{ margin: "0 0 1rem", fontSize: "0.9rem", fontWeight: 500, color: "#A0622A" }}>
+          <p style={{ margin: "0 0 0.75rem", fontSize: "0.9rem", fontWeight: 500, color: "#A0622A" }}>
             €{product.price.toFixed(2)}
+            {onSale && (
+              <span style={{ marginLeft: "0.5rem", fontSize: "0.7rem", fontWeight: 700, color: "#fff", background: "#A0622A", padding: "0.1rem 0.4rem", borderRadius: "3px" }}>
+                -{product.salePercent}%
+              </span>
+            )}
           </p>
+
+          <div style={{ display: "flex", alignItems: "center", gap: "0.4rem", marginBottom: "1rem" }}>
+            <input
+              type="number"
+              min={0}
+              max={90}
+              placeholder="Sale %"
+              value={saleInput}
+              onChange={(e) => setSaleInput(e.target.value)}
+              style={{
+                width: "70px",
+                padding: "0.3rem 0.5rem",
+                fontSize: "0.8rem",
+                border: "1px solid var(--admin-border2)",
+                borderRadius: "4px",
+                background: "var(--admin-surface)",
+                color: "var(--admin-text)",
+              }}
+            />
+            <button
+              onClick={() => {
+                const n = Number(saleInput);
+                if (saleInput !== "" && n > 0) setSalePercent(product.id, n);
+              }}
+              disabled={saleInput === "" || Number(saleInput) <= 0}
+              style={{
+                padding: "0.3rem 0.6rem",
+                fontSize: "0.75rem",
+                background: "#A0622A",
+                color: "#fff",
+                border: "none",
+                borderRadius: "4px",
+                cursor: saleInput === "" || Number(saleInput) <= 0 ? "not-allowed" : "pointer",
+                opacity: saleInput === "" || Number(saleInput) <= 0 ? 0.5 : 1,
+              }}
+            >
+              Set Sale
+            </button>
+            {onSale && (
+              <button
+                onClick={() => { setSaleInput(""); setSalePercent(product.id, null); }}
+                style={{
+                  padding: "0.3rem 0.6rem",
+                  fontSize: "0.75rem",
+                  background: "transparent",
+                  color: "var(--admin-muted)",
+                  border: "1px solid var(--admin-border2)",
+                  borderRadius: "4px",
+                  cursor: "pointer",
+                }}
+              >
+                Clear
+              </button>
+            )}
+          </div>
 
           <div style={{ display: "flex", gap: "0.5rem" }}>
             <button

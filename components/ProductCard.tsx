@@ -5,7 +5,7 @@ import Image from "@/components/SmartImage";
 import type { Product } from "@/lib/products";
 import { INFOGRAPHIC_IMAGES } from "@/lib/products";
 import { PACKAGING_IMAGES } from "@/lib/site-media";
-import { getOriginalPrice } from "@/lib/pricing";
+import { getSalePrice } from "@/lib/pricing";
 import WishlistButton from "@/components/WishlistButton";
 import { useCurrency } from "@/lib/currency-context";
 
@@ -28,6 +28,7 @@ export default function ProductCard({ product, priority = false }: { product: Pr
   const lastTouch  = useRef(0);
 
   const { format } = useCurrency();
+  const salePrice = getSalePrice(product);
 
   // All images for the card carousel — infographics excluded, shared packaging
   // photos (boxes, unboxing, gift wrap) appended at the end, same as the PDP gallery.
@@ -231,12 +232,19 @@ export default function ProductCard({ product, priority = false }: { product: Pr
           {product.name}
         </p>
         <div className="mt-1.5 flex items-baseline gap-1.5 flex-wrap">
-          <span className="text-sm font-medium tracking-wide text-[#A0622A]">
-            {format(product.price)}
+          <span className="text-sm font-light tracking-wide text-[#2C2220]">
+            {format(salePrice ?? product.price)}
           </span>
-          <span className="text-xs font-light tracking-wide text-[#8C7B6E]/50 line-through">
-            {format(getOriginalPrice(product.price))}
-          </span>
+          {salePrice !== null && (
+            <>
+              <span className="text-xs font-light tracking-wide text-[#8C7B6E]/50 line-through">
+                {format(product.price)}
+              </span>
+              <span className="text-[0.55rem] tracking-[0.1em] uppercase text-[#FDF9F7] bg-[#A0622A] px-1.5 py-0.5">
+                -{product.salePercent}%
+              </span>
+            </>
+          )}
         </div>
       </div>
     </div>

@@ -12680,9 +12680,16 @@
       }
     ],
     "featured": false,
-    "active": false,
-    "images": [],
-    "gallery": [],
+    "active": true,
+    "images": [
+      "/images/products/9d067e94-ca84-4a79-bc11-fdaad96c3e47.png"
+    ],
+    "gallery": [
+      "/images/products/9d067e94-ca84-4a79-bc11-fdaad96c3e47.png",
+      "/images/products/f8c651e7-7f7c-4b1e-b74e-1f0635f39043.png",
+      "/images/products/7df2280d-a2f9-401b-93b8-0d44028ffc4a.png",
+      "/images/products/658517ad-2b25-4a9b-a7ea-ff7abf8cf71b.png"
+    ],
     "variants": [
       "Red",
       "Green"
@@ -12706,6 +12713,14 @@
     ],
     "altText": "Red and green faceted crystal bead bracelet with matching rhinestone star charm, Christmas-inspired stainless steel jewelry",
     "christmas": true,
-    "dateAdded": "2026-10-19T18:20:19.760Z"
+    "dateAdded": "2026-10-19T18:20:19.760Z",
+    "variantHeroes": {
+      "Red": "/images/products/f8c651e7-7f7c-4b1e-b74e-1f0635f39043.png",
+      "Green": "/images/products/7df2280d-a2f9-401b-93b8-0d44028ffc4a.png"
+    },
+    "variantVideos": {
+      "Red": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/c60d55ef87575a635ada69e1ff9be53f/downloads/default.mp4",
+      "Green": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/c60d55ef87575a635ada69e1ff9be53f/downloads/default.mp4"
+    }
   }
 ]

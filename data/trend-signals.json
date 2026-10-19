@@ -1,5 +1,313 @@
 [
   {
+    "date": "2026-10-19",
+    "researchModel": "claude-opus-5",
+    "trends": [
+      {
+        "name": "Silver over gold",
+        "what": "Silver-toned jewellery is replacing gold as the dominant metal for AW26, pushed by runway shows and record gold prices.",
+        "searches": [
+          "silver jewellery trend 2026",
+          "is silver back in style",
+          "sterling silver body chain",
+          "silver necklace instead of gold"
+        ],
+        "evidence": "HELLO! Magazine frames silver as the comeback style of 2026, tied to silver's record price. Woman & Home names 'sculptural silver' as trend #1 citing Ralph Lauren and Bottega Veneta SS26. NET-A-PORTER's PORTER (Aug 2026) states silver-toned jewellery is back for fall/winter 2026. Second-hand: Artizan Joyeria, citing Google Trends, says US silver jewellery searches are up 60% vs the previous five years, 2026 the highest; The Locket Sisters repeats that figure and adds gold passed $5,000/oz in January 2026, with Bottega Veneta, Chanel and Givenchy showing bold silver for Spring 2026.",
+        "sources": [
+          {
+            "name": "HELLO! Magazine",
+            "url": "https://www.hellomagazine.com/fashion/880092/silver-jewellery-over-gold-new-fashion-brand-for-2026/"
+          },
+          {
+            "name": "Woman & Home",
+            "url": "https://www.womanandhome.com/fashion/jewellery-trends-2026/"
+          },
+          {
+            "name": "NET-A-PORTER PORTER",
+            "url": "https://www.net-a-porter.com/en-us/porter/article-d30482c86a1f1633/.../jewelry-trends-2026"
+          },
+          {
+            "name": "Artizan Joyeria",
+            "url": "https://artizanjoyeria.com/blogs/trends/silver-jewelry-trends"
+          },
+          {
+            "name": "The Locket Sisters",
+            "url": "https://thelocketsisters.com"
+          }
+        ],
+        "missing": [],
+        "momentum": "rising",
+        "fit": "we sell it",
+        "productIds": [
+          "layered-silver-belly-chain",
+          "silver-waterproof-belly-chain",
+          "silver-shoulder-harness",
+          "silver-finger-hand-chain"
+        ],
+        "idea": "Push the €20–€30 silver pieces as the hero gift price point while gold prices scare shoppers."
+      },
+      {
+        "name": "Charm-led sentimental jewellery",
+        "what": "Charms, charm bracelets and charm necklaces carrying personal meaning are a dominant gifting trend.",
+        "searches": [
+          "charm necklace",
+          "chunky charm necklace",
+          "charm bracelet gift",
+          "bag charm"
+        ],
+        "evidence": "Lily Charmed reports Marie Claire UK's 2026 trend report citing a 136% rise in NET-A-PORTER searches for charm bracelets. Our Coordinates cites Google's April 2026 spring fashion/beauty search report: 'chunky necklace' at an all-time high and 'chunky charm necklace' nearly doubling in one month. AB Designs claims bag-charm Google searches +168% and Pinterest saves +700%. Stuller's holiday report (15 Oct 2026) lists charms and personalised pendants among the six biggest holiday 2026 trends. Who What Wear backs 'grown-up charms'. Percentage figures are second-hand via retailer blogs.",
+        "sources": [
+          {
+            "name": "Lily Charmed",
+            "url": "https://www.lilycharmed.com/en-us/blogs/news/jewellery-that-tells-your-story"
+          },
+          {
+            "name": "Our Coordinates",
+            "url": "https://ourcoordinates.com/blogs/travel-tips/charm-jewelry-trend-2026-sentimental"
+          },
+          {
+            "name": "AB Designs",
+            "url": "https://abdesignsjewellery.us"
+          },
+          {
+            "name": "Stuller",
+            "url": "https://blog.stuller.com/6-jewelry-trends-holiday-2026/"
+          },
+          {
+            "name": "Who What Wear",
+            "url": "https://www.whowhatwear.com/fashion/jewelry/jewellery-trends-2026"
+          }
+        ],
+        "missing": [
+          "loose/individual charms",
+          "clasp-on charm systems",
+          "charm carriers",
+          "bag charms"
+        ],
+        "momentum": "peaking",
+        "fit": "partial",
+        "productIds": [
+          "zodiac-charm-bracelet",
+          "birth-flower-charm-bracelet",
+          "pearl-charm-bracelet",
+          "birth-flower-charm-necklace"
+        ],
+        "idea": "Merchandise finished charm pieces as a sentimental gift edit while exploring a clasp-on charm range."
+      },
+      {
+        "name": "Holiday maximalism",
+        "what": "Rhinestones, bold colour, ornate vintage-feeling statement pieces for party season.",
+        "searches": [
+          "maximalist jewellery",
+          "rhinestone necklace",
+          "statement necklace party",
+          "ornate vintage jewellery"
+        ],
+        "evidence": "Etsy's Seller Trend Report: Fall and Winter 2026 (~16 Oct 2026) names 'Merrymaxxing' (rhinestones, gemstones, bold colour) and 'Operatic Drama' (ornate brooches, capelets, vintage jewellery) as on the rise. Mark Schneider Design (Sept 2026) says fall/winter 2026 moves away from minimalism toward bold necklaces, brooches and pearls. Pinterest Predicts 2026, via JCK, says jewellery gets 'chunkier, bolder, and golder'. National Jeweler reports 'brooch aesthetic' searches up 110%; Fine Color Jewels cites maximalist accessories +105%, gold cuff +50%, heirloom jewellery +45%.",
+        "sources": [
+          {
+            "name": "Etsy Seller Handbook",
+            "url": "https://www.etsy.com/seller-handbook/article/1521255894814"
+          },
+          {
+            "name": "Mark Schneider Design",
+            "url": "https://markschneiderdesign.com"
+          },
+          {
+            "name": "JCK",
+            "url": "https://www.jckonline.com/editorial-article/pinterest-2026-trends-report/"
+          },
+          {
+            "name": "National Jeweler",
+            "url": "https://www.nationaljeweler.com/articles/14522-"
+          },
+          {
+            "name": "Fine Color Jewels",
+            "url": "https://finecolorjewels.com/blogs/news/pinterest-jewelry-trends"
+          }
+        ],
+        "missing": [
+          "brooches/pins",
+          "ornate vintage-style castings",
+          "crystal statement earrings"
+        ],
+        "momentum": "rising",
+        "fit": "partial",
+        "productIds": [
+          "maximalist-layered-necklace-stack",
+          "curated-layered-necklace-stack",
+          "star-pendant-rhinestone-choker",
+          "colorful-crystal-bead-choker"
+        ],
+        "idea": "Build a party-season maximalist edit around the rhinestone chokers and layered stacks."
+      },
+      {
+        "name": "Tassels and fringe",
+        "what": "Tassel and chain-fringe details, especially on long necklaces and in black, are returning as a 2026 trend.",
+        "searches": [
+          "tassel necklace",
+          "fringe necklace",
+          "tassel jewellery trend"
+        ],
+        "evidence": "Who What Wear lists 'Tasseled Details' as one of six trends defining 2026, noting movement and drama especially in black, and separately named 'The Return of Tassels' in its summer 2026 list. Fashionista ties tassels to the inflation-driven shift to non-metal materials, seen mostly in necklaces. WorthPoint confirms the revival, focused on long necklaces and chain tassels.",
+        "sources": [
+          {
+            "name": "Who What Wear",
+            "url": "https://www.whowhatwear.com/fashion/jewelry/jewelry-trends-2026"
+          },
+          {
+            "name": "Fashionista",
+            "url": "https://fashionista.com/2026/02/jewelry-accessories-trends-2026"
+          },
+          {
+            "name": "WorthPoint",
+            "url": "https://www.worthpoint.com/articles/collectibles/is-tassel-jewelry-back-in-style"
+          }
+        ],
+        "missing": [
+          "tassel pendant necklaces",
+          "chain-fringe back drops",
+          "fringed waist/belly chains",
+          "tassel shoulder drops"
+        ],
+        "momentum": "rising",
+        "fit": "gap",
+        "productIds": [],
+        "idea": "Develop a chain-fringe back chain as the handmade signature version of the tassel trend."
+      },
+      {
+        "name": "Cuffs, bangles and rigid metal",
+        "what": "Sculptural cuffs, bangles and rigid bracelet forms are a headline 2026 trend, alongside curated ring stacks.",
+        "searches": [
+          "gold cuff",
+          "sculptural cuff bracelet",
+          "bangle stack",
+          "chunky silver cuff"
+        ],
+        "evidence": "Who What Wear lists 'Sculptural Cuffs' as the #1 trend set to define 2026 and 'Chunky Silver' in its UK edit. Pinterest Predicts 2026, via Fine Color Jewels, shows 'gold cuff' searches +50%. Artizan Joyeria's fall 2026 list flags bangles worn over knitwear. Every bracelet in the catalog is a chain or beaded strand, and only three rings exist, so ring stacking is half-covered.",
+        "sources": [
+          {
+            "name": "Who What Wear",
+            "url": "https://www.whowhatwear.com/fashion/jewelry/jewellery-trends-2026"
+          },
+          {
+            "name": "Fine Color Jewels",
+            "url": "https://finecolorjewels.com/blogs/news/pinterest-jewelry-trends"
+          },
+          {
+            "name": "Artizan Joyeria",
+            "url": "https://artizanjoyeria.com/blogs/trends/fall-jewelry-trends"
+          }
+        ],
+        "missing": [
+          "cuff bracelets",
+          "bangles",
+          "rigid bracelet forms",
+          "wider ring range for stacking"
+        ],
+        "momentum": "rising",
+        "fit": "gap",
+        "productIds": [],
+        "idea": "Add a simple silver cuff and expand the ring range so stacking content has product behind it."
+      },
+      {
+        "name": "Natural stones, beading and bug motifs",
+        "what": "Natural stones, beaded weaving and animal/insect motifs run through FW26/27 and into spring.",
+        "searches": [
+          "natural stone necklace",
+          "turquoise jewellery",
+          "bug jewellery",
+          "dragonfly necklace"
+        ],
+        "evidence": "Perles & Co's Fall-Winter 2026-2027 trend guide (~13 Oct 2026) names five trends: vintage, beaded weaving, natural stones, animal motifs and resin, with a burgundy/purple/chartreuse/earth-tone palette. National Jeweler's Pinterest write-up highlights 'Cool Blue'. In Color Magazine summarises Pinterest 2026 jewellery signals as Art Deco nostalgia, brooches, heirloom pieces and bug motifs. The Quality Edit adds colourful gemstones for 2026.",
+        "sources": [
+          {
+            "name": "Perles & Co",
+            "url": "https://www.perlesandco.co.uk/resources/ft40362-fall-winter-2026-2027-jewelry-trends.html"
+          },
+          {
+            "name": "National Jeweler",
+            "url": "https://www.nationaljeweler.com/articles/14522-"
+          },
+          {
+            "name": "In Color Magazine",
+            "url": "https://incolormagazine.com/pinterest-predicts-21-trends-for-2026/"
+          },
+          {
+            "name": "The Quality Edit",
+            "url": "https://www.thequalityedit.com/articles/jewelry-trends-winter"
+          }
+        ],
+        "missing": [
+          "resin pieces",
+          "woven/macramé work"
+        ],
+        "momentum": "steady",
+        "fit": "we sell it",
+        "productIds": [
+          "turquoise-beaded-choker",
+          "turquoise-zodiac-necklace-stack",
+          "dragonfly-pendant-necklace",
+          "birthstone-gemstone-anklet"
+        ],
+        "idea": "Group turquoise, gemstone and bug-motif pieces into a natural-stone and creatures edit heading into spring."
+      }
+    ],
+    "gaps": [],
+    "blogIdeas": [
+      {
+        "query": "how to wear a charm necklace",
+        "why": "Stuller's 15 Oct 2026 holiday report names charms among the six biggest holiday 2026 trends, and Google's April 2026 search report (via Our Coordinates) shows 'chunky charm necklace' nearly doubling in a month.",
+        "productIds": [
+          "birth-flower-charm-necklace",
+          "curated-layered-necklace-stack",
+          "zodiac-slip-on-necklace",
+          "dragonfly-pendant-necklace"
+        ]
+      },
+      {
+        "query": "silver jewellery trend 2026",
+        "why": "HELLO!, Woman & Home and NET-A-PORTER's PORTER all place silver at the centre of AW26, with Artizan Joyeria reading Google Trends as +60% on the five-year baseline.",
+        "productIds": [
+          "layered-silver-belly-chain",
+          "silver-waterproof-belly-chain",
+          "silver-shoulder-harness",
+          "silver-finger-hand-chain"
+        ]
+      },
+      {
+        "query": "what jewellery to wear with a velvet dress",
+        "why": "Etsy's Fall/Winter 2026 seller report (16 Oct 2026) names 'Operatic Drama' — rich fabrics with ornate jewellery — as rising for the season.",
+        "productIds": [
+          "layered-pearl-choker",
+          "pearl-shoulder-necklace",
+          "stacked-pearl-cross-choker",
+          "pearl-backdrop-necklace"
+        ]
+      },
+      {
+        "query": "statement necklace outfit ideas",
+        "why": "Etsy's 'Merrymaxxing' trend plus Pinterest Predicts 2026 (maximalist accessories +105% via Fine Color Jewels, 'chunkier and bolder' via JCK) make bold necklaces the party-season story.",
+        "productIds": [
+          "maximalist-layered-necklace-stack",
+          "chunky-toggle-cross-necklace",
+          "evil-eye-choker-necklace",
+          "star-pendant-rhinestone-choker"
+        ]
+      },
+      {
+        "query": "vintage inspired jewellery",
+        "why": "Pinterest Predicts 2026 shows heirloom jewellery +45% and 'brooch aesthetic' +110% (National Jeweler, Fine Color Jewels), while Etsy and Perles & Co both name vintage as a FW26/27 pillar.",
+        "productIds": [
+          "rosary-pearl-cross-choker",
+          "coin-disc-chain-choker",
+          "pearl-evening-backdrop-necklace",
+          "coin-link-chain-belt"
+        ]
+      }
+    ]
+  },
+  {
     "date": "2026-10-15",
     "researchModel": "claude-sonnet-5",
     "trends": [

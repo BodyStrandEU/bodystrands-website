@@ -1,5 +1,163 @@
 [
   {
+    "query": "how to wear a charm necklace",
+    "keywords": [
+      "charm necklace layering ideas",
+      "sentimental charm jewellery gift for her",
+      "birth flower charm necklace meaning",
+      "zodiac charm necklace for christmas",
+      "charm necklace stack with different lengths"
+    ],
+    "productIds": [
+      "birth-flower-charm-necklace",
+      "curated-layered-necklace-stack",
+      "zodiac-slip-on-necklace",
+      "dragonfly-pendant-necklace"
+    ],
+    "category": "Style Guide",
+    "months": [
+      11,
+      12,
+      1,
+      2,
+      3
+    ],
+    "productCategories": [
+      "Necklaces"
+    ],
+    "source": "research",
+    "researchModel": "claude-opus-5",
+    "addedAt": "2026-10-19",
+    "why": "Stuller's 15 Oct 2026 holiday report names charms among the six biggest holiday 2026 trends, and Google's April 2026 search report (via Our Coordinates) shows 'chunky charm necklace' nearly doubling in a month."
+  },
+  {
+    "query": "silver jewellery trend 2026",
+    "keywords": [
+      "is silver jewellery back in style",
+      "why is everyone wearing silver again",
+      "silver belly chain for everyday wear",
+      "affordable silver jewellery under 30 euros",
+      "sterling silver vs stainless steel jewellery"
+    ],
+    "productIds": [
+      "layered-silver-belly-chain",
+      "silver-waterproof-belly-chain",
+      "silver-shoulder-harness",
+      "silver-finger-hand-chain"
+    ],
+    "category": "Inspiration",
+    "months": [
+      10,
+      11,
+      12,
+      1,
+      2,
+      3,
+      4
+    ],
+    "productCategories": [
+      "Belly Chains",
+      "Shoulder Chains",
+      "Hand Chains"
+    ],
+    "source": "research",
+    "researchModel": "claude-opus-5",
+    "addedAt": "2026-10-19",
+    "why": "HELLO!, Woman & Home and NET-A-PORTER's PORTER all place silver at the centre of AW26, with Artizan Joyeria reading Google Trends as +60% on the five-year baseline."
+  },
+  {
+    "query": "what jewellery to wear with a velvet dress",
+    "keywords": [
+      "necklace for a velvet party dress",
+      "jewellery for a burgundy velvet dress",
+      "pearl choker with velvet",
+      "gold or silver with dark green velvet",
+      "jewellery for a velvet slip dress"
+    ],
+    "productIds": [
+      "layered-pearl-choker",
+      "pearl-shoulder-necklace",
+      "stacked-pearl-cross-choker",
+      "pearl-backdrop-necklace"
+    ],
+    "category": "Style Guide",
+    "months": [
+      11,
+      12,
+      1
+    ],
+    "productCategories": [
+      "Necklaces",
+      "Shoulder Chains"
+    ],
+    "source": "research",
+    "researchModel": "claude-opus-5",
+    "addedAt": "2026-10-19",
+    "why": "Etsy's Fall/Winter 2026 seller report (16 Oct 2026) names 'Operatic Drama' — rich fabrics with ornate jewellery — as rising for the season."
+  },
+  {
+    "query": "statement necklace outfit ideas",
+    "keywords": [
+      "how to wear a statement necklace without earrings",
+      "maximalist jewellery for the holidays",
+      "chunky toggle necklace outfit",
+      "rhinestone choker outfit ideas",
+      "statement necklace for a christmas party dress"
+    ],
+    "productIds": [
+      "maximalist-layered-necklace-stack",
+      "chunky-toggle-cross-necklace",
+      "evil-eye-choker-necklace",
+      "star-pendant-rhinestone-choker"
+    ],
+    "category": "Style Guide",
+    "months": [
+      11,
+      12,
+      1,
+      2
+    ],
+    "productCategories": [
+      "Necklaces"
+    ],
+    "source": "research",
+    "researchModel": "claude-opus-5",
+    "addedAt": "2026-10-19",
+    "why": "Etsy's 'Merrymaxxing' trend plus Pinterest Predicts 2026 (maximalist accessories +105% via Fine Color Jewels, 'chunkier and bolder' via JCK) make bold necklaces the party-season story."
+  },
+  {
+    "query": "vintage inspired jewellery",
+    "keywords": [
+      "heirloom style jewellery without the price",
+      "antique style coin necklace",
+      "vintage style pearl necklace for evening",
+      "rosary style choker necklace",
+      "vintage inspired chain belt"
+    ],
+    "productIds": [
+      "rosary-pearl-cross-choker",
+      "coin-disc-chain-choker",
+      "pearl-evening-backdrop-necklace",
+      "coin-link-chain-belt"
+    ],
+    "category": "Inspiration",
+    "months": [
+      11,
+      12,
+      1,
+      2,
+      3
+    ],
+    "productCategories": [
+      "Necklaces",
+      "Body Chains"
+    ],
+    "source": "research",
+    "researchModel": "claude-opus-5",
+    "addedAt": "2026-10-19",
+    "why": "Pinterest Predicts 2026 shows heirloom jewellery +45% and 'brooch aesthetic' +110% (National Jeweler, Fine Color Jewels), while Etsy and Perles & Co both name vintage as a FW26/27 pillar."
+  },
+  {
     "query": "pearlcore jewelry trend",
     "keywords": [
       "pearl body chain outfit",

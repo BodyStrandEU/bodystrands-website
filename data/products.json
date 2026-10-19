@@ -60,7 +60,8 @@
       "Silver Tone": "/images/products/8a35ecec-5a49-4ea7-8f8b-609ac639139b.webp"
     },
     "dateAdded": "2026-06-12T15:00:27-04:00",
-    "sizeGuideImage": "/images/products/48.png"
+    "sizeGuideImage": "/images/products/48.png",
+    "salePercent": 25
   },
   {
     "id": "layered-body-chain-double-choker",

@@ -4503,7 +4503,8 @@
       "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/e773ba07d087a52fb256fb4c3cfe9114/downloads/default.mp4",
       "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/e773ba07d087a52fb256fb4c3cfe9114/downloads/default.mp4"
     },
-    "sizeGuideImage": "/images/products/Infographic-editor.png"
+    "sizeGuideImage": "/images/products/Infographic-editor.png",
+    "salePercent": 25
   },
   {
     "id": "layered-bridal-back-chain",

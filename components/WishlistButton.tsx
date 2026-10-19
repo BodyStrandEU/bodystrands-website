@@ -49,7 +49,7 @@ export default function WishlistButton({
       }}
       aria-label={saved ? "Remove from saved" : "Save this piece"}
       aria-pressed={saved}
-      className="absolute top-2 right-2 z-10 w-7 h-7 rounded-full bg-white/80 backdrop-blur-sm flex items-center justify-center transition-transform duration-150 active:scale-90"
+      className="absolute bottom-[44px] right-2 z-10 w-7 h-7 rounded-full bg-white/80 backdrop-blur-sm flex items-center justify-center transition-transform duration-150 active:scale-90"
     >
       <svg
         width="13"

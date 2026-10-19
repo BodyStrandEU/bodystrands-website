@@ -435,7 +435,7 @@ export default function ProductReviews({ category, productId, className = "" }: 
   ).sort((a, b) => stableShuffleKey(a) - stableShuffleKey(b));
 
   return (
-    <section className={`pt-8 mt-2 border-t border-[#E8B4A8]/40 ${className}`}>
+    <section id="reviews" className={`pt-8 mt-2 border-t border-[#E8B4A8]/40 ${className}`}>
       <div className="flex flex-col gap-10">
         <ReviewGroup
           heading={own.length > 0 ? "What customers are saying about this piece" : "Be the first to review this item"}

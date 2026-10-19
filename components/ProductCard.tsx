@@ -8,13 +8,14 @@ import { PACKAGING_IMAGES } from "@/lib/site-media";
 import { getSalePrice } from "@/lib/pricing";
 import WishlistButton from "@/components/WishlistButton";
 import { useCurrency } from "@/lib/currency-context";
+import { useCart } from "@/lib/cart";
 
 const SWATCH_COLORS: Record<string, string> = {
   "Gold Tone":   "#C8A84B",
   "Silver Tone": "#A8A8A8",
 };
 
-export default function ProductCard({ product, priority = false }: { product: Product; priority?: boolean }) {
+export default function ProductCard({ product, priority = false, heroImageOverride }: { product: Product; priority?: boolean; heroImageOverride?: string }) {
   const router = useRouter();
 
   const [activeVariant, setActiveVariant] = useState<string | null>(
@@ -29,6 +30,38 @@ export default function ProductCard({ product, priority = false }: { product: Pr
 
   const { format } = useCurrency();
   const salePrice = getSalePrice(product);
+  const { add: addToCart } = useCart();
+  const [justAdded, setJustAdded] = useState(false);
+
+  // Products with extra required choices (e.g. Size) can't be safely one-click added —
+  // send those to the product page instead so nothing gets skipped.
+  const needsOptions = (product.variantGroups ?? []).length > 0;
+
+  function handleQuickAdd(e: React.MouseEvent) {
+    e.stopPropagation();
+    e.preventDefault();
+    if (needsOptions) {
+      router.push(`/shop/${product.id}`);
+      return;
+    }
+    if (justAdded) return;
+    addToCart({
+      productId:   product.id,
+      productName: product.name,
+      variant:     activeVariant ?? undefined,
+      priceAdd:    0,
+      unitPrice:   salePrice ?? product.price,
+      image:       product.images?.[0],
+      currency:    product.currency,
+    });
+    setJustAdded(true);
+    setTimeout(() => setJustAdded(false), 1500);
+    if (typeof window !== "undefined") {
+      const w = window as Window & { fbq?: (...a: unknown[]) => void; gtag?: (...a: unknown[]) => void };
+      w.fbq?.("track", "AddToCart", { content_ids: [product.id], content_name: product.name, content_type: "product", value: salePrice ?? product.price, currency: product.currency });
+      w.gtag?.("event", "add_to_cart", { currency: product.currency, value: salePrice ?? product.price, items: [{ item_id: product.id, item_name: product.name, item_variant: activeVariant ?? "", price: salePrice ?? product.price, quantity: 1 }] });
+    }
+  }
 
   // All images for the card carousel — infographics excluded, shared packaging
   // photos (boxes, unboxing, gift wrap) appended at the end, same as the PDP gallery.
@@ -46,6 +79,15 @@ export default function ProductCard({ product, priority = false }: { product: Pr
     }
     return [...(product.images ?? []).filter(src => !isInfographic(src)), ...PACKAGING_IMAGES];
   }, [product.gallery, product.variants, product.variantImages, product.images, product.infographicImages]);
+
+  // Context-specific starting photo (e.g. the festive shot on /christmas) — applied once
+  // on mount, doesn't affect the default image shown anywhere else this card is used.
+  useEffect(() => {
+    if (!heroImageOverride) return;
+    const idx = combinedImages.indexOf(heroImageOverride);
+    if (idx !== -1) setSlideIndex(idx);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   // Which variant does each slide belong to? (only used in per-variant mode)
   const slideVariantMap = useMemo(() => {
@@ -148,6 +190,26 @@ export default function ProductCard({ product, priority = false }: { product: Pr
         onTouchEnd={onTouchEnd}
       >
         <WishlistButton productId={product.id} />
+
+        {/* Quick add to cart — bottom-right, paired with the wishlist heart above it */}
+        <button
+          type="button"
+          onClick={handleQuickAdd}
+          aria-label={justAdded ? "Added to cart" : needsOptions ? "View options" : "Add to cart"}
+          className="absolute bottom-2 right-2 z-10 w-7 h-7 rounded-full bg-white/80 backdrop-blur-sm flex items-center justify-center transition-transform duration-150 active:scale-90"
+        >
+          {justAdded ? (
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#A0622A" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M20 6L9 17l-5-5" />
+            </svg>
+          ) : (
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#2C2220" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z" />
+              <path d="M3 6h18" />
+              <path d="M16 10a4 4 0 0 1-8 0" />
+            </svg>
+          )}
+        </button>
 
         {combinedImages.length === 0 && (
           <div className="absolute inset-0 flex flex-col items-center justify-center gap-2">

@@ -219,7 +219,11 @@ export default function ProductPageClient({ product }: { product: Product }) {
         {/* Inline star rating — real data: this product's own reviews if it has any,
             otherwise the shop-wide average. Hidden entirely if there's no real review data yet. */}
         {badgeReviews.length > 0 && (
-        <div className="flex items-center gap-2.5">
+        <button
+          type="button"
+          onClick={() => document.getElementById("reviews")?.scrollIntoView({ behavior: "smooth", block: "start" })}
+          className="flex items-center gap-2.5 group/stars"
+        >
           <div className="flex gap-0.5">
             {[1, 2, 3, 4, 5].map((i) => (
               <svg key={i} width="13" height="13" viewBox="0 0 24 24" fill={i <= Math.round(badgeAvg) ? "#A0622A" : "none"} stroke={i <= Math.round(badgeAvg) ? "#A0622A" : "#D4B8A8"} strokeWidth="1.5">
@@ -227,8 +231,8 @@ export default function ProductPageClient({ product }: { product: Product }) {
               </svg>
             ))}
           </div>
-          <span className="text-[0.65rem] tracking-[0.12em] text-[#8C7B6E]">{badgeAvg.toFixed(1)} · {badgeReviews.length} review{badgeReviews.length !== 1 ? "s" : ""}</span>
-        </div>
+          <span className="text-[0.65rem] tracking-[0.12em] text-[#8C7B6E] group-hover/stars:text-[#A0622A] group-hover/stars:underline underline-offset-2 transition-colors">{badgeAvg.toFixed(1)} · {badgeReviews.length} review{badgeReviews.length !== 1 ? "s" : ""}</span>
+        </button>
         )}
 
         <div className="flex flex-col gap-1.5">

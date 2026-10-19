@@ -75,6 +75,22 @@ export default function AdminDashboard() {
     }
   }
 
+  async function setProductPrice(id: string, price: number) {
+    const updated = products.map((p) =>
+      p.id === id ? { ...p, price } : p
+    );
+    setProducts(updated);
+    const res = await fetch("/api/admin/products", {
+      method: "PUT",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(updated),
+    });
+    if (!res.ok) {
+      setError("Failed to save changes");
+      setProducts(products);
+    }
+  }
+
   async function setSalePercent(id: string, percent: number | null) {
     const updated = products.map((p) =>
       p.id === id ? { ...p, salePercent: percent ?? undefined } : p
@@ -136,6 +152,7 @@ export default function AdminDashboard() {
     const isActive = product.active ?? true;
     const isDeleting = deleting === product.id;
     const [saleInput, setSaleInput] = useState(product.salePercent ? String(product.salePercent) : "");
+    const [priceInput, setPriceInput] = useState(String(product.price));
     const onSale = (product.salePercent ?? 0) > 0;
     return (
       <div
@@ -233,6 +250,45 @@ export default function AdminDashboard() {
               </span>
             )}
           </p>
+
+          <div style={{ display: "flex", alignItems: "center", gap: "0.4rem", marginBottom: "0.5rem" }}>
+            <input
+              type="number"
+              min={0}
+              step="0.01"
+              placeholder="Price"
+              value={priceInput}
+              onChange={(e) => setPriceInput(e.target.value)}
+              style={{
+                width: "70px",
+                padding: "0.3rem 0.5rem",
+                fontSize: "0.8rem",
+                border: "1px solid var(--admin-border2)",
+                borderRadius: "4px",
+                background: "var(--admin-surface)",
+                color: "var(--admin-text)",
+              }}
+            />
+            <button
+              onClick={() => {
+                const n = Number(priceInput);
+                if (priceInput !== "" && n > 0) setProductPrice(product.id, n);
+              }}
+              disabled={priceInput === "" || Number(priceInput) <= 0}
+              style={{
+                padding: "0.3rem 0.6rem",
+                fontSize: "0.75rem",
+                background: "#2C2220",
+                color: "#fff",
+                border: "none",
+                borderRadius: "4px",
+                cursor: priceInput === "" || Number(priceInput) <= 0 ? "not-allowed" : "pointer",
+                opacity: priceInput === "" || Number(priceInput) <= 0 ? 0.5 : 1,
+              }}
+            >
+              Set Price
+            </button>
+          </div>
 
           <div style={{ display: "flex", alignItems: "center", gap: "0.4rem", marginBottom: "1rem" }}>
             <input

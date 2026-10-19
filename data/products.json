@@ -12640,5 +12640,72 @@
       "Silver Tone"
     ],
     "sizeGuideImage": "/images/products/2e2e7fdb-d48c-46e5-b6c6-515fdb33d441-copy.png"
+  },
+  {
+    "id": "star-charm-crystal-bracelet",
+    "name": "Star Charm Crystal Bracelet",
+    "price": 30,
+    "currency": "EUR",
+    "category": "Bracelets",
+    "description": "Red or green, this one's built for the season. A faceted crystal bead bracelet finished with a matching rhinestone star charm.",
+    "fullDescription": "Red or green, this one's built for the season.\n\nThis faceted crystal bead bracelet comes in red or green, each bead catching the light with its own subtle sparkle, finished with a rhinestone star charm in a matching color for one extra festive touch. Pair it with your holiday party look, stack it with your everyday pieces, or give it as a little stocking stuffer that still feels special.\n\nHandmade in stainless steel, so it holds its shine and resists tarnishing well past the holiday season.",
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Stainless steel chain and clasp, faceted crystal glass beads, rhinestone star charm"
+      },
+      {
+        "label": "Colours",
+        "value": "Red or Green (bead and star charm color matched)"
+      },
+      {
+        "label": "Closure",
+        "value": "Lobster clasp"
+      },
+      {
+        "label": "Waterproof & Tarnish-Resistant",
+        "value": "Yes"
+      },
+      {
+        "label": "Custom fit",
+        "value": "Need a specific measurement? Message us before ordering and we'll make it to your exact size at no extra cost."
+      },
+      {
+        "label": "Care",
+        "value": "Wipe gently with a soft cloth after each wear. Store in an airtight container when not in use."
+      },
+      {
+        "label": "Shipping",
+        "value": "Dispatches within 1–2 business days"
+      }
+    ],
+    "featured": false,
+    "active": false,
+    "images": [],
+    "gallery": [],
+    "variants": [
+      "Red",
+      "Green"
+    ],
+    "variantGroups": [
+      {
+        "label": "Size",
+        "options": [
+          "14 cm (5.5\")",
+          "15 cm (5.9\")",
+          "16 cm (6.3\")",
+          "17 cm (6.7\")",
+          "18 cm (7.1\")",
+          "19 cm (7.5\")",
+          "20 cm (7.9\")",
+          "21 cm (8.3\")",
+          "22 cm (8.7\")",
+          "23 cm (9.1\")"
+        ]
+      }
+    ],
+    "altText": "Red and green faceted crystal bead bracelet with matching rhinestone star charm, Christmas-inspired stainless steel jewelry",
+    "christmas": true,
+    "dateAdded": "2026-10-19T18:20:19.760Z"
   }
 ]

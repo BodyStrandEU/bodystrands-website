@@ -30,18 +30,20 @@ export default function ProductCard({ product, priority = false, heroImageOverri
 
   const { format } = useCurrency();
   const salePrice = getSalePrice(product);
-  const { add: addToCart } = useCart();
+  const { add: addToCart, openQuickAdd, openDrawer } = useCart();
   const [justAdded, setJustAdded] = useState(false);
 
-  // Products with extra required choices (e.g. Size) can't be safely one-click added —
-  // send those to the product page instead so nothing gets skipped.
+  // Products with extra required choices (e.g. Size) open the shared cart drawer in its
+  // "pick options" mode instead of adding blind — keeps quick-add frictionless without
+  // leaving the grid. Simple/swatch-only products add instantly, then the drawer opens
+  // to confirm and offer a way to switch finish if the wrong swatch was showing.
   const needsOptions = (product.variantGroups ?? []).length > 0;
 
   function handleQuickAdd(e: React.MouseEvent) {
     e.stopPropagation();
     e.preventDefault();
     if (needsOptions) {
-      router.push(`/shop/${product.id}`);
+      openQuickAdd(product);
       return;
     }
     if (justAdded) return;
@@ -66,6 +68,7 @@ export default function ProductCard({ product, priority = false, heroImageOverri
         body: JSON.stringify({ productId: product.id, variant: activeVariant ?? undefined }),
       }).catch(() => {});
     }
+    openDrawer();
   }
 
   // All images for the card carousel — infographics excluded, shared packaging

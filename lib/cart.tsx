@@ -1,6 +1,7 @@
 "use client";
 
 import { createContext, useContext, useState, useEffect, ReactNode } from "react";
+import type { Product } from "@/lib/products";
 
 export type CartItem = {
   cartId:      string;   // productId + ":" + (variant ?? "")
@@ -25,7 +26,18 @@ type CartCtx = {
   add:               (item: Omit<CartItem, "cartId" | "quantity">) => void;
   remove:            (cartId: string) => void;
   updateQty:         (cartId: string, qty: number) => void;
+  updateVariant:     (cartId: string, newVariant: string, newImage?: string) => void;
   clear:             () => void;
+  // Global cart drawer (navbar cart icon + product card quick-add both control the
+  // same drawer instance, rendered once in the site layout — see CartDrawer.tsx).
+  drawerOpen:        boolean;
+  openDrawer:        () => void;
+  closeDrawer:       () => void;
+  // When set, the drawer opens in "pick required options" mode for this product
+  // instead of showing the cart list — used by ProductCard's quick-add button.
+  quickAddProduct:   Product | null;
+  openQuickAdd:      (product: Product) => void;
+  closeQuickAdd:     () => void;
 };
 
 const CartContext = createContext<CartCtx | null>(null);
@@ -72,13 +84,41 @@ export function CartProvider({ children }: { children: ReactNode }) {
     setItems((prev) => prev.map((i) => i.cartId === cartId ? { ...i, quantity: qty } : i));
   }
 
+  // Switches an existing line's variant (e.g. Gold Tone → Silver Tone) in place —
+  // merges into an existing line for that variant if one's already in the cart.
+  function updateVariant(cartId: string, newVariant: string, newImage?: string) {
+    setItems((prev) => {
+      const item = prev.find((i) => i.cartId === cartId);
+      if (!item) return prev;
+      const newCartId = `${item.productId}:${newVariant}`;
+      if (newCartId === cartId) return prev;
+      const existing = prev.find((i) => i.cartId === newCartId);
+      const without = prev.filter((i) => i.cartId !== cartId && i.cartId !== newCartId);
+      const mergedQty = (existing?.quantity ?? 0) + item.quantity;
+      return [...without, { ...item, variant: newVariant, image: newImage ?? item.image, cartId: newCartId, quantity: mergedQty }];
+    });
+  }
+
   function clear() { setItems([]); }
+
+  const [drawerOpen, setDrawerOpen]           = useState(false);
+  const [quickAddProduct, setQuickAddProduct] = useState<Product | null>(null);
+
+  function openDrawer()  { setQuickAddProduct(null); setDrawerOpen(true); }
+  function closeDrawer() { setDrawerOpen(false); }
+  function openQuickAdd(product: Product) { setQuickAddProduct(product); setDrawerOpen(true); }
+  function closeQuickAdd() { setQuickAddProduct(null); setDrawerOpen(false); }
 
   const count    = items.reduce((s, i) => s + i.quantity, 0);
   const subtotal = items.reduce((s, i) => s + i.unitPrice * i.quantity, 0);
 
   return (
-    <CartContext.Provider value={{ items, count, subtotal, shippingCountry, setShippingCountry, add, remove, updateQty, clear }}>
+    <CartContext.Provider value={{
+      items, count, subtotal, shippingCountry, setShippingCountry,
+      add, remove, updateQty, updateVariant, clear,
+      drawerOpen, openDrawer, closeDrawer,
+      quickAddProduct, openQuickAdd, closeQuickAdd,
+    }}>
       {children}
     </CartContext.Provider>
   );

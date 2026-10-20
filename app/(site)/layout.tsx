@@ -6,6 +6,7 @@ import FloatingDMButton from "@/components/FloatingDMButton";
 import TrustBar from "@/components/TrustBar";
 import EmailCapturePopup from "@/components/EmailCapturePopup";
 import PageTransition from "@/components/PageTransition";
+import CartDrawer from "@/components/CartDrawer";
 
 export default function SiteLayout({
   children,
@@ -25,6 +26,7 @@ export default function SiteLayout({
       <CookieConsent />
       <FloatingDMButton />
       <EmailCapturePopup />
+      <CartDrawer />
     </div>
   );
 }

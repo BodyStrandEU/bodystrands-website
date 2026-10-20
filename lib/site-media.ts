@@ -5,7 +5,7 @@
 // when it has none of its own. Product pages only — not the shop grid cards, where an
 // extra video per card would slow the shop page down on phones.
 // Hosted on Cloudflare Stream like the product videos. Empty string = feature off.
-export const PROCESS_VIDEO = "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/57bc6cd8307a9a5056dbc58f464ec5cc/downloads/default.mp4";
+export const PROCESS_VIDEO = "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/fde936feb535808e662b469bfadfa1fd/downloads/default.mp4";
 
 // Packaging photos added to the END of every product gallery (Oct 8, 2026, user request):
 // signature boxes, unboxing with the thank-you card (plain chain — fits any product), gift wrap.

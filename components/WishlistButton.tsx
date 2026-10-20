@@ -3,19 +3,40 @@ import { useWishlist } from "@/lib/wishlist";
 
 export default function WishlistButton({
   productId,
+  productName,
   variant = "card",
 }: {
   productId: string;
+  productName?: string;
   variant?: "card" | "page";
 }) {
   const { isSaved, toggle } = useWishlist();
   const saved = isSaved(productId);
 
+  function handleToggle() {
+    const isNowLiking = !saved; // current state before this click flips it
+    toggle(productId);
+
+    if (isNowLiking && typeof window !== "undefined") {
+      const w = window as Window & { gtag?: (...a: unknown[]) => void };
+      w.gtag?.("event", "add_to_wishlist", {
+        items: [{ item_id: productId, item_name: productName ?? productId }],
+      });
+
+      // Fire-and-forget owner notification — never blocks the UI, failures are silent.
+      fetch("/api/wishlist-like", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ productId }),
+      }).catch(() => {});
+    }
+  }
+
   if (variant === "page") {
     return (
       <button
-        onClick={() => toggle(productId)}
-        aria-label={saved ? "Remove from saved" : "Save this piece"}
+        onClick={handleToggle}
+        aria-label={saved ? "Remove from favourites" : "Add to favourites"}
         aria-pressed={saved}
         className={`flex items-center gap-1.5 transition-colors duration-200 ${
           saved ? "text-[#A0622A]" : "text-[#8C7B6E]/60 hover:text-[#A0622A]"
@@ -45,7 +66,7 @@ export default function WishlistButton({
       onClick={(e) => {
         e.stopPropagation();
         e.preventDefault();
-        toggle(productId);
+        handleToggle();
       }}
       aria-label={saved ? "Remove from saved" : "Save this piece"}
       aria-pressed={saved}

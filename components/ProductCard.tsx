@@ -60,6 +60,11 @@ export default function ProductCard({ product, priority = false, heroImageOverri
       const w = window as Window & { fbq?: (...a: unknown[]) => void; gtag?: (...a: unknown[]) => void };
       w.fbq?.("track", "AddToCart", { content_ids: [product.id], content_name: product.name, content_type: "product", value: salePrice ?? product.price, currency: product.currency });
       w.gtag?.("event", "add_to_cart", { currency: product.currency, value: salePrice ?? product.price, items: [{ item_id: product.id, item_name: product.name, item_variant: activeVariant ?? "", price: salePrice ?? product.price, quantity: 1 }] });
+      fetch("/api/cart-add", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ productId: product.id, variant: activeVariant ?? undefined }),
+      }).catch(() => {});
     }
   }
 
@@ -189,7 +194,7 @@ export default function ProductCard({ product, priority = false, heroImageOverri
         className="relative overflow-hidden bg-[#FDF9F7] aspect-[7/10] md:aspect-[4/5] select-none"
         onTouchEnd={onTouchEnd}
       >
-        <WishlistButton productId={product.id} />
+        <WishlistButton productId={product.id} productName={product.name} />
 
         {/* Quick add to cart — bottom-right, paired with the wishlist heart above it */}
         <button

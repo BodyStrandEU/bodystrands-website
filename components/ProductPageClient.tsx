@@ -207,7 +207,7 @@ export default function ProductPageClient({ product }: { product: Product }) {
             {product.category}
           </p>
           <div className="flex items-center gap-4">
-            <WishlistButton productId={product.id} variant="page" />
+            <WishlistButton productId={product.id} productName={product.name} variant="page" />
             <ShareButton name={product.name} />
           </div>
         </div>
@@ -447,6 +447,11 @@ export default function ProductPageClient({ product }: { product: Product }) {
                 const w = window as Window & { fbq?: (...a: unknown[]) => void; gtag?: (...a: unknown[]) => void };
                 w.fbq?.("track", "AddToCart", { content_ids: [product.id], content_name: product.name, content_type: "product", value: totalPrice, currency: product.currency });
                 w.gtag?.("event", "add_to_cart", { currency: product.currency, value: totalPrice, items: [{ item_id: product.id, item_name: product.name, item_variant: combinedVariant ?? "", price: totalPrice, quantity: 1 }] });
+                fetch("/api/cart-add", {
+                  method: "POST",
+                  headers: { "Content-Type": "application/json" },
+                  body: JSON.stringify({ productId: product.id, variant: combinedVariant ?? undefined }),
+                }).catch(() => {});
               }
             }}
             disabled={!allGroupsSelected}

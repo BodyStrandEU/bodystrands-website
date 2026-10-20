@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import ProductCard from "@/components/ProductCard";
-import { products } from "@/lib/products";
+import { products, CATEGORY_ORDER } from "@/lib/products";
 
 export const metadata: Metadata = {
   title: "Sale — Handmade Body Jewelry | Bodystrands",
@@ -10,6 +10,11 @@ export const metadata: Metadata = {
 
 export default async function SalesPage() {
   const items = products.filter((p) => p.active !== false && (p.salePercent ?? 0) > 0);
+
+  // Group by category in the admin-editable display order, same pattern as /shop's "All Pieces" view.
+  const grouped = CATEGORY_ORDER
+    .map((cat) => ({ category: cat, items: items.filter((p) => p.category === cat) }))
+    .filter((g) => g.items.length > 0);
 
   return (
     <div className="pt-20 md:pt-32 pb-24">
@@ -25,12 +30,27 @@ export default async function SalesPage() {
         </p>
       </div>
 
-      {/* Collection grid */}
+      {/* Collection grid — grouped by category */}
       <section className="max-w-7xl mx-auto px-6 md:px-10">
-        {items.length > 0 ? (
-          <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-x-0.5 gap-y-4 md:gap-x-4 md:gap-y-8">
-            {items.map((p) => (
-              <ProductCard key={p.id} product={p} />
+        {grouped.length > 0 ? (
+          <div className="flex flex-col gap-12 md:gap-16">
+            {grouped.map((group) => (
+              <div key={group.category}>
+                <div className="flex items-center gap-4 mb-5">
+                  <span className="text-[0.55rem] tracking-[0.28em] uppercase text-[#A0622A] whitespace-nowrap">
+                    {group.category}
+                  </span>
+                  <div className="flex-1 h-px bg-[#E8B4A8]/40" />
+                  <span className="text-[0.5rem] tracking-[0.15em] uppercase text-[#8C7B6E]/60 whitespace-nowrap">
+                    {group.items.length} {group.items.length === 1 ? "piece" : "pieces"}
+                  </span>
+                </div>
+                <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-x-0.5 gap-y-4 md:gap-x-4 md:gap-y-8">
+                  {group.items.map((p) => (
+                    <ProductCard key={p.id} product={p} />
+                  ))}
+                </div>
+              </div>
             ))}
           </div>
         ) : (

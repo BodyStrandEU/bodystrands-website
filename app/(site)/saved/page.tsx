@@ -5,11 +5,17 @@ import ProductCard from "@/components/ProductCard";
 import { products } from "@/lib/products";
 import { useWishlist } from "@/lib/wishlist";
 
+const LAST_BROWSE_KEY = "bs_last_browse_path";
+
 export default function SavedPage() {
   const { ids } = useWishlist();
   const [mounted, setMounted] = useState(false);
+  const [returnPath, setReturnPath] = useState<string | null>(null);
 
-  useEffect(() => setMounted(true), []);
+  useEffect(() => {
+    setMounted(true);
+    try { setReturnPath(sessionStorage.getItem(LAST_BROWSE_KEY)); } catch {}
+  }, []);
 
   const saved = products.filter((p) => ids.includes(p.id) && p.active !== false);
 
@@ -18,9 +24,20 @@ export default function SavedPage() {
       <div className="pt-28 md:pt-32" />
       <div className="max-w-7xl mx-auto px-4 md:px-10">
         <div className="mb-8 md:mb-12 px-2 md:px-0">
+          {mounted && returnPath && (
+            <Link
+              href={returnPath}
+              className="inline-flex items-center gap-1.5 mb-5 text-[0.6rem] tracking-[0.15em] uppercase text-[#8C7B6E] hover:text-[#A0622A] transition-colors"
+            >
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M19 12H5M12 19l-7-7 7-7" />
+              </svg>
+              Back to Shopping
+            </Link>
+          )}
           <p className="text-[0.52rem] tracking-[0.35em] uppercase text-[#A0622A] mb-3">Bodystrands</p>
           <h1 className="font-heading text-5xl md:text-6xl font-light text-[#2C2220] leading-none">
-            Saved Pieces
+            Favourites
           </h1>
           {mounted && (
             <p className="mt-3 text-[0.6rem] tracking-[0.15em] uppercase text-[#8C7B6E]">

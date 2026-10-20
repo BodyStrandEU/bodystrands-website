@@ -15,7 +15,7 @@ function WishlistIcon({ light }: { light?: boolean }) {
   return (
     <Link
       href="/saved"
-      aria-label="Saved pieces"
+      aria-label="Favourites"
       className={`relative flex items-center justify-center w-8 h-8 transition-colors duration-200 ${
         light ? "text-[#FDF9F7] hover:text-white" : "text-[#2C2220] hover:text-[#A0622A]"
       }`}

@@ -75,7 +75,7 @@ async function fetchGA4(propertyId: string, credJson: string, ga4Start: string, 
   const runReport  = await ga4Client(propertyId, credJson);
   const dateRanges = [{ startDate: ga4Start, endDate: ga4End }];
 
-  const [overview, channelRes, sourceMedium, devices, countries, topPages, addToCartByProduct, orderAttribution] = await Promise.all([
+  const [overview, channelRes, sourceMedium, devices, countries, topPages, addToCartByProduct, wishlistLikes, orderAttribution] = await Promise.all([
     runReport({ dateRanges, metrics: [{ name: "sessions" }, { name: "activeUsers" }, { name: "engagementRate" }, { name: "newUsers" }] }),
     runReport({ dateRanges, dimensions: [{ name: "sessionDefaultChannelGroup" }], metrics: [{ name: "sessions" }], orderBys: [{ metric: { metricName: "sessions" }, desc: true }], limit: "8" }),
     runReport({ dateRanges, dimensions: [{ name: "sessionSource" }, { name: "sessionMedium" }], metrics: [{ name: "sessions" }], orderBys: [{ metric: { metricName: "sessions" }, desc: true }], limit: "10" }),
@@ -83,6 +83,15 @@ async function fetchGA4(propertyId: string, credJson: string, ga4Start: string, 
     runReport({ dateRanges, dimensions: [{ name: "country" }], metrics: [{ name: "sessions" }], orderBys: [{ metric: { metricName: "sessions" }, desc: true }], limit: "8" }),
     runReport({ dateRanges, dimensions: [{ name: "pagePath" }], metrics: [{ name: "screenPageViews" }], orderBys: [{ metric: { metricName: "screenPageViews" }, desc: true }], limit: "10" }),
     runReport({ dateRanges, dimensions: [{ name: "itemName" }], metrics: [{ name: "itemsAddedToCart" }], orderBys: [{ metric: { metricName: "itemsAddedToCart" }, desc: true }], limit: "10" }),
+    // No built-in GA4 metric for wishlist likes — count the add_to_wishlist event per item name.
+    runReport({
+      dateRanges,
+      dimensions: [{ name: "itemName" }],
+      metrics: [{ name: "eventCount" }],
+      dimensionFilter: { filter: { fieldName: "eventName", stringFilter: { value: "add_to_wishlist" } } },
+      orderBys: [{ metric: { metricName: "eventCount" }, desc: true }],
+      limit: "10",
+    }),
     // Definitive per-order attribution: transactionId is set to the Stripe checkout session id
     // (see SuccessPage.tsx's gtag purchase event), so this joins 1:1 to a specific Stripe order.
     runReport({
@@ -108,6 +117,8 @@ async function fetchGA4(propertyId: string, credJson: string, ga4Start: string, 
     topPages:  (topPages.rows  ?? []).map((r) => ({ path:     r.dimensionValues?.[0]?.value ?? "", views:    parseInt(r.metricValues?.[0]?.value ?? "0") })),
     addToCartProducts: atcRows.map((r) => ({ name: r.dimensionValues?.[0]?.value ?? "", count: parseInt(r.metricValues?.[0]?.value ?? "0") })),
     totalAddToCarts: atcRows.reduce((sum, r) => sum + parseInt(r.metricValues?.[0]?.value ?? "0"), 0),
+    likedProducts: (wishlistLikes.rows ?? []).map((r) => ({ name: r.dimensionValues?.[0]?.value ?? "", count: parseInt(r.metricValues?.[0]?.value ?? "0") })),
+    totalLikes: (wishlistLikes.rows ?? []).reduce((sum, r) => sum + parseInt(r.metricValues?.[0]?.value ?? "0"), 0),
     orderAttribution: (orderAttribution.rows ?? []).map((r) => ({
       transactionId: r.dimensionValues?.[0]?.value ?? "",
       source:        r.dimensionValues?.[1]?.value ?? "",

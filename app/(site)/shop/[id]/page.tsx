@@ -8,6 +8,8 @@ import ProductPageClient from "@/components/ProductPageClient";
 import CompleteTheLook from "@/components/CompleteTheLook";
 import YouMayAlsoLike from "@/components/YouMayAlsoLike";
 import RecentlyViewed from "@/components/RecentlyViewed";
+import ShopTheSet from "@/components/ShopTheSet";
+import { getSetFor } from "@/lib/productSets";
 import { type Review } from "@/data/category-reviews";
 import customerReviewsRaw from "@/data/customer-reviews.json";
 
@@ -236,6 +238,13 @@ export default async function ProductPage({ params }: { params: Promise<{ id: st
         </nav>
 
         <ProductPageClient product={product} />
+        {(() => {
+          const set = getSetFor(product.id);
+          const items = set?.productIds
+            .map((id) => products.find((p) => p.id === id && p.active !== false))
+            .filter((p): p is Product => !!p);
+          return set && items && items.length >= 2 ? <ShopTheSet set={set} items={items} currentId={product.id} /> : null;
+        })()}
         <CompleteTheLook product={product} />
         <YouMayAlsoLike product={product} />
         <RecentlyViewed excludeId={product.id} />

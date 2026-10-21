@@ -2,6 +2,7 @@
 
 import { createContext, useContext, useState, useEffect, ReactNode } from "react";
 import type { Product } from "@/lib/products";
+import { setDiscountedUnits, setUnitPrice } from "@/lib/productSets";
 
 export type CartItem = {
   cartId:      string;   // productId + ":" + (variant ?? "")
@@ -20,7 +21,10 @@ export type CartItem = {
 type CartCtx = {
   items:             CartItem[];
   count:             number;
-  subtotal:          number;
+  subtotal:          number;   // after set discounts — what checkout charges for the items
+  itemsTotal:        number;   // before set discounts — the free-shipping threshold uses this, so a set discount never costs anyone free shipping
+  setSavings:        number;
+  lineSetSavings:    Record<string, number>; // cartId → amount saved on that line by the set discount
   shippingCountry:   string;
   setShippingCountry:(code: string) => void;
   add:               (item: Omit<CartItem, "cartId" | "quantity">) => void;
@@ -38,6 +42,10 @@ type CartCtx = {
   quickAddProduct:   Product | null;
   openQuickAdd:      (product: Product) => void;
   closeQuickAdd:     () => void;
+  // "Shop the Set": step the picker through several products, one after another.
+  startSetPicker:    (products: Product[]) => void;
+  nextQuickAdd:      () => void;
+  pickerStep:        { step: number; total: number } | null;
 };
 
 const CartContext = createContext<CartCtx | null>(null);
@@ -104,20 +112,46 @@ export function CartProvider({ children }: { children: ReactNode }) {
   const [drawerOpen, setDrawerOpen]           = useState(false);
   const [quickAddProduct, setQuickAddProduct] = useState<Product | null>(null);
 
-  function openDrawer()  { setQuickAddProduct(null); setDrawerOpen(true); }
-  function closeDrawer() { setDrawerOpen(false); }
-  function openQuickAdd(product: Product) { setQuickAddProduct(product); setDrawerOpen(true); }
-  function closeQuickAdd() { setQuickAddProduct(null); setDrawerOpen(false); }
+  const [pickerQueue, setPickerQueue]         = useState<Product[]>([]);
+  const [pickerStep, setPickerStep]           = useState<{ step: number; total: number } | null>(null);
 
-  const count    = items.reduce((s, i) => s + i.quantity, 0);
-  const subtotal = items.reduce((s, i) => s + i.unitPrice * i.quantity, 0);
+  function openDrawer()  { setQuickAddProduct(null); setPickerQueue([]); setPickerStep(null); setDrawerOpen(true); }
+  function closeDrawer() { setDrawerOpen(false); setPickerQueue([]); setPickerStep(null); }
+  function openQuickAdd(product: Product) { setPickerQueue([]); setPickerStep(null); setQuickAddProduct(product); setDrawerOpen(true); }
+  function closeQuickAdd() { setQuickAddProduct(null); setPickerQueue([]); setPickerStep(null); setDrawerOpen(false); }
+
+  function startSetPicker(list: Product[]) {
+    if (list.length === 0) { openDrawer(); return; }
+    setQuickAddProduct(list[0]);
+    setPickerQueue(list.slice(1));
+    setPickerStep({ step: 1, total: list.length });
+    setDrawerOpen(true);
+  }
+
+  function nextQuickAdd() {
+    if (pickerQueue.length === 0) { openDrawer(); return; }
+    setQuickAddProduct(pickerQueue[0]);
+    setPickerQueue(pickerQueue.slice(1));
+    setPickerStep((p) => (p ? { step: p.step + 1, total: p.total } : null));
+  }
+
+  const count      = items.reduce((s, i) => s + i.quantity, 0);
+  const itemsTotal = items.reduce((s, i) => s + i.unitPrice * i.quantity, 0);
+  const setUnits   = setDiscountedUnits(items);
+  const lineSetSavings: Record<string, number> = {};
+  items.forEach((i, idx) => {
+    if (setUnits[idx] > 0) lineSetSavings[i.cartId] = Math.round((i.unitPrice - setUnitPrice(i.unitPrice)) * setUnits[idx] * 100) / 100;
+  });
+  const setSavings = Object.values(lineSetSavings).reduce((a, b) => a + b, 0);
+  const subtotal   = itemsTotal - setSavings;
 
   return (
     <CartContext.Provider value={{
-      items, count, subtotal, shippingCountry, setShippingCountry,
+      items, count, subtotal, itemsTotal, setSavings, lineSetSavings, shippingCountry, setShippingCountry,
       add, remove, updateQty, updateVariant, clear,
       drawerOpen, openDrawer, closeDrawer,
       quickAddProduct, openQuickAdd, closeQuickAdd,
+      startSetPicker, nextQuickAdd, pickerStep,
     }}>
       {children}
     </CartContext.Provider>

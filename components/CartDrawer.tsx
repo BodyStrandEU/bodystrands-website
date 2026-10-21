@@ -42,10 +42,10 @@ const PRE_CHECKOUT_FREE_SHIPPING: Partial<Record<string, ReactNode>> = {
 // for why (any transformed ancestor traps position:fixed, so don't nest this anywhere).
 export default function CartDrawer() {
   const {
-    items, count, subtotal, remove, updateQty, updateVariant, clear,
+    items, count, subtotal, itemsTotal, setSavings, lineSetSavings, remove, updateQty, updateVariant, clear,
     shippingCountry, setShippingCountry,
-    drawerOpen, closeDrawer, openDrawer,
-    quickAddProduct, add: addToCart,
+    drawerOpen, closeDrawer,
+    quickAddProduct, add: addToCart, nextQuickAdd, pickerStep,
   } = useCart();
 
   const { currency, format, rates } = useCurrency();
@@ -90,11 +90,12 @@ export default function CartDrawer() {
     setTimeout(closeDrawer, 250);
   }
 
-  // Shipping calculation
-  const shippingRate    = shippingCountry ? getShippingRate(shippingCountry, subtotal, rates) : null;
+  // Shipping calculation — free-shipping threshold is judged on the pre-set-discount total,
+  // so the set discount comes on top and never pushes someone back under the threshold.
+  const shippingRate    = shippingCountry ? getShippingRate(shippingCountry, itemsTotal, rates) : null;
   const shippingAmount  = shippingRate ? shippingRate.amount / 100 : null;
   const orderTotal      = subtotal + (shippingAmount ?? 0) + (giftWrap ? GIFT_WRAP_FEE : 0);
-  const remaining       = Math.max(0, (shippingRate?.freeThreshold ?? FREE_THRESHOLD) - subtotal);
+  const remaining       = Math.max(0, (shippingRate?.freeThreshold ?? FREE_THRESHOLD) - itemsTotal);
 
   async function checkout() {
     if (items.length === 0) return;
@@ -205,8 +206,8 @@ export default function CartDrawer() {
         body: JSON.stringify({ productId: product.id, variant: combinedVariant }),
       }).catch(() => {});
     }
-    // Hand off to the normal cart-list view once the item lands
-    setTimeout(openDrawer, 650);
+    // Hand off to the next set piece, or the normal cart-list view once the last item lands
+    setTimeout(nextQuickAdd, 650);
   }
 
   if (!mounted || !drawerOpen) return null;
@@ -241,7 +242,9 @@ export default function CartDrawer() {
         {/* Header */}
         <div className="flex items-center justify-between px-6 py-5 border-b border-[#E8B4A8]/30">
           <p className="text-[0.6rem] tracking-[0.3em] uppercase text-[#A0622A]">
-            {product ? product.category : `Your Cart ${count > 0 ? `(${count})` : ""}`}
+            {product
+              ? (pickerStep ? `Set · Piece ${pickerStep.step} of ${pickerStep.total}` : product.category)
+              : `Your Cart ${count > 0 ? `(${count})` : ""}`}
           </p>
           <button onClick={handleClose} aria-label="Close" className="text-[#2C2220] hover:text-[#A0622A] transition-colors">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
@@ -352,8 +355,16 @@ export default function CartDrawer() {
                 disabled={!allGroupsSelected || pickerAdded}
                 className="btn-primary-filled w-full text-center py-4 disabled:opacity-60 disabled:cursor-not-allowed"
               >
-                {pickerAdded ? "Added to Cart ✓" : !allGroupsSelected ? `Select ${missingLabel ?? "Options"}` : "Add to Cart"}
+                {pickerAdded ? "Added to Cart ✓" : !allGroupsSelected ? `Select ${missingLabel ?? "Options"}` : pickerStep && pickerStep.step < pickerStep.total ? "Add & Next Piece" : "Add to Cart"}
               </button>
+              {pickerStep && !pickerAdded && (
+                <button
+                  onClick={nextQuickAdd}
+                  className="w-full mt-2 min-h-[44px] text-[0.58rem] tracking-[0.18em] uppercase text-[#8C7B6E] hover:text-[#A0622A] transition-colors"
+                >
+                  {pickerStep.step < pickerStep.total ? "Skip this piece" : "Skip & view cart"}
+                </button>
+              )}
             </div>
           </>
         ) : items.length === 0 ? (
@@ -429,9 +440,17 @@ export default function CartDrawer() {
                             +
                           </button>
                         </div>
-                        <p className="text-[0.68rem] text-[#2C2220] font-light">
-                          {format(item.unitPrice * item.quantity)}
-                        </p>
+                        {lineSetSavings[item.cartId] ? (
+                          <p className="text-[0.68rem] font-light text-right">
+                            <span className="text-[#8C7B6E]/60 line-through mr-1">{format(item.unitPrice * item.quantity)}</span>
+                            <span className="text-[#2C2220]">{format(item.unitPrice * item.quantity - lineSetSavings[item.cartId])}</span>
+                            <span className="block text-[0.52rem] tracking-[0.12em] uppercase text-[#A0622A]">Set price</span>
+                          </p>
+                        ) : (
+                          <p className="text-[0.68rem] text-[#2C2220] font-light">
+                            {format(item.unitPrice * item.quantity)}
+                          </p>
+                        )}
                       </div>
                     </div>
 
@@ -452,6 +471,12 @@ export default function CartDrawer() {
             {/* Footer */}
             <div className="border-t border-[#E8B4A8]/40 p-5 flex flex-col gap-3">
 
+              {setSavings > 0 && (
+                <div className="flex justify-between items-baseline">
+                  <span className="text-[0.58rem] tracking-[0.15em] uppercase text-[#A0622A]">Set discount</span>
+                  <span className="text-sm font-light text-[#A0622A]">−{format(setSavings)}</span>
+                </div>
+              )}
               <div className="flex justify-between items-baseline">
                 <span className="text-[0.58rem] tracking-[0.15em] uppercase text-[#8C7B6E]">Subtotal</span>
                 <span className="text-base font-light text-[#2C2220]">{format(subtotal)}</span>

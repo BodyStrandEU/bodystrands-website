@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import Stripe from "stripe";
 import { products, type Product } from "@/lib/products";
 import { getSalePrice } from "@/lib/pricing";
+import { SET_DISCOUNT_PERCENT, setDiscountedUnits, setUnitPrice } from "@/lib/productSets";
 import { getShippingRate, ALL_COUNTRIES } from "@/lib/shipping";
 import { fetchExchangeRates, type CurrencyCode } from "@/lib/currency";
 
@@ -115,33 +116,53 @@ export async function POST(req: NextRequest) {
       const cartItems = body.items as CartItemInput[];
 
       const lineItems: Stripe.Checkout.SessionCreateParams.LineItem[] = [];
-      let totalAmount = 0;
+      let totalAmount = 0;      // what the customer pays for the items (after set discounts)
+      let itemsTotal  = 0;      // before set discounts — the free-shipping threshold uses this
       const productNames: string[] = [];
       const measurementNotes: string[] = [];
 
-      for (const item of cartItems) {
-        const product = products.find((p) => p.id === item.productId);
-        if (!product) continue;
+      // "Shop the Set": 10% off units that have a partner from the same set in this cart
+      // (stacks on sale prices). Recomputed here from product ids — never trusted from the client.
+      const validItems = cartItems.filter((item) => products.some((p) => p.id === item.productId));
+      const setUnits   = setDiscountedUnits(validItems.map((i) => ({ productId: i.productId, quantity: i.quantity ?? 1 })));
+
+      validItems.forEach((item, idx) => {
+        const product   = products.find((p) => p.id === item.productId)!;
         const qty       = item.quantity ?? 1;
         const unitPrice = (getSalePrice(product) ?? product.price) + computeValidatedPriceAdd(product, item.groupSelections);
         const name      = item.variant ? `${product.name} — ${item.variant}` : product.name;
-        totalAmount    += unitPrice * qty;
+        const setQty    = setUnits[idx];
+        const setPrice  = setUnitPrice(unitPrice);
+        itemsTotal     += unitPrice * qty;
+        totalAmount    += unitPrice * (qty - setQty) + setPrice * setQty;
         productNames.push(name);
         const note = sanitizeNote(item.measurementNote);
         if (note) measurementNotes.push(`${product.name}: ${note}`);
-        lineItems.push({
-          price_data: {
-            currency: product.currency.toLowerCase(),
-            product_data: {
-              name,
-              description: product.description,
-              images: product.images[0] ? [resolveImage(product.images[0])] : [],
+        const product_data = {
+          description: product.description,
+          images: product.images[0] ? [resolveImage(product.images[0])] : [],
+        };
+        if (setQty > 0) {
+          lineItems.push({
+            price_data: {
+              currency: product.currency.toLowerCase(),
+              product_data: { ...product_data, name: `${name} (Set price −${SET_DISCOUNT_PERCENT}%)` },
+              unit_amount: Math.round(setPrice * 100),
             },
-            unit_amount: Math.round(unitPrice * 100),
-          },
-          quantity: qty,
-        });
-      }
+            quantity: setQty,
+          });
+        }
+        if (qty - setQty > 0) {
+          lineItems.push({
+            price_data: {
+              currency: product.currency.toLowerCase(),
+              product_data: { ...product_data, name },
+              unit_amount: Math.round(unitPrice * 100),
+            },
+            quantity: qty - setQty,
+          });
+        }
+      });
 
       if (lineItems.length === 0) {
         return NextResponse.json({ error: "No valid products in cart" }, { status: 400 });
@@ -153,9 +174,10 @@ export async function POST(req: NextRequest) {
       const giftWrap = body.giftWrap === true;
       const giftNote = typeof body.giftNote === "string" ? body.giftNote.slice(0, 500) : "";
 
+      // Free shipping is judged on the pre-set-discount total, so the set discount comes on top
       const shipping_options = country
-        ? buildSingleShippingOption(country, totalAmount, rates)
-        : buildAllShippingOptions(totalAmount, rates);
+        ? buildSingleShippingOption(country, itemsTotal, rates)
+        : buildAllShippingOptions(itemsTotal, rates);
 
       if (giftWrap) lineItems.push(giftWrapLineItem());
 

@@ -2309,7 +2309,7 @@
   },
   {
     "id": "gold-body-necklace",
-    "name": "Bikini Body Necklace",
+    "name": "Layered Y Body Chain",
     "price": 50,
     "currency": "EUR",
     "category": "Body Chains",
@@ -2384,7 +2384,7 @@
   },
   {
     "id": "pearl-body-chain",
-    "name": "Pearl Body Chain",
+    "name": "Crisscross Pearl Body Chain",
     "price": 45,
     "currency": "EUR",
     "category": "Body Chains",
@@ -3129,7 +3129,7 @@
       }
     ],
     "featured": false,
-    "active": true,
+    "active": false,
     "variants": [
       "Gold Tone",
       "Silver Tone"
@@ -3632,7 +3632,7 @@
   },
   {
     "id": "bikini-body-chain",
-    "name": "Bikini Body Chain",
+    "name": "Dainty Choker Body Chain",
     "price": 45,
     "currency": "EUR",
     "category": "Body Chains",
@@ -4079,7 +4079,7 @@
   },
   {
     "id": "gold-waist-chain",
-    "name": "Gold Waist Chain",
+    "name": "Dainty Y Body Chain",
     "price": 45,
     "currency": "EUR",
     "category": "Body Chains",
@@ -5674,7 +5674,7 @@
   },
   {
     "id": "dainty-gold-body-chain",
-    "name": "Dainty Gold Body Chain",
+    "name": "Dainty Crisscross Body Chain",
     "price": 45,
     "currency": "EUR",
     "category": "Body Chains",
@@ -7658,7 +7658,7 @@
   },
   {
     "id": "gold-belly-body-chain",
-    "name": "Belly Body Chain",
+    "name": "Pearl Drop Belly Chain",
     "price": 50,
     "currency": "EUR",
     "category": "Body Chains",

@@ -5,7 +5,6 @@ import { products, INFOGRAPHIC_IMAGES, type Product } from "@/lib/products";
 import { getShippingRate, COUNTRY_GROUPS, ALL_COUNTRIES } from "@/lib/shipping";
 import { notFound } from "next/navigation";
 import ProductPageClient from "@/components/ProductPageClient";
-import CompleteTheLook from "@/components/CompleteTheLook";
 import YouMayAlsoLike from "@/components/YouMayAlsoLike";
 import RecentlyViewed from "@/components/RecentlyViewed";
 import ShopTheSet from "@/components/ShopTheSet";
@@ -245,7 +244,6 @@ export default async function ProductPage({ params }: { params: Promise<{ id: st
             .filter((p): p is Product => !!p);
           return set && items && items.length >= 2 ? <ShopTheSet set={set} items={items} currentId={product.id} /> : null;
         })()}
-        <CompleteTheLook product={product} />
         <YouMayAlsoLike product={product} />
         <RecentlyViewed excludeId={product.id} />
       </div>

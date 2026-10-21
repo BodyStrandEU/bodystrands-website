@@ -11567,7 +11567,10 @@
       "/images/products/ba069f13-aaca-45e4-8e51-900c3b6ad8e3.png",
       "/images/products/c292115a-833c-4e85-adcc-3d6b6daa6969.png"
     ],
-    "sizeGuideImage": "/images/products/ba069f13-aaca-45e4-8e51-900c3b6ad8e3.png"
+    "sizeGuideImage": "/images/products/ba069f13-aaca-45e4-8e51-900c3b6ad8e3.png",
+    "variantHeroes": {
+      "Silver Tone": "/images/products/1709d33e-5303-451f-9949-3df64e5fcac7.png"
+    }
   },
   {
     "id": "butterfly-body-chain",

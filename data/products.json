@@ -1323,7 +1323,7 @@
   },
   {
     "id": "boho-back-chain",
-    "name": "Boho Back Chain",
+    "name": "Layered Drop Back Chain",
     "price": 50,
     "currency": "EUR",
     "category": "Back Chains",
@@ -3713,7 +3713,7 @@
   },
   {
     "id": "bridal-open-back-necklace",
-    "name": "Bridal Open-Back Necklace",
+    "name": "Crisscross Back Necklace",
     "price": 45,
     "currency": "EUR",
     "category": "Back Chains",
@@ -4523,7 +4523,7 @@
   },
   {
     "id": "layered-bridal-back-chain",
-    "name": "Layered Bridal Back Chain",
+    "name": "Triple Strand Back Chain",
     "price": 55,
     "currency": "EUR",
     "category": "Back Chains",
@@ -4763,7 +4763,7 @@
   },
   {
     "id": "pearl-backdrop-necklace",
-    "name": "Pearl Backdrop Necklace",
+    "name": "Pearl Drop Back Necklace",
     "price": 30,
     "currency": "EUR",
     "category": "Back Chains",
@@ -5107,7 +5107,7 @@
   },
   {
     "id": "dainty-backdrop-back-necklace",
-    "name": "Dainty Backdrop Back Necklace",
+    "name": "Y-Drop Back Necklace",
     "price": 45,
     "currency": "EUR",
     "category": "Back Chains",
@@ -5536,7 +5536,7 @@
   },
   {
     "id": "butterfly-backdrop-necklace",
-    "name": "Butterfly Backdrop Necklace",
+    "name": "Butterfly Drop Back Necklace",
     "price": 30,
     "currency": "EUR",
     "category": "Back Chains",
@@ -6196,7 +6196,7 @@
   },
   {
     "id": "butterfly-backdrop-necklace-gold",
-    "name": "Butterfly Backdrop Necklace Gold",
+    "name": "Butterfly Harness Back Necklace",
     "price": 45,
     "currency": "EUR",
     "category": "Back Chains",
@@ -6416,7 +6416,7 @@
   },
   {
     "id": "pearl-evening-backdrop-necklace",
-    "name": "Pearl Evening Backdrop Necklace",
+    "name": "Layered Pearl Rope Back Necklace",
     "price": 50,
     "currency": "EUR",
     "category": "Back Chains",
@@ -6643,7 +6643,7 @@
   },
   {
     "id": "pearl-wedding-back-necklace",
-    "name": "Pearl Wedding Back Necklace",
+    "name": "Pearl Rope Back Necklace",
     "price": 45,
     "currency": "EUR",
     "category": "Back Chains",
@@ -6804,7 +6804,7 @@
   },
   {
     "id": "pearl-bridal-back-chain",
-    "name": "Pearl Bridal Back Chain",
+    "name": "Crisscross Pearl Back Chain",
     "price": 45,
     "currency": "EUR",
     "category": "Back Chains",
@@ -7029,7 +7029,7 @@
   },
   {
     "id": "bridal-pearl-back-necklace",
-    "name": "Bridal Pearl Back Necklace",
+    "name": "Double Pearl Y-Drop Back Necklace",
     "price": 50,
     "currency": "EUR",
     "category": "Back Chains",
@@ -7115,7 +7115,7 @@
   },
   {
     "id": "pearl-lariat-backdrop",
-    "name": "Pearl Lariat Backdrop",
+    "name": "Spaced Pearl Lariat Back Chain",
     "price": 35,
     "currency": "EUR",
     "category": "Back Chains",
@@ -7182,7 +7182,7 @@
   },
   {
     "id": "pearl-lariat-back-necklace",
-    "name": "Pearl Lariat Back Necklace",
+    "name": "Full Pearl Lariat Back Necklace",
     "price": 45,
     "currency": "EUR",
     "category": "Back Chains",
@@ -12533,7 +12533,7 @@
   },
   {
     "id": "minimalist-pearl-back-necklace",
-    "name": "Minimalist Pearl Back Necklace",
+    "name": "V Pearl Back Necklace",
     "price": 40,
     "currency": "EUR",
     "category": "Back Chains",

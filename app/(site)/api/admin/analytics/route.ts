@@ -2,9 +2,11 @@ export const dynamic = "force-dynamic";
 
 import { NextRequest, NextResponse } from "next/server";
 import Stripe from "stripe";
+import { getCloudflareContext } from "@opennextjs/cloudflare";
 import { isValidToken, COOKIE_NAME } from "@/lib/auth";
 import { ga4Client } from "@/lib/ga4";
 import { gscClient, pickSite } from "@/lib/gsc";
+import { products } from "@/lib/products";
 
 // Explicit fetch-based HTTP client — required for Stripe's SDK under the Cloudflare Workers runtime.
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY ?? "", {
@@ -75,7 +77,7 @@ async function fetchGA4(propertyId: string, credJson: string, ga4Start: string, 
   const runReport  = await ga4Client(propertyId, credJson);
   const dateRanges = [{ startDate: ga4Start, endDate: ga4End }];
 
-  const [overview, channelRes, sourceMedium, devices, countries, topPages, addToCartByProduct, wishlistLikes, orderAttribution] = await Promise.all([
+  const [overview, channelRes, sourceMedium, devices, countries, topPages, addToCartByProduct, orderAttribution] = await Promise.all([
     runReport({ dateRanges, metrics: [{ name: "sessions" }, { name: "activeUsers" }, { name: "engagementRate" }, { name: "newUsers" }] }),
     runReport({ dateRanges, dimensions: [{ name: "sessionDefaultChannelGroup" }], metrics: [{ name: "sessions" }], orderBys: [{ metric: { metricName: "sessions" }, desc: true }], limit: "8" }),
     runReport({ dateRanges, dimensions: [{ name: "sessionSource" }, { name: "sessionMedium" }], metrics: [{ name: "sessions" }], orderBys: [{ metric: { metricName: "sessions" }, desc: true }], limit: "10" }),
@@ -83,16 +85,6 @@ async function fetchGA4(propertyId: string, credJson: string, ga4Start: string, 
     runReport({ dateRanges, dimensions: [{ name: "country" }], metrics: [{ name: "sessions" }], orderBys: [{ metric: { metricName: "sessions" }, desc: true }], limit: "8" }),
     runReport({ dateRanges, dimensions: [{ name: "pagePath" }], metrics: [{ name: "screenPageViews" }], orderBys: [{ metric: { metricName: "screenPageViews" }, desc: true }], limit: "10" }),
     runReport({ dateRanges, dimensions: [{ name: "itemName" }], metrics: [{ name: "itemsAddedToCart" }], orderBys: [{ metric: { metricName: "itemsAddedToCart" }, desc: true }], limit: "10" }),
-    // GA4's Data API rejects itemName (item-scoped) paired with eventCount (event-scoped) —
-    // there's no built-in item-scoped metric for a custom event like add_to_wishlist (unlike
-    // itemsAddedToCart above, which GA4 tracks natively). Falling back to a simple filtered
-    // total instead of a per-product breakdown; isolated in its own catch so a future GA4
-    // quirk here can never take down the rest of this dashboard again like this one did.
-    runReport({
-      dateRanges,
-      metrics: [{ name: "eventCount" }],
-      dimensionFilter: { filter: { fieldName: "eventName", stringFilter: { value: "add_to_wishlist" } } },
-    }).catch((e) => { console.error("wishlistLikes GA4 query failed:", e); return { rows: [] }; }),
     // Definitive per-order attribution: transactionId is set to the Stripe checkout session id
     // (see SuccessPage.tsx's gtag purchase event), so this joins 1:1 to a specific Stripe order.
     runReport({
@@ -118,7 +110,6 @@ async function fetchGA4(propertyId: string, credJson: string, ga4Start: string, 
     topPages:  (topPages.rows  ?? []).map((r) => ({ path:     r.dimensionValues?.[0]?.value ?? "", views:    parseInt(r.metricValues?.[0]?.value ?? "0") })),
     addToCartProducts: atcRows.map((r) => ({ name: r.dimensionValues?.[0]?.value ?? "", count: parseInt(r.metricValues?.[0]?.value ?? "0") })),
     totalAddToCarts: atcRows.reduce((sum, r) => sum + parseInt(r.metricValues?.[0]?.value ?? "0"), 0),
-    totalLikes: parseInt(wishlistLikes.rows?.[0]?.metricValues?.[0]?.value ?? "0"),
     orderAttribution: (orderAttribution.rows ?? []).map((r) => ({
       transactionId: r.dimensionValues?.[0]?.value ?? "",
       source:        r.dimensionValues?.[1]?.value ?? "",
@@ -157,6 +148,35 @@ async function fetchGSC(credJson: string, start: string, end: string) {
     // Per-post search data (used for blog reviews: keep/merge decisions).
     blogPages: blogPages.map((r) => ({ path: path(r.keys?.[0] ?? ""), clicks: r.clicks, impressions: r.impressions, position: r.position })),
   };
+}
+
+// Wishlist likes, read from Cloudflare KV (see app/(site)/api/wishlist-like/route.ts, which
+// increments these counters) — not GA4, which has no item-scoped metric for a custom event
+// like add_to_wishlist. All-time counts only (KV keys aren't dated), independent of the
+// period filter the rest of this dashboard uses.
+async function fetchWishlistLikes() {
+  const { env } = await getCloudflareContext({ async: true });
+  const kv = env.WISHLIST_LIKES;
+  if (!kv) return { likedProducts: [] as { name: string; count: number }[], totalLikes: 0 };
+
+  const keys: string[] = [];
+  let cursor: string | undefined;
+  do {
+    const list = await kv.list({ prefix: "like:", cursor });
+    keys.push(...list.keys.map((k: { name: string }) => k.name));
+    cursor = list.list_complete ? undefined : list.cursor;
+  } while (cursor);
+
+  const counts = await Promise.all(keys.map(async (key) => {
+    const productId = key.slice("like:".length);
+    const value = parseInt((await kv.get(key)) ?? "0", 10) || 0;
+    const product = products.find((p) => p.id === productId);
+    return { name: product?.name ?? productId, count: value };
+  }));
+
+  const likedProducts = counts.sort((a, b) => b.count - a.count).slice(0, 10);
+  const totalLikes = counts.reduce((sum, c) => sum + c.count, 0);
+  return { likedProducts, totalLikes };
 }
 
 // GA4 date strings can be relative ("30daysAgo", "today"); Search Console needs YYYY-MM-DD.
@@ -246,6 +266,10 @@ export async function GET(request: NextRequest) {
       catch (e) { console.error("Search Console error:", e); gscError = e instanceof Error ? e.message : String(e); }
     }
 
+    let wishlistLikes: Awaited<ReturnType<typeof fetchWishlistLikes>> | null = null;
+    try { wishlistLikes = await fetchWishlistLikes(); }
+    catch (e) { console.error("Wishlist likes KV error:", e); }
+
     // transactionId in GA4's purchase event is set to the Stripe checkout session id, so this
     // joins each order to the exact session that converted — not a channel-group guess.
     const attributionByTxId = new Map((ga4?.orderAttribution ?? []).map((a) => [a.transactionId, a]));
@@ -277,6 +301,8 @@ export async function GET(request: NextRequest) {
       ga4Error,
       gsc,
       gscError,
+      likedProducts: wishlistLikes?.likedProducts ?? [],
+      totalLikes: wishlistLikes?.totalLikes ?? 0,
     });
   } catch (err) {
     return NextResponse.json({ error: err instanceof Error ? err.message : "Error" }, { status: 500 });

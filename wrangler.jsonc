@@ -21,6 +21,12 @@
 			"bucket_name": "bodystrands-isr-cache"
 		}
 	],
+	"kv_namespaces": [
+		{
+			"binding": "WISHLIST_LIKES",
+			"id": "63c2283bcb6843aa936c94bab42fe786"
+		}
+	],
 	"services": [
 		{
 			// Self-reference service binding, the service name must match the worker name

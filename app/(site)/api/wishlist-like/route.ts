@@ -1,8 +1,27 @@
 import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
+import { getCloudflareContext } from "@opennextjs/cloudflare";
 import { products } from "@/lib/products";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
+
+// Per-product like counter, kept in Cloudflare KV — not GitHub-committed (would spam the
+// repo history on every like) and not GA4 (no item-scoped metric exists for a custom event
+// like add_to_wishlist, see app/(site)/api/admin/analytics/route.ts's wishlistLikes query).
+// Simple read-increment-write; a narrow race on simultaneous likes of the SAME product could
+// drop an increment, which is an acceptable tradeoff for a display counter at this traffic.
+async function incrementLikeCount(productId: string) {
+  try {
+    const { env } = await getCloudflareContext({ async: true });
+    const kv = env.WISHLIST_LIKES;
+    if (!kv) return;
+    const key = `like:${productId}`;
+    const current = parseInt((await kv.get(key)) ?? "0", 10) || 0;
+    await kv.put(key, String(current + 1));
+  } catch (err) {
+    console.error("wishlist-like KV increment failed:", err);
+  }
+}
 
 // Owner notification only — never trust client-supplied product name/price, always
 // look up the real product server-side by id. Fire-and-forget from the client (see
@@ -18,6 +37,8 @@ export async function POST(request: NextRequest) {
   if (!product) {
     return NextResponse.json({ error: "Product not found" }, { status: 404 });
   }
+
+  await incrementLikeCount(productId);
 
   const productUrl   = `https://www.bodystrands.com/shop/${product.id}`;
   const productImage = product.images?.[0] ? `https://www.bodystrands.com${product.images[0]}` : null;

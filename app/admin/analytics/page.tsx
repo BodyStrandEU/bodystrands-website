@@ -42,7 +42,6 @@ type GA4Data = {
   topPages:  { path: string; views: number }[];
   addToCartProducts: { name: string; count: number }[];
   totalAddToCarts: number;
-  totalLikes: number;
 };
 
 type AnalyticsData = {
@@ -68,6 +67,8 @@ type AnalyticsData = {
     blogPagesSeen: number; blogImpressions: number;
   } | null;
   gscError?: string | null;
+  likedProducts: { name: string; count: number }[];
+  totalLikes: number;
 };
 
 function fmt(n: number, currency = "EUR") {
@@ -485,20 +486,31 @@ export default function AnalyticsPage() {
               </div>
             )}
 
-            {/* ── Wishlist Likes ── */}
-            {/* Per-product breakdown isn't available: GA4's Data API has no item-scoped
-                metric for a custom event like add_to_wishlist, only a sitewide total. */}
-            {data.ga4 && (
-              <div style={{ ...sec, marginBottom: "1.25rem" }}>
-                <div style={sh}>
-                  <span>Wishlist Likes</span>
-                  <span>{data.ga4.totalLikes} total in {data.periodLabel}</span>
-                </div>
-                {data.ga4.totalLikes === 0 && (
-                  <p style={{ padding: "1rem 1.25rem", fontSize: "0.75rem", color: "var(--admin-muted)" }}>No likes yet. Data will appear after customers start saving products. (Per-product email already lands instantly in your inbox.)</p>
-                )}
+            {/* ── Most Liked Products ── */}
+            {/* Sourced from Cloudflare KV (see /api/wishlist-like), not GA4 — GA4's Data API
+                has no item-scoped metric for a custom event like add_to_wishlist. All-time
+                counts, independent of the period filter above (KV keys aren't dated). */}
+            <div style={{ ...sec, marginBottom: "1.25rem" }}>
+              <div style={sh}>
+                <span>Most Liked Products</span>
+                <span>{data.totalLikes} total, all-time</span>
               </div>
-            )}
+              {data.likedProducts.length === 0 ? (
+                <p style={{ padding: "1rem 1.25rem", fontSize: "0.75rem", color: "var(--admin-muted)" }}>No likes yet. Data will appear after customers start saving products.</p>
+              ) : (
+                <div style={{ padding: "0.75rem 1.25rem", display: "flex", flexDirection: "column", gap: "0.8rem" }}>
+                  {data.likedProducts.map((p) => (
+                    <div key={p.name}>
+                      <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 4 }}>
+                        <span style={{ fontSize: "0.72rem", color: "var(--admin-text)" }}>{p.name}</span>
+                        <span style={{ fontSize: "0.72rem", color: "#A0622A", fontWeight: "bold" }}>{p.count}×</span>
+                      </div>
+                      <MiniBar value={p.count} max={data.likedProducts[0]?.count ?? 1} color="#E8B4A8" />
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
 
             {/* ── Recent Orders ── */}
             <div style={sec}>

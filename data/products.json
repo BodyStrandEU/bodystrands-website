@@ -1614,7 +1614,7 @@
   },
   {
     "id": "bridal-hair-vine-chain",
-    "name": "Bridal Hair Vine Chain",
+    "name": "Triple Strand Hair Vine Chain",
     "price": 50,
     "currency": "EUR",
     "category": "Head Chains",
@@ -1750,7 +1750,7 @@
   },
   {
     "id": "boho-hair-chain",
-    "name": "Boho Hair Chain",
+    "name": "Crossover Forehead Chain",
     "price": 40,
     "currency": "EUR",
     "category": "Head Chains",
@@ -3799,7 +3799,7 @@
   },
   {
     "id": "bridal-forehead-chain",
-    "name": "Bridal Forehead Chain",
+    "name": "Double Strand Forehead Chain",
     "price": 45,
     "currency": "EUR",
     "category": "Head Chains",
@@ -3952,7 +3952,7 @@
   },
   {
     "id": "boho-forehead-chain",
-    "name": "Boho Forehead Chain",
+    "name": "Simple Drape Forehead Chain",
     "price": 30,
     "currency": "EUR",
     "category": "Head Chains",
@@ -6506,7 +6506,7 @@
   },
   {
     "id": "pearl-bridal-head-chain",
-    "name": "Pearl Bridal Head Chain",
+    "name": "Double Strand Pearl Head Chain",
     "price": 45,
     "currency": "EUR",
     "category": "Head Chains",
@@ -7316,7 +7316,7 @@
   },
   {
     "id": "birthstone-gemstone-anklet",
-    "name": "Birthstone Gemstone Anklet",
+    "name": "Birthstone Anklet",
     "price": 30,
     "currency": "EUR",
     "category": "Anklets",
@@ -7412,7 +7412,7 @@
   },
   {
     "id": "pearl-pendant-anklet",
-    "name": "Pearl Pendant Anklet",
+    "name": "Double Strand Pearl Anklet",
     "price": 30,
     "currency": "EUR",
     "category": "Anklets",

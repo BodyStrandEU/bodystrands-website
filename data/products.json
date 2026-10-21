@@ -1,7 +1,7 @@
 [
   {
     "id": "stainless-steel-belly-chain",
-    "name": "Stainless Steel Belly Chain",
+    "name": "Double Strand Belly Chain",
     "price": 35,
     "currency": "EUR",
     "category": "Belly Chains",
@@ -877,7 +877,7 @@
       }
     ],
     "featured": false,
-    "active": true,
+    "active": false,
     "variants": [
       "Gold Tone",
       "Silver Tone"
@@ -2071,8 +2071,8 @@
       {
         "label": "Finish",
         "options": [
-          "Gold Stainless",
-          "Silver Stainless"
+          "Gold Tone",
+          "Silver Tone"
         ]
       }
     ],
@@ -2090,16 +2090,16 @@
       "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp"
     ],
     "variants": [
-      "Gold Stainless",
-      "Silver Stainless"
+      "Gold Tone",
+      "Silver Tone"
     ],
     "variantHeroes": {
-      "Gold Stainless": "/images/products/6ff3c5b2-4fa2-4c93-8458-e83dc479cbd8.webp",
-      "Silver Stainless": "/images/products/a546d9f4-0df6-4be6-b415-8c9dc08e426c.png"
+      "Gold Tone": "/images/products/6ff3c5b2-4fa2-4c93-8458-e83dc479cbd8.webp",
+      "Silver Tone": "/images/products/a546d9f4-0df6-4be6-b415-8c9dc08e426c.png"
     },
     "variantVideos": {
-      "Gold Stainless": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/6d1bffbe5f4404a422d2bb5e7bd6ee9a/downloads/default.mp4",
-      "Silver Stainless": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/6d1bffbe5f4404a422d2bb5e7bd6ee9a/downloads/default.mp4"
+      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/6d1bffbe5f4404a422d2bb5e7bd6ee9a/downloads/default.mp4",
+      "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/6d1bffbe5f4404a422d2bb5e7bd6ee9a/downloads/default.mp4"
     },
     "salePercent": 25
   },
@@ -2631,7 +2631,7 @@
   },
   {
     "id": "zodiac-yoga-belly-chain",
-    "name": "Zodiac Belly Chain",
+    "name": "Layered Zodiac Charm Belly Chain",
     "price": 35,
     "currency": "EUR",
     "category": "Belly Chains",
@@ -6276,7 +6276,7 @@
   },
   {
     "id": "pearl-beaded-belly-chain",
-    "name": "Pearl Beaded Belly Chain",
+    "name": "Pearl Accent Belly Chain",
     "price": 30,
     "currency": "EUR",
     "category": "Belly Chains",
@@ -6739,7 +6739,7 @@
   },
   {
     "id": "pearl-belly-chain",
-    "name": "Pearl Belly Chain",
+    "name": "Double Strand Pearl Belly Chain",
     "price": 40,
     "currency": "EUR",
     "category": "Belly Chains",
@@ -6978,7 +6978,7 @@
   },
   {
     "id": "cowrie-shell-belly-chain",
-    "name": "Cowrie Shell Belly Chain",
+    "name": "Natural Cowrie Shell Belly Chain",
     "price": 40,
     "currency": "EUR",
     "category": "Belly Chains",
@@ -7476,7 +7476,7 @@
   },
   {
     "id": "boho-belly-chain",
-    "name": "Boho Belly Chain",
+    "name": "Crisscross Belly Chain",
     "price": 35,
     "currency": "EUR",
     "category": "Belly Chains",
@@ -7546,7 +7546,7 @@
   },
   {
     "id": "dainty-summer-belly-chain",
-    "name": "Dainty Summer Belly Chain",
+    "name": "Minimalist Belly Chain",
     "price": 25,
     "currency": "EUR",
     "category": "Belly Chains",
@@ -8005,7 +8005,7 @@
   },
   {
     "id": "beach-belly-chain",
-    "name": "Beach Belly Chain",
+    "name": "Draped Accent Belly Chain",
     "price": 35,
     "currency": "EUR",
     "category": "Belly Chains",

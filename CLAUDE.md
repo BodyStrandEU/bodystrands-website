@@ -61,7 +61,7 @@ Etsy now requires, for every listing:
 - **At least one real, unedited photo of the actual piece** against a real background (on a hand, neck, ankle, table, fabric). Not retouched, not AI, no background swap. Etsy mentions exceptions for customized/made-to-order items, but until the Listing Image Requirements policy is checked, treat it as required for every listing. When preparing a listing, check the shared product folder has one; if not, ask the user for one — never pass an AI image off as the unedited photo.
 - **Every photo must show exactly what the buyer receives.** AI lifestyle/model images stay allowed only if the jewelry is identical to the real piece. Before an AI image is used, compare it against the real photo: strand count, drape, chain/link type, length on the body, charm/pendant shape and size, finish. If anything differs, regenerate or drop it — a "materially different" item lets the buyer open a case and Etsy may make us refund.
 - **First listing photo = the most realistic one** (Etsy best practice; buyers see it first).
-- **Disclose AI in the description** — the "Photo note" line in the Etsy Description Format below, on every listing that uses AI-generated models or AI-edited photos.
+- **Disclose AI in the description** — the "Photo note" line (last line of the Etsy Description Format below) on every listing.
 - **California SB 1050 (from Jan 1, 2027):** ads that prominently feature an AI-generated person who looks like a real human need a clear disclosure for California buyers. Etsy says listing images can count as ads. Our models are AI-generated, so the Photo note is required, and the same disclosure will be needed on the website product pages and on Pinterest/Instagram/Facebook ads with AI models before that date (not legal advice — user to confirm with a lawyer if needed).
 
 ### What to describe in prompts
@@ -314,13 +314,14 @@ Check out more jewellery in our shop: bodystrandseu.etsy.com
 
 Thanks for looking! Feel free to message me if you have any questions.
 
-Photo note: The models in some of these photos are AI-generated, used to show how the piece is worn. The jewelry itself is never altered and is shown exactly as it's made.
+Photo note: Some images are AI-generated to show the piece styled and worn. Every piece is 100% handmade by us.
 ```
 
 ### Photo note (required whenever a listing uses AI models or AI-edited photos)
 - Always the **last line** of the description (user bulk-added it this way across all Etsy listings, Oct 22, 2026).
+- Wording chosen by the user (Oct 22, 2026): short and soft, but it must keep the words "AI-generated" — that's what Etsy's transparency rule and California SB 1050 need.
+- Never claim the jewelry is "never altered" / "shown exactly as made": AI flat lays generated from model photos redraw the clasp, extender and links, so that would be untrue.
 - Optional, once the listing has its real photo: append "Photo [N] is a real, unedited photo of the piece." with [N] = that photo's position. Never claim a photo is unedited unless it is.
-- If no model in the listing is AI-generated, use instead: "All photos show the jewelry exactly as it's made."
 
 ### Key rules for the opening:
 - Bold hook line = short, striking, unexpected angle on the product

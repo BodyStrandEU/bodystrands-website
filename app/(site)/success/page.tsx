@@ -138,6 +138,17 @@ export default function SuccessPage() {
             </svg>
             @bodystrandseu
           </a>
+          <a
+            href="https://www.facebook.com/profile.php?id=61595265520885"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="ml-6 inline-flex items-center gap-2 text-[0.65rem] tracking-[0.15em] uppercase text-[#A0622A] hover:text-[#8A5222] transition-colors"
+          >
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+            </svg>
+            Facebook
+          </a>
         </div>
 
       </div>

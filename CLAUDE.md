@@ -56,6 +56,14 @@ done
 
 Giordano drops the reference jewelry photo directly into the LLM alongside the prompt. The LLM uses it as a visual reference. These rules apply to EVERY prompt, no exceptions:
 
+### Etsy AI rules — apply to every listing (Etsy policy update, Oct 2026)
+Etsy now requires, for every listing:
+- **At least one real, unedited photo of the actual piece** against a real background (on a hand, neck, ankle, table, fabric). Not retouched, not AI, no background swap. Etsy mentions exceptions for customized/made-to-order items, but until the Listing Image Requirements policy is checked, treat it as required for every listing. When preparing a listing, check the shared product folder has one; if not, ask the user for one — never pass an AI image off as the unedited photo.
+- **Every photo must show exactly what the buyer receives.** AI lifestyle/model images stay allowed only if the jewelry is identical to the real piece. Before an AI image is used, compare it against the real photo: strand count, drape, chain/link type, length on the body, charm/pendant shape and size, finish. If anything differs, regenerate or drop it — a "materially different" item lets the buyer open a case and Etsy may make us refund.
+- **First listing photo = the most realistic one** (Etsy best practice; buyers see it first).
+- **Disclose AI in the description** — the "Photo note" line in the Etsy Description Format below, on every listing that uses AI-generated models or AI-edited photos.
+- **California SB 1050 (from Jan 1, 2027):** ads that prominently feature an AI-generated person who looks like a real human need a clear disclosure for California buyers. Etsy says listing images can count as ads. Our models are AI-generated, so the Photo note is required, and the same disclosure will be needed on the website product pages and on Pinterest/Instagram/Facebook ads with AI models before that date (not legal advice — user to confirm with a lawyer if needed).
+
 ### What to describe in prompts
 - Scene, model, lighting, outfit, environment, camera lens — that is ALL
 - **NEVER describe the jewelry itself** — the reference image handles that
@@ -300,12 +308,19 @@ Store in an airtight container when not in use.
 
 Shipping: Dispatches within 1–2 business days.
 
+Photo note: The models in some of these photos are AI-generated, used to show how the piece is worn. The jewelry itself is never altered and is shown exactly as it's made. Photo [N] is a real, unedited photo of the piece.
+
 Please note that as each piece is handcrafted, no two pieces are identical and slight variations may occur.
 
 Check out more jewellery in our shop: bodystrandseu.etsy.com
 
 Thanks for looking! Feel free to message me if you have any questions.
 ```
+
+### Photo note (required whenever a listing uses AI models or AI-edited photos)
+- Keep the wording above; replace [N] with the position of the real, unedited photo in the listing.
+- If no model in the listing is AI-generated, drop the first sentence and keep: "All photos show the jewelry exactly as it's made. Photo [N] is a real, unedited photo of the piece."
+- Never claim a photo is unedited unless it is.
 
 ### Key rules for the opening:
 - Bold hook line = short, striking, unexpected angle on the product

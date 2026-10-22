@@ -5,6 +5,7 @@ import SmartImage from "@/components/SmartImage";
 import { products } from "@/lib/products";
 import { getRecentlyViewed } from "@/lib/recentlyViewed";
 import { useCurrency } from "@/lib/currency-context";
+import { getSalePrice } from "@/lib/pricing";
 
 export default function RecentlyViewed({ excludeId }: { excludeId: string }) {
   const [ids, setIds] = useState<string[]>([]);
@@ -69,7 +70,14 @@ export default function RecentlyViewed({ excludeId }: { excludeId: string }) {
                   {product.name}
                 </p>
                 <p className="text-[0.62rem] font-light text-[#A0622A] mt-0.5">
-                  {format(product.price)}
+                  {getSalePrice(product) !== null ? (
+                    <>
+                      {format(getSalePrice(product)!)}
+                      <span className="ml-1.5 text-[#8C7B6E]/60 line-through">{format(product.price)}</span>
+                    </>
+                  ) : (
+                    format(product.price)
+                  )}
                 </p>
               </div>
             </Link>

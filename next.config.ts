@@ -3,6 +3,8 @@ import type { NextConfig } from "next";
 import blogRedirects from "./data/blog-redirects.json";
 
 const nextConfig: NextConfig = {
+  // Lets a phone on the same Wi-Fi load the dev server (dev-only; ignored in production builds)
+  allowedDevOrigins: ["192.168.*.*"],
   // Caps static-generation worker parallelism — this dev machine is heavily loaded
   // (VS Code, browser, other background processes), and full parallelism was causing
   // page renders to exceed Next's 60s per-page timeout and corrupt the Turbopack cache.

@@ -23,23 +23,8 @@ export default function ProductCard({ product, priority = false, heroImageOverri
   );
   const [slideIndex, setSlideIndex] = useState(0);
 
-  // The card's media box is portrait (aspect-[7/10] / aspect-[4/5]) to show newly-shot
-  // vertical photos edge-to-edge via object-cover. Older square/landscape shots further
-  // into the same carousel would get cropped top-and-bottom under that same cover
-  // behavior, so each image's real aspect ratio is detected on load and switched to
-  // object-contain (full photo visible, letterboxed against the card's own background)
-  // instead — fully automatic, no per-photo tagging. The main/first thumbnail is always
-  // excluded (stays object-cover no matter what) — it's already been optimized to be
-  // vertical and is what drives engagement, so it's never touched by this logic.
-  const [containImages, setContainImages] = useState<Set<string>>(new Set());
-  function handleImageLoad(src: string, e: React.SyntheticEvent<HTMLImageElement>) {
-    const img = e.currentTarget;
-    if (!img.naturalWidth || !img.naturalHeight) return;
-    const ratio = img.naturalWidth / img.naturalHeight;
-    if (ratio > 0.9) {
-      setContainImages((prev) => (prev.has(src) ? prev : new Set(prev).add(src)));
-    }
-  }
+  // Every photo in the card carousel fills the same portrait box (object-cover), so swiping
+  // never jumps between a tall photo and a small letterboxed square — user preference, Oct 22, 2026.
 
   const mediaRef   = useRef<HTMLDivElement>(null);
   const touchStart = useRef({ x: 0, y: 0, time: 0 });
@@ -254,10 +239,9 @@ export default function ProductCard({ product, priority = false, heroImageOverri
             sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
             priority={priority && i === 0}
             loading={priority && i === 0 ? "eager" : "lazy"}
-            onLoad={i === 0 ? undefined : (e) => handleImageLoad(src, e)}
-            className={`transition-[opacity,transform] duration-500 ease-out group-hover:scale-[1.04] ${
-              i !== 0 && containImages.has(src) ? "object-contain bg-[#FDF9F7]" : "object-cover"
-            } ${i === slideIndex ? "opacity-100" : "opacity-0"}`}
+            className={`object-cover transition-[opacity,transform] duration-500 ease-out group-hover:scale-[1.04] ${
+              i === slideIndex ? "opacity-100" : "opacity-0"
+            }`}
           />
         ))}
 

@@ -468,10 +468,10 @@
       {
         "label": "Size",
         "options": [
-          "S (34.5 cm (13.6\") neck)",
-          "M (35.5 cm (14\") neck)",
-          "L (36.5 cm (14.4\") neck)",
-          "XL (38 cm (15\") neck)"
+          "S · 34.5 cm / 13.6\" neck",
+          "M · 35.5 cm / 14\" neck",
+          "L · 36.5 cm / 14.4\" neck",
+          "XL · 38 cm / 15\" neck"
         ]
       }
     ],
@@ -1185,9 +1185,9 @@
       {
         "label": "Size",
         "options": [
-          "Small (+7 cm (2.8\") ext)",
-          "Medium (+14 cm (5.5\") ext)",
-          "Large (+23 cm (9.1\") ext)"
+          "Small · +7 cm / 2.8\" extender",
+          "Medium · +14 cm / 5.5\" extender",
+          "Large · +23 cm / 9.1\" extender"
         ]
       }
     ],
@@ -1372,9 +1372,9 @@
       {
         "label": "Size",
         "options": [
-          "Small (+7 cm (2.8\") ext)",
-          "Medium (+14 cm (5.5\") ext)",
-          "Large (+23 cm (9.1\") ext)"
+          "Small · +7 cm / 2.8\" extender",
+          "Medium · +14 cm / 5.5\" extender",
+          "Large · +23 cm / 9.1\" extender"
         ]
       }
     ],
@@ -2136,12 +2136,7 @@
     "featured": false,
     "active": true,
     "images": [
-      "https://i.etsystatic.com/55122258/r/il/051bc4/8082550652/il_fullxfull.8082550652_7jbm.jpg",
-      "https://i.etsystatic.com/55122258/r/il/a5dfa5/8130485887/il_fullxfull.8130485887_d545.jpg",
-      "https://i.etsystatic.com/55122258/r/il/606456/8130466079/il_fullxfull.8130466079_pi9i.jpg",
-      "https://i.etsystatic.com/55122258/r/il/3a1fba/8082552384/il_fullxfull.8082552384_tr23.jpg",
-      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.webp",
-      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp"
+      "https://i.etsystatic.com/55122258/r/il/051bc4/8082550652/il_fullxfull.8082550652_7jbm.jpg"
     ],
     "variantGroups": [
       {
@@ -2158,13 +2153,6 @@
           "22 CM (8.7\")",
           "23 CM (9.1\")"
         ]
-      },
-      {
-        "label": "Color",
-        "options": [
-          "Gold stainless",
-          "Silver Stainless"
-        ]
       }
     ],
     "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/65b1e797433ba1ce472f262a5f0bc4d1/downloads/default.mp4",
@@ -2172,6 +2160,22 @@
     "dateAdded": "2026-06-12T15:00:27-04:00",
     "giftTags": [
       "confirmation"
+    ],
+    "variants": [
+      "Gold Tone",
+      "Silver Tone"
+    ],
+    "variantHeroes": {
+      "Gold Tone": "https://i.etsystatic.com/55122258/r/il/051bc4/8082550652/il_fullxfull.8082550652_7jbm.jpg",
+      "Silver Tone": "https://i.etsystatic.com/55122258/r/il/a5dfa5/8130485887/il_fullxfull.8130485887_d545.jpg"
+    },
+    "gallery": [
+      "https://i.etsystatic.com/55122258/r/il/051bc4/8082550652/il_fullxfull.8082550652_7jbm.jpg",
+      "https://i.etsystatic.com/55122258/r/il/a5dfa5/8130485887/il_fullxfull.8130485887_d545.jpg",
+      "https://i.etsystatic.com/55122258/r/il/606456/8130466079/il_fullxfull.8130466079_pi9i.jpg",
+      "https://i.etsystatic.com/55122258/r/il/3a1fba/8082552384/il_fullxfull.8082552384_tr23.jpg",
+      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.webp",
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp"
     ]
   },
   {
@@ -2352,9 +2356,9 @@
       {
         "label": "Size",
         "options": [
-          "Small (+7 cm (2.8\") ext)",
-          "Medium (+14 cm (5.5\") ext)",
-          "Large (+23 cm (9.1\") ext)"
+          "Small · +7 cm / 2.8\" extender",
+          "Medium · +14 cm / 5.5\" extender",
+          "Large · +23 cm / 9.1\" extender"
         ]
       }
     ],
@@ -2435,9 +2439,9 @@
       {
         "label": "Size",
         "options": [
-          "Small (+7 cm (2.8\") ext)",
-          "Medium (+14 cm (5.5\") ext)",
-          "Large (+23 cm (9.1\") ext)"
+          "Small · +7 cm / 2.8\" extender",
+          "Medium · +14 cm / 5.5\" extender",
+          "Large · +23 cm / 9.1\" extender"
         ]
       }
     ],
@@ -2781,9 +2785,9 @@
       {
         "label": "Size",
         "options": [
-          "Small (+5 cm (2\"))",
-          "Medium (+10 cm (3.9\"))",
-          "Large (+15 cm (5.9\"))"
+          "Small · +5 cm / 2\"",
+          "Medium · +10 cm / 3.9\"",
+          "Large · +15 cm / 5.9\""
         ]
       }
     ],
@@ -3139,9 +3143,9 @@
       {
         "label": "Size",
         "options": [
-          "Small (+7 cm (2.8\") ext)",
-          "Medium (+14 cm (5.5\") ext)",
-          "Large (+23 cm (9.1\") ext)"
+          "Small · +7 cm / 2.8\" extender",
+          "Medium · +14 cm / 5.5\" extender",
+          "Large · +23 cm / 9.1\" extender"
         ]
       }
     ],
@@ -3223,11 +3227,11 @@
       {
         "label": "Size",
         "options": [
-          "XS (74 cm (29.1\") waist)",
-          "S (79 cm (31.1\") waist)",
-          "M (84 cm (33.1\") waist)",
-          "L (96 cm (37.8\") waist)",
-          "XL (108 cm (42.5\") waist)"
+          "XS · 74 cm / 29.1\" waist",
+          "S · 79 cm / 31.1\" waist",
+          "M · 84 cm / 33.1\" waist",
+          "L · 96 cm / 37.8\" waist",
+          "XL · 108 cm / 42.5\" waist"
         ]
       }
     ],
@@ -3596,9 +3600,9 @@
       {
         "label": "Size",
         "options": [
-          "Small (71–81 cm (28\"–31.9\"))",
-          "Medium (71–91 cm (28\"–35.8\"))",
-          "Large (71–100 cm (28\"–39.4\"))"
+          "Small · 71–81 cm / 28–31.9\"",
+          "Medium · 71–91 cm / 28–35.8\"",
+          "Large · 71–100 cm / 28–39.4\""
         ]
       }
     ],
@@ -3679,9 +3683,9 @@
       {
         "label": "Size",
         "options": [
-          "Small (+7 cm (2.8\") ext)",
-          "Medium (+14 cm (5.5\") ext)",
-          "Large (+23 cm (9.1\") ext)"
+          "Small · +7 cm / 2.8\" extender",
+          "Medium · +14 cm / 5.5\" extender",
+          "Large · +23 cm / 9.1\" extender"
         ]
       }
     ],
@@ -3768,9 +3772,9 @@
       {
         "label": "Size",
         "options": [
-          "Small (+7 cm (2.8\") ext)",
-          "Medium (+14 cm (5.5\") ext)",
-          "Large (+23 cm (9.1\") ext)"
+          "Small · +7 cm / 2.8\" extender",
+          "Medium · +14 cm / 5.5\" extender",
+          "Large · +23 cm / 9.1\" extender"
         ]
       }
     ],
@@ -4118,9 +4122,9 @@
       {
         "label": "Size",
         "options": [
-          "Small (+7 cm (2.8\") ext)",
-          "Medium (+14 cm (5.5\") ext)",
-          "Large (+23 cm (9.1\") ext)"
+          "Small · +7 cm / 2.8\" extender",
+          "Medium · +14 cm / 5.5\" extender",
+          "Large · +23 cm / 9.1\" extender"
         ]
       },
       {
@@ -4891,10 +4895,10 @@
         "label": "Ring Size",
         "type": "options",
         "options": [
-          "US 6 / EU 52 (5.18 cm (2\"))",
-          "US 7 / EU 54 (5.40 cm (2.1\"))",
-          "US 8 / EU 57 (5.61 cm (2.2\"))",
-          "US 9 / EU 59 (5.82 cm (2.3\"))"
+          "US 6 / EU 52 · 5.18 cm / 2\"",
+          "US 7 / EU 54 · 5.40 cm / 2.1\"",
+          "US 8 / EU 57 · 5.61 cm / 2.2\"",
+          "US 9 / EU 59 · 5.82 cm / 2.3\""
         ]
       }
     ],
@@ -5162,9 +5166,9 @@
       {
         "label": "Size",
         "options": [
-          "Small (+7 cm (2.8\") ext)",
-          "Medium (+14 cm (5.5\") ext)",
-          "Large (+23 cm (9.1\") ext)"
+          "Small · +7 cm / 2.8\" extender",
+          "Medium · +14 cm / 5.5\" extender",
+          "Large · +23 cm / 9.1\" extender"
         ]
       }
     ],
@@ -5721,9 +5725,9 @@
       {
         "label": "Size",
         "options": [
-          "Small (+7 cm (2.8\") ext)",
-          "Medium (+14 cm (5.5\") ext)",
-          "Large (+23 cm (9.1\") ext)"
+          "Small · +7 cm / 2.8\" extender",
+          "Medium · +14 cm / 5.5\" extender",
+          "Large · +23 cm / 9.1\" extender"
         ]
       }
     ],
@@ -6467,9 +6471,9 @@
       {
         "label": "Size",
         "options": [
-          "Small (+7 cm (2.8\") ext)",
-          "Medium (+14 cm (5.5\") ext)",
-          "Large (+23 cm (9.1\") ext)"
+          "Small · +7 cm / 2.8\" extender",
+          "Medium · +14 cm / 5.5\" extender",
+          "Large · +23 cm / 9.1\" extender"
         ]
       }
     ],
@@ -6702,9 +6706,9 @@
       {
         "label": "Size",
         "options": [
-          "Small (+7 cm (2.8\") ext)",
-          "Medium (+14 cm (5.5\") ext)",
-          "Large (+23 cm (9.1\") ext)"
+          "Small · +7 cm / 2.8\" extender",
+          "Medium · +14 cm / 5.5\" extender",
+          "Large · +23 cm / 9.1\" extender"
         ]
       }
     ],
@@ -6855,9 +6859,9 @@
       {
         "label": "Size",
         "options": [
-          "Small (+7 cm (2.8\") ext)",
-          "Medium (+14 cm (5.5\") ext)",
-          "Large (+23 cm (9.1\") ext)"
+          "Small · +7 cm / 2.8\" extender",
+          "Medium · +14 cm / 5.5\" extender",
+          "Large · +23 cm / 9.1\" extender"
         ]
       }
     ],
@@ -6962,10 +6966,10 @@
         "label": "Ring Size",
         "type": "options",
         "options": [
-          "US 6 / EU 52 (5.18 cm (2\"))",
-          "US 7 / EU 54 (5.40 cm (2.1\"))",
-          "US 8 / EU 57 (5.61 cm (2.2\"))",
-          "US 9 / EU 59 (5.82 cm (2.3\"))"
+          "US 6 / EU 52 · 5.18 cm / 2\"",
+          "US 7 / EU 54 · 5.40 cm / 2.1\"",
+          "US 8 / EU 57 · 5.61 cm / 2.2\"",
+          "US 9 / EU 59 · 5.82 cm / 2.3\""
         ]
       }
     ],
@@ -7084,9 +7088,9 @@
       {
         "label": "Size",
         "options": [
-          "Small (+7 cm (2.8\") ext)",
-          "Medium (+14 cm (5.5\") ext)",
-          "Large (+23 cm (9.1\") ext)"
+          "Small · +7 cm / 2.8\" extender",
+          "Medium · +14 cm / 5.5\" extender",
+          "Large · +23 cm / 9.1\" extender"
         ]
       }
     ],
@@ -7287,9 +7291,9 @@
       {
         "label": "Size",
         "options": [
-          "Small (+7 cm (2.8\") ext)",
-          "Medium (+14 cm (5.5\") ext)",
-          "Large (+23 cm (9.1\") ext)"
+          "Small · +7 cm / 2.8\" extender",
+          "Medium · +14 cm / 5.5\" extender",
+          "Large · +23 cm / 9.1\" extender"
         ]
       }
     ],
@@ -7705,9 +7709,9 @@
       {
         "label": "Size",
         "options": [
-          "Small (+7 cm (2.8\") ext)",
-          "Medium (+14 cm (5.5\") ext)",
-          "Large (+23 cm (9.1\") ext)"
+          "Small · +7 cm / 2.8\" extender",
+          "Medium · +14 cm / 5.5\" extender",
+          "Large · +23 cm / 9.1\" extender"
         ]
       }
     ],
@@ -7865,9 +7869,9 @@
       {
         "label": "Size",
         "options": [
-          "Small (+7 cm (2.8\") ext)",
-          "Medium (+14 cm (5.5\") ext)",
-          "Large (+23 cm (9.1\") ext)"
+          "Small · +7 cm / 2.8\" extender",
+          "Medium · +14 cm / 5.5\" extender",
+          "Large · +23 cm / 9.1\" extender"
         ]
       }
     ],
@@ -8125,9 +8129,9 @@
       {
         "label": "Size",
         "options": [
-          "Small (+7 cm (2.8\") ext)",
-          "Medium (+14 cm (5.5\") ext)",
-          "Large (+23 cm (9.1\") ext)"
+          "Small · +7 cm / 2.8\" extender",
+          "Medium · +14 cm / 5.5\" extender",
+          "Large · +23 cm / 9.1\" extender"
         ]
       }
     ],
@@ -8458,14 +8462,7 @@
     "featured": false,
     "active": true,
     "images": [
-      "/images/products/be279f2e-7abb-4f40-8272-c6f5f89c90ea.png",
-      "https://i.etsystatic.com/55122258/r/il/e0581f/8142951625/il_fullxfull.8142951625_73u3.jpg",
-      "https://i.etsystatic.com/55122258/r/il/445881/8095081130/il_fullxfull.8095081130_nd5n.jpg",
-      "https://i.etsystatic.com/55122258/r/il/9c67db/8143046201/il_fullxfull.8143046201_cm3q.jpg",
-      "https://i.etsystatic.com/55122258/r/il/7d203e/7759169030/il_fullxfull.7759169030_aizv.jpg",
-      "https://i.etsystatic.com/55122258/r/il/42a411/8095057756/il_fullxfull.8095057756_knht.jpg",
-      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.webp",
-      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp"
+      "/images/products/be279f2e-7abb-4f40-8272-c6f5f89c90ea.png"
     ],
     "variantGroups": [
       {
@@ -8484,13 +8481,6 @@
           "Aquarius (1.20-2.18)",
           "Pisces (2.19-3.20)"
         ]
-      },
-      {
-        "label": "Color",
-        "options": [
-          "Gold",
-          "Silver"
-        ]
       }
     ],
     "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/9224a2d85c2c115c3ed98769525039a6/downloads/default.mp4",
@@ -8499,7 +8489,25 @@
     "giftTags": [
       "personalized"
     ],
-    "sizeGuideImage": "/images/products/40016029-053d-4710-bf2e-8d6f542464fc.png"
+    "sizeGuideImage": "/images/products/40016029-053d-4710-bf2e-8d6f542464fc.png",
+    "variants": [
+      "Gold Tone",
+      "Silver Tone"
+    ],
+    "variantHeroes": {
+      "Gold Tone": "/images/products/be279f2e-7abb-4f40-8272-c6f5f89c90ea.png",
+      "Silver Tone": "https://i.etsystatic.com/55122258/r/il/445881/8095081130/il_fullxfull.8095081130_nd5n.jpg"
+    },
+    "gallery": [
+      "/images/products/be279f2e-7abb-4f40-8272-c6f5f89c90ea.png",
+      "https://i.etsystatic.com/55122258/r/il/e0581f/8142951625/il_fullxfull.8142951625_73u3.jpg",
+      "https://i.etsystatic.com/55122258/r/il/445881/8095081130/il_fullxfull.8095081130_nd5n.jpg",
+      "https://i.etsystatic.com/55122258/r/il/9c67db/8143046201/il_fullxfull.8143046201_cm3q.jpg",
+      "https://i.etsystatic.com/55122258/r/il/7d203e/7759169030/il_fullxfull.7759169030_aizv.jpg",
+      "https://i.etsystatic.com/55122258/r/il/42a411/8095057756/il_fullxfull.8095057756_knht.jpg",
+      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.webp",
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp"
+    ]
   },
   {
     "id": "monogram-letter-necklace",
@@ -8610,13 +8618,7 @@
     "featured": false,
     "active": true,
     "images": [
-      "https://i.etsystatic.com/55122258/r/il/dc4e2f/8165749301/il_fullxfull.8165749301_9lkm.jpg",
-      "https://i.etsystatic.com/55122258/r/il/88889b/8165711891/il_fullxfull.8165711891_gbn3.jpg",
-      "https://i.etsystatic.com/55122258/r/il/7e86e0/8165711877/il_fullxfull.8165711877_od8j.jpg",
-      "https://i.etsystatic.com/55122258/r/il/4c2076/8117803058/il_fullxfull.8117803058_9uyn.jpg",
-      "https://i.etsystatic.com/55122258/r/il/0cb3b5/8165711879/il_fullxfull.8165711879_6ieo.jpg",
-      "https://i.etsystatic.com/55122258/r/il/b3a795/7943677304/il_fullxfull.7943677304_jmkv.jpg",
-      "https://i.etsystatic.com/55122258/r/il/06caae/8165713123/il_fullxfull.8165713123_jyep.jpg"
+      "https://i.etsystatic.com/55122258/r/il/dc4e2f/8165749301/il_fullxfull.8165749301_9lkm.jpg"
     ],
     "variantGroups": [
       {
@@ -8633,19 +8635,29 @@
           "22 CM (8.7\")",
           "23 CM (9.1\")"
         ]
-      },
-      {
-        "label": "Color",
-        "options": [
-          "Gold stainless",
-          "Silver Stainless"
-        ]
       }
     ],
     "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/081f3c4da5cc334a1c97cdd510d58524/downloads/default.mp4",
     "altText": "Delicate layered pearl bracelet with freshwater pearls and stainless steel, perfect everyday dainty bracelet",
     "dateAdded": "2026-06-12T15:00:27-04:00",
-    "salePercent": 25
+    "salePercent": 25,
+    "variants": [
+      "Silver Tone",
+      "Gold Tone"
+    ],
+    "variantHeroes": {
+      "Gold Tone": "https://i.etsystatic.com/55122258/r/il/88889b/8165711891/il_fullxfull.8165711891_gbn3.jpg",
+      "Silver Tone": "https://i.etsystatic.com/55122258/r/il/dc4e2f/8165749301/il_fullxfull.8165749301_9lkm.jpg"
+    },
+    "gallery": [
+      "https://i.etsystatic.com/55122258/r/il/dc4e2f/8165749301/il_fullxfull.8165749301_9lkm.jpg",
+      "https://i.etsystatic.com/55122258/r/il/88889b/8165711891/il_fullxfull.8165711891_gbn3.jpg",
+      "https://i.etsystatic.com/55122258/r/il/7e86e0/8165711877/il_fullxfull.8165711877_od8j.jpg",
+      "https://i.etsystatic.com/55122258/r/il/4c2076/8117803058/il_fullxfull.8117803058_9uyn.jpg",
+      "https://i.etsystatic.com/55122258/r/il/0cb3b5/8165711879/il_fullxfull.8165711879_6ieo.jpg",
+      "https://i.etsystatic.com/55122258/r/il/b3a795/7943677304/il_fullxfull.7943677304_jmkv.jpg",
+      "https://i.etsystatic.com/55122258/r/il/06caae/8165713123/il_fullxfull.8165713123_jyep.jpg"
+    ]
   },
   {
     "id": "pearl-chain-anklet",
@@ -9715,16 +9727,7 @@
     "featured": false,
     "active": true,
     "images": [
-      "/images/products/f1a95b9b-e3ca-4323-bd17-525d5ddcd0a6.webp",
-      "https://i.etsystatic.com/55122258/r/il/6ee4aa/8065073742/il_fullxfull.8065073742_9b79.jpg",
-      "https://i.etsystatic.com/55122258/r/il/1fd40c/8047372098/il_fullxfull.8047372098_8wcr.jpg",
-      "https://i.etsystatic.com/55122258/r/il/cd8904/8032758132/il_fullxfull.8032758132_ru5f.jpg",
-      "https://i.etsystatic.com/55122258/r/il/93ba8e/8051512336/il_fullxfull.8051512336_2di7.jpg",
-      "https://i.etsystatic.com/55122258/r/il/b14ddd/8099427053/il_fullxfull.8099427053_2ou0.jpg",
-      "https://i.etsystatic.com/55122258/r/il/b3a795/7943677304/il_fullxfull.7943677304_jmkv.jpg",
-      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.webp",
-      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.webp",
-      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp"
+      "/images/products/f1a95b9b-e3ca-4323-bd17-525d5ddcd0a6.webp"
     ],
     "variantGroups": [
       {
@@ -9741,18 +9744,31 @@
           "22 CM (8.7\")",
           "23 CM (9.1\")"
         ]
-      },
-      {
-        "label": "Color",
-        "options": [
-          "Gold stainless",
-          "Silver Stainless"
-        ]
       }
     ],
     "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/43713f58ef4eb86f6c97a68b12a8b4f6/downloads/default.mp4",
     "altText": "Delicate gold stainless steel bracelet with pearl charms, handcrafted dainty bracelet for everyday wear",
-    "dateAdded": "2026-06-12T15:00:27-04:00"
+    "dateAdded": "2026-06-12T15:00:27-04:00",
+    "variants": [
+      "Gold Tone",
+      "Silver Tone"
+    ],
+    "variantHeroes": {
+      "Gold Tone": "/images/products/f1a95b9b-e3ca-4323-bd17-525d5ddcd0a6.webp",
+      "Silver Tone": "https://i.etsystatic.com/55122258/r/il/93ba8e/8051512336/il_fullxfull.8051512336_2di7.jpg"
+    },
+    "gallery": [
+      "/images/products/f1a95b9b-e3ca-4323-bd17-525d5ddcd0a6.webp",
+      "https://i.etsystatic.com/55122258/r/il/6ee4aa/8065073742/il_fullxfull.8065073742_9b79.jpg",
+      "https://i.etsystatic.com/55122258/r/il/1fd40c/8047372098/il_fullxfull.8047372098_8wcr.jpg",
+      "https://i.etsystatic.com/55122258/r/il/cd8904/8032758132/il_fullxfull.8032758132_ru5f.jpg",
+      "https://i.etsystatic.com/55122258/r/il/93ba8e/8051512336/il_fullxfull.8051512336_2di7.jpg",
+      "https://i.etsystatic.com/55122258/r/il/b14ddd/8099427053/il_fullxfull.8099427053_2ou0.jpg",
+      "https://i.etsystatic.com/55122258/r/il/b3a795/7943677304/il_fullxfull.7943677304_jmkv.jpg",
+      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.webp",
+      "/images/products/0acc7259-5314-4c79-a09d-8f0f7c724ecf.webp",
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp"
+    ]
   },
   {
     "id": "butterfly-anklet",
@@ -11646,9 +11662,9 @@
       {
         "label": "Size",
         "options": [
-          "Small (+7 cm (2.8\") ext)",
-          "Medium (+14 cm (5.5\") ext)",
-          "Large (+23 cm (9.1\") ext)"
+          "Small · +7 cm / 2.8\" extender",
+          "Medium · +14 cm / 5.5\" extender",
+          "Large · +23 cm / 9.1\" extender"
         ]
       }
     ],

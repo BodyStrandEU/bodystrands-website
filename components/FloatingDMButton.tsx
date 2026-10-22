@@ -34,7 +34,7 @@ export default function FloatingDMButton() {
       aria-label="Chat with us on WhatsApp"
       className={`group fixed right-6 z-40 flex items-center transition-[bottom] duration-300 ${
         cookieBannerShowing ? "bottom-28 md:bottom-24" : "bottom-6"
-      }`}
+      } [body[data-sticky-buy]_&]:bottom-32 md:[body[data-sticky-buy]_&]:bottom-6`}
     >
       {/* Pulse ring — draws the eye without being obnoxious */}
       <span className="absolute inset-0 rounded-full bg-[#2C2220]/40 animate-ping-slow" />

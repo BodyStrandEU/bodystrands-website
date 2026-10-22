@@ -1,24 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { activeCategories } from "@/lib/products";
-
-function InstagramIcon() {
-  return (
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-      <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
-      <circle cx="12" cy="12" r="4" />
-      <circle cx="17.5" cy="6.5" r="0.8" fill="currentColor" stroke="none" />
-    </svg>
-  );
-}
-
-function FacebookIcon() {
-  return (
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
-    </svg>
-  );
-}
+import SocialLinks from "@/components/SocialLinks";
 
 const SHOP_LINKS = [
   { href: "/shop", label: "All Pieces" },
@@ -55,26 +38,10 @@ export default function Footer() {
           <p className="text-[0.7rem] font-light leading-relaxed tracking-wide text-[#E8B4A8]/70 max-w-[220px]">
             Handmade body jewelry crafted with love in Portugal. Dainty, minimal, and made to last.
           </p>
-          <a
-            href="https://www.instagram.com/bodystrandseu/"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Bodystrands on Instagram"
-            className="flex items-center gap-2 text-[#E8B4A8]/60 hover:text-[#E8B4A8] transition-colors w-fit"
-          >
-            <InstagramIcon />
-            <span className="text-[0.6rem] tracking-[0.2em] uppercase">@bodystrandseu</span>
-          </a>
-          <a
-            href="https://www.facebook.com/profile.php?id=61595265520885"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Bodystrands on Facebook"
-            className="flex items-center gap-2 text-[#E8B4A8]/60 hover:text-[#E8B4A8] transition-colors w-fit"
-          >
-            <FacebookIcon />
-            <span className="text-[0.6rem] tracking-[0.2em] uppercase">Facebook</span>
-          </a>
+          <div className="pt-1">
+            <p className="text-[0.55rem] tracking-[0.25em] uppercase text-[#E8B4A8]/50 mb-3">Follow us</p>
+            <SocialLinks tone="dark" />
+          </div>
         </div>
 
         {/* Shop */}
@@ -133,12 +100,12 @@ export default function Footer() {
 
       {/* Bottom bar */}
       <div className="border-t border-[#E8B4A8]/10">
-        <div className="max-w-7xl mx-auto px-6 md:px-10 py-5 flex flex-col md:flex-row justify-between items-center gap-4">
+        <div className="max-w-7xl mx-auto px-6 md:px-10 pt-5 pb-24 md:pb-5 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-[0.6rem] tracking-[0.18em] uppercase text-[#E8B4A8]/35">
             © {year} Bodystrands. All rights reserved.
           </p>
-          <div className="flex items-center gap-4">
-            <span className="text-[0.5rem] tracking-[0.15em] uppercase text-[#E8B4A8]/40 whitespace-nowrap">
+          <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-2">
+            <span className="w-full md:w-auto text-center text-[0.5rem] tracking-[0.15em] uppercase text-[#E8B4A8]/40 whitespace-nowrap">
               🔒 Secure Checkout
             </span>
             {["VISA", "MASTERCARD", "AMEX", "APPLE PAY", "GOOGLE PAY"].map((brand) => (

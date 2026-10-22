@@ -9,6 +9,7 @@ import CartIcon from "@/components/CartIcon";
 import { useWishlist } from "@/lib/wishlist";
 import { useCurrency } from "@/lib/currency-context";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
+import SocialLinks from "@/components/SocialLinks";
 
 function WishlistIcon({ light }: { light?: boolean }) {
   const { ids } = useWishlist();
@@ -117,7 +118,7 @@ export default function Navbar() {
           scrolled ? "max-h-0 opacity-0" : "max-h-12 opacity-100"
         }`}
       >
-        <p className="text-[0.52rem] tracking-[0.22em] uppercase text-[#E8B4A8]/70 text-center py-2.5 px-4">
+        <p className="text-[0.52rem] tracking-[0.14em] sm:tracking-[0.22em] whitespace-nowrap uppercase text-[#E8B4A8]/70 text-center py-2.5 px-4">
           Handmade&nbsp;&nbsp;·&nbsp;&nbsp;Ships in 1–2 Days&nbsp;&nbsp;·&nbsp;&nbsp;
           <span className="hidden sm:inline">{shippingLineFull}</span>
           <span className="sm:hidden">{shippingLineShort}</span>
@@ -136,7 +137,7 @@ export default function Navbar() {
               alt="Bodystrands"
               width={1802}
               height={169}
-              className={`h-3 md:h-3.5 w-auto object-contain transition-all duration-300 ${
+              className={`h-4 md:h-3.5 w-auto object-contain transition-all duration-300 ${
                 scrolled ? "" : "[filter:drop-shadow(0_1px_6px_rgba(0,0,0,0.55))]"
               }`}
               priority
@@ -372,6 +373,10 @@ export default function Navbar() {
                   {link.label}
                 </Link>
               ))}
+            </div>
+            <div className="mt-6 pt-6 border-t border-[#E8B4A8]/30">
+              <p className="text-[0.52rem] tracking-[0.3em] uppercase text-[#A0622A] mb-3">Follow us</p>
+              <SocialLinks tone="light" />
             </div>
             <div className="mt-6 pt-6 border-t border-[#E8B4A8]/30">
               <p className="text-[0.52rem] tracking-[0.3em] uppercase text-[#A0622A] mb-3">Language</p>

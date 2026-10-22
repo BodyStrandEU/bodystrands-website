@@ -322,6 +322,7 @@ function ReviewGroup({
 }: {
   heading: string; reviews: Review[]; showSummary: boolean; emptyState?: ReactNode; showPurchasedLink?: boolean;
 }) {
+  const [open, setOpen] = useState(false);
   const [showAll, setShowAll] = useState(false);
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
 
@@ -342,9 +343,31 @@ function ReviewGroup({
   const photoReviews = reviews.filter((r) => r.image);
 
   return (
-    <div>
-      <h3 className="font-heading text-lg md:text-xl font-light text-[#2C2220] mb-4">{heading}</h3>
+    <div className="border-b border-[#E8B4A8]/40">
+      {/* Collapsed by default so a long review list doesn't bury Shop the Set and the
+          rest of the page on mobile — the bar still shows the rating and review count. */}
+      <button
+        type="button"
+        onClick={() => setOpen((o) => !o)}
+        aria-expanded={open}
+        className="w-full min-h-[56px] py-4 flex items-center justify-between gap-4 text-left"
+      >
+        <span className="min-w-0">
+          <span className="block font-heading text-lg md:text-xl font-light text-[#2C2220] leading-snug">{heading}</span>
+          <span className="mt-1.5 flex items-center gap-2">
+            <Stars rating={Math.round(avgRating)} size={12} />
+            <span className="text-[0.55rem] tracking-[0.1em] uppercase text-[#8C7B6E] whitespace-nowrap">
+              {avgRating.toFixed(1)} · {reviews.length} review{reviews.length !== 1 ? "s" : ""}
+            </span>
+          </span>
+        </span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className={`flex-shrink-0 text-[#2C2220] transition-transform duration-200 ${open ? "rotate-180" : ""}`}>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+        </svg>
+      </button>
 
+      {open && (
+      <div className="pb-6">
       {showSummary && (
         <div className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-8 mb-6">
           <div className="flex items-center gap-3 flex-shrink-0">
@@ -395,6 +418,9 @@ function ReviewGroup({
         </button>
       )}
 
+      </div>
+      )}
+
       {lightboxIndex !== null && (
         <PhotoReviewLightbox
           reviews={photoReviews}
@@ -436,7 +462,7 @@ export default function ProductReviews({ category, productId, className = "" }: 
 
   return (
     <section id="reviews" className={`pt-8 mt-2 border-t border-[#E8B4A8]/40 ${className}`}>
-      <div className="flex flex-col gap-10">
+      <div className="flex flex-col">
         <ReviewGroup
           heading={own.length > 0 ? "What customers are saying about this piece" : "Be the first to review this item"}
           reviews={own}

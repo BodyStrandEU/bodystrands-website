@@ -45,7 +45,7 @@ export default function CartDrawer() {
     items, count, subtotal, itemsTotal, setSavings, lineSetSavings, remove, updateQty, updateVariant, clear,
     shippingCountry, setShippingCountry,
     drawerOpen, closeDrawer,
-    quickAddProduct, add: addToCart, nextQuickAdd, pickerStep,
+    quickAddProduct, add: addToCart, nextQuickAdd, pickerStep, pickerTone,
   } = useCart();
 
   const { currency, format, rates } = useCurrency();
@@ -78,12 +78,19 @@ export default function CartDrawer() {
     return () => { document.body.style.overflow = prev; };
   }, [drawerOpen]);
 
-  // Reset picker state fresh every time a new product opens the picker
+  // Reset picker state fresh every time a new product opens the picker. In a set, the
+  // set's colour comes pre-selected (finish swatch and any Finish/Color option group).
   useEffect(() => {
-    setGroupSelections({});
-    setPickerFinish(null);
+    const matchesTone = (o: string) => !!pickerTone && new RegExp(pickerTone, "i").test(o);
+    const presetGroups: Record<string, string> = {};
+    for (const g of quickAddProduct?.variantGroups ?? []) {
+      const hit = (g.options ?? []).find(matchesTone);
+      if (hit) presetGroups[g.label] = hit;
+    }
+    setGroupSelections(presetGroups);
+    setPickerFinish((quickAddProduct?.variants ?? []).find(matchesTone) ?? null);
     setPickerAdded(false);
-  }, [quickAddProduct?.id]);
+  }, [quickAddProduct?.id, pickerTone]);
 
   function handleClose() {
     setEntered(false);

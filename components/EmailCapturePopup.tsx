@@ -8,10 +8,35 @@ export default function EmailCapturePopup() {
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
 
+  // Shows once the shopper is halfway down the page (they're interested) or after 45s,
+  // whichever comes first — and never while the cookie banner is still up, so a phone
+  // screen is never covered by both at once.
   useEffect(() => {
-    if (localStorage.getItem(STORAGE_KEY)) return;
-    const timer = setTimeout(() => setVisible(true), 9000);
-    return () => clearTimeout(timer);
+    try { if (localStorage.getItem(STORAGE_KEY)) return; } catch { return; }
+    let interested = false;
+    const cookieAnswered = () => { try { return !!localStorage.getItem("bs_cookie_consent"); } catch { return true; } };
+    const alreadyHandled = () => { try { return !!localStorage.getItem(STORAGE_KEY); } catch { return true; } };
+    let shown = false;
+    // Show at most once per page view, and never again once it's been closed or subscribed
+    const maybeShow = () => {
+      if (shown || !interested || !cookieAnswered() || alreadyHandled()) return;
+      shown = true;
+      setVisible(true);
+      window.removeEventListener("scroll", onScroll);
+    };
+
+    const onScroll = () => {
+      const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+      if (scrollable > 0 && window.scrollY / scrollable >= 0.5) { interested = true; maybeShow(); }
+    };
+    const timer = setTimeout(() => { interested = true; maybeShow(); }, 45000);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("bs:cookie-consent-resolved", maybeShow);
+    return () => {
+      clearTimeout(timer);
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("bs:cookie-consent-resolved", maybeShow);
+    };
   }, []);
 
   async function subscribe(e: React.FormEvent) {

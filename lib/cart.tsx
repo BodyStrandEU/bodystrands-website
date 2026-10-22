@@ -43,9 +43,10 @@ type CartCtx = {
   openQuickAdd:      (product: Product) => void;
   closeQuickAdd:     () => void;
   // "Shop the Set": step the picker through several products, one after another.
-  startSetPicker:    (products: Product[]) => void;
+  startSetPicker:    (products: Product[], tone?: "gold" | "silver") => void;
   nextQuickAdd:      () => void;
   pickerStep:        { step: number; total: number } | null;
+  pickerTone:        "gold" | "silver" | null; // set picker pre-selects this colour so the set stays one colour
 };
 
 const CartContext = createContext<CartCtx | null>(null);
@@ -114,17 +115,19 @@ export function CartProvider({ children }: { children: ReactNode }) {
 
   const [pickerQueue, setPickerQueue]         = useState<Product[]>([]);
   const [pickerStep, setPickerStep]           = useState<{ step: number; total: number } | null>(null);
+  const [pickerTone, setPickerTone]           = useState<"gold" | "silver" | null>(null);
 
-  function openDrawer()  { setQuickAddProduct(null); setPickerQueue([]); setPickerStep(null); setDrawerOpen(true); }
-  function closeDrawer() { setDrawerOpen(false); setPickerQueue([]); setPickerStep(null); }
-  function openQuickAdd(product: Product) { setPickerQueue([]); setPickerStep(null); setQuickAddProduct(product); setDrawerOpen(true); }
-  function closeQuickAdd() { setQuickAddProduct(null); setPickerQueue([]); setPickerStep(null); setDrawerOpen(false); }
+  function openDrawer()  { setQuickAddProduct(null); setPickerQueue([]); setPickerStep(null); setPickerTone(null); setDrawerOpen(true); }
+  function closeDrawer() { setDrawerOpen(false); setPickerQueue([]); setPickerStep(null); setPickerTone(null); }
+  function openQuickAdd(product: Product) { setPickerQueue([]); setPickerStep(null); setPickerTone(null); setQuickAddProduct(product); setDrawerOpen(true); }
+  function closeQuickAdd() { setQuickAddProduct(null); setPickerQueue([]); setPickerStep(null); setPickerTone(null); setDrawerOpen(false); }
 
-  function startSetPicker(list: Product[]) {
+  function startSetPicker(list: Product[], tone?: "gold" | "silver") {
     if (list.length === 0) { openDrawer(); return; }
     setQuickAddProduct(list[0]);
     setPickerQueue(list.slice(1));
     setPickerStep({ step: 1, total: list.length });
+    setPickerTone(tone ?? null);
     setDrawerOpen(true);
   }
 
@@ -151,7 +154,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
       add, remove, updateQty, updateVariant, clear,
       drawerOpen, openDrawer, closeDrawer,
       quickAddProduct, openQuickAdd, closeQuickAdd,
-      startSetPicker, nextQuickAdd, pickerStep,
+      startSetPicker, nextQuickAdd, pickerStep, pickerTone,
     }}>
       {children}
     </CartContext.Provider>

@@ -236,14 +236,16 @@ export default async function ProductPage({ params }: { params: Promise<{ id: st
           <span className="text-[#2C2220]">{product.name}</span>
         </nav>
 
-        <ProductPageClient product={product} />
-        {(() => {
-          const set = getSetFor(product.id);
-          const items = set?.productIds
-            .map((id) => products.find((p) => p.id === id && p.active !== false))
-            .filter((p): p is Product => !!p);
-          return set && items && items.length >= 2 ? <ShopTheSet set={set} items={items} currentId={product.id} /> : null;
-        })()}
+        <ProductPageClient
+          product={product}
+          setSlot={(() => {
+            const set = getSetFor(product.id);
+            const items = set?.productIds
+              .map((id) => products.find((p) => p.id === id && p.active !== false))
+              .filter((p): p is Product => !!p);
+            return set && items && items.length >= 2 ? <ShopTheSet set={set} items={items} currentId={product.id} /> : null;
+          })()}
+        />
         <YouMayAlsoLike product={product} />
         <RecentlyViewed excludeId={product.id} />
       </div>

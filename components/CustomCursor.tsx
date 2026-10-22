@@ -4,11 +4,15 @@ import { useEffect, useRef, useState } from "react";
 export default function CustomCursor() {
   const cursorRef = useRef<HTMLDivElement>(null);
   const [hovering, setHovering] = useState(false);
+  // Only mouse/trackpad devices get the custom cursor. On phones it was never moved, so it
+  // sat stuck as a small brown dot in the top-left corner.
+  const [enabled, setEnabled] = useState(false);
   const pos = useRef({ x: -200, y: -200 });
   const rafRef = useRef<number>(0);
 
   useEffect(() => {
     if (!window.matchMedia("(pointer: fine)").matches) return;
+    setEnabled(true);
 
     document.documentElement.classList.add("cursor-none");
 
@@ -38,6 +42,8 @@ export default function CustomCursor() {
       if (rafRef.current) cancelAnimationFrame(rafRef.current);
     };
   }, []);
+
+  if (!enabled) return null;
 
   return (
     <div

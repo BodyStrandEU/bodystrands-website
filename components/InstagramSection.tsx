@@ -1,6 +1,7 @@
 import Image from "next/image";
+import { INSTAGRAM_HANDLE } from "@/lib/social";
 
-const HANDLE = "bodystrandseu";
+const HANDLE = INSTAGRAM_HANDLE;
 
 function InstagramGlyph() {
   return (

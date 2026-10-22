@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, isValidElement, cloneElement, type ReactNode } from "react";
 import Link from "next/link";
 import ProductGallery from "@/components/ProductGallery";
 import BuyButton from "@/components/BuyButton";
@@ -92,7 +92,7 @@ const SWATCH_COLORS: Record<string, string> = {
   "Silver Tone": "#A8A8A8",
 };
 
-export default function ProductPageClient({ product }: { product: Product }) {
+export default function ProductPageClient({ product, setSlot }: { product: Product; setSlot?: ReactNode }) {
   const { add: addToCart, shippingCountry, setShippingCountry } = useCart();
   const [activeVariant, setActiveVariant] = useState<string>(
     product.variants?.[0] ?? ""
@@ -100,8 +100,6 @@ export default function ProductPageClient({ product }: { product: Product }) {
   const [groupSelections, setGroupSelections] = useState<Record<string, string>>({});
   const [measurementNote, setMeasurementNote] = useState("");
   const [showSticky, setShowSticky]           = useState(false);
-  const [stickyLoading, setStickyLoading]     = useState(false);
-  const [stickyError, setStickyError]         = useState("");
   const [addedMsg, setAddedMsg]               = useState(false);
   const buyRef = useRef<HTMLDivElement>(null);
 
@@ -112,6 +110,13 @@ export default function ProductPageClient({ product }: { product: Product }) {
     obs.observe(el);
     return () => obs.disconnect();
   }, []);
+
+  // Flag on <body> while the sticky buy bar is up, so the floating WhatsApp button lifts above it
+  useEffect(() => {
+    if (showSticky) document.body.dataset.stickyBuy = "1";
+    else delete document.body.dataset.stickyBuy;
+    return () => { delete document.body.dataset.stickyBuy; };
+  }, [showSticky]);
 
   useEffect(() => {
     trackRecentlyViewed(product.id);
@@ -173,20 +178,31 @@ export default function ProductPageClient({ product }: { product: Product }) {
       .filter(Boolean)
       .join(" — ") || undefined;
 
-  async function handleStickyBuy() {
-    if (!allGroupsSelected || stickyLoading || !shippingCountry) return;
-    setStickyLoading(true);
-    setStickyError("");
-    try {
-      const res = await fetch("/api/checkout", {
+  function handleAddToCart() {
+    if (!allGroupsSelected) return;
+    addToCart({
+      productId:   product.id,
+      productName: product.name,
+      variant:     combinedVariant,
+      priceAdd,
+      groupSelections,
+      unitPrice:   totalPrice,
+      image:       product.images?.[0],
+      currency:    product.currency,
+      measurementNote: measurementNote.trim() || undefined,
+    });
+    setAddedMsg(true);
+    setTimeout(() => setAddedMsg(false), 2000);
+    if (typeof window !== "undefined") {
+      const w = window as Window & { fbq?: (...a: unknown[]) => void; gtag?: (...a: unknown[]) => void };
+      w.fbq?.("track", "AddToCart", { content_ids: [product.id], content_name: product.name, content_type: "product", value: totalPrice, currency: product.currency });
+      w.gtag?.("event", "add_to_cart", { currency: product.currency, value: totalPrice, items: [{ item_id: product.id, item_name: product.name, item_variant: combinedVariant ?? "", price: totalPrice, quantity: 1 }] });
+      fetch("/api/cart-add", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ productId: product.id, variant: combinedVariant, groupSelections, country: shippingCountry || undefined }),
-      });
-      const data = await res.json() as { url?: string; error?: string };
-      if (data.url) window.location.href = data.url;
-      else { setStickyLoading(false); setStickyError(data.error ?? "Something went wrong."); }
-    } catch { setStickyLoading(false); setStickyError("Connection error. Please try again."); }
+        body: JSON.stringify({ productId: product.id, variant: combinedVariant ?? undefined }),
+      }).catch(() => {});
+    }
   }
 
   return (
@@ -428,32 +444,7 @@ export default function ProductPageClient({ product }: { product: Product }) {
         <div ref={buyRef} className="flex flex-col gap-2">
           {/* Add to Cart */}
           <button
-            onClick={() => {
-              if (!allGroupsSelected) return;
-              addToCart({
-                productId:   product.id,
-                productName: product.name,
-                variant:     combinedVariant,
-                priceAdd,
-                groupSelections,
-                unitPrice:   totalPrice,
-                image:       product.images?.[0],
-                currency:    product.currency,
-                measurementNote: measurementNote.trim() || undefined,
-              });
-              setAddedMsg(true);
-              setTimeout(() => setAddedMsg(false), 2000);
-              if (typeof window !== "undefined") {
-                const w = window as Window & { fbq?: (...a: unknown[]) => void; gtag?: (...a: unknown[]) => void };
-                w.fbq?.("track", "AddToCart", { content_ids: [product.id], content_name: product.name, content_type: "product", value: totalPrice, currency: product.currency });
-                w.gtag?.("event", "add_to_cart", { currency: product.currency, value: totalPrice, items: [{ item_id: product.id, item_name: product.name, item_variant: combinedVariant ?? "", price: totalPrice, quantity: 1 }] });
-                fetch("/api/cart-add", {
-                  method: "POST",
-                  headers: { "Content-Type": "application/json" },
-                  body: JSON.stringify({ productId: product.id, variant: combinedVariant ?? undefined }),
-                }).catch(() => {});
-              }
-            }}
+            onClick={handleAddToCart}
             disabled={!allGroupsSelected}
             title={!allGroupsSelected ? "Please complete all options above" : undefined}
             className="btn-primary-filled w-full text-center py-4 disabled:opacity-60 disabled:cursor-not-allowed"
@@ -483,6 +474,10 @@ export default function ProductPageClient({ product }: { product: Product }) {
           fullDescription={product.fullDescription}
           specs={product.specs}
         />
+
+        {/* Shop the Set — right under the details so mobile shoppers see it before the reviews.
+            Gets the chosen finish so the whole set switches colour with it. */}
+        {isValidElement<{ activeVariant?: string }>(setSlot) ? cloneElement(setSlot, { activeVariant }) : setSlot}
       </div>
 
       {/* Reviews — sits below the gallery on desktop (col 1, row 2); on mobile
@@ -499,17 +494,16 @@ export default function ProductPageClient({ product }: { product: Product }) {
             <p className="text-base font-light text-[#2C2220] tracking-wide">{format(totalPrice)}</p>
           </div>
           <button
-            onClick={handleStickyBuy}
-            disabled={stickyLoading || !shippingCountry}
-            title={!shippingCountry ? "Select your shipping country on the product page" : undefined}
-            className="flex-shrink-0 bg-[#2C2220] text-[#FDF9F7] px-6 py-3 text-[0.6rem] tracking-[0.2em] uppercase disabled:opacity-60 transition-colors hover:bg-[#A0622A]"
+            onClick={() => {
+              // Options not picked yet → take them back up to the selectors instead of adding blind
+              if (!allGroupsSelected) { buyRef.current?.scrollIntoView({ behavior: "smooth", block: "center" }); return; }
+              handleAddToCart();
+            }}
+            className="flex-shrink-0 bg-[#2C2220] text-[#FDF9F7] px-6 py-3 min-h-[44px] text-[0.6rem] tracking-[0.2em] uppercase transition-colors hover:bg-[#A0622A]"
           >
-            {stickyLoading ? "Processing…" : !allGroupsSelected ? "Select options" : !shippingCountry ? "Select country ↑" : "Buy Now"}
+            {addedMsg ? "Added ✓" : !allGroupsSelected ? "Select options ↑" : "Add to Cart"}
           </button>
         </div>
-        {stickyError && (
-          <p className="text-[0.6rem] tracking-wide text-[#A0622A] text-right">{stickyError}</p>
-        )}
         {totalPrice < FREE_SHIPPING_THRESHOLD && (
           <p className="text-[0.55rem] tracking-[0.08em] uppercase text-[#8C7B6E] text-center">
             Add <span className="text-[#2C2220]">{format(FREE_SHIPPING_THRESHOLD - totalPrice)}</span> more → save up to <span className="text-[#2C2220]">{format(8)}</span> shipping (Europe & North America)

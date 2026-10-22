@@ -9,17 +9,25 @@ import Link from "next/link";
 import Image from "@/components/SmartImage";
 import type { Product } from "@/lib/products";
 import type { ProductSet } from "@/lib/productSets";
-import { SET_DISCOUNT_PERCENT, setUnitPrice } from "@/lib/productSets";
+import { SET_DISCOUNT_PERCENT, setUnitPrice, toneOfLabel, defaultTone, canShowIn, imageIn, toneVariant } from "@/lib/productSets";
 import { getSalePrice } from "@/lib/pricing";
 import { useCurrency } from "@/lib/currency-context";
 import { useCart } from "@/lib/cart";
 
 const needsPicker = (p: Product) => (p.variantGroups ?? []).length > 0 || (p.variants ?? []).length > 1;
 
-export default function ShopTheSet({ set, items, currentId }: { set: ProductSet; items: Product[]; currentId: string }) {
+export default function ShopTheSet({ set, items: allItems, currentId, activeVariant }: {
+  set: ProductSet; items: Product[]; currentId: string;
+  activeVariant?: string; // the finish the shopper picked on the product page (passed in by ProductPageClient)
+}) {
   const { format } = useCurrency();
   const { add, startSetPicker } = useCart();
-  const [picked, setPicked] = useState<Set<string>>(new Set(items.map((p) => p.id)));
+  const [picked, setPicked] = useState<Set<string>>(new Set(allItems.map((p) => p.id)));
+
+  // One colour per set: every piece shows (and is added) in the colour of the product being viewed
+  const current = allItems.find((p) => p.id === currentId) ?? allItems[0];
+  const tone = toneOfLabel(activeVariant) ?? defaultTone(current);
+  const items = allItems.filter((p) => canShowIn(p, tone));
 
   const priceOf = (p: Product) => getSalePrice(p) ?? p.price;
   const chosen = items.filter((p) => picked.has(p.id));
@@ -43,14 +51,14 @@ export default function ShopTheSet({ set, items, currentId }: { set: ProductSet;
       add({
         productId:   p.id,
         productName: p.name,
-        variant:     p.variants?.[0],
+        variant:     toneVariant(p, tone) ?? p.variants?.[0],
         priceAdd:    0,
         unitPrice:   priceOf(p),
-        image:       p.images?.[0],
+        image:       imageIn(p, tone),
         currency:    p.currency,
       });
     }
-    startSetPicker(chosen.filter(needsPicker));
+    startSetPicker(chosen.filter(needsPicker), tone);
     if (typeof window !== "undefined") {
       const w = window as Window & { gtag?: (...a: unknown[]) => void };
       w.gtag?.("event", "shop_the_set_click", { set_id: set.id, pieces: chosen.length, value: setPrice });
@@ -61,8 +69,11 @@ export default function ShopTheSet({ set, items, currentId }: { set: ProductSet;
     ? `Add the set · ${format(setPrice)}`
     : `Add ${chosen.length} ${chosen.length === 1 ? "piece" : "pieces"} · ${format(setPrice)}`;
 
+  // Not enough pieces left in this colour to call it a set
+  if (items.length < 2) return null;
+
   return (
-    <section className="mt-16 md:mt-24">
+    <section className="mt-4 pt-8 border-t border-[#E8B4A8]/40">
       <div className="flex items-center gap-5 mb-2">
         <div className="flex-1 h-px bg-[#E8B4A8]/30" />
         <h2 className="font-heading text-2xl md:text-3xl font-light text-[#2C2220] whitespace-nowrap tracking-wide">Shop the Set</h2>
@@ -83,7 +94,7 @@ export default function ShopTheSet({ set, items, currentId }: { set: ProductSet;
                 {i > 0 && <span className="self-center -mt-14 font-heading text-2xl md:text-3xl text-[#A0622A] font-light shrink-0">+</span>}
                 <div className={`flex-1 basis-0 min-w-0 max-w-[220px] transition-opacity ${on ? "opacity-100" : "opacity-40"}`}>
                   <Link href={`/shop/${p.id}`} className="block relative aspect-square overflow-hidden bg-white">
-                    {p.images?.[0] && <Image src={p.images[0]} alt={p.altText || p.name} fill sizes="(max-width: 768px) 30vw, 220px" className="object-cover" />}
+                    {imageIn(p, tone) && <Image src={imageIn(p, tone)!} alt={p.altText || p.name} fill sizes="(max-width: 768px) 30vw, 220px" className="object-cover" />}
                   </Link>
                   <button
                     type="button"

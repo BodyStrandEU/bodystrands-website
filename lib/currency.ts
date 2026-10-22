@@ -104,6 +104,16 @@ export function formatMoney(eurAmount: number, currency: CurrencyCode, rates: Re
   // or even $43 instead of a clean $40). This is display-only: checkout always charges the
   // exact EUR price and Stripe's own adaptive_pricing (a separate, independently-rounded
   // conversion) handles what the shopper actually pays at checkout.
+  // Euro is what checkout actually charges, so it's always shown exactly (€26.25, not a
+  // rounded €25) — otherwise the price on the page and the price paid wouldn't match.
+  if (currency === "EUR") {
+    return new Intl.NumberFormat(CURRENCY_LOCALE[currency], {
+      style: "currency",
+      currency,
+      minimumFractionDigits: Number.isInteger(eurAmount) ? 0 : 2,
+      maximumFractionDigits: 2,
+    }).format(eurAmount);
+  }
   const rate = rates[currency] ?? 1;
   const step = roundingStep(rate);
   const converted = Math.round(convert(eurAmount, currency, rates) / step) * step;

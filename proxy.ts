@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 import { currencyForCountry } from "@/lib/currency";
 import { CONSENT_COUNTRIES, REGION_COOKIE } from "@/lib/consent";
+import { CATEGORY_META } from "@/lib/shopMeta";
 
 const COOKIE_NAME     = "admin_token";
 const CURRENCY_COOKIE = "bs_currency";
@@ -44,7 +45,12 @@ export function proxy(request: NextRequest) {
   // mere presence), so a shopper's currency stayed stuck at whatever country they were
   // in up to 30 days ago even after they'd moved somewhere else — confirmed Oct 14,
   // 2026 by a user who travelled Turkey -> Germany and kept seeing TRY prices.
-  const response = NextResponse.next();
+  // /shop?category=X is served from the pre-built /shop/c/X page (same public address, so
+  // Google and existing links are unaffected) — a query-string page can't be cached otherwise.
+  const category = pathname === "/shop" ? request.nextUrl.searchParams.get("category") : null;
+  const response = category && Object.hasOwn(CATEGORY_META, category)
+    ? NextResponse.rewrite(new URL(`/shop/c/${encodeURIComponent(category)}`, request.url))
+    : NextResponse.next();
   const country  = request.headers.get("cf-ipcountry") ?? "";
   const currency = currencyForCountry(country);
   response.cookies.set(CURRENCY_COOKIE, currency, { path: "/", maxAge: 60 * 60 * 24 * 30 });

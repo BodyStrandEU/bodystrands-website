@@ -48,14 +48,14 @@ export default function Footer() {
             Handmade body jewelry crafted with love in Portugal. Dainty, minimal, and made to last.
           </p>
           <a
-            href="https://www.instagram.com/bodystrands/"
+            href="https://www.instagram.com/bodystrandseu/"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Bodystrands on Instagram"
             className="flex items-center gap-2 text-[#E8B4A8]/60 hover:text-[#E8B4A8] transition-colors w-fit"
           >
             <InstagramIcon />
-            <span className="text-[0.6rem] tracking-[0.2em] uppercase">@bodystrands</span>
+            <span className="text-[0.6rem] tracking-[0.2em] uppercase">@bodystrandseu</span>
           </a>
         </div>
 

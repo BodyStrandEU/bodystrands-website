@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-const HANDLE = "bodystrands";
+const HANDLE = "bodystrandseu";
 
 function InstagramGlyph() {
   return (

@@ -126,7 +126,7 @@ export default function SuccessPage() {
             Follow our journey
           </p>
           <a
-            href="https://www.instagram.com/bodystrands/"
+            href="https://www.instagram.com/bodystrandseu/"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-[0.65rem] tracking-[0.15em] uppercase text-[#A0622A] hover:text-[#8A5222] transition-colors"
@@ -136,7 +136,7 @@ export default function SuccessPage() {
               <circle cx="12" cy="12" r="4" />
               <circle cx="17.5" cy="6.5" r="0.8" fill="currentColor" stroke="none" />
             </svg>
-            @bodystrands
+            @bodystrandseu
           </a>
         </div>
 

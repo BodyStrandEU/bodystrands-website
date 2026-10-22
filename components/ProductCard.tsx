@@ -230,14 +230,7 @@ export default function ProductCard({ product, priority = false, heroImageOverri
           </div>
         )}
 
-        {combinedImages.map((src, i) => {
-          // Only the photos around the one on screen are mounted (all earlier ones stay, so
-          // swiping back never reloads) — otherwise every card downloads its whole carousel
-          // the moment it scrolls into view, ~8 photos per card on the shop page.
-          const len = combinedImages.length;
-          const near = i <= slideIndex + 1 || i === (slideIndex - 1 + len) % len;
-          if (!near) return null;
-          return (
+        {combinedImages.map((src, i) => (
           <Image
             key={src + i}
             src={src}
@@ -250,8 +243,7 @@ export default function ProductCard({ product, priority = false, heroImageOverri
               i === slideIndex ? "opacity-100" : "opacity-0"
             }`}
           />
-          );
-        })}
+        ))}
 
         {/* Slide dots */}
         {combinedImages.length > 1 && (

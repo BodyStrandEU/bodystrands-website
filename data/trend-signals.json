@@ -1,5 +1,232 @@
 [
   {
+    "date": "2026-10-22",
+    "researchModel": "claude-sonnet-5",
+    "trends": [
+      {
+        "name": "Insect/nature motifs",
+        "what": "Bug-themed jewelry, especially dragonflies, beetles, and bees, is surging as a nature motif for 2026.",
+        "searches": [
+          "bug jewelry trend 2026",
+          "dragonfly necklace",
+          "insect motif jewelry"
+        ],
+        "evidence": "Pinterest's 2026 forecast reports bug jewelry searches up 60 percent (FineColorJewels.com, covering Pinterest's official 2026 Predicts report); National Jeweler also covered the same report.",
+        "sources": [
+          {
+            "name": "FineColorJewels.com",
+            "url": ""
+          },
+          {
+            "name": "National Jeweler",
+            "url": ""
+          }
+        ],
+        "missing": [
+          "beetle motif pieces",
+          "bee motif pieces",
+          "ladybug motif pieces"
+        ],
+        "momentum": "rising",
+        "fit": "partial",
+        "productIds": [
+          "dragonfly-charm-belly-chain",
+          "dragonfly-pendant-necklace"
+        ],
+        "idea": "Promote the dragonfly pieces as part of the rising insect-motif trend."
+      },
+      {
+        "name": "Brooch revival",
+        "what": "Brooches and pins are seeing a major resurgence as a styling accessory for 2026.",
+        "searches": [
+          "brooch aesthetic",
+          "vintage brooch style 2026"
+        ],
+        "evidence": "National Jeweler's Pinterest-trend recap states searches for 'brooch aesthetic' are up 110 percent, naming it one of six major jewelry directions for 2026.",
+        "sources": [
+          {
+            "name": "National Jeweler",
+            "url": ""
+          }
+        ],
+        "missing": [
+          "brooches",
+          "pins"
+        ],
+        "momentum": "rising",
+        "fit": "gap",
+        "productIds": [],
+        "idea": "No action possible; this is a category Bodystrands does not stock."
+      },
+      {
+        "name": "Icy blue / aquamarine color trend",
+        "what": "An icy, aquamarine-toned blue color palette is trending across jewelry for 2026, dubbed 'Extra Celestial'.",
+        "searches": [
+          "icy blue jewelry trend",
+          "turquoise jewelry trend 2026",
+          "aquamarine color jewelry"
+        ],
+        "evidence": "JCK's writeup of Pinterest's 2026 report notes Gen Z and millennials are interested in 'an icy shade of blue,' advising jewelers to stock aquamarine.",
+        "sources": [
+          {
+            "name": "JCK",
+            "url": ""
+          }
+        ],
+        "missing": [],
+        "momentum": "rising",
+        "fit": "we sell it",
+        "productIds": [
+          "turquoise-beaded-choker",
+          "turquoise-beaded-belly-chain",
+          "layered-turquoise-bead-bracelet",
+          "turquoise-zodiac-necklace-stack",
+          "turquoise-beaded-cable-chain-necklace",
+          "beaded-glasses-chain"
+        ],
+        "idea": "Feature the turquoise/icy-blue beaded collection as on-trend for the 2026 color forecast."
+      },
+      {
+        "name": "Anklet stacking",
+        "what": "Wearing multiple anklets layered together as a styling 'uniform' is trending for foot jewelry.",
+        "searches": [
+          "how to stack anklets",
+          "anklet trend 2026",
+          "layered anklet combinations"
+        ],
+        "evidence": "WhoWhatWear's seasonal trend piece observes stylists wearing 'multiple anklets, in fact—like a uniform,' and a separate comeback article credits social platforms for fueling the trend.",
+        "sources": [
+          {
+            "name": "WhoWhatWear",
+            "url": ""
+          }
+        ],
+        "missing": [],
+        "momentum": "rising",
+        "fit": "we sell it",
+        "productIds": [
+          "zodiac-anklet",
+          "cowrie-shell-anklet",
+          "pearl-chain-anklet",
+          "evil-eye-charm-anklet",
+          "birthstone-gemstone-anklet",
+          "barefoot-sandal-toe-chain",
+          "pearl-barefoot-sandal"
+        ],
+        "idea": "Create a styling guide showing how to layer multiple anklets and barefoot sandals together."
+      },
+      {
+        "name": "Fashion-forward glasses chains",
+        "what": "Glasses chains are moving from practical accessory to fashion statement, driven by Gen Z adoption.",
+        "searches": [
+          "glasses chain trend 2026",
+          "cute chain for reading glasses",
+          "trendy readers chain"
+        ],
+        "evidence": "MiaBurton's 2026 eyewear trend report states glasses chains are 'emerging as 2026's must-have accessory,' and EZContacts frames it as a Gen Z-led revival.",
+        "sources": [
+          {
+            "name": "MiaBurton",
+            "url": ""
+          },
+          {
+            "name": "EZContacts",
+            "url": ""
+          }
+        ],
+        "missing": [],
+        "momentum": "rising",
+        "fit": "we sell it",
+        "productIds": [
+          "dainty-eyeglasses-chain",
+          "silver-eyeglasses-chain",
+          "pearl-glasses-chain",
+          "beaded-glasses-chain",
+          "boho-beaded-eyeglasses-chain",
+          "minimalist-glasses-chain"
+        ],
+        "idea": "Launch blog content targeting the glasses chain trend since the catalog is strong but content coverage is currently zero."
+      },
+      {
+        "name": "Hair accessory diversification",
+        "what": "Hair clips, combs, pins, and headbands (seashell clips, tortoiseshell headbands, French pins) are trending for 2026.",
+        "searches": [
+          "trendy hair clips 2026",
+          "seashell hair clip",
+          "tortoiseshell headband trend"
+        ],
+        "evidence": "WhoWhatWear's recurring 2026 hair-accessory coverage highlights seashell clips, tortoiseshell headbands, and French pins as ongoing seasonal trends.",
+        "sources": [
+          {
+            "name": "WhoWhatWear",
+            "url": ""
+          }
+        ],
+        "missing": [
+          "hair clips",
+          "hair combs",
+          "hair pins",
+          "headbands"
+        ],
+        "momentum": "steady",
+        "fit": "gap",
+        "productIds": [],
+        "idea": "No direct product match; our chain-based hair pieces are a different format from the trending clips/pins/headbands."
+      }
+    ],
+    "gaps": [],
+    "blogIdeas": [
+      {
+        "query": "glasses chain trend 2026",
+        "why": "Glasses chains are being called 2026's must-have accessory by eyewear press, and EZContacts frames it as a Gen Z revival.",
+        "productIds": [
+          "dainty-eyeglasses-chain",
+          "pearl-glasses-chain",
+          "beaded-glasses-chain",
+          "minimalist-glasses-chain"
+        ]
+      },
+      {
+        "query": "how to stack anklets",
+        "why": "WhoWhatWear describes stylists stacking multiple anklets like a uniform, with social platforms fueling the trend.",
+        "productIds": [
+          "zodiac-anklet",
+          "cowrie-shell-anklet",
+          "pearl-chain-anklet",
+          "evil-eye-charm-anklet"
+        ]
+      },
+      {
+        "query": "dragonfly jewelry trend 2026",
+        "why": "Pinterest's 2026 report found bug jewelry searches up 60 percent, a fresh motif wave for jewelry.",
+        "productIds": [
+          "dragonfly-charm-belly-chain",
+          "dragonfly-pendant-necklace"
+        ]
+      },
+      {
+        "query": "galentine's day gift ideas",
+        "why": "Mainstream gift roundups and Etsy's standing Galentine Jewelry Gift market page show demand for friend-gifting ahead of Valentine's Day.",
+        "productIds": [
+          "zodiac-charm-bracelet",
+          "pearl-charm-bracelet",
+          "birthstone-bracelet",
+          "initial-letter-anklet"
+        ]
+      },
+      {
+        "query": "jewelry advent calendar ideas",
+        "why": "Active 2026 Jewelry Advent Calendar listings on Amazon show sustained shopper demand for countdown gift sets.",
+        "productIds": [
+          "dainty-chain-bracelet",
+          "snake-belly-chain",
+          "satellite-link-choker",
+          "coin-disc-bracelet"
+        ]
+      }
+    ]
+  },
+  {
     "date": "2026-10-19",
     "researchModel": "claude-opus-5",
     "trends": [

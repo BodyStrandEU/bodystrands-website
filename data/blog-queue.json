@@ -1,5 +1,163 @@
 [
   {
+    "query": "glasses chain trend 2026",
+    "keywords": [
+      "cute chain for reading glasses",
+      "beaded chain for glasses women",
+      "pearl chain for glasses accessory",
+      "stylish eyeglass chain not old fashioned",
+      "trendy readers chain 2026"
+    ],
+    "productIds": [
+      "dainty-eyeglasses-chain",
+      "pearl-glasses-chain",
+      "beaded-glasses-chain",
+      "minimalist-glasses-chain"
+    ],
+    "category": "Style Guide",
+    "months": [
+      11,
+      12,
+      1,
+      2,
+      3
+    ],
+    "productCategories": [
+      "Eyeglasses Chains"
+    ],
+    "source": "research",
+    "researchModel": "claude-sonnet-5",
+    "addedAt": "2026-10-22",
+    "why": "Glasses chains are being called 2026's must-have accessory by eyewear press, and EZContacts frames it as a Gen Z revival."
+  },
+  {
+    "query": "how to stack anklets",
+    "keywords": [
+      "how many anklets should you wear",
+      "anklet trend 2026",
+      "layered anklet combinations",
+      "mixing metal anklets",
+      "cute anklet stack ideas"
+    ],
+    "productIds": [
+      "zodiac-anklet",
+      "cowrie-shell-anklet",
+      "pearl-chain-anklet",
+      "evil-eye-charm-anklet"
+    ],
+    "category": "Style Guide",
+    "months": [
+      11,
+      12,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "productCategories": [
+      "Anklets"
+    ],
+    "source": "research",
+    "researchModel": "claude-sonnet-5",
+    "addedAt": "2026-10-22",
+    "why": "WhoWhatWear describes stylists stacking multiple anklets like a uniform, with social platforms fueling the trend."
+  },
+  {
+    "query": "dragonfly jewelry trend 2026",
+    "keywords": [
+      "dragonfly necklace meaning",
+      "dragonfly pendant symbolism",
+      "insect motif jewelry trend",
+      "nature inspired jewelry 2026",
+      "dragonfly charm belly chain"
+    ],
+    "productIds": [
+      "dragonfly-charm-belly-chain",
+      "dragonfly-pendant-necklace"
+    ],
+    "category": "Inspiration",
+    "months": [
+      11,
+      12,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "productCategories": [
+      "Belly Chains",
+      "Necklaces"
+    ],
+    "source": "research",
+    "researchModel": "claude-sonnet-5",
+    "addedAt": "2026-10-22",
+    "why": "Pinterest's 2026 report found bug jewelry searches up 60 percent, a fresh motif wave for jewelry."
+  },
+  {
+    "query": "galentine's day gift ideas",
+    "keywords": [
+      "best friend jewelry gifts",
+      "matching jewelry for best friends",
+      "galentine's gifts under 30 euros",
+      "friendship bracelet gift ideas 2026"
+    ],
+    "productIds": [
+      "zodiac-charm-bracelet",
+      "pearl-charm-bracelet",
+      "birthstone-bracelet",
+      "initial-letter-anklet"
+    ],
+    "category": "Gift Guide",
+    "months": [
+      12,
+      1,
+      2
+    ],
+    "productCategories": [
+      "Bracelets",
+      "Anklets"
+    ],
+    "source": "research",
+    "researchModel": "claude-sonnet-5",
+    "addedAt": "2026-10-22",
+    "why": "Mainstream gift roundups and Etsy's standing Galentine Jewelry Gift market page show demand for friend-gifting ahead of Valentine's Day."
+  },
+  {
+    "query": "jewelry advent calendar ideas",
+    "keywords": [
+      "diy jewelry advent calendar",
+      "12 days of jewelry gifts",
+      "small jewelry gifts under 25 euros",
+      "christmas countdown gift ideas jewelry"
+    ],
+    "productIds": [
+      "dainty-chain-bracelet",
+      "snake-belly-chain",
+      "satellite-link-choker",
+      "coin-disc-bracelet"
+    ],
+    "category": "Gift Guide",
+    "months": [
+      11,
+      12
+    ],
+    "productCategories": [
+      "Bracelets",
+      "Belly Chains",
+      "Necklaces"
+    ],
+    "source": "research",
+    "researchModel": "claude-sonnet-5",
+    "addedAt": "2026-10-22",
+    "why": "Active 2026 Jewelry Advent Calendar listings on Amazon show sustained shopper demand for countdown gift sets."
+  },
+  {
     "query": "how to wear a charm necklace",
     "keywords": [
       "charm necklace layering ideas",

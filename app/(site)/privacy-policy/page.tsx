@@ -38,7 +38,8 @@ export default function PrivacyPolicyPage() {
             <li><strong>Meta (Facebook) Pixel</strong> — helps us measure the effectiveness of our social media advertising.</li>
             <li><strong>Microsoft Clarity</strong> — records how visitors interact with our site (mouse movement, clicks, and scrolling) and generates heatmaps, so we can identify and fix usability issues. Clarity automatically masks sensitive form fields (such as passwords and payment details) and never records what you type into them. Data collected is processed by Microsoft in line with the <a href="https://privacy.microsoft.com/en-us/privacystatement" className="text-[#A0622A] hover:underline" target="_blank" rel="noopener noreferrer">Microsoft Privacy Statement</a>.</li>
           </ul>
-          <p>None of these tools are active on our internal admin pages. You can opt out of this kind of tracking at any time via your browser&apos;s cookie or tracking-prevention settings.</p>
+          <p className="mb-4">If you are visiting from the European Economic Area, the United Kingdom or Switzerland, none of these tools set cookies or record your visit until you choose &ldquo;Accept&rdquo; in our cookie banner. If you decline, Google Analytics only receives anonymous, cookie-free signals (such as a page being viewed) that cannot identify you. Visitors from other regions have analytics on by default.</p>
+          <p>You can change your choice at any time using &ldquo;Cookie Settings&rdquo; at the bottom of every page. None of these tools are active on our internal admin pages.</p>
         </section>
 
         <section>

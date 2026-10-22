@@ -35,13 +35,14 @@ export const metadata: Metadata = {
     siteName: "Bodystrands",
     locale: "en_US",
     type: "website",
-    images: [{ url: "/images/og-image.jpg", width: 1200, height: 630, alt: "Bodystrands — Handmade Body Jewelry" }],
+    // Square goddess shoulder chain photo — the picture Google shows next to the site (user's choice, Oct 22, 2026)
+    images: [{ url: "/images/og-goddess-shoulder-chain.jpg", width: 1200, height: 1200, alt: "Bodystrands handmade crossover shoulder chain" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Bodystrands — Handmade Body Jewelry",
     description: "Dainty handmade body chains, waist chains, and anklets.",
-    images: ["/images/og-image.jpg"],
+    images: ["/images/og-goddess-shoulder-chain.jpg"],
   },
   robots: { index: true, follow: true },
   verification: {
@@ -61,17 +62,27 @@ export default async function RootLayout({
   return (
     <html lang="en" className={`${cormorant.variable} ${josefin.variable}`}>
       <body>
-        {/* Consent defaults: analytics on by default (opt-out), ads always off.
+        {/* Consent defaults (Google Consent Mode v2) — see lib/consent.ts. EU/UK/CH visitors
+            start denied until they press Accept; Google still gets anonymous cookieless pings.
+            Everyone else starts granted and can opt out from "Cookie settings" in the footer.
             beforeInteractive scripts must be a normal child here, not wrapped in a
             manual <head> tag — Next.js hoists it into <head> itself. */}
         <Script id="consent-default" strategy="beforeInteractive">{`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
+          var bsRegion = (document.cookie.match(/(?:^|; )bs_region=([^;]+)/) || [])[1] || 'eu';
+          var bsChoice = null; try { bsChoice = localStorage.getItem('bs_cookie_consent'); } catch (e) {}
+          window.__bsConsent = bsChoice === 'granted' || (bsRegion === 'row' && bsChoice !== 'denied');
+          var bsState = window.__bsConsent ? 'granted' : 'denied';
           gtag('consent', 'default', {
-            analytics_storage: 'granted',
-            ad_storage: 'denied',
-            wait_for_update: 300
+            analytics_storage: bsState,
+            ad_storage: bsState,
+            ad_user_data: bsState,
+            ad_personalization: bsState,
+            wait_for_update: 500
           });
+          gtag('set', 'ads_data_redaction', true);
+          gtag('set', 'url_passthrough', true);
         `}</Script>
         <CurrencyProvider rates={rates}>
           <CartProvider>
@@ -103,6 +114,7 @@ export default async function RootLayout({
             name:    "Bodystrands",
             url:     "https://www.bodystrands.com",
             logo:    "https://www.bodystrands.com/images/logo.png",
+            image:   "https://www.bodystrands.com/images/og-goddess-shoulder-chain.jpg",
             description: "Handmade body jewelry crafted in high-quality stainless steel. Made in Portugal and Canada.",
             sameAs: ["https://www.instagram.com/bodystrandseu/", "https://www.facebook.com/profile.php?id=61595265520885"],
             contactPoint: { "@type": "ContactPoint", email: "info@bodystrands.com", contactType: "customer service" },
@@ -123,13 +135,17 @@ export default async function RootLayout({
         {/* Microsoft Clarity — session recordings/heatmaps. Skips /admin so it never
             records customer PII (names, emails, addresses) visible in the orders panel. */}
         <Script id="ms-clarity" strategy="afterInteractive">{`
-          if (!window.location.pathname.startsWith('/admin')) {
+          window.__bsLoadClarity = function () {
+            if (window.__bsClarityLoaded || window.location.pathname.startsWith('/admin')) return;
+            window.__bsClarityLoaded = true;
             (function(c,l,a,r,i,t,y){
                 c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
                 t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
                 y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
             })(window, document, "clarity", "script", "xivm4b8y1m");
-          }
+          };
+          // Session recordings only with consent (CookieConsent calls this on Accept)
+          if (window.__bsConsent) window.__bsLoadClarity();
         `}</Script>
 
         {/* Meta Pixel */}
@@ -142,12 +158,13 @@ export default async function RootLayout({
           t.src=v;s=b.getElementsByTagName(e)[0];
           s.parentNode.insertBefore(t,s)}(window,document,'script',
           'https://connect.facebook.net/en_US/fbevents.js');
+          // No consent yet → the pixel holds everything until CookieConsent calls fbq('consent','grant')
+          if (!window.__bsConsent) fbq('consent', 'revoke');
           fbq('init', '1921612571995204');
           if (!window.location.pathname.startsWith('/admin')) {
             fbq('track', 'PageView');
           }
         `}</Script>
-        <noscript dangerouslySetInnerHTML={{ __html: `<img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1921612571995204&ev=PageView&noscript=1"/>` }} />
       </body>
     </html>
   );

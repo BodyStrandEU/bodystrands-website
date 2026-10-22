@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 import { currencyForCountry } from "@/lib/currency";
+import { CONSENT_COUNTRIES, REGION_COOKIE } from "@/lib/consent";
 
 const COOKIE_NAME     = "admin_token";
 const CURRENCY_COOKIE = "bs_currency";
@@ -47,6 +48,10 @@ export function proxy(request: NextRequest) {
   const country  = request.headers.get("cf-ipcountry") ?? "";
   const currency = currencyForCountry(country);
   response.cookies.set(CURRENCY_COOKIE, currency, { path: "/", maxAge: 60 * 60 * 24 * 30 });
+  // Whether this visitor must be asked before analytics run (see lib/consent.ts). Unknown
+  // country (e.g. local dev) counts as "eu" so nobody is tracked without asking by mistake.
+  const region = country && !CONSENT_COUNTRIES.has(country.toUpperCase()) ? "row" : "eu";
+  response.cookies.set(REGION_COOKIE, region, { path: "/", maxAge: 60 * 60 * 24 * 30, sameSite: "lax" });
   return response;
 }
 

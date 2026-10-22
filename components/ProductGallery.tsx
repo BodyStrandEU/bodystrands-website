@@ -318,18 +318,35 @@ export default function ProductGallery({
     if (activeIndex > media.length - 1) setActiveIndex(0);
   }, [activeIndex, media.length]);
 
-  // Buffering: the product's own video loads eagerly (as before); the shared process
-  // video only starts loading once the shopper is one swipe away from it.
+  // Buffering: videos (several MB) wait until the page itself has finished loading, so they
+  // never compete with the main photo on mobile data. After that the product's own video
+  // buffers right away (still ready by the time they swipe to it); the shared process video
+  // only once the shopper is one swipe away from it.
+  const [pageLoaded, setPageLoaded] = useState(false);
+  useEffect(() => {
+    const ready = () => {
+      const w = window as Window & { requestIdleCallback?: (cb: () => void, o?: { timeout: number }) => number };
+      if (w.requestIdleCallback) w.requestIdleCallback(() => setPageLoaded(true), { timeout: 2000 });
+      else setTimeout(() => setPageLoaded(true), 500);
+    };
+    if (document.readyState === "complete") ready();
+    else window.addEventListener("load", ready, { once: true });
+    return () => window.removeEventListener("load", ready);
+  }, []);
+
   const videoIndexKey = videoItems.map((v) => v.src).join("|");
   useEffect(() => {
     media.forEach((item, i) => {
       if (item.type !== "video") return;
       const v = videoRefs.current.get(item.src);
       if (!v || v.preload === "auto") return;
+      // Swiping straight to a video loads it immediately, even before the page settles
+      const onIt = i === activeIndex;
+      if (!pageLoaded && !onIt) return;
       const isProcess = item.src === PROCESS_VIDEO && item.src !== videoSrc;
       if (!isProcess || Math.abs(i - activeIndex) <= 1) { v.preload = "auto"; v.load(); }
     });
-  }, [activeIndex, videoIndexKey, videoSrc]); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [activeIndex, videoIndexKey, videoSrc, pageLoaded]); // eslint-disable-line react-hooks/exhaustive-deps
 
   // Play only the video on screen; pause the rest.
   useEffect(() => {
@@ -432,7 +449,7 @@ export default function ProductGallery({
             muted
             loop
             playsInline
-            preload="metadata"
+            preload="none"
             onCanPlayThrough={() => setReadyVideos((prev) => new Set(prev).add(item.src))}
             onError={() => setFailedVideos((prev) => new Set(prev).add(item.src))}
             className={`absolute inset-0 w-full h-full object-contain transition-opacity duration-300 ${

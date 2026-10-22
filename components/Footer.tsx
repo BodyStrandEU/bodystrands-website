@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { activeCategories } from "@/lib/products";
 import SocialLinks from "@/components/SocialLinks";
+import CookieSettingsLink from "@/components/CookieSettingsLink";
 
 const SHOP_LINKS = [
   { href: "/shop", label: "All Pieces" },
@@ -70,6 +71,7 @@ export default function Footer() {
               {l.label}
             </Link>
           ))}
+          <CookieSettingsLink className="text-left text-[0.65rem] font-light tracking-[0.1em] text-[#E8B4A8]/60 hover:text-[#E8B4A8] transition-colors" />
         </div>
 
         {/* Contact */}

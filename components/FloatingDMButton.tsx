@@ -1,10 +1,10 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { bannerPending } from "@/lib/consent";
 
 const WHATSAPP_NUMBER = "351935483918"; // +351 935 483 918 — Bodystrands Business
 const WHATSAPP_MESSAGE = "Hi! I have a question about a Bodystrands piece.";
-const COOKIE_STORAGE_KEY = "bs_cookie_consent";
 
 function WhatsAppGlyph() {
   return (
@@ -20,10 +20,15 @@ export default function FloatingDMButton() {
   const [cookieBannerShowing, setCookieBannerShowing] = useState(false);
 
   useEffect(() => {
-    setCookieBannerShowing(!localStorage.getItem(COOKIE_STORAGE_KEY));
+    setCookieBannerShowing(bannerPending());
     const onResolved = () => setCookieBannerShowing(false);
+    const onReopen = () => setCookieBannerShowing(true);
     window.addEventListener("bs:cookie-consent-resolved", onResolved);
-    return () => window.removeEventListener("bs:cookie-consent-resolved", onResolved);
+    window.addEventListener("bs:open-cookie-settings", onReopen);
+    return () => {
+      window.removeEventListener("bs:cookie-consent-resolved", onResolved);
+      window.removeEventListener("bs:open-cookie-settings", onReopen);
+    };
   }, []);
 
   return (

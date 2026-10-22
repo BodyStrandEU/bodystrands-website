@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
+import { bannerPending } from "@/lib/consent";
 
 const STORAGE_KEY = "bs_popup";
 
@@ -14,7 +15,7 @@ export default function EmailCapturePopup() {
   useEffect(() => {
     try { if (localStorage.getItem(STORAGE_KEY)) return; } catch { return; }
     let interested = false;
-    const cookieAnswered = () => { try { return !!localStorage.getItem("bs_cookie_consent"); } catch { return true; } };
+    const cookieAnswered = () => !bannerPending();
     const alreadyHandled = () => { try { return !!localStorage.getItem(STORAGE_KEY); } catch { return true; } };
     let shown = false;
     // Show at most once per page view, and never again once it's been closed or subscribed

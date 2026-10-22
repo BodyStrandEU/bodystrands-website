@@ -279,6 +279,11 @@ export default function ProductPageClient({ product, setSlot }: { product: Produ
         <p className="text-sm font-light leading-relaxed tracking-wide text-[#8C7B6E]">
           {product.description}
         </p>
+        {/* AI image disclosure — same wording as every Etsy listing (Etsy AI policy, Oct 2026;
+            California SB 1050 requires it for AI-generated models from Jan 1, 2027). Keep "AI-generated". */}
+        <p className="-mt-3 text-xs font-light leading-relaxed tracking-wide text-[#8C7B6E]/80 italic">
+          Photo note: Some images are AI-generated to show the piece styled and worn. Every piece is 100% handmade by us.
+        </p>
 
         <div className="h-px bg-[#E8B4A8]/40" />
 

@@ -308,19 +308,19 @@ Store in an airtight container when not in use.
 
 Shipping: Dispatches within 1–2 business days.
 
-Photo note: The models in some of these photos are AI-generated, used to show how the piece is worn. The jewelry itself is never altered and is shown exactly as it's made. Photo [N] is a real, unedited photo of the piece.
-
 Please note that as each piece is handcrafted, no two pieces are identical and slight variations may occur.
 
 Check out more jewellery in our shop: bodystrandseu.etsy.com
 
 Thanks for looking! Feel free to message me if you have any questions.
+
+Photo note: The models in some of these photos are AI-generated, used to show how the piece is worn. The jewelry itself is never altered and is shown exactly as it's made.
 ```
 
 ### Photo note (required whenever a listing uses AI models or AI-edited photos)
-- Keep the wording above; replace [N] with the position of the real, unedited photo in the listing.
-- If no model in the listing is AI-generated, drop the first sentence and keep: "All photos show the jewelry exactly as it's made. Photo [N] is a real, unedited photo of the piece."
-- Never claim a photo is unedited unless it is.
+- Always the **last line** of the description (user bulk-added it this way across all Etsy listings, Oct 22, 2026).
+- Optional, once the listing has its real photo: append "Photo [N] is a real, unedited photo of the piece." with [N] = that photo's position. Never claim a photo is unedited unless it is.
+- If no model in the listing is AI-generated, use instead: "All photos show the jewelry exactly as it's made."
 
 ### Key rules for the opening:
 - Bold hook line = short, striking, unexpected angle on the product

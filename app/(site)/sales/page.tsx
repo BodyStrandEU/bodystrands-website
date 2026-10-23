@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { previewImages } from "@/lib/categoryImages";
 import ProductCard from "@/components/ProductCard";
 import { products, CATEGORY_ORDER } from "@/lib/products";
 
@@ -6,6 +7,8 @@ export const metadata: Metadata = {
   title: "Sale — Handmade Body Jewelry | Bodystrands",
   description: "Shop real discounts on handmade body jewelry — selected gold and silver-tone stainless steel pieces, now reduced.",
   alternates: { canonical: "/sales" },
+  // Worn-jewelry photo for Google results and link previews (lib/categoryImages.ts)
+  ...previewImages("/images/products/1c38c724-056b-4eeb-9d8e-69338dee6535.webp", "Pink cross choker necklace worn at the collarbone"),
 };
 
 export default async function SalesPage() {

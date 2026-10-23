@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { previewImages } from "@/lib/categoryImages";
 import Link from "next/link";
 import ProductCard from "@/components/ProductCard";
 import BuyingGuide from "@/components/BuyingGuide";
@@ -10,6 +11,8 @@ export const metadata: Metadata = {
   title: "Christmas Jewelry Gifts for Her — Under €30 | Bodystrands",
   description: "Christmas jewelry gifts for her: personalised initial and birthstone pieces, pearls, charm bracelets and festive necklaces, most under €30. Gift wrap at checkout.",
   alternates: { canonical: "/christmas" },
+  // Worn-jewelry photo for Google results and link previews (lib/categoryImages.ts)
+  ...previewImages("/images/products/f5cc2b92-3d35-49a5-ba5e-9acfdf130aab.png", "Snowflake necklace worn with a green sweater"),
 };
 
 const UNDER_25_MAX = 25;

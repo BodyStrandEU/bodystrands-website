@@ -44,7 +44,8 @@ export const metadata: Metadata = {
     description: "Dainty handmade body chains, waist chains, and anklets.",
     images: ["/images/og-goddess-shoulder-chain.jpg"],
   },
-  robots: { index: true, follow: true },
+  // Lets Google show large photo previews in results and Discover (default is a small thumbnail)
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true, "max-image-preview": "large" } },
   verification: {
     google: "4wuuduuIvTMEvYh_KsNjBGLGBYV3B5yyXhA-jSURoUQ",
     // Pinterest website claim (Oct 2, 2026) — renders <meta name="p:domain_verify">.

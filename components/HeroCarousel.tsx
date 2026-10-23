@@ -63,6 +63,11 @@ const SLIDE_DURATION = 4000;
 
 export default function HeroCarousel() {
   const [active, setActive] = useState(0);
+  // Only slide 1 (jewelry being worn) is in the page Google reads. The other slides
+  // (studio, packaging, gift wrap) mount after the page loads — otherwise Google could pick
+  // the studio shot of pliers and spools as the homepage's search thumbnail (Oct 2026).
+  const [extraSlides, setExtraSlides] = useState(false);
+  useEffect(() => { setExtraSlides(true); }, []);
 
   // Restarts on every slide change, so a slide picked from the progress bars gets its full time.
   useEffect(() => {
@@ -85,7 +90,7 @@ export default function HeroCarousel() {
     <section className="relative h-[calc(100svh-2rem)] min-h-[560px] bg-[#FDF9F7]">
       <div className="absolute inset-x-0 bottom-0 top-[93px] md:top-[95px] overflow-hidden hero-image-reveal">
         <div className={`absolute inset-x-0 top-0 md:bottom-0 ${s0HasMobile ? "bottom-0" : "bottom-[34%]"}`}>
-        {SLIDES.map((s, i) => (
+        {SLIDES.map((s, i) => (i === 0 || extraSlides) && (
           <div
             key={s.image}
             className="absolute inset-0 transition-opacity duration-[1200ms] ease-in-out"
@@ -93,7 +98,7 @@ export default function HeroCarousel() {
           >
             <Image
               src={s.image}
-              alt=""
+              alt={i === 0 ? "Model wearing a handmade Bodystrands shoulder chain" : ""}
               fill
               priority={i === 0}
               className="object-cover hidden md:block"
@@ -102,7 +107,7 @@ export default function HeroCarousel() {
             />
             <Image
               src={s.mobileImage ?? s.image}
-              alt=""
+              alt={i === 0 ? "Model wearing a handmade Bodystrands shoulder chain" : ""}
               fill
               priority={i === 0}
               className="object-cover md:hidden"

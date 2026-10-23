@@ -70,7 +70,8 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
 
   const url = `https://www.bodystrands.com/shop/${product.id}`;
   const symbol = product.currency === "EUR" ? "€" : product.currency === "GBP" ? "£" : "$";
-  const priceLabel = `${symbol}${product.price.toFixed(2)}`;
+  // The price the shopper actually pays (sale price when on sale), matching the page and the feed
+  const priceLabel = `${symbol}${(getSalePrice(product) ?? product.price).toFixed(2)}`;
   const suffix = pickSuffix(product);
   const seo = productSeo(product.id);
   const metaDescription = seo?.description ?? buildMetaDescription(product.altText, product.description, priceLabel);

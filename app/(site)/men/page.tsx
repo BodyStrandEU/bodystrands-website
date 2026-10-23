@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { previewImages } from "@/lib/categoryImages";
 import type { Metadata } from "next";
 import ProductCard from "@/components/ProductCard";
 import { products } from "@/lib/products";
@@ -7,6 +8,8 @@ export const metadata: Metadata = {
   title: "Men's Jewelry — Chains & Bracelets | Bodystrands",
   description: "Men's jewelry: Cuban curb chain bracelets and necklaces in gold and silver-tone stainless steel. Waterproof, tarnish-resistant, handmade.",
   alternates: { canonical: "/men" },
+  // Worn-jewelry photo for Google results and link previews (lib/categoryImages.ts)
+  ...previewImages("/images/products/e29bba22-0986-434e-bbc8-8d795b25e722.png", "Cuban chain bracelets worn on a man's wrist"),
 };
 
 export default async function MenPage() {

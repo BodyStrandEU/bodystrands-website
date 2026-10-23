@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { previewImages } from "@/lib/categoryImages";
 import Link from "next/link";
 import type { Metadata } from "next";
 import ProductCard from "@/components/ProductCard";
@@ -19,6 +20,8 @@ export const metadata: Metadata = {
   title: "Jewelry Gifts for Her — Personalised, Under €40 | Bodystrands",
   description: "Personalised jewelry gifts for her — initial, birthstone and birth flower pieces, pearls and charm bracelets, most €14–€40. Gift wrap at checkout, free sizing.",
   alternates: { canonical: "/gifts" },
+  // Worn-jewelry photo for Google results and link previews (lib/categoryImages.ts)
+  ...previewImages("/images/category-bracelet.jpg", "Personalised initial bracelet worn on the wrist"),
 };
 
 const UNDER_25_MAX = 25;

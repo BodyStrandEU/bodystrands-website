@@ -1,3 +1,4 @@
+import { CATEGORY_IMAGES, previewImages } from "@/lib/categoryImages";
 import { getSalePrice } from "@/lib/pricing";
 import { categorySeo } from "@/lib/seo-overrides";
 import { Suspense } from "react";
@@ -37,6 +38,8 @@ export async function generateMetadata({
       ...CATEGORY_META[category],
       ...categorySeo(category),
       alternates: { canonical: `/shop?category=${encodeURIComponent(category)}` },
+      // This category's own worn-jewelry photo for Google and link previews
+      ...(CATEGORY_IMAGES[category] ? previewImages(CATEGORY_IMAGES[category], `${category} worn by a model — Bodystrands`) : {}),
     };
   }
   return {

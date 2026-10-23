@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { previewImages } from "@/lib/categoryImages";
 import type { Metadata } from "next";
 import ProductCard from "@/components/ProductCard";
 import BuyingGuide from "@/components/BuyingGuide";
@@ -9,6 +10,8 @@ export const metadata: Metadata = {
   title: "Personalised Jewelry — Initial, Birthstone & Zodiac | Bodystrands",
   description: "Personalised jewelry gifts: initial, birthstone, birth flower and zodiac pieces in gold and silver-tone stainless steel, from €20. Pick yours at checkout.",
   alternates: { canonical: "/personalized" },
+  // Worn-jewelry photo for Google results and link previews (lib/categoryImages.ts)
+  ...previewImages("/images/category-necklace.jpg", "Layered initial necklaces worn together"),
 };
 
 export default async function PersonalizedPage() {

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { previewImages } from "@/lib/categoryImages";
 import type { Metadata } from "next";
 import ProductCard from "@/components/ProductCard";
 import BuyingGuide from "@/components/BuyingGuide";
@@ -9,6 +10,8 @@ export const metadata: Metadata = {
   title: "Bridal Jewelry — Back Necklaces, Hair Vines & More | Bodystrands",
   description: "Bridal jewelry for your wedding day: pearl back necklaces, hair vines, head chains and shoulder chains in gold and silver-tone stainless steel, from €24.",
   alternates: { canonical: "/bridal" },
+  // Worn-jewelry photo for Google results and link previews (lib/categoryImages.ts)
+  ...previewImages("/images/bridal/hero-bridesmaid-shoulder-chain.png", "Bridesmaid wearing a shoulder chain"),
 };
 
 export default async function BridalPage() {

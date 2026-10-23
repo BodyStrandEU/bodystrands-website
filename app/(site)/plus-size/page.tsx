@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { previewImages } from "@/lib/categoryImages";
 import type { Metadata } from "next";
 import ProductCard from "@/components/ProductCard";
 import { products } from "@/lib/products";
@@ -7,6 +8,8 @@ export const metadata: Metadata = {
   title: "Plus Size Body Jewelry — Handmade for Curvy Women | Bodystrands",
   description: "Shop plus size belly chains and body chains built from real plus-size measurements, not stretched to fit. Waterproof, tarnish-resistant stainless steel in gold and silver, handmade in Portugal and Canada.",
   alternates: { canonical: "/plus-size" },
+  // Worn-jewelry photo for Google results and link previews (lib/categoryImages.ts)
+  ...previewImages("/images/products/e8fcf52d-dd95-49f0-b01a-646b2f1c24cf.png", "Plus size belly chain worn at the waist"),
 };
 
 export default async function PlusSizePage() {

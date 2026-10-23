@@ -8,8 +8,8 @@ import SearchModal from "@/components/SearchModal";
 import CartIcon from "@/components/CartIcon";
 import { useWishlist } from "@/lib/wishlist";
 import { useCurrency } from "@/lib/currency-context";
+import MobileMenu from "@/components/MobileMenu";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
-import SocialLinks from "@/components/SocialLinks";
 
 function WishlistIcon({ light }: { light?: boolean }) {
   const { ids } = useWishlist();
@@ -322,68 +322,8 @@ export default function Navbar() {
           </div>
         </div>
 
-        {/* Mobile menu — always in DOM, animated via max-height */}
-        <div
-          className={`md:hidden bg-[#FDF9F7] border-t border-[#E8B4A8]/30 transition-all duration-300 ease-in-out ${
-            menuOpen ? "max-h-[80vh] opacity-100 overflow-y-auto" : "max-h-0 opacity-0 overflow-hidden"
-          }`}
-        >
-          <div className="px-6 py-8">
-            <p className="text-[0.52rem] tracking-[0.3em] uppercase text-[#A0622A] mb-4">Shop</p>
-            <Link
-              href="/shop"
-              onClick={() => setMenuOpen(false)}
-              className="block py-2 text-[0.62rem] font-light tracking-[0.18em] uppercase text-[#2C2220] hover:text-[#A0622A] transition-colors"
-            >
-              All Pieces
-            </Link>
-            {activeCategories.map((cat) => (
-              <Link
-                key={cat}
-                href={`/shop?category=${encodeURIComponent(cat)}`}
-                onClick={() => setMenuOpen(false)}
-                className="block py-2 text-[0.62rem] font-light tracking-[0.18em] uppercase text-[#8C7B6E] hover:text-[#2C2220] transition-colors border-t border-[#E8B4A8]/20"
-              >
-                {cat}
-              </Link>
-            ))}
-            <p className="text-[0.52rem] tracking-[0.3em] uppercase text-[#A0622A] mt-6 pt-6 border-t border-[#E8B4A8]/30 mb-4">Gifts</p>
-            {giftLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                onClick={() => setMenuOpen(false)}
-                className="block py-2 text-[0.62rem] font-light tracking-[0.18em] uppercase text-[#8C7B6E] hover:text-[#2C2220] transition-colors border-t border-[#E8B4A8]/20 first:border-t-0"
-              >
-                {link.label}
-              </Link>
-            ))}
-            <div className="mt-6 pt-6 border-t border-[#E8B4A8]/30 flex flex-col gap-4">
-              {pages.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  onClick={() => setMenuOpen(false)}
-                  className={`text-[0.65rem] tracking-[0.22em] uppercase transition-colors ${
-                    link.label === "Sale"
-                      ? "font-semibold text-[#A0622A]"
-                      : "font-light text-[#2C2220] hover:text-[#A0622A]"
-                  }`}
-                >
-                  {link.label}
-                </Link>
-              ))}
-            </div>
-            <div className="mt-6 pt-6 border-t border-[#E8B4A8]/30">
-              <p className="text-[0.52rem] tracking-[0.3em] uppercase text-[#A0622A] mb-3">Follow us</p>
-              <SocialLinks tone="light" />
-            </div>
-            <div className="mt-6 pt-6 border-t border-[#E8B4A8]/30">
-              <p className="text-[0.52rem] tracking-[0.3em] uppercase text-[#A0622A] mb-3">Language</p>
-              <LanguageSwitcher />
-            </div>
-          </div>
-        </div>
+        {/* Full-screen phone menu (SKIMS-style) — portalled to <body>, see MobileMenu.tsx */}
+        <MobileMenu open={menuOpen} onClose={() => setMenuOpen(false)} categories={activeCategories} />
       </div>
     </header>
 

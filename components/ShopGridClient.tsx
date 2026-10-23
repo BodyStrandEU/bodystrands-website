@@ -1,7 +1,9 @@
 "use client";
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import ProductCard from "@/components/ProductCard";
 import type { Product } from "@/lib/products";
+import ShopFilterSort, { DEFAULT_FILTERS, applyFilters, filtersActive, type FilterState } from "@/components/ShopFilterSort";
+import { defaultTone, imageIn } from "@/lib/productSets";
 
 type Section = { category: string; items: Product[] };
 
@@ -33,6 +35,11 @@ export default function ShopGridClient({
   grouped: Section[] | null;
 }) {
   const [cols, setCols] = useState<1 | 2>(2);
+  const [filters, setFilters] = useState<FilterState>(DEFAULT_FILTERS);
+  const active = filtersActive(filters);
+  const results = useMemo(() => (active ? applyFilters(filtered, filters) : filtered), [active, filtered, filters]);
+  // With a Silver filter, cards open on their silver photo (and gold likewise)
+  const heroFor = (p: Product) => (filters.finish && defaultTone(p) !== filters.finish ? imageIn(p, filters.finish) : undefined);
 
   const gridCls =
     cols === 1
@@ -54,9 +61,17 @@ export default function ShopGridClient({
 
   return (
     <div>
-      {/* Column toggle — mobile only */}
-      <div className="flex justify-end mb-5 lg:hidden px-4 md:px-10">
-        <div className="flex items-center gap-0.5 border border-[#E8B4A8]/40 p-1">
+      {/* Filter / Sort (left) + column toggle on phones (right) */}
+      <div className="flex items-center justify-between mb-5 px-4 md:px-10">
+        <div className="flex items-center gap-4">
+          <ShopFilterSort value={filters} onChange={setFilters} resultCount={applyFilters(filtered, filters).length} />
+          {active && (
+            <span className="whitespace-nowrap text-[0.6rem] tracking-[0.15em] uppercase text-[#8C7B6E] pt-0.5">
+              {results.length} {results.length === 1 ? "piece" : "pieces"}
+            </span>
+          )}
+        </div>
+        <div className="flex items-center gap-0.5 border border-[#E8B4A8]/40 p-1 lg:hidden">
           <button
             onClick={() => setCols(2)}
             aria-label="2-column grid"
@@ -75,7 +90,24 @@ export default function ShopGridClient({
         </div>
       </div>
 
-      {grouped ? (
+      {active ? (
+        /* Filtered / sorted — one flat grid */
+        results.length === 0 ? (
+          <div className="py-20 text-center px-6">
+            <p className="text-sm font-light tracking-wide text-[#8C7B6E] mb-6">No pieces match these filters.</p>
+            <button type="button" onClick={() => setFilters(DEFAULT_FILTERS)}
+              className="min-h-[44px] px-6 border border-[#2C2220]/25 text-[0.62rem] tracking-[0.2em] uppercase text-[#2C2220]">
+              Clear filters
+            </button>
+          </div>
+        ) : (
+          <div className={gridCls}>
+            {results.map((product, i) => (
+              <ProductCard key={product.id} product={product} priority={i < 4} heroImageOverride={heroFor(product)} />
+            ))}
+          </div>
+        )
+      ) : grouped ? (
         /* All Pieces — grouped by category */
         <div className="flex flex-col gap-12 md:gap-16">
           {grouped.map((group, gi) => (

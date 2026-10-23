@@ -81,6 +81,15 @@ export default async function RootLayout({
             ad_personalization: bsState,
             wait_for_update: 500
           });
+          // Own visits: open any page once with ?internal=1 on each of your devices (?internal=0
+          // undoes it). Those visits are tagged traffic_type=internal, which GA4's "Internal
+          // traffic" data filter removes from reports once that filter is set to Active.
+          try {
+            var bsQ = new URLSearchParams(location.search).get('internal');
+            if (bsQ === '1') localStorage.setItem('bs_internal', '1');
+            if (bsQ === '0') localStorage.removeItem('bs_internal');
+            if (localStorage.getItem('bs_internal') === '1') gtag('set', { traffic_type: 'internal' });
+          } catch (e) {}
           gtag('set', 'ads_data_redaction', true);
           gtag('set', 'url_passthrough', true);
         `}</Script>

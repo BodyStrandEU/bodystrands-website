@@ -353,8 +353,8 @@ Belly Chains, Back Chains, Body Chains, Shoulder Chains, Anklets, Bracelets, Nec
 - Page transitions: PageTransition component in layout.tsx, key={pathname}, animate-page-in CSS keyframe
 
 ## Shop Page
-- Pre-built and cached (Oct 23, 2026): `/shop` = All Pieces; `/shop?category=X` is rewritten in `next.config.ts` (beforeFiles, one rule per category) to the pre-built `/shop/c/<slug>` page (`categorySlug` in `lib/shopMeta.ts`). Public URL + canonical stay `/shop?category=X`. **Slugs must have no spaces** — OpenNext 404'd encoded spaces ("Back%20Chains"); a proxy.ts rewrite also 404'd on Cloudflare (Oct 22). Test any change here with `npx opennextjs-cloudflare build` + `npx opennextjs-cloudflare preview --port 8799 --local-upstream www.bodystrands.com` before pushing.
-- Filter & Sort (`components/ShopFilterSort.tsx`): finish, price band, on sale; sort featured/newest/price — client-side only.
+- `/shop` stays a **dynamic** page (it reads `searchParams.category`), so it isn't edge-cached like the other pages (~0.5–1 s TTFB). **Two attempts to pre-build category pages both 404'd on the live Worker** and were reverted within minutes: a `proxy.ts` rewrite to `/shop/c/[category]` (Oct 22) and a `next.config.ts` beforeFiles rewrite to `/shop/c/<slug>` (Oct 23) — the second even passed `opennextjs-cloudflare preview` locally, so the local preview is NOT a reliable test for rewrites to pre-rendered dynamic routes. Don't retry without a Cloudflare preview/staging deploy (e.g. `wrangler versions upload` + preview URL) tested before promoting.
+- Filter & Sort (`components/ShopFilterSort.tsx`, used by `ShopGridClient.tsx`): finish, price band, on sale; sort featured/newest/price — client-side only.
 - "All Pieces" view: grouped by category with gold dividers in CATEGORIES order
 - Filtered view: flat grid
 - Grid: grid-cols-2 md:grid-cols-3 xl:grid-cols-4
@@ -425,7 +425,7 @@ The Anthropic API key is NOT in .env.local — ask the user to paste it (or crea
 - **Meta description**: uses `product.altText` automatically in `generateMetadata`
 - **Sitemap**: `app/sitemap.ts` reads `data/products.json` automatically
 - **Blog links**: `scripts/generate-blog-post.mjs` reads `data/products.json` on every run
-- **Category metadata**: `CATEGORY_META` in `lib/shopMeta.ts` covers every category (also drives the category rewrites in `next.config.ts`)
+- **Category metadata**: `CATEGORY_META` in `app/(site)/shop/page.tsx` covers every category
 
 ## SEO Infrastructure (set up June 2026)
 - Google Search Console: verified, sitemap submitted (113+ pages indexed)

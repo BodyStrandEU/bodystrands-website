@@ -353,6 +353,8 @@ Belly Chains, Back Chains, Body Chains, Shoulder Chains, Anklets, Bracelets, Nec
 - Page transitions: PageTransition component in layout.tsx, key={pathname}, animate-page-in CSS keyframe
 
 ## Shop Page
+- Pre-built and cached (Oct 23, 2026): `/shop` = All Pieces; `/shop?category=X` is rewritten in `next.config.ts` (beforeFiles, one rule per category) to the pre-built `/shop/c/<slug>` page (`categorySlug` in `lib/shopMeta.ts`). Public URL + canonical stay `/shop?category=X`. **Slugs must have no spaces** — OpenNext 404'd encoded spaces ("Back%20Chains"); a proxy.ts rewrite also 404'd on Cloudflare (Oct 22). Test any change here with `npx opennextjs-cloudflare build` + `npx opennextjs-cloudflare preview --port 8799 --local-upstream www.bodystrands.com` before pushing.
+- Filter & Sort (`components/ShopFilterSort.tsx`): finish, price band, on sale; sort featured/newest/price — client-side only.
 - "All Pieces" view: grouped by category with gold dividers in CATEGORIES order
 - Filtered view: flat grid
 - Grid: grid-cols-2 md:grid-cols-3 xl:grid-cols-4
@@ -423,7 +425,7 @@ The Anthropic API key is NOT in .env.local — ask the user to paste it (or crea
 - **Meta description**: uses `product.altText` automatically in `generateMetadata`
 - **Sitemap**: `app/sitemap.ts` reads `data/products.json` automatically
 - **Blog links**: `scripts/generate-blog-post.mjs` reads `data/products.json` on every run
-- **Category metadata**: `CATEGORY_META` in `app/(site)/shop/page.tsx` covers all 11 categories
+- **Category metadata**: `CATEGORY_META` in `lib/shopMeta.ts` covers every category (also drives the category rewrites in `next.config.ts`)
 
 ## SEO Infrastructure (set up June 2026)
 - Google Search Console: verified, sitemap submitted (113+ pages indexed)

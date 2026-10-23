@@ -3,7 +3,9 @@ import Link from "next/link";
 import titlePhrases from "@/data/product-title-phrases.json";
 import { products, INFOGRAPHIC_IMAGES, type Product } from "@/lib/products";
 import { getShippingRate, COUNTRY_GROUPS, ALL_COUNTRIES } from "@/lib/shipping";
-import { notFound } from "next/navigation";
+import { notFound, permanentRedirect } from "next/navigation";
+import { getSalePrice } from "@/lib/pricing";
+import { feedVariantId } from "@/lib/merchant";
 import ProductPageClient from "@/components/ProductPageClient";
 import YouMayAlsoLike from "@/components/YouMayAlsoLike";
 import RecentlyViewed from "@/components/RecentlyViewed";
@@ -52,7 +54,7 @@ function buildMetaDescription(altText: string | undefined, description: string, 
 }
 
 export async function generateStaticParams() {
-  return products.map((p) => ({ id: p.id }));
+  return products.filter((p) => p.active !== false).map((p) => ({ id: p.id }));
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }) {
@@ -98,6 +100,10 @@ export default async function ProductPage({ params }: { params: Promise<{ id: st
   const { id } = await params;
   const product = products.find((p) => p.id === id);
   if (!product) notFound();
+  // Inactive = discontinued or a draft waiting for photos: not for sale, so no product page —
+  // a live page told Google it was buyable and Merchant Center queued them for Shopping.
+  // Blog posts and old search results still link to some, so send visitors to the category.
+  if (product.active === false) permanentRedirect(`/shop?category=${encodeURIComponent(product.category)}`);
 
   // JSON-LD structured data for Google Shopping rich results
   const perProductInfographics = new Set(product.infographicImages ?? []);
@@ -173,42 +179,69 @@ export default async function ProductPage({ params }: { params: Promise<{ id: st
     returnFees:            "https://schema.org/ReturnShippingFees",
   };
 
-  const productJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Product",
-    name:          product.name,
+  const BASE = "https://www.bodystrands.com";
+  const abs = (src: string) => (src.startsWith("http") ? src : `${BASE}${src}`);
+  const productUrl = `${BASE}/shop/${product.id}`;
+  // The price checkout charges (sale price when on sale) — must match the merchant feed's sale_price
+  const chargedPrice = (getSalePrice(product) ?? product.price).toFixed(2);
+  const offerFor = (url: string) => ({
+    "@type":          "Offer",
+    url,
+    price:            chargedPrice,
+    priceCurrency:    product.currency ?? "EUR",
+    availability:     "https://schema.org/InStock",
+    itemCondition:    "https://schema.org/NewCondition",
+    priceValidUntil:  new Date(Date.now() + 365 * 86400 * 1000).toISOString().slice(0, 10),
+    shippingDetails,
+    hasMerchantReturnPolicy,
+    seller: { "@type": "Organization", name: "Bodystrands" },
+  });
+  const common = {
     description:   product.description,
-    sku:           product.id,
-    image:         allImages.length > 0 ? allImages : [firstImage],
     material:      "Stainless Steel",
-    itemCondition: "https://schema.org/NewCondition",
-    brand: {
-      "@type": "Brand",
-      name:    "Bodystrands",
-    },
+    brand:         { "@type": "Brand", name: "Bodystrands" },
     category:      product.category,
-    ...(product.variants?.length ? {
-      color: product.variants.join(", "),
-    } : {}),
     ...(aggregateRating ? { aggregateRating } : {}),
     ...(reviewSchema.length > 0 ? { review: reviewSchema } : {}),
-    offers: {
-      "@type":          "Offer",
-      url:              `https://www.bodystrands.com/shop/${product.id}`,
-      price:            product.price.toFixed(2),
-      priceCurrency:    product.currency ?? "EUR",
-      availability:     "https://schema.org/InStock",
-      itemCondition:    "https://schema.org/NewCondition",
-      validFrom:        new Date().toISOString().slice(0, 10),
-      priceValidUntil:  new Date(Date.now() + 365 * 86400 * 1000).toISOString().slice(0, 10),
-      shippingDetails,
-      hasMerchantReturnPolicy,
-      seller: {
-        "@type": "Organization",
-        name:    "Bodystrands",
-      },
-    },
   };
+  const images = (allImages.length > 0 ? allImages : [firstImage]).map(abs);
+  const isSize = (v: string) => /\d\s*(cm|mm|in|")|^(xs|s|m|l|xl|xxl)\b/i.test(v.trim());
+  const variants = product.variants ?? [];
+
+  // Products sold in several versions (gold/silver, sizes, colours) are a ProductGroup whose
+  // variants carry exactly the feed's IDs (lib/merchant.ts), so Google matches page ↔ feed.
+  const productJsonLd = variants.length > 1
+    ? {
+        "@context":     "https://schema.org",
+        "@type":        "ProductGroup",
+        name:           product.name,
+        productGroupID: product.id,
+        url:            productUrl,
+        image:          images,
+        variesBy:       variants.some(isSize) ? ["https://schema.org/size"] : ["https://schema.org/color"],
+        ...common,
+        hasVariant: variants.map((v) => {
+          const hero = product.variantHeroes?.[v] ?? product.variantImages?.[v]?.[0] ?? firstImage;
+          return {
+            "@type": "Product",
+            sku:     feedVariantId(product, v),
+            name:    `${product.name} — ${v}`,
+            image:   abs(hero),
+            ...(isSize(v) ? { size: v } : { color: v.replace(/\s*Tone$/i, "") }),
+            offers:  offerFor(productUrl),
+          };
+        }),
+      }
+    : {
+        "@context": "https://schema.org",
+        "@type":    "Product",
+        name:       product.name,
+        sku:        feedVariantId(product, variants[0] ?? null),
+        image:      images,
+        itemCondition: "https://schema.org/NewCondition",
+        ...common,
+        offers:     offerFor(productUrl),
+      };
 
   const breadcrumbJsonLd = {
     "@context": "https://schema.org",

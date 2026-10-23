@@ -1,6 +1,8 @@
 import { NextResponse } from "next/server";
 import { products, INFOGRAPHIC_IMAGES } from "@/lib/products";
 
+import { feedVariantId } from "@/lib/merchant";
+import { getSalePrice } from "@/lib/pricing";
 const BASE_URL = "https://www.bodystrands.com";
 
 function escapeXml(str: string): string {
@@ -73,12 +75,15 @@ export async function GET() {
 
     const productUrl = `${BASE_URL}/shop/${product.id}`;
     const price = `${product.price.toFixed(2)} ${product.currency ?? "EUR"}`;
+    // The price checkout actually charges when the product is on sale — Google shows it as "was/now"
+    const sale = getSalePrice(product);
+    const salePriceTag = sale !== null ? `<g:sale_price>${escapeXml(`${sale.toFixed(2)} ${product.currency ?? "EUR"}`)}</g:sale_price>` : "";
 
     // Build one feed item per variant (Google Shopping prefers separate items per variant)
     const variants = product.variants?.length ? product.variants : [null];
 
     return variants.map((variant) => {
-      const variantId = variant ? `${product.id}-${variant.toLowerCase().replace(/\s+/g, "-")}` : product.id;
+      const variantId = feedVariantId(product, variant);
       const title = variant ? `${product.name} — ${variant}` : product.name;
 
       // Hero image for this variant
@@ -114,6 +119,7 @@ export async function GET() {
       <g:image_link>${escapeXml(absoluteHero)}</g:image_link>
       ${additionalImageTags}
       <g:price>${escapeXml(price)}</g:price>
+      ${salePriceTag}
       <g:availability>in_stock</g:availability>
       <g:condition>new</g:condition>
       <g:brand>Bodystrands</g:brand>

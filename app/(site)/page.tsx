@@ -49,10 +49,6 @@ const allTiles = [
   { label: "Eyeglasses Chains",  href: "/shop?category=Eyeglasses+Chains",  image: "/images/category-glasses.jpg"  },
   { label: "Leg Chains",         href: "/shop?category=Leg+Chains",         image: "/images/category-leg.jpg"      },
   { label: "Rings",              href: "/shop?category=Rings",              image: "/images/category-rings.jpg"    },
-  // Three collection tiles complete the grid (16 = even rows of 2 on phones and of 4 on desktop)
-  { label: "Bridal",             href: "/bridal",                           image: "/images/bridal/hero-bridesmaid-shoulder-chain.png" },
-  { label: "Gifts",              href: "/gifts",                            image: "/images/hero-gift-wrap-mobile.jpg" },
-  { label: "Sale",               href: "/sales",                            image: "/images/products/1c38c724-056b-4eeb-9d8e-69338dee6535.webp" },
 ];
 
 type Tile = typeof allTiles[number];

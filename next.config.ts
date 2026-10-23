@@ -1,7 +1,6 @@
 import type { NextConfig } from "next";
 // Duplicate blog posts merged into their strongest version (Sep 29, 2026).
 import blogRedirects from "./data/blog-redirects.json";
-import { CATEGORY_META, categorySlug } from "./lib/shopMeta";
 
 const nextConfig: NextConfig = {
   // Lets a phone on the same Wi-Fi load the dev server (dev-only; ignored in production builds)
@@ -25,18 +24,7 @@ const nextConfig: NextConfig = {
   // still sent every product as category 201 = Watches, without age group or gender).
   // One source now: the route.
   async rewrites() {
-    return {
-      // /shop?category=X is served from the pre-built /shop/c/X page so it can be cached like
-      // the rest of the site; the public address (and the canonical Google ranks) stays
-      // /shop?category=X. Only known categories match — anything else falls through to /shop.
-      beforeFiles: Object.keys(CATEGORY_META).map((category) => ({
-        source: "/shop",
-        has: [{ type: "query" as const, key: "category", value: category.replace(/[.*+?^${}()|[\]\\]/g, "\\$&") }],
-        destination: `/shop/c/${categorySlug(category)}`,
-      })),
-      afterFiles: [{ source: "/merchant-feed.xml", destination: "/api/merchant-feed" }],
-      fallback: [],
-    };
+    return [{ source: "/merchant-feed.xml", destination: "/api/merchant-feed" }];
   },
   async redirects() {
     return [

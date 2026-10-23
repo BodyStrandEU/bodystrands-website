@@ -46,13 +46,13 @@ export default function Footer() {
         </div>
 
         {/* Shop */}
-        <div className="flex flex-col gap-0 md:gap-3">
+        <div className="flex flex-col gap-3">
           <p className="text-[0.6rem] tracking-[0.25em] uppercase text-[#E8B4A8]/50 mb-1">Shop</p>
           {SHOP_LINKS.map((l) => (
             <Link
               key={l.href}
               href={l.href}
-              className="py-2.5 md:py-0 text-[0.7rem] md:text-[0.65rem] font-light tracking-[0.1em] text-[#E8B4A8]/70 md:text-[#E8B4A8]/60 hover:text-[#E8B4A8] transition-colors"
+              className="text-[0.65rem] font-light tracking-[0.1em] text-[#E8B4A8]/60 hover:text-[#E8B4A8] transition-colors"
             >
               {l.label}
             </Link>
@@ -60,26 +60,26 @@ export default function Footer() {
         </div>
 
         {/* Info */}
-        <div className="flex flex-col gap-0 md:gap-3">
+        <div className="flex flex-col gap-3">
           <p className="text-[0.6rem] tracking-[0.25em] uppercase text-[#E8B4A8]/50 mb-1">Info</p>
           {INFO_LINKS.map((l) => (
             <Link
               key={l.href}
               href={l.href}
-              className="py-2.5 md:py-0 text-[0.7rem] md:text-[0.65rem] font-light tracking-[0.1em] text-[#E8B4A8]/70 md:text-[#E8B4A8]/60 hover:text-[#E8B4A8] transition-colors"
+              className="text-[0.65rem] font-light tracking-[0.1em] text-[#E8B4A8]/60 hover:text-[#E8B4A8] transition-colors"
             >
               {l.label}
             </Link>
           ))}
-          <CookieSettingsLink className="text-left py-2.5 md:py-0 text-[0.7rem] md:text-[0.65rem] font-light tracking-[0.1em] text-[#E8B4A8]/70 md:text-[#E8B4A8]/60 hover:text-[#E8B4A8] transition-colors" />
+          <CookieSettingsLink className="text-left text-[0.65rem] font-light tracking-[0.1em] text-[#E8B4A8]/60 hover:text-[#E8B4A8] transition-colors" />
         </div>
 
         {/* Contact */}
-        <div className="flex flex-col gap-0 md:gap-3">
+        <div className="flex flex-col gap-3">
           <p className="text-[0.6rem] tracking-[0.25em] uppercase text-[#E8B4A8]/50 mb-1">Contact</p>
           <a
             href="mailto:info@bodystrands.com"
-            className="py-2.5 md:py-0 text-[0.7rem] md:text-[0.65rem] font-light tracking-[0.1em] text-[#E8B4A8]/70 md:text-[#E8B4A8]/60 hover:text-[#E8B4A8] transition-colors"
+            className="text-[0.65rem] font-light tracking-[0.1em] text-[#E8B4A8]/60 hover:text-[#E8B4A8] transition-colors"
           >
             info@bodystrands.com
           </a>
@@ -87,7 +87,7 @@ export default function Footer() {
             href="https://wa.me/351935483918?text=Hi!%20I%20have%20a%20question%20about%20a%20Bodystrands%20piece."
             target="_blank"
             rel="noopener noreferrer"
-            className="py-2.5 md:py-0 text-[0.7rem] md:text-[0.65rem] font-light tracking-[0.1em] text-[#E8B4A8]/70 md:text-[#E8B4A8]/60 hover:text-[#E8B4A8] transition-colors"
+            className="text-[0.65rem] font-light tracking-[0.1em] text-[#E8B4A8]/60 hover:text-[#E8B4A8] transition-colors"
           >
             WhatsApp: +351 935 483 918
           </a>

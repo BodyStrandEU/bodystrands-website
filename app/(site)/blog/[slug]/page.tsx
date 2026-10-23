@@ -4,8 +4,6 @@ import Link from "next/link";
 import Image from "next/image";
 import blogPosts from "@/data/blog-posts.json";
 import { products } from "@/lib/products";
-import { getSalePrice } from "@/lib/pricing";
-import { liveBlogHtml } from "@/lib/blogLive";
 import type { Metadata } from "next";
 
 type Props = { params: Promise<{ slug: string }> };
@@ -145,13 +143,13 @@ export default async function BlogPostPage({ params }: Props) {
               <div key={i}>
                 {block.text && (
                   <p className="text-sm font-light leading-loose tracking-wide text-[#2C2220]/80 mb-3"
-                    dangerouslySetInnerHTML={{ __html: liveBlogHtml(block.text) }}
+                    dangerouslySetInnerHTML={{ __html: block.text }}
                   />
                 )}
                 <ul className="list-disc pl-5 flex flex-col gap-2 marker:text-[#A0622A]">
                   {block.items.map((item, j) => (
                     <li key={j} className="text-sm font-light leading-loose tracking-wide text-[#2C2220]/80"
-                      dangerouslySetInnerHTML={{ __html: liveBlogHtml(item) }}
+                      dangerouslySetInnerHTML={{ __html: item }}
                     />
                   ))}
                 </ul>
@@ -162,7 +160,7 @@ export default async function BlogPostPage({ params }: Props) {
               </h2>
             ) : (
               <p key={i} className="text-sm font-light leading-loose tracking-wide text-[#2C2220]/80"
-                dangerouslySetInnerHTML={{ __html: liveBlogHtml(block.text) }}
+                dangerouslySetInnerHTML={{ __html: block.text }}
               />
             )
           )}
@@ -196,13 +194,7 @@ export default async function BlogPostPage({ params }: Props) {
                     <Image src={p.images[0]} alt={p.name} fill sizes="(max-width: 768px) 50vw, 180px" className="object-cover transition-transform duration-500 group-hover:scale-105" />
                   </div>
                   <span className="text-xs font-light text-[#2C2220] leading-snug group-hover:text-[#A0622A] transition-colors">{p.name}</span>
-                  <span className="text-[0.65rem] tracking-wide text-[#8C7B6E]">
-                    {getSalePrice(p) !== null ? (
-                      <><span className="text-[#A0622A]">€{getSalePrice(p)}</span> <span className="line-through text-[#8C7B6E]/60">€{p.price}</span></>
-                    ) : (
-                      <>€{p.price}</>
-                    )}
-                  </span>
+                  <span className="text-[0.65rem] tracking-wide text-[#8C7B6E]">€{p.price}</span>
                 </Link>
               ))}
             </div>

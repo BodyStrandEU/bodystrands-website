@@ -67,7 +67,7 @@ export const PERSONALIZED_CONTENT: CategoryContent = {
 
 export const BRIDAL_CONTENT: CategoryContent = {
   intro:
-    "Bridal jewelry for your wedding day: back necklaces for open-back gowns, hair vines and head chains for your bridal hairstyle, and shoulder chains for off-shoulder dresses — in pearl and gold or silver-tone stainless steel, from €24 to €50.",
+    "Bridal jewelry for your wedding day: back necklaces for open-back gowns, hair vines and head chains for your bridal hairstyle, and shoulder chains for off-shoulder dresses — in pearl and gold or silver-tone stainless steel, handmade by us.",
   guide: [
     { type: "heading", text: "Back necklaces for backless gowns" },
     { type: "paragraph", text: "Our biggest bridal category — the " + link("pearl-wedding-back-necklace", "Pearl Wedding Back Necklace") + ", " + link("pearl-evening-backdrop-necklace", "Pearl Evening Backdrop Necklace") + ", " + link("minimalist-pearl-back-necklace", "Minimalist Pearl Back Necklace") + ", " + link("bridal-pearl-back-necklace", "Bridal Pearl Back Necklace") + ", " + link("pearl-bridal-back-chain", "Pearl Bridal Back Chain") + ", " + link("bridal-open-back-necklace", "Bridal Open-Back Necklace") + ", " + link("boho-back-chain", "Boho Back Chain") + " and " + link("pearl-backdrop-necklace", "Pearl Backdrop Necklace") + " all drape down the spine, designed to sit in the open back of a wedding gown." },
@@ -75,10 +75,25 @@ export const BRIDAL_CONTENT: CategoryContent = {
     { type: "paragraph", text: "The " + link("bridal-forehead-chain", "Bridal Forehead Chain") + ", " + link("pearl-bridal-head-chain", "Pearl Bridal Head Chain") + " and " + link("bridal-hair-vine-chain", "Bridal Hair Vine Chain") + " are about your hairstyle, not your dress — they work with an up-do or loose bridal hair, worn alone or layered with a veil, with any neckline or back." },
     { type: "heading", text: "Shoulder chains" },
     { type: "paragraph", text: "The " + link("bridal-shoulder-chain", "Bridal Shoulder Chain") + " and " + link("bridal-shoulder-necklace", "Bridal Shoulder Necklace") + " drape over one or both shoulders — made for off-shoulder and strapless gowns." },
+    { type: "heading", text: "Which piece for your neckline?" },
+    { type: "list", items: [
+      "Open back or low back: a back necklace, so the drop runs down your spine and the back of the dress looks finished in photos.",
+      "Off-shoulder or strapless: a shoulder chain that drapes over the shoulder and upper arm, or a fine necklace close to the collarbone.",
+      "High neck or lace bodice: keep the neck bare and wear a hair vine or head chain instead.",
+      "Short or beach wedding dress: a barefoot sandal or anklet, which stays on in sand and water.",
+    ] },
+    { type: "heading", text: "Complete bridal sets" },
+    { type: "paragraph", text: "Two sets put head, shoulder and hand together in one finish, 10% off when you buy the pieces together. The Bridal Chain Set in fine chain:" },
+    { type: "products", ids: ["bridal-forehead-chain", "bridal-shoulder-chain", "silver-finger-hand-chain"] },
+    { type: "paragraph", text: "And the Pearl Wedding Set, all pearl:" },
+    { type: "products", ids: ["pearl-bridal-head-chain", "pearl-shoulder-necklace", "pearl-hand-chain"] },
+    { type: "heading", text: "Bridesmaid jewelry" },
+    { type: "paragraph", text: "For bridesmaids, choose one piece and order it in the same finish for everyone, or give each bridesmaid her own initial or birthstone piece. Message us with the number of pieces and we will help you put the set together." },
     { type: "heading", text: "Fit for your dress" },
     { type: "paragraph", text: "Most back necklaces come with extender sizes, so they can sit anywhere from a low to very low back opening. If you know your exact measurements, message us after ordering and we'll make it to size for free." },
   ],
   faq: [
+    { question: "What necklace do you wear with a backless wedding dress?", answer: "A back necklace: it sits at the front like a normal necklace, with a chain or pearl drop that runs down your spine. Pick a drop that ends just above where the opening of the dress stops." },
     { question: "Will a bridal back necklace fit my dress?", answer: "Most come with multiple extender sizes to suit different back openings. Message us your exact measurement after ordering and we'll make it to fit for free." },
     { question: "Can I wear bridal jewelry during the ceremony and reception?", answer: "Yes. Everything is stainless steel — waterproof and tarnish-resistant, so it holds up through a first dance, a humid venue, or even rain." },
     { question: "Do you make bridesmaid sets?", answer: "Message us if you'd like to order several of the same piece for your bridal party — we're happy to help coordinate." },

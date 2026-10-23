@@ -37,6 +37,8 @@ export function liveBlogHtml(html: string): string {
 // Back Chains page at positions 10–13 for those searches (Oct 2026).
 const CATEGORY_PHRASES: [RegExp, string][] = [
   [/\b(back necklaces?|back chains?|backdrop necklaces?|back jewelry|backless dress(?:es)?)\b/i, "Back Chains"],
+  // Wedding wording → the Bridal page (a collection, not a shop category)
+  [/\b(bridal|wedding dress(?:es)?|wedding gowns?|bridesmaids?|brides?)\b/i, "/bridal"],
   [/\b(shoulder chains?|arm chains?|arm necklaces?)\b/i, "Shoulder Chains"],
   [/\b(belly chains?|waist chains?)\b/i, "Belly Chains"],
   [/\b(body chains?|body harness(?:es)?)\b/i, "Body Chains"],
@@ -60,7 +62,7 @@ export function createCategoryLinker() {
         const m = part.match(re);
         if (!m || m.index === undefined) continue;
         done.add(category);
-        const href = `/shop?category=${encodeURIComponent(category)}`;
+        const href = category.startsWith("/") ? category : `/shop?category=${encodeURIComponent(category)}`;
         part = part.slice(0, m.index) + `<a href="${href}">${m[0]}</a>` + part.slice(m.index + m[0].length);
       }
       return part;

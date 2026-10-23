@@ -50,7 +50,7 @@ function ReviewCard({ review }: { review: Review }) {
       </p>
 
       {/* Review text */}
-      <p className="text-[0.78rem] font-light leading-relaxed text-[#8C7B6E] flex-1">
+      <p className="text-[0.78rem] font-light leading-relaxed text-[#8C7B6E] flex-1 line-clamp-5 md:line-clamp-6">
         &ldquo;{review.text}&rdquo;
       </p>
 

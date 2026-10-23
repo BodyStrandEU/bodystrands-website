@@ -1,5 +1,6 @@
 import type { CategoryContent } from "@/lib/category-content";
 import { products } from "@/lib/products";
+import { liveBlogHtml } from "@/lib/blogLive";
 import ProductCard from "@/components/ProductCard";
 
 // Buying guide + FAQ block (with FAQPage structured data) shared by category pages
@@ -16,7 +17,7 @@ export default function BuyingGuide({ label, content }: { label: string; content
           ) : block.type === "list" ? (
             <ul key={i} className="list-disc pl-5 flex flex-col gap-2 marker:text-[#A0622A]">
               {block.items.map((item, j) => (
-                <li key={j} className="text-sm font-light leading-loose tracking-wide text-[#2C2220]/80" dangerouslySetInnerHTML={{ __html: item }} />
+                <li key={j} className="text-sm font-light leading-loose tracking-wide text-[#2C2220]/80" dangerouslySetInnerHTML={{ __html: liveBlogHtml(item) }} />
               ))}
             </ul>
           ) : block.type === "products" ? (
@@ -29,7 +30,7 @@ export default function BuyingGuide({ label, content }: { label: string; content
                 ))}
             </div>
           ) : (
-            <p key={i} className="text-sm font-light leading-loose tracking-wide text-[#2C2220]/80" dangerouslySetInnerHTML={{ __html: block.text }} />
+            <p key={i} className="text-sm font-light leading-loose tracking-wide text-[#2C2220]/80" dangerouslySetInnerHTML={{ __html: liveBlogHtml(block.text) }} />
           )
         )}
       </div>

@@ -106,7 +106,8 @@ export default function MobileMenu({ open, onClose, categories }: { open: boolea
   if (!mounted || !open) return null;
 
   const categoryLinks: NavLink[] = [
-    ...categories.map((c) => ({ href: `/shop?category=${encodeURIComponent(c)}`, label: c })),
+    // Shoppers search "arm chain" for the same pieces (Search Console, Oct 2026)
+    ...categories.map((c) => ({ href: `/shop?category=${encodeURIComponent(c)}`, label: c === "Shoulder Chains" ? "Shoulder & Arm Chains" : c })),
   ];
 
   return createPortal(

@@ -5,7 +5,7 @@ import Image from "next/image";
 import blogPosts from "@/data/blog-posts.json";
 import { products } from "@/lib/products";
 import { getSalePrice } from "@/lib/pricing";
-import { liveBlogHtml } from "@/lib/blogLive";
+import { liveBlogHtml, createCategoryLinker } from "@/lib/blogLive";
 import type { Metadata } from "next";
 
 type Props = { params: Promise<{ slug: string }> };
@@ -79,6 +79,8 @@ export default async function BlogPostPage({ params }: Props) {
   const { slug } = await params;
   const post = blogPosts.find((p) => p.slug === slug);
   if (!post) notFound();
+  // First mention of each category phrase links to its category page (lib/blogLive.ts)
+  const linkCategories = createCategoryLinker();
 
   const blocks: ContentBlock[] = normalizeContent(post.content);
 
@@ -145,13 +147,13 @@ export default async function BlogPostPage({ params }: Props) {
               <div key={i}>
                 {block.text && (
                   <p className="text-sm font-light leading-loose tracking-wide text-[#2C2220]/80 mb-3"
-                    dangerouslySetInnerHTML={{ __html: liveBlogHtml(block.text) }}
+                    dangerouslySetInnerHTML={{ __html: linkCategories(liveBlogHtml(block.text)) }}
                   />
                 )}
                 <ul className="list-disc pl-5 flex flex-col gap-2 marker:text-[#A0622A]">
                   {block.items.map((item, j) => (
                     <li key={j} className="text-sm font-light leading-loose tracking-wide text-[#2C2220]/80"
-                      dangerouslySetInnerHTML={{ __html: liveBlogHtml(item) }}
+                      dangerouslySetInnerHTML={{ __html: linkCategories(liveBlogHtml(item)) }}
                     />
                   ))}
                 </ul>
@@ -162,7 +164,7 @@ export default async function BlogPostPage({ params }: Props) {
               </h2>
             ) : (
               <p key={i} className="text-sm font-light leading-loose tracking-wide text-[#2C2220]/80"
-                dangerouslySetInnerHTML={{ __html: liveBlogHtml(block.text) }}
+                dangerouslySetInnerHTML={{ __html: linkCategories(liveBlogHtml(block.text)) }}
               />
             )
           )}

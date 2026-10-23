@@ -1,3 +1,4 @@
+import { getSalePrice } from "@/lib/pricing";
 import { categorySeo } from "@/lib/seo-overrides";
 import { Suspense } from "react";
 import { CATEGORY_CONTENT } from "@/lib/category-content";
@@ -92,7 +93,8 @@ export default async function ShopPage({
           </p>
           {content && (
             <p className="mt-5 max-w-2xl text-sm font-light leading-loose tracking-wide text-[#2C2220]/80">
-              {content.intro}
+              {/* "from €X" in the intro always shows the category's current lowest price (sale included) */}
+              {content.intro.replace(/from €[\d.]+/, `from €${Math.min(...filtered.map((p) => getSalePrice(p) ?? p.price)).toFixed(2).replace(/\.00$/, "")}`)}
             </p>
           )}
         </div>

@@ -27,10 +27,10 @@ const link = (id: string, name: string) => `<a href="/shop/${id}">${name}</a>`;
 export const CATEGORY_CONTENT: Partial<Record<string, CategoryContent>> = {
   "Back Chains": {
     intro:
-      "A back necklace (also called a back chain or backdrop necklace) sits at the front like a normal necklace, with a second chain that drops down your spine. It's made for backless dresses, wedding gowns and open-back tops. Every piece here is handmade in stainless steel, in gold or silver tone, from €24.",
+      "A back necklace (also called a back chain, back body chain or backdrop necklace) sits at the front like a normal necklace, with a second chain that drops down your spine. It's the jewelry made for backless dresses, wedding gowns and open-back tops. Every piece here is handmade in stainless steel, in gold or silver tone.",
     guide: [
       { type: "heading", text: "How does a back necklace work?" },
-      { type: "paragraph", text: "The front sits at your collarbone. At the back, a length of chain, pearls or charms hangs from the clasp and runs down your spine, so the jewelry is seen from behind as much as from the front. Lariat styles like the " + link("pearl-lariat-back-necklace", "Pearl Lariat Back Necklace") + " let the drop swing freely, and the " + link("reversible-pearl-lariat-necklace", "Reversible Pearl Lariat Necklace") + " can be turned around and worn with the drop at the front." },
+      { type: "paragraph", text: "The front sits at your collarbone. At the back, a length of chain, pearls or charms hangs from the clasp and runs down your spine, so the jewelry is seen from behind as much as from the front. Lariat styles like the " + link("pearl-lariat-back-necklace", "Pearl Lariat Back Necklace") + " let the drop swing freely." },
       { type: "heading", text: "Which back jewelry suits your dress?" },
       { type: "list", items: [
         "Wedding gown: pearl pieces read as bridal. Try the " + link("pearl-wedding-back-necklace", "Pearl Wedding Back Necklace") + ", " + link("bridal-pearl-back-necklace", "Bridal Pearl Back Necklace") + " or " + link("bridal-open-back-necklace", "Bridal Open-Back Necklace") + ".",
@@ -39,6 +39,7 @@ export const CATEGORY_CONTENT: Partial<Record<string, CategoryContent>> = {
         "Minimal and everyday: the " + link("dainty-backdrop-back-necklace", "Dainty Backdrop Back Necklace") + " or " + link("minimalist-pearl-back-necklace", "Minimalist Pearl Back Necklace") + " keep it to one fine line.",
         "Something personal: the " + link("personalized-birthstone-back-necklace", "Personalized Birthstone Back Necklace") + " carries a birthstone charm at the back.",
       ] },
+      { type: "products", ids: ["bridal-pearl-back-necklace", "pearl-evening-backdrop-necklace", "boho-back-chain", "dainty-backdrop-back-necklace"] },
       { type: "heading", text: "Getting the drop length right" },
       { type: "paragraph", text: "Measure from the base of your neck down your spine to where the opening of your dress ends. The end of the drop should sit a little above the fabric so it hangs freely. Several of our back necklaces come with small (+7 cm) and medium (+14 cm) extender options for deeper backs." },
       { type: "paragraph", text: "Need an exact length? Most pieces can be made to your measurements for free. Just message us after checkout with your size." },
@@ -49,13 +50,15 @@ export const CATEGORY_CONTENT: Partial<Record<string, CategoryContent>> = {
       { question: "What is a back necklace called?", answer: "It goes by several names: back necklace, back chain, backdrop necklace or back drop necklace. They all mean a necklace with a second chain or drop that hangs down your back." },
       { question: "What necklace do you wear with a backless dress?", answer: "A back necklace, which hangs a chain or pearl drop down your spine so the open back becomes part of the look. Pick a drop length that ends just above where the dress opening stops." },
       { question: "How long should the back drop be?", answer: "Measure from the base of your neck to where your dress opening ends and choose a drop slightly shorter than that. Many of our back necklaces offer +7 cm and +14 cm extenders, and we can make a custom length for free." },
+      { question: "What jewelry goes with a backless wedding dress?", answer: "A pearl back necklace is the classic choice: the drop runs down your spine so your open back looks finished in photos. Keep the front simple, and pick a drop that ends just above where the dress opening stops." },
+      { question: "Can you wear a back chain with a low-back top or swimsuit?", answer: "Yes. Fine chain back necklaces work with open-back tops, bodysuits and swimwear, and the stainless steel is water-resistant for beach days." },
       { question: "Are your back necklaces waterproof?", answer: "The chains are stainless steel, which is water-resistant and tarnish-resistant for everyday wear. For pieces with pearls, avoid long soaks and wipe them dry after wearing." },
     ],
   },
 
   "Shoulder Chains": {
     intro:
-      "Shoulder chains put jewelry where people don't expect it: chains that connect at the neck and drape across one or both shoulders. Handmade in stainless steel, in gold or silver tone, from €20.",
+      "Shoulder chains, also called arm chains or arm necklaces, put jewelry where people don't expect it: chains that connect at the neck and drape across one or both shoulders and down the upper arm. Handmade in stainless steel, in gold or silver tone.",
     guide: [
       { type: "heading", text: "Which shoulder chain is right for you?" },
       { type: "paragraph", text: "A shoulder chain connects at your neck and drapes over one or both shoulders, like the " + link("goddess-shoulder-chain", "Goddess Shoulder Chain") + ", " + link("multi-strand-shoulder-chain", "Multi Strand Shoulder Chain") + " or " + link("double-shoulder-chest-chain", "Double Shoulder Chest Chain") + ". The " + link("silver-shoulder-harness", "Silver Shoulder Harness") + " is a more structured shape, sized S to XL." },
@@ -70,6 +73,7 @@ export const CATEGORY_CONTENT: Partial<Record<string, CategoryContent>> = {
       { type: "paragraph", text: "Fit depends on your shoulders and chest, and the harness comes in S, M, L and XL. If you're between sizes, message us after checkout and we'll make it to your measurements for free." },
     ],
     faq: [
+      { question: "Is an arm chain the same as a shoulder chain?", answer: "Mostly, yes. Arm chain, arm necklace and shoulder chain are all used for jewelry that drapes from the neck or shoulder down the upper arm. Ours attach at the neck or to a strap and sit across the shoulder and upper arm." },
       { question: "Can you wear a shoulder chain to a wedding?", answer: "Yes. Bridal shoulder chains are designed for brides and bridesmaids and look good with strapless and off-shoulder dresses. As a guest, choose a fine, simple chain so it doesn't compete with the bride." },
       { question: "Are shoulder chains waterproof?", answer: "Our shoulder chains are stainless steel, which is water-resistant and tarnish-resistant, so they can handle a swim or a shower." },
     ],

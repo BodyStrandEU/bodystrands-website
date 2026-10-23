@@ -318,11 +318,24 @@ export default function ProductGallery({
     if (activeIndex > media.length - 1) setActiveIndex(0);
   }, [activeIndex, media.length]);
 
-  // Buffering: videos (several MB) wait until the page itself has finished loading, so they
-  // never compete with the main photo on mobile data. After that the product's own video
-  // buffers right away (still ready by the time they swipe to it); the shared process video
-  // only once the shopper is one swipe away from it.
+  // Buffering: videos (several MB each) download only once the shopper shows interest in the
+  // gallery — their first touch/swipe/click on it, or landing on a video — and never before
+  // the page itself has finished loading. Shoppers who never touch the gallery don't spend
+  // ~4 MB of mobile data on a video they won't see. After the first touch, any video one
+  // swipe away buffers in the background so it's usually ready when they get there.
   const [pageLoaded, setPageLoaded] = useState(false);
+  const [galleryTouched, setGalleryTouched] = useState(false);
+  useEffect(() => {
+    const el = mainRef.current;
+    if (!el || galleryTouched) return;
+    const touched = () => setGalleryTouched(true);
+    el.addEventListener("pointerdown", touched, { passive: true });
+    el.addEventListener("touchstart", touched, { passive: true });
+    return () => { el.removeEventListener("pointerdown", touched); el.removeEventListener("touchstart", touched); };
+  }, [galleryTouched]);
+  // Any slide change (arrows, thumbnails, dots, swipe) also counts as interest
+  const firstIndex = useRef(activeIndex);
+  useEffect(() => { if (activeIndex !== firstIndex.current) setGalleryTouched(true); }, [activeIndex]);
   useEffect(() => {
     const ready = () => {
       const w = window as Window & { requestIdleCallback?: (cb: () => void, o?: { timeout: number }) => number };
@@ -342,11 +355,9 @@ export default function ProductGallery({
       if (!v || v.preload === "auto") return;
       // Swiping straight to a video loads it immediately, even before the page settles
       const onIt = i === activeIndex;
-      if (!pageLoaded && !onIt) return;
-      const isProcess = item.src === PROCESS_VIDEO && item.src !== videoSrc;
-      if (!isProcess || Math.abs(i - activeIndex) <= 1) { v.preload = "auto"; v.load(); }
+      if (onIt || (pageLoaded && galleryTouched && Math.abs(i - activeIndex) <= 1)) { v.preload = "auto"; v.load(); }
     });
-  }, [activeIndex, videoIndexKey, videoSrc, pageLoaded]); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [activeIndex, videoIndexKey, videoSrc, pageLoaded, galleryTouched]); // eslint-disable-line react-hooks/exhaustive-deps
 
   // Play only the video on screen; pause the rest.
   useEffect(() => {

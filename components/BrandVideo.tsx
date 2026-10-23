@@ -6,6 +6,16 @@ export default function BrandVideo({ src }: { src: string }) {
   const wrapRef   = useRef<HTMLDivElement>(null);
   const [muted, setMuted] = useState(true);
   const [ended, setEnded] = useState(false);
+  // The video file (~1.4 MB) only starts downloading once the visitor scrolls near it,
+  // so it never competes with the top of the homepage on mobile data.
+  const [near, setNear] = useState(false);
+  useEffect(() => {
+    const el = wrapRef.current;
+    if (!el) return;
+    const obs = new IntersectionObserver(([e]) => { if (e.isIntersecting) { setNear(true); obs.disconnect(); } }, { rootMargin: "400px 0px" });
+    obs.observe(el);
+    return () => obs.disconnect();
+  }, []);
 
   // Play when visible, pause when scrolled away
   useEffect(() => {
@@ -53,7 +63,7 @@ export default function BrandVideo({ src }: { src: string }) {
     <div ref={wrapRef} className="relative aspect-square overflow-hidden bg-[#2C2220]">
       <video
         ref={videoRef}
-        src={src}
+        src={near ? src : undefined}
         autoPlay
         muted
         loop

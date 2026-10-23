@@ -445,6 +445,16 @@ The Anthropic API key is NOT in .env.local — ask the user to paste it (or crea
 - All product pages have keyword-rich titles via CATEGORY_SUFFIX mapping
 - Blog posts auto-link to products + category pages for internal linking
 
+## SEO refresh rule — UPDATED Oct 23, 2026 (supersedes the Oct 8 rule below where they differ)
+User agreed after comparing with Google's own guidance ("i think they have a point… yes you can"). Diagnose WHY a page underperforms before changing anything:
+1. **Review every 3 months** (Search Console: drops, new queries, missed chances). Next review: early January 2027. Deeper refresh every 6 months, full audit yearly. Never automatic.
+2. **Page 1 + many impressions + few clicks** (≈100+ impressions/month, positions 1–10, <1% CTR) → rewrite the Google title/description, keep the keyword. Allowed once the current title has **4–6 weeks** of data. Example: beach wedding post (2,415 imp at #9, 0 clicks; title changed Oct 8 → eligible ~mid-Nov 2026).
+3. **Page 2 (positions ~11–20)** → do NOT change the title. Add depth (guide sections, FAQs, headings), photos and internal links; judge after 6–8 weeks. Example: Back Chains — content push + blog links done Oct 23, 2026; leave its title until that's judged.
+4. **Changing the main keyword a page targets** → only after ~6 months without progress, or when traffic brings no sales (switch to buying-intent wording), or the search term has died out.
+5. **Never touch** pages ranking #1–2 or bringing clicks/sales.
+6. **Factual fixes any time:** prices, renamed/discontinued products, wrong claims.
+Every change still gets a date + reason (`seo-overrides.json` keeps `was` + `updated`).
+
 ## SEO refresh rule — 3 months, never automatic (user decision, Oct 8, 2026)
 User, verbatim: "we will not change seo monthly automatically.. seo usually needs time so monitor whats not getting clicks or sales after 3 months then refresh those."
 - **Never** schedule automatic SEO rewrites. A page's Google title/description is only rewritten once it has had **3 months** since its last change AND it still isn't getting clicks or sales. Pages with sales are left alone.

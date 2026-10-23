@@ -540,9 +540,10 @@ export default function ProductGallery({
         )}
       </div>
 
-      {/* Thumbnail strip */}
+      {/* Thumbnail strip — desktop only; phones swipe with the dots on the photo, and the strip
+          pushed the product name and price below the first screen */}
       {media.length > 1 && (
-        <div className="flex gap-2 overflow-x-auto scrollbar-hide pb-1">
+        <div className="hidden md:flex gap-2 overflow-x-auto scrollbar-hide pb-1">
           {media.map((item, i) => (
             <button
               key={i}

@@ -3,6 +3,9 @@
 import { createContext, useContext, useState, useEffect, ReactNode } from "react";
 import type { Product } from "@/lib/products";
 import { setDiscountedUnits, setUnitPrice } from "@/lib/productSets";
+import { COUNTRY_GROUPS } from "@/lib/shipping";
+
+const SHIPPABLE = new Set(COUNTRY_GROUPS.flatMap((g) => g.countries.map((c) => c.code)));
 
 export type CartItem = {
   cartId:      string;   // productId + ":" + (variant ?? "")
@@ -62,6 +65,13 @@ export function CartProvider({ children }: { children: ReactNode }) {
       if (stored) setItems(JSON.parse(stored) as CartItem[]);
       const storedCountry = localStorage.getItem("bs_shipping_country");
       if (storedCountry) _setShippingCountry(storedCountry);
+      else {
+        // No choice yet → pre-select the visitor's own country (from Cloudflare, via proxy.ts)
+        // so the checkout button works straight away. Not saved, so it stays an automatic guess
+        // until the shopper picks a country themselves.
+        const geo = document.cookie.match(/(?:^|; )bs_country=([A-Z]{2})/)?.[1];
+        if (geo && SHIPPABLE.has(geo)) _setShippingCountry(geo);
+      }
     } catch {}
     setHydrated(true);
   }, []);

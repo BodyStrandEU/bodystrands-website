@@ -90,12 +90,13 @@ export function convert(eurAmount: number, currency: CurrencyCode, rates: Record
 // currency's own typical pricing scale. A very strong currency (KWD, BHD, rate < 0.5) rounds to
 // the nearest whole unit, since even 1 unit there is already worth several EUR.
 function roundingStep(rate: number): number {
-  if (rate < 0.5) return 1;
-  if (rate < 5) return 5;
-  if (rate < 50) return 10;
-  if (rate < 500) return 50;
-  if (rate < 5000) return 500;
-  return 5000;
+  // Whole units for dollar/pound-type currencies (was: nearest 5, which showed €5 shipping as
+  // "$10" CAD and set prices noticeably off what Stripe charges). Larger steps only where a
+  // single unit is worth very little.
+  if (rate < 50) return 1;
+  if (rate < 500) return 10;
+  if (rate < 5000) return 100;
+  return 1000;
 }
 
 export function formatMoney(eurAmount: number, currency: CurrencyCode, rates: Record<CurrencyCode, number>): string {

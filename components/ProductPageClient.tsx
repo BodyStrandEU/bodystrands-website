@@ -23,7 +23,6 @@ import customerReviewsRaw from "@/data/customer-reviews.json";
 // against below. Only dedupe when falling back to a shop-wide (not product-specific) count.
 const ALL_REAL_REVIEWS: Review[] = Object.values(customerReviewsRaw as Record<string, Review[]>).flat();
 
-const FREE_SHIPPING_THRESHOLD = 50;
 
 function ShareButton({ name }: { name: string }) {
   const [done, setDone] = useState(false);
@@ -62,27 +61,54 @@ function ShareButton({ name }: { name: string }) {
 
 // `price` is always passed in as EUR — format() converts it to the visitor's local
 // currency for display, same as every other price on this page.
+const COUNTRY_NAMES = Object.fromEntries(COUNTRY_GROUPS.flatMap((g) => g.countries.map((c) => [c.code, c.name])));
+
+// Shipping message for the shopper's country (auto-detected, or picked in "Ship to"), using the
+// same rules the cart and checkout charge — lib/shipping.ts. Was a hard-coded "save up to €8 for
+// EU, UK & North America", which was wrong for every zone (€5 EU/UK/CA, €15 US with a $100 minimum).
+function useShippingMessage(price: number): { text: ReactNode; done: boolean } | null {
+  const { format, rates } = useCurrency();
+  const { shippingCountry } = useCart();
+  if (!shippingCountry) return null;
+  const rate = getShippingRate(shippingCountry, price, rates);
+  const name = COUNTRY_NAMES[shippingCountry] ?? shippingCountry;
+  if (rate.freeThreshold == null) {
+    return { done: false, text: <>Shipping to {name}: <span className="text-[#2C2220]">{format(rate.amount / 100)}</span></> };
+  }
+  if (rate.amount === 0) return { done: true, text: <>Free shipping to {name}</> };
+  const remaining = rate.freeThreshold - price;
+  return {
+    done: false,
+    text: <>Add <span className="text-[#2C2220] font-medium">{format(remaining)}</span> more for free shipping to {name} (saves {format(rate.amount / 100)})</>,
+  };
+}
+
 function ShippingNudge({ price }: { price: number }) {
-  const { format } = useCurrency();
-  const remaining = FREE_SHIPPING_THRESHOLD - price;
-  if (remaining <= 0) {
+  const msg = useShippingMessage(price);
+  if (!msg) return null;
+  if (msg.done) {
     return (
       <p className="mt-2.5 text-[0.58rem] tracking-[0.12em] uppercase text-[#A0622A] flex items-center gap-1.5">
-        <span>✓</span>
-        <span>Free shipping on EU, UK & North America orders — applied at checkout</span>
+        <span>✓</span><span>{msg.text}</span>
       </p>
     );
   }
   return (
     <p className="mt-2.5 text-[0.58rem] tracking-[0.1em] uppercase text-[#8C7B6E] leading-relaxed">
-      Add{" "}
-      <span className="text-[#2C2220] font-medium">{format(remaining)}</span>
-      {" "}more and save up to{" "}
-      <span className="text-[#2C2220] font-medium">{format(8)}</span>
-      {" "}on shipping for EU, UK & North America orders —{" "}
+      {msg.text}{" — "}
       <Link href="/shop" className="text-[#A0622A] underline underline-offset-2 hover:text-[#8A5222] transition-colors">
         browse more
       </Link>
+    </p>
+  );
+}
+
+function StickyShippingLine({ price }: { price: number }) {
+  const msg = useShippingMessage(price);
+  if (!msg) return null;
+  return (
+    <p className={`text-[0.55rem] tracking-[0.08em] uppercase text-center ${msg.done ? "text-[#A0622A]" : "text-[#8C7B6E]"}`}>
+      {msg.done ? "✓ " : ""}{msg.text}
     </p>
   );
 }
@@ -207,7 +233,7 @@ export default function ProductPageClient({ product, setSlot }: { product: Produ
 
   return (
     <>
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-start">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-16 items-start">
 
       {/* Gallery — full bleed on mobile */}
       <div className="-mx-6 md:mx-0 md:col-start-1 md:row-start-1">
@@ -216,7 +242,7 @@ export default function ProductPageClient({ product, setSlot }: { product: Produ
 
       {/* Details + purchase controls — spans both rows on desktop so it stays beside
           the gallery + reviews stack below it, not just the gallery alone */}
-      <div className="flex flex-col gap-5 md:gap-6 px-0 md:sticky md:top-32 md:col-start-2 md:row-start-1 md:row-span-2">
+      <div className="flex flex-col gap-4 md:gap-6 px-0 md:sticky md:top-32 md:col-start-2 md:row-start-1 md:row-span-2">
 
         <div className="flex items-center justify-between">
           <p className="text-[0.55rem] tracking-[0.25em] uppercase text-[#A0622A]">
@@ -228,7 +254,7 @@ export default function ProductPageClient({ product, setSlot }: { product: Produ
           </div>
         </div>
 
-        <h1 className="font-heading text-4xl md:text-5xl font-light text-[#2C2220]">
+        <h1 className="font-heading text-[2rem] leading-tight md:text-5xl font-light text-[#2C2220]">
           {product.name}
         </h1>
 
@@ -509,11 +535,7 @@ export default function ProductPageClient({ product, setSlot }: { product: Produ
             {addedMsg ? "Added ✓" : !allGroupsSelected ? "Select options ↑" : "Add to Cart"}
           </button>
         </div>
-        {totalPrice < FREE_SHIPPING_THRESHOLD && (
-          <p className="text-[0.55rem] tracking-[0.08em] uppercase text-[#8C7B6E] text-center">
-            Add <span className="text-[#2C2220]">{format(FREE_SHIPPING_THRESHOLD - totalPrice)}</span> more → save up to <span className="text-[#2C2220]">{format(8)}</span> shipping (Europe & North America)
-          </p>
-        )}
+        <StickyShippingLine price={totalPrice} />
       </div>
     )}
     </>

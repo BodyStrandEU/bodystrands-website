@@ -412,7 +412,8 @@ export default function CartDrawer() {
                       )}
 
                       {/* Switch finish/color — the swatch on the card is small, this gives an easy way to fix a wrong pick */}
-                      {fullProduct && otherVariants.length > 0 && (
+                      {/* Only for real finish swatches (Gold/Silver) — size-type variants used to render as rows of grey dots */}
+                      {fullProduct && otherVariants.length > 0 && fullProduct.variants!.every((v) => v in SWATCH_COLORS) && (
                         <div className="flex items-center gap-1.5 mt-1.5">
                           {fullProduct.variants!.map((v) => {
                             const heroImg = fullProduct.variantHeroes?.[v] ?? fullProduct.variantImages?.[v]?.[0];

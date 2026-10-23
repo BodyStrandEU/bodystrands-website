@@ -45,13 +45,18 @@ export function proxy(request: NextRequest) {
   // in up to 30 days ago even after they'd moved somewhere else — confirmed Oct 14,
   // 2026 by a user who travelled Turkey -> Germany and kept seeing TRY prices.
   const response = NextResponse.next();
-  const country  = request.headers.get("cf-ipcountry") ?? "";
+  // Local dev has no Cloudflare geo header — DEV_COUNTRY in .env.local stands in for it there
+  const country  = request.headers.get("cf-ipcountry") ?? (process.env.NODE_ENV === "development" ? process.env.DEV_COUNTRY ?? "" : "");
   const currency = currencyForCountry(country);
   response.cookies.set(CURRENCY_COOKIE, currency, { path: "/", maxAge: 60 * 60 * 24 * 30 });
   // Whether this visitor must be asked before analytics run (see lib/consent.ts). Unknown
   // country (e.g. local dev) counts as "eu" so nobody is tracked without asking by mistake.
   const region = country && !CONSENT_COUNTRIES.has(country.toUpperCase()) ? "row" : "eu";
   response.cookies.set(REGION_COOKIE, region, { path: "/", maxAge: 60 * 60 * 24 * 30, sameSite: "lax" });
+  // Visitor's country, so the cart can pre-select it for shipping (lib/cart.tsx)
+  if (/^[A-Z]{2}$/.test(country) && country !== "XX" && country !== "T1") {
+    response.cookies.set("bs_country", country, { path: "/", maxAge: 60 * 60 * 24 * 30, sameSite: "lax" });
+  }
   return response;
 }
 

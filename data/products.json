@@ -5078,12 +5078,14 @@
     "featured": false,
     "active": true,
     "images": [
+      "/images/products/6e89762d-a40e-4811-b9d8-1f931b74e6e1.png",
+      "/images/products/IMG_4178-2.jpg",
+      "/images/products/4b810320-d298-49e1-a37f-2a898cd4bf50.png",
       "/images/products/bc35e7f0-2f6d-4ad4-9c0e-871f8c67558f.png",
-      "https://i.etsystatic.com/55122258/r/il/891446/7836088356/il_fullxfull.7836088356_316o.jpg",
-      "https://i.etsystatic.com/55122258/r/il/96692e/7883966909/il_fullxfull.7883966909_m1l9.jpg",
       "/images/products/270.png",
       "https://i.etsystatic.com/55122258/r/il/ccdf8e/7804755677/il_fullxfull.7804755677_14iy.jpg",
-      "/images/products/8c1a99ad-3706-4574-8abc-1f02e90e6a26-copy-2.jpeg"
+      "/images/products/8c1a99ad-3706-4574-8abc-1f02e90e6a26-copy-2.jpeg",
+      "https://i.etsystatic.com/55122258/r/il/96692e/7883966909/il_fullxfull.7883966909_m1l9.jpg"
     ],
     "variantGroups": [
       {
@@ -5104,7 +5106,7 @@
         ]
       }
     ],
-    "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/e26ce55749a02850a5ac70cace90f2af/downloads/default.mp4",
+    "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/e0eb80500edae9465590c52b032e5955/downloads/default.mp4",
     "altText": "Gold-tone stainless steel back chain necklace with personalized birthstone charm for bridal wear",
     "dateAdded": "2026-06-12T15:00:27-04:00",
     "giftTags": [

@@ -2,7 +2,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Return Policy — Bodystrands",
-  description: "Bodystrands return policy. 14-day returns accepted for any reason. Return shipping is at the buyer's expense.",
+  description: "Bodystrands return policy. 30-day returns accepted for any reason. Return shipping is at the buyer's expense.",
   alternates: { canonical: "/return-policy" },
 };
 
@@ -12,7 +12,7 @@ export default function ReturnPolicyPage() {
       <p className="text-[0.6rem] tracking-[0.35em] uppercase text-[#A0622A] mb-3">Bodystrands</p>
       <h1 className="font-heading text-4xl md:text-5xl font-light text-[#2C2220] mb-4">Return Policy</h1>
       <p className="text-sm font-light tracking-wide text-[#8C7B6E] leading-relaxed mb-12">
-        Last updated: June 2026 · Applies to all orders placed at bodystrands.com
+        Last updated: October 2026 · Applies to all orders placed at bodystrands.com
       </p>
 
       <div className="space-y-12 font-cormorant text-lg leading-relaxed text-[#2C2220]">
@@ -21,7 +21,7 @@ export default function ReturnPolicyPage() {
           <h2 className="font-josefin text-sm tracking-widest uppercase mb-3">Our Commitment</h2>
           <p>
             We stand behind every piece we make. If for any reason you are not completely satisfied
-            with your order, you may return it within <strong>14 days</strong> of delivery for a
+            with your order, you may return it within <strong>30 days</strong> of delivery for a
             full refund of the item price — no questions asked.
           </p>
         </section>
@@ -29,7 +29,7 @@ export default function ReturnPolicyPage() {
         <section>
           <h2 className="font-josefin text-sm tracking-widest uppercase mb-3">Return Window</h2>
           <p>
-            You have <strong>14 days</strong> from the date your order is delivered to request a
+            You have <strong>30 days</strong> from the date your order is delivered to request a
             return. Requests received after this period will not be eligible for a refund.
           </p>
         </section>
@@ -38,7 +38,7 @@ export default function ReturnPolicyPage() {
           <h2 className="font-josefin text-sm tracking-widest uppercase mb-3">Eligibility</h2>
           <p className="mb-4">To qualify for a return, your item must meet the following conditions:</p>
           <ul className="list-disc list-inside space-y-1.5 text-base ml-2">
-            <li>Returned within 14 days of the delivery date</li>
+            <li>Returned within 30 days of the delivery date</li>
             <li>Unworn and in its original condition</li>
             <li>Returned in the original packaging</li>
             <li>Not damaged due to misuse or improper care</li>

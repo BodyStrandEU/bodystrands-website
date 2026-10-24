@@ -17,7 +17,7 @@ const PILLARS = [
   },
   {
     title: "Shipping & Returns",
-    description: "14 days to return any item in its original condition. Arrived damaged? We'll make it right.",
+    description: "30 days to return any item in its original condition. Arrived damaged? We'll make it right.",
     href: "/shipping",
     icon: (
       <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round">

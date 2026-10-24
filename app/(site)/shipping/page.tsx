@@ -49,7 +49,7 @@ export default function ShippingPage() {
           <h2 className="font-josefin text-sm tracking-widest uppercase mb-3">Returns & Exchanges</h2>
           <p className="mb-4">
             We want you to love your Bodystrands piece. If something isn&apos;t right, you may return
-            it within <strong>14 days</strong> of delivery for a full refund of the item price.
+            it within <strong>30 days</strong> of delivery for a full refund of the item price.
           </p>
           <p className="mb-4">To be eligible for a return:</p>
           <ul className="list-disc list-inside space-y-1.5 text-base ml-2">

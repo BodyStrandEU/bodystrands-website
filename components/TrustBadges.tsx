@@ -44,6 +44,15 @@ function TruckIcon() {
   );
 }
 
+function ShieldCheckIcon() {
+  return (
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M12 2.5l7.5 3v5.5c0 5-3.2 8.8-7.5 10.5-4.3-1.7-7.5-5.5-7.5-10.5V5.5l7.5-3z" />
+      <path d="M8.75 12l2.25 2.25 4.25-4.5" />
+    </svg>
+  );
+}
+
 export const BADGES: Badge[] = [
   {
     key: "handmade",
@@ -69,13 +78,19 @@ export const BADGES: Badge[] = [
     sublabel: "Dispatched in 1–2 days",
     icon: <TruckIcon />,
   },
+  {
+    key: "guarantee",
+    label: "30-Day Guarantee",
+    sublabel: "Easy, hassle-free returns",
+    icon: <ShieldCheckIcon />,
+  },
 ];
 
-/** Full-width 4-icon strip — homepage, below the hero. */
+/** Full-width 5-icon strip — homepage, below the hero. */
 export function TrustBadgesStrip() {
   return (
     <section className="border-y border-[#8C7B6E]/20 bg-[#FAF7F5]">
-      <div className="max-w-7xl mx-auto px-6 md:px-10 py-10 md:py-12 grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-6">
+      <div className="max-w-7xl mx-auto px-6 md:px-10 py-10 md:py-12 grid grid-cols-2 md:grid-cols-5 gap-8 md:gap-6">
         {BADGES.map((b) => (
           <div key={b.key} className="flex flex-col items-center text-center gap-2.5">
             <span className="text-[#2C2220]">{b.icon}</span>
@@ -110,8 +125,8 @@ export function TrustBadgesRow() {
 export function TrustBadgesInline() {
   return (
     <p className="flex items-center justify-center gap-1.5 text-[0.52rem] tracking-[0.1em] uppercase text-[#8C7B6E]">
-      <LockIcon />
-      <span>Secure checkout · Ships Worldwide</span>
+      <ShieldCheckIcon />
+      <span>30-Day Guarantee · Secure Checkout</span>
     </p>
   );
 }

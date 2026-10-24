@@ -45,7 +45,7 @@ const FAQ_GROUPS: FaqGroup[] = [
       },
       {
         question: "What if my piece doesn't fit right?",
-        answer: "Reach out to us at info@bodystrands.com with your order number — we're happy to help troubleshoot fit or arrange an exchange within our 14-day return window.",
+        answer: "Reach out to us at info@bodystrands.com with your order number — we're happy to help troubleshoot fit or arrange an exchange within our 30-day return window.",
       },
     ],
   },
@@ -79,7 +79,7 @@ const FAQ_GROUPS: FaqGroup[] = [
     items: [
       {
         question: "What is your return policy?",
-        answer: "You may return any unworn item in its original packaging within 14 days of delivery for a full refund of the item price. Return shipping is covered by the customer. US and Canada customers return to our Canadian address, so there's no need to ship internationally back to Portugal.",
+        answer: "You may return any unworn item in its original packaging within 30 days of delivery for a full refund of the item price. Return shipping is covered by the customer. US and Canada customers return to our Canadian address, so there's no need to ship internationally back to Portugal.",
       },
       {
         question: "How do I start a return?",

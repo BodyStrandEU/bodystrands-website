@@ -306,9 +306,17 @@ export default function ProductPageClient({ product, setSlot }: { product: Produ
           {product.description}
         </p>
         {/* AI image disclosure — same wording as every Etsy listing (Etsy AI policy, Oct 2026;
-            California SB 1050 requires it for AI-generated models from Jan 1, 2027). Keep "AI-generated". */}
+            California SB 1050 requires it for AI-generated models from Jan 1, 2027). Keep "AI-generated".
+            Oct 24, 2026: paired with a reassurance + guarantee line so the disclosure reads as
+            confidence, not a buried confession. */}
         <p className="-mt-3 text-xs font-light leading-relaxed tracking-wide text-[#8C7B6E]/80 italic">
-          Photo note: Some images are AI-generated to show the piece styled and worn. Every piece is 100% handmade by us.
+          Photo note: Some images are AI-generated to show the piece styled and worn.
+          <br />
+          Every piece is 100% handmade with quality materials, and backed by our{" "}
+          <Link href="/return-policy" className="underline hover:text-[#A0622A] transition-colors not-italic">
+            return policy
+          </Link>{" "}
+          — not happy? Send it back.
         </p>
 
         <div className="h-px bg-[#E8B4A8]/40" />

@@ -1,5 +1,7 @@
-// Automatically emails a review request to every paid order that turned exactly
-// 7 days old today. Run daily via .github/workflows/review-request.yml.
+// Automatically emails a review request to every paid order that is 7–14 days old and
+// hasn't been asked yet. Run daily via .github/workflows/review-request.yml. The 7-day
+// catch-up window means a skipped or delayed run never loses an order — the next run
+// picks it up; the review_requested_at stamp stops anyone getting it twice.
 //
 // Mirrors the logic in app/(site)/api/admin/request-review/route.ts exactly, so an
 // order requested automatically here and one requested manually via the admin
@@ -75,11 +77,11 @@ function reviewEmailHtml(firstName, productName, reviewUrl) {
   `;
 }
 
-// Exactly 7 days ago, UTC day boundaries — a full 24h window so this only ever
-// catches each order once, on the one day it's exactly a week old.
+// Orders placed 7 to 14 days ago (UTC day boundaries). Each order is emailed on the first
+// run once it's a week old; already-stamped orders are skipped on later runs.
 function sevenDaysAgoWindow() {
   const now = new Date();
-  const start = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate() - 7, 0, 0, 0));
+  const start = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate() - 14, 0, 0, 0));
   const end = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate() - 7, 23, 59, 59));
   return { gte: Math.floor(start.getTime() / 1000), lte: Math.floor(end.getTime() / 1000) };
 }
@@ -140,9 +142,10 @@ async function main() {
       });
 
       if (pi && typeof pi === "object") {
+        // The stamp is what prevents a second email tomorrow — fail loudly if it doesn't stick
         await stripe.paymentIntents.update(pi.id, {
           metadata: { review_requested_at: new Date().toISOString() },
-        }).catch(() => {});
+        }).catch((e) => { console.error(`Could not mark order ${session.id} as requested:`, e.message); process.exitCode = 1; });
       }
     }
 

@@ -7,6 +7,7 @@ export type ReviewTokenPayload = {
   category:    string;
   productName: string;
   productId?:  string; // undefined for multi-item cart orders we couldn't resolve to one product
+  customerName?: string; // "Stacey M." from the order — shown on the review, so the form doesn't ask
   exp:         number; // unix seconds
 };
 
@@ -22,12 +23,21 @@ function sign(data: string): string {
 
 const SIXTY_DAYS = 60 * 24 * 60 * 60;
 
-export function createReviewToken(sessionId: string, category: string, productName: string, productId?: string): string {
+// "stacey marie smith" → "Stacey S." — first name plus last initial, as reviews are shown
+export function reviewerName(fullName?: string | null): string | undefined {
+  const parts = (fullName ?? "").trim().split(/\s+/).filter(Boolean);
+  if (!parts.length) return undefined;
+  const cap = (w: string) => w.charAt(0).toUpperCase() + w.slice(1);
+  return parts.length > 1 ? `${cap(parts[0])} ${parts[parts.length - 1].charAt(0).toUpperCase()}.` : cap(parts[0]);
+}
+
+export function createReviewToken(sessionId: string, category: string, productName: string, productId?: string, customerName?: string): string {
   const payload: ReviewTokenPayload = {
     sessionId,
     category,
     productName,
     productId,
+    customerName,
     exp: Math.floor(Date.now() / 1000) + SIXTY_DAYS,
   };
   const body = Buffer.from(JSON.stringify(payload)).toString("base64url");

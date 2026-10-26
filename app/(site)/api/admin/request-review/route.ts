@@ -4,7 +4,7 @@ import { NextRequest, NextResponse } from "next/server";
 import Stripe from "stripe";
 import { Resend } from "resend";
 import { isValidToken, COOKIE_NAME } from "@/lib/auth";
-import { createReviewToken } from "@/lib/reviewToken";
+import { createReviewToken, reviewerName } from "@/lib/reviewToken";
 import { products } from "@/lib/products";
 
 // Explicit fetch-based HTTP client — required for Stripe's SDK under the Cloudflare Workers runtime.
@@ -47,7 +47,7 @@ export async function POST(req: NextRequest) {
     : products.find((p) => productName.startsWith(p.name));
   const category = product?.category ?? "General";
 
-  const token      = createReviewToken(sessionId, category, productName, product?.id);
+  const token      = createReviewToken(sessionId, category, productName, product?.id, reviewerName(name === "there" ? null : name));
   const reviewUrl  = `https://www.bodystrands.com/review/${token}`;
 
   await resend.emails.send({

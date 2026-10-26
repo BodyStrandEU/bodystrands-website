@@ -23,7 +23,7 @@ export async function POST(req: NextRequest) {
   try {
     const formData = await req.formData();
     const token    = formData.get("token") as string | null;
-    const name     = (formData.get("name") as string | null)?.trim();
+    const typedName = (formData.get("name") as string | null)?.trim();
     const rating   = Number(formData.get("rating"));
     const headline = (formData.get("headline") as string | null)?.trim();
     const text     = (formData.get("text") as string | null)?.trim();
@@ -32,6 +32,8 @@ export async function POST(req: NextRequest) {
     if (!token) return NextResponse.json({ error: "Missing token" }, { status: 400 });
     const payload = verifyReviewToken(token);
     if (!payload) return NextResponse.json({ error: "This review link is invalid or has expired." }, { status: 400 });
+    // Links from the review email carry the buyer's name; older links still ask for it
+    const name = payload.customerName || typedName;
 
     if (!name || !headline || !text || !Number.isInteger(rating) || rating < 1 || rating > 5) {
       return NextResponse.json({ error: "Please fill in your name, a rating, headline, and review text." }, { status: 400 });

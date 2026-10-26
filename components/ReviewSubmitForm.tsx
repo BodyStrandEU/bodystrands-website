@@ -23,9 +23,10 @@ function StarPicker({ rating, onChange }: { rating: number; onChange: (n: number
 
 const inputClass = "w-full border border-[#2C2220]/20 bg-white px-4 py-3 text-[0.75rem] tracking-wide text-[#2C2220] placeholder:text-[#8C7B6E]/50 focus:outline-none focus:border-[#A0622A] transition-colors font-light";
 
-export default function ReviewSubmitForm({ token }: { token: string }) {
-  const [name, setName]         = useState("");
-  const [rating, setRating]     = useState(0);
+export default function ReviewSubmitForm({ token, initialRating = 0, customerName }: { token: string; initialRating?: number; customerName?: string }) {
+  // Known from the order when the link came from the review email — no need to ask
+  const [name, setName]         = useState(customerName ?? "");
+  const [rating, setRating]     = useState(initialRating);
   const [headline, setHeadline] = useState("");
   const [text, setText]         = useState("");
   const [photo, setPhoto]       = useState<File | null>(null);
@@ -82,14 +83,18 @@ export default function ReviewSubmitForm({ token }: { token: string }) {
         <StarPicker rating={rating} onChange={setRating} />
       </div>
 
-      <input
-        type="text"
-        value={name}
-        onChange={(e) => setName(e.target.value)}
-        placeholder="Your name (e.g. Sofia A.)"
-        aria-label="Your name"
-        className={inputClass}
-      />
+      {customerName ? (
+        <p className="text-center text-[0.65rem] tracking-wide text-[#8C7B6E]">Reviewing as <span className="text-[#2C2220]">{customerName}</span></p>
+      ) : (
+        <input
+          type="text"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          placeholder="Your name (e.g. Sofia A.)"
+          aria-label="Your name"
+          className={inputClass}
+        />
+      )}
 
       <input
         type="text"

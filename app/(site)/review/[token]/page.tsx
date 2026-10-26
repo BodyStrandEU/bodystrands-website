@@ -7,8 +7,11 @@ export const metadata: Metadata = {
   robots: { index: false, follow: false },
 };
 
-export default async function ReviewPage({ params }: { params: Promise<{ token: string }> }) {
+export default async function ReviewPage({ params, searchParams }: { params: Promise<{ token: string }>; searchParams: Promise<{ rating?: string }> }) {
   const { token } = await params;
+  // The review email's stars link here with ?rating=1–5 so the tapped star is already picked
+  const r = Number((await searchParams).rating);
+  const initialRating = Number.isInteger(r) && r >= 1 && r <= 5 ? r : 0;
   const payload = verifyReviewToken(token);
 
   return (
@@ -32,7 +35,7 @@ export default async function ReviewPage({ params }: { params: Promise<{ token: 
           )}
         </div>
 
-        {payload && <ReviewSubmitForm token={token} />}
+        {payload && <ReviewSubmitForm token={token} initialRating={initialRating} customerName={payload.customerName} />}
       </div>
     </div>
   );

@@ -18,6 +18,7 @@ import { dirname, join } from "path";
 import { createHmac } from "crypto";
 import Stripe from "stripe";
 import { Resend } from "resend";
+import { buildReviewEmail } from "./review-email.mjs";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, "..");
@@ -46,35 +47,24 @@ const SIXTY_DAYS = 60 * 24 * 60 * 60;
 function sign(data) {
   return createHmac("sha256", REVIEW_TOKEN_SECRET).update(data).digest("base64url");
 }
-function createReviewToken(sessionId, category, productName, productId) {
+// Same as reviewerName() in lib/reviewToken.ts: "stacey marie smith" → "Stacey S."
+function reviewerName(fullName) {
+  const parts = (fullName ?? "").trim().split(/\s+/).filter(Boolean);
+  if (!parts.length) return undefined;
+  const cap = (w) => w.charAt(0).toUpperCase() + w.slice(1);
+  return parts.length > 1 ? `${cap(parts[0])} ${parts[parts.length - 1].charAt(0).toUpperCase()}.` : cap(parts[0]);
+}
+function createReviewToken(sessionId, category, productName, productId, customerName) {
   const payload = {
     sessionId,
     category,
     productName,
     productId,
+    customerName,
     exp: Math.floor(Date.now() / 1000) + SIXTY_DAYS,
   };
   const body = Buffer.from(JSON.stringify(payload)).toString("base64url");
   return `${body}.${sign(body)}`;
-}
-
-function reviewEmailHtml(firstName, productName, reviewUrl) {
-  return `
-    <div style="font-family:Georgia,serif;max-width:520px;margin:0 auto;color:#2C2220;background:#FDF9F7;padding:48px 40px;">
-      <p style="font-size:11px;letter-spacing:0.3em;text-transform:uppercase;color:#A0622A;text-align:center;margin:0 0 32px;">Bodystrands</p>
-      <h1 style="font-weight:300;font-size:28px;margin:0 0 16px;line-height:1.3;text-align:center;">How's it looking, ${firstName}?</h1>
-      <p style="font-size:14px;color:#8C7B6E;margin:0 0 32px;line-height:1.9;text-align:center;">
-        We'd love to know what you think of your <strong style="color:#2C2220;">${productName}</strong>. Got a photo wearing it? Even better — it helps other shoppers picture it in real life.
-      </p>
-      <a href="${reviewUrl}"
-         style="display:block;background:#2C2220;color:#FDF9F7;text-align:center;padding:16px;font-size:11px;letter-spacing:0.25em;text-transform:uppercase;text-decoration:none;margin-bottom:28px;">
-        Leave a Review
-      </a>
-      <p style="font-size:11px;color:#8C7B6E;margin:0;padding-top:24px;border-top:1px solid #E8B4A8;line-height:1.8;text-align:center;">
-        Questions? Reach us at <a href="mailto:info@bodystrands.com" style="color:#A0622A;">info@bodystrands.com</a>
-      </p>
-    </div>
-  `;
 }
 
 // Orders placed 7 to 14 days ago (UTC day boundaries). Each order is emailed on the first
@@ -128,7 +118,7 @@ async function main() {
       : products.find((p) => productName.startsWith(p.name));
     const category = product?.category ?? "General";
 
-    const token = createReviewToken(session.id, category, productName, product?.id);
+    const token = createReviewToken(session.id, category, productName, product?.id, reviewerName(name === "there" ? null : name));
     const reviewUrl = `https://www.bodystrands.com/review/${token}`;
 
     console.log(`${LIVE ? "Sending" : "Would send"} review request: ${email} — ${productName} (order ${session.id})`);
@@ -138,7 +128,7 @@ async function main() {
         from: `Bodystrands <${RESEND_FROM_EMAIL}>`,
         to: email,
         subject: `How's your ${productName.split(" — ")[0]}?`,
-        html: reviewEmailHtml(firstName, productName, reviewUrl),
+        ...(await buildReviewEmail({ firstName, productName, product, reviewUrl })),
       });
 
       if (pi && typeof pi === "object") {

@@ -1,5 +1,165 @@
 [
   {
+    "query": "what jewellery to wear with a satin slip dress",
+    "keywords": [
+      "jewellery for a satin slip dress",
+      "necklace for a cowl neck dress",
+      "what to wear with spaghetti strap dress jewellery",
+      "delicate necklace for a silk slip dress",
+      "body chain with a satin dress"
+    ],
+    "productIds": [
+      "dainty-backdrop-back-necklace",
+      "satellite-link-choker",
+      "dainty-gold-body-chain",
+      "silver-shoulder-harness"
+    ],
+    "category": "Style Guide",
+    "months": [
+      11,
+      12,
+      1,
+      5,
+      6
+    ],
+    "productCategories": [
+      "Necklaces",
+      "Body Chains",
+      "Shoulder Chains"
+    ],
+    "source": "research",
+    "researchModel": "claude-opus-5",
+    "addedAt": "2026-10-26",
+    "why": "Who What Wear's FW26 report says chunky collars and chokers are replacing layered dainty chains, which is exactly the styling tension on a thin satin strap during party season."
+  },
+  {
+    "query": "jewellery gifts for the woman who has everything",
+    "keywords": [
+      "unique jewellery gift for someone who has everything",
+      "unusual christmas gift ideas for her",
+      "jewellery she wouldn't buy herself",
+      "unexpected gift for a woman who loves jewellery",
+      "body jewellery as a gift"
+    ],
+    "productIds": [
+      "silver-shoulder-harness",
+      "gold-hand-chain",
+      "pearl-body-harness",
+      "pearl-glasses-chain"
+    ],
+    "category": "Gift Guide",
+    "months": [
+      11,
+      12,
+      4,
+      5,
+      6
+    ],
+    "productCategories": [
+      "Shoulder Chains",
+      "Hand Chains",
+      "Body Chains",
+      "Eyeglasses Chains"
+    ],
+    "source": "research",
+    "researchModel": "claude-opus-5",
+    "addedAt": "2026-10-26",
+    "why": "eRank's holiday 2026 report is titled 'Frosted, Festive & Unexpected' and Stuller frames the winning gift as one meaningful piece that starts a collection."
+  },
+  {
+    "query": "christmas gift for wife jewelry",
+    "keywords": [
+      "christmas jewellery gift for wife under 50 euros",
+      "romantic jewellery gift for my wife",
+      "personalised christmas gift for wife",
+      "what jewellery should i buy my wife",
+      "jewellery gift for wife who has everything"
+    ],
+    "productIds": [
+      "personalized-birthstone-back-necklace",
+      "pearl-heart-initial-bracelet",
+      "initial-letter-rhinestone-choker",
+      "pearl-belly-chain"
+    ],
+    "category": "Gift Guide",
+    "months": [
+      11,
+      12
+    ],
+    "productCategories": [
+      "Necklaces",
+      "Bracelets",
+      "Belly Chains"
+    ],
+    "source": "research",
+    "researchModel": "claude-opus-5",
+    "addedAt": "2026-10-26",
+    "why": "Stuller and eRank both put personalised, engraved and charm pieces at the top of holiday demand, and 'wife' is the missing recipient in the Christmas series."
+  },
+  {
+    "query": "celestial jewellery gift ideas",
+    "keywords": [
+      "star and moon jewellery meaning",
+      "constellation jewellery gift for her",
+      "star necklace christmas gift",
+      "star charm bracelet gift",
+      "celestial jewellery for new year's eve"
+    ],
+    "productIds": [
+      "beaded-star-choker",
+      "star-pendant-rhinestone-choker",
+      "star-charm-crystal-bracelet",
+      "turquoise-zodiac-necklace-stack"
+    ],
+    "category": "Gift Guide",
+    "months": [
+      11,
+      12,
+      1,
+      2
+    ],
+    "productCategories": [
+      "Necklaces",
+      "Bracelets"
+    ],
+    "source": "research",
+    "researchModel": "claude-opus-5",
+    "addedAt": "2026-10-26",
+    "why": "eRank reports stars, moons and constellations replacing snowflakes this holiday, and National Jeweler's Pinterest Predicts coverage shows opalescent searches up 115%."
+  },
+  {
+    "query": "mother daughter matching jewellery",
+    "keywords": [
+      "matching necklaces for mum and daughter",
+      "matching bracelets for mother and daughter",
+      "birth flower jewellery for mum and daughter",
+      "matching jewellery gift for sisters",
+      "mother daughter jewellery gift set"
+    ],
+    "productIds": [
+      "birth-flower-charm-necklace",
+      "birth-flower-charm-bracelet",
+      "birth-flower-anklet",
+      "pearl-heart-initial-bracelet"
+    ],
+    "category": "Personalized Jewelry",
+    "months": [
+      11,
+      12,
+      3,
+      5
+    ],
+    "productCategories": [
+      "Necklaces",
+      "Bracelets",
+      "Anklets"
+    ],
+    "source": "research",
+    "researchModel": "claude-opus-5",
+    "addedAt": "2026-10-26",
+    "why": "Stuller's holiday 2026 charm logic — one meaningful piece that creates a reason to return — plus eRank's read on personalised pieces with meaning."
+  },
+  {
     "query": "glasses chain trend 2026",
     "keywords": [
       "cute chain for reading glasses",

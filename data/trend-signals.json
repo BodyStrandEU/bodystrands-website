@@ -1,5 +1,370 @@
 [
   {
+    "date": "2026-10-26",
+    "researchModel": "claude-opus-5",
+    "trends": [
+      {
+        "name": "Merrymaxxing (rhinestones, crystals, bold colour)",
+        "what": "Festive maximalism: rhinestones, gemstones, bold colour and personality-filled ornaments for party season.",
+        "searches": [
+          "rhinestone choker necklace",
+          "sparkly jewellery for party season",
+          "maximalist layered necklace",
+          "crystal bead jewellery"
+        ],
+        "evidence": "Etsy's Seller Trend Report: Fall and Winter 2026 names Merrymaxxing as the lead trend — 'More is the mood this season. Rhinestones, gemstones, bold color, and ornaments with personality are taking center stage' — plus Craftmas. eRank's holiday 2026 guide frames the season as 'Frosted, Festive & Unexpected' with a Classic Heritage strand (tartan, velvet). TikTok's Trendy Jewelry hub (updated 2026-10-19) shows creators like @shopzoila pushing chunky silver statement necklaces, beaded necklaces and bold statement earrings. Ellison Young's holiday 2026 guide leads entirely with Christmas tree and statement earrings.",
+        "sources": [
+          {
+            "name": "Etsy Seller Handbook",
+            "url": "https://www.etsy.com/seller-handbook/article/1521255894814"
+          },
+          {
+            "name": "eRank",
+            "url": "https://help.erank.com/blog/holiday-2026-trends-etsy-sellers/"
+          },
+          {
+            "name": "TikTok",
+            "url": "https://www.tiktok.com/discover/trendy-jewelry"
+          },
+          {
+            "name": "Ellison Young",
+            "url": "https://ellisonyoung.com"
+          }
+        ],
+        "missing": [
+          "statement earrings",
+          "ornament-style novelty charms",
+          "rhinestone cuffs"
+        ],
+        "momentum": "peaking",
+        "fit": "we sell it",
+        "productIds": [
+          "star-pendant-rhinestone-choker",
+          "initial-letter-rhinestone-choker",
+          "maximalist-layered-necklace-stack",
+          "colorful-crystal-bead-choker",
+          "colorful-crystal-bead-bracelet",
+          "colorful-crystal-bead-anklet",
+          "star-charm-crystal-bracelet"
+        ],
+        "idea": "Front a 'merrymaxxing' party-season edit built on the rhinestone chokers and crystal bead stacks, bundled as layered sets."
+      },
+      {
+        "name": "Chunky collars and torque chokers",
+        "what": "Big, rigid statement necklaces replacing layered dainty chains at the neckline.",
+        "searches": [
+          "chunky choker necklace",
+          "statement collar necklace",
+          "torque choker",
+          "chunky silver necklace"
+        ],
+        "evidence": "Who What Wear's FW26 jewellery report: 'From Chanel to Chloé, models wore large, chunky necklaces that made a major statement. Long gone are the days of dainty chains layered on top of one another'. Its luxury 2026 piece names torque chokers and arm cuffs among the four leading luxury trends, citing Zoë Kravitz's Jessica McCormack arm cuff. Branvas' 2026 Jewelry Trend Map, built on Google Trends plus member brand sales data, notes 'the minimalism wave that dominated 2022-2023 visibly cooling'.",
+        "sources": [
+          {
+            "name": "Who What Wear",
+            "url": "https://www.whowhatwear.com/fashion/fall-winter-jewelry-trends-2026"
+          },
+          {
+            "name": "Who What Wear",
+            "url": "https://www.whowhatwear.com/fashion/luxury/luxury-jewellery-trends-2026"
+          },
+          {
+            "name": "Branvas",
+            "url": "https://branvas.com/blogs/news/2026-jewelry-trend-map"
+          }
+        ],
+        "missing": [
+          "rigid torque/collar necklaces",
+          "chunky curb or cable statement chains",
+          "arm cuffs"
+        ],
+        "momentum": "rising",
+        "fit": "partial",
+        "productIds": [
+          "turquoise-beaded-choker",
+          "layered-pearl-choker",
+          "coin-disc-chain-choker",
+          "evil-eye-choker-necklace",
+          "satellite-link-choker"
+        ],
+        "idea": "Push the heaviest-looking existing chokers as the chunky-neckline answer while sampling a rigid collar."
+      },
+      {
+        "name": "Celestial: stars, moons, constellations",
+        "what": "Star, moon and constellation motifs taking over from snowflakes as the holiday jewellery story.",
+        "searches": [
+          "star and moon necklace",
+          "constellation jewellery gift",
+          "celestial jewellery",
+          "star charm bracelet"
+        ],
+        "evidence": "eRank's Top 2026 Holiday Trends for Etsy Sellers: 'Snowflakes and winter forests are giving way to stars, moons, constellations'. National Jeweler's coverage of Pinterest Predicts 2026 'Extra Celestial' reports 'Searches for the word \"opalescent\" are up 115 percent, and searches for \"alien core aesthetic\" are up 80 percent'. Who What Wear lists Extra Celestial among the five Pinterest 2026 predictions it expects to last.",
+        "sources": [
+          {
+            "name": "eRank",
+            "url": "https://help.erank.com/blog/holiday-2026-trends-etsy-sellers/"
+          },
+          {
+            "name": "National Jeweler",
+            "url": "https://www.nationaljeweler.com/articles/14522-pinterest-2026-trend-report-brooches-bold-gold-cool-blue"
+          },
+          {
+            "name": "Who What Wear",
+            "url": "https://www.whowhatwear.com/fashion/trends/pinterest-trends-2026"
+          }
+        ],
+        "missing": [
+          "moon motifs",
+          "constellation motifs",
+          "opalescent/iridescent stones"
+        ],
+        "momentum": "rising",
+        "fit": "partial",
+        "productIds": [
+          "beaded-star-choker",
+          "star-pendant-rhinestone-choker",
+          "star-charm-crystal-bracelet",
+          "zodiac-slip-on-necklace",
+          "turquoise-zodiac-necklace-stack",
+          "gemstone-zodiac-anklet"
+        ],
+        "idea": "Group the star and zodiac pieces into a celestial gifting collection for December–January."
+      },
+      {
+        "name": "Silver-toned jewellery for AW",
+        "what": "Silver tones returning as the dominant metal for autumn/winter 2026.",
+        "searches": [
+          "silver jewellery",
+          "chunky silver necklace",
+          "silver body chain"
+        ],
+        "evidence": "PORTER / Net-a-Porter's fall 2026 trend report (26 Aug '26) opens with 'Silver-toned jewelry is back in fashion for fall/winter 2026', alongside ocean-inspired designs and supersized beads. TikTok creator round-ups for fall 2026 lead with chunky silver statement necklaces.",
+        "sources": [
+          {
+            "name": "PORTER / Net-a-Porter",
+            "url": "https://www.net-a-porter.com/en-us/porter/article-d30482c86a1f1633/jewelry-watches/fine-jewelry/jewelry-trends-2026"
+          },
+          {
+            "name": "TikTok",
+            "url": "https://www.tiktok.com/discover/trendy-jewelry"
+          }
+        ],
+        "missing": [
+          "supersized bead pieces"
+        ],
+        "momentum": "steady",
+        "fit": "we sell it",
+        "productIds": [
+          "silver-waist-chain",
+          "silver-shoulder-harness",
+          "layered-silver-belly-chain",
+          "silver-waterproof-belly-chain",
+          "silver-finger-hand-chain",
+          "minimalist-glasses-chain",
+          "silver-eyeglasses-chain"
+        ],
+        "idea": "Run a silver-forward winter edit across body chains and glasses chains."
+      },
+      {
+        "name": "Maximalist pearls",
+        "what": "Pearlcore going mainstream, worn big and layered rather than demure.",
+        "searches": [
+          "pearl necklace layered",
+          "chunky pearl necklace",
+          "pearl jewellery outfit"
+        ],
+        "evidence": "Branvas' 2026 Jewelry Trend Map 'uses Google Trends and sales data to show which jewelry styles are rising, cooling, or worth betting on' and reports 'pearlcore accelerating into mainstream, chunky gold holding strong'. Vogue Adria's AW26/27 report names 'Long necklaces, maximalist pearls and vintage earrings' as the season's defining pieces.",
+        "sources": [
+          {
+            "name": "Branvas",
+            "url": "https://branvas.com/blogs/news/2026-jewelry-trend-map"
+          },
+          {
+            "name": "Vogue Adria",
+            "url": "https://vogueadria.com/jewellery-trends/"
+          }
+        ],
+        "missing": [
+          "chunky/oversized pearl pieces"
+        ],
+        "momentum": "peaking",
+        "fit": "we sell it",
+        "productIds": [
+          "pearl-body-harness",
+          "pearl-belly-chain",
+          "pearl-lariat-back-necklace",
+          "layered-pearl-choker",
+          "pearl-hand-chain",
+          "pearl-bridal-head-chain"
+        ],
+        "idea": "Merchandise pearls as stacked multi-piece looks to read maximalist despite dainty scale."
+      },
+      {
+        "name": "Charms and personalisation as collectible gifting",
+        "what": "Meaningful, personalised and charm-based pieces bought as collections that invite repeat purchase.",
+        "searches": [
+          "charm necklace gift",
+          "personalised jewellery gift for her",
+          "initial necklace gift",
+          "birth flower necklace"
+        ],
+        "evidence": "Stuller's 6 Biggest Holiday Jewelry Trends for 2026: 'A shopper can give one meaningful piece today while creating an easy reason to return for the next addition — whether it's for a birthday, anniversary, graduation, vacation, or another milestone'. eRank says Etsy shoppers are 'leaning toward warmth, nostalgia, and personalized pieces with meaning, such as engraved jewelry'.",
+        "sources": [
+          {
+            "name": "Stuller",
+            "url": "https://blog.stuller.com/6-jewelry-trends-holiday-2026/"
+          },
+          {
+            "name": "eRank",
+            "url": "https://help.erank.com/blog/holiday-trend-reports-etsy-sellers/"
+          }
+        ],
+        "missing": [
+          "standalone charms / add-a-charm system",
+          "charm clasps",
+          "engraving service"
+        ],
+        "momentum": "steady",
+        "fit": "we sell it",
+        "productIds": [
+          "birth-flower-charm-necklace",
+          "birth-flower-charm-bracelet",
+          "birth-flower-anklet",
+          "script-initial-bracelet",
+          "monogram-letter-necklace",
+          "personalized-birthstone-back-necklace",
+          "pearl-heart-initial-anklet",
+          "zodiac-charm-bracelet"
+        ],
+        "idea": "Sell personalised pieces as start-a-collection gifts with a clear 'add the next one' follow-up."
+      },
+      {
+        "name": "Category gaps: earrings, brooches, bows, cuffs, tassels, vamp romantic",
+        "what": "Named 2026 trends the shop cannot serve at all with current stock.",
+        "searches": [
+          "flat back earrings",
+          "statement earrings",
+          "brooch outfit",
+          "bow necklace",
+          "arm cuff jewellery"
+        ],
+        "evidence": "Glimpse's Google Trends product list puts flat back earrings at 65% YoY growth; Ellison Young and TikTok fall round-ups make statement earrings the holiday hero. Pinterest Predicts 2026's 'Brooched' trend is reported by National Jeweler and called Who What Wear's #1 pick of 21 predictions. Yahoo Finance notes 'The bow and ribbon motifs that have spread across consumer categories since 2024'. Who What Wear's luxury 2026 piece names arm cuffs; its 2026 jewellery trends piece names tassels. Pinterest's own Vamp Romantic page describes 'an after-dark aesthetic, embracing jet black nails, romantic goth hairstyles'. Social Media Today notes Pinterest has '88% of its predictions going on to become bigger trends', and The Jewellery Gossip reports 'Online sentiment for fall fashion is around 23% higher versus the same time last year'.",
+        "sources": [
+          {
+            "name": "Glimpse",
+            "url": "https://meetglimpse.com/google-trends/products/"
+          },
+          {
+            "name": "Ellison Young",
+            "url": "https://ellisonyoung.com"
+          },
+          {
+            "name": "TikTok",
+            "url": "https://www.tiktok.com/discover/trendy-jewelry"
+          },
+          {
+            "name": "National Jeweler",
+            "url": "https://www.nationaljeweler.com/articles/14522-pinterest-2026-trend-report-brooches-bold-gold-cool-blue"
+          },
+          {
+            "name": "Who What Wear",
+            "url": "https://www.whowhatwear.com/fashion/trends/pinterest-trends-2026"
+          },
+          {
+            "name": "Yahoo Finance",
+            "url": "https://finance.yahoo.com/media-advertising/articles/pinterest-says-trend-forecasts-88-193332675.html"
+          },
+          {
+            "name": "Who What Wear",
+            "url": "https://www.whowhatwear.com/fashion/luxury/luxury-jewellery-trends-2026"
+          },
+          {
+            "name": "Who What Wear",
+            "url": "https://www.whowhatwear.com/fashion/jewelry/jewelry-trends-2026"
+          },
+          {
+            "name": "Pinterest Predicts",
+            "url": "https://business.pinterest.com/pinterest-predicts/2026/vamp-romantic/"
+          },
+          {
+            "name": "Social Media Today",
+            "url": "https://www.socialmediatoday.com/news/pinterest-publishes-2026-trend-predictions-report/807452/"
+          },
+          {
+            "name": "The Jewellery Gossip",
+            "url": "https://thejewellerygossip.substack.com/p/fall-winter-2026-jewellery-trends"
+          }
+        ],
+        "missing": [
+          "earrings (flat back and statement)",
+          "brooches",
+          "bow/ribbon motifs",
+          "arm cuffs",
+          "rigid collars",
+          "tassels",
+          "black/jet, oxidised or blood-red pieces"
+        ],
+        "momentum": "rising",
+        "fit": "gap",
+        "productIds": [],
+        "idea": "Prioritise a small earrings sampling run, then bows/ribbon and moon-constellation charms since chain-making skills transfer directly."
+      }
+    ],
+    "gaps": [],
+    "blogIdeas": [
+      {
+        "query": "what jewellery to wear with a satin slip dress",
+        "why": "Who What Wear's FW26 report says chunky collars and chokers are replacing layered dainty chains, which is exactly the styling tension on a thin satin strap during party season.",
+        "productIds": [
+          "dainty-backdrop-back-necklace",
+          "satellite-link-choker",
+          "dainty-gold-body-chain",
+          "silver-shoulder-harness"
+        ]
+      },
+      {
+        "query": "jewellery gifts for the woman who has everything",
+        "why": "eRank's holiday 2026 report is titled 'Frosted, Festive & Unexpected' and Stuller frames the winning gift as one meaningful piece that starts a collection.",
+        "productIds": [
+          "silver-shoulder-harness",
+          "gold-hand-chain",
+          "pearl-body-harness",
+          "pearl-glasses-chain"
+        ]
+      },
+      {
+        "query": "christmas gift for wife jewelry",
+        "why": "Stuller and eRank both put personalised, engraved and charm pieces at the top of holiday demand, and 'wife' is the missing recipient in the Christmas series.",
+        "productIds": [
+          "personalized-birthstone-back-necklace",
+          "pearl-heart-initial-bracelet",
+          "initial-letter-rhinestone-choker",
+          "pearl-belly-chain"
+        ]
+      },
+      {
+        "query": "celestial jewellery gift ideas",
+        "why": "eRank reports stars, moons and constellations replacing snowflakes this holiday, and National Jeweler's Pinterest Predicts coverage shows opalescent searches up 115%.",
+        "productIds": [
+          "beaded-star-choker",
+          "star-pendant-rhinestone-choker",
+          "star-charm-crystal-bracelet",
+          "turquoise-zodiac-necklace-stack"
+        ]
+      },
+      {
+        "query": "mother daughter matching jewellery",
+        "why": "Stuller's holiday 2026 charm logic — one meaningful piece that creates a reason to return — plus eRank's read on personalised pieces with meaning.",
+        "productIds": [
+          "birth-flower-charm-necklace",
+          "birth-flower-charm-bracelet",
+          "birth-flower-anklet",
+          "pearl-heart-initial-bracelet"
+        ]
+      }
+    ]
+  },
+  {
     "date": "2026-10-22",
     "researchModel": "claude-sonnet-5",
     "trends": [

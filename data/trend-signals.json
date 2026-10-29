@@ -1,5 +1,255 @@
 [
   {
+    "date": "2026-10-29",
+    "researchModel": "claude-sonnet-5",
+    "trends": [
+      {
+        "name": "Bow-motif necklaces/charms",
+        "what": "Bow-shaped charms and necklaces drawing on nostalgic, romantic motifs.",
+        "searches": [
+          "bow necklace",
+          "bow charm jewelry",
+          "bell and bow necklace"
+        ],
+        "evidence": "Gifts & Decorative Accessories names 'pearls, bows, charms, nostalgic icons' as resonating for 2027 wholesale buyers; Ellison Young's Holiday Jewelry Trends 2026 lists 'bell and bow necklaces' explicitly.",
+        "sources": [
+          {
+            "name": "Gifts & Decorative Accessories",
+            "url": "giftsanddec.com"
+          },
+          {
+            "name": "Ellison Young",
+            "url": "ellisonyoung.com"
+          }
+        ],
+        "missing": [
+          "bow-shaped charm necklace",
+          "bow-shaped charm bracelet"
+        ],
+        "momentum": "rising",
+        "fit": "gap",
+        "productIds": [],
+        "idea": "Consider designing a bow-charm necklace/bracelet to fill this nostalgic motif gap."
+      },
+      {
+        "name": "Chunky cuffs, bangles & upper-arm cuffs",
+        "what": "Rigid cuff bracelets and upper-arm cuffs replacing flexible chain bracelets.",
+        "searches": [
+          "chunky cuff bracelet",
+          "bangle bracelet trend",
+          "upper arm cuff"
+        ],
+        "evidence": "Parade quotes stylist Flanagan: 'Chunky cuffs and bangles are definitely having a moment.' WhoWhatWear names 'Arm Cuffs' a top luxury 2026 trend; Artizan Joyeria lists bangle bracelets and upper arm cuffs in both fall 2026 and 2027 predictions.",
+        "sources": [
+          {
+            "name": "Parade",
+            "url": "parade.com"
+          },
+          {
+            "name": "WhoWhatWear",
+            "url": ""
+          },
+          {
+            "name": "Artizan Joyeria",
+            "url": ""
+          }
+        ],
+        "missing": [
+          "rigid bangle bracelet",
+          "upper-arm cuff"
+        ],
+        "momentum": "rising",
+        "fit": "gap",
+        "productIds": [],
+        "idea": "Develop a rigid bangle or upper-arm cuff line since every current bracelet SKU is flexible chain/bead style."
+      },
+      {
+        "name": "Rigid/torque chokers",
+        "what": "Clean, rigid metal collar chokers sitting above the collarbone, often paired with a statement pendant.",
+        "searches": [
+          "torque necklace",
+          "rigid choker",
+          "collar necklace"
+        ],
+        "evidence": "WhoWhatWear names Torque Chokers the #1 leading luxury jewellery trend of 2026, calling it 'one of the most defining silhouettes.'",
+        "sources": [
+          {
+            "name": "WhoWhatWear",
+            "url": ""
+          }
+        ],
+        "missing": [
+          "rigid torque choker"
+        ],
+        "momentum": "peaking",
+        "fit": "gap",
+        "productIds": [],
+        "idea": "Add a rigid open-collar torque choker to complement the soft bead/pearl choker range."
+      },
+      {
+        "name": "Modular, convertible & stackable jewelry",
+        "what": "Pieces that can be restyled, stacked, or converted between necklace/body chain uses.",
+        "searches": [
+          "convertible necklace",
+          "modular jewelry",
+          "necklace that doubles as a body chain"
+        ],
+        "evidence": "Parade quotes Michael Christensen of LabGrown.com on stackable modular jewelry; TikTok's '2026 Jewelry Trends' page names Modular Necklaces; Stuller Blog and Artizan Joyeria and Gifts & Decorative Accessories all confirm stacked/layered demand.",
+        "sources": [
+          {
+            "name": "Parade",
+            "url": "parade.com"
+          },
+          {
+            "name": "TikTok",
+            "url": ""
+          },
+          {
+            "name": "Stuller Blog",
+            "url": ""
+          },
+          {
+            "name": "Artizan Joyeria",
+            "url": ""
+          },
+          {
+            "name": "Gifts & Decorative Accessories",
+            "url": "giftsanddec.com"
+          }
+        ],
+        "missing": [],
+        "momentum": "rising",
+        "fit": "we sell it",
+        "productIds": [
+          "2-in-1-body-chain-necklace",
+          "bikini-body-chain",
+          "curated-layered-necklace-stack",
+          "turquoise-zodiac-necklace-stack",
+          "maximalist-layered-necklace-stack"
+        ],
+        "idea": "Promote the convertible and pre-stacked necklace sets as the modular jewelry trend's ready-made answer."
+      },
+      {
+        "name": "Whimsical, colorful & personalized charm jewelry",
+        "what": "Colorful, floral, and personalized charm jewelry tied to 'Strategic Joy' and personalization trends.",
+        "searches": [
+          "whimsical jewelry",
+          "colorful jewelry trend",
+          "personalized charm necklace"
+        ],
+        "evidence": "Artizan Joyeria's 2027 predictions name whimsical floral pieces, colorful jewelry, and personalized jewelry citing WGSN's 'Strategic Joy'; theo grace's 2026 report names birthstone, family, name, initial, and 'Grandma jewelry' as strongest personalization search themes.",
+        "sources": [
+          {
+            "name": "Artizan Joyeria",
+            "url": ""
+          },
+          {
+            "name": "theo grace",
+            "url": ""
+          }
+        ],
+        "missing": [],
+        "momentum": "rising",
+        "fit": "partial",
+        "productIds": [
+          "birth-flower-anklet",
+          "birth-flower-charm-bracelet",
+          "birth-flower-charm-necklace",
+          "colorful-crystal-bead-anklet",
+          "colorful-crystal-bead-bracelet",
+          "colorful-crystal-bead-choker",
+          "gemstone-zodiac-anklet",
+          "rhodochrosite-ring",
+          "diamond-initial-anklet",
+          "monogram-letter-necklace",
+          "script-initial-bracelet",
+          "birthstone-ring",
+          "birthstone-bracelet",
+          "birthstone-choker-necklace"
+        ],
+        "idea": "Bundle whimsical floral, colorful gemstone, and personalized initial/birthstone pieces into a 'Strategic Joy' themed collection push."
+      },
+      {
+        "name": "Hand chains as a viral must-have",
+        "what": "Gold and statement hand chains flagged as a cool-girl must-have piece.",
+        "searches": [
+          "hand chain jewelry",
+          "gold hand chain trend"
+        ],
+        "evidence": "TikTok video from @kirakirbyy captioned 'Discover the must-have hand chain jewelry piece that every cool girl will wear in 2026' — 8,309 likes, part of the 'Jewerly Trends 2026' discovery page (last updated Oct 19, 2026).",
+        "sources": [
+          {
+            "name": "TikTok",
+            "url": ""
+          }
+        ],
+        "missing": [],
+        "momentum": "rising",
+        "fit": "we sell it",
+        "productIds": [
+          "gold-hand-chain",
+          "pearl-hand-chain",
+          "silver-finger-hand-chain",
+          "mirror-link-hand-chain",
+          "boho-finger-hand-chain",
+          "pearl-cross-hand-chain"
+        ],
+        "idea": "Capitalize on the viral TikTok hand-chain moment with targeted social promotion of existing hand chain SKUs."
+      }
+    ],
+    "gaps": [],
+    "blogIdeas": [
+      {
+        "query": "christmas gift for grandma jewelry",
+        "why": "theo grace's 2026 Jewelry Trends & Insights Report names 'Grandma jewelry,' family necklaces, and birthstone necklaces as top personalized-jewelry search themes peaking at Christmas.",
+        "productIds": [
+          "birth-flower-charm-necklace",
+          "birthstone-choker-necklace",
+          "monogram-letter-necklace",
+          "pearl-charm-bracelet"
+        ]
+      },
+      {
+        "query": "anniversary gift jewelry for her",
+        "why": "theo grace's report lists 'Anniversary gifts' among the strongest year-round personalized-jewelry search themes.",
+        "productIds": [
+          "diamond-initial-layered-bracelet",
+          "layered-pearl-bracelet",
+          "birthstone-choker-necklace",
+          "paperclip-initial-necklace"
+        ]
+      },
+      {
+        "query": "layered necklace set",
+        "why": "Stuller Blog's 2026 holiday trends report leads with layered necklaces and stacked bracelets, and Artizan Joyeria confirms layered necklace sets across fall 2026 and 2027 predictions.",
+        "productIds": [
+          "curated-layered-necklace-stack",
+          "turquoise-zodiac-necklace-stack",
+          "maximalist-layered-necklace-stack"
+        ]
+      },
+      {
+        "query": "convertible necklace multiple ways to wear",
+        "why": "TikTok's '2026 Jewelry Trends' page names Modular Necklaces as a defining theme, and Parade quotes an industry source calling stackable modular jewelry a major trend.",
+        "productIds": [
+          "2-in-1-body-chain-necklace",
+          "bikini-body-chain",
+          "dainty-gold-body-chain"
+        ]
+      },
+      {
+        "query": "how to wear a head chain",
+        "why": "Ellison Young's Holiday Jewelry Trends 2026 lists 'shimmer hair accessories' among its 2026 holiday jewelry trends, directly supporting head chain styling content.",
+        "productIds": [
+          "boho-hair-chain",
+          "bridal-forehead-chain",
+          "boho-forehead-chain",
+          "pearl-bridal-head-chain"
+        ]
+      }
+    ]
+  },
+  {
     "date": "2026-10-26",
     "researchModel": "claude-opus-5",
     "trends": [

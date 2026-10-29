@@ -1,5 +1,170 @@
 [
   {
+    "query": "christmas gift for grandma jewelry",
+    "keywords": [
+      "personalized grandma necklace with grandchildren's birthstones",
+      "family birthstone necklace for grandma",
+      "meaningful gift for grandma from grandchildren",
+      "custom initial necklace for grandma",
+      "grandma jewelry gift ideas"
+    ],
+    "productIds": [
+      "birth-flower-charm-necklace",
+      "birthstone-choker-necklace",
+      "monogram-letter-necklace",
+      "pearl-charm-bracelet"
+    ],
+    "category": "Gift Guide",
+    "months": [
+      11,
+      12,
+      5
+    ],
+    "productCategories": [
+      "Necklaces",
+      "Bracelets"
+    ],
+    "source": "research",
+    "researchModel": "claude-sonnet-5",
+    "addedAt": "2026-10-29",
+    "why": "theo grace's 2026 Jewelry Trends & Insights Report names 'Grandma jewelry,' family necklaces, and birthstone necklaces as top personalized-jewelry search themes peaking at Christmas."
+  },
+  {
+    "query": "anniversary gift jewelry for her",
+    "keywords": [
+      "meaningful anniversary necklace for wife",
+      "personalized anniversary gift idea",
+      "birthstone jewelry anniversary gift",
+      "initial necklace anniversary present",
+      "pearl jewelry for anniversary"
+    ],
+    "productIds": [
+      "diamond-initial-layered-bracelet",
+      "layered-pearl-bracelet",
+      "birthstone-choker-necklace",
+      "paperclip-initial-necklace"
+    ],
+    "category": "Gift Guide",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "productCategories": [
+      "Bracelets",
+      "Necklaces"
+    ],
+    "source": "research",
+    "researchModel": "claude-sonnet-5",
+    "addedAt": "2026-10-29",
+    "why": "theo grace's report lists 'Anniversary gifts' among the strongest year-round personalized-jewelry search themes."
+  },
+  {
+    "query": "layered necklace set",
+    "keywords": [
+      "pre-stacked necklace set that doesn't tangle",
+      "zodiac necklace set gift for her",
+      "modular necklace stacking set",
+      "ready-made layered necklace gift",
+      "necklace stack set for gifting"
+    ],
+    "productIds": [
+      "curated-layered-necklace-stack",
+      "turquoise-zodiac-necklace-stack",
+      "maximalist-layered-necklace-stack"
+    ],
+    "category": "Style Guide",
+    "months": [
+      11,
+      12,
+      1
+    ],
+    "productCategories": [
+      "Necklaces"
+    ],
+    "source": "research",
+    "researchModel": "claude-sonnet-5",
+    "addedAt": "2026-10-29",
+    "why": "Stuller Blog's 2026 holiday trends report leads with layered necklaces and stacked bracelets, and Artizan Joyeria confirms layered necklace sets across fall 2026 and 2027 predictions."
+  },
+  {
+    "query": "convertible necklace multiple ways to wear",
+    "keywords": [
+      "necklace that turns into a body chain",
+      "versatile jewelry for travel",
+      "one piece multiple looks jewelry",
+      "modular body jewelry",
+      "build your own jewelry stack"
+    ],
+    "productIds": [
+      "2-in-1-body-chain-necklace",
+      "bikini-body-chain",
+      "dainty-gold-body-chain"
+    ],
+    "category": "Style Guide",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "productCategories": [
+      "Necklaces",
+      "Body Chains"
+    ],
+    "source": "research",
+    "researchModel": "claude-sonnet-5",
+    "addedAt": "2026-10-29",
+    "why": "TikTok's '2026 Jewelry Trends' page names Modular Necklaces as a defining theme, and Parade quotes an industry source calling stackable modular jewelry a major trend."
+  },
+  {
+    "query": "how to wear a head chain",
+    "keywords": [
+      "forehead chain for a night out",
+      "boho head chain styling",
+      "head chain hair accessory",
+      "how to wear a forehead chain with your hair down",
+      "party hair jewelry chain"
+    ],
+    "productIds": [
+      "boho-hair-chain",
+      "bridal-forehead-chain",
+      "boho-forehead-chain",
+      "pearl-bridal-head-chain"
+    ],
+    "category": "Style Guide",
+    "months": [
+      11,
+      12,
+      3,
+      4
+    ],
+    "productCategories": [
+      "Head Chains"
+    ],
+    "source": "research",
+    "researchModel": "claude-sonnet-5",
+    "addedAt": "2026-10-29",
+    "why": "Ellison Young's Holiday Jewelry Trends 2026 lists 'shimmer hair accessories' among its 2026 holiday jewelry trends, directly supporting head chain styling content."
+  },
+  {
     "query": "what jewellery to wear with a satin slip dress",
     "keywords": [
       "jewellery for a satin slip dress",

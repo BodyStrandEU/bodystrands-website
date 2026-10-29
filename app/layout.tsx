@@ -170,7 +170,7 @@ export default async function RootLayout({
           'https://connect.facebook.net/en_US/fbevents.js');
           // No consent yet → the pixel holds everything until CookieConsent calls fbq('consent','grant')
           if (!window.__bsConsent) fbq('consent', 'revoke');
-          fbq('init', '1921612571995204');
+          fbq('init', '308224535511163');
           if (!window.location.pathname.startsWith('/admin')) {
             fbq('track', 'PageView');
           }

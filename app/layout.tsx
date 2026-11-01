@@ -48,9 +48,9 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, "max-image-preview": "large" } },
   verification: {
     google: "4wuuduuIvTMEvYh_KsNjBGLGBYV3B5yyXhA-jSURoUQ",
-    // Pinterest website claim — renders one <meta name="p:domain_verify"> per value.
-    // First is the old account (Oct 2, 2026); second is the new account (Nov 1, 2026).
-    other: { "p:domain_verify": ["07fab5b91327a4c64fcf7dd7387df72d", "2475af368bb0c09e5d1be31fbcb73ed6"] },
+    // Pinterest website claim (new account, Nov 1, 2026) — renders <meta name="p:domain_verify">.
+    // Old account tag (07fab5b9...) removed; Pinterest reads a single tag.
+    other: { "p:domain_verify": "2475af368bb0c09e5d1be31fbcb73ed6" },
   },
 };
 

@@ -1,5 +1,168 @@
 [
   {
+    "query": "what necklace to wear with a plunging neckline",
+    "keywords": [
+      "what jewellery to wear with a deep v neck dress",
+      "y necklace for low cut dress",
+      "body chain for plunging neckline",
+      "what necklace for a deep v party dress",
+      "layered necklaces for v neck top"
+    ],
+    "productIds": [
+      "cross-body-chain",
+      "gold-body-necklace",
+      "dainty-gold-body-chain",
+      "gold-waist-chain"
+    ],
+    "category": "Style Guide",
+    "months": [
+      11,
+      12,
+      1,
+      2
+    ],
+    "productCategories": [
+      "Necklaces",
+      "Body Chains",
+      "Belly Chains"
+    ],
+    "source": "research",
+    "researchModel": "claude-opus-5",
+    "addedAt": "2026-11-02",
+    "why": "Plunge necklines are the dominant party-dress shape and the one gap in our neckline series, with Mark Schneider Design reporting bold necklaces with personality for autumn/winter 2026 and Who What Wear naming long chains an SS26 trend."
+  },
+  {
+    "query": "christmas gift for mother in law jewelry",
+    "keywords": [
+      "what jewellery to buy your mother in law",
+      "tasteful jewellery gift for mother in law",
+      "mother in law christmas gift under 50 euros",
+      "first christmas with in laws gift idea",
+      "jewellery gift that isn't too personal"
+    ],
+    "productIds": [
+      "pearl-charm-bracelet",
+      "birthstone-choker-necklace",
+      "dainty-eyeglasses-chain",
+      "layered-pearl-bracelet"
+    ],
+    "category": "Gift Guide",
+    "months": [
+      11,
+      12
+    ],
+    "productCategories": [
+      "Bracelets",
+      "Necklaces",
+      "Eyeglasses Chains"
+    ],
+    "source": "research",
+    "researchModel": "claude-opus-5",
+    "addedAt": "2026-11-02",
+    "why": "Faire's holiday 2026 gift trends report names affordable statement jewellery a defining category, and The Plumb Club (citing Mastercard) notes over 35% of jewellery spend lands in the final week before Christmas."
+  },
+  {
+    "query": "how to measure your ankle for an anklet",
+    "keywords": [
+      "what size anklet should i buy",
+      "anklet size chart women",
+      "how tight should an anklet be",
+      "how to measure ankle for anklet without tape measure",
+      "anklet size for plus size"
+    ],
+    "productIds": [
+      "birthstone-gemstone-anklet",
+      "pearl-chain-anklet",
+      "initial-letter-anklet",
+      "plus-size-toe-chain-anklet"
+    ],
+    "category": "Care & Quality",
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "productCategories": [
+      "Anklets",
+      "Foot Chains"
+    ],
+    "source": "research",
+    "researchModel": "claude-opus-5",
+    "addedAt": "2026-11-02",
+    "why": "Sizing queries already convert for our belly chain content, and Who What Wear put toe rings at the top of its spring 2026 trend list, driving foot jewellery interest."
+  },
+  {
+    "query": "gifts for an aquarius woman",
+    "keywords": [
+      "aquarius jewellery gift ideas",
+      "what to buy an aquarius woman for her birthday",
+      "aquarius zodiac necklace gift",
+      "january february birthday gift for her",
+      "aquarius star sign jewellery"
+    ],
+    "productIds": [
+      "zodiac-slip-on-necklace",
+      "zodiac-charm-bracelet",
+      "gemstone-zodiac-anklet",
+      "turquoise-zodiac-necklace-stack"
+    ],
+    "category": "Gift Guide",
+    "months": [
+      12,
+      1,
+      2
+    ],
+    "productCategories": [
+      "Necklaces",
+      "Bracelets",
+      "Anklets"
+    ],
+    "source": "research",
+    "researchModel": "claude-opus-5",
+    "addedAt": "2026-11-02",
+    "why": "Aquarius runs 20 Jan-18 Feb so buying starts mid-January, and Brilliant Earth's 2027 trends guide explicitly names zodiac medallions a 2027 trend."
+  },
+  {
+    "query": "february birthstone amethyst meaning",
+    "keywords": [
+      "what does amethyst symbolise",
+      "amethyst birthstone jewellery for february birthday",
+      "february birthstone colour purple",
+      "amethyst necklace meaning spiritual",
+      "birthstone gift for a february birthday"
+    ],
+    "productIds": [
+      "birthstone-ring",
+      "birthstone-bracelet",
+      "birth-month-teardrop-choker",
+      "personalized-birthstone-back-necklace"
+    ],
+    "category": "Personalized Jewelry",
+    "months": [
+      1,
+      2
+    ],
+    "productCategories": [
+      "Rings",
+      "Bracelets",
+      "Necklaces",
+      "Back Chains"
+    ],
+    "source": "research",
+    "researchModel": "claude-opus-5",
+    "addedAt": "2026-11-02",
+    "why": "Next in our monthly birthstone series, with Brilliant Earth's 2027 guide centring gemstones in unexpected colours and Akrati Jewels reporting coloured stones driving current season demand."
+  },
+  {
     "query": "christmas gift for grandma jewelry",
     "keywords": [
       "personalized grandma necklace with grandchildren's birthstones",

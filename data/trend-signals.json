@@ -1,5 +1,380 @@
 [
   {
+    "date": "2026-11-02",
+    "researchModel": "claude-opus-5",
+    "trends": [
+      {
+        "name": "Brooches and jewellery worn on fabric",
+        "what": "Pinterest named brooches as a rising jewellery category for 2026, and runway press has followed with bold pins, corsage styles and jewelled collars.",
+        "searches": [
+          "brooch outfit ideas",
+          "brooch aesthetic",
+          "how to wear a brooch on a coat",
+          "corsage pin jewellery"
+        ],
+        "evidence": "JCK reported Pinterest Predicts named a jewellery category outright for the first time, and it was brooches. National Jeweler logged rising Pinterest searches for brooches, heirloom jewellery and '80s luxury. Mark Schneider Design calls 2026 'a surprisingly good year for the brooch revival' with bold brooches, jewelled collars and corsage-style pins. Who What Wear lists brooches among five SS26 runway jewellery trends.",
+        "sources": [
+          {
+            "name": "JCK",
+            "url": "https://www.jckonline.com/editorial-article/pinterest-2026-trends-report/"
+          },
+          {
+            "name": "National Jeweler",
+            "url": "https://www.nationaljeweler.com/articles/14522-pinterest-2026-trend-report-brooches-bold-gold-cool-blue"
+          },
+          {
+            "name": "Mark Schneider Design",
+            "url": "https://www.markschneiderdesign.com/blogs/jewelry-blog/holiday-jewelry-trends-for-fall-and-winter-2026"
+          },
+          {
+            "name": "Who What Wear",
+            "url": "https://www.whowhatwear.com/fashion/jewelry/spring-jewellery-trends-2026"
+          }
+        ],
+        "missing": [
+          "brooches",
+          "lapel/collar pins",
+          "corsage pins",
+          "scarf pins",
+          "jewelled collars",
+          "hair pins"
+        ],
+        "momentum": "rising",
+        "fit": "gap",
+        "productIds": [],
+        "idea": "Consider introducing a small pin and jewelled-collar capsule, since the closest thing we make (head-chain hardware) is not a substitute."
+      },
+      {
+        "name": "'80s maximalist gold (Glamoratti)",
+        "what": "Chunky gold cuffs, bangles and bold metal are returning as the anti-quiet-luxury look heading into 2027.",
+        "searches": [
+          "gold cuff bracelet",
+          "chunky gold jewellery outfit",
+          "glamoratti aesthetic",
+          "wide cuff bracelet"
+        ],
+        "evidence": "NBC Select groups 'gold cuffs', 'brooch aesthetic' and 'heirloom jewellery' as rising Pinterest searches tied to maximalism. Trendalytics decodes Pinterest's 'Glamoratti' as chunky gold jewellery and bold accessories, 'the anti-quiet luxury'. Fine Color Jewels quotes gold cuff +50% and heirloom jewellery +45% (retailer's reading of Pinterest Predicts, unconfirmed on Pinterest's own newsroom). German retailer Corelune puts wide cuff bracelets and warm gold tones in its six 2027 directions. Women.com frames winter 2026 as dramatic and chunky pushing dainty aside.",
+        "sources": [
+          {
+            "name": "NBC Select",
+            "url": "https://www.nbcnews.com/select/shopping/pinterest-predicts-2026-trend-report-rcna248706"
+          },
+          {
+            "name": "Trendalytics",
+            "url": "https://www.trendalytics.co/trend-insights/pinterest-predicts-2026-what-trends-mean-for-your-brand"
+          },
+          {
+            "name": "Fine Color Jewels",
+            "url": "https://www.finecolorjewels.com/blogs/news/pinterest-jewelry-trends"
+          },
+          {
+            "name": "Corelune",
+            "url": "https://corelunejewellery.de/en/blogs/news/schmuck-trends-2027-vorschau"
+          },
+          {
+            "name": "Women.com",
+            "url": "https://www.women.com/2286160/once-outdated-jewelry-trend-everywhere-winter-2026/"
+          }
+        ],
+        "missing": [
+          "cuff bracelets",
+          "bangles",
+          "wide collars",
+          "chunky statement rings"
+        ],
+        "momentum": "rising",
+        "fit": "partial",
+        "productIds": [
+          "maximalist-layered-necklace-stack",
+          "chunky-toggle-cross-necklace",
+          "cuban-chain-bracelet",
+          "gold-hand-chain"
+        ],
+        "idea": "Merchandise our heaviest existing pieces as a 'bold gold' edit while our house style stays dainty."
+      },
+      {
+        "name": "Charms, zodiac medallions and symbolic personalisation",
+        "what": "Personalisation is shifting from engraved names to meaningful symbols: charms, zodiac medallions, birthstones and birth flowers.",
+        "searches": [
+          "zodiac medallion necklace",
+          "charm bracelet gift",
+          "birthstone jewellery gift",
+          "initial necklace personalised",
+          "meaningful jewellery gift"
+        ],
+        "evidence": "Brilliant Earth's 2027 trends guide lists charms, zodiac medallions, pearls, 'Love and Luck' and 'Sentimental and Symbolic'. Stuller says personalisation is moving past engraved names into layered styling and wearable reminders. HKTDC calls meaningful personalisation 'perhaps the most important trend shaping jewellery in 2027'. Dutch retailer Lundholm names charms and hearts in its autumn/winter 2026 list.",
+        "sources": [
+          {
+            "name": "Brilliant Earth",
+            "url": "https://www.brilliantearth.com/guides/jewelry-trends/"
+          },
+          {
+            "name": "Stuller",
+            "url": "https://blog.stuller.com/jewelry-trends-to-watch-for-in-2027/"
+          },
+          {
+            "name": "HKTDC",
+            "url": "https://sourcing.hktdc.com/newsbites/trend/jewellery-2027/"
+          },
+          {
+            "name": "Lundholm",
+            "url": "https://lundholmstore.com/en-us/blogs/tips/jewelry-trends-fall-winter-2026"
+          }
+        ],
+        "missing": [
+          "lockets"
+        ],
+        "momentum": "rising",
+        "fit": "we sell it",
+        "productIds": [
+          "zodiac-slip-on-necklace",
+          "zodiac-charm-bracelet",
+          "birthstone-bracelet",
+          "birth-flower-charm-necklace"
+        ],
+        "idea": "Push the zodiac, birthstone and birth-flower range hard through gifting season as the shop's flagship category."
+      },
+      {
+        "name": "Beaded necklaces going supersized",
+        "what": "Colourful beaded necklaces are an It trend, but the shape is shifting from dainty strands to large sculptural beads.",
+        "searches": [
+          "beaded necklace outfit",
+          "colourful beaded necklace",
+          "chunky bead necklace",
+          "turquoise beaded necklace"
+        ],
+        "evidence": "Who What Wear says runways at Chanel, Celine and Ralph Lauren made beaded necklaces an It trend, with Instagram following. Net-a-Porter/PORTER (26 Aug 2026) puts 'supersized beads' among autumn 2026 fine-jewellery trends. Gurhan predicts sculptural beaded necklaces worn as a single bold strand rather than layered.",
+        "sources": [
+          {
+            "name": "Who What Wear",
+            "url": "https://www.whowhatwear.com/fashion/jewelry/spring-jewelry-trends-2026"
+          },
+          {
+            "name": "Net-a-Porter / PORTER",
+            "url": "https://www.net-a-porter.com/en-us/porter/article-d30482c86a1f1633/jewelry-trends-2026"
+          },
+          {
+            "name": "Gurhan",
+            "url": "https://gurhan.com/blogs/style/8-designer-jewelry-trends-to-know-in-2027"
+          }
+        ],
+        "missing": [
+          "chunky single-strand bead necklaces",
+          "large-scale sculptural beads"
+        ],
+        "momentum": "rising",
+        "fit": "partial",
+        "productIds": [
+          "turquoise-beaded-choker",
+          "colorful-crystal-bead-choker",
+          "turquoise-beaded-cable-chain-necklace",
+          "beaded-star-choker"
+        ],
+        "idea": "Style our small-scale bead pieces as stacks now, and develop one chunky single-strand bead necklace to meet the scale shift."
+      },
+      {
+        "name": "Silver-tone revival and metal mixing",
+        "what": "Silver-toned jewellery is back for autumn/winter 2026, worn deliberately mixed with gold rather than matched.",
+        "searches": [
+          "silver jewellery outfit",
+          "mixing gold and silver jewellery",
+          "silver layered necklace"
+        ],
+        "evidence": "Net-a-Porter/PORTER states plainly that silver-toned jewellery is back for autumn/winter 2026. Lundholm lists 'gold mixed with silver' among its eight autumn/winter 2026 trends for the European market. Parade reports stylists seeing metals mixed rather than matched.",
+        "sources": [
+          {
+            "name": "Net-a-Porter / PORTER",
+            "url": "https://www.net-a-porter.com/en-us/porter/article-d30482c86a1f1633/jewelry-trends-2026"
+          },
+          {
+            "name": "Lundholm",
+            "url": "https://lundholmstore.com/en-us/blogs/tips/jewelry-trends-fall-winter-2026"
+          },
+          {
+            "name": "Parade",
+            "url": "https://parade.com/living/jewelry-trends-2026"
+          }
+        ],
+        "missing": [],
+        "momentum": "steady",
+        "fit": "we sell it",
+        "productIds": [
+          "silver-waterproof-belly-chain",
+          "layered-silver-belly-chain",
+          "silver-finger-hand-chain",
+          "mirror-link-hand-chain"
+        ],
+        "idea": "Treat this as inventory validation and refresh existing mixed-metal posts rather than writing new ones."
+      },
+      {
+        "name": "Ocean and shell motifs",
+        "what": "Ocean-inspired designs, shells and beach body jewellery are building toward spring/summer 2027.",
+        "searches": [
+          "shell necklace outfit",
+          "ocean inspired jewellery",
+          "cowrie shell jewellery",
+          "beach jewellery"
+        ],
+        "evidence": "Net-a-Porter/PORTER's autumn 2026 trend report leads with ocean-inspired designs. Corelune names ocean and shell motifs as the first of six 2027 directions. Hola! reports belly chains established as a defining SS26 accessory trend, with chain belts and body jewellery appearing in major houses' collections. For European readers this monetises early via winter-sun travel, Jan-Mar.",
+        "sources": [
+          {
+            "name": "Net-a-Porter / PORTER",
+            "url": "https://www.net-a-porter.com/en-us/porter/article-d30482c86a1f1633/jewelry-trends-2026"
+          },
+          {
+            "name": "Corelune",
+            "url": "https://corelunejewellery.de/en/blogs/news/schmuck-trends-2027-vorschau"
+          },
+          {
+            "name": "Hola!",
+            "url": "https://www.hola.com/us/celebrities/20260407894207/kylie-jenner-summer-belly-chain-trend/"
+          }
+        ],
+        "missing": [
+          "puka/large shell necklaces",
+          "starfish and sea-creature charms",
+          "raffia/cord mixed-material pieces"
+        ],
+        "momentum": "rising",
+        "fit": "partial",
+        "productIds": [
+          "cowrie-shell-belly-chain",
+          "cowrie-shell-anklet",
+          "boho-shell-choker-necklace",
+          "pearl-barefoot-sandal"
+        ],
+        "idea": "Launch a winter-sun shell and body-chain edit in January, ahead of competitors writing summer content."
+      },
+      {
+        "name": "Ear jewellery and statement earrings",
+        "what": "Ear cuffs, sculptural and asymmetric earrings are named by four separate sources for 2026-2027, and we sell none.",
+        "searches": [
+          "ear cuff outfit",
+          "statement earrings winter",
+          "asymmetric earrings trend",
+          "sculptural gold earrings"
+        ],
+        "evidence": "Who What Wear lists ear cuffs and sculptural earrings for SS26. Lundholm opens its autumn/winter 2026 list with big gold-toned earrings. Corelune predicts asymmetric earrings for 2027. Women.com says statement earrings are poised to take over winter 2026.",
+        "sources": [
+          {
+            "name": "Who What Wear",
+            "url": "https://www.whowhatwear.com/fashion/jewelry/spring-jewellery-trends-2026"
+          },
+          {
+            "name": "Lundholm",
+            "url": "https://lundholmstore.com/en-us/blogs/tips/jewelry-trends-fall-winter-2026"
+          },
+          {
+            "name": "Corelune",
+            "url": "https://corelunejewellery.de/en/blogs/news/schmuck-trends-2027-vorschau"
+          },
+          {
+            "name": "Women.com",
+            "url": "https://www.women.com/2286160/once-outdated-jewelry-trend-everywhere-winter-2026/"
+          }
+        ],
+        "missing": [
+          "earrings of any kind",
+          "ear cuffs",
+          "sculptural statement earrings",
+          "asymmetric earring pairs"
+        ],
+        "momentum": "rising",
+        "fit": "gap",
+        "productIds": [],
+        "idea": "This is the single largest uncovered category across our sources and worth a first ear-jewellery drop."
+      },
+      {
+        "name": "Green stones and insect motifs",
+        "what": "Green gemstones are being called the new neutral for 2027, and bug motifs are rising on Pinterest.",
+        "searches": [
+          "green gemstone necklace",
+          "emerald green jewellery outfit",
+          "bee jewellery",
+          "beetle brooch"
+        ],
+        "evidence": "Brilliant Earth's 2027 list includes 'Green Is the New Neutral'; our only coloured stones are turquoise and rhodochrosite. Pinterest's bug-motif trend was reported at +60% by Fine Color Jewels (retailer summary, not confirmed on Pinterest's newsroom); we only touch it via butterflies and dragonflies.",
+        "sources": [
+          {
+            "name": "Brilliant Earth",
+            "url": "https://www.brilliantearth.com/guides/jewelry-trends/"
+          },
+          {
+            "name": "Fine Color Jewels",
+            "url": "https://www.finecolorjewels.com/blogs/news/pinterest-jewelry-trends"
+          }
+        ],
+        "missing": [
+          "green-stone pieces",
+          "bees, beetles and ladybird motifs",
+          "actual toe rings"
+        ],
+        "momentum": "rising",
+        "fit": "partial",
+        "productIds": [
+          "butterfly-charm-belly-chain",
+          "dragonfly-pendant-necklace",
+          "butterfly-anklet",
+          "dragonfly-charm-belly-chain"
+        ],
+        "idea": "Extend the existing butterfly and dragonfly line into broader insect motifs and add a green-stone option."
+      }
+    ],
+    "gaps": [],
+    "blogIdeas": [
+      {
+        "query": "what necklace to wear with a plunging neckline",
+        "why": "Plunge necklines are the dominant party-dress shape and the one gap in our neckline series, with Mark Schneider Design reporting bold necklaces with personality for autumn/winter 2026 and Who What Wear naming long chains an SS26 trend.",
+        "productIds": [
+          "cross-body-chain",
+          "gold-body-necklace",
+          "dainty-gold-body-chain",
+          "gold-waist-chain"
+        ]
+      },
+      {
+        "query": "christmas gift for mother in law jewelry",
+        "why": "Faire's holiday 2026 gift trends report names affordable statement jewellery a defining category, and The Plumb Club (citing Mastercard) notes over 35% of jewellery spend lands in the final week before Christmas.",
+        "productIds": [
+          "pearl-charm-bracelet",
+          "birthstone-choker-necklace",
+          "dainty-eyeglasses-chain",
+          "layered-pearl-bracelet"
+        ]
+      },
+      {
+        "query": "how to measure your ankle for an anklet",
+        "why": "Sizing queries already convert for our belly chain content, and Who What Wear put toe rings at the top of its spring 2026 trend list, driving foot jewellery interest.",
+        "productIds": [
+          "birthstone-gemstone-anklet",
+          "pearl-chain-anklet",
+          "initial-letter-anklet",
+          "plus-size-toe-chain-anklet"
+        ]
+      },
+      {
+        "query": "gifts for an aquarius woman",
+        "why": "Aquarius runs 20 Jan-18 Feb so buying starts mid-January, and Brilliant Earth's 2027 trends guide explicitly names zodiac medallions a 2027 trend.",
+        "productIds": [
+          "zodiac-slip-on-necklace",
+          "zodiac-charm-bracelet",
+          "gemstone-zodiac-anklet",
+          "turquoise-zodiac-necklace-stack"
+        ]
+      },
+      {
+        "query": "february birthstone amethyst meaning",
+        "why": "Next in our monthly birthstone series, with Brilliant Earth's 2027 guide centring gemstones in unexpected colours and Akrati Jewels reporting coloured stones driving current season demand.",
+        "productIds": [
+          "birthstone-ring",
+          "birthstone-bracelet",
+          "birth-month-teardrop-choker",
+          "personalized-birthstone-back-necklace"
+        ]
+      }
+    ]
+  },
+  {
     "date": "2026-10-29",
     "researchModel": "claude-sonnet-5",
     "trends": [

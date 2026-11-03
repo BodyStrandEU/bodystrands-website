@@ -51,14 +51,14 @@ export default function EmailCapturePopup() {
       });
       if (!res.ok) throw new Error();
       setStatus("success");
-      localStorage.setItem(STORAGE_KEY, "subscribed");
+      try { localStorage.setItem(STORAGE_KEY, "subscribed"); } catch {}
     } catch {
       setStatus("error");
     }
   }
 
   function dismiss() {
-    localStorage.setItem(STORAGE_KEY, "dismissed");
+    try { localStorage.setItem(STORAGE_KEY, "dismissed"); } catch {}
     setVisible(false);
   }
 

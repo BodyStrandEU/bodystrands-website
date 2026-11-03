@@ -77,7 +77,8 @@ export function CartProvider({ children }: { children: ReactNode }) {
   }, []);
 
   useEffect(() => {
-    if (hydrated) localStorage.setItem("bs_cart", JSON.stringify(items));
+    // Storage can be blocked or full (private mode, in-app browsers) — the cart must still work in memory
+    if (hydrated) { try { localStorage.setItem("bs_cart", JSON.stringify(items)); } catch {} }
   }, [items, hydrated]);
 
   function setShippingCountry(code: string) {

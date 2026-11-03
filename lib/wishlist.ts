@@ -15,7 +15,7 @@ function readIds(): string[] {
 }
 
 function writeIds(ids: string[]) {
-  window.localStorage.setItem(STORAGE_KEY, JSON.stringify(ids));
+  try { window.localStorage.setItem(STORAGE_KEY, JSON.stringify(ids)); } catch {}
   window.dispatchEvent(new CustomEvent(EVENT_NAME));
 }
 

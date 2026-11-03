@@ -42,7 +42,7 @@ const PRE_CHECKOUT_FREE_SHIPPING: Partial<Record<string, ReactNode>> = {
 // for why (any transformed ancestor traps position:fixed, so don't nest this anywhere).
 export default function CartDrawer() {
   const {
-    items, count, subtotal, itemsTotal, setSavings, lineSetSavings, remove, updateQty, updateVariant, clear,
+    items, count, subtotal, itemsTotal, setSavings, lineSetSavings, remove, updateQty, updateVariant,
     shippingCountry, setShippingCountry,
     drawerOpen, closeDrawer,
     quickAddProduct, add: addToCart, nextQuickAdd, pickerStep, pickerTone,
@@ -132,12 +132,13 @@ export default function CartDrawer() {
         body:    JSON.stringify({
           items:   items.map((i) => ({ productId: i.productId, variant: i.variant, groupSelections: i.groupSelections, quantity: i.quantity })),
           country: shippingCountry,
+          cancelPath: window.location.pathname,
           giftWrap,
           giftNote: giftWrap ? giftNote : undefined,
         }),
       });
       const data = await res.json() as { url?: string; error?: string };
-      if (data.url) { clear(); window.location.href = data.url; }
+      if (data.url) { window.location.href = data.url; }
       else { setError(data.error ?? "Something went wrong."); setLoading(false); }
     } catch { setError("Connection error."); setLoading(false); }
   }

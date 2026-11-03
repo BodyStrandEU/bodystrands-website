@@ -43,6 +43,7 @@ export default function BuyButton({
           groupSelections,
           measurementNote,
           country:  shippingCountry || undefined,
+          cancelPath: window.location.pathname,
         }),
       });
       const data = await res.json() as { url?: string; error?: string };

@@ -119,7 +119,7 @@ const SWATCH_COLORS: Record<string, string> = {
 };
 
 export default function ProductPageClient({ product, setSlot }: { product: Product; setSlot?: ReactNode }) {
-  const { add: addToCart, shippingCountry, setShippingCountry } = useCart();
+  const { add: addToCart, openDrawer, shippingCountry, setShippingCountry } = useCart();
   const [activeVariant, setActiveVariant] = useState<string>(
     product.variants?.[0] ?? ""
   );
@@ -194,7 +194,8 @@ export default function ProductPageClient({ product, setSlot }: { product: Produ
     [
       activeVariant,
       ...(product.variantGroups
-        ?.map((g) => {
+        ?.filter((g) => g !== finishGroup) // already shown as the active variant — don't list "Gold Tone — Finish: Gold Tone"
+        .map((g) => {
           const val = groupSelections[g.label];
           if (!val) return null;
           return `${g.label}: ${val}`;
@@ -219,6 +220,7 @@ export default function ProductPageClient({ product, setSlot }: { product: Produ
     });
     setAddedMsg(true);
     setTimeout(() => setAddedMsg(false), 2000);
+    openDrawer(); // show the cart with its Checkout button right away
     if (typeof window !== "undefined") {
       const w = window as Window & { fbq?: (...a: unknown[]) => void; gtag?: (...a: unknown[]) => void };
       w.fbq?.("track", "AddToCart", { content_ids: [product.id], content_name: product.name, content_type: "product", value: totalPrice, currency: product.currency });

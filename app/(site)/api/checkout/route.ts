@@ -108,6 +108,8 @@ export async function POST(req: NextRequest) {
     const body   = await req.json() as Record<string, unknown>;
     const origin = req.headers.get("origin") ?? "https://bodystrands.com";
     const country = (body.country as string | undefined) ?? "";
+    // Where "Back" on the Stripe page returns to: the page they started checkout from (same-site paths only)
+    const cancelPath = typeof body.cancelPath === "string" && /^\/[A-Za-z0-9\-_\/]{0,200}$/.test(body.cancelPath) ? body.cancelPath : "/shop";
     // Live rates so CA free-shipping resolves to an exact $75 CAD at checkout (US is a flat EUR threshold).
     const rates = await fetchExchangeRates();
 
@@ -204,7 +206,7 @@ export async function POST(req: NextRequest) {
         allow_promotion_codes: true,
         expires_at: Math.floor(Date.now() / 1000) + 4 * 60 * 60,
         success_url: `${origin}/success?session_id={CHECKOUT_SESSION_ID}`,
-        cancel_url:  `${origin}/shop`,
+        cancel_url:  `${origin}${cancelPath}`,
       });
 
       return NextResponse.json({ url: session.url });
@@ -248,7 +250,7 @@ export async function POST(req: NextRequest) {
       allow_promotion_codes: true,
       expires_at: Math.floor(Date.now() / 1000) + 4 * 60 * 60,
       success_url: `${origin}/success?session_id={CHECKOUT_SESSION_ID}`,
-      cancel_url:  `${origin}/shop`,
+      cancel_url:  `${origin}${cancelPath}`,
     });
 
     return NextResponse.json({ url: session.url });

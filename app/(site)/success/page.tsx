@@ -3,6 +3,7 @@
 import { Suspense, useEffect, useRef } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
+import { useCart } from "@/lib/cart";
 
 declare global {
   interface Window {
@@ -23,12 +24,14 @@ const GCR_MERCHANT_ID = 5815764017;
 function PurchaseTracker() {
   const searchParams = useSearchParams();
   const fired = useRef(false);
+  const { clear } = useCart();
 
   useEffect(() => {
     if (fired.current) return;
     const sessionId = searchParams.get("session_id");
     if (!sessionId) return;
     fired.current = true;
+    clear(); // the order went through — now the cart can be emptied (it is no longer cleared when checkout starts)
 
     fetch(`/api/session?id=${sessionId}`)
       .then((r) => r.json() as Promise<{
@@ -83,6 +86,7 @@ function PurchaseTracker() {
         }
       })
       .catch(() => {});
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [searchParams]);
 
   return null;

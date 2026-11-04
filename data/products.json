@@ -6699,7 +6699,7 @@
     "featured": false,
     "active": true,
     "images": [
-      "/images/products/d754a9bf-e61f-46a9-8e27-208fc29bccfb.png"
+      "/images/products/IMG_4549.jpg"
     ],
     "variantGroups": [
       {
@@ -6729,21 +6729,19 @@
       "Silver Tone"
     ],
     "variantHeroes": {
-      "Gold Tone": "/images/products/c5093ef1-befa-4a93-af8d-71abd2e42904.png",
-      "Silver Tone": "/images/products/d754a9bf-e61f-46a9-8e27-208fc29bccfb.png"
+      "Gold Tone": "/images/products/IMG_4549.jpg",
+      "Silver Tone": "/images/products/06f85525-4d06-44c7-b8af-8c7b87f340ac.png"
     },
     "variantVideos": {
-      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/bce20b573e1e7ea237c3e9a1af2fdb80/downloads/default.mp4",
-      "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/bce20b573e1e7ea237c3e9a1af2fdb80/downloads/default.mp4"
+      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/486a1e6e4ffe66e7fef69fd447f7cb04/downloads/default.mp4",
+      "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/486a1e6e4ffe66e7fef69fd447f7cb04/downloads/default.mp4"
     },
     "gallery": [
-      "/images/products/d754a9bf-e61f-46a9-8e27-208fc29bccfb.png",
-      "/images/products/c5093ef1-befa-4a93-af8d-71abd2e42904.png",
-      "https://i.etsystatic.com/55122258/r/il/488827/7981799898/il_fullxfull.7981799898_4231.jpg",
-      "https://i.etsystatic.com/55122258/r/il/2955d4/8029794213/il_fullxfull.8029794213_ps5m.jpg",
-      "https://i.etsystatic.com/55122258/r/il/ef7ac5/8029746787/il_fullxfull.8029746787_6ngn.jpg",
-      "https://i.etsystatic.com/55122258/r/il/59f15a/8029772403/il_fullxfull.8029772403_b02n.jpg",
-      "https://i.etsystatic.com/55122258/r/il/698621/7867784241/il_fullxfull.7867784241_oh2z.jpg"
+      "/images/products/IMG_4549.jpg",
+      "/images/products/IMG_4178-2.jpg",
+      "https://i.etsystatic.com/55122258/r/il/698621/7867784241/il_fullxfull.7867784241_oh2z.jpg",
+      "/images/products/06f85525-4d06-44c7-b8af-8c7b87f340ac.png",
+      "/images/products/IMG_4361.jpg"
     ]
   },
   {

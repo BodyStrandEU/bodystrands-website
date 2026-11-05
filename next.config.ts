@@ -30,6 +30,12 @@ const nextConfig: NextConfig = {
     return [
       ...blogRedirects,
       {
+        // Short link for the Instagram bio: tags the visit as instagram / social in GA4.
+        source: "/ig",
+        destination: "/?utm_source=instagram&utm_medium=social&utm_campaign=bio",
+        permanent: false,
+      },
+      {
         // Duplicate of the same search ("how to wear a toggle necklace"), merged Sep 29, 2026.
         source: "/blog/how-to-wear-a-toggle-necklace-6-simple-ways",
         destination: "/blog/how-to-wear-a-toggle-necklace-front-clasp-styling-tips",

@@ -136,6 +136,61 @@ const sh:  React.CSSProperties  = { padding: "0.85rem 1.25rem", fontSize: "0.58r
 const th:  React.CSSProperties  = { padding: "0.6rem 1rem", fontSize: "0.53rem", letterSpacing: "0.15em", textTransform: "uppercase", color: "var(--admin-muted)", textAlign: "left", background: "var(--admin-bg)", borderBottom: "1px solid var(--admin-border)" };
 const td:  React.CSSProperties  = { padding: "0.7rem 1rem", fontSize: "0.75rem", borderBottom: "1px solid var(--admin-border2)", verticalAlign: "middle" };
 
+const SHORT_LINK_LABELS: { key: string; label: string; path: string }[] = [
+  { key: "ig", label: "Instagram", path: "/ig" },
+  { key: "tiktok", label: "TikTok", path: "/tiktok" },
+  { key: "yt", label: "YouTube", path: "/yt" },
+  { key: "pin", label: "Pinterest", path: "/pin" },
+  { key: "fb", label: "Facebook", path: "/fb" },
+];
+
+// Clicks on the bio short links, counted server-side (no cookies), so declined cookie banners still count.
+function ShortLinkClicks({ period, periodLabel }: { period: PeriodKey; periodLabel: string }) {
+  const days = period === "today" ? 1 : period === "yesterday" ? 2 : period === "7d" ? 7 : period === "30d" ? 30 : 90;
+  const [clicks, setClicks] = useState<Record<string, { total: number; byDay: Record<string, number> }> | null>(null);
+  const [yesterday, setYesterday] = useState("");
+
+  useEffect(() => {
+    let live = true;
+    fetch(`/api/admin/short-link-clicks?days=${days}`)
+      .then((r) => (r.ok ? r.json() : null))
+      .then((d) => {
+        if (!live || !d?.clicks) return;
+        setYesterday(new Date(Date.now() - 86400000).toISOString().slice(0, 10));
+        setClicks(d.clicks);
+      })
+      .catch(() => {});
+    return () => { live = false; };
+  }, [days]);
+
+  if (!clicks) return null;
+  const count = (k: string) => {
+    const c = clicks[k];
+    if (!c) return 0;
+    return period === "yesterday" ? c.byDay[yesterday] ?? 0 : c.total;
+  };
+  const rows = SHORT_LINK_LABELS.map((l) => ({ ...l, n: count(l.key) }));
+  const max = Math.max(1, ...rows.map((r) => r.n));
+  const total = rows.reduce((a, r) => a + r.n, 0);
+
+  return (
+    <div style={sec}>
+      <div style={sh}><span>Bio Link Clicks</span><span>{period === "all" ? "Last 90 days" : periodLabel} • {total.toLocaleString()} total</span></div>
+      <div style={{ padding: "0.75rem 1.25rem", display: "flex", flexDirection: "column", gap: "0.8rem" }}>
+        {rows.map((r) => (
+          <div key={r.key}>
+            <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 4 }}>
+              <span style={{ fontSize: "0.72rem", color: "var(--admin-text)" }}>{r.label} <span style={{ color: "var(--admin-muted)" }}>bodystrands.com{r.path}</span></span>
+              <span style={{ fontSize: "0.72rem", color: "var(--admin-muted)" }}>{r.n.toLocaleString()} clicks</span>
+            </div>
+            <MiniBar value={r.n} max={max} color="#A0622A" />
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 export default function AnalyticsPage() {
   const [data, setData]       = useState<AnalyticsData | null>(null);
   const [loading, setLoading] = useState(true);
@@ -278,6 +333,8 @@ export default function AnalyticsPage() {
                 <RevenueChart data={data.chartData} unit={data.chartUnit} />
               </div>
             </div>
+
+            <ShortLinkClicks period={period} periodLabel={data.periodLabel} />
 
             {/* ── Two-col: Top Products + Traffic Sources ── */}
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1.25rem", marginBottom: "1.25rem" }}>

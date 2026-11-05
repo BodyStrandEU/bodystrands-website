@@ -1,5 +1,261 @@
 [
   {
+    "date": "2026-11-05",
+    "researchModel": "claude-sonnet-5",
+    "trends": [
+      {
+        "name": "Hand chains / hand necklaces",
+        "what": "TikTok-driven trend for hand jewelry styled for close-up, hands-in-frame video content.",
+        "searches": [
+          "hand chain jewelry 2026",
+          "gold hand chain with rings",
+          "hand harness for a party outfit",
+          "how to style a hand chain with a ring"
+        ],
+        "evidence": "TikTok content under #2026jewelrytrends pushes hand chains as a must-wear piece; one widely-shared video (@kirakirbyy) calls it the 'must-have hand chain jewelry piece that every cool girl will wear in 2026.' A second explainer site notes the hand chain/'hand necklace' surged on TikTok via hands-in-frame video styling.",
+        "sources": [
+          {
+            "name": "TikTok (@kirakirbyy)",
+            "url": ""
+          }
+        ],
+        "missing": [],
+        "momentum": "rising",
+        "fit": "we sell it",
+        "productIds": [
+          "gold-hand-chain",
+          "pearl-hand-chain",
+          "mirror-link-hand-chain",
+          "silver-finger-hand-chain",
+          "boho-finger-hand-chain",
+          "pearl-cross-hand-chain"
+        ],
+        "idea": "Push hand chain styling content and product placement to ride the TikTok wave."
+      },
+      {
+        "name": "Glamoratti — chunky maximalist gold",
+        "what": "A maximalist jewelry moment featuring big beads, dome rings, tassels, and oversized cuffs.",
+        "searches": [
+          "chunky jewelry 2026",
+          "maximalist gold jewelry trend",
+          "oversized cuff jewelry"
+        ],
+        "evidence": "Pinterest's 2026 trend report (covered by National Jeweler and JCK) names the 'Glamoratti' maximalist moment; Faire's holiday-2026 report cites Refinery29's line that 'chunky jewelry belongs everywhere,' and Fashionista points to big beads, dome rings, tassels, and oversized cuffs as the new maximalism.",
+        "sources": [
+          {
+            "name": "Pinterest Predicts",
+            "url": ""
+          },
+          {
+            "name": "National Jeweler",
+            "url": ""
+          },
+          {
+            "name": "JCK",
+            "url": ""
+          },
+          {
+            "name": "Faire",
+            "url": ""
+          },
+          {
+            "name": "Refinery29",
+            "url": ""
+          },
+          {
+            "name": "Fashionista",
+            "url": ""
+          }
+        ],
+        "missing": [
+          "oversized cuffs",
+          "dome rings",
+          "tassel pieces"
+        ],
+        "momentum": "peaking",
+        "fit": "partial",
+        "productIds": [
+          "gold-body-necklace",
+          "chunky-toggle-cross-necklace",
+          "pearl-heart-toggle-necklace",
+          "layered-body-chain-double-choker"
+        ],
+        "idea": "Feature existing bold pieces together as a 'maximalist stack' while flagging cuffs/dome rings/tassels as a future product gap."
+      },
+      {
+        "name": "Brooches / pin-on jewelry",
+        "what": "A nostalgia-driven '80s luxury' trend toward brooches, pins, and heirloom-style jewelry.",
+        "searches": [
+          "brooch jewelry trend",
+          "heirloom jewelry ideas",
+          "80s luxury jewelry"
+        ],
+        "evidence": "Pinterest's 2026 forecast highlights 'brooched' styling; National Jeweler reports the platform 'noted an increase in searches for brooches, heirloom jewelry, and 80s luxury,' with heirloom-jewelry search up 45%.",
+        "sources": [
+          {
+            "name": "Pinterest Predicts",
+            "url": ""
+          },
+          {
+            "name": "National Jeweler",
+            "url": ""
+          }
+        ],
+        "missing": [
+          "brooches",
+          "pins",
+          "lapel jewelry"
+        ],
+        "momentum": "rising",
+        "fit": "gap",
+        "productIds": [],
+        "idea": "Note as a gap to monitor; not a near-term catalog fit since Bodystrands sells no brooches or pins."
+      },
+      {
+        "name": "Bug/insect-motif jewelry",
+        "what": "Insect-themed jewelry including bugs, bees, dragonflies, butterflies, and spiders.",
+        "searches": [
+          "bug jewelry trend",
+          "insect motif jewelry",
+          "dragonfly jewelry 2026"
+        ],
+        "evidence": "Pinterest's 2026 report cites 'bug jewelry' searches up 60%.",
+        "sources": [
+          {
+            "name": "Pinterest Predicts",
+            "url": ""
+          }
+        ],
+        "missing": [
+          "bee jewelry",
+          "ladybug jewelry",
+          "spider jewelry"
+        ],
+        "momentum": "rising",
+        "fit": "partial",
+        "productIds": [
+          "dragonfly-charm-belly-chain",
+          "dragonfly-pendant-necklace",
+          "butterfly-anklet",
+          "butterfly-charm-belly-chain",
+          "butterfly-backdrop-necklace",
+          "butterfly-backdrop-necklace-gold"
+        ],
+        "idea": "Promote the existing dragonfly and butterfly line as part of the insect-motif trend while noting bees/ladybugs/spiders as gaps."
+      },
+      {
+        "name": "Gimme Gummy tactile/3D jewelry and bracelet stacking",
+        "what": "A 'gummy bear aesthetic' trend toward tactile 3D jewelry alongside heavy bracelet-stacking photography.",
+        "searches": [
+          "bracelet stacking ideas",
+          "3d jewelry trend",
+          "gummy bear jewelry aesthetic"
+        ],
+        "evidence": "Pinterest Predicts 2026 (via Trendalytics' breakdown) describes a 'gummy bear aesthetic' translating into '3D jewelry' and heavy bracelet-stacking imagery.",
+        "sources": [
+          {
+            "name": "Pinterest Predicts",
+            "url": ""
+          },
+          {
+            "name": "Trendalytics",
+            "url": ""
+          }
+        ],
+        "missing": [
+          "resin jewelry",
+          "jelly-texture jewelry"
+        ],
+        "momentum": "rising",
+        "fit": "partial",
+        "productIds": [
+          "diamond-initial-layered-bracelet",
+          "layered-pearl-bracelet",
+          "zodiac-charm-bracelet",
+          "birthstone-bracelet",
+          "colorful-crystal-bead-bracelet"
+        ],
+        "idea": "Create stacking-focused content and bundles using existing bracelets while skipping the rubberized/3D material gap."
+      },
+      {
+        "name": "Accessible luxury: lab-grown diamond / moissanite",
+        "what": "A fine-jewelry materials trend toward lab-grown diamonds and moissanite as affordable luxury.",
+        "searches": [
+          "moissanite jewelry trend",
+          "lab grown diamond jewelry"
+        ],
+        "evidence": "Faire's 2026 holiday report states that on its platform 'searches for moissanite earrings increased 178% year over year, while lab grown diamond rose 144%.'",
+        "sources": [
+          {
+            "name": "Faire",
+            "url": ""
+          }
+        ],
+        "missing": [
+          "moissanite jewelry",
+          "lab-grown diamond jewelry"
+        ],
+        "momentum": "rising",
+        "fit": "gap",
+        "productIds": [],
+        "idea": "Flag only — this fine-jewelry material story doesn't map to Bodystrands' handmade body-jewelry catalog."
+      }
+    ],
+    "gaps": [],
+    "blogIdeas": [
+      {
+        "query": "how to wear a hand chain",
+        "why": "Hand chains are an actively surging TikTok trend for 2026 per creator content tagged #2026jewelrytrends, appealing to Bodystrands' mobile-first, close-up styling audience.",
+        "productIds": [
+          "gold-hand-chain",
+          "pearl-hand-chain",
+          "mirror-link-hand-chain",
+          "silver-finger-hand-chain"
+        ]
+      },
+      {
+        "query": "what jewelry to pack for a winter sun holiday",
+        "why": "Winter-sun travel style guides from Harrods and SheerLuxe recurrently frame beachy jewelry as a packing essential during Nov–Jan holiday booking season.",
+        "productIds": [
+          "barefoot-sandal-toe-chain",
+          "pearl-barefoot-sandal",
+          "cowrie-shell-anklet",
+          "snake-belly-chain"
+        ]
+      },
+      {
+        "query": "manifestation jewelry for the new year",
+        "why": "Crystal-and-intention content from Crystals.com and La Costa Organic Jewelry is a recurring late-Dec/early-Jan wave tied to New Year goal-setting.",
+        "productIds": [
+          "rhodochrosite-ring",
+          "evil-eye-ring",
+          "zodiac-charm-bracelet",
+          "birthstone-ring"
+        ]
+      },
+      {
+        "query": "hanukkah gift jewelry ideas",
+        "why": "Hanukkah 2026 runs Dec 4–12 per Hebcal, and Traditions Jewish Gifts calls out jewelry as a top adult gift category for the holiday.",
+        "productIds": [
+          "monogram-letter-necklace",
+          "paperclip-initial-necklace",
+          "diamond-initial-anklet",
+          "initial-letter-anklet"
+        ]
+      },
+      {
+        "query": "christmas gift for a coworker jewelry",
+        "why": "This fills a gap among existing recipient-specific gift guides and lands in the Dec office gift-exchange window, matching Faire's 'accessible luxury' holiday gifting category.",
+        "productIds": [
+          "dainty-chain-bracelet",
+          "satellite-link-choker",
+          "coin-disc-bracelet",
+          "birth-month-teardrop-choker"
+        ]
+      }
+    ]
+  },
+  {
     "date": "2026-11-02",
     "researchModel": "claude-opus-5",
     "trends": [

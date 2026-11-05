@@ -1,5 +1,154 @@
 [
   {
+    "query": "how to wear a hand chain",
+    "keywords": [
+      "hand chain jewelry 2026",
+      "gold hand chain with rings",
+      "hand harness for a party outfit",
+      "how to style a hand chain with a ring",
+      "delicate hand chain bracelet"
+    ],
+    "productIds": [
+      "gold-hand-chain",
+      "pearl-hand-chain",
+      "mirror-link-hand-chain",
+      "silver-finger-hand-chain"
+    ],
+    "category": "Style Guide",
+    "months": [
+      11,
+      12,
+      1,
+      2,
+      3
+    ],
+    "productCategories": [
+      "Hand Chains"
+    ],
+    "source": "research",
+    "researchModel": "claude-sonnet-5",
+    "addedAt": "2026-11-05",
+    "why": "Hand chains are an actively surging TikTok trend for 2026 per creator content tagged #2026jewelrytrends, appealing to Bodystrands' mobile-first, close-up styling audience."
+  },
+  {
+    "query": "what jewelry to pack for a winter sun holiday",
+    "keywords": [
+      "jewelry for a beach holiday in winter",
+      "anklet for a winter sun trip",
+      "barefoot sandal for vacation",
+      "resort wear accessories women",
+      "holiday poolside jewellery"
+    ],
+    "productIds": [
+      "barefoot-sandal-toe-chain",
+      "pearl-barefoot-sandal",
+      "cowrie-shell-anklet",
+      "snake-belly-chain"
+    ],
+    "category": "Style Guide",
+    "months": [
+      11,
+      12,
+      1,
+      2
+    ],
+    "productCategories": [
+      "Anklets",
+      "Belly Chains",
+      "Foot Chains"
+    ],
+    "source": "research",
+    "researchModel": "claude-sonnet-5",
+    "addedAt": "2026-11-05",
+    "why": "Winter-sun travel style guides from Harrods and SheerLuxe recurrently frame beachy jewelry as a packing essential during Nov–Jan holiday booking season."
+  },
+  {
+    "query": "manifestation jewelry for the new year",
+    "keywords": [
+      "crystal jewelry for setting intentions",
+      "rhodochrosite ring meaning",
+      "zodiac bracelet for new year goals",
+      "evil eye ring protection meaning",
+      "jewelry for 2027 intentions"
+    ],
+    "productIds": [
+      "rhodochrosite-ring",
+      "evil-eye-ring",
+      "zodiac-charm-bracelet",
+      "birthstone-ring"
+    ],
+    "category": "Inspiration",
+    "months": [
+      12,
+      1
+    ],
+    "productCategories": [
+      "Rings",
+      "Bracelets"
+    ],
+    "source": "research",
+    "researchModel": "claude-sonnet-5",
+    "addedAt": "2026-11-05",
+    "why": "Crystal-and-intention content from Crystals.com and La Costa Organic Jewelry is a recurring late-Dec/early-Jan wave tied to New Year goal-setting."
+  },
+  {
+    "query": "hanukkah gift jewelry ideas",
+    "keywords": [
+      "personalized necklace hanukkah gift",
+      "initial necklace gift for her",
+      "jewish holiday jewelry gift",
+      "hanukkah gift for wife",
+      "meaningful hanukkah jewelry present"
+    ],
+    "productIds": [
+      "monogram-letter-necklace",
+      "paperclip-initial-necklace",
+      "diamond-initial-anklet",
+      "initial-letter-anklet"
+    ],
+    "category": "Gift Guide",
+    "months": [
+      11,
+      12
+    ],
+    "productCategories": [
+      "Necklaces",
+      "Anklets"
+    ],
+    "source": "research",
+    "researchModel": "claude-sonnet-5",
+    "addedAt": "2026-11-05",
+    "why": "Hanukkah 2026 runs Dec 4–12 per Hebcal, and Traditions Jewish Gifts calls out jewelry as a top adult gift category for the holiday."
+  },
+  {
+    "query": "christmas gift for a coworker jewelry",
+    "keywords": [
+      "office gift exchange jewelry ideas",
+      "cheap jewelry gift for colleague",
+      "small christmas gift for coworker under 30",
+      "thoughtful work gift ideas her"
+    ],
+    "productIds": [
+      "dainty-chain-bracelet",
+      "satellite-link-choker",
+      "coin-disc-bracelet",
+      "birth-month-teardrop-choker"
+    ],
+    "category": "Gift Guide",
+    "months": [
+      11,
+      12
+    ],
+    "productCategories": [
+      "Bracelets",
+      "Necklaces"
+    ],
+    "source": "research",
+    "researchModel": "claude-sonnet-5",
+    "addedAt": "2026-11-05",
+    "why": "This fills a gap among existing recipient-specific gift guides and lands in the Dec office gift-exchange window, matching Faire's 'accessible luxury' holiday gifting category."
+  },
+  {
     "query": "what necklace to wear with a plunging neckline",
     "keywords": [
       "what jewellery to wear with a deep v neck dress",

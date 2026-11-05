@@ -11146,12 +11146,12 @@
     "featured": false,
     "active": true,
     "images": [
-      "/images/products/3f53dfc5-b763-4550-94b7-0a0aff444183.png",
-      "https://i.etsystatic.com/55122258/r/il/8f4690/8074368205/il_fullxfull.8074368205_jt0q.jpg",
-      "https://i.etsystatic.com/55122258/r/il/1c43d1/8026491396/il_fullxfull.8026491396_4mm9.jpg",
-      "https://i.etsystatic.com/55122258/r/il/779bcb/8026430228/il_fullxfull.8026430228_2rnt.jpg",
-      "/images/products/4844a113-f32d-458f-a88c-4edea2ff7c35.webp",
-      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp"
+      "/images/products/bc86e008-c4ae-420d-83ea-319747f71c14.png",
+      "/images/products/IMG_4672.jpg",
+      "/images/products/912ff776-5010-4d3e-87d8-e92263737b48.png",
+      "/images/products/9a8b2f6b-7a4b-4ac6-9f21-236a509eab62.png",
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp",
+      "/images/products/IMG_4670.jpg"
     ],
     "variantGroups": [
       {
@@ -11165,7 +11165,8 @@
     ],
     "altText": "Gold-tone stainless steel turquoise beaded belly chain for boho beach waist styling",
     "dateAdded": "2026-06-12T15:00:27-04:00",
-    "salePercent": 25
+    "salePercent": 25,
+    "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/9ee635b30faf38c9c6d76e466f2c72b8/downloads/default.mp4"
   },
   {
     "id": "curb-chain-cross-necklace",

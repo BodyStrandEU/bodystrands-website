@@ -624,21 +624,47 @@ function VideoDropZone({ value, onChange }: VideoDropZoneProps) {
     setUploading(true);
     try {
       const mb = (file.size / 1024 / 1024).toFixed(1);
-      // Step 1: get a one-time direct upload URL from Cloudflare via our API (tiny request, no file bytes)
-      setProgress(`Preparing upload (${mb} MB)…`);
-      const urlRes = await fetch("/api/admin/stream-upload");
-      if (!urlRes.ok) {
-        const err = await urlRes.json() as { error?: string };
-        throw new Error(err.error ?? "Failed to get upload URL");
-      }
-      const { uploadURL, streamUrl, uid } = await urlRes.json() as { uploadURL: string; streamUrl: string; uid: string };
+      // Steps 1+2 are retried together: Cloudflare's direct-upload URL is one-time, so every
+      // retry asks for a fresh one. A dropped connection ("Failed to fetch") used to kill the
+      // whole upload and force the user to re-pick the file 2-3 times.
+      let streamUrl = "";
+      let uid = "";
+      let lastErr = "";
+      for (let attempt = 1; attempt <= 4; attempt++) {
+        const tag = attempt > 1 ? ` (retry ${attempt - 1}/3)` : "";
+        let step = "preparing upload";
+        try {
+          // Step 1: get a one-time direct upload URL from Cloudflare via our API (tiny request, no file bytes)
+          setProgress(`Preparing upload (${mb} MB)…${tag}`);
+          const urlRes = await fetch("/api/admin/stream-upload", { cache: "no-store" });
+          if (!urlRes.ok) {
+            const err = await urlRes.json().catch(() => ({})) as { error?: string };
+            if (urlRes.status === 401) throw Object.assign(new Error("Session expired — log in again"), { fatal: true });
+            throw new Error(err.error ?? `Failed to get upload URL (${urlRes.status})`);
+          }
+          const got = await urlRes.json() as { uploadURL: string; streamUrl: string; uid: string };
 
-      // Step 2: POST file directly to Cloudflare — bypasses Vercel entirely, no size limit
-      setProgress(`Uploading ${mb} MB directly to Cloudflare…`);
-      const form = new FormData();
-      form.append("file", file, file.name);
-      const cfRes = await fetch(uploadURL, { method: "POST", body: form });
-      if (!cfRes.ok) throw new Error(`Cloudflare rejected upload (${cfRes.status})`);
+          // Step 2: POST file directly to Cloudflare — bypasses the Worker entirely, no size limit
+          step = "uploading to Cloudflare";
+          setProgress(`Uploading ${mb} MB directly to Cloudflare…${tag}`);
+          const form = new FormData();
+          form.append("file", file, file.name);
+          const cfRes = await fetch(got.uploadURL, { method: "POST", body: form });
+          if (!cfRes.ok) throw new Error(`Cloudflare rejected upload (${cfRes.status})`);
+
+          streamUrl = got.streamUrl;
+          uid = got.uid;
+          break;
+        } catch (e) {
+          if ((e as { fatal?: boolean }).fatal) throw e;
+          lastErr = `${e instanceof Error ? e.message : "failed"} while ${step}`;
+          if (attempt < 4) {
+            setProgress(`Connection hiccup (${lastErr}) — retrying…`);
+            await new Promise((r) => setTimeout(r, attempt * 1500));
+          }
+        }
+      }
+      if (!uid) throw new Error(`Upload failed after 4 tries: ${lastErr}. Check your connection and try again.`);
 
       // Step 3: Enable MP4 downloads so /downloads/default.mp4 URL works on the product page.
       // Cloudflare hasn't necessarily finished processing the video the instant the upload POST
@@ -647,14 +673,15 @@ function VideoDropZone({ value, onChange }: VideoDropZoneProps) {
       let enabled = false;
       for (let attempt = 1; attempt <= 8 && !enabled; attempt++) {
         setProgress(`Enabling MP4 playback… (attempt ${attempt}/8)`);
-        const enableRes = await fetch("/api/admin/stream-enable-mp4", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ uid }),
-        });
-        if (enableRes.ok) {
-          enabled = true;
-        } else if (attempt < 8) {
+        try {
+          const enableRes = await fetch("/api/admin/stream-enable-mp4", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ uid }),
+          });
+          if (enableRes.ok) enabled = true;
+        } catch { /* network blip — fall through to retry */ }
+        if (!enabled && attempt < 8) {
           await new Promise((r) => setTimeout(r, attempt * 3000));
         }
       }

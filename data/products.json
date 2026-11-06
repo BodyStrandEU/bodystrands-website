@@ -12639,7 +12639,7 @@
   {
     "id": "pearl-shoulder-necklace",
     "name": "Pearl Cascading Strap Shoulder Chain",
-    "price": 45,
+    "price": 30,
     "currency": "EUR",
     "category": "Shoulder Chains",
     "description": "Three delicate pearl-beaded drapes sweep across your upper arm, giving a romantic, custom feel to a simple strap or slip-style gown without a trip to the tailor. Attaches with a pearl safety pin, for maximum adjustability anywhere on your outfit. Available in gold-tone or silver-tone stainless steel.",
@@ -12700,20 +12700,25 @@
     "altText": "Pearl shoulder necklace with three draping strands of faux pearls, gold-tone or silver-tone stainless steel epaulette-style bridal shoulder chain",
     "gallery": [
       "/images/products/a4095ab0-93e6-45a2-899c-9353ebbbe479.png",
-      "/images/products/463668e7-830f-4153-bc4b-6638c6f766a3.png",
-      "/images/products/5764b77d-d5bd-4306-bff2-12cd74f5e874.png",
-      "/images/products/89232de1-a444-4909-b956-fe1ecd5eb551.png",
-      "/images/products/2e2e7fdb-d48c-46e5-b6c6-515fdb33d441-copy.png"
+      "/images/products/74a52f0a-928d-44b9-8c65-2092268abc68.png",
+      "/images/products/2139e77c-5746-43fa-bfb5-65cae205a80c.png",
+      "/images/products/IMG_4701.jpg",
+      "/images/products/f20bc9fd-7137-4bcd-a0b2-a7b1e37dac1f.png",
+      "/images/products/2139e77c-5746-43fa-bfb5-65cae205a80c.png"
     ],
     "variantHeroes": {
       "Gold Tone": "/images/products/a4095ab0-93e6-45a2-899c-9353ebbbe479.png",
-      "Silver Tone": "/images/products/463668e7-830f-4153-bc4b-6638c6f766a3.png"
+      "Silver Tone": "/images/products/2139e77c-5746-43fa-bfb5-65cae205a80c.png"
     },
     "variants": [
       "Gold Tone",
       "Silver Tone"
     ],
-    "sizeGuideImage": "/images/products/2e2e7fdb-d48c-46e5-b6c6-515fdb33d441-copy.png"
+    "sizeGuideImage": "/images/products/f20bc9fd-7137-4bcd-a0b2-a7b1e37dac1f.png",
+    "variantVideos": {
+      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/c7a92f01b3cc098cd4e3a6e60199a6f7/downloads/default.mp4",
+      "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/c7a92f01b3cc098cd4e3a6e60199a6f7/downloads/default.mp4"
+    }
   },
   {
     "id": "star-charm-crystal-bracelet",

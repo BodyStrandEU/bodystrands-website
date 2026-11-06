@@ -5,6 +5,7 @@ import { getSalePrice } from "@/lib/pricing";
 import { SET_DISCOUNT_PERCENT, setDiscountedUnits, setUnitPrice } from "@/lib/productSets";
 import { getShippingRate, ALL_COUNTRIES } from "@/lib/shipping";
 import { fetchExchangeRates, type CurrencyCode } from "@/lib/currency";
+import { parseGaClientId, parseGaSessionId } from "@/lib/ga4-purchase";
 
 // Explicit fetch-based HTTP client — required for Stripe's SDK to work under the
 // Cloudflare Workers runtime. Without this it silently hangs instead of erroring,
@@ -103,6 +104,16 @@ function buildAllShippingOptions(totalAmount: number, rates: Record<CurrencyCode
 
 const STRIPE_COUNTRIES = ALL_COUNTRIES as Stripe.Checkout.SessionCreateParams.ShippingAddressCollection.AllowedCountry[];
 
+// GA cookies → Stripe metadata, so the webhook can report the purchase to GA4 against the visitor's own session.
+function gaMetadata(req: NextRequest): Record<string, string> {
+  const clientId = parseGaClientId(req.cookies.get("_ga")?.value);
+  const sessionId = parseGaSessionId(req.cookies.get("_ga_8ZSFBD94RN")?.value);
+  return {
+    ...(clientId ? { ga_client_id: clientId } : {}),
+    ...(sessionId ? { ga_session_id: sessionId } : {}),
+  };
+}
+
 export async function POST(req: NextRequest) {
   try {
     const body   = await req.json() as Record<string, unknown>;
@@ -197,6 +208,7 @@ export async function POST(req: NextRequest) {
           giftWrap: giftWrap ? "yes" : "no",
           ...(giftWrap && giftNote ? { giftNote } : {}),
           ...(measurementNotes.length ? { measurementNote: measurementNotes.join(" | ").slice(0, 500) } : {}),
+          ...gaMetadata(req),
         },
         shipping_options,
         shipping_address_collection: { allowed_countries: STRIPE_COUNTRIES },
@@ -243,7 +255,7 @@ export async function POST(req: NextRequest) {
         quantity: 1,
       }],
       mode:     "payment",
-      metadata: { productId: product.id, productName, price: totalAmount.toFixed(2), currency: product.currency, ...(measurementNote ? { measurementNote } : {}) },
+      metadata: { productId: product.id, productName, price: totalAmount.toFixed(2), currency: product.currency, ...(measurementNote ? { measurementNote } : {}), ...gaMetadata(req) },
       shipping_options,
       shipping_address_collection: { allowed_countries: STRIPE_COUNTRIES },
       adaptive_pricing: { enabled: true },

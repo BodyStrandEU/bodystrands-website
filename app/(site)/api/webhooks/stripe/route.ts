@@ -3,6 +3,7 @@ import Stripe from "stripe";
 import { Resend } from "resend";
 import { addToAudience } from "@/lib/audience";
 import { getShippingRate } from "@/lib/shipping";
+import { sendGa4Purchase } from "@/lib/ga4-purchase";
 
 // Explicit fetch-based HTTP client — required for Stripe's SDK under the Cloudflare Workers runtime.
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
@@ -112,6 +113,18 @@ export async function POST(req: NextRequest) {
         return typeof product === "object" && product && !("deleted" in product && product.deleted) ? product.images?.[0] : undefined;
       })
       .filter((img): img is string => !!img);
+
+    // Server-side GA4 purchase — backs up the browser event (ad blockers, closed tabs, consent).
+    // Same value/currency as the success-page event; GA4 de-dupes on transaction_id.
+    await sendGa4Purchase({
+      transactionId: session.id,
+      value:         (session.amount_total ?? 0) / 100,
+      currency:      currency,
+      itemName:      productName,
+      country:       session.customer_details?.address?.country ?? undefined,
+      clientId:      session.metadata?.ga_client_id,
+      sessionId:     session.metadata?.ga_session_id,
+    });
 
     // Customer order confirmation
     const FROM = process.env.RESEND_FROM_EMAIL;

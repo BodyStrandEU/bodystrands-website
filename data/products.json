@@ -8661,18 +8661,22 @@
       "Gold Tone"
     ],
     "variantHeroes": {
-      "Gold Tone": "https://i.etsystatic.com/55122258/r/il/88889b/8165711891/il_fullxfull.8165711891_gbn3.jpg",
+      "Gold Tone": "/images/products/5d9a360b-c1c6-4cac-95f3-b48a336a27f5.png",
       "Silver Tone": "https://i.etsystatic.com/55122258/r/il/dc4e2f/8165749301/il_fullxfull.8165749301_9lkm.jpg"
     },
     "gallery": [
       "https://i.etsystatic.com/55122258/r/il/dc4e2f/8165749301/il_fullxfull.8165749301_9lkm.jpg",
-      "https://i.etsystatic.com/55122258/r/il/88889b/8165711891/il_fullxfull.8165711891_gbn3.jpg",
+      "/images/products/IMG_4716.jpg",
+      "/images/products/IMG_4722.jpg",
+      "/images/products/5d9a360b-c1c6-4cac-95f3-b48a336a27f5.png",
       "https://i.etsystatic.com/55122258/r/il/7e86e0/8165711877/il_fullxfull.8165711877_od8j.jpg",
       "https://i.etsystatic.com/55122258/r/il/4c2076/8117803058/il_fullxfull.8117803058_9uyn.jpg",
-      "https://i.etsystatic.com/55122258/r/il/0cb3b5/8165711879/il_fullxfull.8165711879_6ieo.jpg",
-      "https://i.etsystatic.com/55122258/r/il/b3a795/7943677304/il_fullxfull.7943677304_jmkv.jpg",
-      "https://i.etsystatic.com/55122258/r/il/06caae/8165713123/il_fullxfull.8165713123_jyep.jpg"
-    ]
+      "https://i.etsystatic.com/55122258/r/il/0cb3b5/8165711879/il_fullxfull.8165711879_6ieo.jpg"
+    ],
+    "variantVideos": {
+      "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/51419f2d34ad329d2864ab1e393aa97d/downloads/default.mp4",
+      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/51419f2d34ad329d2864ab1e393aa97d/downloads/default.mp4"
+    }
   },
   {
     "id": "pearl-chain-anklet",

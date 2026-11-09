@@ -146,6 +146,14 @@ export default function ProductPageClient({ product, setSlot }: { product: Produ
 
   useEffect(() => {
     trackRecentlyViewed(product.id);
+    // GA4 had no view_item event, so the funnel started at add_to_cart and product views were invisible.
+    const w = window as Window & { gtag?: (...a: unknown[]) => void };
+    const price = getSalePrice(product) ?? product.price;
+    w.gtag?.("event", "view_item", {
+      currency: product.currency,
+      value: price,
+      items: [{ item_id: product.id, item_name: product.name, item_category: product.category, price, quantity: 1 }],
+    });
   }, [product.id]);
 
   // If a variantGroup covers the same options as variants (e.g. Finish dropdown + optionPrices),

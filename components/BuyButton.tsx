@@ -31,7 +31,7 @@ export default function BuyButton({
     if (typeof window !== "undefined") {
       const w = window as Window & { fbq?: (...a: unknown[]) => void; gtag?: (...a: unknown[]) => void };
       w.fbq?.("track", "InitiateCheckout");
-      w.gtag?.("event", "begin_checkout");
+      w.gtag?.("event", "begin_checkout", { currency: "EUR", items: [{ item_id: productId, item_variant: variant ?? "", quantity: 1 }] });
     }
     try {
       const res = await fetch("/api/checkout", {

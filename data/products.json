@@ -10873,7 +10873,7 @@
     "featured": false,
     "active": true,
     "images": [
-      "/images/products/f040cf98-23a9-494d-9a44-47cbe0724fb8.png"
+      "/images/products/f4e410d2-9b9b-4d85-8f25-b6cc04cf3c89.png"
     ],
     "variants": [
       "Gold Tone",
@@ -10892,18 +10892,27 @@
     "altText": "Dainty gold and silver stainless steel mirror link hand chain, adjustable finger to wrist bracelet",
     "dateAdded": "2026-08-26T09:00:00-04:00",
     "gallery": [
+      "/images/products/f4e410d2-9b9b-4d85-8f25-b6cc04cf3c89.png",
+      "/images/products/5298a683-1c98-40b2-afa9-d9cc626339ee.png",
       "/images/products/f040cf98-23a9-494d-9a44-47cbe0724fb8.png",
       "/images/products/de94cff0-7a21-4601-9b96-4bc8d73c9980.png",
-      "/images/products/5298a683-1c98-40b2-afa9-d9cc626339ee.png",
       "/images/products/ff07b108-6785-46bf-8252-d6d6cc4c3fa2.png",
       "/images/products/40ad8d0e-77df-49c4-9411-274f9ecea4c2.png",
-      "/images/products/ae323020-4940-43e5-a25b-6d57f6f3f868.png"
+      "/images/products/ae323020-4940-43e5-a25b-6d57f6f3f868.png",
+      "/images/products/IMG_4783.jpeg"
     ],
     "variantHeroes": {
-      "Gold Tone": "/images/products/de94cff0-7a21-4601-9b96-4bc8d73c9980.png",
+      "Gold Tone": "/images/products/f4e410d2-9b9b-4d85-8f25-b6cc04cf3c89.png",
       "Silver Tone": "/images/products/5298a683-1c98-40b2-afa9-d9cc626339ee.png"
     },
-    "sizeGuideImage": "/images/products/ae323020-4940-43e5-a25b-6d57f6f3f868.png"
+    "sizeGuideImage": "/images/products/ae323020-4940-43e5-a25b-6d57f6f3f868.png",
+    "variantVideos": {
+      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/08336c221fb6c43b66b11cce15ec1e9c/downloads/default.mp4",
+      "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/08336c221fb6c43b66b11cce15ec1e9c/downloads/default.mp4"
+    },
+    "giftTags": [
+      "bridal"
+    ]
   },
   {
     "id": "mirror-link-foot-chain",

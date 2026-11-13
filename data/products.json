@@ -9889,14 +9889,14 @@
     "featured": false,
     "active": true,
     "images": [
-      "/images/products/e3373af9-c529-4a59-ac71-5c3cc5126a9b.png"
+      "/images/products/f3a8bca6-ce1d-4e34-9b48-c4e654fa0539.png"
     ],
     "gallery": [
+      "/images/products/f3a8bca6-ce1d-4e34-9b48-c4e654fa0539.png",
+      "/images/products/IMG_5035.jpg",
       "/images/products/e3373af9-c529-4a59-ac71-5c3cc5126a9b.png",
       "/images/products/birth-month-teardrop-choker/lip-crop-curtain-blue.webp",
-      "/images/products/birth-month-teardrop-choker/back-clasp-detail.webp",
       "/images/products/birth-month-teardrop-choker/floral-garden-blue.webp",
-      "/images/products/birth-month-teardrop-choker/autumn-leaves-pink.webp",
       "/images/products/birth-month-teardrop-choker/birthstone-chart.webp",
       "/images/products/06874ea4-4a61-4a01-9072-1fdd95442193.jpeg"
     ],
@@ -9920,7 +9920,7 @@
         ]
       }
     ],
-    "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/d2bf69da58875f701fdbe7120c3c89d9/downloads/default.mp4",
+    "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/8e83862a95bc2b114b53df896c154efe/downloads/default.mp4",
     "infographicImages": [
       "/images/products/birth-month-teardrop-choker/birthstone-chart.webp",
       "/images/products/birth-month-teardrop-choker/infographic-sizing-birthstones.webp"
@@ -9929,7 +9929,8 @@
     "giftTags": [
       "personalized"
     ],
-    "altText": "Gold-tone stainless steel dainty choker necklace with teardrop birthstone pendant for everyday wear"
+    "altText": "Gold-tone stainless steel dainty choker necklace with teardrop birthstone pendant for everyday wear",
+    "sizeGuideImage": "/images/products/e4b5d53b-5aff-45ef-9a60-a84bfd509b74.png"
   },
   {
     "id": "dainty-chain-bracelet",

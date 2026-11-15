@@ -1421,7 +1421,7 @@
       },
       {
         "label": "Charms",
-        "value": "Choice of 12 zodiac signs"
+        "value": "Choice of 12 zodiac signs. Add a second sign for +€5"
       },
       {
         "label": "Custom sizing",
@@ -1465,6 +1465,40 @@
           "Sagittarius",
           "Capricorn"
         ]
+      },
+      {
+        "label": "Second Horoscope (optional)",
+        "type": "options",
+        "options": [
+          "No second sign",
+          "Aquarius",
+          "Pisces",
+          "Aries",
+          "Taurus",
+          "Gemini",
+          "Cancer",
+          "Leo",
+          "Virgo",
+          "Libra",
+          "Scorpio",
+          "Sagittarius",
+          "Capricorn"
+        ],
+        "optionPrices": {
+          "No second sign": 0,
+          "Aquarius": 5,
+          "Pisces": 5,
+          "Aries": 5,
+          "Taurus": 5,
+          "Gemini": 5,
+          "Cancer": 5,
+          "Leo": 5,
+          "Virgo": 5,
+          "Libra": 5,
+          "Scorpio": 5,
+          "Sagittarius": 5,
+          "Capricorn": 5
+        }
       }
     ],
     "active": true,

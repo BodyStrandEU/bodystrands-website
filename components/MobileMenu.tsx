@@ -125,6 +125,7 @@ export default function MobileMenu({ open, onClose, categories }: { open: boolea
       <nav className="flex-1 overflow-y-auto px-6 pb-10">
         <Row href="/shop" onNavigate={onClose}>Shop All</Row>
         <Section title="Shop by Category" links={categoryLinks} onNavigate={onClose} />
+        <Row href="/men" onNavigate={onClose}>Men&apos;s Pieces</Row>
         <Section title="Collections" links={COLLECTIONS} onNavigate={onClose} />
         <Section title="Gifts" links={GIFTS} onNavigate={onClose} />
         <Row href="/sales" onNavigate={onClose} accent>Sale</Row>

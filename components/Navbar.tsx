@@ -217,6 +217,18 @@ export default function Navbar() {
                         ))}
                       </div>
                     </div>
+                    {/* Men's line: separate from the women's categories */}
+                    <Link
+                      href="/men"
+                      onClick={() => setShopOpen(false)}
+                      className="group flex items-center gap-2 mt-4 pt-4 border-t border-[#E8B4A8]/30"
+                    >
+                      <span className="text-[#A0622A] text-[0.5rem]">◆</span>
+                      <span className="font-heading text-base font-light text-[#2C2220] group-hover:text-[#A0622A] transition-colors">
+                        Men&apos;s Pieces
+                      </span>
+                      <span className="text-[0.5rem] tracking-[0.2em] uppercase text-[#8C7B6E]">Necklaces &amp; more</span>
+                    </Link>
                   </div>
                 </div>
               </div>

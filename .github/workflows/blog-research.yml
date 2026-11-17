@@ -1,8 +1,8 @@
-name: Blog Keyword Research (Mon + Thu)
+name: Blog Keyword Research (weekly)
 
 on:
   schedule:
-    - cron: "0 5 * * 1,4"  # Mondays + Thursdays, 6am Portugal — before the 7am blog run
+    - cron: "0 5 * * 1"  # Mondays only (weekly, user decision Nov 17, 2026), 6am Portugal — before the 7am blog run
   workflow_dispatch:
 
 concurrency:

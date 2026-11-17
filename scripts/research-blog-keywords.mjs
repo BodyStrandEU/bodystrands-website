@@ -28,7 +28,8 @@ const TRENDS_FILE   = join(__dirname, "../data/trend-signals.json");
 // `researchModel`, so scripts/compare-research-models.mjs can compare them.
 // RESEARCH_MODEL overrides (e.g. for manual runs).
 const PRICES = { "claude-opus-5": [5, 25], "claude-sonnet-5": [2, 10] }; // $ per million in / out
-const MODEL = process.env.RESEARCH_MODEL || (new Date().getUTCDay() === 4 ? "claude-sonnet-5" : "claude-opus-5");
+// Weekly on Opus (user decision Nov 17, 2026: once a week, best model). The Mon/Thu A/B test is over.
+const MODEL = process.env.RESEARCH_MODEL || "claude-opus-5";
 // Rough spend per call, logged so the GitHub run logs show what research costs.
 // Web search is $10 per 1,000 searches on top of tokens.
 function logCost(label, usage) {

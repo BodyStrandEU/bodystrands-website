@@ -4962,6 +4962,10 @@
     "variantVideos": {
       "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/3f40d72dcf43c1edc9c0f3dcf05b639b/downloads/default.mp4",
       "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/3f40d72dcf43c1edc9c0f3dcf05b639b/downloads/default.mp4"
+    },
+    "variantHeroes": {
+      "Gold Tone": "/images/products/c0da5d77-8778-4319-9ba0-c57b3ddbfe20.png",
+      "Silver Tone": "/images/products/97c47b6f-7981-4f90-98a2-160b1f9fec9c.png"
     }
   },
   {

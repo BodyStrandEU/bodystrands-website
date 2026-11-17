@@ -4890,7 +4890,7 @@
     "specs": [
       {
         "label": "Material",
-        "value": "Stainless steel with pearl accents"
+        "value": "Stainless steel with pearl accents, gold-tone or silver-tone"
       },
       {
         "label": "Style",
@@ -4928,14 +4928,9 @@
     "featured": false,
     "active": true,
     "images": [
-      "/images/products/c0da5d77-8778-4319-9ba0-c57b3ddbfe20.png",
-      "/images/products/IMG_5357.jpg",
-      "/images/products/97c47b6f-7981-4f90-98a2-160b1f9fec9c.png",
-      "/images/products/IMG_5350.jpg",
-      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp"
+      "/images/products/c0da5d77-8778-4319-9ba0-c57b3ddbfe20.png"
     ],
-    "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/3f40d72dcf43c1edc9c0f3dcf05b639b/downloads/default.mp4",
-    "altText": "Gold stainless steel pearl hand chain drapes wrist to finger for bridal and boho occasions",
+    "altText": "Gold or silver stainless steel pearl hand chain drapes wrist to finger for bridal and boho occasions",
     "sizeGuideImage": "/images/products/c213697c-ffba-4e49-826c-5dd871a9be0c.webp",
     "variantGroups": [
       {
@@ -4952,7 +4947,22 @@
     "dateAdded": "2026-06-12T15:00:27-04:00",
     "giftTags": [
       "bridal"
-    ]
+    ],
+    "variants": [
+      "Gold Tone",
+      "Silver Tone"
+    ],
+    "gallery": [
+      "/images/products/c0da5d77-8778-4319-9ba0-c57b3ddbfe20.png",
+      "/images/products/IMG_5357.jpg",
+      "/images/products/97c47b6f-7981-4f90-98a2-160b1f9fec9c.png",
+      "/images/products/IMG_5350.jpg",
+      "/images/products/55110011-2bba-4572-8dcb-5f9d06f99c32.webp"
+    ],
+    "variantVideos": {
+      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/3f40d72dcf43c1edc9c0f3dcf05b639b/downloads/default.mp4",
+      "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/3f40d72dcf43c1edc9c0f3dcf05b639b/downloads/default.mp4"
+    }
   },
   {
     "id": "pearl-barefoot-sandal",

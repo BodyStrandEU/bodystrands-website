@@ -1,11 +1,11 @@
-name: Daily Blog Post Generator
+name: Blog Post Generator (Mon/Wed/Fri)
 
 on:
-  # The script itself enforces the cadence (one post every 2 days), so a daily
-  # check is enough. cron-job.org also triggers workflow_dispatch; extra runs
-  # just exit early.
+  # 3 posts a week, Mon/Wed/Fri (user decision Nov 17, 2026: daily showed no extra clicks,
+  # 152 of 170 blog pages had none, and daily volume risks looking like scaled content).
+  # The script still caps at 1 post per UTC day.
   schedule:
-    - cron: "0 7 * * *"    # 8am Portugal
+    - cron: "0 7 * * 1,3,5"    # 8am Portugal
   workflow_dispatch:
     inputs:
       force:

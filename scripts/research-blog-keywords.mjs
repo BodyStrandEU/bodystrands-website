@@ -40,7 +40,7 @@ function logCost(label, usage) {
   console.log(`[cost] ${MODEL} ${label}: ${input} in / ${usage.output_tokens ?? 0} out tokens${searches ? `, ${searches} searches` : ""} ≈ $${usd.toFixed(3)}`);
 }
 
-const MAX_NEW_ENTRIES = 5; // 2 runs/week ≈ 10 ideas; ~4-5 research posts/week are consumed
+const MAX_NEW_ENTRIES = 6; // 1 run/week; 3 posts/week are written (Mon/Wed/Fri), a mix of research, new-product and calendar subjects
 const BLOG_CATEGORIES = ["Style Guide", "Gift Guide", "Personalized Jewelry", "Care & Quality", "Inspiration", "Plus Size"];
 
 async function research(client, now, catalog, recentTopics) {
@@ -57,6 +57,8 @@ Today is ${now.toISOString().slice(0, 10)}. Use web search to find:
 
 Every blog idea must tie to specific products in the catalog above that a reader would want to buy after reading.
 3. Product trends — 3-6 jewelry and body-jewelry styles, motifs, materials or ways of wearing that are gaining search interest or social traction in Europe and the US now or over the next 2-4 months. For each: the exact phrases people search, concrete evidence naming each source by publication/company and URL (search trend data, retailer launches, Pinterest/TikTok trend reports, fashion press) with any numbers they give, whether interest is rising, peaking or steady, and how our catalog fits — we already sell it (name the ids), we partly cover it, or it's a gap we don't sell. Facts only: no trend without a named source. Don't force a catalog match: the most useful findings for the owner are trends we DON'T sell yet — report those plainly, and list any specific piece types a trend calls for that we lack (e.g. bow motifs, chunky cuffs).
+
+Always bring NEW angles. We publish three posts a week, so every idea must be something we have not written: a new search, a new trend, a new occasion, a new question people ask, or a fresh angle on a product. Prefer things that are new this week (new trends, seasonal moments, viral styles, newly rising searches). Do not repeat or lightly reword anything below.
 
 Topics already covered or queued (skip these and close variants):
 ${recentTopics.map((t) => `- ${t}`).join("\n")}
@@ -168,7 +170,7 @@ async function main() {
   const productCategories = [...new Set(live.map((p) => p.category))];
   const liveIds = new Set(live.map((p) => p.id));
   const catalog = live.map((p) => `${p.id} | ${p.name} | ${p.category} | €${p.price}`).join("\n");
-  const recentTopics = [...new Set([...queue.map((q) => q.query), ...posts.slice(0, 60).map((p) => p.topic || p.title)])];
+  const recentTopics = [...new Set([...queue.map((q) => q.query), ...posts.map((p) => p.topic || p.title)])];
 
   const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
   const findings = await research(client, now, catalog, recentTopics);

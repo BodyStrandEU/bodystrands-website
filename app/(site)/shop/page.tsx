@@ -5,6 +5,7 @@ import { Suspense } from "react";
 import { CATEGORY_CONTENT } from "@/lib/category-content";
 import BuyingGuide from "@/components/BuyingGuide";
 import CategoryFilter from "@/components/CategoryFilter";
+import CategoryTiles from "@/components/CategoryTiles";
 import ShopGridClient from "@/components/ShopGridClient";
 import { products, CATEGORIES, CATEGORY_ORDER } from "@/lib/products";
 import type { Category } from "@/lib/products";
@@ -103,9 +104,19 @@ export default async function ShopPage({
         </div>
 
         {/* Category filter — horizontal row above the grid, same on every breakpoint */}
-        <Suspense fallback={null}>
-          <CategoryFilter />
-        </Suspense>
+        {isFiltered ? (
+          <Suspense fallback={null}>
+            <CategoryFilter />
+          </Suspense>
+        ) : (
+          <CategoryTiles
+            tiles={(grouped ?? []).map((g) => ({
+              category: g.category,
+              count: g.items.length,
+              fallback: g.items[0]?.images?.[0],
+            }))}
+          />
+        )}
       </div>
 
       {/* Full-bleed grid — breaks out of the max-w-7xl container so product photos

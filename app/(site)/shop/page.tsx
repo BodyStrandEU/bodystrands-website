@@ -127,30 +127,8 @@ export default async function ShopPage({
         <ShopGridClient filtered={filtered} grouped={grouped} />
       ) : (
         <CollapsibleAllPieces count={filtered.length}>
-          <ShopGridClient filtered={filtered} grouped={grouped} />
+          <ShopGridClient filtered={filtered} grouped={grouped} noPriority />
         </CollapsibleAllPieces>
-      )}
-
-      {/* Plain crawlable product links (cards navigate with JS, and the grid is collapsed above),
-          so Google and screen readers still see every piece as a real link. */}
-      {!isFiltered && grouped && (
-        <nav aria-label="All pieces by category" className="max-w-7xl mx-auto px-4 md:px-10 mt-12">
-          {grouped.map((g) => (
-            <div key={g.category} className="mb-5">
-              <p className="text-[0.55rem] tracking-[0.25em] uppercase text-[#A0622A] mb-2">
-                <Link href={`/shop?category=${encodeURIComponent(g.category)}`}>{g.category}</Link>
-              </p>
-              <p className="text-xs font-light leading-relaxed text-[#8C7B6E]">
-                {g.items.map((p, i) => (
-                  <span key={p.id}>
-                    {i > 0 && " · "}
-                    <Link href={`/shop/${p.id}`} className="hover:text-[#2C2220]">{p.name}</Link>
-                  </span>
-                ))}
-              </p>
-            </div>
-          ))}
-        </nav>
       )}
 
       {/* Buying guide + FAQ — gives Google (and shoppers) the words to match searches
@@ -159,6 +137,33 @@ export default async function ShopPage({
         <div className="max-w-7xl mx-auto px-1 md:px-10">
           <BuyingGuide label={`${activeLabel} Guide`} content={content} />
         </div>
+      )}
+      {/* Plain crawlable product links (cards navigate with JS and the grid is collapsed),
+          so Google and screen readers still see every piece as a real link. Closed by default,
+          at the very bottom, so shoppers never see it unless they open it. */}
+      {!isFiltered && grouped && (
+        <details className="max-w-7xl mx-auto px-4 md:px-10 mt-16 group">
+          <summary className="cursor-pointer list-none text-[0.55rem] tracking-[0.25em] uppercase text-[#8C7B6E] hover:text-[#2C2220] transition-colors">
+            All pieces by category <span className="inline-block transition-transform group-open:rotate-180">↓</span>
+          </summary>
+          <nav aria-label="All pieces by category" className="mt-5">
+            {grouped.map((g) => (
+              <div key={g.category} className="mb-5">
+                <p className="text-[0.55rem] tracking-[0.25em] uppercase text-[#A0622A] mb-2">
+                  <Link href={`/shop?category=${encodeURIComponent(g.category)}`}>{g.category}</Link>
+                </p>
+                <p className="text-xs font-light leading-relaxed text-[#8C7B6E]">
+                  {g.items.map((p, i) => (
+                    <span key={p.id}>
+                      {i > 0 && " · "}
+                      <Link href={`/shop/${p.id}`} className="hover:text-[#2C2220]">{p.name}</Link>
+                    </span>
+                  ))}
+                </p>
+              </div>
+            ))}
+          </nav>
+        </details>
       )}
     </div>
   );

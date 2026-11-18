@@ -1,9 +1,9 @@
 "use client";
 import { useState, type ReactNode } from "react";
 
-// The full catalogue under the category tiles stays unmounted until the shopper asks for it,
-// so the shop opens fast (no ~6,000 DOM nodes or product photos up front). Every product is
-// still reachable through the category tiles above.
+// The full catalogue under the category tiles is hidden until the shopper asks for it, but it
+// stays in the page's HTML so Google still sees every product. Product photos are lazy-loaded,
+// so hidden cards download none of their images and the shop opens fast.
 export default function CollapsibleAllPieces({ count, children }: { count: number; children: ReactNode }) {
   const [open, setOpen] = useState(false);
   return (
@@ -18,7 +18,7 @@ export default function CollapsibleAllPieces({ count, children }: { count: numbe
           {open ? "Hide all pieces ↑" : `Browse all ${count} pieces ↓`}
         </button>
       </div>
-      {open && children}
+      <div hidden={!open}>{children}</div>
     </div>
   );
 }

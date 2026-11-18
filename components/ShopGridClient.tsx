@@ -30,9 +30,11 @@ function ListIcon({ active }: { active: boolean }) {
 export default function ShopGridClient({
   filtered,
   grouped,
+  noPriority = false,
 }: {
   filtered: Product[];
   grouped: Section[] | null;
+  noPriority?: boolean;
 }) {
   const [cols, setCols] = useState<1 | 2>(2);
   const [filters, setFilters] = useState<FilterState>(DEFAULT_FILTERS);
@@ -103,7 +105,7 @@ export default function ShopGridClient({
         ) : (
           <div className={gridCls}>
             {results.map((product, i) => (
-              <ProductCard key={product.id} product={product} priority={i < 4} heroImageOverride={heroFor(product)} />
+              <ProductCard key={product.id} product={product} priority={!noPriority && i < 4} heroImageOverride={heroFor(product)} />
             ))}
           </div>
         )
@@ -126,7 +128,7 @@ export default function ShopGridClient({
                   <ProductCard
                     key={product.id}
                     product={product}
-                    priority={gi === 0 && i < 4}
+                    priority={!noPriority && gi === 0 && i < 4}
                   />
                 ))}
               </div>
@@ -137,7 +139,7 @@ export default function ShopGridClient({
         /* Filtered — flat grid */
         <div className={gridCls}>
           {filtered.map((product, i) => (
-            <ProductCard key={product.id} product={product} priority={i < 4} />
+            <ProductCard key={product.id} product={product} priority={!noPriority && i < 4} />
           ))}
         </div>
       )}

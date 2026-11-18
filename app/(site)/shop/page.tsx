@@ -1,11 +1,13 @@
 import { CATEGORY_IMAGES, previewImages } from "@/lib/categoryImages";
 import { getSalePrice } from "@/lib/pricing";
 import { categorySeo } from "@/lib/seo-overrides";
+import Link from "next/link";
 import { Suspense } from "react";
 import { CATEGORY_CONTENT } from "@/lib/category-content";
 import BuyingGuide from "@/components/BuyingGuide";
 import CategoryFilter from "@/components/CategoryFilter";
 import CategoryTiles from "@/components/CategoryTiles";
+import CollapsibleAllPieces from "@/components/CollapsibleAllPieces";
 import ShopGridClient from "@/components/ShopGridClient";
 import { products, CATEGORIES, CATEGORY_ORDER } from "@/lib/products";
 import type { Category } from "@/lib/products";
@@ -121,7 +123,35 @@ export default async function ShopPage({
 
       {/* Full-bleed grid — breaks out of the max-w-7xl container so product photos
           run edge-to-edge like SKIMS', instead of being boxed in by page margins. */}
-      <ShopGridClient filtered={filtered} grouped={grouped} />
+      {isFiltered ? (
+        <ShopGridClient filtered={filtered} grouped={grouped} />
+      ) : (
+        <CollapsibleAllPieces count={filtered.length}>
+          <ShopGridClient filtered={filtered} grouped={grouped} />
+        </CollapsibleAllPieces>
+      )}
+
+      {/* Plain crawlable product links (cards navigate with JS, and the grid is collapsed above),
+          so Google and screen readers still see every piece as a real link. */}
+      {!isFiltered && grouped && (
+        <nav aria-label="All pieces by category" className="max-w-7xl mx-auto px-4 md:px-10 mt-12">
+          {grouped.map((g) => (
+            <div key={g.category} className="mb-5">
+              <p className="text-[0.55rem] tracking-[0.25em] uppercase text-[#A0622A] mb-2">
+                <Link href={`/shop?category=${encodeURIComponent(g.category)}`}>{g.category}</Link>
+              </p>
+              <p className="text-xs font-light leading-relaxed text-[#8C7B6E]">
+                {g.items.map((p, i) => (
+                  <span key={p.id}>
+                    {i > 0 && " · "}
+                    <Link href={`/shop/${p.id}`} className="hover:text-[#2C2220]">{p.name}</Link>
+                  </span>
+                ))}
+              </p>
+            </div>
+          ))}
+        </nav>
+      )}
 
       {/* Buying guide + FAQ — gives Google (and shoppers) the words to match searches
           like "back necklace" or "arm chain" that the product grid alone can't. */}

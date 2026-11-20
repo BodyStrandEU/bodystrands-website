@@ -169,11 +169,11 @@ export default function ProductPageClient({ product, setSlot }: { product: Produ
 
   const { format, rates } = useCurrency();
 
-  // Real review stats for the header badge — this product's own reviews if it has
-  // any, otherwise the shop-wide average (same "own vs shop-wide" logic as
-  // ProductReviews.tsx, kept in sync by hand since this badge renders above it).
-  const ownReviews = ALL_REAL_REVIEWS.filter((r) => r.productId === product.id);
-  const badgeReviews = ownReviews.length > 0 ? ownReviews : dedupeReviews(ALL_REAL_REVIEWS);
+  // Header badge = SHOP-WIDE rating on every product (user decision Nov 20, 2026: most products
+  // have 0-2 reviews, so the badge shows the whole shop's social proof; clicking it scrolls to
+  // #reviews where this product's own reviews come first, then other products'). The Google
+  // schema markup stays own-reviews-only (shop/[id]/page.tsx).
+  const badgeReviews = dedupeReviews(ALL_REAL_REVIEWS);
   const badgeAvg = badgeReviews.length > 0
     ? badgeReviews.reduce((s, r) => s + r.rating, 0) / badgeReviews.length
     : 0;
@@ -283,7 +283,7 @@ export default function ProductPageClient({ product, setSlot }: { product: Produ
               </svg>
             ))}
           </div>
-          <span className="text-[0.65rem] tracking-[0.12em] text-[#8C7B6E] group-hover/stars:text-[#A0622A] group-hover/stars:underline underline-offset-2 transition-colors">{badgeAvg.toFixed(1)} · {badgeReviews.length} review{badgeReviews.length !== 1 ? "s" : ""}</span>
+          <span className="text-[0.65rem] tracking-[0.12em] text-[#8C7B6E] group-hover/stars:text-[#A0622A] group-hover/stars:underline underline-offset-2 transition-colors">{badgeAvg.toFixed(1)} · {badgeReviews.length} shop review{badgeReviews.length !== 1 ? "s" : ""}</span>
         </button>
         )}
 

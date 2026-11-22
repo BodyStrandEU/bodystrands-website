@@ -90,9 +90,12 @@ export async function POST(req: NextRequest) {
     const measurementNote = session.metadata?.measurementNote ?? "";
     const customerEmail = session.customer_details?.email ?? "—";
     const customerName  = session.customer_details?.name ?? "—";
-    const address       = session.customer_details?.address;
+    // Owner email shows where the parcel goes: the shipping address the buyer entered, not the
+    // card-holder's billing address (they differ on gift orders). Falls back to billing.
+    const address       = session.collected_information?.shipping_details?.address || session.customer_details?.address;
+    const recipientName = session.collected_information?.shipping_details?.name;
     const addressLine   = address
-      ? [address.line1, address.city, address.country].filter(Boolean).join(", ")
+      ? [recipientName, address.line1, address.line2, address.city, address.postal_code, address.country].filter(Boolean).join(", ")
       : "—";
 
     const orderDate = new Date(session.created * 1000).toLocaleString("en-GB", {

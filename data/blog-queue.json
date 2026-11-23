@@ -1,5 +1,199 @@
 [
   {
+    "query": "green jewellery trend 2027",
+    "keywords": [
+      "pantone colour of the year 2027 jewellery",
+      "what jewellery goes with a green dress",
+      "turquoise and green jewellery for winter",
+      "jewel tone accessories winter 2027",
+      "is green the colour of 2027"
+    ],
+    "productIds": [
+      "turquoise-beaded-choker",
+      "turquoise-beaded-belly-chain",
+      "layered-turquoise-bead-bracelet",
+      "turquoise-zodiac-necklace-stack"
+    ],
+    "category": "Style Guide",
+    "months": [
+      12,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "productCategories": [
+      "Necklaces",
+      "Belly Chains",
+      "Bracelets"
+    ],
+    "source": "research",
+    "researchModel": "claude-opus-5",
+    "addedAt": "2026-11-23",
+    "why": "Pantone reveals its 2027 Color of the Year on 1 December and Yahoo Lifestyle reports designers tipping sage and olive, while Brilliant Earth already names 'Green Is the New Neutral' and Trendalytics puts emerald in its Winter 2027 palette."
+  },
+  {
+    "query": "christmas gift for teacher jewelry",
+    "keywords": [
+      "end of term gift for a teacher under 25 euros",
+      "small christmas gift for a teacher that isn't a mug",
+      "dainty bracelet gift for a teacher",
+      "personalised initial bracelet teacher gift",
+      "thoughtful teacher gift from a parent"
+    ],
+    "productIds": [
+      "dainty-chain-bracelet",
+      "coin-disc-bracelet",
+      "script-initial-bracelet",
+      "birth-month-teardrop-choker"
+    ],
+    "category": "Gift Guide",
+    "months": [
+      11,
+      12,
+      6,
+      7
+    ],
+    "productCategories": [
+      "Bracelets",
+      "Necklaces"
+    ],
+    "source": "research",
+    "researchModel": "claude-opus-5",
+    "addedAt": "2026-11-23",
+    "why": "Endico Data Strategic reports over 35% of jewellery-category holiday spend lands between 22 November and Christmas Day's final week, and The Plumb Club cites Deloitte forecasting 7.5%-8.4% ecommerce growth this season."
+  },
+  {
+    "query": "january birth flower carnation and snowdrop meaning",
+    "keywords": [
+      "what is the birth flower for january",
+      "snowdrop flower meaning jewellery",
+      "carnation necklace meaning",
+      "january birthday gift for her personalised",
+      "birth flower anklet for a january birthday"
+    ],
+    "productIds": [
+      "birth-flower-charm-necklace",
+      "birth-flower-anklet",
+      "birth-flower-charm-bracelet",
+      "birthstone-bracelet"
+    ],
+    "category": "Personalized Jewelry",
+    "months": [
+      12,
+      1,
+      2
+    ],
+    "productCategories": [
+      "Necklaces",
+      "Anklets",
+      "Bracelets"
+    ],
+    "source": "research",
+    "researchModel": "claude-opus-5",
+    "addedAt": "2026-11-23",
+    "why": "Brilliant Earth lists 'Sentimental and Symbolic' among its ten 2027 trends and Corelune names personalised pieces among nine F/W 2026 directions, and this is the next instalment in the birth-flower series before the 1 January ramp."
+  },
+  {
+    "query": "jewelry you can wear to the gym",
+    "keywords": [
+      "does sweat ruin stainless steel jewellery",
+      "can you wear a necklace to pilates",
+      "best bracelet that won't snag at the gym",
+      "jewellery that survives a workout and shower",
+      "can you wear a belly chain to the gym"
+    ],
+    "productIds": [
+      "dainty-chain-bracelet",
+      "cuban-chain-bracelet",
+      "satellite-link-choker",
+      "silver-waterproof-belly-chain"
+    ],
+    "category": "Care & Quality",
+    "months": [
+      12,
+      1,
+      2,
+      3
+    ],
+    "productCategories": [
+      "Bracelets",
+      "Necklaces",
+      "Belly Chains"
+    ],
+    "source": "research",
+    "researchModel": "claude-opus-5",
+    "addedAt": "2026-11-23",
+    "why": "Ezra Gems' 2026 gym-jewelry guide notes 316L stainless steel is unaffected by sweat, chalk and chlorine with friction the real wear factor, and Element 79 recommends low-profile non-dangling pieces — timely for the January fitness peak."
+  },
+  {
+    "query": "rhodochrosite meaning and properties",
+    "keywords": [
+      "rhodochrosite ring meaning",
+      "pink crystal for love and self love",
+      "natural stone jewellery trend 2027",
+      "which crystal is best for the heart",
+      "pink stone ring valentines gift"
+    ],
+    "productIds": [
+      "rhodochrosite-ring",
+      "pink-cross-charm-bracelet",
+      "pink-cross-choker",
+      "birthstone-ring"
+    ],
+    "category": "Inspiration",
+    "months": [
+      12,
+      1,
+      2,
+      3
+    ],
+    "productCategories": [
+      "Rings",
+      "Bracelets",
+      "Necklaces"
+    ],
+    "source": "research",
+    "researchModel": "claude-opus-5",
+    "addedAt": "2026-11-23",
+    "why": "Perles & Co names natural stones one of only five Fall-Winter 2026-27 trends and Brilliant Earth's 2027 report covers colour-led fashion rings and 'Love and Luck' symbolism, giving an evergreen pink-stone angle into Valentine's."
+  },
+  {
+    "query": "engagement gift ideas for her",
+    "keywords": [
+      "what to buy a friend who just got engaged",
+      "gift for a newly engaged couple under 50 euros",
+      "jewellery gift for a bride to be",
+      "engagement party jewellery for the bride",
+      "hen party gift for the bride"
+    ],
+    "productIds": [
+      "pearl-hand-chain",
+      "personalized-birthstone-back-necklace",
+      "bridal-pearl-back-necklace",
+      "pearl-bridal-head-chain"
+    ],
+    "category": "Gift Guide",
+    "months": [
+      12,
+      1,
+      2,
+      3,
+      6,
+      7
+    ],
+    "productCategories": [
+      "Hand Chains",
+      "Necklaces",
+      "Head Chains"
+    ],
+    "source": "research",
+    "researchModel": "claude-opus-5",
+    "addedAt": "2026-11-23",
+    "why": "Proposals cluster between Christmas and Valentine's and the trade is already positioned — Brilliant Earth updated its 2027 Engagement Ring Trends report on 2 November 2026 and StyleCaster ran its engagement feature in mid-November."
+  },
+  {
     "query": "how to wear a hand chain",
     "keywords": [
       "hand chain jewelry 2026",

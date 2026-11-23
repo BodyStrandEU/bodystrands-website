@@ -1,5 +1,358 @@
 [
   {
+    "date": "2026-11-23",
+    "researchModel": "claude-opus-5",
+    "trends": [
+      {
+        "name": "Playful maximalism (quiet luxury is over)",
+        "what": "Bold, chunky, sculptural gold jewelry and eclectic stacking replacing minimal 'quiet luxury' looks going into 2027.",
+        "searches": [
+          "maximalist jewellery 2027",
+          "is quiet luxury over",
+          "chunky statement jewellery",
+          "bold gold chain necklace",
+          "eclectic jewellery stack"
+        ],
+        "evidence": "StyleCaster's mid-November 2026 piece 'These 2027 Jewelry Trends Confirm That We Might Actually Be Done With Quiet Luxury' quotes stylist Avital Shimon on a personality-driven 2027, with 'eclectic curation' trickling down into other trends and sculptural styles rising. Brilliant Earth's Jewelry Trends 2027 (updated 8 November 2026, tracked by SVP of Merchandising Annie Chen) lists Playful Maximalism, Bold Gold and Statement Pendants in its top ten. Pinterest's 2026 Trend Report shows maximalist accessories +105%, with the 'Glamoratti' trend saying jewellery gets chunkier, bolder and golder, driven by Gen Z and Millennials.",
+        "sources": [
+          {
+            "name": "StyleCaster",
+            "url": "https://stylecaster.com/fashion/fashion-trends/1234972832/2027-jewelry-trends/"
+          },
+          {
+            "name": "Brilliant Earth",
+            "url": "https://www.brilliantearth.com/guides/jewelry-trends/"
+          },
+          {
+            "name": "Pinterest 2026 Trend Report",
+            "url": "https://business.pinterest.com/pdf/pinterest-predicts/2026-trend-report/"
+          }
+        ],
+        "missing": [
+          "chunky cuffs and bangles",
+          "heavy curb or figaro chunky necklaces",
+          "oversized signet rings",
+          "dome rings",
+          "big single statement pendants"
+        ],
+        "momentum": "rising",
+        "fit": "partial",
+        "productIds": [
+          "maximalist-layered-necklace-stack",
+          "curated-layered-necklace-stack",
+          "double-shoulder-chest-chain",
+          "bridal-shoulder-necklace",
+          "coin-link-chain-belt",
+          "gold-hand-chain"
+        ],
+        "idea": "Push the layered-stack and shoulder-chain pieces as the anti-quiet-luxury statement look while testing one genuinely chunky hero piece."
+      },
+      {
+        "name": "Brooches, pins and heirloom jewelry",
+        "what": "Brooches, lapel pins and vintage/Art Deco heirloom-style jewelry are surging on Pinterest and in F/W trend reports.",
+        "searches": [
+          "brooch aesthetic",
+          "how to wear a brooch",
+          "heirloom jewellery",
+          "vintage art deco jewellery",
+          "crystal clip on earrings"
+        ],
+        "evidence": "Pinterest's 2026 Trend Report shows brooch aesthetic +110%, brooch for men suit +90%, heirloom jewelry +45% and lapel shirt +95%. National Jeweler's write-up 'Pinterest 2026 Trend Report: Brooches, Bold Gold, Cool Blue' confirms rising brooch, heirloom and '80s luxury searches. In Color Magazine ties it to nostalgia and Art Deco design. Perles & Co's Fall-Winter 2026-2027 report names vintage as one of five dominant directions alongside seed-bead weaving, natural stones, animal-inspired design and resin, and Corelune Jewellery lists vintage/heirloom among nine F/W directions.",
+        "sources": [
+          {
+            "name": "Pinterest 2026 Trend Report",
+            "url": "https://business.pinterest.com/pdf/pinterest-predicts/2026-trend-report/"
+          },
+          {
+            "name": "National Jeweler",
+            "url": "https://nationaljeweler.com/articles/14522-pinterest-2026-trend-report-brooches-bold-gold-cool-blue"
+          },
+          {
+            "name": "In Color Magazine",
+            "url": "https://incolormagazine.com/pinterest-predicts-21-trends-for-2026/"
+          },
+          {
+            "name": "Perles & Co",
+            "url": "https://www.perlesandco.co.uk/resources/ft40362-fall-winter-2026-2027-jewelry-trends.html"
+          },
+          {
+            "name": "Corelune Jewellery",
+            "url": "https://corelunejewellery.de/en/blogs/news/schmuck-trends-herbst-winter-2026"
+          }
+        ],
+        "missing": [
+          "brooches and lapel pins",
+          "scarf pins",
+          "convertible pendant-brooches",
+          "hair clips and barrettes",
+          "clip-on earrings",
+          "crystal clip-on earrings",
+          "Art Deco geometric pieces"
+        ],
+        "momentum": "rising",
+        "fit": "gap",
+        "productIds": [],
+        "idea": "Test a pin-backed version of existing charm motifs (butterfly, dragonfly, star, cross) as a cheap entry into the brooch surge."
+      },
+      {
+        "name": "Green as the 2027 colour story",
+        "what": "Olive, sage and emerald green are tipped as the dominant 2027 colour, with a Pantone reveal on 1 December.",
+        "searches": [
+          "pantone colour of the year 2027",
+          "green jewellery trend",
+          "emerald green accessories",
+          "sage green jewellery",
+          "jewel tone jewellery winter"
+        ],
+        "evidence": "Yahoo Lifestyle (~17 November 2026) reports the 2027 Color of the Year is revealed 1 December and that surveyed designers picked olive and sage green, following 2026's Cloud Dancer. Homenish notes Benjamin Moore (Webster Green), Sherwin-Williams (Celery) and Behr (Grounded) leading the 2027 conversation. Brilliant Earth names 'Green Is the New Neutral' in its 2027 top ten, Trendalytics puts emerald green, sapphire blue and rich purple in its Winter 2027 statement-accessory palette, and Corelune lists green accents among nine F/W 2026 directions.",
+        "sources": [
+          {
+            "name": "Yahoo Lifestyle",
+            "url": "https://www.yahoo.com/lifestyle/articles/pantone-pick-green-2027-color-130000287.html"
+          },
+          {
+            "name": "Homenish",
+            "url": "https://www.homenish.com/color-of-the-year-2027/"
+          },
+          {
+            "name": "Brilliant Earth",
+            "url": "https://www.brilliantearth.com/guides/jewelry-trends/"
+          },
+          {
+            "name": "Trendalytics",
+            "url": "https://trendalytics.co/insights/2027-fashion-trends-forecast-whats-hot-next"
+          },
+          {
+            "name": "Corelune Jewellery",
+            "url": "https://corelunejewellery.de/en/blogs/news/schmuck-trends-herbst-winter-2026"
+          }
+        ],
+        "missing": [
+          "malachite pieces",
+          "jade or aventurine",
+          "peridot",
+          "green agate",
+          "emerald-green crystal",
+          "olive or sage enamel"
+        ],
+        "momentum": "rising",
+        "fit": "partial",
+        "productIds": [
+          "turquoise-beaded-choker",
+          "turquoise-beaded-belly-chain",
+          "layered-turquoise-bead-bracelet",
+          "turquoise-zodiac-necklace-stack",
+          "beaded-glasses-chain",
+          "turquoise-beaded-cable-chain-necklace"
+        ],
+        "idea": "Position the turquoise range as the blue-green side of the trend and publish within 48 hours of the 1 December Pantone reveal."
+      },
+      {
+        "name": "Baroque and coloured pearls",
+        "what": "Pearls stay strong but shift from classic round white to irregular baroque shapes and warm or unexpected colours.",
+        "searches": [
+          "baroque pearl necklace",
+          "what are baroque pearls",
+          "irregular pearl jewellery",
+          "coloured pearl necklace",
+          "pearl layering"
+        ],
+        "evidence": "StyleCaster's mid-November 2026 2027 jewellery trends piece leads with baroque pearls, quoting Brilliant Earth's Annie Chen that the most popular pearls will be irregular shapes in warm or unexpected colours rather than classic white, with organic shapes reading as modern. Brilliant Earth keeps pearls in its 2027 top ten; Corelune names pearl chain layering among nine F/W 2026 directions; Brightside (12 November 2026) reports classic pearls selling now alongside sculptural silver and teardrop stones ahead of Thanksgiving and the 2026 holidays.",
+        "sources": [
+          {
+            "name": "StyleCaster",
+            "url": "https://stylecaster.com/fashion/fashion-trends/1234972832/2027-jewelry-trends/"
+          },
+          {
+            "name": "Brilliant Earth",
+            "url": "https://www.brilliantearth.com/guides/jewelry-trends/"
+          },
+          {
+            "name": "Corelune Jewellery",
+            "url": "https://corelunejewellery.de/en/blogs/news/schmuck-trends-herbst-winter-2026"
+          },
+          {
+            "name": "Brightside",
+            "url": "https://brightside.me/articles/10-jewelry-trends-experts-say-shoppers-are-choosing-most-at-jewelry-stores-near-you-ahead-of-thanksgiving-and-the-2026-855480/"
+          }
+        ],
+        "missing": [
+          "baroque pearl pieces",
+          "keshi pearl pieces",
+          "peach pearls",
+          "grey pearls",
+          "champagne pearls",
+          "black pearls"
+        ],
+        "momentum": "peaking",
+        "fit": "partial",
+        "productIds": [
+          "pearl-body-chain",
+          "pearl-lariat-backdrop",
+          "layered-pearl-choker",
+          "pearl-hand-chain",
+          "pearl-belly-chain",
+          "layered-pearl-anklet"
+        ],
+        "idea": "Add one baroque pearl lariat or choker so the existing 20+ pearl SKUs can ride a forecast already in the press."
+      },
+      {
+        "name": "Creature motifs: bugs now, sea creatures next",
+        "what": "Bug and insect jewelry is spiking, with fish and sea-creature charms named as the 2027 follow-on.",
+        "searches": [
+          "bug jewellery",
+          "beetle necklace",
+          "bee charm bracelet",
+          "fish charm necklace",
+          "animal print jewellery"
+        ],
+        "evidence": "In Color Magazine, reporting Pinterest Predicts, shows bug jewelry searches up 60%. StyleCaster's 2027 jewellery trends names fish and sea-creature charms as a 2027 direction, citing Pandora's Articulated Fish Dangle Charm and Brilliant Earth's Puffer Fish Pendant as charm-plus-pearl crossovers. Perles & Co names animal-inspired design and animal print among five dominant F/W 2026-27 trends.",
+        "sources": [
+          {
+            "name": "In Color Magazine",
+            "url": "https://incolormagazine.com/pinterest-predicts-21-trends-for-2026/"
+          },
+          {
+            "name": "StyleCaster",
+            "url": "https://stylecaster.com/fashion/fashion-trends/1234972832/2027-jewelry-trends/"
+          },
+          {
+            "name": "Perles & Co",
+            "url": "https://www.perlesandco.co.uk/resources/ft40362-fall-winter-2026-2027-jewelry-trends.html"
+          }
+        ],
+        "missing": [
+          "bee charms",
+          "beetle charms",
+          "ladybird charms",
+          "spider charms",
+          "fish charms",
+          "starfish and seahorse motifs",
+          "shells beyond cowrie",
+          "animal print elements (leopard enamel, snake-print beads)"
+        ],
+        "momentum": "rising",
+        "fit": "partial",
+        "productIds": [
+          "butterfly-charm-belly-chain",
+          "butterfly-anklet",
+          "butterfly-backdrop-necklace",
+          "dragonfly-charm-belly-chain",
+          "dragonfly-pendant-necklace",
+          "snake-belly-chain",
+          "cowrie-shell-anklet",
+          "cowrie-shell-belly-chain"
+        ],
+        "idea": "Group the butterfly, dragonfly, snake and shell pieces into a 'creature charms' edit and extend the motif set toward bees and sea life."
+      },
+      {
+        "name": "The 2016 revival: chokers and body-conscious accessories",
+        "what": "A social-media-driven 2016 nostalgia wave is bringing back chokers, off-the-shoulder styles and festival body jewelry.",
+        "searches": [
+          "2026 is the new 2016",
+          "2016 fashion trends coming back",
+          "choker outfit",
+          "indie sleaze accessories",
+          "skinny scarf outfit"
+        ],
+        "evidence": "Wikipedia documents '2026 is the new 2016' as a social media trend that began in late 2025, became widely noticed in early 2026 and spread via TikTok, with People coverage. Urban Outfitters' community blog, citing TheIndustry.fashion, lists chokers, skinny scarves and statement earrings returning alongside slip dresses and bombers. Windsor names chokers and off-the-shoulder tops as the returning pieces in a more refined form.",
+        "sources": [
+          {
+            "name": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/2026_is_the_new_2016"
+          },
+          {
+            "name": "Urban Outfitters",
+            "url": "https://www.urbanoutfitters.com/uo-community-blog-2016-fashion-trends-2026"
+          },
+          {
+            "name": "Windsor",
+            "url": "https://www.windsorstore.com/blogs/lifestyle/2016-trend-how-to-revive-this-fashion-look-in-2026"
+          }
+        ],
+        "missing": [
+          "skinny scarves",
+          "statement earrings"
+        ],
+        "momentum": "peaking",
+        "fit": "we sell it",
+        "productIds": [
+          "satellite-link-choker",
+          "layered-pearl-choker",
+          "turquoise-beaded-choker",
+          "beaded-star-choker",
+          "evil-eye-choker-necklace",
+          "coin-disc-chain-choker",
+          "birth-month-teardrop-choker"
+        ],
+        "idea": "Run a '2016 is back, done better' choker and body-chain edit across the existing choker and belly-chain range."
+      }
+    ],
+    "gaps": [],
+    "blogIdeas": [
+      {
+        "query": "green jewellery trend 2027",
+        "why": "Pantone reveals its 2027 Color of the Year on 1 December and Yahoo Lifestyle reports designers tipping sage and olive, while Brilliant Earth already names 'Green Is the New Neutral' and Trendalytics puts emerald in its Winter 2027 palette.",
+        "productIds": [
+          "turquoise-beaded-choker",
+          "turquoise-beaded-belly-chain",
+          "layered-turquoise-bead-bracelet",
+          "turquoise-zodiac-necklace-stack"
+        ]
+      },
+      {
+        "query": "christmas gift for teacher jewelry",
+        "why": "Endico Data Strategic reports over 35% of jewellery-category holiday spend lands between 22 November and Christmas Day's final week, and The Plumb Club cites Deloitte forecasting 7.5%-8.4% ecommerce growth this season.",
+        "productIds": [
+          "dainty-chain-bracelet",
+          "coin-disc-bracelet",
+          "script-initial-bracelet",
+          "birth-month-teardrop-choker"
+        ]
+      },
+      {
+        "query": "january birth flower carnation and snowdrop meaning",
+        "why": "Brilliant Earth lists 'Sentimental and Symbolic' among its ten 2027 trends and Corelune names personalised pieces among nine F/W 2026 directions, and this is the next instalment in the birth-flower series before the 1 January ramp.",
+        "productIds": [
+          "birth-flower-charm-necklace",
+          "birth-flower-anklet",
+          "birth-flower-charm-bracelet",
+          "birthstone-bracelet"
+        ]
+      },
+      {
+        "query": "jewelry you can wear to the gym",
+        "why": "Ezra Gems' 2026 gym-jewelry guide notes 316L stainless steel is unaffected by sweat, chalk and chlorine with friction the real wear factor, and Element 79 recommends low-profile non-dangling pieces — timely for the January fitness peak.",
+        "productIds": [
+          "dainty-chain-bracelet",
+          "cuban-chain-bracelet",
+          "satellite-link-choker",
+          "silver-waterproof-belly-chain"
+        ]
+      },
+      {
+        "query": "rhodochrosite meaning and properties",
+        "why": "Perles & Co names natural stones one of only five Fall-Winter 2026-27 trends and Brilliant Earth's 2027 report covers colour-led fashion rings and 'Love and Luck' symbolism, giving an evergreen pink-stone angle into Valentine's.",
+        "productIds": [
+          "rhodochrosite-ring",
+          "pink-cross-charm-bracelet",
+          "pink-cross-choker",
+          "birthstone-ring"
+        ]
+      },
+      {
+        "query": "engagement gift ideas for her",
+        "why": "Proposals cluster between Christmas and Valentine's and the trade is already positioned — Brilliant Earth updated its 2027 Engagement Ring Trends report on 2 November 2026 and StyleCaster ran its engagement feature in mid-November.",
+        "productIds": [
+          "pearl-hand-chain",
+          "personalized-birthstone-back-necklace",
+          "bridal-pearl-back-necklace",
+          "pearl-bridal-head-chain"
+        ]
+      }
+    ]
+  },
+  {
     "date": "2026-11-05",
     "researchModel": "claude-sonnet-5",
     "trends": [

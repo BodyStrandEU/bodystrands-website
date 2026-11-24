@@ -44,7 +44,7 @@ const PRE_CHECKOUT_FREE_SHIPPING: Partial<Record<string, ReactNode>> = {
 // for why (any transformed ancestor traps position:fixed, so don't nest this anywhere).
 export default function CartDrawer() {
   const {
-    items, count, subtotal, setSavings, lineSetSavings, remove, updateQty, updateVariant,
+    items, count, subtotal, itemsTotal, setSavings, lineSetSavings, remove, updateQty, updateVariant,
     shippingCountry, setShippingCountry,
     drawerOpen, closeDrawer,
     quickAddProduct, add: addToCart, nextQuickAdd, pickerStep, pickerTone,
@@ -101,9 +101,9 @@ export default function CartDrawer() {
     setTimeout(closeDrawer, 250);
   }
 
-  // Shipping calculation — SITE-WIDE RULE: free shipping is judged on the FINAL price, after the set discount
-  // and any discount code come off. Keep in sync with api/checkout/route.ts.
-  const shipBasis       = applied ? (applied.exclusive ? applied.subtotal! : afterCode(subtotal, applied)) : subtotal;
+  // Shipping calculation — free shipping is judged on the final price after a discount code comes off
+  // (without a code: the pre-set-discount total, so the set discount never pushes someone under the threshold).
+  const shipBasis       = applied ? (applied.exclusive ? applied.subtotal! : afterCode(itemsTotal, applied)) : itemsTotal;
   const shippingRate    = shippingCountry ? getShippingRate(shippingCountry, shipBasis, rates) : null;
   const shippingAmount  = shippingRate ? shippingRate.amount / 100 : null;
   const effSubtotal     = applied?.exclusive ? applied.subtotal! : subtotal;

@@ -25,7 +25,7 @@ type CartCtx = {
   items:             CartItem[];
   count:             number;
   subtotal:          number;   // after set discounts — what checkout charges for the items
-  itemsTotal:        number;   // before set discounts — the free-shipping threshold uses this, so a set discount never costs anyone free shipping
+  itemsTotal:        number;   // before set discounts (display only — free shipping is judged on the FINAL price, i.e. subtotal minus any code)
   setSavings:        number;
   lineSetSavings:    Record<string, number>; // cartId → amount saved on that line by the set discount
   shippingCountry:   string;

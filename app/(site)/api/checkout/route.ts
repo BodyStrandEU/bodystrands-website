@@ -131,7 +131,6 @@ export async function POST(req: NextRequest) {
 
       const lineItems: Stripe.Checkout.SessionCreateParams.LineItem[] = [];
       let totalAmount = 0;      // what the customer pays for the items (after set discounts)
-      let itemsTotal  = 0;      // before set discounts — the free-shipping threshold uses this
       const productNames: string[] = [];
       const measurementNotes: string[] = [];
 
@@ -158,7 +157,6 @@ export async function POST(req: NextRequest) {
         const name      = item.variant ? `${product.name} — ${item.variant}` : product.name;
         const setQty    = setUnits[idx];
         const setPrice  = setUnitPrice(unitPrice);
-        itemsTotal     += unitPrice * qty;
         totalAmount    += unitPrice * (qty - setQty) + setPrice * setQty;
         productNames.push(name);
         const note = sanitizeNote(item.measurementNote);
@@ -199,9 +197,8 @@ export async function POST(req: NextRequest) {
       const giftWrap = body.giftWrap === true;
       const giftNote = typeof body.giftNote === "string" ? body.giftNote.slice(0, 500) : "";
 
-      // Free shipping is judged on the pre-set-discount total, so the set discount comes on top
-      // Free shipping is judged on the final price: after any code comes off. (With a code the set discount is never applied.)
-      const shippingTotal = afterCode(itemsTotal, foundCode);
+      // SITE-WIDE RULE: free shipping is always judged on the FINAL price, after the set discount and any code come off.
+      const shippingTotal = afterCode(totalAmount, foundCode);
       const shipping_options = country
         ? buildSingleShippingOption(country, shippingTotal, rates)
         : buildAllShippingOptions(shippingTotal, rates);

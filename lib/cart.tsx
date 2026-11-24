@@ -66,6 +66,9 @@ export function CartProvider({ children }: { children: ReactNode }) {
     try {
       const stored = localStorage.getItem("bs_cart");
       if (stored) setItems(JSON.parse(stored) as CartItem[]);
+      // An applied discount code survives reloads like the cart does (it is re-checked on load, so a used/expired code drops off by itself)
+      const storedCode = localStorage.getItem("bs_discount_code");
+      if (storedCode) setDiscountCode(storedCode);
       const storedCountry = localStorage.getItem("bs_shipping_country");
       if (storedCountry) _setShippingCountry(storedCountry);
       else {
@@ -83,6 +86,10 @@ export function CartProvider({ children }: { children: ReactNode }) {
     // Storage can be blocked or full (private mode, in-app browsers) — the cart must still work in memory
     if (hydrated) { try { localStorage.setItem("bs_cart", JSON.stringify(items)); } catch {} }
   }, [items, hydrated]);
+
+  useEffect(() => {
+    if (hydrated) { try { localStorage.setItem("bs_discount_code", discountCode); } catch {} }
+  }, [discountCode, hydrated]);
 
   function setShippingCountry(code: string) {
     _setShippingCountry(code);

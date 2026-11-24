@@ -29,7 +29,7 @@ export async function POST(req: NextRequest) {
     if (!found) return NextResponse.json({ valid: false, error: "That code isn't valid or has already been used." });
 
     // Ordinary code: stacks as usual, Stripe shows the amount at checkout.
-    if (!found.exclusive) return NextResponse.json({ valid: true, exclusive: false, code: found.code, percentOff: found.percentOff, amountOff: found.amountOff });
+    if (!found.exclusive) return NextResponse.json({ valid: true, exclusive: false, code: found.code });
 
     // Full (pre-sale) price: the code replaces any sale price instead of stacking on it.
     let fullTotal = 0;

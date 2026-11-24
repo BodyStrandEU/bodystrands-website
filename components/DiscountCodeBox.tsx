@@ -4,14 +4,10 @@ import { useEffect, useState } from "react";
 import { useCart } from "@/lib/cart";
 import { useCurrency } from "@/lib/currency-context";
 
-// The price free shipping is judged on: the FINAL price, after the code comes off.
-export { afterCode } from "@/lib/discountCode";
-
 export type AppliedCode = {
   code: string;
   exclusive: boolean;     // non-stackable code (e.g. SAVE25): full price, then % off the whole order
-  percentOff?: number | null;
-  amountOff?: number | null; // ordinary codes: fixed EUR amount off
+  percentOff?: number;
   fullTotal?: number;     // exclusive only: order value at full price
   discount?: number;      // exclusive only
   subtotal?: number;      // exclusive only: fullTotal − discount

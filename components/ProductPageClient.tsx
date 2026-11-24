@@ -1,5 +1,6 @@
 "use client";
-import DiscountCodeBox from "@/components/DiscountCodeBox";
+import DiscountCodeBox, { type AppliedCode } from "@/components/DiscountCodeBox";
+import { afterCode } from "@/lib/discountCode";
 import { useState, useEffect, useRef, isValidElement, cloneElement, type ReactNode } from "react";
 import Link from "next/link";
 import ProductGallery from "@/components/ProductGallery";
@@ -128,6 +129,7 @@ export default function ProductPageClient({ product, setSlot }: { product: Produ
   const [measurementNote, setMeasurementNote] = useState("");
   const [showSticky, setShowSticky]           = useState(false);
   const [addedMsg, setAddedMsg]               = useState(false);
+  const [appliedCode, setAppliedCode]         = useState<AppliedCode | null>(null);
   const buyRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -493,7 +495,7 @@ export default function ProductPageClient({ product, setSlot }: { product: Produ
         {/* Buttons — observed for sticky bar visibility */}
         <div ref={buyRef} className="flex flex-col gap-2">
           {/* Add to Cart */}
-          <DiscountCodeBox items={[{ productId: product.id, groupSelections, quantity: 1 }]} />
+          <DiscountCodeBox items={[{ productId: product.id, groupSelections, quantity: 1 }]} onChange={setAppliedCode} />
 
           <button
             onClick={handleAddToCart}
@@ -514,7 +516,7 @@ export default function ProductPageClient({ product, setSlot }: { product: Produ
             secondary
           />
 
-          <ShippingNudge price={totalPrice} />
+          <ShippingNudge price={appliedCode ? (appliedCode.exclusive ? appliedCode.subtotal ?? totalPrice : afterCode(totalPrice, appliedCode)) : totalPrice} />
         </div>
 
         {/* Trust badges */}

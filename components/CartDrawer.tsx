@@ -10,6 +10,7 @@ import { useCurrency } from "@/lib/currency-context";
 import { COUNTRY_GROUPS, getShippingRate } from "@/lib/shipping";
 import { TrustBadgesInline } from "@/components/TrustBadges";
 import DiscountCodeBox, { type AppliedCode } from "@/components/DiscountCodeBox";
+import { afterCode } from "@/lib/discountCode";
 
 const SWATCH_COLORS: Record<string, string> = {
   "Gold Tone":   "#C8A84B",
@@ -100,13 +101,14 @@ export default function CartDrawer() {
     setTimeout(closeDrawer, 250);
   }
 
-  // Shipping calculation — free-shipping threshold is judged on the pre-set-discount total,
-  // so the set discount comes on top and never pushes someone back under the threshold.
-  const shippingRate    = shippingCountry ? getShippingRate(shippingCountry, itemsTotal, rates) : null;
+  // Shipping calculation — free shipping is judged on the final price after a discount code comes off
+  // (without a code: the pre-set-discount total, so the set discount never pushes someone under the threshold).
+  const shipBasis       = applied ? (applied.exclusive ? applied.subtotal! : afterCode(itemsTotal, applied)) : itemsTotal;
+  const shippingRate    = shippingCountry ? getShippingRate(shippingCountry, shipBasis, rates) : null;
   const shippingAmount  = shippingRate ? shippingRate.amount / 100 : null;
   const effSubtotal     = applied?.exclusive ? applied.subtotal! : subtotal;
   const orderTotal      = effSubtotal + (shippingAmount ?? 0) + (giftWrap ? GIFT_WRAP_FEE : 0);
-  const remaining       = Math.max(0, (shippingRate?.freeThreshold ?? FREE_THRESHOLD) - itemsTotal);
+  const remaining       = Math.max(0, (shippingRate?.freeThreshold ?? FREE_THRESHOLD) - shipBasis);
 
   async function checkout() {
     if (items.length === 0) return;

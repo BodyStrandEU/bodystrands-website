@@ -4,7 +4,7 @@ import { products, type Product } from "@/lib/products";
 import { getSalePrice } from "@/lib/pricing";
 import { SET_DISCOUNT_PERCENT, setDiscountedUnits, setUnitPrice } from "@/lib/productSets";
 import { getShippingRate, ALL_COUNTRIES } from "@/lib/shipping";
-import { lookupCartCode } from "@/lib/discountCode";
+import { lookupCartCode, afterCode } from "@/lib/discountCode";
 import { fetchExchangeRates, type CurrencyCode } from "@/lib/currency";
 import { parseGaClientId, parseGaSessionId } from "@/lib/ga4-purchase";
 
@@ -146,7 +146,6 @@ export async function POST(req: NextRequest) {
         if (!foundCode) return NextResponse.json({ error: "That discount code isn't valid or has already been used." }, { status: 400 });
       }
       const cartCode = foundCode?.exclusive ? foundCode : null;   // non-stackable: full price, nothing else
-      let shippingBasis = 0;    // cart value as shown (sale prices) — free shipping is judged on this, never on the code's full-price lines
       const setUnits   = cartCode
         ? validItems.map(() => 0)
         : setDiscountedUnits(validItems.map((i) => ({ productId: i.productId, quantity: i.quantity ?? 1 })));
@@ -156,7 +155,6 @@ export async function POST(req: NextRequest) {
         const qty       = item.quantity ?? 1;
         const priceAdd  = computeValidatedPriceAdd(product, item.groupSelections);
         const unitPrice = (cartCode ? product.price : (getSalePrice(product) ?? product.price)) + priceAdd;
-        shippingBasis  += ((getSalePrice(product) ?? product.price) + priceAdd) * qty;
         const name      = item.variant ? `${product.name} — ${item.variant}` : product.name;
         const setQty    = setUnits[idx];
         const setPrice  = setUnitPrice(unitPrice);
@@ -202,7 +200,8 @@ export async function POST(req: NextRequest) {
       const giftNote = typeof body.giftNote === "string" ? body.giftNote.slice(0, 500) : "";
 
       // Free shipping is judged on the pre-set-discount total, so the set discount comes on top
-      const shippingTotal = cartCode ? shippingBasis : itemsTotal;
+      // Free shipping is judged on the final price: after any code comes off. (With a code the set discount is never applied.)
+      const shippingTotal = afterCode(itemsTotal, foundCode);
       const shipping_options = country
         ? buildSingleShippingOption(country, shippingTotal, rates)
         : buildAllShippingOptions(shippingTotal, rates);
@@ -258,10 +257,11 @@ export async function POST(req: NextRequest) {
     const totalAmount = foundCode?.exclusive ? product.price + priceAddOn : salePriceTotal;
     const measurementNote = sanitizeNote(rawMeasurementNote);
 
-    // Free shipping is judged on the price shown on the page (sale price), never on the code's full-price line.
+    // Free shipping is judged on the final price: after any code comes off.
+    const shippingTotal = afterCode(totalAmount, foundCode);
     const shipping_options = country
-      ? buildSingleShippingOption(country, salePriceTotal, rates)
-      : buildAllShippingOptions(salePriceTotal, rates);
+      ? buildSingleShippingOption(country, shippingTotal, rates)
+      : buildAllShippingOptions(shippingTotal, rates);
 
     const session = await stripe.checkout.sessions.create({
       // payment_method_types intentionally omitted: Checkout Sessions manage eligible

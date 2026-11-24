@@ -9,7 +9,14 @@ const CART_CODE_PREFIX = "CART-";
 
 // exclusive = non-stackable: replaces sale prices with full price and nothing else applies.
 // Any other code is an ordinary Stripe promotion code and stacks like it always has.
-export type CartCode = { promotionCodeId: string; code: string; exclusive: boolean; percentOff: number | null };
+export type CartCode = { promotionCodeId: string; code: string; exclusive: boolean; percentOff: number | null; amountOff: number | null /* EUR */ };
+
+// Free shipping is judged on the FINAL price, i.e. after the code is taken off. Pure, so the cart and the server agree.
+export function afterCode(total: number, c: { percentOff?: number | null; amountOff?: number | null } | null | undefined): number {
+  if (!c) return total;
+  const t = total * (1 - (c.percentOff ?? 0) / 100) - (c.amountOff ?? 0);
+  return Math.max(0, Math.round(t * 100) / 100);
+}
 
 export async function lookupCartCode(stripe: Stripe, raw: unknown): Promise<CartCode | null> {
   if (typeof raw !== "string") return null;
@@ -28,7 +35,11 @@ export async function lookupCartCode(stripe: Stripe, raw: unknown): Promise<Cart
     const coupon = typeof ref === "string" ? await stripe.coupons.retrieve(ref) : ref;
     if (!coupon.valid) continue;
     if (exclusive && !coupon.percent_off) continue;
-    return { promotionCodeId: promo.id, code, exclusive, percentOff: coupon.percent_off ?? null };
+    return {
+      promotionCodeId: promo.id, code, exclusive,
+      percentOff: coupon.percent_off ?? null,
+      amountOff: coupon.amount_off && coupon.currency === "eur" ? coupon.amount_off / 100 : null,
+    };
   }
   return null;
 }

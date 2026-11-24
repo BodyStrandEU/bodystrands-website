@@ -95,7 +95,6 @@ const MEASURE_PLACEHOLDER: Record<string, string> = {
   "Leg Chains":         "e.g. Thigh 55cm",
   "Bracelets":          "e.g. Wrist 16cm",
   "Hand Chains":        "e.g. Wrist 16cm, hand length 17cm",
-  "Rings":              "e.g. Ring size or finger circumference 52mm",
   "Necklaces":          "e.g. Neck 34cm, preferred length 40cm",
   "Head Chains":        "e.g. Head circumference 56cm",
   "Eyeglasses Chains":  "e.g. Preferred length 70cm",
@@ -361,7 +360,8 @@ export default function ProductPageClient({ product, setSlot }: { product: Produ
           </div>
         )}
 
-        {/* Optional tailored-fit measurements — collapsed by default, never required */}
+        {/* Optional tailored-fit measurements — every piece is tailored for free except rings. Collapsed by default, never required */}
+        {product.category !== "Rings" && (
           <details className="group">
             <summary className="cursor-pointer select-none text-[0.6rem] tracking-[0.15em] uppercase text-[#A0622A] hover:text-[#8a5224] transition-colors">
               Want a tailored fit? Add your measurements (optional) ▾
@@ -381,6 +381,7 @@ export default function ProductPageClient({ product, setSlot }: { product: Produ
               </div>
             )}
           </details>
+        )}
 
         {/* Finish selector — hidden when a variantGroup already covers the same options */}
         {product.variants && product.variants.length > 1 && !finishGroup && (

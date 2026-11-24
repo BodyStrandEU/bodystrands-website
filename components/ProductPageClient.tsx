@@ -1,5 +1,4 @@
 "use client";
-import DiscountCodeBox from "@/components/DiscountCodeBox";
 import { useState, useEffect, useRef, isValidElement, cloneElement, type ReactNode } from "react";
 import Link from "next/link";
 import ProductGallery from "@/components/ProductGallery";
@@ -493,8 +492,6 @@ export default function ProductPageClient({ product, setSlot }: { product: Produ
         {/* Buttons — observed for sticky bar visibility */}
         <div ref={buyRef} className="flex flex-col gap-2">
           {/* Add to Cart */}
-          <DiscountCodeBox items={[{ productId: product.id, groupSelections, quantity: 1 }]} />
-
           <button
             onClick={handleAddToCart}
             disabled={!allGroupsSelected}

@@ -4,7 +4,6 @@ import { products, type Product } from "@/lib/products";
 import { getSalePrice } from "@/lib/pricing";
 import { SET_DISCOUNT_PERCENT, setDiscountedUnits, setUnitPrice } from "@/lib/productSets";
 import { getShippingRate, ALL_COUNTRIES } from "@/lib/shipping";
-import { lookupCartCode } from "@/lib/discountCode";
 import { fetchExchangeRates, type CurrencyCode } from "@/lib/currency";
 import { parseGaClientId, parseGaSessionId } from "@/lib/ga4-purchase";
 
@@ -138,25 +137,12 @@ export async function POST(req: NextRequest) {
       // "Shop the Set": 10% off units that have a partner from the same set in this cart
       // (stacks on sale prices). Recomputed here from product ids — never trusted from the client.
       const validItems = cartItems.filter((item) => products.some((p) => p.id === item.productId));
-      // Cart discount code (e.g. SAVE25): replaces sale prices + set discount with full price, then
-      // takes the code's % off the whole order via Stripe. Never combined with anything else.
-      let foundCode: Awaited<ReturnType<typeof lookupCartCode>> = null;
-      if (typeof body.code === "string" && body.code.trim()) {
-        foundCode = await lookupCartCode(stripe, body.code);
-        if (!foundCode) return NextResponse.json({ error: "That discount code isn't valid or has already been used." }, { status: 400 });
-      }
-      const cartCode = foundCode?.exclusive ? foundCode : null;   // non-stackable: full price, nothing else
-      let shippingBasis = 0;    // cart value as shown (sale prices) — free shipping is judged on this, never on the code's full-price lines
-      const setUnits   = cartCode
-        ? validItems.map(() => 0)
-        : setDiscountedUnits(validItems.map((i) => ({ productId: i.productId, quantity: i.quantity ?? 1 })));
+      const setUnits   = setDiscountedUnits(validItems.map((i) => ({ productId: i.productId, quantity: i.quantity ?? 1 })));
 
       validItems.forEach((item, idx) => {
         const product   = products.find((p) => p.id === item.productId)!;
         const qty       = item.quantity ?? 1;
-        const priceAdd  = computeValidatedPriceAdd(product, item.groupSelections);
-        const unitPrice = (cartCode ? product.price : (getSalePrice(product) ?? product.price)) + priceAdd;
-        shippingBasis  += ((getSalePrice(product) ?? product.price) + priceAdd) * qty;
+        const unitPrice = (getSalePrice(product) ?? product.price) + computeValidatedPriceAdd(product, item.groupSelections);
         const name      = item.variant ? `${product.name} — ${item.variant}` : product.name;
         const setQty    = setUnits[idx];
         const setPrice  = setUnitPrice(unitPrice);
@@ -202,10 +188,9 @@ export async function POST(req: NextRequest) {
       const giftNote = typeof body.giftNote === "string" ? body.giftNote.slice(0, 500) : "";
 
       // Free shipping is judged on the pre-set-discount total, so the set discount comes on top
-      const shippingTotal = cartCode ? shippingBasis : itemsTotal;
       const shipping_options = country
-        ? buildSingleShippingOption(country, shippingTotal, rates)
-        : buildAllShippingOptions(shippingTotal, rates);
+        ? buildSingleShippingOption(country, itemsTotal, rates)
+        : buildAllShippingOptions(itemsTotal, rates);
 
       if (giftWrap) lineItems.push(giftWrapLineItem());
 
@@ -221,7 +206,6 @@ export async function POST(req: NextRequest) {
           price: totalAmount.toFixed(2),
           currency: "EUR",
           giftWrap: giftWrap ? "yes" : "no",
-          ...(foundCode ? { discountCode: foundCode.code, ...(cartCode ? { discountPercent: String(cartCode.percentOff) } : {}) } : {}),
           ...(giftWrap && giftNote ? { giftNote } : {}),
           ...(measurementNotes.length ? { measurementNote: measurementNotes.join(" | ").slice(0, 500) } : {}),
           ...gaMetadata(req),
@@ -231,8 +215,7 @@ export async function POST(req: NextRequest) {
         // Shows and charges the shopper in their local currency (Stripe converts using
         // live FX and still settles into our EUR account — line items/metadata stay in EUR).
         adaptive_pricing: { enabled: true },
-        // Stripe rejects discounts + allow_promotion_codes together; with a cart code the discount is already applied, so Stripe's own code box is hidden (one box only).
-        ...(foundCode ? { discounts: [{ promotion_code: foundCode.promotionCodeId }] } : {}),
+        allow_promotion_codes: true,
         expires_at: Math.floor(Date.now() / 1000) + 4 * 60 * 60,
         success_url: `${origin}/success?session_id={CHECKOUT_SESSION_ID}`,
         cancel_url:  `${origin}${cancelPath}`,
@@ -247,21 +230,12 @@ export async function POST(req: NextRequest) {
     if (!product) return NextResponse.json({ error: "Product not found" }, { status: 404 });
 
     const productName = variant ? `${product.name} — ${variant}` : product.name;
-    const priceAddOn  = computeValidatedPriceAdd(product, groupSelections);
-    const salePriceTotal = (getSalePrice(product) ?? product.price) + priceAddOn;
-    // Same code rules as the cart: non-stackable code = full price then % off; other codes stack on the sale price.
-    let foundCode: Awaited<ReturnType<typeof lookupCartCode>> = null;
-    if (typeof (body as { code?: unknown }).code === "string" && (body as { code: string }).code.trim()) {
-      foundCode = await lookupCartCode(stripe, (body as { code: string }).code);
-      if (!foundCode) return NextResponse.json({ error: "That discount code isn't valid or has already been used." }, { status: 400 });
-    }
-    const totalAmount = foundCode?.exclusive ? product.price + priceAddOn : salePriceTotal;
+    const totalAmount = (getSalePrice(product) ?? product.price) + computeValidatedPriceAdd(product, groupSelections);
     const measurementNote = sanitizeNote(rawMeasurementNote);
 
-    // Free shipping is judged on the price shown on the page (sale price), never on the code's full-price line.
     const shipping_options = country
-      ? buildSingleShippingOption(country, salePriceTotal, rates)
-      : buildAllShippingOptions(salePriceTotal, rates);
+      ? buildSingleShippingOption(country, totalAmount, rates)
+      : buildAllShippingOptions(totalAmount, rates);
 
     const session = await stripe.checkout.sessions.create({
       // payment_method_types intentionally omitted: Checkout Sessions manage eligible
@@ -281,12 +255,11 @@ export async function POST(req: NextRequest) {
         quantity: 1,
       }],
       mode:     "payment",
-      metadata: { productId: product.id, productName, price: totalAmount.toFixed(2), currency: product.currency, ...(measurementNote ? { measurementNote } : {}), ...(foundCode ? { discountCode: foundCode.code } : {}), ...gaMetadata(req) },
+      metadata: { productId: product.id, productName, price: totalAmount.toFixed(2), currency: product.currency, ...(measurementNote ? { measurementNote } : {}), ...gaMetadata(req) },
       shipping_options,
       shipping_address_collection: { allowed_countries: STRIPE_COUNTRIES },
       adaptive_pricing: { enabled: true },
-      // Our own single code box (above Buy Now / in the cart) replaces Stripe's, so there's never a second box.
-      ...(foundCode ? { discounts: [{ promotion_code: foundCode.promotionCodeId }] } : {}),
+      allow_promotion_codes: true,
       expires_at: Math.floor(Date.now() / 1000) + 4 * 60 * 60,
       success_url: `${origin}/success?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url:  `${origin}${cancelPath}`,

@@ -22,7 +22,7 @@ export default function BuyButton({
 }) {
   const [loading, setLoading] = useState(false);
   const [error,   setError]   = useState("");
-  const { shippingCountry, discountCode } = useCart();
+  const { shippingCountry }   = useCart();
 
   async function handleBuy() {
     setLoading(true);
@@ -42,7 +42,6 @@ export default function BuyButton({
           variant,
           groupSelections,
           measurementNote,
-          code: discountCode || undefined,
           country:  shippingCountry || undefined,
           cancelPath: window.location.pathname,
         }),

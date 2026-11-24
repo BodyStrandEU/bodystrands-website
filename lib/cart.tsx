@@ -29,6 +29,8 @@ type CartCtx = {
   setSavings:        number;
   lineSetSavings:    Record<string, number>; // cartId → amount saved on that line by the set discount
   shippingCountry:   string;
+  discountCode:      string;                    // applied discount code (shared by the cart and the product page's Buy Now)
+  setDiscountCode:   (code: string) => void;
   setShippingCountry:(code: string) => void;
   add:               (item: Omit<CartItem, "cartId" | "quantity">) => void;
   remove:            (cartId: string) => void;
@@ -57,6 +59,7 @@ const CartContext = createContext<CartCtx | null>(null);
 export function CartProvider({ children }: { children: ReactNode }) {
   const [items, setItems]                   = useState<CartItem[]>([]);
   const [shippingCountry, _setShippingCountry] = useState("");
+  const [discountCode, setDiscountCode] = useState("");
   const [hydrated, setHydrated]             = useState(false);
 
   useEffect(() => {
@@ -161,7 +164,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
 
   return (
     <CartContext.Provider value={{
-      items, count, subtotal, itemsTotal, setSavings, lineSetSavings, shippingCountry, setShippingCountry,
+      items, count, subtotal, itemsTotal, setSavings, lineSetSavings, shippingCountry, setShippingCountry, discountCode, setDiscountCode,
       add, remove, updateQty, updateVariant, clear,
       drawerOpen, openDrawer, closeDrawer,
       quickAddProduct, openQuickAdd, closeQuickAdd,

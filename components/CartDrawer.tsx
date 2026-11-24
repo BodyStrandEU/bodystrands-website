@@ -9,6 +9,7 @@ import { getSalePrice } from "@/lib/pricing";
 import { useCurrency } from "@/lib/currency-context";
 import { COUNTRY_GROUPS, getShippingRate } from "@/lib/shipping";
 import { TrustBadgesInline } from "@/components/TrustBadges";
+import DiscountCodeBox, { type AppliedCode } from "@/components/DiscountCodeBox";
 
 const SWATCH_COLORS: Record<string, string> = {
   "Gold Tone":   "#C8A84B",
@@ -57,6 +58,8 @@ export default function CartDrawer() {
   const [giftWrap, setGiftWrap] = useState(false);
   const [giftNote, setGiftNote] = useState("");
   const [groupSelections, setGroupSelections] = useState<Record<string, string>>({});
+  // Applied discount code (the box itself is DiscountCodeBox; the server re-checks at checkout).
+  const [applied, setApplied] = useState<AppliedCode | null>(null);
   const [pickerFinish, setPickerFinish] = useState<string | null>(null);
   const [pickerAdded, setPickerAdded] = useState(false);
 
@@ -101,7 +104,8 @@ export default function CartDrawer() {
   // so the set discount comes on top and never pushes someone back under the threshold.
   const shippingRate    = shippingCountry ? getShippingRate(shippingCountry, itemsTotal, rates) : null;
   const shippingAmount  = shippingRate ? shippingRate.amount / 100 : null;
-  const orderTotal      = subtotal + (shippingAmount ?? 0) + (giftWrap ? GIFT_WRAP_FEE : 0);
+  const effSubtotal     = applied?.exclusive ? applied.subtotal! : subtotal;
+  const orderTotal      = effSubtotal + (shippingAmount ?? 0) + (giftWrap ? GIFT_WRAP_FEE : 0);
   const remaining       = Math.max(0, (shippingRate?.freeThreshold ?? FREE_THRESHOLD) - itemsTotal);
 
   async function checkout() {
@@ -135,6 +139,7 @@ export default function CartDrawer() {
           cancelPath: window.location.pathname,
           giftWrap,
           giftNote: giftWrap ? giftNote : undefined,
+          code: applied?.code,
         }),
       });
       const data = await res.json() as { url?: string; error?: string };
@@ -480,7 +485,7 @@ export default function CartDrawer() {
             {/* Footer */}
             <div className="border-t border-[#E8B4A8]/40 p-5 flex flex-col gap-3">
 
-              {setSavings > 0 && (
+              {setSavings > 0 && !applied?.exclusive && (
                 <div className="flex justify-between items-baseline">
                   <span className="text-[0.58rem] tracking-[0.15em] uppercase text-[#A0622A]">Set discount</span>
                   <span className="text-sm font-light text-[#A0622A]">−{format(setSavings)}</span>
@@ -488,8 +493,12 @@ export default function CartDrawer() {
               )}
               <div className="flex justify-between items-baseline">
                 <span className="text-[0.58rem] tracking-[0.15em] uppercase text-[#8C7B6E]">Subtotal</span>
-                <span className="text-base font-light text-[#2C2220]">{format(subtotal)}</span>
+                <span className="text-base font-light text-[#2C2220]">{format(applied?.exclusive ? applied.fullTotal! : subtotal)}</span>
               </div>
+              <DiscountCodeBox
+                items={items.map((i) => ({ productId: i.productId, groupSelections: i.groupSelections, quantity: i.quantity }))}
+                onChange={setApplied}
+              />
 
               <div>
                 <label className="block text-[0.52rem] tracking-[0.2em] uppercase text-[#8C7B6E] mb-1.5">

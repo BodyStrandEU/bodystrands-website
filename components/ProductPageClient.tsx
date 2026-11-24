@@ -83,6 +83,26 @@ function useShippingMessage(price: number): { text: ReactNode; done: boolean } |
   };
 }
 
+// What to ask for in the optional measurements box, by category. Anything not listed falls back to a
+// general prompt. The note itself is free text (max 300 chars) and is not tied to the product's flag.
+const MEASURE_PLACEHOLDER: Record<string, string> = {
+  "Belly Chains":       "e.g. Waist 78cm (around where you'll wear it)",
+  "Body Chains":        "e.g. Bust 90cm, waist 72cm, hips 98cm",
+  "Back Chains":        "e.g. Neck 34cm, length down your back 45cm",
+  "Shoulder Chains":    "e.g. Shoulder width 44cm, arm 50cm",
+  "Anklets":            "e.g. Ankle 22cm",
+  "Foot Chains":        "e.g. Ankle 22cm, foot length 25cm",
+  "Leg Chains":         "e.g. Thigh 55cm",
+  "Bracelets":          "e.g. Wrist 16cm",
+  "Hand Chains":        "e.g. Wrist 16cm, hand length 17cm",
+  "Rings":              "e.g. Ring size or finger circumference 52mm",
+  "Necklaces":          "e.g. Neck 34cm, preferred length 40cm",
+  "Head Chains":        "e.g. Head circumference 56cm",
+  "Eyeglasses Chains":  "e.g. Preferred length 70cm",
+  "Bikini Clip Chains": "e.g. Waist 70cm, hips 95cm",
+};
+const MEASURE_FALLBACK = "Your measurements, body type or any fit details";
+
 function ShippingNudge({ price }: { price: number }) {
   const msg = useShippingMessage(price);
   if (!msg) return null;
@@ -342,7 +362,6 @@ export default function ProductPageClient({ product, setSlot }: { product: Produ
         )}
 
         {/* Optional tailored-fit measurements — collapsed by default, never required */}
-        {product.tailoredFitAvailable && (
           <details className="group">
             <summary className="cursor-pointer select-none text-[0.6rem] tracking-[0.15em] uppercase text-[#A0622A] hover:text-[#8a5224] transition-colors">
               Want a tailored fit? Add your measurements (optional) ▾
@@ -350,18 +369,18 @@ export default function ProductPageClient({ product, setSlot }: { product: Produ
             <textarea
               value={measurementNote}
               onChange={(e) => setMeasurementNote(e.target.value.slice(0, 300))}
-              placeholder="e.g. Shoulder 44cm, Arm 50cm"
+              placeholder={MEASURE_PLACEHOLDER[product.category] ?? MEASURE_FALLBACK}
               rows={2}
               maxLength={300}
               className="mt-2 w-full border border-[#E8B4A8]/50 px-3 py-2 text-xs font-light text-[#2C2220] placeholder:text-[#8C7B6E]/50 focus:outline-none focus:border-[#A0622A] resize-none"
             />
+            <p className="mt-1 text-[0.55rem] tracking-wide text-[#8C7B6E]">Not sure what to include? Tell us about your body type or how you like it to fit.</p>
             {product.measureGuideImage && (
               <div className="mt-2">
                 <SizeGuideButton image={product.measureGuideImage} label="How to Measure" />
               </div>
             )}
           </details>
-        )}
 
         {/* Finish selector — hidden when a variantGroup already covers the same options */}
         {product.variants && product.variants.length > 1 && !finishGroup && (

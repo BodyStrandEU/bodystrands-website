@@ -13,6 +13,28 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
 });
 const resend = new Resend(process.env.RESEND_API_KEY);
 
+// A buyer can ask for a different delivery address after paying. Stripe locks the address on a
+// completed checkout, so the corrected one lives in PaymentIntent metadata (ship_override_*) and
+// wins over the original everywhere an order's address is shown or used.
+type ShipOverride = {
+  name: string;
+  address: { line1: string; line2: string; city: string; postal_code: string; state: string; country: string };
+};
+function shipOverrideFrom(md: Stripe.Metadata | null | undefined): ShipOverride | null {
+  if (!md?.ship_override_line1) return null;
+  return {
+    name: md.ship_override_name ?? "",
+    address: {
+      line1:       md.ship_override_line1,
+      line2:       md.ship_override_line2 ?? "",
+      city:        md.ship_override_city ?? "",
+      postal_code: md.ship_override_postal_code ?? "",
+      state:       md.ship_override_state ?? "",
+      country:     md.ship_override_country ?? "",
+    },
+  };
+}
+
 function checkAuth(req: NextRequest) {
   const token = req.cookies.get(COOKIE_NAME)?.value;
   return !!token && isValidToken(token);
@@ -27,7 +49,9 @@ export async function GET(req: NextRequest) {
   const orders = await Promise.all(paid.map(async (s) => {
     const cd   = s.customer_details;
     const sh   = s.collected_information?.shipping_details;
-    const addr = sh?.address || cd?.address;
+    let addr: Stripe.Address | null | undefined = sh?.address || cd?.address;
+    let shipName = sh?.name || cd?.name || "—";
+    let addressChanged = false;
     let trackingNumber: string | null = null;
     let trackingSentAt: string | null = null;
     let trackingCarrier: string | null = null;
@@ -40,6 +64,12 @@ export async function GET(req: NextRequest) {
         trackingSentAt    = pi.metadata?.tracking_sent_at ?? null;
         trackingCarrier   = pi.metadata?.tracking_carrier ?? null;
         reviewRequestedAt = pi.metadata?.review_requested_at ?? null;
+        const ov = shipOverrideFrom(pi.metadata);
+        if (ov) {
+          addr = ov.address as Stripe.Address;
+          shipName = ov.name || shipName;
+          addressChanged = true;
+        }
       } catch {}
     }
 
@@ -52,7 +82,8 @@ export async function GET(req: NextRequest) {
       giftNote:      s.metadata?.giftNote ?? "",
       amount:        (s.amount_total ?? 0) / 100,
       currency:      (s.currency ?? "eur").toUpperCase(),
-      customerName:  sh?.name || cd?.name || "—",
+      customerName:  shipName,
+      addressChanged,
       customerEmail: cd?.email || "—",
       address: addr ? {
         line1:       addr.line1 || "",
@@ -100,8 +131,14 @@ export async function POST(req: NextRequest) {
 
   const cd   = session.customer_details;
   const sh   = session.collected_information?.shipping_details;
-  const addr = sh?.address || cd?.address;
-  const name = sh?.name || cd?.name || "there";
+  let addr: Stripe.Address | null | undefined = sh?.address || cd?.address;
+  let name = sh?.name || cd?.name || "there";
+  if (typeof session.payment_intent === "string") {
+    try {
+      const ov = shipOverrideFrom((await stripe.paymentIntents.retrieve(session.payment_intent)).metadata);
+      if (ov) { addr = ov.address as Stripe.Address; name = ov.name || name; }
+    } catch {}
+  }
   const firstName = name.split(" ")[0];
   const email = cd?.email;
   const productName = session.metadata?.productName ?? "your order";

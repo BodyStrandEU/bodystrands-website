@@ -13142,14 +13142,26 @@
         ]
       }
     ],
-    "images": [],
-    "gallery": [],
+    "images": [
+      "/images/products/f9bfd383-801c-455b-8737-7934c76e82d4.png"
+    ],
+    "gallery": [
+      "/images/products/f9bfd383-801c-455b-8737-7934c76e82d4.png",
+      "/images/products/c828c481-b3b9-47de-b91f-3db8a4c1948c.jpeg",
+      "/images/products/36d05bef-12d8-44a8-9988-4676c96eae51.png",
+      "/images/products/51556245-92a9-4d7e-ba3f-bcb05dce79f1.png",
+      "/images/products/IMG_5289.jpg"
+    ],
     "featured": false,
-    "active": false,
+    "active": true,
     "altText": "Gold tone stainless steel layered necklace stack with faux pearl and cable chain choker and engraved zodiac disc pendant, waterproof minimalist stack",
     "dateAdded": "2026-11-25T13:33:56.000Z",
     "giftTags": [
       "personalized"
-    ]
+    ],
+    "variantVideos": {
+      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/af9eebb4b64e49c67a62ea3510c33705/downloads/default.mp4",
+      "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/af9eebb4b64e49c67a62ea3510c33705/downloads/default.mp4"
+    }
   }
 ]

@@ -12874,5 +12874,61 @@
       "Green": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/c60d55ef87575a635ada69e1ff9be53f/downloads/default.mp4"
     },
     "christmasHeroImage": "/images/products/f8c651e7-7f7c-4b1e-b74e-1f0635f39043.png"
+  },
+  {
+    "id": "cz-tennis-choker-necklace",
+    "name": "Cubic Zirconia Tennis Choker Necklace",
+    "price": 40,
+    "currency": "EUR",
+    "category": "Necklaces",
+    "description": "A slim 2mm line of round, diamond-look cubic zirconia stones that sits right at the collarbone. No pendant, no fuss, just sparkle you can wear every day.",
+    "fullDescription": "This tennis choker is for the girl who likes her sparkle simple. A slim 2mm line of round, diamond-look cubic zirconia stones sits right at the collarbone, with no pendant and no fuss. Handmade from stainless steel with an 18k gold PVD finish, it’s built to wear solo, layer, or stack every day, in the shower, at the gym, or at the wedding, without tarnishing or asking for attention it didn’t earn.\n\nA note on the stones: they are cubic zirconia (CZ), lab-made stones that give the look and sparkle of diamonds. They are not real diamonds. That’s why we call the style “diamond”, and why it can stay this affordable.\n\nMaterials: Stainless steel with 18k gold PVD plating\nStones: Cubic zirconia (CZ), round cut, prong set\nStyle: Tennis chain (continuous stone & cup chain)\nWidth: 2mm\nSize: Chain 35cm + 6cm extender, lobster clasp (Need a different size? Message us after purchase and we’ll adjust it for free)\nWaterproof: Yes\nTarnish-resistant: Yes\n\nCare Instructions\nWipe gently with a soft cloth after each wear.\nStore in an airtight container when not in use.\n\nShipping: Dispatches within 1–2 business days.\n\nPlease note that as each piece is handcrafted, no two pieces are identical and slight variations may occur.",
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Stainless steel with 18k gold PVD plating"
+      },
+      {
+        "label": "Stones",
+        "value": "Cubic zirconia (CZ), round cut, prong set"
+      },
+      {
+        "label": "Style",
+        "value": "Tennis chain (continuous stone & cup chain)"
+      },
+      {
+        "label": "Width",
+        "value": "2mm"
+      },
+      {
+        "label": "Size",
+        "value": "Chain 35cm + 6cm extender, lobster clasp"
+      },
+      {
+        "label": "Waterproof",
+        "value": "Yes"
+      },
+      {
+        "label": "Tarnish-Resistant",
+        "value": "Yes"
+      },
+      {
+        "label": "Care",
+        "value": "Wipe with a soft cloth after wear. Store in an airtight container."
+      },
+      {
+        "label": "Shipping",
+        "value": "Dispatches within 1–2 business days"
+      }
+    ],
+    "images": [],
+    "gallery": [],
+    "featured": false,
+    "active": false,
+    "altText": "Gold cubic zirconia tennis choker necklace, 2mm diamond-look CZ stone chain in waterproof stainless steel with 18k gold PVD plating, dainty bridal and everyday choker",
+    "dateAdded": "2026-11-25T12:46:04.050Z",
+    "giftTags": [
+      "bridal"
+    ]
   }
 ]

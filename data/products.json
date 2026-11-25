@@ -12921,14 +12921,27 @@
         "value": "Dispatches within 1–2 business days"
       }
     ],
-    "images": [],
-    "gallery": [],
+    "images": [
+      "/images/products/9b6de681-2f78-4772-9a6b-1c0d8ba10185.png"
+    ],
+    "gallery": [
+      "/images/products/9b6de681-2f78-4772-9a6b-1c0d8ba10185.png",
+      "/images/products/IMG_5502.jpeg",
+      "/images/products/8559d14e-daae-4e3d-aa08-2160c0bc645b.png",
+      "/images/products/50ff49e8-8263-49f7-b25b-ff78f7eb45dd.png",
+      "/images/products/b89bdf7f-5e84-4163-967f-8cbbb239b940.png",
+      "/images/products/dbc7f952-ba6d-492a-983b-b5e087d3e810.png",
+      "/images/products/4574c545-521f-44c6-a97f-b1dc4b23e08a.png",
+      "/images/products/IMG_1857-copy.jpeg"
+    ],
     "featured": false,
-    "active": false,
+    "active": true,
     "altText": "Gold cubic zirconia tennis choker necklace, 2mm diamond-look CZ stone chain in waterproof stainless steel with 18k gold PVD plating, dainty bridal and everyday choker",
     "dateAdded": "2026-11-25T12:46:04.050Z",
     "giftTags": [
       "bridal"
-    ]
+    ],
+    "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/9eed042b035ef4dc2719aaa54cc2b90b/downloads/default.mp4",
+    "sizeGuideImage": "/images/products/4574c545-521f-44c6-a97f-b1dc4b23e08a.png"
   }
 ]

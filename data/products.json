@@ -12943,5 +12943,103 @@
     ],
     "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/9eed042b035ef4dc2719aaa54cc2b90b/downloads/default.mp4",
     "sizeGuideImage": "/images/products/4574c545-521f-44c6-a97f-b1dc4b23e08a.png"
+  },
+  {
+    "id": "diamond-initial-necklace-stack-set",
+    "name": "Diamond Initial Necklace Stack Set",
+    "price": 45,
+    "currency": "EUR",
+    "category": "Necklaces",
+    "description": "A dainty double-chain choker layered under a bold paperclip chain with your pavé diamond initial. One easy, perfectly-spaced personalized set in waterproof gold-tone stainless steel.",
+    "fullDescription": "Two necklaces, one effortless layered look, personalized with your initial.\n\nI designed this stack to take the guesswork out of layering: a dainty double-chain choker pairs underneath a bold paperclip chain finished with your own diamond initial, so you get a custom, perfectly-layered look in one easy set, with no fumbling with multiple clasps trying to get the spacing right. Wear them together for the full three-chain effect, or separately whenever you want something simpler. Each letter charm is pavé-set with sparkling stones for a delicate, polished finish that catches the light beautifully against the gold-tone chain.\n\nProduct Details\nMaterial: Gold-tone stainless steel\nSet includes: 1 paperclip initial necklace + 1 double-layer choker (sold together)\nPaperclip Chain: Elongated oval-link paperclip chain, 4.5mm wide\nChoker Chains: 1.5mm cable chain layered with 2mm mirror-link chain\nPendant: Pavé-set diamond initial charm, available A–Z\nClosure: Toggle clasp (paperclip necklace), lobster clasp with extender (choker)\nWaterproof & Sweat-Proof: Yes, safe for water, sun, and everyday wear\n\nSize Guide\nPaperclip Initial Necklace: 48cm length\nDouble Layer Choker: 35cm base, adjustable 35–41cm with 6cm extender\n\nFit Note: The choker sits higher on the neck and the paperclip chain sits just below it for a natural cascading layer. Measure around the base of your neck for the choker, and a bit lower, where you'd like the paperclip chain to fall, for reference. Please allow a little extra room for comfort.\n\nCustom Sizing: Need a specific measurement? Message us before ordering and we'll make it to your exact size at no extra cost.\n\nCare Instructions\nWipe gently with a soft cloth after each wear.\nStore in an airtight container when not in use.\n\nShipping: Dispatches within 1–2 business days.\n\nPlease note that as each piece is handcrafted, no two pieces are identical and slight variations may occur.\n\nPhoto note: Some images are AI-generated to show the piece styled and worn. Every piece is 100% handmade by us.",
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Gold-tone stainless steel"
+      },
+      {
+        "label": "Set includes",
+        "value": "1 paperclip initial necklace + 1 double-layer choker (sold together)"
+      },
+      {
+        "label": "Paperclip chain",
+        "value": "Elongated oval-link paperclip chain, 4.5mm wide, 48cm"
+      },
+      {
+        "label": "Choker chains",
+        "value": "1.5mm cable chain layered with 2mm mirror-link chain"
+      },
+      {
+        "label": "Choker size",
+        "value": "35cm base + 6cm extender (adjustable 35–41cm)"
+      },
+      {
+        "label": "Pendant",
+        "value": "Pavé-set diamond initial charm, choose your letter A-Z"
+      },
+      {
+        "label": "Closure",
+        "value": "Toggle clasp (paperclip necklace), lobster clasp with extender (choker)"
+      },
+      {
+        "label": "Waterproof",
+        "value": "Yes"
+      },
+      {
+        "label": "Sweat-proof",
+        "value": "Yes"
+      },
+      {
+        "label": "Care",
+        "value": "Wipe gently with a soft cloth after each wear. Store in an airtight container when not in use."
+      },
+      {
+        "label": "Shipping",
+        "value": "Dispatches within 1–2 business days"
+      }
+    ],
+    "variantGroups": [
+      {
+        "label": "Letter",
+        "type": "options",
+        "options": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F",
+          "G",
+          "H",
+          "I",
+          "J",
+          "K",
+          "L",
+          "M",
+          "N",
+          "O",
+          "P",
+          "Q",
+          "R",
+          "S",
+          "T",
+          "U",
+          "V",
+          "W",
+          "X",
+          "Y",
+          "Z"
+        ]
+      }
+    ],
+    "images": [],
+    "gallery": [],
+    "featured": false,
+    "active": false,
+    "altText": "Personalized gold-tone necklace stack set: double-layer choker with a paperclip chain and pavé diamond initial charm, waterproof stainless steel layered necklace set",
+    "dateAdded": "2026-11-25T13:24:01.000Z",
+    "giftTags": [
+      "personalized"
+    ]
   }
 ]

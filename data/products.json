@@ -13032,15 +13032,27 @@
         ]
       }
     ],
-    "images": [],
-    "gallery": [],
+    "images": [
+      "/images/products/5e80ebe7-0819-4b36-881a-efca7c5b10ca-copy.png"
+    ],
+    "gallery": [
+      "/images/products/5e80ebe7-0819-4b36-881a-efca7c5b10ca-copy.png",
+      "/images/products/2d7b1615-66ec-4206-94b8-e1373f7beae5.jpg",
+      "/images/products/69708b15-e265-43fc-8327-7d9cc6c529af.jpg",
+      "/images/products/53165426-64d8-4bb3-b7a6-f685893d381f.png",
+      "/images/products/ed02e3d1-ddc6-48a3-95dc-f6447baa0af5.png",
+      "/images/products/b77bbd5b-151c-4259-ae51-bd4b36a4f6b8.png",
+      "/images/products/IMG_4908.heic"
+    ],
     "featured": false,
-    "active": false,
+    "active": true,
     "altText": "Personalized gold-tone necklace stack set: double-layer choker with a paperclip chain and pavé diamond initial charm, waterproof stainless steel layered necklace set",
     "dateAdded": "2026-11-25T13:24:01.000Z",
     "giftTags": [
       "personalized"
-    ]
+    ],
+    "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/683fab7ad0c1d2e6d88212b99e585120/downloads/default.mp4",
+    "sizeGuideImage": "/images/products/b77bbd5b-151c-4259-ae51-bd4b36a4f6b8.png"
   },
   {
     "id": "pearl-zodiac-necklace-stack",

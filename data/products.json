@@ -13316,11 +13316,30 @@
       "Gold Tone",
       "Silver Tone"
     ],
-    "images": [],
-    "gallery": [],
+    "images": [
+      "/images/products/b708049c-3dbd-485f-9910-73f6b7c2a756.png"
+    ],
+    "gallery": [
+      "/images/products/b708049c-3dbd-485f-9910-73f6b7c2a756.png",
+      "/images/products/IMG_5555.jpeg",
+      "/images/products/23532ec1-8902-48bb-825f-1a629e1848c5.png",
+      "/images/products/IMG_5562.jpeg",
+      "/images/products/29170a2b-01fb-4bd2-810d-6743fa4c2b2e.png",
+      "/images/products/56c4065b-204e-4396-abca-94b68edcf48e.png",
+      "/images/products/watermarked_img_5216291070479054344.jpg"
+    ],
     "featured": false,
     "active": false,
     "altText": "Gold-tone stainless steel double strand layered body chain with double choker necklace and layered waist chain, waterproof harness-style body jewelry for beach and festival outfits",
-    "dateAdded": "2026-11-26T12:50:30.284Z"
+    "dateAdded": "2026-11-26T12:50:30.284Z",
+    "variantHeroes": {
+      "Gold Tone": "/images/products/b708049c-3dbd-485f-9910-73f6b7c2a756.png",
+      "Silver Tone": "/images/products/56c4065b-204e-4396-abca-94b68edcf48e.png"
+    },
+    "variantVideos": {
+      "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/85197fe9e2b89fa2387512e5e49a7519/downloads/default.mp4",
+      "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/85197fe9e2b89fa2387512e5e49a7519/downloads/default.mp4"
+    },
+    "sizeGuideImage": "/images/products/901f6258-21fa-4d42-93c0-dfcda4f3eac1.png"
   }
 ]

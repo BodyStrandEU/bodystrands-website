@@ -10,7 +10,7 @@ const LINK = "https://www.bodystrands.com/sales?utm_source=email&utm_medium=emai
 const LOGO = "https://www.bodystrands.com/images/logo.png";
 const ICON_IG = "https://www.bodystrands.com/images/email/icon-instagram.png";
 const ICON_FB = "https://www.bodystrands.com/images/email/icon-facebook.png";
-const IG = "https://www.instagram.com/bodystrandseu/";
+const IG = "https://www.instagram.com/bodystrands/";
 const FB = "https://www.facebook.com/profile.php?id=61595265520885";
 const HERO = "https://www.bodystrands.com/images/hero-shoulder-chain.jpg";
 

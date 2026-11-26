@@ -127,7 +127,7 @@ export default async function RootLayout({
             logo:    "https://www.bodystrands.com/images/logo.png",
             image:   "https://www.bodystrands.com/images/og-goddess-shoulder-chain.jpg",
             description: "Handmade body jewelry crafted in high-quality stainless steel. Made in Portugal and Canada.",
-            sameAs: ["https://www.instagram.com/bodystrandseu/", "https://www.facebook.com/profile.php?id=61595265520885"],
+            sameAs: ["https://www.instagram.com/bodystrands/", "https://www.facebook.com/profile.php?id=61595265520885"],
             contactPoint: { "@type": "ContactPoint", email: "info@bodystrands.com", contactType: "customer service" },
           },
           {

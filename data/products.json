@@ -13232,14 +13232,22 @@
         ]
       }
     ],
-    "images": [],
-    "gallery": [],
+    "images": [
+      "/images/products/c00ab0fe-2ffd-4a53-b54b-cb2b2eb7d885.png"
+    ],
+    "gallery": [
+      "/images/products/c00ab0fe-2ffd-4a53-b54b-cb2b2eb7d885.png",
+      "/images/products/e4970562-be97-4fdf-862e-555de01ba65e.png",
+      "/images/products/25f1aa66-5379-4ba4-8c6b-f15c58eb7ded.png",
+      "/images/products/50ff49e8-8263-49f7-b25b-ff78f7eb45dd.png"
+    ],
     "featured": false,
-    "active": false,
+    "active": true,
     "altText": "Gold cubic zirconia tennis bracelet, 2mm diamond-look CZ stone chain in waterproof stainless steel with 18k gold PVD plating, dainty stacking wrist chain in sizes 14 to 23 cm",
     "dateAdded": "2026-11-26T11:27:41.892Z",
     "giftTags": [
       "bridal"
-    ]
+    ],
+    "video": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/dee629e13af2032f458a35d220a6e630/downloads/default.mp4"
   }
 ]

@@ -10,6 +10,7 @@ import { useWishlist } from "@/lib/wishlist";
 import { useCurrency } from "@/lib/currency-context";
 import MobileMenu from "@/components/MobileMenu";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
+import { activeSale } from "@/lib/sale";
 
 function WishlistIcon({ light }: { light?: boolean }) {
   const { ids } = useWishlist();
@@ -112,18 +113,34 @@ export default function Navbar() {
   return (
     <>
     <header className="fixed top-0 left-0 right-0 z-50">
-      {/* Announcement bar */}
-      <div
-        className={`bg-[#2C2220] overflow-hidden transition-all duration-300 ${
-          scrolled ? "max-h-0 opacity-0" : "max-h-12 opacity-100"
-        }`}
-      >
-        <p className="text-[0.52rem] tracking-[0.14em] sm:tracking-[0.22em] whitespace-nowrap uppercase text-[#E8B4A8]/70 text-center py-2.5 px-4">
-          Handmade&nbsp;&nbsp;·&nbsp;&nbsp;Ships in 1–2 Days&nbsp;&nbsp;·&nbsp;&nbsp;
-          <span className="hidden sm:inline">{shippingLineFull}</span>
-          <span className="sm:hidden">{shippingLineShort}</span>
-        </p>
-      </div>
+      {/* Announcement bar — sale takes over the whole bar while a sitewide sale is on */}
+      {(() => {
+        const sale = activeSale();
+        return (
+          <div
+            className={`overflow-hidden transition-all duration-300 ${sale ? "bg-[#A0622A]" : "bg-[#2C2220]"} ${
+              scrolled ? "max-h-0 opacity-0" : sale ? "max-h-16 opacity-100" : "max-h-12 opacity-100"
+            }`}
+          >
+            {sale ? (
+              <Link href="/sales" className="block text-center py-3 px-4 text-[#FDF9F7]">
+                <span className="block text-[0.7rem] sm:text-[0.8rem] font-medium tracking-[0.18em] sm:tracking-[0.28em] uppercase">
+                  {sale.name}&nbsp;&nbsp;·&nbsp;&nbsp;{sale.percent}% off storewide
+                </span>
+                <span className="block text-[0.5rem] sm:text-[0.55rem] tracking-[0.2em] uppercase text-[#FDF9F7]/80 mt-0.5">
+                  Ends {sale.endLabel}&nbsp;&nbsp;·&nbsp;&nbsp;Shop the sale
+                </span>
+              </Link>
+            ) : (
+              <p className="text-[0.52rem] tracking-[0.14em] sm:tracking-[0.22em] whitespace-nowrap uppercase text-[#E8B4A8]/70 text-center py-2.5 px-4">
+                Handmade&nbsp;&nbsp;·&nbsp;&nbsp;Ships in 1–2 Days&nbsp;&nbsp;·&nbsp;&nbsp;
+                <span className="hidden sm:inline">{shippingLineFull}</span>
+                <span className="sm:hidden">{shippingLineShort}</span>
+              </p>
+            )}
+          </div>
+        );
+      })()}
 
       <div
         className={`transition-all duration-300 ${

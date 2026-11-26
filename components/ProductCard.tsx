@@ -6,6 +6,7 @@ import type { Product } from "@/lib/products";
 import { INFOGRAPHIC_IMAGES } from "@/lib/products";
 import { PACKAGING_IMAGES } from "@/lib/site-media";
 import { getSalePrice } from "@/lib/pricing";
+import { effectiveSalePercent } from "@/lib/sale";
 import WishlistButton from "@/components/WishlistButton";
 import { useCurrency } from "@/lib/currency-context";
 import { useCart } from "@/lib/cart";
@@ -322,7 +323,7 @@ export default function ProductCard({ product, priority = false, heroImageOverri
                 {format(product.price)}
               </span>
               <span className="text-[0.55rem] tracking-[0.1em] uppercase text-[#FDF9F7] bg-[#A0622A] px-1.5 py-0.5">
-                -{product.salePercent}%
+                -{effectiveSalePercent(product)}%
               </span>
             </>
           )}

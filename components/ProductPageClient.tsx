@@ -6,6 +6,7 @@ import BuyButton from "@/components/BuyButton";
 import ProductDetails from "@/components/ProductDetails";
 import type { Product } from "@/lib/products";
 import { getSalePrice } from "@/lib/pricing";
+import { effectiveSalePercent } from "@/lib/sale";
 import { useCart } from "@/lib/cart";
 import { COUNTRY_GROUPS, getShippingRate } from "@/lib/shipping";
 import WishlistButton from "@/components/WishlistButton";
@@ -322,7 +323,7 @@ export default function ProductPageClient({ product, setSlot }: { product: Produ
                   {format(originalTotal)}
                 </span>
                 <span className="text-[0.55rem] tracking-[0.18em] uppercase text-[#FDF9F7] bg-[#A0622A] px-2 py-0.5">
-                  −{product.salePercent}%
+                  −{effectiveSalePercent(product)}%
                 </span>
               </>
             )}

@@ -6,7 +6,7 @@ import fs from "node:fs";
 
 export const SUBJECT = "25% off everything this weekend";
 export const PREHEADER = "Black Friday at Bodystrands: the whole store, until Sunday midnight.";
-const LINK = "https://www.bodystrands.com/sales?utm_source=email&utm_medium=email&utm_campaign=black-friday-2026";
+const LINK = "https://www.bodystrands.com/shop?utm_source=email&utm_medium=email&utm_campaign=black-friday-2026";
 const LOGO = "https://www.bodystrands.com/images/logo.png";
 const ICON_IG = "https://www.bodystrands.com/images/email/icon-instagram.png";
 const ICON_FB = "https://www.bodystrands.com/images/email/icon-facebook.png";
@@ -78,4 +78,32 @@ if (cmd === "preview") {
     body: JSON.stringify({ from: "Bodystrands <info@bodystrands.com>", to: arg, subject: `[TEST] ${SUBJECT}`, html: buildHtml("#") }),
   });
   console.log(res.status, await res.text());
+}
+
+// node scripts/promo-email.mjs schedule 2026-11-27T00:00:00Z
+// Builds ONE combined segment (newsletter + customers, de-duplicated by email) so nobody is mailed twice,
+// creates the broadcast and schedules it. Unsubscribed contacts are skipped by Resend.
+if (cmd === "schedule") {
+  const when = arg;
+  if (!when || Number.isNaN(Date.parse(when))) throw new Error("usage: schedule <ISO time>");
+  const H = { Authorization: `Bearer ${env()}`, "Content-Type": "application/json", "User-Agent": "bodystrands-promo" };
+  const api = async (method, path, body) => {
+    const r = await fetch(`https://api.resend.com${path}`, { method, headers: H, body: body ? JSON.stringify(body) : undefined });
+    const t = await r.text(); if (!r.ok) throw new Error(`${method} ${path} ${r.status} ${t}`);
+    return JSON.parse(t);
+  };
+  const SEG = ["d9e86a6d-61e5-4e8f-8b29-6bcbc563a6c5", "f954475b-0782-4e4d-bb2d-1fa031395df8"];
+  const people = new Map();
+  for (const s of SEG) for (const c of (await api("GET", `/contacts?segment_id=${s}&limit=100`)).data) if (!c.unsubscribed) people.set(c.email.toLowerCase(), c.email);
+  console.log("unique recipients:", people.size);
+  // Resend plan allows 3 segments, all taken; the contact-form segment ("general") is empty, so reuse it.
+  const seg = { id: "94fc0ea2-341c-43e7-89fd-29c0be509bc3" };
+  if ((await api("GET", `/contacts?segment_id=${seg.id}&limit=100`)).data.length > 0) throw new Error("general segment is not empty, aborting");
+  for (const email of people.values()) { await api("POST", `/contacts/${encodeURIComponent(email)}/segments/${seg.id}`); await new Promise((r) => setTimeout(r, 400)); }
+  const count = (await api("GET", `/contacts?segment_id=${seg.id}&limit=100`)).data.length;
+  console.log("segment", seg.id, "contacts in it:", count);
+  if (count !== people.size) throw new Error("segment size mismatch, not scheduling");
+  const b = await api("POST", "/broadcasts", { segment_id: seg.id, from: "Bodystrands <info@bodystrands.com>", reply_to: "info@bodystrands.com", subject: SUBJECT, preview_text: PREHEADER, name: "Black Friday 2026", html: buildHtml() });
+  const sent = await api("POST", `/broadcasts/${b.id}/send`, { scheduled_at: new Date(when).toISOString() });
+  console.log("broadcast", b.id, sent);
 }

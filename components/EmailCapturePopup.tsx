@@ -13,6 +13,14 @@ export default function EmailCapturePopup() {
   // whichever comes first — and never while the cookie banner is still up, so a phone
   // screen is never covered by both at once.
   useEffect(() => {
+    // People we already know never get asked: anyone who arrives from one of our emails
+    // (utm_medium=email) is on our list, and anyone on the order-confirmation page just
+    // bought. Remembered in this browser, like a subscribe.
+    try {
+      const fromEmail = new URLSearchParams(window.location.search).get("utm_medium") === "email";
+      const justBought = window.location.pathname.startsWith("/success");
+      if (fromEmail || justBought) localStorage.setItem(STORAGE_KEY, "subscribed");
+    } catch {}
     try { if (localStorage.getItem(STORAGE_KEY)) return; } catch { return; }
     let interested = false;
     const cookieAnswered = () => !bannerPending();

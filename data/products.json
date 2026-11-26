@@ -13163,5 +13163,83 @@
       "Gold Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/af9eebb4b64e49c67a62ea3510c33705/downloads/default.mp4",
       "Silver Tone": "https://customer-1wo257ph6r7pq9d6.cloudflarestream.com/af9eebb4b64e49c67a62ea3510c33705/downloads/default.mp4"
     }
+  },
+  {
+    "id": "cz-tennis-bracelet",
+    "name": "Cubic Zirconia Tennis Bracelet",
+    "price": 35,
+    "currency": "EUR",
+    "category": "Bracelets",
+    "description": "A slim 2mm line of round, diamond-look cubic zirconia stones that wraps the wrist in one continuous row. No charms, no fuss, just sparkle you can wear every day, in sizes 14 to 23 cm.",
+    "fullDescription": "This tennis bracelet is for the girl who likes her sparkle on her wrist and her style simple. A slim 2mm line of round, diamond-look cubic zirconia stones wraps the wrist in one continuous row, with no charms and no fuss. Handmade from stainless steel with an 18k gold PVD finish, it’s built to wear solo, stack with your other bracelets, or never take off, in the shower, at the gym, or on the dance floor, without tarnishing or asking for attention it didn’t earn.\n\nA note on the stones: they are cubic zirconia (CZ), lab-made stones that give the look and sparkle of diamonds. They are not real diamonds. That’s why we call the style “diamond”, and why it can stay this affordable.\n\nMaterials: Stainless steel with 18k gold PVD plating\nStones: Cubic zirconia (CZ), round cut, prong set\nStyle: Tennis chain (continuous stone & cup chain)\nWidth: 2mm\nClosure: Lobster clasp\nSizes: 14 cm, 15 cm, 16 cm, 17 cm, 18 cm, 19 cm, 20 cm, 21 cm, 22 cm, 23 cm (Need a different size? Message us after purchase and we’ll adjust it for free)\nWaterproof: Yes\nTarnish-resistant: Yes\n\nFit Note: Measure your wrist with a soft tape and add 1 to 2 cm for a comfortable fit. Most wrists fit 16 or 17 cm. For a snug, close-to-the-wrist look, choose 1 cm above your wrist measurement.\n\nCare Instructions\nWipe gently with a soft cloth after each wear.\nStore in an airtight container when not in use.\n\nShipping: Dispatches within 1–2 business days.\n\nPlease note that as each piece is handcrafted, no two pieces are identical and slight variations may occur.",
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Stainless steel with 18k gold PVD plating"
+      },
+      {
+        "label": "Stones",
+        "value": "Cubic zirconia (CZ), round cut, prong set"
+      },
+      {
+        "label": "Style",
+        "value": "Tennis chain (continuous stone & cup chain)"
+      },
+      {
+        "label": "Width",
+        "value": "2mm"
+      },
+      {
+        "label": "Closure",
+        "value": "Lobster clasp"
+      },
+      {
+        "label": "Sizes",
+        "value": "14 cm to 23 cm (1 cm steps)"
+      },
+      {
+        "label": "Waterproof",
+        "value": "Yes"
+      },
+      {
+        "label": "Tarnish-Resistant",
+        "value": "Yes"
+      },
+      {
+        "label": "Care",
+        "value": "Wipe with a soft cloth after wear. Store in an airtight container."
+      },
+      {
+        "label": "Shipping",
+        "value": "Dispatches within 1–2 business days"
+      }
+    ],
+    "variantGroups": [
+      {
+        "label": "Size",
+        "type": "options",
+        "options": [
+          "14 cm",
+          "15 cm",
+          "16 cm",
+          "17 cm",
+          "18 cm",
+          "19 cm",
+          "20 cm",
+          "21 cm",
+          "22 cm",
+          "23 cm"
+        ]
+      }
+    ],
+    "images": [],
+    "gallery": [],
+    "featured": false,
+    "active": false,
+    "altText": "Gold cubic zirconia tennis bracelet, 2mm diamond-look CZ stone chain in waterproof stainless steel with 18k gold PVD plating, dainty stacking wrist chain in sizes 14 to 23 cm",
+    "dateAdded": "2026-11-26T11:27:41.892Z",
+    "giftTags": [
+      "bridal"
+    ]
   }
 ]

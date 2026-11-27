@@ -6,6 +6,7 @@ import { Resend } from "resend";
 import { isValidToken, COOKIE_NAME } from "@/lib/auth";
 import { buildTrackingUrl, carrierLabel } from "@/lib/tracking";
 import { getShippingRate } from "@/lib/shipping";
+import { socialRowHtml } from "@/lib/emailSocial";
 
 // Explicit fetch-based HTTP client — required for Stripe's SDK under the Cloudflare Workers runtime.
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
@@ -211,6 +212,8 @@ export async function POST(req: NextRequest) {
           <p style="font-size:13px;color:#8C7B6E;line-height:1.8;margin:0 0 32px;text-align:center;">
             You can also track anytime at <a href="https://www.bodystrands.com/track" style="color:#A0622A;">bodystrands.com/track</a>
           </p>
+
+          ${socialRowHtml()}
 
           <div style="text-align:center;padding-top:24px;border-top:1px solid #E8B4A8;">
             <p style="font-size:13px;color:#8C7B6E;line-height:1.9;margin:0 0 18px;">

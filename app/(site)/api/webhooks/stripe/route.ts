@@ -4,6 +4,7 @@ import { Resend } from "resend";
 import { addToAudience } from "@/lib/audience";
 import { getShippingRate } from "@/lib/shipping";
 import { sendGa4Purchase } from "@/lib/ga4-purchase";
+import { socialRowHtml } from "@/lib/emailSocial";
 
 // Explicit fetch-based HTTP client — required for Stripe's SDK under the Cloudflare Workers runtime.
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
@@ -180,6 +181,8 @@ export async function POST(req: NextRequest) {
             </div>
 
             <a href="https://www.bodystrands.com/track" style="display:inline-block;background:#2C2220;color:#FDF9F7;padding:14px 36px;font-size:11px;letter-spacing:0.25em;text-transform:uppercase;text-decoration:none;margin-bottom:32px;">Track Your Order</a>
+
+            ${socialRowHtml()}
 
             <p style="font-size:11px;color:#8C7B6E;margin:0;padding-top:24px;border-top:1px solid #E8B4A8;line-height:1.8;">
               Questions? Reply to this email or reach us at <a href="mailto:info@bodystrands.com" style="color:#A0622A;">info@bodystrands.com</a><br>

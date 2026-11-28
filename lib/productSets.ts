@@ -40,6 +40,8 @@ export const PRODUCT_SETS: ProductSet[] = [
   { id: "snake-chain",      name: "Snake Chain Set",         why: "Smooth snake chain at the waist and on your glasses", productIds: ["snake-belly-chain", "minimalist-glasses-chain"] },
   { id: "turquoise-beach",  name: "Turquoise Beach Set",     why: "Turquoise beads for neck and waist",           productIds: ["turquoise-beaded-cable-chain-necklace", "turquoise-beaded-belly-chain"] },
   { id: "plus-size",        name: "Plus Size Set",           why: "Made-to-fit sizing for waist, wrist and foot", productIds: ["plus-size-belly-chain", "plus-size-bracelet", "plus-size-toe-chain-anklet"] },
+  // Added Nov 28, 2026 (user: tennis necklace goes with tennis bracelet, and vice versa)
+  { id: "tennis",           name: "Tennis Set",              why: "Cubic zirconia tennis chain on neck and wrist", productIds: ["cz-tennis-choker-necklace", "cz-tennis-bracelet"] },
 ];
 
 // ── Metal colour ─────────────────────────────────────────────────────────────────────
@@ -110,6 +112,7 @@ const MOTIFS: [RegExp, string][] = [
   [/turquoise/i, "turquoise on both pieces"],
   [/crystal/i, "crystal beads on both"],
   [/evil eye/i, "evil eye charms on both"],
+  [/\btennis\b/i, "tennis chain on both pieces"],
   [/coin|disc/i, "coin links on both"],
   [/snake chain|\bsnake\b/i, "the same snake chain"],
   [/crisscross|crossover/i, "the same crisscross drape"],
@@ -137,7 +140,7 @@ const finishes = (p: Product) => new Set((p.variants ?? []).filter((v) => /tone/
 // with a cross, an initial with an initial (user rule, Oct 22, 2026)
 const OWN_KIND = [
   /plus size/i, /initial|monogram|letter/i, /\bcross\b/i, /butterfl/i, /zodiac/i, /evil eye/i,
-  /dragonfly/i, /\bstar\b/i, /birth flower/i, /birthstone|birth month/i,
+  /dragonfly/i, /\bstar\b/i, /birth flower/i, /birthstone|birth month/i, /\btennis\b/i,
 ];
 // strict: either side's signature must be on both. loose (fallback when nothing strict fits):
 // only the partner's signature is checked, so a plain piece never gets a cross added to it.
